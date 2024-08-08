@@ -1,0 +1,1538 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 6
+{
+NoJust another Warcraft III map
+}
+
+STRING 7
+{
+Any
+}
+
+STRING 8
+{
+Nondescript
+}
+
+STRING 9
+{
+Unknown
+}
+
+STRING 24
+// Units: H007 (Jaina Proudmure), Propernames (Proper Names)
+{
+Archmage
+}
+
+STRING 25
+// Units: h009 ([Jaina] Tridentman), Tip (Tooltip - Basic)
+{
+Train Tridentman
+}
+
+STRING 47
+// Units: h00U ([Jaina] Boat), Tip (Tooltip - Basic)
+{
+Boat
+}
+
+STRING 52
+// Abilities: A005 ([Jaina] Swith to Boat), Tip (Tooltip - Normal)
+{
+Swith to Boat
+}
+
+STRING 55
+// Units: h006 ([Jaina] Fishing House), Ubertip (Tooltip - Extended)
+{
+Provides food, which increases the maximum number of units that can be trained.|n Эйвейны - доп прибыль в золоте за воду
+}
+
+STRING 56
+// Units: h00A ([Jaina] Rifleman), Ubertip (Tooltip - Extended)
+{
+Falkoner - сокольничий, отсылка к д Уэйкрестов, имеет временного питомца, который наносит урон врагу и отвлекает. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 58
+// Abilities: A000 ([Jaina] Low Tide), Tip (Tooltip - Normal)
+{
+Low Tide
+}
+
+STRING 59
+// Buffs/Effects: B000 ([Jaina] Low Tide), Bufftip (Tooltip)
+{
+Low Tide
+}
+
+STRING 60
+// Abilities: A000 ([Jaina] Low Tide), Name (Name)
+{
+[Jaina] Low Tide
+}
+
+STRING 61
+// Buffs/Effects: B000 ([Jaina] Low Tide), EditorName (Name (Editor Only))
+{
+[Jaina] Low Tide
+}
+
+STRING 62
+// Abilities: S000 ([Jaina] Replace Farm), Name (Name)
+{
+[Jaina] Replace Farm
+}
+
+STRING 63
+// Abilities: A005 ([Jaina] Swith to Boat), Name (Name)
+{
+[Jaina] Swith to Boat
+}
+
+STRING 64
+// Abilities: A002 ([Jaina] High Tide), Name (Name)
+{
+[Jaina] High Tide
+}
+
+STRING 65
+// Abilities: A002 ([Jaina] High Tide), Tip (Tooltip - Normal)
+{
+High Tide
+}
+
+STRING 66
+// Buffs/Effects: B001 ([Jaina] High Tide), Bufftip (Tooltip)
+{
+High Tide
+}
+
+STRING 67
+// Buffs/Effects: B001 ([Jaina] High Tide), EditorName (Name (Editor Only))
+{
+[Jaina] High Tide
+}
+
+STRING 81
+{
+High Tide! Ваша скорость атаки увеличена
+}
+
+STRING 82
+{
+High Tide! Ваша броня увеличена
+}
+
+STRING 97
+// Units: h00P ([Jaina] Aviary), Tip (Tooltip - Basic)
+{
+Build Aviary
+}
+
+STRING 98
+// Abilities: A004 ([Jaina] Repair), Name (Name)
+{
+[Jaina] Repair
+}
+
+STRING 99
+// Abilities: A004 ([Jaina] Repair), EditorSuffix (Editor Suffix)
+{
+(boat)
+}
+
+STRING 102
+// Upgrades: R001 (Backpack), Name (Name)
+{
+[Jaina] Portable Tools
+}
+
+STRING 103
+// Upgrades: R001 (Backpack), Tip (Tooltip)
+{
+Research Portable Tools
+}
+
+STRING 110
+// Abilities: A005 ([Jaina] Swith to Boat), Ubertip (Tooltip - Normal - Extended)
+{
+The worker switches to water mode. Applicable only in shallow waters.
+}
+
+STRING 113
+{
+Can only be used in shallow water!
+}
+
+STRING 118
+{
+Can only be used in shallow water!
+}
+
+STRING 119
+// Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Jaina] Improved Masonry
+}
+
+STRING 120
+// Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Jaina] Advanced Masonry
+}
+
+STRING 121
+// Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Jaina] Imbued Masonry
+}
+
+STRING 122
+// Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Increases the armor and hit points of Human buildings and ships.
+}
+
+STRING 123
+// Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the armor and hit points of Human buildings and ships.
+}
+
+STRING 124
+// Upgrades: R002 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the armor and hit points of Human buildings and ships.
+}
+
+STRING 129
+// Abilities: A007 ([Jaina] Storm Trident), Name (Name)
+{
+[Jaina] Storm Trident
+}
+
+STRING 131
+// Abilities: A008 ([Jaina] Storm Trident), EditorSuffix (Editor Suffix)
+{
+(effect)
+}
+
+STRING 132
+// Abilities: A008 ([Jaina] Storm Trident), Name (Name)
+{
+[Jaina] Storm Trident
+}
+
+STRING 133
+// Abilities: A008 ([Jaina] Storm Trident), Tip (Tooltip - Normal)
+{
+Storm Trident
+}
+
+STRING 134
+// Buffs/Effects: B002 ([Jaina] Storm Trident), Buffubertip (Tooltip - Extended)
+{
+Unit affected by Storm Trident, its armor reduced
+}
+
+STRING 135
+// Abilities: A006 ([Jaina] Storm Trident), Tip (Tooltip - Normal)
+{
+Storm Trident
+}
+
+STRING 136
+// Upgrades: R003 (Defend), Tip (Tooltip)
+{
+Research Storm Trident
+}
+
+STRING 140
+// Abilities: A006 ([Jaina] Storm Trident), Name (Name)
+{
+[Jaina] Storm Trident
+}
+
+STRING 143
+// Abilities: A007 ([Jaina] Storm Trident), EditorSuffix (Editor Suffix)
+{
+(chance)
+}
+
+STRING 144
+// Abilities: A006 ([Jaina] Storm Trident), Ubertip (Tooltip - Normal - Extended)
+{
+The trident is filled with the energy of storms, with a <A007,DataB1>% chance it deals an reduces the enemy's armor by <A008,DataA1> for <A008,Dur1> sec.
+}
+
+STRING 146
+// Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
+{
+The trident is filled with the energy of storms, with a <A007,DataB1>% chance it deals an reduces the enemy's armor by <A008,DataA1> for <A008,Dur1> sec.
+}
+
+STRING 147
+// Buffs/Effects: B002 ([Jaina] Storm Trident), EditorName (Name (Editor Only))
+{
+[Jaina] Storm Trident
+}
+
+STRING 149
+// Upgrades: R003 (Defend), Name (Name)
+{
+[Jaina] Storm Trident
+}
+
+STRING 150
+// Buffs/Effects: B002 ([Jaina] Storm Trident), Bufftip (Tooltip)
+{
+Storm Trident
+}
+
+STRING 151
+// Abilities: A006 ([Jaina] Storm Trident), EditorSuffix (Editor Suffix)
+{
+(icon)
+}
+
+STRING 153
+// Abilities: A008 ([Jaina] Storm Trident), Ubertip (Tooltip - Normal - Extended)
+{
+Effect
+}
+
+STRING 157
+// Units: h00B ([Jaina] Heavy Cavalry), Tip (Tooltip - Basic)
+{
+Train Heavy Cavalry
+}
+
+STRING 172
+// Upgrades: R004 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+[Jaina] Black Gunpowder
+}
+
+STRING 174
+// Abilities: A00A ([Jaina] Ensnare), Name (Name)
+{
+[Jaina] Ensnare
+}
+
+STRING 175
+// Abilities: A00A ([Jaina] Ensnare), Tip (Tooltip - Normal)
+{
+Ensnare
+}
+
+STRING 176
+// Abilities: A003 ([Jaina] Summon Water Elemental), Name (Name)
+{
+[Jaina] Summon Water Elemental
+}
+
+STRING 183
+// Units: h011 ([Magni] Miner), Tip (Tooltip - Basic)
+{
+Train Miner
+}
+
+STRING 189
+// Units: h015 ([Magni] Engineer), Tip (Tooltip - Basic)
+{
+Train Engineer
+}
+
+STRING 190
+// Units: h002 ([Jaina] Town Hall), Name (Name)
+{
+[Jaina] Town Hall
+}
+
+STRING 191
+// Units: h003 ([Jaina] Keep), Name (Name)
+{
+[Jaina] Keep
+}
+
+STRING 192
+// Units: h004 ([Jaina] Castle), Name (Name)
+{
+[Jaina] Castle
+}
+
+STRING 193
+// Units: h006 ([Jaina] Fishing House), Name (Name)
+{
+[Jaina] Fishing House
+}
+
+STRING 194
+// Units: h006 ([Jaina] Fishing House), Tip (Tooltip - Basic)
+{
+Build Fishing House
+}
+
+STRING 195
+// Units: h008 ([Jaina] Barracks), Name (Name)
+{
+[Jaina] Barracks
+}
+
+STRING 196
+// Units: h00G ([Jaina] Lumber Mill), Name (Name)
+{
+[Jaina] Lumber Mill
+}
+
+STRING 197
+// Units: h00H ([Jaina] Blacksmith), Name (Name)
+{
+[Jaina] Blacksmith
+}
+
+STRING 198
+// Units: h00J ([Jaina] Workshop), Name (Name)
+{
+[Jaina] Workshop
+}
+
+STRING 199
+// Units: h00L ([Jaina] Guard Tower), Name (Name)
+{
+[Jaina] Guard Tower
+}
+
+STRING 200
+// Units: h00M ([Jaina] Cannon Tower), Name (Name)
+{
+[Jaina] Cannon Tower
+}
+
+STRING 201
+// Units: h00N ([Jaina] Arcane Tower), Name (Name)
+{
+[Jaina] Arcane Tower
+}
+
+STRING 202
+// Units: h00O ([Jaina] Arcane Sanctum), Name (Name)
+{
+[Jaina] Arcane Sanctum
+}
+
+STRING 203
+// Units: h00P ([Jaina] Aviary), Name (Name)
+{
+[Jaina] Aviary
+}
+
+STRING 205
+// Units: H001 ([Jaina] Altar of Sea), Name (Name)
+{
+[Jaina] Altar of Sea
+}
+
+STRING 206
+// Units: H001 ([Jaina] Altar of Sea), Tip (Tooltip - Basic)
+{
+Build Altar of Sea
+}
+
+STRING 207
+// Units: h00I ([Jaina] Scout Tower), Name (Name)
+{
+[Jaina] Scout Tower
+}
+
+STRING 209
+// Units: h00Y ([Magni] Keep), Name (Name)
+{
+[Magni] Keep
+}
+
+STRING 211
+// Units: h00Z ([Magni] Barracks), Name (Name)
+{
+[Magni] Barracks
+}
+
+STRING 212
+// Units: h010 ([Magni] Scout Tower), Name (Name)
+{
+[Magni] Scout Tower
+}
+
+STRING 213
+// Units: h005 ([Jaina] Farm), EditorSuffix (Name - Editor Suffix)
+{
+(+ 2)
+}
+
+STRING 214
+// Units: h005 ([Jaina] Farm), Name (Name)
+{
+[Jaina] Farm
+}
+
+STRING 215
+// Units: h00U ([Jaina] Boat), Name (Name)
+{
+[Jaina] Boat
+}
+
+STRING 216
+// Units: h00I ([Jaina] Scout Tower), EditorSuffix (Name - Editor Suffix)
+{
+(sea)
+}
+
+STRING 217
+// Units: h00K ([Jaina] Scout Tower), Name (Name)
+{
+[Jaina] Scout Tower
+}
+
+STRING 218
+// Units: h00V ([Jaina] Water Elemental), Name (Name)
+{
+[Jaina] Water Elemental
+}
+
+STRING 219
+// Abilities: A009 ([Magni] Battle Stations), Name (Name)
+{
+[Magni] Battle Stations
+}
+
+STRING 220
+// Units: n000 (Target), Name (Name)
+{
+Target
+}
+
+STRING 221
+// Units: h000 ([Jaina] Sailor), Name (Name)
+{
+[Jaina] Sailor
+}
+
+STRING 222
+// Units: h000 ([Jaina] Sailor), Tip (Tooltip - Basic)
+{
+Train Sailor
+}
+
+STRING 225
+// Units: h009 ([Jaina] Tridentman), Name (Name)
+{
+[Jaina] Tridentman
+}
+
+STRING 226
+// Units: h00A ([Jaina] Rifleman), Name (Name)
+{
+[Jaina] Rifleman
+}
+
+STRING 227
+// Units: h00B ([Jaina] Heavy Cavalry), Name (Name)
+{
+[Jaina] Heavy Cavalry
+}
+
+STRING 229
+// Units: h00D ([Jaina] Dragonhawk Rider), Name (Name)
+{
+[Jaina] Dragonhawk Rider
+}
+
+STRING 230
+// Units: h00E ([Jaina] Ship's Doctor), Name (Name)
+{
+[Jaina] Ship's Doctor
+}
+
+STRING 231
+// Units: h00F ([Jaina] Sorceress), Name (Name)
+{
+[Jaina] Sorceress
+}
+
+STRING 232
+// Units: h00R ([Jaina] Transport Ship), Name (Name)
+{
+[Jaina] Transport Ship
+}
+
+STRING 233
+// Units: h00S ([Jaina] Frigate), Name (Name)
+{
+[Jaina] Frigate
+}
+
+STRING 234
+// Units: h00T ([Jaina] Battleship), Name (Name)
+{
+[Jaina] Battleship
+}
+
+STRING 236
+// Units: h012 ([Magni] Ram Knight), Tip (Tooltip - Basic)
+{
+Train Ram Knight
+}
+
+STRING 237
+// Units: h013 ([Magni] Rifleman), Name (Name)
+{
+[Magni] Rifleman
+}
+
+STRING 239
+// Units: h00C ([Jaina] Mortar Team), Name (Name)
+{
+[Jaina] Mortar Team
+}
+
+STRING 240
+// Units: h011 ([Magni] Miner), Name (Name)
+{
+[Magni] Miner
+}
+
+STRING 241
+// Units: h012 ([Magni] Ram Knight), Name (Name)
+{
+[Magni] Ram Knight
+}
+
+STRING 242
+// Units: h014 ([Magni] Priest), Name (Name)
+{
+[Magni] Priest
+}
+
+STRING 243
+// Units: h015 ([Magni] Engineer), Name (Name)
+{
+[Magni] Engineer
+}
+
+STRING 244
+// Units: h016 ([Magni] Guard Tower), Name (Name)
+{
+[Magni] Guard Tower
+}
+
+STRING 245
+// Units: h016 ([Magni] Guard Tower), Tip (Tooltip - Basic)
+{
+Build Guard Tower
+}
+
+STRING 248
+// Units: h017 ([Magni] Cannon Tower), Name (Name)
+{
+[Magni] Cannon Tower
+}
+
+STRING 249
+// Units: h017 ([Magni] Cannon Tower), Tip (Tooltip - Basic)
+{
+Build Cannon Tower
+}
+
+STRING 250
+// Abilities: A00B ([Magni] Bunker Arrow), Name (Name)
+{
+[Magni] Bunker Arrow
+}
+
+STRING 251
+// Abilities: A00C ([Magni] Bunker Shot), Name (Name)
+{
+[Magni] Bunker Shot
+}
+
+STRING 253
+// Units: h018 ([Magni] Iron Forged Swords), Name (Name)
+{
+[Magni] Iron Forged Swords
+}
+
+STRING 254
+// Units: h018 ([Magni] Iron Forged Swords), Tip (Tooltip - Basic)
+{
+Upgrade to Iron Forged Swords
+}
+
+STRING 255
+// Units: h018 ([Magni] Iron Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 256
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Magni] Iron Forged Swords
+}
+
+STRING 258
+// Units: h019 ([Magni] Steel Forged Swords), Name (Name)
+{
+[Magni] Steel Forged Swords
+}
+
+STRING 259
+// Units: h019 ([Magni] Steel Forged Swords), Tip (Tooltip - Basic)
+{
+Upgrade to Steel Forged Swords
+}
+
+STRING 260
+// Units: h019 ([Magni] Steel Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 261
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Jaina] Iron Forged Swords
+}
+
+STRING 262
+// Units: h01A ([Magni] Mithril Forged Swords), Name (Name)
+{
+[Magni] Mithril Forged Swords
+}
+
+STRING 263
+// Units: h01A ([Magni] Mithril Forged Swords), Tip (Tooltip - Basic)
+{
+Upgrade to Mithril Forged Swords
+}
+
+STRING 264
+// Units: h01A ([Magni] Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 267
+// Units: h01B ([Magni] Altar of Kings), Name (Name)
+{
+[Magni] Altar of Kings
+}
+
+STRING 268
+// Units: H007 (Jaina Proudmure), Name (Name)
+{
+Jaina Proudmure
+}
+
+STRING 269
+// Units: H007 (Jaina Proudmure), Tip (Tooltip - Basic)
+{
+Summon Archmage
+}
+
+STRING 270
+// Units: H01C (Magni Bronzebeard), Name (Name)
+{
+Magni Bronzebeard
+}
+
+STRING 271
+// Units: H01C (Magni Bronzebeard), Propernames (Proper Names)
+{
+Mountain King
+}
+
+STRING 273
+// Units: h01D ([Magni] Great Forge), Name (Name)
+{
+[Magni] Great Forge
+}
+
+STRING 274
+// Units: h01D ([Magni] Great Forge), Tip (Tooltip - Basic)
+{
+Build Great Forge
+}
+
+STRING 275
+// Units: h01E ([Magni] Manufacture), Name (Name)
+{
+[Magni] Manufacture
+}
+
+STRING 276
+// Units: h01E ([Magni] Manufacture), Tip (Tooltip - Basic)
+{
+Build Manufacture
+}
+
+STRING 277
+// Units: h01F ([Magni] Footman), Name (Name)
+{
+[Magni] Footman
+}
+
+STRING 279
+// Units: h01G ([Magni] Steam Boat), Name (Name)
+{
+[Magni] Steam Boat
+}
+
+STRING 280
+// Units: h01H ([Magni] Ironclad Submarine), Name (Name)
+{
+[Magni] Ironclad Submarine
+}
+
+STRING 281
+// Units: h01H ([Magni] Ironclad Submarine), Tip (Tooltip - Basic)
+{
+Ironclad Submarine
+}
+
+STRING 282
+// Abilities: A00D ([Magni] Torpedo), Name (Name)
+{
+[Magni] Torpedo
+}
+
+STRING 284
+// Units: h01I ([Magni] Flying Fighter), Name (Name)
+{
+[Magni] Flying Fighter
+}
+
+STRING 285
+// Units: h01I ([Magni] Flying Fighter), Tip (Tooltip - Basic)
+{
+Train Flying Fighter
+}
+
+STRING 286
+// Units: h01J ([Magni] Mortar Team), Name (Name)
+{
+[Magni] Mortar Team
+}
+
+STRING 287
+// Units: h01K ([Magni] Lumber Mill), Name (Name)
+{
+[Magni] Lumber Mill
+}
+
+STRING 288
+// Units: h00Q ([Jaina] Shipyard), Name (Name)
+{
+[Jaina] Shipyard
+}
+
+STRING 289
+// Units: h00Q ([Jaina] Shipyard), Tip (Tooltip - Basic)
+{
+Build Shipyard
+}
+
+STRING 290
+// Units: h01L ([Magni] Shipyard), Name (Name)
+{
+[Magni] Shipyard
+}
+
+STRING 291
+// Units: h01L ([Magni] Shipyard), Tip (Tooltip - Basic)
+{
+Build Shipyard
+}
+
+STRING 292
+// Units: h01M ([Magni] Arcane Sanctum), Name (Name)
+{
+[Magni] Arcane Sanctum
+}
+
+STRING 293
+// Units: h01N ([Magni] Workshop), Name (Name)
+{
+[Magni] Workshop
+}
+
+STRING 294
+// Units: h00W ([Magni] Hall), Name (Name)
+{
+[Magni] Hall
+}
+
+STRING 295
+// Units: h00W ([Magni] Hall), Tip (Tooltip - Basic)
+{
+Build Hall
+}
+
+STRING 296
+// Units: h00X ([Magni] Fortress), Name (Name)
+{
+[Magni] Fortress
+}
+
+STRING 297
+// Units: h00X ([Magni] Fortress), Tip (Tooltip - Basic)
+{
+Upgrade to Fortress
+}
+
+STRING 298
+// Units: h00X ([Magni] Fortress), Ubertip (Tooltip - Extended)
+{
+Upgrade to Fortress to enable the production of additional types of structures and units.
+}
+
+STRING 299
+// Units: h00Y ([Magni] Keep), Tip (Tooltip - Basic)
+{
+Upgrade to Keep
+}
+
+STRING 300
+// Units: h00Y ([Magni] Keep), Ubertip (Tooltip - Extended)
+{
+Upgrade to Keep to enable the production of additional types of structures and units.
+}
+
+STRING 301
+// Units: h01O ([Magni] Long Rifles), Name (Name)
+{
+[Magni] Long Rifles
+}
+
+STRING 304
+// Upgrades: R006 (Long Rifles), Name (Name)
+{
+[Magni] Long Rifles
+}
+
+STRING 305
+// Units: h018 ([Magni] Iron Forged Swords), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 306
+// Units: h019 ([Magni] Steel Forged Swords), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 307
+// Units: h01A ([Magni] Mithril Forged Swords), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 308
+// Units: h01O ([Magni] Long Rifles), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 309
+// Units: h01P ([Magni] Iron Plating), Name (Name)
+{
+[Magni] Iron Plating
+}
+
+STRING 310
+// Units: h01P ([Magni] Iron Plating), Tip (Tooltip - Basic)
+{
+Upgrade to Iron Plating
+}
+
+STRING 311
+// Units: h01P ([Magni] Iron Plating), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Militia, Footmen, Spellbreakers, Knights, Flying Machines and Siege Engines.
+}
+
+STRING 312
+// Units: h01P ([Magni] Iron Plating), Hotkey (Hotkey)
+{
+P
+}
+
+STRING 313
+// Upgrades: R007 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
+{
+[Magni] Iron Plating
+}
+
+STRING 314
+// Units: h01Q ([Magni] Steel Plating), Name (Name)
+{
+[Magni] Steel Plating
+}
+
+STRING 315
+// Units: h01Q ([Magni] Steel Plating), Tip (Tooltip - Basic)
+{
+Upgrade to Steel Plating
+}
+
+STRING 316
+// Units: h01Q ([Magni] Steel Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Militia, Footmen, Spellbreakers, Knights, Flying Machines and Siege Engines.
+}
+
+STRING 317
+// Units: h01Q ([Magni] Steel Plating), Hotkey (Hotkey)
+{
+P
+}
+
+STRING 318
+// Units: h01R ([Magni] Mithril Plating), Name (Name)
+{
+[Magni] Mithril Plating
+}
+
+STRING 319
+// Units: h01R ([Magni] Mithril Plating), Tip (Tooltip - Basic)
+{
+Upgrade to Mithril Plating
+}
+
+STRING 320
+// Units: h01R ([Magni] Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Militia, Footmen, Spellbreakers, Knights, Flying Machines and Siege Engines.
+}
+
+STRING 321
+// Units: h01R ([Magni] Mithril Plating), Hotkey (Hotkey)
+{
+P
+}
+
+STRING 322
+// Units: h01S ([Magni] Black Gunpowder), Name (Name)
+{
+[Magni] Black Gunpowder
+}
+
+STRING 323
+// Units: h01S ([Magni] Black Gunpowder), Tip (Tooltip - Basic)
+{
+Upgrade to Black Gunpowder
+}
+
+STRING 324
+// Units: h01S ([Magni] Black Gunpowder), Ubertip (Tooltip - Extended)
+{
+Increases the ranged attack damage of Riflemen, Mortar Teams, Siege Engines and Flying Machines.
+}
+
+STRING 325
+// Units: h01S ([Magni] Black Gunpowder), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 326
+// Upgrades: R008 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+[Magni] Black Gunpowder
+}
+
+STRING 327
+// Units: h01T ([Magni] Refined Gunpowder), Name (Name)
+{
+[Magni] Refined Gunpowder
+}
+
+STRING 328
+// Units: h01T ([Magni] Refined Gunpowder), Tip (Tooltip - Basic)
+{
+Upgrade to Refined Gunpowder
+}
+
+STRING 329
+// Units: h01T ([Magni] Refined Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Riflemen, Mortar Teams, Siege Engines and Flying Machines.
+}
+
+STRING 330
+// Units: h01T ([Magni] Refined Gunpowder), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 331
+// Units: h01U ([Magni] Imbued Gunpowder), Name (Name)
+{
+[Magni] Imbued Gunpowder
+}
+
+STRING 332
+// Units: h01U ([Magni] Imbued Gunpowder), Tip (Tooltip - Basic)
+{
+Upgrade to Imbued Gunpowder
+}
+
+STRING 333
+// Units: h01U ([Magni] Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Riflemen, Mortar Teams, Siege Engines and Flying Machines.
+}
+
+STRING 334
+// Units: h01U ([Magni] Imbued Gunpowder), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 335
+// Units: h01V ([Magni] Studded Leather Armor), Name (Name)
+{
+[Magni] Studded Leather Armor
+}
+
+STRING 338
+// Units: h01V ([Magni] Studded Leather Armor), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 339
+// Upgrades: R009 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
+{
+[Magni] Studded Leather Armor
+}
+
+STRING 340
+// Units: h01V ([Magni] Studded Leather Armor), Tip (Tooltip - Basic)
+{
+Upgrade to Studded Leather Armor
+}
+
+STRING 341
+// Units: h01V ([Magni] Studded Leather Armor), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Riflemen, Mortar Teams, Dragonhawk Riders and Gryphon Riders.
+}
+
+STRING 342
+// Units: h01W ([Magni] Reinforced Leather Armor), Name (Name)
+{
+[Magni] Reinforced Leather Armor
+}
+
+STRING 343
+// Units: h01W ([Magni] Reinforced Leather Armor), Tip (Tooltip - Basic)
+{
+Upgrade to Reinforced Leather Armor
+}
+
+STRING 344
+// Units: h01W ([Magni] Reinforced Leather Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Riflemen, Mortar Teams, Dragonhawk Riders and Gryphon Riders.
+}
+
+STRING 345
+// Units: h01W ([Magni] Reinforced Leather Armor), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 346
+// Units: h01X ([Magni] Dragonhide Armor), Name (Name)
+{
+[Magni] Dragonhide Armor
+}
+
+STRING 347
+// Units: h01X ([Magni] Dragonhide Armor), Tip (Tooltip - Basic)
+{
+Upgrade to Dragonhide Armor
+}
+
+STRING 348
+// Units: h01X ([Magni] Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Riflemen, Mortar Teams, Dragonhawk Riders and Gryphon Riders.
+}
+
+STRING 349
+// Units: h01X ([Magni] Dragonhide Armor), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 350
+// Units: h01Y ([Magni] Siege Engine), Name (Name)
+{
+[Magni] Siege Engine
+}
+
+STRING 351
+// Units: h01Z ([Magni] Improved Gold Harvesting), Name (Name)
+{
+[Magni] Improved Gold Harvesting
+}
+
+STRING 352
+// Units: h020 ([Magni] Advanced Gold Harvesting), Tip (Tooltip - Basic)
+{
+Advanced Gold Harvesting
+}
+
+STRING 353
+// Units: h01Z ([Magni] Improved Gold Harvesting), Tip (Tooltip - Basic)
+{
+Improved Gold Harvesting
+}
+
+STRING 354
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+Advanced Gold Harvesting
+}
+
+STRING 357
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), effect1 (Effect 1)
+{
+rmin
+}
+
+STRING 359
+// Units: h01Z ([Magni] Improved Gold Harvesting), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 360
+// Units: h020 ([Magni] Advanced Gold Harvesting), Name (Name)
+{
+[Magni] Advanced Gold Harvesting
+}
+
+STRING 362
+// Units: h020 ([Magni] Advanced Gold Harvesting), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 363
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+[Magni] Improved Gold Harvesting
+}
+
+STRING 364
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
+{
+Improved Gold Harvesting
+}
+
+STRING 365
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
+{
+Advanced Gold Harvesting
+}
+
+STRING 368
+// Units: h01Z ([Magni] Improved Gold Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of gold that Peasants can carry by 2.
+}
+
+STRING 369
+// Units: h020 ([Magni] Advanced Gold Harvesting), Ubertip (Tooltip - Extended)
+{
+Further increases the amount of gold that Peasants can carry by 2.
+}
+
+STRING 370
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of gold that Peasants can carry by 2.
+}
+
+STRING 371
+// Upgrades: R00A (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Further increases the amount of gold that Peasants can carry by 2.
+}
+
+STRING 372
+// Units: h021 ([Magni] Improved Masonry), Name (Name)
+{
+[Magni] Improved Masonry
+}
+
+STRING 373
+// Units: h021 ([Magni] Improved Masonry), Tip (Tooltip - Basic)
+{
+Upgrade to Improved Masonry
+}
+
+STRING 374
+// Units: h021 ([Magni] Improved Masonry), Ubertip (Tooltip - Extended)
+{
+Increases the armor and hit points of Human buildings.
+}
+
+STRING 375
+// Units: h021 ([Magni] Improved Masonry), Hotkey (Hotkey)
+{
+M
+}
+
+STRING 376
+// Upgrades: R00B (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Magni] Improved Masonry
+}
+
+STRING 377
+// Units: h022 ([Magni] Advanced Masonry), Name (Name)
+{
+[Magni] Advanced Masonry
+}
+
+STRING 378
+// Units: h022 ([Magni] Advanced Masonry), Tip (Tooltip - Basic)
+{
+Upgrade to Advanced Masonry
+}
+
+STRING 379
+// Units: h022 ([Magni] Advanced Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the armor and hit points of Human buildings.
+}
+
+STRING 380
+// Units: h022 ([Magni] Advanced Masonry), Hotkey (Hotkey)
+{
+M
+}
+
+STRING 381
+// Units: h023 ([Magni] Imbued Masonry), Name (Name)
+{
+[Magni] Imbued Masonry
+}
+
+STRING 382
+// Units: h023 ([Magni] Imbued Masonry), Tip (Tooltip - Basic)
+{
+Upgrade to Imbued Masonry
+}
+
+STRING 383
+// Units: h023 ([Magni] Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the armor and hit points of Human buildings.
+}
+
+STRING 384
+// Units: h023 ([Magni] Imbued Masonry), Hotkey (Hotkey)
+{
+M
+}
+
+STRING 385
+// Units: h024 ([Magni] Priest Adept Training), Name (Name)
+{
+[Magni] Priest Adept Training
+}
+
+STRING 386
+// Units: h024 ([Magni] Priest Adept Training), Tip (Tooltip - Basic)
+{
+Priest Master Training
+}
+
+STRING 387
+// Units: h024 ([Magni] Priest Adept Training), Ubertip (Tooltip - Extended)
+{
+Increases Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+}
+
+STRING 388
+// Units: h027 ([Magni] Flamethrower), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 389
+// Units: h025 ([Magni] Priest Master Training), Name (Name)
+{
+[Magni] Priest Master Training
+}
+
+STRING 390
+// Units: h025 ([Magni] Priest Master Training), Tip (Tooltip - Basic)
+{
+Priest Master Training
+}
+
+STRING 391
+// Units: h025 ([Magni] Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
+}
+
+STRING 393
+// Upgrades: R00C (Priest Adept Training,Priest Master Training), Name (Name)
+{
+[Magni] Priest Adept Training
+}
+
+STRING 394
+// Units: h024 ([Magni] Priest Adept Training), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 395
+// Units: h025 ([Magni] Priest Master Training), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 396
+// Units: h01O ([Magni] Long Rifles), Tip (Tooltip - Basic)
+{
+Upgrade to Long Rifles
+}
+
+STRING 397
+// Units: h01O ([Magni] Long Rifles), Ubertip (Tooltip - Extended)
+{
+Increases the range of Riflemen attacks.
+}
+
+STRING 398
+// Abilities: A00E ([Magni] Flak Cannons), Name (Name)
+{
+[Magni] Flak Cannons
+}
+
+STRING 399
+// Abilities: A00F ([Magni] Flying Machine Bombs), Name (Name)
+{
+[Magni] Flying Machine Bombs
+}
+
+STRING 401
+// Units: h026 ([Magni] Flying Fighter Bombs), Name (Name)
+{
+[Magni] Flying Fighter Bombs
+}
+
+STRING 402
+// Units: h026 ([Magni] Flying Fighter Bombs), Tip (Tooltip - Basic)
+{
+Research Flying Fighter Bombs
+}
+
+STRING 403
+// Units: h026 ([Magni] Flying Fighter Bombs), Ubertip (Tooltip - Extended)
+{
+Allows Flying Fighter to attack land units.
+}
+
+STRING 405
+// Upgrades: R00D (Flying Machine Bombs), Name (Name)
+{
+[Magni] Flying Fighter Bombs
+}
+
+STRING 406
+// Upgrades: R00D (Flying Machine Bombs), Tip (Tooltip)
+{
+Research Flying Fighter Bombs
+}
+
+STRING 407
+// Upgrades: R00D (Flying Machine Bombs), Ubertip (Tooltip - Extended)
+{
+Allows Flying Fighter to attack land units.
+}
+
+STRING 408
+// Units: h026 ([Magni] Flying Fighter Bombs), Hotkey (Hotkey)
+{
+B
+}
+
+STRING 411
+// Units: h027 ([Magni] Flamethrower), Name (Name)
+{
+[Magni] Flamethrower
+}
+
+STRING 412
+// Abilities: A00G ([Magni] Flamethrower), Name (Name)
+{
+[Magni] Flamethrower
+}
+
+STRING 413
+// Buffs/Effects: B003 (), Bufftip (Tooltip)
+{
+[Magni] Flamethrower
+}
+
+STRING 414
+// Units: h027 ([Magni] Flamethrower), Tip (Tooltip - Basic)
+{
+Research Flamethrower
+}
+
+STRING 415
+// Units: h027 ([Magni] Flamethrower), Ubertip (Tooltip - Extended)
+{
+Upgrades Siege Engines, giving them the Flamethrower ability, which allows them to damage nearby enemy air units.
+}
+
+STRING 416
+// Upgrades: R00E (Barrage), Name (Name)
+{
+[Magni] Flamethrower
+}
+
+STRING 417
+// Upgrades: R00E (Barrage), Tip (Tooltip)
+{
+Research Flamethrower
+}
+
+STRING 418
+// Upgrades: R00E (Barrage), Ubertip (Tooltip - Extended)
+{
+Upgrades Siege Engines, giving them the Flamethrower ability, which allows them to damage nearby enemy air units.
+}
+
