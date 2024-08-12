@@ -17,10 +17,13 @@
 globals
     // User-defined
     unit                    udg_MForge                 = null
+    unit                    udg_RProductionStop        = null
 
     // Generated
     trigger                 gg_trg_Limits              = null
     trigger                 gg_trg_Cheats              = null
+    trigger                 gg_trg_RProduction         = null
+    trigger                 gg_trg_RProductionStop     = null
     trigger                 gg_trg_JTide               = null
     trigger                 gg_trg_JSwithToBoat        = null
     trigger                 gg_trg_JAddFoodFarmWaterAuto = null
@@ -29,6 +32,9 @@ globals
     trigger                 gg_trg_MManufactureToForge = null
     trigger                 gg_trg_MAllUpg             = null
     trigger                 gg_trg_Melee_Initialization = null
+    rect                    gg_rct_Vision1             = null
+    rect                    gg_rct_Vision2             = null
+    trigger                 gg_trg_Ini                 = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -54,11 +60,9 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h01L', 1120.0, 1888.0, 270.000, 'h01L' )
-    set u = BlzCreateUnitWithSkin( p, 'h00Q', 2080.0, 1888.0, 270.000, 'h00Q' )
-    set u = BlzCreateUnitWithSkin( p, 'h01N', 256.0, -1984.0, 270.000, 'h01N' )
-    set u = BlzCreateUnitWithSkin( p, 'h00Y', 256.0, -576.0, 270.000, 'h00Y' )
-    set u = BlzCreateUnitWithSkin( p, 'h00W', -256.0, -576.0, 270.000, 'h00W' )
+    set u = BlzCreateUnitWithSkin( p, 'h002', -1920.0, -10240.0, 270.000, 'h002' )
+    set u = BlzCreateUnitWithSkin( p, 'h03E', -3328.0, 0.0, 270.000, 'h03E' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 256.0, -10240.0, 270.000, 'n002' )
 endfunction
 
 //===========================================================================
@@ -69,27 +73,22 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h01I', -24.9, -1533.0, 269.325, 'h01I' )
-    set u = BlzCreateUnitWithSkin( p, 'h01G', 1468.6, 2437.2, 271.226, 'h01G' )
-    set u = BlzCreateUnitWithSkin( p, 'h01H', 1708.7, 2442.4, 266.690, 'h01H' )
-    set u = BlzCreateUnitWithSkin( p, 'h01J', -229.5, -1443.5, 285.936, 'h01J' )
-    set u = BlzCreateUnitWithSkin( p, 'h011', -684.5, -580.4, 275.778, 'h011' )
-    set u = BlzCreateUnitWithSkin( p, 'h011', -763.1, -475.6, 275.778, 'h011' )
-    set u = BlzCreateUnitWithSkin( p, 'h011', -536.6, -455.1, 275.778, 'h011' )
-    set u = BlzCreateUnitWithSkin( p, 'h01Y', -262.7, -1684.4, 186.350, 'h01Y' )
-    set u = BlzCreateUnitWithSkin( p, 'h01I', -87.7, -1353.2, 269.325, 'h01I' )
-    set u = BlzCreateUnitWithSkin( p, 'h01I', -108.1, -1723.6, 269.325, 'h01I' )
-    set u = BlzCreateUnitWithSkin( p, 'h013', -164.3, -1233.9, 113.152, 'h013' )
-    set u = BlzCreateUnitWithSkin( p, 'h00R', 1592.3, 2045.7, 272.484, 'h00R' )
-    set u = BlzCreateUnitWithSkin( p, 'h00S', 1368.2, 2064.4, 269.347, 'h00S' )
-    set u = BlzCreateUnitWithSkin( p, 'h00T', 1829.6, 2085.7, 277.558, 'h00T' )
-    set u = BlzCreateUnitWithSkin( p, 'h011', -571.1, -572.6, 275.778, 'h011' )
-    set u = BlzCreateUnitWithSkin( p, 'h014', -22.1, -1705.6, 276.253, 'h014' )
-    set u = BlzCreateUnitWithSkin( p, 'h012', 99.5, -1170.9, 272.353, 'h012' )
-    set u = BlzCreateUnitWithSkin( p, 'h015', -653.6, -355.5, 275.185, 'h015' )
-    set u = BlzCreateUnitWithSkin( p, 'H01C', -100.7, -923.0, 264.460, 'H01C' )
-    call SetHeroLevel( u, 6, false )
-    set u = BlzCreateUnitWithSkin( p, 'h01F', 104.0, -921.2, 235.170, 'h01F' )
+    set u = BlzCreateUnitWithSkin( p, 'h000', -2360.3, -10531.0, 222.029, 'h000' )
+    set u = BlzCreateUnitWithSkin( p, 'h000', -2273.4, -10535.0, 101.209, 'h000' )
+    set u = BlzCreateUnitWithSkin( p, 'h000', -2408.4, -10623.9, 352.793, 'h000' )
+    set u = BlzCreateUnitWithSkin( p, 'h000', -2230.2, -10623.9, 135.608, 'h000' )
+    set u = BlzCreateUnitWithSkin( p, 'h000', -2318.3, -10704.4, 355.704, 'h000' )
+endfunction
+
+//===========================================================================
+function CreateBuildingsForPlayer2 takes nothing returns nothing
+    local player p = Player(2)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u = BlzCreateUnitWithSkin( p, 'n002', 256.0, 10240.0, 270.000, 'n002' )
 endfunction
 
 //===========================================================================
@@ -100,15 +99,32 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'ngol', -384.0, -64.0, 270.000, 'ngol' )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 2112.0, -5376.0, 270.000, 'ngol' )
     call SetResourceAmount( u, 12500 )
-    set u = BlzCreateUnitWithSkin( p, 'n000', -1248.0, -1184.0, 270.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', -1248.0, -1568.0, 270.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -2688.0, -10240.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 3840.0, -10240.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 8896.0, -6464.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 3840.0, 10240.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -2688.0, 10240.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 2112.0, 5440.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 8896.0, 6400.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -1664.0, 128.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 4800.0, 0.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 12500 )
 endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
     call CreateBuildingsForPlayer0(  )
+    call CreateBuildingsForPlayer2(  )
 endfunction
 
 //===========================================================================
@@ -125,9 +141,41 @@ endfunction
 
 //***************************************************************************
 //*
+//*  Regions
+//*
+//***************************************************************************
+
+function CreateRegions takes nothing returns nothing
+    local weathereffect we
+
+    set gg_rct_Vision1 = Rect( 128.0, -10336.0, 384.0, -10112.0 )
+    set gg_rct_Vision2 = Rect( 128.0, 10112.0, 384.0, 10368.0 )
+endfunction
+
+//***************************************************************************
+//*
 //*  Triggers
 //*
 //***************************************************************************
+
+//===========================================================================
+// Trigger: Ini
+//===========================================================================
+function Trig_Ini_Func001A takes nothing returns nothing
+    call CreateFogModifierRectBJ( true, GetEnumPlayer(), FOG_OF_WAR_VISIBLE, gg_rct_Vision1 )
+    call CreateFogModifierRectBJ( true, GetEnumPlayer(), FOG_OF_WAR_VISIBLE, gg_rct_Vision2 )
+endfunction
+
+function Trig_Ini_Actions takes nothing returns nothing
+    call ForForce( GetPlayersAll(), function Trig_Ini_Func001A )
+endfunction
+
+//===========================================================================
+function InitTrig_Ini takes nothing returns nothing
+    set gg_trg_Ini = CreateTrigger(  )
+    call TriggerRegisterTimerEventSingle( gg_trg_Ini, 0.10 )
+    call TriggerAddAction( gg_trg_Ini, function Trig_Ini_Actions )
+endfunction
 
 //===========================================================================
 // Trigger: Limits
@@ -186,6 +234,85 @@ function InitTrig_Cheats takes nothing returns nothing
     set gg_trg_Cheats = CreateTrigger(  )
     call TriggerRegisterTimerEventSingle( gg_trg_Cheats, 0.10 )
     call TriggerAddAction( gg_trg_Cheats, function Trig_Cheats_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: RProduction
+//===========================================================================
+function Trig_RProduction_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A00H' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_RProduction_Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h028' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_RProduction_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h02B' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_RProduction_Actions takes nothing returns nothing
+    if ( Trig_RProduction_Func001C() ) then
+        call UnitAddAbilityBJ( 'S001', GetSpellAbilityUnit() )
+    else
+    endif
+    if ( Trig_RProduction_Func002C() ) then
+        call UnitAddAbilityBJ( 'S002', GetSpellAbilityUnit() )
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_RProduction takes nothing returns nothing
+    set gg_trg_RProduction = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_RProduction, EVENT_PLAYER_UNIT_SPELL_CAST )
+    call TriggerAddCondition( gg_trg_RProduction, Condition( function Trig_RProduction_Conditions ) )
+    call TriggerAddAction( gg_trg_RProduction, function Trig_RProduction_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: RProductionStop
+//===========================================================================
+function Trig_RProductionStop_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) <= 100.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_RProductionStop_Func001A takes nothing returns nothing
+    if ( Trig_RProductionStop_Func001Func001C() ) then
+        set udg_RProductionStop = GetEnumUnit()
+        set bj_forLoopAIndex = 1
+        set bj_forLoopAIndexEnd = 7
+        loop
+            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+            call IssueImmediateOrderById(udg_RProductionStop, 851976)
+            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        endloop
+        call UnitAddAbilityBJ( 'S002', udg_RProductionStop )
+    else
+    endif
+endfunction
+
+function Trig_RProductionStop_Actions takes nothing returns nothing
+    call ForGroupBJ( GetUnitsOfTypeIdAll('h02B'), function Trig_RProductionStop_Func001A )
+endfunction
+
+//===========================================================================
+function InitTrig_RProductionStop takes nothing returns nothing
+    set gg_trg_RProductionStop = CreateTrigger(  )
+    call TriggerRegisterTimerEventPeriodic( gg_trg_RProductionStop, 1.00 )
+    call TriggerAddAction( gg_trg_RProductionStop, function Trig_RProductionStop_Actions )
 endfunction
 
 //===========================================================================
@@ -837,8 +964,11 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
+    call InitTrig_Ini(  )
     call InitTrig_Limits(  )
     call InitTrig_Cheats(  )
+    call InitTrig_RProduction(  )
+    call InitTrig_RProductionStop(  )
     call InitTrig_JTide(  )
     call InitTrig_JSwithToBoat(  )
     call InitTrig_JAddFoodFarmWaterAuto(  )
@@ -865,17 +995,82 @@ function InitCustomPlayerSlots takes nothing returns nothing
 
     // Player 0
     call SetPlayerStartLocation( Player(0), 0 )
+    call ForcePlayerStartLocation( Player(0), 0 )
     call SetPlayerColor( Player(0), ConvertPlayerColor(0) )
     call SetPlayerRacePreference( Player(0), RACE_PREF_HUMAN )
-    call SetPlayerRaceSelectable( Player(0), true )
+    call SetPlayerRaceSelectable( Player(0), false )
     call SetPlayerController( Player(0), MAP_CONTROL_USER )
+
+    // Player 1
+    call SetPlayerStartLocation( Player(1), 1 )
+    call ForcePlayerStartLocation( Player(1), 1 )
+    call SetPlayerColor( Player(1), ConvertPlayerColor(1) )
+    call SetPlayerRacePreference( Player(1), RACE_PREF_ORC )
+    call SetPlayerRaceSelectable( Player(1), false )
+    call SetPlayerController( Player(1), MAP_CONTROL_USER )
+
+    // Player 2
+    call SetPlayerStartLocation( Player(2), 2 )
+    call ForcePlayerStartLocation( Player(2), 2 )
+    call SetPlayerColor( Player(2), ConvertPlayerColor(2) )
+    call SetPlayerRacePreference( Player(2), RACE_PREF_UNDEAD )
+    call SetPlayerRaceSelectable( Player(2), false )
+    call SetPlayerController( Player(2), MAP_CONTROL_USER )
+
+    // Player 3
+    call SetPlayerStartLocation( Player(3), 3 )
+    call ForcePlayerStartLocation( Player(3), 3 )
+    call SetPlayerColor( Player(3), ConvertPlayerColor(3) )
+    call SetPlayerRacePreference( Player(3), RACE_PREF_NIGHTELF )
+    call SetPlayerRaceSelectable( Player(3), false )
+    call SetPlayerController( Player(3), MAP_CONTROL_USER )
 
 endfunction
 
 function InitCustomTeams takes nothing returns nothing
     // Force: TRIGSTR_002
     call SetPlayerTeam( Player(0), 0 )
+    call SetPlayerState( Player(0), PLAYER_STATE_ALLIED_VICTORY, 1 )
+    call SetPlayerTeam( Player(1), 0 )
+    call SetPlayerState( Player(1), PLAYER_STATE_ALLIED_VICTORY, 1 )
 
+    //   Allied
+    call SetPlayerAllianceStateAllyBJ( Player(0), Player(1), true )
+    call SetPlayerAllianceStateAllyBJ( Player(1), Player(0), true )
+
+    //   Shared Vision
+    call SetPlayerAllianceStateVisionBJ( Player(0), Player(1), true )
+    call SetPlayerAllianceStateVisionBJ( Player(1), Player(0), true )
+
+    // Force: TRIGSTR_602
+    call SetPlayerTeam( Player(2), 1 )
+    call SetPlayerState( Player(2), PLAYER_STATE_ALLIED_VICTORY, 1 )
+    call SetPlayerTeam( Player(3), 1 )
+    call SetPlayerState( Player(3), PLAYER_STATE_ALLIED_VICTORY, 1 )
+
+    //   Allied
+    call SetPlayerAllianceStateAllyBJ( Player(2), Player(3), true )
+    call SetPlayerAllianceStateAllyBJ( Player(3), Player(2), true )
+
+    //   Shared Vision
+    call SetPlayerAllianceStateVisionBJ( Player(2), Player(3), true )
+    call SetPlayerAllianceStateVisionBJ( Player(3), Player(2), true )
+
+endfunction
+
+function InitAllyPriorities takes nothing returns nothing
+
+    call SetStartLocPrioCount( 0, 1 )
+    call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
+
+    call SetStartLocPrioCount( 1, 1 )
+    call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )
+
+    call SetStartLocPrioCount( 2, 1 )
+    call SetStartLocPrio( 2, 0, 3, MAP_LOC_PRIO_HIGH )
+
+    call SetStartLocPrioCount( 3, 1 )
+    call SetStartLocPrio( 3, 0, 2, MAP_LOC_PRIO_HIGH )
 endfunction
 
 //***************************************************************************
@@ -886,12 +1081,13 @@ endfunction
 
 //===========================================================================
 function main takes nothing returns nothing
-    call SetCameraBounds( -3328.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -3584.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 3328.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 3072.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -3328.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 3072.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 3328.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -3584.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM) )
+    call SetCameraBounds( -7936.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -11776.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 11008.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 11264.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -7936.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 11264.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 11008.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -11776.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM) )
     call SetDayNightModels( "Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl" )
     call NewSoundEnvironment( "Default" )
-    call SetAmbientDaySound( "LordaeronSummerDay" )
-    call SetAmbientNightSound( "LordaeronSummerNight" )
+    call SetAmbientDaySound( "SunkenRuinsDay" )
+    call SetAmbientNightSound( "SunkenRuinsNight" )
     call SetMapMusic( "Music", true, 0 )
+    call CreateRegions(  )
     call CreateAllUnits(  )
     call InitBlizzard(  )
     call InitGlobals(  )
@@ -909,15 +1105,18 @@ endfunction
 function config takes nothing returns nothing
     call SetMapName( "TRIGSTR_006" )
     call SetMapDescription( "TRIGSTR_008" )
-    call SetPlayers( 1 )
-    call SetTeams( 1 )
-    call SetGamePlacement( MAP_PLACEMENT_USE_MAP_SETTINGS )
+    call SetPlayers( 4 )
+    call SetTeams( 4 )
+    call SetGamePlacement( MAP_PLACEMENT_TEAMS_TOGETHER )
 
-    call DefineStartLocation( 0, 576.0, 576.0 )
+    call DefineStartLocation( 0, -1920.0, -10304.0 )
+    call DefineStartLocation( 1, 2816.0, -10240.0 )
+    call DefineStartLocation( 2, -1920.0, 10176.0 )
+    call DefineStartLocation( 3, 2816.0, 10176.0 )
 
     // Player setup
     call InitCustomPlayerSlots(  )
-    call SetPlayerSlotAvailable( Player(0), MAP_CONTROL_USER )
-    call InitGenericPlayerSlots(  )
+    call InitCustomTeams(  )
+    call InitAllyPriorities(  )
 endfunction
 

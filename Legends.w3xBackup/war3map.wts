@@ -28,12 +28,6 @@ STRING 9
 Unknown
 }
 
-STRING 24
-// Units: H007 (Jaina Proudmure), Propernames (Proper Names)
-{
-Archmage
-}
-
 STRING 25
 // Units: h009 ([Jaina] Tridentman), Tip (Tooltip - Basic)
 {
@@ -739,27 +733,21 @@ STRING 267
 }
 
 STRING 268
-// Units: H007 (Jaina Proudmure), Name (Name)
+// Units: H007 ([Jaina] Archmage), Propernames (Proper Names)
 {
 Jaina Proudmure
 }
 
 STRING 269
-// Units: H007 (Jaina Proudmure), Tip (Tooltip - Basic)
+// Units: H007 ([Jaina] Archmage), Tip (Tooltip - Basic)
 {
 Summon Archmage
 }
 
 STRING 270
-// Units: H01C (Magni Bronzebeard), Name (Name)
+// Units: H01C ([Magni] Mountain King), Propernames (Proper Names)
 {
 Magni Bronzebeard
-}
-
-STRING 271
-// Units: H01C (Magni Bronzebeard), Propernames (Proper Names)
-{
-Mountain King
 }
 
 STRING 273
@@ -1534,5 +1522,817 @@ STRING 418
 // Upgrades: R00E (Barrage), Ubertip (Tooltip - Extended)
 {
 Upgrades Siege Engines, giving them the Flamethrower ability, which allows them to damage nearby enemy air units.
+}
+
+STRING 419
+// Units: N001 ([Ragnaros] Firelord), Propernames (Proper Names)
+{
+Ragnaros
+}
+
+STRING 425
+// Abilities: A00H ([Ragaros] Production), Name (Name)
+{
+[Ragaros] Production
+}
+
+STRING 426
+// Abilities: A00I ([Ragaros] Production), Name (Name)
+{
+[Ragaros] Production
+}
+
+STRING 429
+// Units: h02B ([Ragnaros] Barracks), EditorSuffix (Name - Editor Suffix)
+{
+ (Production)
+}
+
+STRING 432
+// Units: h02C ([Ragnaros] Fanatic), EditorSuffix (Name - Editor Suffix)
+{
+(Production)
+}
+
+STRING 434
+// Abilities: S001 ([Ragnaros] Replace Barrack), EditorSuffix (Editor Suffix)
+{
+(Production)
+}
+
+STRING 435
+// Abilities: A00I ([Ragaros] Production), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 439
+// Units: h028 ([Ragnaros] Barracks), Name (Name)
+{
+[Ragnaros] Barracks
+}
+
+STRING 442
+// Units: h02B ([Ragnaros] Barracks), Name (Name)
+{
+[Ragnaros] Barracks
+}
+
+STRING 444
+// Abilities: S001 ([Ragnaros] Replace Barrack), Name (Name)
+{
+[Ragnaros] Replace Barrack
+}
+
+STRING 445
+// Abilities: S002 ([Ragnaros] Replace Barrack), Name (Name)
+{
+[Ragnaros] Replace Barrack
+}
+
+STRING 446
+// Abilities: S003 ([Ragnaros] Replace Footman), Name (Name)
+{
+[Ragnaros] Replace Footman
+}
+
+STRING 447
+// Units: h029 ([Ragnaros] Fanatic), Name (Name)
+{
+[Ragnaros] Fanatic
+}
+
+STRING 448
+// Units: h029 ([Ragnaros] Fanatic), Tip (Tooltip - Basic)
+{
+Train Fanatic
+}
+
+STRING 449
+// Units: h02C ([Ragnaros] Fanatic), Name (Name)
+{
+[Ragnaros] Fanatic
+}
+
+STRING 450
+// Units: h02C ([Ragnaros] Fanatic), Tip (Tooltip - Basic)
+{
+Train Fanatic
+}
+
+STRING 453
+// Units: h02A ([Ragnaros] Shotgunman), Name (Name)
+{
+[Ragnaros] Shotgunman
+}
+
+STRING 454
+// Units: h02A ([Ragnaros] Shotgunman), Tip (Tooltip - Basic)
+{
+Train Shotgunman
+}
+
+STRING 455
+// Units: H007 ([Jaina] Archmage), Name (Name)
+{
+[Jaina] Archmage
+}
+
+STRING 456
+// Units: H01C ([Magni] Mountain King), Name (Name)
+{
+[Magni] Mountain King
+}
+
+STRING 457
+// Units: N001 ([Ragnaros] Firelord), Name (Name)
+{
+[Ragnaros] Firelord
+}
+
+STRING 458
+// Units: h02D ([Ragnaros] Town Hall), Name (Name)
+{
+[Ragnaros] Town Hall
+}
+
+STRING 459
+// Units: h02E ([Ragnaros] Keep), Name (Name)
+{
+[Ragnaros] Keep
+}
+
+STRING 460
+// Units: h02F ([Ragnaros] Castle), Name (Name)
+{
+[Ragnaros] Castle
+}
+
+STRING 461
+// Units: h02G ([Ragnaros] Lumber Mill), Name (Name)
+{
+[Ragnaros] Lumber Mill
+}
+
+STRING 462
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), effect1 (Effect 1)
+{
+rmin
+}
+
+STRING 463
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+[Ragnaros] Improved Gold Harvesting
+}
+
+STRING 464
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+Advanced Gold Harvesting
+}
+
+STRING 465
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
+{
+Improved Gold Harvesting
+}
+
+STRING 466
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
+{
+Advanced Gold Harvesting
+}
+
+STRING 467
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of gold that Peasants can carry by 2.
+}
+
+STRING 468
+// Upgrades: R00F (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Further increases the amount of gold that Peasants can carry by 2.
+}
+
+STRING 469
+// Upgrades: R00G (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Ragnaros] Improved Masonry
+}
+
+STRING 470
+// Units: h02H ([Ragnaros] Blacksmith), Name (Name)
+{
+[Ragnaros] Blacksmith
+}
+
+STRING 471
+// Units: h02I ([Ragnaros] Scout Tower), Name (Name)
+{
+[Ragnaros] Scout Tower
+}
+
+STRING 472
+// Units: h02J ([Ragnaros] Siege Engine), Name (Name)
+{
+[Ragnaros] Siege Engine
+}
+
+STRING 473
+// Units: h02K ([Ragnaros] Arcane Tower), Name (Name)
+{
+[Ragnaros] Arcane Tower
+}
+
+STRING 474
+// Units: H02L ([Sally] High Inquisitor ), Name (Name)
+{
+[Sally] High Inquisitor 
+}
+
+STRING 475
+// Units: H02L ([Sally] High Inquisitor ), Propernames (Proper Names)
+{
+Sally Whitemane
+}
+
+STRING 476
+// Units: h02M ([Sally] Town Hall), Name (Name)
+{
+[Sally] Town Hall
+}
+
+STRING 477
+// Units: h02N ([Sally] Keep), Name (Name)
+{
+[Sally] Keep
+}
+
+STRING 478
+// Units: h02O ([Sally] Castle), Name (Name)
+{
+[Sally] Castle
+}
+
+STRING 479
+// Units: H037 ([Sally] Scarlet Monastery), Name (Name)
+{
+[Sally] Scarlet Monastery
+}
+
+STRING 480
+// Units: H037 ([Sally] Scarlet Monastery), Tip (Tooltip - Basic)
+{
+Build Scarlet Monastery
+}
+
+STRING 481
+// Units: h02Q ([Sally] Barracks), Name (Name)
+{
+[Sally] Barracks
+}
+
+STRING 486
+// Abilities: A00J ([Sally] Desperate Plea), Name (Name)
+{
+[Sally] Desperate Plea
+}
+
+STRING 487
+// Abilities: A00J ([Sally] Desperate Plea), Ubertip (Tooltip - Normal - Extended)
+{
+Brings back to life the corpses of <A00J,DataA2> friendly nearby units.
+}
+
+STRING 488
+// Abilities: A00J ([Sally] Desperate Plea), Ubertip (Tooltip - Normal - Extended)
+{
+Brings back to life the corpses of <A00J,DataA3> friendly nearby units.
+}
+
+STRING 490
+// Abilities: A00J ([Sally] Desperate Plea), Researchtip (Tooltip - Learn)
+{
+Learn Desperate Plea
+}
+
+STRING 491
+// Abilities: A00J ([Sally] Desperate Plea), Ubertip (Tooltip - Normal - Extended)
+{
+Brings back to life the corpses of <A00J,DataA1> friendly nearby units.
+}
+
+STRING 492
+// Abilities: A00J ([Sally] Desperate Plea), Researchubertip (Tooltip - Learn - Extended)
+{
+Brings back to life the corpses of <A00J,DataA1> friendly nearby units.
+}
+
+STRING 493
+// Units: h02R ([Sally] Peasant-Houndmaster), Name (Name)
+{
+[Sally] Peasant-Houndmaster
+}
+
+STRING 494
+// Units: h02R ([Sally] Peasant-Houndmaster), Tip (Tooltip - Basic)
+{
+Train Peasant-Houndmaster
+}
+
+STRING 495
+// Units: o000 ([Sally] Hound), Name (Name)
+{
+[Sally] Hound
+}
+
+STRING 496
+// Abilities: A00K ([Sally] Hound), Name (Name)
+{
+[Sally] Hound
+}
+
+STRING 498
+// Abilities: A00K ([Sally] Hound), Tip (Tooltip - Normal)
+{
+Hound
+}
+
+STRING 503
+// Units: h02V ([Sally] Crusader), Name (Name)
+{
+[Sally] Crusader
+}
+
+STRING 504
+// Units: h02V ([Sally] Crusader), Tip (Tooltip - Basic)
+{
+Train Crusader
+}
+
+STRING 506
+// Units: h02T ([Sally] Interrogator), Tip (Tooltip - Basic)
+{
+Train Interrogator
+}
+
+STRING 508
+// Buffs/Effects: B004 ([Sally] Zeal), Bufftip (Tooltip)
+{
+Zeal
+}
+
+STRING 509
+// Abilities: A00N ([Sally] Zeal), Name (Name)
+{
+[Sally] Zeal
+}
+
+STRING 510
+// Abilities: A00J ([Sally] Desperate Plea), Tip (Tooltip - Normal)
+{
+Desperate Plea - [|cffffcc00Level 3|r]
+}
+
+STRING 511
+// Abilities: A00J ([Sally] Desperate Plea), Tip (Tooltip - Normal)
+{
+Desperate Plea - [|cffffcc00Level 1|r]
+}
+
+STRING 512
+// Abilities: A00J ([Sally] Desperate Plea), Tip (Tooltip - Normal)
+{
+Desperate Plea - [|cffffcc00Level 2|r]
+}
+
+STRING 513
+// Abilities: A00N ([Sally] Zeal), Tip (Tooltip - Normal)
+{
+Zeal - [|cffffcc00Level 1|r]
+}
+
+STRING 514
+// Abilities: A00N ([Sally] Zeal), Tip (Tooltip - Normal)
+{
+Zeal - [|cffffcc00Level 2|r]
+}
+
+STRING 515
+// Abilities: A00N ([Sally] Zeal), Tip (Tooltip - Normal)
+{
+Zeal - [|cffffcc00Level 3|r]
+}
+
+STRING 521
+// Abilities: A00N ([Sally] Zeal), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the attack rate of a target unit by <Auhf,DataA2,%>%, but drains <Auhf,DataB2> hit points per second. |nLasts <Auhf,Dur2> seconds.
+}
+
+STRING 522
+// Abilities: A00N ([Sally] Zeal), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the attack rate of a target unit by <Auhf,DataA3,%>%, but drains <Auhf,DataB3> hit points per second. |nLasts <Auhf,Dur3> seconds.
+}
+
+STRING 523
+// Buffs/Effects: B004 ([Sally] Zeal), EditorName (Name (Editor Only))
+{
+[Sally] Zeal
+}
+
+STRING 528
+// Units: h02W ([Sally] Lumber Mill), Name (Name)
+{
+[Sally] Lumber Mill
+}
+
+STRING 530
+// Units: h02X ([Sally] Armory), Name (Name)
+{
+[Sally] Armory
+}
+
+STRING 531
+// Units: h02X ([Sally] Armory), Tip (Tooltip - Basic)
+{
+Build Armory
+}
+
+STRING 532
+// Units: h02U ([Sally] Abbot), Name (Name)
+{
+[Sally] Abbot
+}
+
+STRING 533
+// Units: h02U ([Sally] Abbot), Tip (Tooltip - Basic)
+{
+Train Abbot
+}
+
+STRING 534
+// Units: h02S ([Sally] Myrmidon), Name (Name)
+{
+[Sally] Myrmidon
+}
+
+STRING 535
+// Units: h02S ([Sally] Myrmidon), Tip (Tooltip - Basic)
+{
+Train Myrmidon
+}
+
+STRING 537
+// Units: h02Y ([Sally] Library), Name (Name)
+{
+[Sally] Library
+}
+
+STRING 538
+// Units: h02Y ([Sally] Library), Tip (Tooltip - Basic)
+{
+Build Library
+}
+
+STRING 539
+// Units: h02Z ([Sally] Siege Ram), Name (Name)
+{
+[Sally] Siege Ram
+}
+
+STRING 540
+// Units: h02Z ([Sally] Siege Ram), Tip (Tooltip - Basic)
+{
+Train Siege Ram
+}
+
+STRING 541
+// Units: h030 ([Sally] Skorpion), Name (Name)
+{
+[Sally] Skorpion
+}
+
+STRING 542
+// Units: h031 ([Sally] Gryphon Roost), Name (Name)
+{
+[Sally] Gryphon Roost
+}
+
+STRING 543
+// Units: h032 ([Sally] Scout Tower), Name (Name)
+{
+[Sally] Scout Tower
+}
+
+STRING 544
+// Units: h033 ([Sally] Guard Tower), Name (Name)
+{
+[Sally] Guard Tower
+}
+
+STRING 545
+// Units: h034 ([Sally] Cannon Tower), Name (Name)
+{
+[Sally] Cannon Tower
+}
+
+STRING 546
+// Units: h035 ([Sally] Arcane Tower), Name (Name)
+{
+[Sally] Arcane Tower
+}
+
+STRING 547
+// Units: h036 ([Sally] Workshop), Name (Name)
+{
+[Sally] Workshop
+}
+
+STRING 548
+// Units: h02P ([Sally] Inquisitor), Name (Name)
+{
+[Sally] Inquisitor
+}
+
+STRING 549
+// Units: h02P ([Sally] Inquisitor), Tip (Tooltip - Basic)
+{
+Train Inquisitor
+}
+
+STRING 550
+// Units: h038 ([Sally] Oracle), Name (Name)
+{
+[Sally] Oracle
+}
+
+STRING 552
+// Units: h039 ([Sally] Gryphon Archer), Name (Name)
+{
+[Sally] Gryphon Archer
+}
+
+STRING 553
+// Units: h039 ([Sally] Gryphon Archer), Tip (Tooltip - Basic)
+{
+Train Gryphon Archer
+}
+
+STRING 555
+// Abilities: A00P ([Sally] Scarlet Aegis), Name (Name)
+{
+[Sally] Scarlet Aegis
+}
+
+STRING 556
+// Abilities: A00P ([Sally] Scarlet Aegis), Tip (Tooltip - Normal)
+{
+Scarlet Aegis
+}
+
+STRING 557
+// Abilities: A00J ([Sally] Desperate Plea), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 558
+// Abilities: A00J ([Sally] Desperate Plea), Researchhotkey (Hotkey - Learn)
+{
+Q
+}
+
+STRING 559
+// Abilities: A00N ([Sally] Zeal), Researchhotkey (Hotkey - Learn)
+{
+W
+}
+
+STRING 560
+// Abilities: A00N ([Sally] Zeal), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 561
+// Abilities: A00P ([Sally] Scarlet Aegis), Researchhotkey (Hotkey - Learn)
+{
+R
+}
+
+STRING 562
+// Abilities: A00P ([Sally] Scarlet Aegis), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 564
+// Abilities: A00M ([Sally] Inquisitor's Prayer), Tip (Tooltip - Normal)
+{
+Inquisitor's Prayer - [|cffffcc00Level 1|r]
+}
+
+STRING 565
+// Abilities: A00M ([Sally] Inquisitor's Prayer), Name (Name)
+{
+[Sally] Inquisitor's Prayer
+}
+
+STRING 566
+// Abilities: A00M ([Sally] Inquisitor's Prayer), Researchtip (Tooltip - Learn)
+{
+Inquisitor's Prayer - [|cffffcc00Level %d|r]
+}
+
+STRING 567
+// Abilities: A00M ([Sally] Inquisitor's Prayer), Tip (Tooltip - Normal)
+{
+Inquisitor's Prayer - [|cffffcc00Level 2|r]
+}
+
+STRING 568
+// Abilities: A00M ([Sally] Inquisitor's Prayer), Tip (Tooltip - Normal)
+{
+Inquisitor's Prayer - [|cffffcc00Level 3|r]
+}
+
+STRING 569
+// Abilities: A00M ([Sally] Inquisitor's Prayer), Researchhotkey (Hotkey - Learn)
+{
+E
+}
+
+STRING 571
+// Buffs/Effects: B006 ([Sally] Scarlet Aegis), EditorName (Name (Editor Only))
+{
+[Sally] Scarlet Aegis
+}
+
+STRING 573
+// Units: h02T ([Sally] Interrogator), Name (Name)
+{
+[Sally] Interrogator
+}
+
+STRING 574
+// Buffs/Effects: B005 ([Sally] Inquisitor's Prayer), Bufftip (Tooltip)
+{
+Inquisitor's Prayer
+}
+
+STRING 575
+// Buffs/Effects: B005 ([Sally] Inquisitor's Prayer), EditorName (Name (Editor Only))
+{
+[Sally] Inquisitor's Prayer
+}
+
+STRING 576
+// Buffs/Effects: B006 ([Sally] Scarlet Aegis), Bufftip (Tooltip)
+{
+Scarlet Aegis
+}
+
+STRING 577
+// Buffs/Effects: B006 ([Sally] Scarlet Aegis), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by a Scarlet Aegis; its armor is temporarily increased.
+}
+
+STRING 578
+// Abilities: A00L ([Sally] Flaming Torment), Tip (Tooltip - Normal)
+{
+Flaming Torment
+}
+
+STRING 579
+// Abilities: A00L ([Sally] Flaming Torment), Name (Name)
+{
+[Sally] Flaming Torment
+}
+
+STRING 582
+// Abilities: A00Q ([Sally] Flaming Torment), Name (Name)
+{
+[Sally] Flaming Torment
+}
+
+STRING 583
+// Abilities: A00Q ([Sally] Flaming Torment), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 584
+// Abilities: A00Q ([Sally] Flaming Torment), Tip (Tooltip - Normal)
+{
+Flaming Torment
+}
+
+STRING 585
+// Buffs/Effects: B007 ([Sally] Flaming Torment), EditorName (Name (Editor Only))
+{
+[Sally] Flaming Torment
+}
+
+STRING 586
+// Buffs/Effects: B007 ([Sally] Flaming Torment), Bufftip (Tooltip)
+{
+Flaming Torment
+}
+
+STRING 587
+// Buffs/Effects: B008 ([Sally] Flaming Torment), EditorName (Name (Editor Only))
+{
+[Sally] Flaming Torment
+}
+
+STRING 588
+// Buffs/Effects: B008 ([Sally] Flaming Torment), Bufftip (Tooltip)
+{
+Flaming Torment
+}
+
+STRING 589
+// Upgrades: R00H (Long Rifles), Name (Name)
+{
+[Sally] Flaming Torment
+}
+
+STRING 590
+// Upgrades: R00H (Long Rifles), Tip (Tooltip)
+{
+Upgrade to Flaming Torment
+}
+
+STRING 591
+// Units: h03A ([Sally] Shipyard), Name (Name)
+{
+[Sally] Shipyard
+}
+
+STRING 592
+// Units: h03A ([Sally] Shipyard), Tip (Tooltip - Basic)
+{
+Build Shipyard
+}
+
+STRING 593
+// Units: h03B ([Sally] Transport Ship), Name (Name)
+{
+[Sally] Transport Ship
+}
+
+STRING 594
+// Units: h03C ([Sally] Frigate), Name (Name)
+{
+[Sally] Frigate
+}
+
+STRING 595
+// Units: h03D ([Sally] Battleship), Name (Name)
+{
+[Sally] Battleship
+}
+
+STRING 596
+// Destructibles: B000 (Wood Supply), Name (Name)
+{
+Wood Supply
+}
+
+STRING 598
+// Units: n002 ([Special] Ship Heart), Name (Name)
+{
+[Special] Ship Heart
+}
+
+STRING 599
+{
+Player 2
+}
+
+STRING 600
+{
+Player 3
+}
+
+STRING 601
+{
+Player 4
+}
+
+STRING 602
+{
+Force 2
+}
+
+STRING 603
+// Units: h03E ([Special] Big Bertha), Name (Name)
+{
+[Special] Big Bertha
 }
 
