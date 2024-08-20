@@ -252,57 +252,21 @@ Recruit
 }
 
 STRING 501
-// Units: h00A (City Hall), EditorSuffix (Name - Editor Suffix)
+// Units: h00A (Cathedral), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
-}
-
-STRING 502
-// Units: h00A (City Hall), Name (Name)
-{
-City Hall
-}
-
-STRING 503
-// Units: h00A (City Hall), Tip (Tooltip - Basic)
-{
-Build City Hall
 }
 
 STRING 504
-// Units: h00I (Palace), EditorSuffix (Name - Editor Suffix)
+// Units: h00I (Diocese), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
-}
-
-STRING 505
-// Units: h00I (Palace), Name (Name)
-{
-Palace
-}
-
-STRING 506
-// Units: h00I (Palace), Tip (Tooltip - Basic)
-{
-Upgrade to Palace
 }
 
 STRING 507
-// Units: h01H (Citadel), EditorSuffix (Name - Editor Suffix)
+// Units: h01H (Parish), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
-}
-
-STRING 508
-// Units: h01H (Citadel), Name (Name)
-{
-Citadel
-}
-
-STRING 509
-// Units: h01H (Citadel), Tip (Tooltip - Basic)
-{
-Upgrade to Citadel
 }
 
 STRING 510
@@ -330,7 +294,7 @@ Build Monument of Light
 }
 
 STRING 514
-// Units: h02K (Library), EditorSuffix (Name - Editor Suffix)
+// Units: h02L (Abbey), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -348,103 +312,67 @@ Light's Hope Chapel
 }
 
 STRING 517
-// Units: h02L (Northshire Abbey), EditorSuffix (Name - Editor Suffix)
+// Units: h02N (Aviary), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
 STRING 520
-// Units: h02N (Workshop-Aviary), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 521
-// Units: h02K (Library), Name (Name)
-{
-Library
-}
-
-STRING 522
-// Units: h02K (Library), Tip (Tooltip - Basic)
-{
-Build Library
-}
-
-STRING 523
 // Units: h02O (Scout Tower), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 524
-// Units: h02L (Northshire Abbey), Name (Name)
-{
-Northshire Abbey
-}
-
-STRING 525
-// Units: h02L (Northshire Abbey), Tip (Tooltip - Basic)
-{
-Northshire Abbey
-}
-
-STRING 526
+STRING 523
 // Units: h02P (Guard Tower), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 527
-// Units: h02N (Workshop-Aviary), Name (Name)
-{
-Workshop-Aviary
-}
-
-STRING 528
-// Units: h02N (Workshop-Aviary), Tip (Tooltip - Basic)
-{
-Build Workshop-Aviary
-}
-
-STRING 529
+STRING 526
 // Units: h02Q (Cannon Tower), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 530
+STRING 529
 // Units: h00W (Knight-Paladin), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 531
+STRING 530
 // Units: h00J (Cleric), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 532
+STRING 531
 // Units: h00K (Shotgunman), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 533
+STRING 532
 // Units: h00N (Gryphon Rider), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 535
+STRING 533
 // Units: h00O (Pilgrim), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 537
+STRING 535
 // Units: h00P (Champion of Holy), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 537
+// Units: h00Q (Champion of Protection), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -462,31 +390,31 @@ Shotgunman
 }
 
 STRING 540
-// Units: h00Q (Champion of Protection), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 541
 // Units: h00R (Champion of Retribution), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 544
+STRING 541
 // Units: h00L (Mortar Team), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 547
+STRING 544
 // Units: h000 (Templar), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 550
+STRING 547
 // Units: h003 (Lumber Mill), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 550
+// Units: H00B (Light's Hope Chapel), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -1044,55 +972,55 @@ Stone Form Corrupted Gargoyle
 }
 
 STRING 643
-// Units: H00B (Light's Hope Chapel), EditorSuffix (Name - Editor Suffix)
+// Units: h009 (War Wagon), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
 STRING 645
-// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
+// Units: h00C (Holy Tower), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
 STRING 647
-// Upgrades: R001 (Defend), EditorSuffix (Editor Suffix)
+// Units: h00D (Blacksmith), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
 STRING 648
-// Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
+// Units: h00E (Workshop), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
 STRING 651
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 655
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R001 (Defend), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 656
-// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+// Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 657
-// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 662
-// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -1780,6 +1708,12 @@ STRING 919
 // Abilities: A00B ([Uther] Dispel Magic), Name (Name)
 {
 [Uther] Dispel Magic
+}
+
+STRING 923
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+{
+[Uther]
 }
 
 STRING 928
@@ -4784,5 +4718,113 @@ STRING 1720
 // Abilities: A00G ([Uther] First Aid), Ubertip (Tooltip - Normal - Extended)
 {
 Heal organic troops using resources.
+}
+
+STRING 1721
+// Abilities: A00G ([Uther] First Aid), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 1722
+// Abilities: A00G ([Uther] First Aid), Unhotkey (Hotkey - Turn Off)
+{
+F
+}
+
+STRING 1723
+// Units: h009 (War Wagon), Name (Name)
+{
+War Wagon
+}
+
+STRING 1724
+// Units: h009 (War Wagon), Tip (Tooltip - Basic)
+{
+Train War Wagon
+}
+
+STRING 1725
+// Units: h00A (Cathedral), Name (Name)
+{
+Cathedral
+}
+
+STRING 1726
+// Units: h00A (Cathedral), Tip (Tooltip - Basic)
+{
+Build Cathedral
+}
+
+STRING 1727
+// Units: h00I (Diocese), Name (Name)
+{
+Diocese
+}
+
+STRING 1728
+// Units: h00I (Diocese), Tip (Tooltip - Basic)
+{
+Upgrade to Diocese
+}
+
+STRING 1729
+// Units: h01H (Parish), Name (Name)
+{
+Parish
+}
+
+STRING 1730
+// Units: h01H (Parish), Tip (Tooltip - Basic)
+{
+Upgrade to Parish
+}
+
+STRING 1731
+// Units: h00C (Holy Tower), Name (Name)
+{
+Holy Tower
+}
+
+STRING 1732
+// Units: h00C (Holy Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Holy Tower
+}
+
+STRING 1733
+// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1734
+// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1735
+// Units: h02L (Abbey), Name (Name)
+{
+Abbey
+}
+
+STRING 1736
+// Units: h02L (Abbey), Tip (Tooltip - Basic)
+{
+Abbey
+}
+
+STRING 1737
+// Units: h02N (Aviary), Name (Name)
+{
+Aviary
+}
+
+STRING 1738
+// Units: h02N (Aviary), Tip (Tooltip - Basic)
+{
+Build Aviary
 }
 
