@@ -18,9 +18,6 @@ globals
     // User-defined
     unit                    udg_CurrentUnit            = null
     integer                 udg_ArthasSouls            = 0
-    real                    udg_UtherFaith             = 0
-    integer                 udg_UtherFootmanHP         = 0
-    real                    udg_UtherFaithAltarAdd     = 0
     rect array              udg_Way1
     rect array              udg_Way2
     integer                 udg_Way1Count              = 0
@@ -177,18 +174,9 @@ globals
     trigger                 gg_trg_ArthasPlagueNecropolis = null
     trigger                 gg_trg_ArthasSacrifice     = null
     trigger                 gg_trg_UtherBalance        = null
-    trigger                 gg_trg_UtherFaith          = null
-    trigger                 gg_trg_UtherFaithAltar     = null
     trigger                 gg_trg_UtherDivineShield   = null
     trigger                 gg_trg_UtherChampions      = null
     trigger                 gg_trg_UtherChampionsDead  = null
-    trigger                 gg_trg_UtherFaithInLightTrain = null
-    trigger                 gg_trg_UtherFaithInLight   = null
-    trigger                 gg_trg_UtherFaithInLightUpgrade = null
-    trigger                 gg_trg_UtherGraceAncestors = null
-    trigger                 gg_trg_UtherTradingPostLimit2 = null
-    trigger                 gg_trg_UtherTradingPostLimit3 = null
-    trigger                 gg_trg_UtherTrading        = null
     trigger                 gg_trg_PlayerCount         = null
     trigger                 gg_trg_SetDifficulty       = null
     trigger                 gg_trg_SetAIRace           = null
@@ -266,9 +254,6 @@ endglobals
 function InitGlobals takes nothing returns nothing
     local integer i = 0
     set udg_ArthasSouls = 0
-    set udg_UtherFaith = 0
-    set udg_UtherFootmanHP = 0
-    set udg_UtherFaithAltarAdd = 0
     set udg_Way1Count = 0
     set udg_Way2Count = 0
     set udg_RacesRandom = 0
@@ -688,7 +673,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u = BlzCreateUnitWithSkin( p, 'h001', 6216.4, -3390.4, 243.827, 'h001' )
-    set u = BlzCreateUnitWithSkin( p, 'h00O', 52.0, -364.3, -87.673, 'h00O' )
 endfunction
 
 //===========================================================================
@@ -2171,7 +2155,6 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     call RemoveUnit( GetSpellAbilityUnit() )
     // Run-ALL-triggers-Uther
     call SetPlayerTechResearchedSwap( 'R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()) )
-    call ConditionalTriggerExecute( gg_trg_UtherFaith )
     call TriggerExecute( gg_trg_StartCameraReset )
 endfunction
 
@@ -3495,14 +3478,11 @@ endfunction
 // Balance
 //===========================================================================
 function Trig_UtherBalance_Actions takes nothing returns nothing
-    set udg_UtherFootmanHP = 430
-    set udg_UtherFaithAltarAdd = 3.00
     set bj_forLoopAIndex = 1
     set bj_forLoopAIndexEnd = 2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
         call SetPlayerTechMaxAllowedSwap( 'H00B', 1, ConvertedPlayer(GetForLoopIndexA()) )
-        call SetPlayerTechMaxAllowedSwap( 'h02F', 15, ConvertedPlayer(GetForLoopIndexA()) )
         set bj_forLoopAIndex = bj_forLoopAIndex + 1
     endloop
 endfunction
@@ -3511,73 +3491,6 @@ endfunction
 function InitTrig_UtherBalance takes nothing returns nothing
     set gg_trg_UtherBalance = CreateTrigger(  )
     call TriggerAddAction( gg_trg_UtherBalance, function Trig_UtherBalance_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherFaith
-//===========================================================================
-function Trig_UtherFaith_Actions takes nothing returns nothing
-    set udg_UtherFaith = 0.00
-    set udg_UtherFaith = ( I2R(CountLivingPlayerUnitsOfTypeId('h02F', Player(0))) * udg_UtherFaithAltarAdd )
-    call CreateLeaderboardBJ( GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_828" )
-    call LeaderboardAddItemBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_829", R2I(udg_UtherFaith) )
-    call EnableTrigger( gg_trg_UtherFaithAltar )
-    call EnableTrigger( gg_trg_UtherFaithInLightTrain )
-    call EnableTrigger( gg_trg_UtherFaithInLightUpgrade )
-    call EnableTrigger( gg_trg_UtherDivineShield )
-    call EnableTrigger( gg_trg_UtherGraceAncestors )
-    call EnableTrigger( gg_trg_UtherChampions )
-    call EnableTrigger( gg_trg_UtherChampionsDead )
-    call EnableTrigger( gg_trg_UtherTrading )
-    call EnableTrigger( gg_trg_UtherTradingPostLimit2 )
-    call EnableTrigger( gg_trg_UtherTradingPostLimit3 )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherFaith takes nothing returns nothing
-    set gg_trg_UtherFaith = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherFaith )
-    call TriggerAddAction( gg_trg_UtherFaith, function Trig_UtherFaith_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherFaithAltar
-//===========================================================================
-function Trig_UtherFaithAltar_Func001Func003C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h02F' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherFaithAltar_Func001C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h02F' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherFaithAltar_Actions takes nothing returns nothing
-    if ( Trig_UtherFaithAltar_Func001C() ) then
-        set udg_UtherFaith = ( udg_UtherFaith + udg_UtherFaithAltarAdd )
-        call LeaderboardSetPlayerItemValueBJ( Player(0), PlayerGetLeaderboardBJ(Player(0)), R2I(udg_UtherFaith) )
-    else
-        if ( Trig_UtherFaithAltar_Func001Func003C() ) then
-            set udg_UtherFaith = ( udg_UtherFaith - udg_UtherFaithAltarAdd )
-            call LeaderboardSetPlayerItemValueBJ( Player(0), PlayerGetLeaderboardBJ(Player(0)), R2I(udg_UtherFaith) )
-        else
-        endif
-    endif
-    call ConditionalTriggerExecute( gg_trg_UtherFaithInLight )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherFaithAltar takes nothing returns nothing
-    set gg_trg_UtherFaithAltar = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherFaithAltar )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherFaithAltar, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherFaithAltar, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddAction( gg_trg_UtherFaithAltar, function Trig_UtherFaithAltar_Actions )
 endfunction
 
 //===========================================================================
@@ -3760,193 +3673,6 @@ function InitTrig_UtherChampionsDead takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherChampionsDead, EVENT_PLAYER_UNIT_DEATH )
     call TriggerAddCondition( gg_trg_UtherChampionsDead, Condition( function Trig_UtherChampionsDead_Conditions ) )
     call TriggerAddAction( gg_trg_UtherChampionsDead, function Trig_UtherChampionsDead_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherFaithInLightTrain
-//===========================================================================
-function Trig_UtherFaithInLightTrain_Func001C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTrainedUnit()) == 'h005' ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerTechCountSimple('R001', Player(0)) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherFaithInLightTrain_Conditions takes nothing returns boolean
-    if ( not Trig_UtherFaithInLightTrain_Func001C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherFaithInLightTrain_Actions takes nothing returns nothing
-    call BlzSetUnitMaxHP( GetTrainedUnit(), ( udg_UtherFootmanHP + R2I(udg_UtherFaith) ) )
-    call SetUnitLifePercentBJ( GetTrainedUnit(), 100 )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherFaithInLightTrain takes nothing returns nothing
-    set gg_trg_UtherFaithInLightTrain = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherFaithInLightTrain )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherFaithInLightTrain, EVENT_PLAYER_UNIT_TRAIN_FINISH )
-    call TriggerAddCondition( gg_trg_UtherFaithInLightTrain, Condition( function Trig_UtherFaithInLightTrain_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherFaithInLightTrain, function Trig_UtherFaithInLightTrain_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherFaithInLight
-//===========================================================================
-function Trig_UtherFaithInLight_Conditions takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R001', Player(0)) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherFaithInLight_Func002A takes nothing returns nothing
-    call BlzSetUnitMaxHP( GetEnumUnit(), ( udg_UtherFootmanHP + R2I(udg_UtherFaith) ) )
-endfunction
-
-function Trig_UtherFaithInLight_Actions takes nothing returns nothing
-    call ForGroupBJ( GetUnitsOfTypeIdAll('h005'), function Trig_UtherFaithInLight_Func002A )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherFaithInLight takes nothing returns nothing
-    set gg_trg_UtherFaithInLight = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherFaithInLight )
-    call TriggerAddCondition( gg_trg_UtherFaithInLight, Condition( function Trig_UtherFaithInLight_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherFaithInLight, function Trig_UtherFaithInLight_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherFaithInLightUpgrade
-//===========================================================================
-function Trig_UtherFaithInLightUpgrade_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R001' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherFaithInLightUpgrade_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_UtherFaithInLight )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherFaithInLightUpgrade takes nothing returns nothing
-    set gg_trg_UtherFaithInLightUpgrade = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherFaithInLightUpgrade )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherFaithInLightUpgrade, EVENT_PLAYER_UNIT_RESEARCH_FINISH )
-    call TriggerAddCondition( gg_trg_UtherFaithInLightUpgrade, Condition( function Trig_UtherFaithInLightUpgrade_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherFaithInLightUpgrade, function Trig_UtherFaithInLightUpgrade_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherGraceAncestors
-//===========================================================================
-function Trig_UtherGraceAncestors_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R002' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherGraceAncestors_Actions takes nothing returns nothing
-    set udg_UtherFaithAltarAdd = 4.00
-    set udg_UtherFaith = ( I2R(CountLivingPlayerUnitsOfTypeId('h02F', Player(0))) * udg_UtherFaithAltarAdd )
-    call LeaderboardSetPlayerItemValueBJ( Player(0), PlayerGetLeaderboardBJ(Player(0)), R2I(udg_UtherFaith) )
-    call ConditionalTriggerExecute( gg_trg_UtherFaithInLight )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherGraceAncestors takes nothing returns nothing
-    set gg_trg_UtherGraceAncestors = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherGraceAncestors )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherGraceAncestors, EVENT_PLAYER_UNIT_RESEARCH_FINISH )
-    call TriggerAddCondition( gg_trg_UtherGraceAncestors, Condition( function Trig_UtherGraceAncestors_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherGraceAncestors, function Trig_UtherGraceAncestors_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherTradingPostLimit2
-//===========================================================================
-function Trig_UtherTradingPostLimit2_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h00I' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherTradingPostLimit2_Actions takes nothing returns nothing
-    call DisableTrigger( GetTriggeringTrigger() )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherTradingPostLimit2 takes nothing returns nothing
-    set gg_trg_UtherTradingPostLimit2 = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherTradingPostLimit2 )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherTradingPostLimit2, EVENT_PLAYER_UNIT_UPGRADE_FINISH )
-    call TriggerAddCondition( gg_trg_UtherTradingPostLimit2, Condition( function Trig_UtherTradingPostLimit2_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherTradingPostLimit2, function Trig_UtherTradingPostLimit2_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherTradingPostLimit3
-//===========================================================================
-function Trig_UtherTradingPostLimit3_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h01H' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherTradingPostLimit3_Actions takes nothing returns nothing
-    call DisableTrigger( GetTriggeringTrigger() )
-endfunction
-
-//===========================================================================
-function InitTrig_UtherTradingPostLimit3 takes nothing returns nothing
-    set gg_trg_UtherTradingPostLimit3 = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherTradingPostLimit3 )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherTradingPostLimit3, EVENT_PLAYER_UNIT_UPGRADE_FINISH )
-    call TriggerAddCondition( gg_trg_UtherTradingPostLimit3, Condition( function Trig_UtherTradingPostLimit3_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherTradingPostLimit3, function Trig_UtherTradingPostLimit3_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: UtherTrading
-//===========================================================================
-function Trig_UtherTrading_Func002Func001C takes nothing returns boolean
-    if ( not ( IsPlayerAlly(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherTrading_Actions takes nothing returns nothing
-    call AddSpecialEffectTargetUnitBJ( "overhead", GetSpellAbilityUnit(), "Abilities\\Spells\\Other\\Transmute\\PileofGold.mdl" )
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 24
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        if ( Trig_UtherTrading_Func002Func001C() ) then
-            call AdjustPlayerStateBJ( 100, ConvertedPlayer(GetForLoopIndexA()), PLAYER_STATE_RESOURCE_GOLD )
-        else
-        endif
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
-    endloop
-endfunction
-
-//===========================================================================
-function InitTrig_UtherTrading takes nothing returns nothing
-    set gg_trg_UtherTrading = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherTrading )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherTrading, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddAction( gg_trg_UtherTrading, function Trig_UtherTrading_Actions )
 endfunction
 
 //===========================================================================
@@ -8656,18 +8382,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasPlagueNecropolis(  )
     call InitTrig_ArthasSacrifice(  )
     call InitTrig_UtherBalance(  )
-    call InitTrig_UtherFaith(  )
-    call InitTrig_UtherFaithAltar(  )
     call InitTrig_UtherDivineShield(  )
     call InitTrig_UtherChampions(  )
     call InitTrig_UtherChampionsDead(  )
-    call InitTrig_UtherFaithInLightTrain(  )
-    call InitTrig_UtherFaithInLight(  )
-    call InitTrig_UtherFaithInLightUpgrade(  )
-    call InitTrig_UtherGraceAncestors(  )
-    call InitTrig_UtherTradingPostLimit2(  )
-    call InitTrig_UtherTradingPostLimit3(  )
-    call InitTrig_UtherTrading(  )
     call InitTrig_PlayerCount(  )
     call InitTrig_SetDifficulty(  )
     call InitTrig_SetAIRace(  )

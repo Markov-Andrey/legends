@@ -438,7 +438,7 @@ STRING 533
 }
 
 STRING 535
-// Units: h00O (Peasant), EditorSuffix (Name - Editor Suffix)
+// Units: h00O (Pilgrim), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -1044,7 +1044,7 @@ Stone Form Corrupted Gargoyle
 }
 
 STRING 643
-// Units: h009 (Militia), EditorSuffix (Name - Editor Suffix)
+// Units: h009 (Zealot), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -1463,13 +1463,9 @@ STRING 825
 }
 
 STRING 828
+// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
 {
 Uther
-}
-
-STRING 829
-{
-Faith
 }
 
 STRING 834
@@ -2650,12 +2646,6 @@ STRING 1199
 // Upgrades: R00F (Magic Sentry), Name (Name)
 {
 [Special] Uther
-}
-
-STRING 1200
-// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
-{
-Uther
 }
 
 STRING 1201
@@ -4782,5 +4772,53 @@ STRING 1707
 // Items: I002 (Heartstone), Name (Name)
 {
 Heartstone
+}
+
+STRING 1708
+// Units: h00O (Pilgrim), Name (Name)
+{
+Pilgrim
+}
+
+STRING 1709
+// Units: h00O (Pilgrim), Tip (Tooltip - Basic)
+{
+Train Pilgrim
+}
+
+STRING 1710
+// Units: h009 (Zealot), Name (Name)
+{
+Zealot
+}
+
+STRING 1711
+// Abilities: A00P ([Uther] Call To Arms), Ubertip (Tooltip - Normal - Extended)
+{
+Call all nearby Piligrims to the Town Hall to be converted to Militia. |nLasts <Amil,Dur1> seconds.
+}
+
+STRING 1712
+// Abilities: A00P ([Uther] Call To Arms), Unubertip (Tooltip - Turn Off - Extended)
+{
+Call all nearby Zealots to the Town Hall to be converted to Piligrims.
+}
+
+STRING 1713
+// Abilities: A00Q ([Uther] Call to Arms), EditorSuffix (Editor Suffix)
+{
+ (Piligrims)
+}
+
+STRING 1716
+// Abilities: A00Q ([Uther] Call to Arms), Ubertip (Tooltip - Normal - Extended)
+{
+Run to the nearest Keep, Castle or starting Town Hall to arm the Piligrim, converting him into Zealot. |nLasts <Amil,Dur1> seconds.
+}
+
+STRING 1717
+// Abilities: A00Q ([Uther] Call to Arms), Unubertip (Tooltip - Turn Off - Extended)
+{
+Run to the nearest Keep, Castle or starting Town Hall to disarm the Zealot, converting it into a Piligrim.
 }
 
