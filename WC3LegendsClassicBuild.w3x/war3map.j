@@ -148,7 +148,6 @@ globals
     trigger                 gg_trg_PreviewUther        = null
     trigger                 gg_trg_ChooseArthas        = null
     trigger                 gg_trg_ChooseUther         = null
-    trigger                 gg_trg_ArthasBalance       = null
     trigger                 gg_trg_ArthasIni           = null
     trigger                 gg_trg_ArthasNewRuneSecond = null
     trigger                 gg_trg_ArthasNewRuneThree  = null
@@ -173,7 +172,6 @@ globals
     trigger                 gg_trg_ArthasGhoulEffect   = null
     trigger                 gg_trg_ArthasPlagueNecropolis = null
     trigger                 gg_trg_ArthasSacrifice     = null
-    trigger                 gg_trg_UtherBalance        = null
     trigger                 gg_trg_UtherDivineShield   = null
     trigger                 gg_trg_UtherChampions      = null
     trigger                 gg_trg_UtherChampionsDead  = null
@@ -246,6 +244,8 @@ globals
     trigger                 gg_trg_EnemyHero           = null
     trigger                 gg_trg_EnemyHeroAddItem    = null
     unit                    gg_unit_H004_0013          = null
+    trigger                 gg_trg_LimitUnits          = null
+    trigger                 gg_trg_UtherIni            = null
 
     // Random Groups
     integer array gg_rg_000
@@ -1883,6 +1883,31 @@ function InitTrig_StartCameraReset takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: LimitUnits
+//
+// Construction Limit for Unique Units
+//===========================================================================
+function Trig_LimitUnits_Func001A takes nothing returns nothing
+    // Arthas
+    call SetPlayerTechMaxAllowedSwap( 'U006', 1, GetEnumPlayer() )
+    call SetPlayerTechMaxAllowedSwap( 'U000', 1, GetEnumPlayer() )
+    call SetPlayerTechMaxAllowedSwap( 'u01C', 1, GetEnumPlayer() )
+    // Uther
+    call SetPlayerTechMaxAllowedSwap( 'H02D', 1, GetEnumPlayer() )
+    call SetPlayerTechMaxAllowedSwap( 'H00B', 1, GetEnumPlayer() )
+endfunction
+
+function Trig_LimitUnits_Actions takes nothing returns nothing
+    call ForForce( GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnits_Func001A )
+endfunction
+
+//===========================================================================
+function InitTrig_LimitUnits takes nothing returns nothing
+    set gg_trg_LimitUnits = CreateTrigger(  )
+    call TriggerAddAction( gg_trg_LimitUnits, function Trig_LimitUnits_Actions )
+endfunction
+
+//===========================================================================
 // Trigger: ChooseFirst
 //===========================================================================
 function Trig_ChooseFirst_Actions takes nothing returns nothing
@@ -2067,10 +2092,6 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     call ShowUnitHide( udg_CurrentUnit )
     call CreateNUnitsAtLoc( 1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
     call RemoveUnit( udg_CurrentUnit )
-    // Legend
-    call CreateNUnitsAtLoc( 1, 'U006', GetOwningPlayer(GetSpellAbilityUnit()), OffsetLocation(GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 200.00, -250.00), bj_UNIT_FACING )
-    set udg_Arthas = GetLastCreatedUnit()
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl" )
     // ----------------------
     call RemoveUnit( GetSpellAbilityUnit() )
     // Run-ALL-triggers-Arthas
@@ -2123,9 +2144,6 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     call ShowUnitHide( udg_CurrentUnit )
     call CreateNUnitsAtLoc( 1, 'h00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
     call RemoveUnit( udg_CurrentUnit )
-    // Legend
-    call CreateNUnitsAtLoc( 1, 'H02D', GetOwningPlayer(GetSpellAbilityUnit()), OffsetLocation(GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 200.00, -250.00), bj_UNIT_FACING )
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl" )
     // WorkerX5
     set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'))
     call ShowUnitHide( udg_CurrentUnit )
@@ -2155,6 +2173,7 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     call RemoveUnit( GetSpellAbilityUnit() )
     // Run-ALL-triggers-Uther
     call SetPlayerTechResearchedSwap( 'R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()) )
+    call ConditionalTriggerExecute( gg_trg_UtherIni )
     call TriggerExecute( gg_trg_StartCameraReset )
 endfunction
 
@@ -2164,28 +2183,6 @@ function InitTrig_ChooseUther takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ( gg_trg_ChooseUther, EVENT_PLAYER_UNIT_SPELL_CAST )
     call TriggerAddCondition( gg_trg_ChooseUther, Condition( function Trig_ChooseUther_Conditions ) )
     call TriggerAddAction( gg_trg_ChooseUther, function Trig_ChooseUther_Actions )
-endfunction
-
-//===========================================================================
-// Trigger: ArthasBalance
-//
-// Balance
-//===========================================================================
-function Trig_ArthasBalance_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 2
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechMaxAllowedSwap( 'U000', 1, ConvertedPlayer(GetForLoopIndexA()) )
-        call SetPlayerTechMaxAllowedSwap( 'u01C', 1, ConvertedPlayer(GetForLoopIndexA()) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
-    endloop
-endfunction
-
-//===========================================================================
-function InitTrig_ArthasBalance takes nothing returns nothing
-    set gg_trg_ArthasBalance = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_ArthasBalance, function Trig_ArthasBalance_Actions )
 endfunction
 
 //===========================================================================
@@ -3473,24 +3470,18 @@ function InitTrig_ArthasSacrifice takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: UtherBalance
-//
-// Balance
+// Trigger: UtherIni
 //===========================================================================
-function Trig_UtherBalance_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 2
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechMaxAllowedSwap( 'H00B', 1, ConvertedPlayer(GetForLoopIndexA()) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
-    endloop
+function Trig_UtherIni_Actions takes nothing returns nothing
+    call EnableTrigger( gg_trg_UtherDivineShield )
+    call EnableTrigger( gg_trg_UtherChampions )
+    call EnableTrigger( gg_trg_UtherChampionsDead )
 endfunction
 
 //===========================================================================
-function InitTrig_UtherBalance takes nothing returns nothing
-    set gg_trg_UtherBalance = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_UtherBalance, function Trig_UtherBalance_Actions )
+function InitTrig_UtherIni takes nothing returns nothing
+    set gg_trg_UtherIni = CreateTrigger(  )
+    call TriggerAddAction( gg_trg_UtherIni, function Trig_UtherIni_Actions )
 endfunction
 
 //===========================================================================
@@ -3553,6 +3544,7 @@ function Trig_UtherDivineShield_Actions takes nothing returns nothing
         call SetUnitInvulnerable( GetAttackedUnitBJ(), false )
         call UnitRemoveAbilityBJ( 'A001', GetAttackedUnitBJ() )
         call UnitAddAbilityBJ( 'A002', GetAttackedUnitBJ() )
+        call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 30.00 )
         call TriggerSleepAction( 240.00 )
         call UnitRemoveAbilityBJ( 'A002', GetAttackedUnitBJ() )
     else
@@ -8350,13 +8342,13 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_StartCameraP1(  )
     call InitTrig_StartCameraP2(  )
     call InitTrig_StartCameraReset(  )
+    call InitTrig_LimitUnits(  )
     call InitTrig_ChooseFirst(  )
     call InitTrig_UnSelect(  )
     call InitTrig_PreviewArthas(  )
     call InitTrig_PreviewUther(  )
     call InitTrig_ChooseArthas(  )
     call InitTrig_ChooseUther(  )
-    call InitTrig_ArthasBalance(  )
     call InitTrig_ArthasIni(  )
     call InitTrig_ArthasNewRuneSecond(  )
     call InitTrig_ArthasNewRuneThree(  )
@@ -8381,7 +8373,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasGhoulEffect(  )
     call InitTrig_ArthasPlagueNecropolis(  )
     call InitTrig_ArthasSacrifice(  )
-    call InitTrig_UtherBalance(  )
+    call InitTrig_UtherIni(  )
     call InitTrig_UtherDivineShield(  )
     call InitTrig_UtherChampions(  )
     call InitTrig_UtherChampionsDead(  )
@@ -8455,8 +8447,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute( gg_trg_CurrentBuild )
     call ConditionalTriggerExecute( gg_trg_StartResouces )
     call ConditionalTriggerExecute( gg_trg_StartVisiblity )
-    call ConditionalTriggerExecute( gg_trg_ArthasBalance )
-    call ConditionalTriggerExecute( gg_trg_UtherBalance )
+    call ConditionalTriggerExecute( gg_trg_LimitUnits )
     call ConditionalTriggerExecute( gg_trg_PlayerCount )
     call ConditionalTriggerExecute( gg_trg_SetAIRace )
     call ConditionalTriggerExecute( gg_trg_AlliesEnemyAndNeutral )

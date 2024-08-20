@@ -348,7 +348,7 @@ STRING 530
 }
 
 STRING 531
-// Units: h00K (Shotgunman), EditorSuffix (Name - Editor Suffix)
+// Units: h00K (Rifleman), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -375,18 +375,6 @@ STRING 537
 // Units: h00Q (Champion of Protection), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
-}
-
-STRING 538
-// Units: h00K (Shotgunman), Name (Name)
-{
-Shotgunman
-}
-
-STRING 539
-// Units: h00K (Shotgunman), Tip (Tooltip - Basic)
-{
-Shotgunman
 }
 
 STRING 540
@@ -1445,25 +1433,25 @@ STRING 848
 }
 
 STRING 851
-// Abilities: A008 ([Uther] Grace of the Ancestors), Name (Name)
+// Abilities: A00P ([Uther] Grace of the Ancestors), Name (Name)
 {
 [Uther] Grace of the Ancestors
 }
 
 STRING 852
-// Abilities: A008 ([Uther] Grace of the Ancestors), Tip (Tooltip - Normal)
+// Abilities: A00P ([Uther] Grace of the Ancestors), Tip (Tooltip - Normal)
 {
 Grace of the Ancestors
 }
 
 STRING 854
-// Abilities: A008 ([Uther] Grace of the Ancestors), Ubertip (Tooltip - Normal - Extended)
+// Upgrades: R002 (Control Magic), Ubertip (Tooltip - Extended)
 {
 Increases Faith to 4 per Monument of Light
 }
 
 STRING 855
-// Upgrades: R002 (Control Magic), Name (Name)
+// Buffs/Effects: B00L ([Arthas] Grace of the Ancestors), Bufftip (Tooltip)
 {
 Grace of the Ancestors
 }
@@ -1472,12 +1460,6 @@ STRING 856
 // Upgrades: R002 (Control Magic), Tip (Tooltip)
 {
 Research Grace of the Ancestors
-}
-
-STRING 857
-// Upgrades: R002 (Control Magic), Ubertip (Tooltip - Extended)
-{
-Increases Faith to 4 per Monument of Light
 }
 
 STRING 861
@@ -4826,5 +4808,29 @@ STRING 1738
 // Units: h02N (Aviary), Tip (Tooltip - Basic)
 {
 Build Aviary
+}
+
+STRING 1740
+// Buffs/Effects: B00L ([Arthas] Grace of the Ancestors), EditorName (Name (Editor Only))
+{
+[Arthas] Grace of the Ancestors
+}
+
+STRING 1741
+// Buffs/Effects: B00L ([Arthas] Grace of the Ancestors), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Grace of the Ancestors; it has an increased hit point regeneration.
+}
+
+STRING 1742
+// Abilities: A00P ([Uther] Grace of the Ancestors), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units life regeneration rate.
+}
+
+STRING 1743
+// Upgrades: R002 (Control Magic), Name (Name)
+{
+Grace of the Ancestors
 }
 
