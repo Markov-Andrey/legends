@@ -1044,55 +1044,55 @@ Stone Form Corrupted Gargoyle
 }
 
 STRING 643
-// Units: h009 (Zealot), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 645
 // Units: H00B (Light's Hope Chapel), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
 
-STRING 647
+STRING 645
 // Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 648
+STRING 647
 // Upgrades: R001 (Defend), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 651
+STRING 648
 // Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 655
+STRING 651
 // Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 656
+STRING 655
 // Upgrades: R009 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 657
+STRING 656
 // Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 662
+STRING 657
 // Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 662
+// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -1780,12 +1780,6 @@ STRING 919
 // Abilities: A00B ([Uther] Dispel Magic), Name (Name)
 {
 [Uther] Dispel Magic
-}
-
-STRING 923
-// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 928
@@ -4756,18 +4750,6 @@ STRING 1704
 (Soul Speed)
 }
 
-STRING 1705
-// Abilities: A00P ([Uther] Call To Arms), Name (Name)
-{
-[Uther] Call To Arms
-}
-
-STRING 1706
-// Abilities: A00Q ([Uther] Call to Arms), Name (Name)
-{
-[Uther] Call to Arms
-}
-
 STRING 1707
 // Items: I002 (Heartstone), Name (Name)
 {
@@ -4786,39 +4768,21 @@ STRING 1709
 Train Pilgrim
 }
 
-STRING 1710
-// Units: h009 (Zealot), Name (Name)
+STRING 1718
+// Abilities: A00G ([Uther] First Aid), Tip (Tooltip - Normal)
 {
-Zealot
+First Aid
 }
 
-STRING 1711
-// Abilities: A00P ([Uther] Call To Arms), Ubertip (Tooltip - Normal - Extended)
+STRING 1719
+// Abilities: A00G ([Uther] First Aid), Name (Name)
 {
-Call all nearby Piligrims to the Town Hall to be converted to Militia. |nLasts <Amil,Dur1> seconds.
+[Uther] First Aid
 }
 
-STRING 1712
-// Abilities: A00P ([Uther] Call To Arms), Unubertip (Tooltip - Turn Off - Extended)
+STRING 1720
+// Abilities: A00G ([Uther] First Aid), Ubertip (Tooltip - Normal - Extended)
 {
-Call all nearby Zealots to the Town Hall to be converted to Piligrims.
-}
-
-STRING 1713
-// Abilities: A00Q ([Uther] Call to Arms), EditorSuffix (Editor Suffix)
-{
- (Piligrims)
-}
-
-STRING 1716
-// Abilities: A00Q ([Uther] Call to Arms), Ubertip (Tooltip - Normal - Extended)
-{
-Run to the nearest Keep, Castle or starting Town Hall to arm the Piligrim, converting him into Zealot. |nLasts <Amil,Dur1> seconds.
-}
-
-STRING 1717
-// Abilities: A00Q ([Uther] Call to Arms), Unubertip (Tooltip - Turn Off - Extended)
-{
-Run to the nearest Keep, Castle or starting Town Hall to disarm the Zealot, converting it into a Piligrim.
+Heal organic troops using resources.
 }
 

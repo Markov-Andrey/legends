@@ -673,6 +673,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u = BlzCreateUnitWithSkin( p, 'h001', 6216.4, -3390.4, 243.827, 'h001' )
+    set u = BlzCreateUnitWithSkin( p, 'h00W', 378.4, 38.9, 27.302, 'h00W' )
+    set life = GetUnitState( u, UNIT_STATE_LIFE )
+    call SetUnitState( u, UNIT_STATE_LIFE, 0.01 * life )
+    set u = BlzCreateUnitWithSkin( p, 'h00W', 508.1, -157.7, 33.059, 'h00W' )
+    set life = GetUnitState( u, UNIT_STATE_LIFE )
+    call SetUnitState( u, UNIT_STATE_LIFE, 0.01 * life )
 endfunction
 
 //===========================================================================
@@ -683,6 +689,8 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
+    set u = BlzCreateUnitWithSkin( p, 'o002', 540.4, -250.2, 154.505, 'o002' )
+    set u = BlzCreateUnitWithSkin( p, 'o002', 302.4, -110.7, 56.197, 'o002' )
     set u = BlzCreateUnitWithSkin( p, 'h001', 6353.4, -3530.6, 221.323, 'h001' )
 endfunction
 
