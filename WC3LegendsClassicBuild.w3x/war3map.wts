@@ -1,0 +1,4786 @@
+﻿STRING 1
+{
+Alterac's Justice
+}
+
+STRING 2
+{
+Coop Mode
+}
+
+STRING 3
+{
+Syndicate occupies remote settlements and relies on smuggling to survive. Stonebeard needs heroes to disrupt their supplies and restore order. The heroes must work quickly to dismantle the Syndicate's operations before they cause more harm to the region.
+}
+
+STRING 4
+{
+Land Eater
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Force 1
+}
+
+STRING 460
+{
+WarCraft Legends
+}
+
+STRING 461
+{
+Alterac's Justice
+}
+
+STRING 462
+{
+Syndicate occupies remote settlements and relies on smuggling to survive. Stonebeard needs heroes to disrupt their supplies and restore order. The heroes must work quickly to dismantle the Syndicate's operations before they cause more harm to the region.
+}
+
+STRING 463
+{
+Player 2
+}
+
+STRING 467
+{
+Синдикат
+}
+
+STRING 468
+// Units: u009 (Plague Necropolis), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 469
+// Units: u009 (Plague Necropolis), Name (Name)
+{
+Plague Necropolis
+}
+
+STRING 470
+// Units: u009 (Plague Necropolis), Tip (Tooltip - Basic)
+{
+Summon Plague Necropolis
+}
+
+STRING 471
+// Units: u00A (Acolyte), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 472
+// Units: u00B (Plague Halls of the Dead), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 473
+// Units: u00B (Plague Halls of the Dead), Name (Name)
+{
+Plague Halls of the Dead
+}
+
+STRING 474
+// Units: u00B (Plague Halls of the Dead), Tip (Tooltip - Basic)
+{
+Upgrade to Plague Halls of the Dead
+}
+
+STRING 475
+// Units: u00C (Plague Black Citadel), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 476
+// Units: u00C (Plague Black Citadel), Name (Name)
+{
+Plague Black Citadel
+}
+
+STRING 477
+// Units: u00C (Plague Black Citadel), Tip (Tooltip - Basic)
+{
+Upgrade to Plague Black Citadel
+}
+
+STRING 478
+// Units: o001 (Peon), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 479
+// Units: o002 (Grunt), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 480
+// Units: o003 (Headhunter), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 481
+// Units: o004 (Demolisher), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 482
+// Units: o005 (Shaman), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 483
+// Units: o006 (Witch Doctor), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 484
+// Units: o007 (Raider), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 485
+// Units: o008 (Wind Rider), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 486
+// Units: o009 (Tauren), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 487
+// Units: o00A (Great Hall), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 488
+// Units: o00B (Stronghold), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 489
+// Units: o00D (Fortress), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 490
+// Units: o00E (Altar of Storms), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 491
+// Units: o00F (Barracks), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 492
+// Units: o00G (War Mill), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 493
+// Units: o00H (Tauren Totem), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 494
+// Units: o00I (Spirit Lodge), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 495
+// Units: o00J (Beastiary), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 496
+// Units: o00K (Burrow), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 497
+// Units: o00L (Watch Tower), EditorSuffix (Name - Editor Suffix)
+{
+[Thrall]
+}
+
+STRING 498
+// Units: h005 (Recruit), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 499
+// Units: h005 (Recruit), Name (Name)
+{
+Recruit
+}
+
+STRING 500
+// Units: h005 (Recruit), Tip (Tooltip - Basic)
+{
+Recruit
+}
+
+STRING 501
+// Units: h00A (City Hall), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 502
+// Units: h00A (City Hall), Name (Name)
+{
+City Hall
+}
+
+STRING 503
+// Units: h00A (City Hall), Tip (Tooltip - Basic)
+{
+Build City Hall
+}
+
+STRING 504
+// Units: h00I (Palace), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 505
+// Units: h00I (Palace), Name (Name)
+{
+Palace
+}
+
+STRING 506
+// Units: h00I (Palace), Tip (Tooltip - Basic)
+{
+Upgrade to Palace
+}
+
+STRING 507
+// Units: h01H (Citadel), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 508
+// Units: h01H (Citadel), Name (Name)
+{
+Citadel
+}
+
+STRING 509
+// Units: h01H (Citadel), Tip (Tooltip - Basic)
+{
+Upgrade to Citadel
+}
+
+STRING 510
+// Units: h01P (Garrison), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 511
+// Units: h02F (Monument of Light), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 512
+// Units: h02F (Monument of Light), Name (Name)
+{
+Monument of Light
+}
+
+STRING 513
+// Units: h02F (Monument of Light), Tip (Tooltip - Basic)
+{
+Build Monument of Light
+}
+
+STRING 514
+// Units: h02K (Library), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 515
+// Units: H00B (Light's Hope Chapel), Name (Name)
+{
+Light's Hope Chapel
+}
+
+STRING 516
+// Units: H00B (Light's Hope Chapel), Tip (Tooltip - Basic)
+{
+Light's Hope Chapel
+}
+
+STRING 517
+// Units: h02L (Northshire Abbey), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 520
+// Units: h02N (Workshop-Aviary), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 521
+// Units: h02K (Library), Name (Name)
+{
+Library
+}
+
+STRING 522
+// Units: h02K (Library), Tip (Tooltip - Basic)
+{
+Build Library
+}
+
+STRING 523
+// Units: h02O (Scout Tower), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 524
+// Units: h02L (Northshire Abbey), Name (Name)
+{
+Northshire Abbey
+}
+
+STRING 525
+// Units: h02L (Northshire Abbey), Tip (Tooltip - Basic)
+{
+Northshire Abbey
+}
+
+STRING 526
+// Units: h02P (Guard Tower), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 527
+// Units: h02N (Workshop-Aviary), Name (Name)
+{
+Workshop-Aviary
+}
+
+STRING 528
+// Units: h02N (Workshop-Aviary), Tip (Tooltip - Basic)
+{
+Build Workshop-Aviary
+}
+
+STRING 529
+// Units: h02Q (Cannon Tower), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 530
+// Units: h00W (Knight-Paladin), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 531
+// Units: h00J (Cleric), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 532
+// Units: h00K (Shotgunman), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 533
+// Units: h00N (Gryphon Rider), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 535
+// Units: h00O (Peasant), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 537
+// Units: h00P (Champion of Holy), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 538
+// Units: h00K (Shotgunman), Name (Name)
+{
+Shotgunman
+}
+
+STRING 539
+// Units: h00K (Shotgunman), Tip (Tooltip - Basic)
+{
+Shotgunman
+}
+
+STRING 540
+// Units: h00Q (Champion of Protection), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 541
+// Units: h00R (Champion of Retribution), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 544
+// Units: h00L (Mortar Team), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 547
+// Units: h000 (Templar), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 550
+// Units: h003 (Lumber Mill), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 551
+// Units: u010 (Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 552
+// Units: u011 (Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 553
+// Units: u012 (Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 554
+// Units: u014 (Abomination), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 555
+// Units: u015 (Wagon), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 556
+// Units: u016 (Dead Wyrm), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 557
+// Units: u00Z (Ziggurat), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 558
+// Units: u016 (Dead Wyrm), Name (Name)
+{
+Dead Wyrm
+}
+
+STRING 559
+// Units: u016 (Dead Wyrm), Tip (Tooltip - Basic)
+{
+Dead Wyrm
+}
+
+STRING 560
+// Units: u017 (Spirit Tower), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 561
+// Units: u018 (Nerubian Tower), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 562
+// Units: u019 (Altar of Darkness), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 563
+// Units: u01A (Crypt), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 564
+// Units: u01C (Frostmourne Pedestal), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 565
+// Units: u01D (Slaughterhouse), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 566
+// Units: u01E (Boneyard), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 567
+// Units: u00Y (Wild Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 568
+// Units: u01F (Frozen Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 569
+// Units: u01H (Decaying Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 570
+// Units: U000 (Forge of Souls), Name (Name)
+{
+Forge of Souls
+}
+
+STRING 571
+// Units: U000 (Forge of Souls), Tip (Tooltip - Basic)
+{
+Forge of Souls
+}
+
+STRING 572
+// Units: h00S (Choose of Legends), Name (Name)
+{
+Choose of Legends
+}
+
+STRING 573
+// Units: h00S (Choose of Legends), Tip (Tooltip - Basic)
+{
+Choose of Legends
+}
+
+STRING 574
+// Units: h00S (Choose of Legends), EditorSuffix (Name - Editor Suffix)
+{
+[UI]
+}
+
+STRING 575
+// Units: h00T (Arthas), Name (Name)
+{
+Arthas
+}
+
+STRING 576
+// Units: h00T (Arthas), Tip (Tooltip - Basic)
+{
+Arthas
+}
+
+STRING 577
+// Units: h00T (Arthas), EditorSuffix (Name - Editor Suffix)
+{
+[UI]
+}
+
+STRING 578
+// Units: h00U (Uther), Name (Name)
+{
+Uther
+}
+
+STRING 579
+// Units: h00U (Uther), Tip (Tooltip - Basic)
+{
+Uther
+}
+
+STRING 580
+// Units: h00U (Uther), EditorSuffix (Name - Editor Suffix)
+{
+[UI]
+}
+
+STRING 581
+// Units: u01I (Ravenous Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 582
+// Units: u00Y (Wild Ghoul), Name (Name)
+{
+Wild Ghoul
+}
+
+STRING 583
+// Units: u00Y (Wild Ghoul), Tip (Tooltip - Basic)
+{
+Wild Ghoul
+}
+
+STRING 584
+// Units: u01J (Frost Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 585
+// Units: u01F (Frozen Ghoul), Name (Name)
+{
+Frozen Ghoul
+}
+
+STRING 586
+// Units: u01F (Frozen Ghoul), Tip (Tooltip - Basic)
+{
+Frozen Ghoul
+}
+
+STRING 587
+// Units: u01K (Toxic Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 588
+// Units: u01H (Decaying Ghoul), Name (Name)
+{
+Decaying Ghoul
+}
+
+STRING 589
+// Units: u01H (Decaying Ghoul), Tip (Tooltip - Basic)
+{
+Frozen Ghoul
+}
+
+STRING 590
+// Units: u01L (Bloody Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 591
+// Units: u01I (Ravenous Crypt Fiend), Name (Name)
+{
+Ravenous Crypt Fiend
+}
+
+STRING 592
+// Units: u01I (Ravenous Crypt Fiend), Tip (Tooltip - Basic)
+{
+Ravenous Crypt Fiend
+}
+
+STRING 593
+// Units: u01M (Northrend Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 594
+// Units: u01J (Frost Crypt Fiend), Name (Name)
+{
+Frost Crypt Fiend
+}
+
+STRING 595
+// Units: u01J (Frost Crypt Fiend), Tip (Tooltip - Basic)
+{
+Frost Crypt Fiend
+}
+
+STRING 596
+// Units: u01N (Corrupted Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 597
+// Units: u01K (Toxic Crypt Fiend), Name (Name)
+{
+Toxic Crypt Fiend
+}
+
+STRING 598
+// Units: u01K (Toxic Crypt Fiend), Tip (Tooltip - Basic)
+{
+Toxic Crypt Fiend
+}
+
+STRING 599
+// Units: u01O (Fat Abomination), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 600
+// Units: u01L (Bloody Gargoyle), Name (Name)
+{
+Bloody Gargoyle
+}
+
+STRING 601
+// Units: u01L (Bloody Gargoyle), Tip (Tooltip - Basic)
+{
+Bloody Gargoyle
+}
+
+STRING 602
+// Units: u01P (Cold Abomination), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 603
+// Units: u01M (Northrend Gargoyle), Name (Name)
+{
+Northrend Gargoyle
+}
+
+STRING 604
+// Units: u01M (Northrend Gargoyle), Tip (Tooltip - Basic)
+{
+Northrend Gargoyle
+}
+
+STRING 605
+// Units: u01Q (Glutton Abomination), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 606
+// Units: u01N (Corrupted Gargoyle), Name (Name)
+{
+Corrupted Gargoyle
+}
+
+STRING 607
+// Units: u01N (Corrupted Gargoyle), Tip (Tooltip - Basic)
+{
+Corrupted Gargoyle
+}
+
+STRING 608
+// Units: u01R (Blood Wagon), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 609
+// Units: u01O (Fat Abomination), Name (Name)
+{
+Fat Abomination
+}
+
+STRING 610
+// Units: u01O (Fat Abomination), Tip (Tooltip - Basic)
+{
+Fat Abomination
+}
+
+STRING 611
+// Units: u01S (Ice Wagon), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 612
+// Units: u01P (Cold Abomination), Name (Name)
+{
+Cold Abomination
+}
+
+STRING 613
+// Units: u01P (Cold Abomination), Tip (Tooltip - Basic)
+{
+Cold Abomination
+}
+
+STRING 614
+// Units: u01T (Plague Horde Wagon), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 615
+// Units: u01Q (Glutton Abomination), Name (Name)
+{
+Glutton Abomination
+}
+
+STRING 616
+// Units: u01Q (Glutton Abomination), Tip (Tooltip - Basic)
+{
+Glutton Abomination
+}
+
+STRING 617
+// Units: u01U (Hungry Wyrm), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 618
+// Units: u01R (Blood Wagon), Name (Name)
+{
+Blood Wagon
+}
+
+STRING 619
+// Units: u01R (Blood Wagon), Tip (Tooltip - Basic)
+{
+Blood Wagon
+}
+
+STRING 620
+// Units: u01V (Frost Wyrm), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 621
+// Units: u01S (Ice Wagon), Name (Name)
+{
+Ice Wagon
+}
+
+STRING 622
+// Units: u01S (Ice Wagon), Tip (Tooltip - Basic)
+{
+Ice Wagon
+}
+
+STRING 623
+// Units: u01W (Poison Wyrm), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 624
+// Units: u01T (Plague Horde Wagon), Name (Name)
+{
+Plague Horde Wagon
+}
+
+STRING 625
+// Units: u01T (Plague Horde Wagon), Tip (Tooltip - Basic)
+{
+Plague Horde Wagon
+}
+
+STRING 626
+// Units: u01X (Stone Form Bloody Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 627
+// Units: u01U (Hungry Wyrm), Name (Name)
+{
+Hungry Wyrm
+}
+
+STRING 628
+// Units: u01U (Hungry Wyrm), Tip (Tooltip - Basic)
+{
+Hungry Wyrm
+}
+
+STRING 629
+// Units: u01Y (Stone Form Northrend Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 630
+// Units: u01V (Frost Wyrm), Tip (Tooltip - Basic)
+{
+Frost Wyrm
+}
+
+STRING 631
+// Units: u01Z (Stone Form Corrupted Gargoyle), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 632
+// Units: u01W (Poison Wyrm), Tip (Tooltip - Basic)
+{
+Poison Wyrm
+}
+
+STRING 633
+// Units: u01W (Poison Wyrm), Name (Name)
+{
+Poison Wyrm
+}
+
+STRING 634
+// Units: u001 (Soul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 635
+// Units: u01X (Stone Form Bloody Gargoyle), Name (Name)
+{
+Stone Form Bloody Gargoyle
+}
+
+STRING 636
+// Units: u01X (Stone Form Bloody Gargoyle), Tip (Tooltip - Basic)
+{
+Stone Form Bloody Gargoyle
+}
+
+STRING 637
+// Units: U000 (Forge of Souls), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 638
+// Units: u01Y (Stone Form Northrend Gargoyle), Name (Name)
+{
+Stone Form Northrend Gargoyle
+}
+
+STRING 639
+// Units: u01Y (Stone Form Northrend Gargoyle), Tip (Tooltip - Basic)
+{
+Stone Form Northrend Gargoyle
+}
+
+STRING 640
+// Units: u002 (New tech level), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 641
+// Units: u01Z (Stone Form Corrupted Gargoyle), Name (Name)
+{
+Stone Form Corrupted Gargoyle
+}
+
+STRING 642
+// Units: u01Z (Stone Form Corrupted Gargoyle), Tip (Tooltip - Basic)
+{
+Stone Form Corrupted Gargoyle
+}
+
+STRING 643
+// Units: h009 (Militia), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 645
+// Units: H00B (Light's Hope Chapel), EditorSuffix (Name - Editor Suffix)
+{
+[Uther]
+}
+
+STRING 647
+// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 648
+// Upgrades: R001 (Defend), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 651
+// Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 655
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 656
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 657
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 662
+// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 663
+// Units: u003 (Graveyard), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 664
+// Units: n002 (Zombie), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 667
+// Abilities: A01C ([UI] Legends: Arthas), Tip (Tooltip - Normal)
+{
+Arthas
+}
+
+STRING 668
+// Abilities: A01C ([UI] Legends: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 673
+// Abilities: A01D ([UI] Race: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace
+}
+
+STRING 674
+// Abilities: A01D ([UI] Race: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+Race:|R Undead|R|NSubrace: Army of the Scourge
+}
+
+STRING 677
+// Abilities: A01E ([UI] History: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory
+}
+
+STRING 678
+// Abilities: A01E ([UI] History: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+Once the crown prince of Lordaeron, and protégé of Uther the Lightbringer, Arthas was corrupted by the cursed blade Frostmourne in a bid to save his people. Now he rules over the damned as the Lich King and all shall know his wrath.
+}
+
+STRING 679
+// Abilities: A01F ([UI] Select), Tip (Tooltip - Normal)
+{
+|cFF00C800Select
+}
+
+STRING 680
+// Abilities: A01F ([UI] Select), Ubertip (Tooltip - Normal - Extended)
+{
+Confirm Legend selection
+}
+
+STRING 683
+// Abilities: A01G ([UI] Unselect), Tip (Tooltip - Normal)
+{
+|cFFFF2E00Unselect
+}
+
+STRING 684
+// Abilities: A01G ([UI] Unselect), Ubertip (Tooltip - Normal - Extended)
+{
+Choose another Legend
+}
+
+STRING 689
+// Abilities: A01H ([UI] Mechanics: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics
+}
+
+STRING 690
+// Abilities: A01H ([UI] Mechanics: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Soul Harvest|R - Destroying enemy units leaves souls that Arthas can harvest. It is an additional resource.
+|cFF00C850- Soul Reforging|R - allows you to upgrade Arthas's unit with souls, giving him 1 of 3 specializations: Blood, Frost, Unholy
+}
+
+STRING 693
+// Abilities: A01I ([UI] Features: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 694
+// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+- Easy to master
+- No mages
+- Adaptive army
+- Expensive upgrades
+}
+
+STRING 695
+// Abilities: A01J ([UI] Legends: Uther), Tip (Tooltip - Normal)
+{
+Uther
+}
+
+STRING 696
+// Abilities: A01J ([UI] Legends: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 701
+// Abilities: A01K ([UI] Race: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace
+}
+
+STRING 702
+// Abilities: A01K ([UI] Race: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+Race:|R Human|R|NSubrace: Paladins of the Silver Hand
+}
+
+STRING 705
+// Abilities: A01L ([UI] Mechanics: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics
+}
+
+STRING 709
+// Abilities: A01M ([UI] History: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory
+}
+
+STRING 713
+// Abilities: A01N ([UI] Features: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 714
+// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+- Easy to master
+- Low army health
+- High DPS
+- Low army attack speed
+}
+
+STRING 715
+// Units: u004 (Dummy), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 716
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Tip (Tooltip - Normal)
+{
+Blood Soul
+}
+
+STRING 719
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Tip (Tooltip - Normal)
+{
+Frost Soul
+}
+
+STRING 722
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Tip (Tooltip - Normal)
+{
+Unholy Soul
+}
+
+STRING 729
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Tip (Tooltip - Normal)
+{
+Blood Soul Reforging
+}
+
+STRING 730
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Tip (Tooltip - Normal)
+{
+Blood Soul Reforging
+}
+
+STRING 745
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Tip (Tooltip - Normal)
+{
+Frost Soul Reforging
+}
+
+STRING 746
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Tip (Tooltip - Normal)
+{
+Frost Soul Reforging
+}
+
+STRING 761
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Tip (Tooltip - Normal)
+{
+Unholy Soul Reforging
+}
+
+STRING 762
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Tip (Tooltip - Normal)
+{
+Unholy Soul Reforging
+}
+
+STRING 784
+// Upgrades: R004 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Crypt Fiends, Gargoyles and Dead Wyrms.
+}
+
+STRING 785
+// Upgrades: R004 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Crypt Fiends, Gargoyles and Dead Wyrms.
+}
+
+STRING 786
+// Upgrades: R004 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Crypt Fiends, Gargoyles and Dead Wyrms.
+}
+
+STRING 788
+// Upgrades: R005 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Crypt Fiends, Gargoyles and Dead Wyrms.
+}
+
+STRING 789
+// Upgrades: R005 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Crypt Fiends, Gargoyles and Dead Wyrms.
+}
+
+STRING 790
+// Upgrades: R005 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Crypt Fiends, Gargoyles and Dead Wyrms.
+}
+
+STRING 792
+// Upgrades: R006 (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Ghouls, Abominations and Arthas.
+}
+
+STRING 793
+// Upgrades: R006 (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Ghouls, Abominations and Arthas.
+}
+
+STRING 794
+// Upgrades: R006 (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Ghouls, Abominations and Arthas.
+}
+
+STRING 796
+// Upgrades: R007 (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Ghouls, Meat Wagons, Abominations, and Arthas.
+}
+
+STRING 797
+// Upgrades: R007 (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Ghouls, Meat Wagons, Abominations, and Arthas.
+}
+
+STRING 798
+// Upgrades: R007 (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Ghouls, Meat Wagons, Abominations, and Arthas.
+}
+
+STRING 800
+{
+Arthas
+}
+
+STRING 801
+{
+Souls
+}
+
+STRING 806
+// Units: H004 (Stonebeard), Tip (Tooltip - Basic)
+{
+Explorer's League
+}
+
+STRING 808
+// Abilities: A013 ([Uther] Hand Cannon), Tip (Tooltip - Normal)
+{
+Hand Cannon
+}
+
+STRING 809
+// Upgrades: R000 (Long Rifles), Name (Name)
+{
+Hand Cannon
+}
+
+STRING 811
+// Upgrades: R000 (Long Rifles), Tip (Tooltip)
+{
+Upgrade to Hand Cannon
+}
+
+STRING 817
+// Abilities: A013 ([Uther] Hand Cannon), Ubertip (Tooltip - Normal - Extended)
+{
+Shotgun deals <A013,DataA1,%>% damage in an AoE of 150
+}
+
+STRING 818
+// Upgrades: R000 (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Shotgun deals <A013,DataA1,%>% damage in an AoE of 150
+}
+
+STRING 819
+// Abilities: A000 ([Uther] Faith in Light), Tip (Tooltip - Normal)
+{
+Faith in Light
+}
+
+STRING 820
+// Upgrades: R001 (Defend), Tip (Tooltip)
+{
+Research Faith in Light
+}
+
+STRING 821
+// Abilities: A000 ([Uther] Faith in Light), Ubertip (Tooltip - Normal - Extended)
+{
+Footmen gains bonus health equal to current Faith level
+}
+
+STRING 822
+// Upgrades: R001 (Defend), Name (Name)
+{
+Faith in Light
+}
+
+STRING 824
+// Upgrades: R001 (Defend), Ubertip (Tooltip - Extended)
+{
+Footmen gains bonus health equal to current Faith level
+}
+
+STRING 825
+// Abilities: A000 ([Uther] Faith in Light), Name (Name)
+{
+[Uther] Faith in Light
+}
+
+STRING 828
+{
+Uther
+}
+
+STRING 829
+{
+Faith
+}
+
+STRING 834
+// Abilities: A013 ([Uther] Hand Cannon), Name (Name)
+{
+[Uther] Hand Cannon
+}
+
+STRING 836
+// Abilities: A001 ([Uther] Divine Shield), Name (Name)
+{
+[Uther] Divine Shield
+}
+
+STRING 837
+// Abilities: A002 ([Uther] Divine Shield), Name (Name)
+{
+[Uther] Divine Shield
+}
+
+STRING 840
+// Abilities: A002 ([Uther] Divine Shield), EditorSuffix (Editor Suffix)
+{
+ (Reload)
+}
+
+STRING 843
+// Buffs/Effects: B001 ([Uther] Holy Nova), Bufftip (Tooltip)
+{
+Holy Nova
+}
+
+STRING 845
+// Buffs/Effects: B000 ([Uther] Reload Divine Shield), Bufftip (Tooltip)
+{
+|cFFFF0000Reload Divine Shield|R
+}
+
+STRING 847
+// Buffs/Effects: B000 ([Uther] Reload Divine Shield), EditorName (Name (Editor Only))
+{
+[Uther] Reload Divine Shield
+}
+
+STRING 848
+// Buffs/Effects: B001 ([Uther] Holy Nova), EditorName (Name (Editor Only))
+{
+[Uther] Holy Nova
+}
+
+STRING 851
+// Abilities: A008 ([Uther] Grace of the Ancestors), Name (Name)
+{
+[Uther] Grace of the Ancestors
+}
+
+STRING 852
+// Abilities: A008 ([Uther] Grace of the Ancestors), Tip (Tooltip - Normal)
+{
+Grace of the Ancestors
+}
+
+STRING 854
+// Abilities: A008 ([Uther] Grace of the Ancestors), Ubertip (Tooltip - Normal - Extended)
+{
+Increases Faith to 4 per Monument of Light
+}
+
+STRING 855
+// Upgrades: R002 (Control Magic), Name (Name)
+{
+Grace of the Ancestors
+}
+
+STRING 856
+// Upgrades: R002 (Control Magic), Tip (Tooltip)
+{
+Research Grace of the Ancestors
+}
+
+STRING 857
+// Upgrades: R002 (Control Magic), Ubertip (Tooltip - Extended)
+{
+Increases Faith to 4 per Monument of Light
+}
+
+STRING 861
+// Abilities: A006 ([Uther] Humility), Name (Name)
+{
+[Uther] Humility
+}
+
+STRING 862
+// Abilities: A006 ([Uther] Humility), Tip (Tooltip - Normal)
+{
+Humility
+}
+
+STRING 863
+// Buffs/Effects: B002 ([Uther] Humility), EditorName (Name (Editor Only))
+{
+[Uther] Humility
+}
+
+STRING 865
+// Buffs/Effects: B002 ([Uther] Humility), Buffubertip (Tooltip - Extended)
+{
+This unit has Humility; its attack damage is reduced.
+}
+
+STRING 866
+// Buffs/Effects: B002 ([Uther] Humility), Bufftip (Tooltip)
+{
+|cFFFF0000Humility|R
+}
+
+STRING 869
+// Units: h00J (Cleric), Name (Name)
+{
+Cleric
+}
+
+STRING 878
+// Abilities: A007 ([Uther] Lightning Shield), Name (Name)
+{
+[Uther] Lightning Shield
+}
+
+STRING 879
+// Abilities: A007 ([Uther] Lightning Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Forms a shield of electricity around a target unit, dealing <A007,DataA1> damage per second to units around it. |nLasts <A007,Dur1> seconds.
+}
+
+STRING 880
+// Buffs/Effects: B003 ([Uther] Lightning Shield), EditorName (Name (Editor Only))
+{
+[Uther] Lightning Shield
+}
+
+STRING 881
+// Buffs/Effects: B004 ([Uther] Lightning Shield (Caster)), EditorName (Name (Editor Only))
+{
+[Uther] Lightning Shield (Caster)
+}
+
+STRING 882
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Cleric Adept Training
+}
+
+STRING 883
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Cleric Master Training
+}
+
+STRING 884
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Cleric Adept Training
+}
+
+STRING 885
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Cleric Master Training
+}
+
+STRING 886
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Cleric mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+}
+
+STRING 887
+// Upgrades: R009 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Cleric mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
+}
+
+STRING 889
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Disciple Adept Training
+}
+
+STRING 890
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Disciple Master Training
+}
+
+STRING 891
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Disciple Adept Training
+}
+
+STRING 892
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Disciple Master Training
+}
+
+STRING 893
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Disciple mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
+}
+
+STRING 894
+// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Disciple mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Polymorph.
+}
+
+STRING 895
+// Abilities: A014 ([Uther] Hammer of Justice), Name (Name)
+{
+[Uther] Hammer of Justice
+}
+
+STRING 896
+// Abilities: A014 ([Uther] Hammer of Justice), Tip (Tooltip - Normal)
+{
+Hammer of Justice
+}
+
+STRING 897
+// Abilities: A001 ([Uther] Divine Shield), Tip (Tooltip - Normal)
+{
+Divine Shield
+}
+
+STRING 898
+// Units: h002 (Pack Horse), EditorSuffix (Name - Editor Suffix)
+{
+[Alterac]
+}
+
+STRING 903
+{
+Alterac Express
+}
+
+STRING 904
+{
+In the mountains of Alterac, the Syndicate has set up smuggling supplies. This needs to be stopped urgently.
+}
+
+STRING 906
+{
+|cff32de00Victory:|r Destroy 5 waves of caravans
+}
+
+STRING 907
+// Units: h00W (Knight-Paladin), Name (Name)
+{
+Knight-Paladin
+}
+
+STRING 908
+// Units: h00W (Knight-Paladin), Tip (Tooltip - Basic)
+{
+Train Knight-Paladin
+}
+
+STRING 910
+{
+Syndicate Army
+}
+
+STRING 913
+// Abilities: A009 ([Uther] Silence), Name (Name)
+{
+[Uther] Silence
+}
+
+STRING 914
+// Abilities: A009 ([Uther] Silence), Tip (Tooltip - Normal)
+{
+Silence
+}
+
+STRING 915
+// Buffs/Effects: B005 ([Uther] Silence), EditorName (Name (Editor Only))
+{
+[Uther] Silence
+}
+
+STRING 916
+// Abilities: A004 ([Uther] Holy Light), Name (Name)
+{
+[Uther] Holy Light
+}
+
+STRING 917
+// Abilities: A005 ([Uther] Divine Shield), Name (Name)
+{
+[Uther] Divine Shield
+}
+
+STRING 918
+// Abilities: A00A ([Uther] Inner Fire), Name (Name)
+{
+[Uther] Inner Fire
+}
+
+STRING 919
+// Abilities: A00B ([Uther] Dispel Magic), Name (Name)
+{
+[Uther] Dispel Magic
+}
+
+STRING 923
+// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 928
+// Items: I002 (Heartstone), Tip (Tooltip - Basic)
+{
+Purchase Heartstone
+}
+
+STRING 939
+// Units: n000 (Tavern), EditorSuffix (Name - Editor Suffix)
+{
+[Alterac]
+}
+
+STRING 940
+// Items: I004 (Bottled Alterac Spring Water), Name (Name)
+{
+Bottled Alterac Spring Water
+}
+
+STRING 941
+// Items: I004 (Bottled Alterac Spring Water), Tip (Tooltip - Basic)
+{
+Purchase Bottled Alterac Spring Water
+}
+
+STRING 944
+// Items: I005 (Alterac Manna Biscuit), Name (Name)
+{
+Alterac Manna Biscuit
+}
+
+STRING 945
+// Items: I005 (Alterac Manna Biscuit), Tip (Tooltip - Basic)
+{
+Purchase Alterac Manna Biscuit
+}
+
+STRING 946
+// Buffs/Effects: B006 ([Item] Non-combat health), Bufftip (Tooltip)
+{
+Food
+}
+
+STRING 947
+// Buffs/Effects: B006 ([Item] Non-combat health), EditorName (Name (Editor Only))
+{
+[Item] Non-combat health
+}
+
+STRING 948
+// Buffs/Effects: B006 ([Item] Non-combat health), Buffubertip (Tooltip - Extended)
+{
+The legend tasty food; health outside of combat will regenerate over time.
+}
+
+STRING 949
+// Buffs/Effects: B007 ([Item] Non-combat mana), Bufftip (Tooltip)
+{
+Drink
+}
+
+STRING 950
+// Buffs/Effects: B007 ([Item] Non-combat mana), EditorName (Name (Editor Only))
+{
+[Item] Non-combat mana
+}
+
+STRING 951
+// Buffs/Effects: B007 ([Item] Non-combat mana), Buffubertip (Tooltip - Extended)
+{
+The legend tasty drink; mana outside of combat will regenerate over time.
+}
+
+STRING 952
+// Abilities: A00J ([Uther] Divine Intervention), Name (Name)
+{
+[Uther] Divine Intervention
+}
+
+STRING 955
+// Abilities: A00J ([Uther] Divine Intervention), Ubertip (Tooltip - Normal - Extended)
+{
+Protects your unit and an ally's unit with Divine Shield no more than once every 3 minutes when on low health. Ally effect time reduced.
+}
+
+STRING 958
+// Abilities: A00F (Neutral Non-combat mana), Name (Name)
+{
+Neutral Non-combat mana
+}
+
+STRING 959
+// Abilities: A00I (Neutral Non-combat health), Name (Name)
+{
+Neutral Non-combat health
+}
+
+STRING 961
+// Abilities: A00J ([Uther] Divine Intervention), Tip (Tooltip - Normal)
+{
+Divine Intervention [|cFF00B0FFMechanics|R]
+}
+
+STRING 963
+// Abilities: A00K ([UI] RaceTest: Human), Ubertip (Tooltip - Normal - Extended)
+{
+Classic Army
+}
+
+STRING 969
+// Abilities: A00L ([UI] RaceTest: Horde), Tip (Tooltip - Normal)
+{
+Horde
+}
+
+STRING 970
+// Abilities: A00L ([UI] RaceTest: Horde), Ubertip (Tooltip - Normal - Extended)
+{
+Classic Army
+}
+
+STRING 973
+// Abilities: A00M ([UI] RaceTest: Night Elf), Tip (Tooltip - Normal)
+{
+Night Elf
+}
+
+STRING 974
+// Abilities: A00M ([UI] RaceTest: Night Elf), Ubertip (Tooltip - Normal - Extended)
+{
+Classic Army
+}
+
+STRING 977
+// Abilities: A00N ([UI] RaceTest: Undead), Tip (Tooltip - Normal)
+{
+Undead
+}
+
+STRING 978
+// Abilities: A00N ([UI] RaceTest: Undead), Ubertip (Tooltip - Normal - Extended)
+{
+Classic Army
+}
+
+STRING 981
+// Abilities: A01C ([UI] Legends: Arthas), Name (Name)
+{
+[UI] Legends: Arthas
+}
+
+STRING 982
+// Abilities: A01D ([UI] Race: Arthas), Name (Name)
+{
+[UI] Race: Arthas
+}
+
+STRING 983
+// Abilities: A01E ([UI] History: Arthas), Name (Name)
+{
+[UI] History: Arthas
+}
+
+STRING 984
+// Abilities: A01F ([UI] Select), Name (Name)
+{
+[UI] Select
+}
+
+STRING 985
+// Abilities: A01G ([UI] Unselect), Name (Name)
+{
+[UI] Unselect
+}
+
+STRING 986
+// Abilities: A01H ([UI] Mechanics: Arthas), Name (Name)
+{
+[UI] Mechanics: Arthas
+}
+
+STRING 987
+// Abilities: A01I ([UI] Features: Arthas), Name (Name)
+{
+[UI] Features: Arthas
+}
+
+STRING 988
+// Abilities: A01J ([UI] Legends: Uther), Name (Name)
+{
+[UI] Legends: Uther
+}
+
+STRING 989
+// Abilities: A01K ([UI] Race: Uther), Name (Name)
+{
+[UI] Race: Uther
+}
+
+STRING 990
+// Abilities: A01L ([UI] Mechanics: Uther), Name (Name)
+{
+[UI] Mechanics: Uther
+}
+
+STRING 991
+// Abilities: A01M ([UI] History: Uther), Name (Name)
+{
+[UI] History: Uther
+}
+
+STRING 992
+// Abilities: A01N ([UI] Features: Uther), Name (Name)
+{
+[UI] Features: Uther
+}
+
+STRING 994
+// Abilities: A00L ([UI] RaceTest: Horde), Name (Name)
+{
+[UI] RaceTest: Horde
+}
+
+STRING 995
+// Abilities: A00M ([UI] RaceTest: Night Elf), Name (Name)
+{
+[UI] RaceTest: Night Elf
+}
+
+STRING 996
+// Abilities: A00N ([UI] RaceTest: Undead), Name (Name)
+{
+[UI] RaceTest: Undead
+}
+
+STRING 998
+// Units: H004 (Stonebeard), EditorSuffix (Name - Editor Suffix)
+{
+[Alterac]
+}
+
+STRING 999
+// Abilities: A00O ([Alterac] Sniper Shot), Name (Name)
+{
+[Alterac] Sniper Shot
+}
+
+STRING 1000
+// Abilities: A00O ([Alterac] Sniper Shot), Tip (Tooltip - Normal)
+{
+Sniper Shot
+}
+
+STRING 1002
+// Doodads: D000 (Watch Post), Name (Name)
+{
+Watch Post
+}
+
+STRING 1009
+// Units: h006 (Add Unit), EditorSuffix (Name - Editor Suffix)
+{
+[AI]
+}
+
+STRING 1010
+// Units: h006 (Add Unit), Name (Name)
+{
+Add Unit
+}
+
+STRING 1017
+// Abilities: A00K ([UI] RaceTest: Human), Tip (Tooltip - Normal)
+{
+Human
+}
+
+STRING 1018
+// Abilities: A00K ([UI] RaceTest: Human), Name (Name)
+{
+[UI] RaceTest: Human
+}
+
+STRING 1026
+// Abilities: S000 ([AI] Units: Orcs), Name (Name)
+{
+[AI] Units: Orcs
+}
+
+STRING 1027
+// Abilities: S001 ([AI] Units: Human), Name (Name)
+{
+[AI] Units: Human
+}
+
+STRING 1028
+// Abilities: S00N ([AI] Units: Undead), Name (Name)
+{
+[AI] Units: Undead
+}
+
+STRING 1029
+// Abilities: S00O ([AI] Units: Night Elf), Name (Name)
+{
+[AI] Units: Night Elf
+}
+
+STRING 1030
+// Abilities: S00P ([AI] Buildings: Human), Name (Name)
+{
+[AI] Buildings: Human
+}
+
+STRING 1031
+// Abilities: S00Q ([AI] Buildings: Orcs), Name (Name)
+{
+[AI] Buildings: Orcs
+}
+
+STRING 1032
+// Abilities: S00R ([AI] Buildings: Undead), Name (Name)
+{
+[AI] Buildings: Undead
+}
+
+STRING 1033
+// Abilities: S00S ([AI] Buildings: Night Elf), Name (Name)
+{
+[AI] Buildings: Night Elf
+}
+
+STRING 1034
+// Abilities: S00T ([AI] Heroes: Human), Name (Name)
+{
+[AI] Heroes: Human
+}
+
+STRING 1035
+// Abilities: S00U ([AI] Heroes: Orcs), Name (Name)
+{
+[AI] Heroes: Orcs
+}
+
+STRING 1036
+// Abilities: S00V ([AI] Heroes: Night Elf), Name (Name)
+{
+[AI] Heroes: Night Elf
+}
+
+STRING 1037
+// Abilities: S00W ([AI] Heroes: Undead), Name (Name)
+{
+[AI] Heroes: Undead
+}
+
+STRING 1038
+// Units: h007 (Add Building), Name (Name)
+{
+Add Building
+}
+
+STRING 1040
+// Units: h007 (Add Building), EditorSuffix (Name - Editor Suffix)
+{
+[AI]
+}
+
+STRING 1041
+// Units: h006 (Add Unit), Tip (Tooltip - Basic)
+{
+Add Unit
+}
+
+STRING 1042
+// Units: h007 (Add Building), Tip (Tooltip - Basic)
+{
+Add Building
+}
+
+STRING 1043
+// Units: h008 (Add Hero), Name (Name)
+{
+Add Hero
+}
+
+STRING 1044
+// Units: h008 (Add Hero), Tip (Tooltip - Basic)
+{
+Add Hero
+}
+
+STRING 1045
+// Units: h008 (Add Hero), EditorSuffix (Name - Editor Suffix)
+{
+[AI]
+}
+
+STRING 1046
+{
+Time
+}
+
+STRING 1052
+{
+Time:
+}
+
+STRING 1065
+// Units: h00P (Champion of Holy), Name (Name)
+{
+Champion of Holy
+}
+
+STRING 1066
+// Units: h00P (Champion of Holy), Tip (Tooltip - Basic)
+{
+Champion of Holy
+}
+
+STRING 1067
+// Units: h00Q (Champion of Protection), Name (Name)
+{
+Champion of Protection
+}
+
+STRING 1068
+// Units: h00Q (Champion of Protection), Tip (Tooltip - Basic)
+{
+Champion of Protection
+}
+
+STRING 1069
+// Units: h00R (Champion of Retribution), Name (Name)
+{
+Champion of Retribution
+}
+
+STRING 1070
+// Units: h00R (Champion of Retribution), Tip (Tooltip - Basic)
+{
+Champion of Retribution
+}
+
+STRING 1071
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Name (Name)
+{
+[Uther] Summon Champion of Retribution
+}
+
+STRING 1072
+// Abilities: A00D ([Uther] Summon Champion of Protection), Name (Name)
+{
+[Uther] Summon Champion of Protection
+}
+
+STRING 1073
+// Abilities: A00E ([Uther] Summon Champion of Holy), Name (Name)
+{
+[Uther] Summon Champion of Holy
+}
+
+STRING 1076
+// Abilities: A00S ([Test] Autocast), Name (Name)
+{
+[Test] Autocast
+}
+
+STRING 1077
+// Abilities: A00S ([Test] Autocast), Ubertip (Tooltip - Normal - Extended)
+{
+Spell blank that is automatically applied to the nearest target
+}
+
+STRING 1090
+// Abilities: A00T ([Uther] Defend), Name (Name)
+{
+[Uther] Defend
+}
+
+STRING 1093
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Tip (Tooltip - Normal)
+{
+Summon Champion of Retribution
+}
+
+STRING 1094
+// Abilities: A00D ([Uther] Summon Champion of Protection), Tip (Tooltip - Normal)
+{
+Summon Champion of Protection
+}
+
+STRING 1095
+// Abilities: A00E ([Uther] Summon Champion of Holy), Tip (Tooltip - Normal)
+{
+Summon Champion of Holy
+}
+
+STRING 1096
+// Abilities: A011 ([Uther] Retribution Aura), Name (Name)
+{
+[Uther] Retribution Aura
+}
+
+STRING 1097
+// Abilities: A011 ([Uther] Retribution Aura), Tip (Tooltip - Normal)
+{
+Retribution Aura
+}
+
+STRING 1098
+// Buffs/Effects: B008 ([Uther] Retribution Aura), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Retribution Auramelee units that attack it will take damage.
+}
+
+STRING 1099
+// Buffs/Effects: B008 ([Uther] Retribution Aura), EditorName (Name (Editor Only))
+{
+[Uther] Retribution Aura
+}
+
+STRING 1100
+// Buffs/Effects: B008 ([Uther] Retribution Aura), Bufftip (Tooltip)
+{
+Retribution Aura
+}
+
+STRING 1110
+// Abilities: A00U ([Uther] Devotion Aura), Name (Name)
+{
+[Uther] Devotion Aura
+}
+
+STRING 1111
+// Abilities: A00U ([Uther] Devotion Aura), Tip (Tooltip - Normal)
+{
+Devotion Aura
+}
+
+STRING 1112
+// Abilities: A00V ([Uther] Holy Aura), Name (Name)
+{
+[Uther] Holy Aura
+}
+
+STRING 1113
+// Abilities: A00V ([Uther] Holy Aura), Tip (Tooltip - Normal)
+{
+Holy Aura
+}
+
+STRING 1114
+// Buffs/Effects: B009 ([Uther] Holy Aura), EditorName (Name (Editor Only))
+{
+[Uther] Holy Aura
+}
+
+STRING 1115
+// Buffs/Effects: B009 ([Uther] Holy Aura), Bufftip (Tooltip)
+{
+Holy Aura
+}
+
+STRING 1116
+// Buffs/Effects: B009 ([Uther] Holy Aura), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Holy Aura; it has an increased movement speed and hit point regeneration.
+}
+
+STRING 1117
+// Units: H00B (Light's Hope Chapel), Propernames (Proper Names)
+{
+Light's Hope Chapel
+}
+
+STRING 1119
+// Abilities: A00W ([Uther] Launch Mechanism), Tip (Tooltip - Normal)
+{
+Launch Mechanism
+}
+
+STRING 1122
+// Abilities: A00W ([Uther] Launch Mechanism), Name (Name)
+{
+[Uther] Launch Mechanism
+}
+
+STRING 1124
+// Abilities: A01L ([UI] Mechanics: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Divine Intervention|R - Protects a unit with Divine Shield when health is low, but no more than 1 time per X min|n|cFF00C850- Champions |R - Temporarily summoned units on the battlefield to assist troops with powerful auras
+}
+
+STRING 1125
+// Abilities: A01M ([UI] History: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+Lord Uther the Lightbringer was the first paladin of the Knights of the Silver Hand who led his Order in battle against the Horde during the Second war.
+}
+
+STRING 1126
+// Units: h01P (Garrison), Name (Name)
+{
+Garrison
+}
+
+STRING 1127
+// Units: h01P (Garrison), Tip (Tooltip - Basic)
+{
+Build Garrison
+}
+
+STRING 1128
+// Abilities: A00X ([Uther] Heal), Name (Name)
+{
+[Uther] Heal
+}
+
+STRING 1129
+// Abilities: A00X ([Uther] Heal), Tip (Tooltip - Normal)
+{
+Heal
+}
+
+STRING 1131
+{
+Stonebeard
+}
+
+STRING 1133
+// Units: H004 (Stonebeard), Name (Name)
+{
+Stonebeard
+}
+
+STRING 1139
+{
+MainQuest Wave 1
+}
+
+STRING 1140
+{
+MainQuest Wave 2
+}
+
+STRING 1142
+{
+MainQuest Wave 3
+}
+
+STRING 1143
+{
+MainQuest Wave 4
+}
+
+STRING 1144
+{
+MainQuest Wave 5
+}
+
+STRING 1146
+{
+Upg lvl 1
+}
+
+STRING 1147
+{
+Upg lvl 2
+}
+
+STRING 1148
+{
+Upg lvl 3
+}
+
+STRING 1151
+{
+Attack 1
+}
+
+STRING 1152
+{
+Attack 2
+}
+
+STRING 1153
+{
+Attack 3
+}
+
+STRING 1154
+{
+Attack 4
+}
+
+STRING 1156
+{
+Defeat! Caravans lost.
+}
+
+STRING 1157
+// Doodads: D001 (Egg Sack 1), Name (Name)
+{
+Egg Sack 1
+}
+
+STRING 1158
+// Doodads: D002 (Egg Sack 2), Name (Name)
+{
+Egg Sack 2
+}
+
+STRING 1159
+// Units: h001 (Choose of Difficulty), Name (Name)
+{
+Choose of Difficulty
+}
+
+STRING 1160
+// Units: h001 (Choose of Difficulty), Tip (Tooltip - Basic)
+{
+Choose of Difficulty
+}
+
+STRING 1161
+// Units: h001 (Choose of Difficulty), EditorSuffix (Name - Editor Suffix)
+{
+[UI]
+}
+
+STRING 1162
+// Abilities: A003 ([UI] Difficulty: Easy), Tip (Tooltip - Normal)
+{
+Easy
+}
+
+STRING 1163
+// Abilities: A003 ([UI] Difficulty: Easy), Ubertip (Tooltip - Normal - Extended)
+{
+This pertains to the level of complexity involved in acquainting oneself with a game or refining one's abilities with a fresh legend.
+}
+
+STRING 1164
+// Abilities: A003 ([UI] Difficulty: Easy), Name (Name)
+{
+[UI] Difficulty: Easy
+}
+
+STRING 1165
+// Abilities: A00Y ([UI] Difficulty: Normal), Tip (Tooltip - Normal)
+{
+Normal
+}
+
+STRING 1166
+// Abilities: A00Y ([UI] Difficulty: Normal), Ubertip (Tooltip - Normal - Extended)
+{
+This is a test of your skills with a real challenge, you will need to interact with an ally in order to win.
+}
+
+STRING 1167
+// Abilities: A00Y ([UI] Difficulty: Normal), Name (Name)
+{
+[UI] Difficulty: Normal
+}
+
+STRING 1170
+// Abilities: A00Z ([UI] Difficulty: Hard), Name (Name)
+{
+[UI] Difficulty: Hard
+}
+
+STRING 1171
+// Abilities: A00Z ([UI] Difficulty: Hard), Tip (Tooltip - Normal)
+{
+Hard
+}
+
+STRING 1172
+// Abilities: A00Z ([UI] Difficulty: Hard), Ubertip (Tooltip - Normal - Extended)
+{
+The level of difficulty that will require the maximum of your skills and the most coordinated work with an ally.
+
+}
+
+STRING 1173
+// Abilities: A010 ([UI] Difficulty: Chaos), Tip (Tooltip - Normal)
+{
+Chaos
+}
+
+STRING 1174
+// Abilities: A010 ([UI] Difficulty: Chaos), Ubertip (Tooltip - Normal - Extended)
+{
+Difficulty level with random difficulty modifications.
+}
+
+STRING 1175
+// Abilities: A010 ([UI] Difficulty: Chaos), Name (Name)
+{
+[UI] Difficulty: Chaos
+}
+
+STRING 1176
+// Upgrades: R00A (Magic Sentry), Tip (Tooltip)
+{
+In future updates
+}
+
+STRING 1178
+// Upgrades: R00A (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Temporary stub for features.
+}
+
+STRING 1179
+{
+Syndicate Caravans
+}
+
+STRING 1180
+// Units: h000 (Templar), Name (Name)
+{
+Templar
+}
+
+STRING 1192
+// Upgrades: R00A (Magic Sentry), Name (Name)
+{
+[Special] In future updates
+}
+
+STRING 1193
+// Upgrades: R00E (Magic Sentry), Name (Name)
+{
+[Special] Arthas
+}
+
+STRING 1194
+// Upgrades: R00E (Magic Sentry), Tip (Tooltip)
+{
+Arthas
+}
+
+STRING 1195
+// Upgrades: R00E (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 1198
+// Upgrades: R00F (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 1199
+// Upgrades: R00F (Magic Sentry), Name (Name)
+{
+[Special] Uther
+}
+
+STRING 1200
+// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
+{
+Uther
+}
+
+STRING 1201
+// Units: u001 (Soul), Name (Name)
+{
+Soul
+}
+
+STRING 1203
+// Abilities: A017 ([Test] Target Ability), Name (Name)
+{
+[Test] Target Ability
+}
+
+STRING 1204
+// Abilities: A020 ([Arthas] Harvest a soul), Name (Name)
+{
+[Arthas] Harvest a soul
+}
+
+STRING 1209
+// Abilities: A00H (Hearthstone), Name (Name)
+{
+Hearthstone
+}
+
+STRING 1246
+{
+|cffff0000Not enough souls to reforge!|r
+}
+
+STRING 1247
+{
+|cffff0000Not enough souls to reforge!|r
+}
+
+STRING 1248
+{
+|cffff0000Not enough souls to reforge!|r
+}
+
+STRING 1253
+// Units: u015 (Wagon), Name (Name)
+{
+Wagon
+}
+
+STRING 1254
+// Units: u015 (Wagon), Tip (Tooltip - Basic)
+{
+Train Wagon
+}
+
+STRING 1255
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Tip (Tooltip - Normal)
+{
+Blood Soul
+}
+
+STRING 1256
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Tip (Tooltip - Normal)
+{
+Blood Soul
+}
+
+STRING 1260
+// Upgrades: R00G (Cannibalize), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 1261
+// Upgrades: R00G (Cannibalize), Name (Name)
+{
+Blood Rune
+}
+
+STRING 1262
+// Upgrades: R00G (Cannibalize), Name (Name)
+{
+Blood Rune
+}
+
+STRING 1264
+// Upgrades: R00G (Cannibalize), Tip (Tooltip)
+{
+Blood Rune Advanced
+}
+
+STRING 1265
+// Upgrades: R00G (Cannibalize), Tip (Tooltip)
+{
+Blood Rune Mastery
+}
+
+STRING 1268
+// Upgrades: R00G (Cannibalize), Tip (Tooltip)
+{
+Blood Rune Novice
+}
+
+STRING 1270
+// Upgrades: R00I (Cannibalize), Name (Name)
+{
+Frost Rune
+}
+
+STRING 1271
+// Upgrades: R00I (Cannibalize), Name (Name)
+{
+Frost Rune
+}
+
+STRING 1273
+// Upgrades: R00I (Cannibalize), Tip (Tooltip)
+{
+Frost Rune Advanced
+}
+
+STRING 1274
+// Upgrades: R00I (Cannibalize), Tip (Tooltip)
+{
+Frost Rune Mastery
+}
+
+STRING 1277
+// Upgrades: R00I (Cannibalize), Tip (Tooltip)
+{
+Frost Rune Novice
+}
+
+STRING 1279
+// Upgrades: R00H (Cannibalize), Name (Name)
+{
+Unholy Rune
+}
+
+STRING 1280
+// Upgrades: R00H (Cannibalize), Name (Name)
+{
+Unholy Rune
+}
+
+STRING 1282
+// Upgrades: R00H (Cannibalize), Tip (Tooltip)
+{
+Unholy Rune Advanced
+}
+
+STRING 1283
+// Upgrades: R00H (Cannibalize), Tip (Tooltip)
+{
+Unholy Rune Mastery
+}
+
+STRING 1286
+// Upgrades: R00H (Cannibalize), Tip (Tooltip)
+{
+Unholy Rune Novice
+}
+
+STRING 1294
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Tip (Tooltip - Normal)
+{
+Blood Soul Reforging
+}
+
+STRING 1298
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Tip (Tooltip - Normal)
+{
+Frost Soul Reforging
+}
+
+STRING 1302
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Tip (Tooltip - Normal)
+{
+Unholy Soul Reforging
+}
+
+STRING 1305
+// Upgrades: R00G (Cannibalize), effect2 (Effect 2)
+{
+rlev
+}
+
+STRING 1306
+// Upgrades: R00H (Cannibalize), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 1308
+// Upgrades: R00J (Cannibalize), effect1 (Effect 1)
+{
+rhpo
+}
+
+STRING 1310
+// Upgrades: R00K (Cannibalize), effect1 (Effect 1)
+{
+ratx
+}
+
+STRING 1315
+// Upgrades: R00H (Cannibalize), effect2 (Effect 2)
+{
+rlev
+}
+
+STRING 1316
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Tip (Tooltip - Normal)
+{
+Frost Soul
+}
+
+STRING 1317
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Tip (Tooltip - Normal)
+{
+Frost Soul
+}
+
+STRING 1318
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Tip (Tooltip - Normal)
+{
+Unholy Soul
+}
+
+STRING 1319
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Tip (Tooltip - Normal)
+{
+Unholy Soul
+}
+
+STRING 1326
+// Upgrades: R00I (Cannibalize), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 1327
+// Upgrades: R00I (Cannibalize), effect2 (Effect 2)
+{
+rlev
+}
+
+STRING 1330
+// Upgrades: R00M (Backpack), Tip (Tooltip)
+{
+Research Slave of the Lich King
+}
+
+STRING 1331
+// Upgrades: R00M (Backpack), Ubertip (Tooltip - Extended)
+{
+Your ally also spawns souls for you
+
+}
+
+STRING 1332
+// Units: u01C (Frostmourne Pedestal), Name (Name)
+{
+Frostmourne Pedestal
+}
+
+STRING 1333
+// Units: u01C (Frostmourne Pedestal), Tip (Tooltip - Basic)
+{
+Summon Frostmourne Pedestal
+}
+
+STRING 1334
+// Abilities: A01U ([Arthas] Sacrifice), Ubertip (Tooltip - Normal - Extended)
+{
+Kill a minion to gain souls.
+
+}
+
+STRING 1335
+// Abilities: A01V ([Arthas] Sacrifice), Ubertip (Tooltip - Normal - Extended)
+{
+Sacrifice an acolyte to Frostmourne in exchange for souls.
+}
+
+STRING 1336
+// Abilities: A018 ([Arthas] Death Coil), Name (Name)
+{
+[Arthas] Death Coil
+}
+
+STRING 1337
+// Abilities: A018 ([Arthas] Death Coil), Ubertip (Tooltip - Normal - Extended)
+{
+A coil of death that can heal a friendly Undead unit for <A018,DataA1> hit points, or deal half damage to an enemy living unit.
+}
+
+STRING 1338
+// Abilities: A018 ([Arthas] Death Coil), Ubertip (Tooltip - Normal - Extended)
+{
+A coil of death that can heal a friendly Undead unit for <A018,DataA2> hit points, or deal half damage to an enemy living unit.
+}
+
+STRING 1339
+// Abilities: A018 ([Arthas] Death Coil), Ubertip (Tooltip - Normal - Extended)
+{
+A coil of death that can heal a friendly Undead unit for <A018,DataA3> hit points, or deal half damage to an enemy living unit.
+}
+
+STRING 1344
+// Abilities: A01B ([Arthas] Animate Dead), Name (Name)
+{
+[Arthas] Animate Dead
+}
+
+STRING 1345
+// Abilities: A01B ([Arthas] Animate Dead), Researchubertip (Tooltip - Learn - Extended)
+{
+Raises <A01B,DataA1> dead units in an area to fight for the Lich King for <A01B,Dur1> seconds.
+}
+
+STRING 1346
+// Abilities: A01B ([Arthas] Animate Dead), Ubertip (Tooltip - Normal - Extended)
+{
+Raises <A01B,DataA1> dead units in an area to fight for the Lich King for <A01B,Dur1> seconds.
+}
+
+STRING 1347
+// Abilities: A021 ([Arthas] Death Pact), Name (Name)
+{
+[Arthas] Death Pact
+}
+
+STRING 1348
+// Abilities: A021 ([Arthas] Death Pact), Ubertip (Tooltip - Normal - Extended)
+{
+Kills a target friendly Undead unit, giving <A021,DataB1,%>% of its hit points to the Lich King.
+}
+
+STRING 1349
+// Abilities: A021 ([Arthas] Death Pact), Ubertip (Tooltip - Normal - Extended)
+{
+Kills a target friendly Undead unit, giving <A021,DataB2,%>% of its hit points to the Lich King.
+}
+
+STRING 1350
+// Abilities: A021 ([Arthas] Death Pact), Ubertip (Tooltip - Normal - Extended)
+{
+Kills a target friendly Undead unit, giving <A021,DataB3,%>% of its hit points to the Lich King.
+}
+
+STRING 1351
+// Abilities: A018 ([Arthas] Death Coil), Researchubertip (Tooltip - Learn - Extended)
+{
+A coil of death that can damage an enemy living unit or heal a friendly Undead unit. |n|n|cffffcc00Level 1|r - Heals for <A018,DataA1> hit points. |n|cffffcc00Level 2|r - Heals for <A018,DataA2> hit points. |n|cffffcc00Level 3|r - Heals for <A018,DataA3> hit points.
+}
+
+STRING 1353
+// Abilities: A021 ([Arthas] Death Pact), Researchubertip (Tooltip - Learn - Extended)
+{
+Kills a target friendly Undead unit, giving a percentage of its hit points to the Lich King.|n|n|cffffcc00Level 1|r - <A021,DataB1,%>% conversion. |n|cffffcc00Level 2|r - <A021,DataB2,%>% conversion. |n|cffffcc00Level 3|r - <A021,DataB3,%>% conversion.
+}
+
+STRING 1354
+// Abilities: A016 ([Arthas_Effect] Unholy), EditorSuffix (Editor Suffix)
+{
+(effect)
+}
+
+STRING 1356
+// Abilities: A020 ([Arthas] Harvest a soul), EditorSuffix (Editor Suffix)
+{
+(soul-dummy)
+}
+
+STRING 1357
+// Abilities: A022 ([Arthas] Life Steal), Name (Name)
+{
+[Arthas] Life Steal
+}
+
+STRING 1359
+// Abilities: A022 ([Arthas] Life Steal), EditorSuffix (Editor Suffix)
+{
+(rune hide ability)
+}
+
+STRING 1364
+// Abilities: A01R ([Arthas] Stone Form), EditorSuffix (Editor Suffix)
+{
+(Blood)
+}
+
+STRING 1365
+// Abilities: A01R ([Arthas] Stone Form), Name (Name)
+{
+[Arthas] Stone Form
+}
+
+STRING 1366
+// Abilities: A01S ([Arthas] Stone Form), EditorSuffix (Editor Suffix)
+{
+(Frost)
+}
+
+STRING 1367
+// Abilities: A01S ([Arthas] Stone Form), Name (Name)
+{
+[Arthas] Stone Form
+}
+
+STRING 1368
+// Abilities: A01T ([Arthas] Stone Form), EditorSuffix (Editor Suffix)
+{
+(Unholy)
+}
+
+STRING 1369
+// Abilities: A01T ([Arthas] Stone Form), Name (Name)
+{
+[Arthas] Stone Form
+}
+
+STRING 1370
+// Abilities: A01U ([Arthas] Sacrifice), Name (Name)
+{
+[Arthas] Sacrifice
+}
+
+STRING 1371
+// Abilities: A01V ([Arthas] Sacrifice), EditorSuffix (Editor Suffix)
+{
+(Sacrificial Pit)
+}
+
+STRING 1372
+// Abilities: A01V ([Arthas] Sacrifice), Name (Name)
+{
+[Arthas] Sacrifice
+}
+
+STRING 1377
+// Abilities: S002 ([Arthas] Transform to Blood Ghoul), Name (Name)
+{
+[Arthas] Transform to Blood Ghoul
+}
+
+STRING 1378
+// Abilities: S003 ([Arthas] Transform to Blood Crypt Fiend), Name (Name)
+{
+[Arthas] Transform to Blood Crypt Fiend
+}
+
+STRING 1379
+// Abilities: S004 ([Arthas] Transform to Blood Abomination), Name (Name)
+{
+[Arthas] Transform to Blood Abomination
+}
+
+STRING 1380
+// Abilities: S005 ([Arthas] Transform to Blood Wagon), Name (Name)
+{
+[Arthas] Transform to Blood Wagon
+}
+
+STRING 1381
+// Abilities: S006 ([Arthas] Transform to Blood Gargoyle), Name (Name)
+{
+[Arthas] Transform to Blood Gargoyle
+}
+
+STRING 1382
+// Abilities: S007 ([Arthas] Transform to Blood Wyrm), Name (Name)
+{
+[Arthas] Transform to Blood Wyrm
+}
+
+STRING 1383
+// Abilities: S008 ([Arthas] Transform to Frost Abomination), Name (Name)
+{
+[Arthas] Transform to Frost Abomination
+}
+
+STRING 1384
+// Abilities: S009 ([Arthas] Transform to Frost Crypt Fiend), Name (Name)
+{
+[Arthas] Transform to Frost Crypt Fiend
+}
+
+STRING 1385
+// Abilities: S00A ([Arthas] Transform to Frost Gargoyle), Name (Name)
+{
+[Arthas] Transform to Frost Gargoyle
+}
+
+STRING 1386
+// Abilities: S00B ([Arthas] Transform to Frost Wagon), Name (Name)
+{
+[Arthas] Transform to Frost Wagon
+}
+
+STRING 1387
+// Abilities: S00C ([Arthas] Transform to Frost Wyrm), Name (Name)
+{
+[Arthas] Transform to Frost Wyrm
+}
+
+STRING 1388
+// Abilities: S00D ([Arthas] Transform to Frost Ghoul), Name (Name)
+{
+[Arthas] Transform to Frost Ghoul
+}
+
+STRING 1389
+// Abilities: S00E ([Arthas] Transform to Unholy Abomination), Name (Name)
+{
+[Arthas] Transform to Unholy Abomination
+}
+
+STRING 1390
+// Abilities: S00F ([Arthas] Transform to Unholy Crypt Fiend), Name (Name)
+{
+[Arthas] Transform to Unholy Crypt Fiend
+}
+
+STRING 1391
+// Abilities: S00G ([Arthas] Transform to Unholy Gargoyle), Name (Name)
+{
+[Arthas] Transform to Unholy Gargoyle
+}
+
+STRING 1392
+// Abilities: S00H ([Arthas] Transform to Unholy Ghoul), Name (Name)
+{
+[Arthas] Transform to Unholy Ghoul
+}
+
+STRING 1393
+// Abilities: S00I ([Arthas] Transform to Unholy Wagon), Name (Name)
+{
+[Arthas] Transform to Unholy Wagon
+}
+
+STRING 1394
+// Abilities: S00J ([Arthas] Transform to Unholy Wyrm), Name (Name)
+{
+[Arthas] Transform to Unholy Wyrm
+}
+
+STRING 1395
+// Abilities: S00K ([Arthas] Transform to Unholy Stone Gargoyle), Name (Name)
+{
+[Arthas] Transform to Unholy Stone Gargoyle
+}
+
+STRING 1396
+// Abilities: S00L ([Arthas] Transform to Frost Stone Gargoyle), Name (Name)
+{
+[Arthas] Transform to Frost Stone Gargoyle
+}
+
+STRING 1397
+// Abilities: S00M ([Arthas] Transform to Blood Stone Gargoyle), Name (Name)
+{
+[Arthas] Transform to Blood Stone Gargoyle
+}
+
+STRING 1398
+// Buffs/Effects: B00A ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
+{
+[Arthas] Rotten teeth
+}
+
+STRING 1399
+// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), Tip (Tooltip - Normal)
+{
+Rotten teeth
+}
+
+STRING 1400
+// Buffs/Effects: B00B ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
+{
+[Arthas] Rotten teeth
+}
+
+STRING 1405
+// Upgrades: R00N (Cannibalize), Tip (Tooltip)
+{
+Research Ghoul Upgrade
+}
+
+STRING 1407
+// Upgrades: R00N (Cannibalize), Name (Name)
+{
+[Arthas] Ghoul Upgrade
+}
+
+STRING 1408
+// Upgrades: R004 (Creature Attack,Improved Creature Attack,Advanced Creature Attack), Name (Name)
+{
+[Arthas] Creature Attack
+}
+
+STRING 1409
+// Upgrades: R005 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Name (Name)
+{
+[Arthas] Creature Carapace
+}
+
+STRING 1410
+// Upgrades: R006 (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Name (Name)
+{
+[Arthas] Unholy Armor
+}
+
+STRING 1411
+// Upgrades: R007 (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Name (Name)
+{
+[Arthas] Unholy Strength
+}
+
+STRING 1412
+// Upgrades: R00G (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune
+}
+
+STRING 1413
+// Upgrades: R00H (Cannibalize), Name (Name)
+{
+[Arthas] Unholy Rune
+}
+
+STRING 1414
+// Upgrades: R00I (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune
+}
+
+STRING 1415
+// Upgrades: R00J (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune Max HP
+}
+
+STRING 1416
+// Upgrades: R00J (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(dependency)
+}
+
+STRING 1417
+// Upgrades: R00K (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune Add Damage
+}
+
+STRING 1418
+// Upgrades: R00K (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(dependency)
+}
+
+STRING 1419
+// Upgrades: R00L (Ghoul Frenzy), Name (Name)
+{
+[Arthas] Blood Rune Attack Speed
+}
+
+STRING 1420
+// Upgrades: R00L (Ghoul Frenzy), EditorSuffix (Editor Suffix)
+{
+(dependency)
+}
+
+STRING 1421
+// Upgrades: R00M (Backpack), Name (Name)
+{
+[Arthas] Slave of the Lich King
+
+}
+
+STRING 1423
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Higher health
+- Higher attack speed
+|cff6f6f6f- Personal vampirism|r
+}
+
+STRING 1424
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Higher health
+- Higher attack speed
+- Personal vampirism
+}
+
+STRING 1425
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Higher health
+|cff6f6f6f- Higher attack speed
+- Personal vampirism|r
+}
+
+STRING 1427
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Increased Damage
+|cff6f6f6f- Increased mana
+- Chance to freeze the target|r
+}
+
+STRING 1428
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Increased Damage
+- Increased mana
+|cff6f6f6f- Chance to freeze the target|r
+}
+
+STRING 1429
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Increased Damage
+- Increased mana
+- Chance to freeze the target
+}
+
+STRING 1431
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Spreading the plague
+|cff6f6f6f- Death brings back some of the souls
+- Death breeds plague zombies
+|r
+}
+
+STRING 1432
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+|cff6f6f6f- Death breeds plague zombies
+|r
+}
+
+STRING 1433
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+- Death breeds plague zombies
+}
+
+STRING 1434
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Higher health
+|cff6f6f6f- Higher attack speed
+- Personal vampirism|r
+}
+
+STRING 1435
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Higher health
+- Higher attack speed
+|cff6f6f6f- Personal vampirism|r
+}
+
+STRING 1436
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Higher health
+- Higher attack speed
+- Personal vampirism
+}
+
+STRING 1438
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Increased Damage
+|cff6f6f6f- Increased mana
+- Chance to freeze the target|r
+}
+
+STRING 1439
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Increased Damage
+- Increased mana
+|cff6f6f6f- Chance to freeze the target|r
+}
+
+STRING 1440
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Increased Damage
+- Increased mana
+- Chance to freeze the target
+}
+
+STRING 1442
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Spreading the plague
+|cff6f6f6f- Death brings back some of the souls
+- Death breeds plague zombies
+|r
+}
+
+STRING 1443
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+|cff6f6f6f- Death breeds plague zombies
+|r
+}
+
+STRING 1444
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Reforging costs - 20 souls|n
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+- Death breeds plague zombies
+}
+
+STRING 1446
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced bloody unit reforging
+
+Current rune level:
+- Higher health
+|cff6f6f6f- Higher attack speed
+- Personal vampirism|r
+}
+
+STRING 1447
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master bloody unit reforging
+
+Current rune level:
+- Higher health
+- Higher attack speed
+|cff6f6f6f- Personal vampirism|r
+}
+
+STRING 1448
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks bloody reforging units
+
+Current rune level:
+|cff6f6f6f- Higher health
+- Higher attack speed
+- Personal vampirism|r
+}
+
+STRING 1449
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced unholy unit reforging
+
+Current rune level:
+- Spreading the plague
+|cff6f6f6f- Death brings back some of the souls
+- Death breeds plague zombies
+|r
+}
+
+STRING 1450
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master unholy unit reforging
+
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+|cff6f6f6f- Death breeds plague zombies
+|r
+}
+
+STRING 1451
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks unholy reforging units
+
+Current rune level:
+|cff6f6f6f- Spreading the plague
+- Death brings back some of the souls
+- Death breeds plague zombies
+|r
+}
+
+STRING 1452
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced frost unit reforging
+
+Current rune level:
+- Increased Damage
+|cff6f6f6f- Increased mana
+- Chance to freeze the target|r
+}
+
+STRING 1453
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master frost unit reforging
+
+Current rune level:
+- Increased Damage
+- Increased mana
+|cff6f6f6f- Chance to freeze the target|r
+}
+
+STRING 1454
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks frost reforging units
+
+Current rune level:
+|cff6f6f6f- Increased Damage
+- Increased mana
+- Chance to freeze the target|r
+}
+
+STRING 1455
+// Buffs/Effects: B00C ([Arthas] Blood Rage), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Rage
+}
+
+STRING 1456
+// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Tip (Tooltip - Normal)
+{
+Blood Rage
+}
+
+STRING 1457
+// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+}
+
+STRING 1458
+// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), EditorSuffix (Editor Suffix)
+{
+(Ghoul - Unholy)
+}
+
+STRING 1460
+// Buffs/Effects: B00C ([Arthas] Blood Rage), Bufftip (Tooltip)
+{
+Blood Rage
+}
+
+STRING 1461
+// Buffs/Effects: B00C ([Arthas] Blood Rage), Buffubertip (Tooltip - Extended)
+{
+Unit attacks faster but moves slower
+
+}
+
+STRING 1463
+// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), Ubertip (Tooltip - Normal - Extended)
+{
+A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 1466
+// Abilities: A026 ([Arthas_Ghoul_Frost] Ice Shard), Tip (Tooltip - Normal)
+{
+Ice Shard
+}
+
+STRING 1468
+// Abilities: A026 ([Arthas_Ghoul_Frost] Ice Shard), Ubertip (Tooltip - Normal - Extended)
+{
+Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+}
+
+STRING 1470
+// Upgrades: R00O (Cannibalize), effect1 (Effect 1)
+{
+rman
+}
+
+STRING 1471
+// Upgrades: R00O (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune Max MP + regen
+}
+
+STRING 1472
+// Upgrades: R00O (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(dependency)
+}
+
+STRING 1473
+// Upgrades: R00O (Cannibalize), effect2 (Effect 2)
+{
+rmnr
+}
+
+STRING 1476
+// Abilities: A027 ([Arthas] Ice of Northrend), Name (Name)
+{
+[Arthas] Ice of Northrend
+}
+
+STRING 1477
+// Abilities: A027 ([Arthas] Ice of Northrend), Tip (Tooltip - Normal)
+{
+Ice of Northrend
+}
+
+STRING 1478
+// Abilities: A027 ([Arthas] Ice of Northrend), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A027,DataA1>% chance to Freeze the enemy for <A027,Dur1> seconds.
+}
+
+STRING 1479
+// Buffs/Effects: B00D ([Arthas] Ice of Northrend), EditorName (Name (Editor Only))
+{
+[Arthas] Ice of Northrend
+}
+
+STRING 1480
+// Buffs/Effects: B00D ([Arthas] Ice of Northrend), Bufftip (Tooltip)
+{
+Ice of Northrend
+}
+
+STRING 1481
+// Units: u002 (New tech level), Name (Name)
+{
+New tech level
+}
+
+STRING 1482
+// Destructibles: B000 (Winter Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL) Winter
+}
+
+STRING 1483
+// Destructibles: B001 (Fall Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL) Fall
+}
+
+STRING 1484
+// Destructibles: B002 (Village Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL) VIll
+}
+
+STRING 1485
+// Destructibles: B003 (Snowy Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL) Snow
+}
+
+STRING 1486
+// Destructibles: B004 (Summer Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL) Summ
+}
+
+STRING 1487
+// Doodads: D003 (RocksClash1), Name (Name)
+{
+RocksClash1
+}
+
+STRING 1488
+// Doodads: D004 (RocksClash2), Name (Name)
+{
+RocksClash2
+}
+
+STRING 1489
+// Doodads: D005 (RocksClash3), Name (Name)
+{
+RocksClash3
+}
+
+STRING 1490
+// Doodads: D006 (RocksClash4), Name (Name)
+{
+RocksClash4
+}
+
+STRING 1491
+// Doodads: D007 (RocksClash6), Name (Name)
+{
+RocksClash6
+}
+
+STRING 1492
+// Doodads: D008 (RocksClash5), Name (Name)
+{
+RocksClash5
+}
+
+STRING 1493
+// Doodads: D009 (Fire Pit(Grounded)), Name (Name)
+{
+Fire Pit(Grounded)
+}
+
+STRING 1494
+// Doodads: D00A (Кусты), Name (Name)
+{
+Кусты
+}
+
+STRING 1496
+// Abilities: A028 ([Test] Chance to cast on attack), Name (Name)
+{
+[Test] Chance to cast on attack
+}
+
+STRING 1500
+// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), EditorSuffix (Editor Suffix)
+{
+(Dependency spell)
+}
+
+STRING 1501
+// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), Tip (Tooltip - Normal)
+{
+Corrosion
+}
+
+STRING 1504
+// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), Ubertip (Tooltip - Normal - Extended)
+{
+<A02A,DataC1,%>% сhance to attack with <A02A,DataA1> damage with ignoring target's armor
+}
+
+STRING 1505
+// Buffs/Effects: B00E ([Arthas] Blood Feast Aura), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Feast Aura
+}
+
+STRING 1506
+// Abilities: A019 ([Arthas_StoneForm_Blood] Blood Feast Aura), Tip (Tooltip - Normal)
+{
+Blood Feast Aura
+}
+
+STRING 1508
+// Abilities: A019 ([Arthas_StoneForm_Blood] Blood Feast Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby friendly melee units gain <A019,DataA1,%>% of their attack damage when they hit enemy units. Compatible with other lifesteal auras.
+}
+
+STRING 1510
+// Buffs/Effects: B00E ([Arthas] Blood Feast Aura), Bufftip (Tooltip)
+{
+Blood Feast Aura
+}
+
+STRING 1511
+// Buffs/Effects: B00E ([Arthas] Blood Feast Aura), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Blood Feast Aura; damage it deals to enemy units will restore hit points.
+}
+
+STRING 1512
+// Abilities: A019 ([Arthas_StoneForm_Blood] Blood Feast Aura), Name (Name)
+{
+[Arthas_StoneForm_Blood] Blood Feast Aura
+}
+
+STRING 1513
+// Abilities: A02B ([Arthas_CryptFiend_Frost] Frost Beetles), Name (Name)
+{
+[Arthas_CryptFiend_Frost] Frost Beetles
+}
+
+STRING 1514
+// Abilities: A02B ([Arthas_CryptFiend_Frost] Frost Beetles), Tip (Tooltip - Normal)
+{
+Frost Beetles
+}
+
+STRING 1515
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Name (Name)
+{
+[Arthas_ForgeOfSoul] Blood Soul Reforging
+}
+
+STRING 1516
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Name (Name)
+{
+[Arthas_ForgeOfSoul] Frost Soul Reforging
+}
+
+STRING 1517
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Name (Name)
+{
+[Arthas_ForgeOfSoul] Unholy Soul Reforging
+}
+
+STRING 1518
+// Abilities: A026 ([Arthas_Ghoul_Frost] Ice Shard), Name (Name)
+{
+[Arthas_Ghoul_Frost] Ice Shard
+}
+
+STRING 1520
+// Abilities: A02B ([Arthas_CryptFiend_Frost] Frost Beetles), Ubertip (Tooltip - Normal - Extended)
+{
+Adds a cold effect to each attack, dealing <A02B,DataA1> bonus damage, slowing a target enemy unit's attacks by <A02B,DataB1,%>% and movement by <A02B,DataC1,%>% for <A02B,Dur1> seconds.
+}
+
+STRING 1524
+// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Name (Name)
+{
+[Arthas_Ghoul_Blood] Blood Rage
+}
+
+STRING 1525
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Name (Name)
+{
+[Arthas_Units_Blood] Blood Soul
+}
+
+STRING 1526
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Name (Name)
+{
+[Arthas_Units_Frost] Frost Soul
+}
+
+STRING 1527
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Name (Name)
+{
+[Arthas_Units_Unholy] Unholy Soul
+}
+
+STRING 1531
+// Abilities: A029 ([Arthas_CryptFiend_Unholy] Corrosion), Name (Name)
+{
+[Arthas_CryptFiend_Unholy] Corrosion
+}
+
+STRING 1534
+// Abilities: A02D ([Arthas_CryptFiend_Blood] Rapacity), Name (Name)
+{
+[Arthas_CryptFiend_Blood] Rapacity
+}
+
+STRING 1535
+// Abilities: A02D ([Arthas_CryptFiend_Blood] Rapacity), Tip (Tooltip - Normal)
+{
+Rapacity
+}
+
+STRING 1537
+// Buffs/Effects: B00F ([Arthas] Rapacity), EditorName (Name (Editor Only))
+{
+[Arthas] Rapacity
+}
+
+STRING 1538
+// Buffs/Effects: B00F ([Arthas] Rapacity), Bufftip (Tooltip)
+{
+Rapacity
+}
+
+STRING 1539
+// Buffs/Effects: B00F ([Arthas] Rapacity), Buffubertip (Tooltip - Extended)
+{
+The unit has increased damage and loses health when attacked.
+}
+
+STRING 1540
+// Abilities: A02D ([Arthas_CryptFiend_Blood] Rapacity), Ubertip (Tooltip - Normal - Extended)
+{
+The unit has increased damage by <A02D,DataA1> and loses health equal to <A02D,DataB1,%>% of the damage dealt.
+}
+
+STRING 1541
+// Upgrades: R00P (Burrow), Name (Name)
+{
+[Arthas] Crypt Fiend Upgrade
+}
+
+STRING 1542
+// Upgrades: R00P (Burrow), Tip (Tooltip)
+{
+Research Crypt Fiend Upgrade
+}
+
+STRING 1544
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Ghoul's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 1545
+// Upgrades: R00P (Burrow), Ubertip (Tooltip - Extended)
+{
+Crypt Fiend's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Rapacity - The unit has increased damage by <A02D,DataA1> and loses health equal to <A02D,DataB1,%>% of the damage dealt.
+
+|cFF007EFFFrost:|r
+Frost Beetles - Adds a cold effect to each attack, dealing <A02B,DataA1> bonus damage, slowing a target enemy unit's attacks by <A02B,DataB1,%>% and movement by <A02B,DataC1,%>% for <A02B,Dur1> seconds.
+
+|cff00ff00Unholy:|r
+<A02A,DataC1,%>% сhance to attack with <A02A,DataA1> damage with ignoring target's armor
+}
+
+STRING 1547
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), EditorSuffix (Editor Suffix)
+{
+(Stone Form)
+}
+
+STRING 1556
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap2,DataB2> damage per second. |nLasts <Aap2,DataA2> seconds.
+}
+
+STRING 1557
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap3,DataB3> damage per second. |nLasts <Aap3,DataA3> seconds.
+}
+
+STRING 1558
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap4,DataB4> damage per second. |nLasts <Aap4,DataA4> seconds.
+}
+
+STRING 1559
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap5,DataB5> damage per second. |nLasts <Aap5,DataA5> seconds.
+}
+
+STRING 1560
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap6,DataB6> damage per second. |nLasts <Aap6,DataA6> seconds.
+}
+
+STRING 1561
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap7,DataB7> damage per second. |nLasts <Aap7,DataA7> seconds.
+}
+
+STRING 1562
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap8,DataB8> damage per second. |nLasts <Aap8,DataA8> seconds.
+}
+
+STRING 1563
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap9,DataB9> damage per second. |nLasts <Aap9,DataA9> seconds.
+}
+
+STRING 1564
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 200
+}
+
+STRING 1565
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 300
+}
+
+STRING 1566
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 400
+}
+
+STRING 1567
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 500
+}
+
+STRING 1568
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 600
+}
+
+STRING 1569
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 700
+}
+
+STRING 1570
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 800
+}
+
+STRING 1571
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 900
+}
+
+STRING 1572
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+{
+Disease Cloud - 100
+}
+
+STRING 1573
+// Abilities: A012 ([Arthas_Effect] Blood), Name (Name)
+{
+[Arthas_Effect] Blood
+}
+
+STRING 1574
+// Abilities: A015 ([Arthas_Effect] Ice), Name (Name)
+{
+[Arthas_Effect] Ice
+}
+
+STRING 1575
+// Abilities: A016 ([Arthas_Effect] Unholy), Name (Name)
+{
+[Arthas_Effect] Unholy
+}
+
+STRING 1577
+// Abilities: A023 ([Arthas_Effect] Flies), Name (Name)
+{
+[Arthas_Effect] Flies
+}
+
+STRING 1578
+// Abilities: A02E ([Arthas_Effect] Stone Form Aura Unholy), Name (Name)
+{
+[Arthas_Effect] Stone Form Aura Unholy
+}
+
+STRING 1580
+// Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Tip (Tooltip - Normal)
+{
+Blood Mark
+}
+
+STRING 1581
+// Buffs/Effects: B00G ([Arthas] Blood Mark), Buffubertip (Tooltip - Extended)
+{
+This unit has Blood Mark; his armor is reduced.
+}
+
+STRING 1583
+// Buffs/Effects: B00G ([Arthas] Blood Mark), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Mark
+}
+
+STRING 1585
+// Abilities: A02G ([Arthas_StoneForm_Blood] Life Steal), EditorSuffix (Editor Suffix)
+{
+(aura hide ability)
+}
+
+STRING 1593
+// Abilities: A02H ([Arthas_StoneForm_Frost] Winds of Northrend), Name (Name)
+{
+[Arthas_StoneForm_Frost] Winds of Northrend
+}
+
+STRING 1594
+// Abilities: A02H ([Arthas_StoneForm_Frost] Winds of Northrend), Tip (Tooltip - Normal)
+{
+Winds of Northrend
+}
+
+STRING 1595
+// Buffs/Effects: B00G ([Arthas] Blood Mark), Bufftip (Tooltip)
+{
+|cffff0000Blood Mark|r
+}
+
+STRING 1597
+// Buffs/Effects: B00H ([Arthas] Winds of Northrend), Bufftip (Tooltip)
+{
+|cffff0000Winds of Northrend|r
+}
+
+STRING 1598
+// Buffs/Effects: B00H ([Arthas] Winds of Northrend), EditorName (Name (Editor Only))
+{
+[Arthas] Winds of Northrend
+}
+
+STRING 1599
+// Buffs/Effects: B00H ([Arthas] Winds of Northrend), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Winds of Northrend; it has an reduced movement speed and attack rate.
+}
+
+STRING 1600
+// Upgrades: R008 (Stone Form), Name (Name)
+{
+[Arthas] Stone Form
+}
+
+STRING 1601
+// Upgrades: R008 (Stone Form), Ubertip (Tooltip - Extended)
+{
+Enables the ability for Gargoyles to assume Stone Form. Stone Form transforms the Gargoyle into a statue with high armor, spell immunity, and regeneration. The Gargoyle cannot attack in this form.
+Stone Form reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 1602
+// Units: u009 (Plague Necropolis), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Town Hall |R
+
+Primary structure, used to train Acolytes and receive lumber gathered by Ghouls. Can be upgraded to Halls of the Dead and then Black Citadel to enable the production of additional types of structures and units.
+}
+
+STRING 1603
+// Units: u00B (Plague Halls of the Dead), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Town Hall |R
+
+Upgrade to Halls of the Dead to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1604
+// Units: u00C (Plague Black Citadel), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Town Hall |R
+
+Upgrade to Black Citadel to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1605
+// Units: u00Z (Ziggurat), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Food #Defense |R
+
+Provides food, which increases the maximum number of units that can be trained. Can be upgraded to a defensive structure that attacks land and air units.
+}
+
+STRING 1606
+// Units: u017 (Spirit Tower), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Food #Defense |R
+
+Upgrade to create a defensive structure. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1607
+// Units: u018 (Nerubian Tower), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Food #Defense |R
+
+Upgrade to create a defensive structure that deals cold damage and slows enemy units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1608
+// Units: u019 (Altar of Darkness), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Altar|R
+
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 1609
+// Units: u01A (Crypt), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Barrack |R
+
+Primary troop production building. Trains Ghouls, Crypt Fiends, and Gargoyles. Also contains the upgrades Ghoul Frenzy, Cannibalize, Stone Form, Web and Burrow.
+}
+
+STRING 1610
+// Units: u01C (Frostmourne Pedestal), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Unique #Mechanics |R
+
+Provides attack and armor upgrades for Undead units. Also produces corpses and serves as a drop-off point for harvested lumber.
+}
+
+STRING 1611
+// Units: u01D (Slaughterhouse), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Barrack |R
+
+Produces Abominations, Obsidian Statues, and Meat Wagons. Also contains the Disease Cloud, and Destroyer Form upgrades.
+}
+
+STRING 1612
+// Units: u01E (Boneyard), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Barrack |R
+
+Produces Frost Wyrms. Also contains the Freezing Breath upgrade.
+}
+
+STRING 1613
+// Units: U000 (Forge of Souls), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Unique #Mechanics |R
+
+Primary troop production building. Trains Ghouls, Crypt Fiends, and Gargoyles. Also contains the upgrades Ghoul Frenzy, Cannibalize, Stone Form, Web and Burrow.
+}
+
+STRING 1616
+// Abilities: A02I ([Arthas_Gargoyle_Frost] Mana Burn), Tip (Tooltip - Normal)
+{
+Mana Burn
+}
+
+STRING 1617
+// Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Tip (Tooltip - Normal)
+{
+Necrotic Breath
+}
+
+STRING 1618
+// Buffs/Effects: B00I ([Arthas] Necrotic Breath), EditorName (Name (Editor Only))
+{
+[Arthas] Necrotic Breath
+}
+
+STRING 1619
+// Buffs/Effects: B00I ([Arthas] Necrotic Breath), Bufftip (Tooltip)
+{
+Necrotic Breath
+}
+
+STRING 1621
+// Buffs/Effects: B00I ([Arthas] Necrotic Breath), Buffubertip (Tooltip - Extended)
+{
+This unit is Necrotic Breath; its damage have been reduced.
+}
+
+STRING 1622
+// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), Name (Name)
+{
+[Arthas_Ghoul_Unholy] Rotten teeth
+}
+
+STRING 1623
+// Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Name (Name)
+{
+[Arthas_Gargoyle_Blood] Blood Mark
+}
+
+STRING 1624
+// Abilities: A02I ([Arthas_Gargoyle_Frost] Mana Burn), Name (Name)
+{
+[Arthas_Gargoyle_Frost] Mana Burn
+}
+
+STRING 1625
+// Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Name (Name)
+{
+[Arthas_Gargoyle_Unholy] Necrotic Breath
+}
+
+STRING 1626
+// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), Name (Name)
+{
+[Arthas_CryptFiend_Unholy] Corrosion
+}
+
+STRING 1627
+// Upgrades: R00Q (Burrow), Name (Name)
+{
+[Arthas] Gargoyle Upgrade
+}
+
+STRING 1628
+// Upgrades: R00Q (Burrow), Tip (Tooltip)
+{
+Research Gargoyle Upgrade
+}
+
+STRING 1629
+// Upgrades: R00Q (Burrow), Ubertip (Tooltip - Extended)
+{
+Gargoyles reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 1630
+// Units: u003 (Graveyard), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Upgrade #Storage |R
+
+Provides attack and armor upgrades for Undead units. Also produces corpses and serves as a drop-off point for harvested lumber.
+}
+
+STRING 1631
+// Abilities: A02J ([Arthas_Abomination_Blood] Surfeit), Name (Name)
+{
+[Arthas_Abomination_Blood] Surfeit
+}
+
+STRING 1632
+// Abilities: A02J ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1633
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Name (Name)
+{
+[Arthas_Abomination_Blood] Surfeit
+}
+
+STRING 1634
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), EditorSuffix (Editor Suffix)
+{
+(Life Bonus)
+}
+
+STRING 1641
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1642
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1643
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1644
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1645
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1647
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+{
+Surfeit
+}
+
+STRING 1649
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and maximum health by 100.
+}
+
+STRING 1650
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and maximum health by 200.
+}
+
+STRING 1651
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and maximum health by 300.
+}
+
+STRING 1652
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and maximum health by 400.
+}
+
+STRING 1653
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and maximum health by 500.
+}
+
+STRING 1654
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by 0.
+}
+
+STRING 1656
+// Abilities: A02G ([Arthas_StoneForm_Blood] Life Steal), Name (Name)
+{
+[Arthas_StoneForm_Blood] Life Steal
+}
+
+STRING 1657
+// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Name (Name)
+{
+[Arthas_StoneForm_Unholy] Disease Cloud
+}
+
+STRING 1660
+// Buffs/Effects: B00J ([Arthas] Glacial Gusto), EditorName (Name (Editor Only))
+{
+[Arthas] Glacial Gusto
+}
+
+STRING 1661
+// Abilities: A02M ([Arthas_Abomination_Frost] Glacial Gusto), Tip (Tooltip - Normal)
+{
+Glacial Gusto
+}
+
+STRING 1664
+// Buffs/Effects: B00J ([Arthas] Glacial Gusto), Buffubertip (Tooltip - Extended)
+{
+This unit is Frozen Gusto; its damage have been improved.
+}
+
+STRING 1666
+// Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Tip (Tooltip - Normal)
+{
+Glacial Gusto
+}
+
+STRING 1667
+// Units: u004 (Dummy), Name (Name)
+{
+Dummy
+}
+
+STRING 1669
+// Abilities: A02M ([Arthas_Abomination_Frost] Glacial Gusto), Name (Name)
+{
+[Arthas_Abomination_Frost] Glacial Gusto
+}
+
+STRING 1670
+// Abilities: A02M ([Arthas_Abomination_Frost] Glacial Gusto), EditorSuffix (Editor Suffix)
+{
+(dummy)
+}
+
+STRING 1671
+// Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Name (Name)
+{
+[Arthas_Abomination_Frost] Glacial Gusto
+}
+
+STRING 1672
+// Buffs/Effects: B00J ([Arthas] Glacial Gusto), Bufftip (Tooltip)
+{
+Glacial Gusto
+}
+
+STRING 1675
+// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Tip (Tooltip - Normal)
+{
+Infectious Outbreak
+}
+
+STRING 1678
+// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoul Spawn), Tip (Tooltip - Normal)
+{
+Ghoul Spawn
+}
+
+STRING 1679
+// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoul Spawn), Ubertip (Tooltip - Normal - Extended)
+{
+On death, spawn a reforged ghoul corresponding to each rune used
+}
+
+STRING 1680
+// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoul Spawn), Name (Name)
+{
+[Arthas_Abomination_Unholy] Ghoul Spawn
+}
+
+STRING 1681
+// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Name (Name)
+{
+[Arthas_Abomination_Unholy] Infectious Outbreak
+}
+
+STRING 1682
+// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Untip (Tooltip - Turn Off)
+{
+Deactivate Infectious Outbreak
+}
+
+STRING 1683
+// Upgrades: R00R (Disease Cloud), Name (Name)
+{
+[Arthas] Abomination Upgrade
+}
+
+STRING 1684
+// Upgrades: R00R (Disease Cloud), Tip (Tooltip)
+{
+Research Abomination Upgrade
+}
+
+STRING 1685
+// Upgrades: R00R (Disease Cloud), Ubertip (Tooltip - Extended)
+{
+Gargoyles reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 1686
+// Abilities: A02P ([Arthas_Wagon_Blood] Blood Fuel), Name (Name)
+{
+[Arthas_Wagon_Blood] Blood Fuel
+}
+
+STRING 1687
+// Abilities: A02Q ([Arthas_Wagon_Blood] Blood Fuel), Name (Name)
+{
+[Arthas_Wagon_Blood] Blood Fuel
+}
+
+STRING 1688
+// Abilities: A02Q ([Arthas_Wagon_Blood] Blood Fuel), Tip (Tooltip - Normal)
+{
+Blood Fuel
+}
+
+STRING 1689
+// Abilities: A02Q ([Arthas_Wagon_Blood] Blood Fuel), EditorSuffix (Editor Suffix)
+{
+(dummy)
+}
+
+STRING 1690
+// Buffs/Effects: B00K ([Arthas] Blood Fuel), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Fuel
+}
+
+STRING 1691
+// Buffs/Effects: B00K ([Arthas] Blood Fuel), Bufftip (Tooltip)
+{
+Blood Fuel
+}
+
+STRING 1692
+// Buffs/Effects: B00K ([Arthas] Blood Fuel), Buffubertip (Tooltip - Extended)
+{
+This unit is Blood Fuel; its damage have been improved.
+}
+
+STRING 1693
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Tip (Tooltip - Normal)
+{
+Frostmourne's Hunger - [|cffffcc00Level 1|r]
+}
+
+STRING 1694
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Tip (Tooltip - Normal)
+{
+Frostmourne's Hunger - [|cffffcc00Level 2|r]
+}
+
+STRING 1695
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Tip (Tooltip - Normal)
+{
+Frostmourne's Hunger - [|cffffcc00Level 3|r]
+}
+
+STRING 1696
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+Increases Soul movement speed by <A02R,DUR1,+>
+}
+
+STRING 1697
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+Increases Soul movement speed by <A02R,DUR2,+>
+}
+
+STRING 1698
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+Increases Soul movement speed by <A02R,DUR3,+>
+}
+
+STRING 1699
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Name (Name)
+{
+[Arthas] Frostmourne's Hunger
+}
+
+STRING 1700
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Researchubertip (Tooltip - Learn - Extended)
+{
+Increases Soul movement speed.|n|n|cffffcc00Level 1|r - <A02R,DUR1,+> add speed. |n|cffffcc00Level 2|r - <A02R,DUR1,+> add speed. |n|cffffcc00Level 3|r - <A02R,DUR1,+> add speed.
+}
+
+STRING 1701
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Researchtip (Tooltip - Learn)
+{
+Learn Frostmourne's Hunger - [|cffffcc00Level %d|r]
+}
+
+STRING 1702
+// Upgrades: R00S (Ghoul Frenzy), effect1 (Effect 1)
+{
+rmvx
+}
+
+STRING 1703
+// Upgrades: R00S (Ghoul Frenzy), Name (Name)
+{
+Frostmourne's Hunger
+}
+
+STRING 1704
+// Upgrades: R00S (Ghoul Frenzy), EditorSuffix (Editor Suffix)
+{
+(Soul Speed)
+}
+
+STRING 1705
+// Abilities: A00P ([Uther] Call To Arms), Name (Name)
+{
+[Uther] Call To Arms
+}
+
+STRING 1706
+// Abilities: A00Q ([Uther] Call to Arms), Name (Name)
+{
+[Uther] Call to Arms
+}
+
+STRING 1707
+// Items: I002 (Heartstone), Name (Name)
+{
+Heartstone
+}
+

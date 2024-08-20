@@ -1,0 +1,5 @@
+[Misc]
+DrainTransfersLife=1
+DrainTransfersMana=1
+MinUnitSpeed=1.0
+
