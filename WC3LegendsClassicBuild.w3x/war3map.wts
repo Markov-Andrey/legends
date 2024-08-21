@@ -234,21 +234,9 @@ STRING 497
 }
 
 STRING 498
-// Units: h005 (Recruit), EditorSuffix (Name - Editor Suffix)
+// Units: h005 (Shieldbearer), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
-}
-
-STRING 499
-// Units: h005 (Recruit), Name (Name)
-{
-Recruit
-}
-
-STRING 500
-// Units: h005 (Recruit), Tip (Tooltip - Basic)
-{
-Recruit
 }
 
 STRING 501
@@ -972,7 +960,7 @@ STRING 645
 }
 
 STRING 647
-// Units: h00D (Blacksmith), EditorSuffix (Name - Editor Suffix)
+// Units: h00D (Library), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -990,25 +978,25 @@ STRING 651
 }
 
 STRING 655
-// Upgrades: R001 (Defend), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 656
 // Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
+STRING 656
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
 STRING 657
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 662
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -1342,42 +1330,6 @@ STRING 818
 Shotgun deals <A013,DataA1,%>% damage in an AoE of 150
 }
 
-STRING 819
-// Abilities: A000 ([Uther] Faith in Light), Tip (Tooltip - Normal)
-{
-Faith in Light
-}
-
-STRING 820
-// Upgrades: R001 (Defend), Tip (Tooltip)
-{
-Research Faith in Light
-}
-
-STRING 821
-// Abilities: A000 ([Uther] Faith in Light), Ubertip (Tooltip - Normal - Extended)
-{
-Footmen gains bonus health equal to current Faith level
-}
-
-STRING 822
-// Upgrades: R001 (Defend), Name (Name)
-{
-Faith in Light
-}
-
-STRING 824
-// Upgrades: R001 (Defend), Ubertip (Tooltip - Extended)
-{
-Footmen gains bonus health equal to current Faith level
-}
-
-STRING 825
-// Abilities: A000 ([Uther] Faith in Light), Name (Name)
-{
-[Uther] Faith in Light
-}
-
 STRING 828
 // Upgrades: R00F (Magic Sentry), Tip (Tooltip)
 {
@@ -1522,78 +1474,6 @@ STRING 881
 [Uther] Lightning Shield (Caster)
 }
 
-STRING 882
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), Name (Name)
-{
-Cleric Adept Training
-}
-
-STRING 883
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), Name (Name)
-{
-Cleric Master Training
-}
-
-STRING 884
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
-{
-Cleric Adept Training
-}
-
-STRING 885
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
-{
-Cleric Master Training
-}
-
-STRING 886
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Cleric mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
-}
-
-STRING 887
-// Upgrades: R009 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Cleric mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
-}
-
-STRING 889
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
-{
-Disciple Adept Training
-}
-
-STRING 890
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
-{
-Disciple Master Training
-}
-
-STRING 891
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
-{
-Disciple Adept Training
-}
-
-STRING 892
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
-{
-Disciple Master Training
-}
-
-STRING 893
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Disciple mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
-}
-
-STRING 894
-// Upgrades: R003 (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Disciple mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Polymorph.
-}
-
 STRING 895
 // Abilities: A014 ([Uther] Hammer of Justice), Name (Name)
 {
@@ -1650,24 +1530,6 @@ STRING 910
 Syndicate Army
 }
 
-STRING 913
-// Abilities: A009 ([Uther] Silence), Name (Name)
-{
-[Uther] Silence
-}
-
-STRING 914
-// Abilities: A009 ([Uther] Silence), Tip (Tooltip - Normal)
-{
-Silence
-}
-
-STRING 915
-// Buffs/Effects: B005 ([Uther] Silence), EditorName (Name (Editor Only))
-{
-[Uther] Silence
-}
-
 STRING 916
 // Abilities: A004 ([Uther] Holy Light), Name (Name)
 {
@@ -1690,12 +1552,6 @@ STRING 919
 // Abilities: A00B ([Uther] Dispel Magic), Name (Name)
 {
 [Uther] Dispel Magic
-}
-
-STRING 923
-// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 928
@@ -2168,12 +2024,6 @@ STRING 1077
 // Abilities: A00S ([Test] Autocast), Ubertip (Tooltip - Normal - Extended)
 {
 Spell blank that is automatically applied to the nearest target
-}
-
-STRING 1090
-// Abilities: A00T ([Uther] Defend), Name (Name)
-{
-[Uther] Defend
 }
 
 STRING 1093
@@ -4774,18 +4624,6 @@ STRING 1732
 Upgrade to Holy Tower
 }
 
-STRING 1733
-// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 1734
-// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
 STRING 1735
 // Units: h02L (Abbey), Name (Name)
 {
@@ -4832,5 +4670,719 @@ STRING 1743
 // Upgrades: R002 (Control Magic), Name (Name)
 {
 Grace of the Ancestors
+}
+
+STRING 1747
+// Abilities: A008 ([Uther] Mass Resurrection), Name (Name)
+{
+[Uther] Mass Resurrection
+}
+
+STRING 1748
+// Abilities: A008 ([Uther] Mass Resurrection), Researchtip (Tooltip - Learn)
+{
+Learn Mass Resurrection
+}
+
+STRING 1749
+// Abilities: A008 ([Uther] Mass Resurrection), Tip (Tooltip - Normal)
+{
+Mass Resurrection
+}
+
+STRING 1750
+// Abilities: A008 ([Uther] Mass Resurrection), Researchubertip (Tooltip - Learn - Extended)
+{
+Brings back to life the corpses of <A008,DataA1> friendly nearby units.
+}
+
+STRING 1751
+// Abilities: A008 ([Uther] Mass Resurrection), Ubertip (Tooltip - Normal - Extended)
+{
+Brings back to life the corpses of <A008,DataA1> friendly nearby units.
+}
+
+STRING 1752
+// Units: H02D (Paladin), Tip (Tooltip - Basic)
+{
+Summon Uther
+}
+
+STRING 1753
+// Units: H02D (Paladin), Awakentip (Tooltip - Awaken)
+{
+Revive Uther
+}
+
+STRING 1754
+// Units: H02D (Paladin), Propernames (Proper Names)
+{
+Uther the Lightbringer
+}
+
+STRING 1755
+// Abilities: A00Q ([Uther] Divine Supervision), Name (Name)
+{
+[Uther] Divine Supervision
+}
+
+STRING 1756
+// Abilities: A00Q ([Uther] Divine Supervision), Tip (Tooltip - Normal)
+{
+Divine Supervision - [|cffffcc00Level 1|r]
+}
+
+STRING 1757
+// Abilities: A00Q ([Uther] Divine Supervision), Researchtip (Tooltip - Learn)
+{
+Learn Divine Supervision - [|cffffcc00Level %d|r]
+}
+
+STRING 1758
+// Abilities: A00Q ([Uther] Divine Supervision), Researchubertip (Tooltip - Learn - Extended)
+{
+When Divine Intervention is activated, the unit is healed. |n|n|cffffcc00Level 1|r - Heals for 30% hit points. |n|cffffcc00Level 2|r - Heals for 40% hit points. |n|cffffcc00Level 3|r - Heals for 50% hit points. 
+}
+
+STRING 1759
+// Abilities: A00Q ([Uther] Divine Supervision), Tip (Tooltip - Normal)
+{
+Divine Supervision - [|cffffcc00Level 2|r]
+}
+
+STRING 1760
+// Abilities: A00Q ([Uther] Divine Supervision), Tip (Tooltip - Normal)
+{
+Divine Supervision - [|cffffcc00Level 3|r]
+}
+
+STRING 1761
+// Abilities: A00Q ([Uther] Divine Supervision), Ubertip (Tooltip - Normal - Extended)
+{
+When Divine Intervention is activated, the unit is healed 30% hit points
+}
+
+STRING 1762
+// Abilities: A00Q ([Uther] Divine Supervision), Ubertip (Tooltip - Normal - Extended)
+{
+When Divine Intervention is activated, the unit is healed 40% hit points
+}
+
+STRING 1763
+// Abilities: A00Q ([Uther] Divine Supervision), Ubertip (Tooltip - Normal - Extended)
+{
+When Divine Intervention is activated, the unit is healed 50% hit points
+}
+
+STRING 1764
+// Units: H02D (Paladin), Revivetip (Tooltip - Revive)
+{
+Revive Uther
+}
+
+STRING 1765
+// Units: h005 (Shieldbearer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #foot
+|R
+Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1766
+// Units: h00A (Cathedral), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#townhall #food #storage #T1
+|R
+Primary structure, used to train Peasants and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
+}
+
+STRING 1767
+// Units: h00I (Diocese), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#townhall #food #storage #T2
+|R
+Upgrade to Keep to enable the production of additional types of structures and units.
+}
+
+STRING 1768
+// Units: h01H (Parish), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#townhall #food #storage #T3
+|R
+Upgrade to Castle to enable the production of additional types of structures and units.
+}
+
+STRING 1769
+// Units: h01P (Garrison), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Primary troop production building. Trains Footmen, Riflemen and Knights. |nAlso contains the Defend, Long Rifles, and Animal War Training upgrades.
+}
+
+STRING 1770
+// Units: h02F (Monument of Light), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food
+|R
+Provides food, which increases the maximum number of units that can be trained.
+}
+
+STRING 1771
+// Units: h00W (Knight-Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #foot
+|R
+Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 1772
+// Units: h00J (Cleric), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support #foot
+|R
+Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1773
+// Units: h00K (Rifleman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #foot
+|R
+Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1774
+// Units: h00N (Gryphon Rider), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Powerful flying creature, mounted by a Dwarven hammer-thrower. Can learn Animal War Training, and the Storm Hammers ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1775
+// Units: h00O (Pilgrim), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder #foot
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 1776
+// Units: h00L (Mortar Team), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege #foot
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 1777
+// Units: h000 (Templar), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support #foot
+|R
+Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1778
+// Units: h003 (Lumber Mill), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for Lumber Harvesting and Masonry.
+}
+
+STRING 1779
+// Units: H00B (Light's Hope Chapel), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes #mechanics
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 1780
+// Units: h009 (War Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege #foot
+|R
+Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
+}
+
+STRING 1781
+// Units: h005 (Shieldbearer), Name (Name)
+{
+Shieldbearer
+}
+
+STRING 1782
+// Units: h02L (Abbey), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrade
+|R
+Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
+}
+
+STRING 1783
+// Units: h02N (Aviary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Trains Gryphon Riders, and Dragonhawk Riders. |nAlso contains the Storm Hammers and Cloud upgrades.
+}
+
+STRING 1784
+// Units: h02O (Scout Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, an Arcane Tower, or a Cannon Tower. Can learn the Magic Sentry ability.
+}
+
+STRING 1785
+// Units: h02P (Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 1786
+// Units: h02Q (Cannon Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 1787
+// Units: h00C (Holy Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
+}
+
+STRING 1788
+// Units: h00D (Library), Name (Name)
+{
+Library
+}
+
+STRING 1789
+// Units: h00D (Library), Tip (Tooltip - Basic)
+{
+Build Library
+}
+
+STRING 1790
+// Units: h00D (Library), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade
+|R
+Contains upgrades for improved armor, weaponry and gunpowder.
+}
+
+STRING 1791
+// Units: h00E (Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Produces Siege Engines, Flying Machines, and Mortar Teams. |nAlso contains the Flare, Fragmentation Shards, Barrage, Flying Machine Bombs, and Flak Cannons upgrades.
+}
+
+STRING 1792
+// Abilities: A00T ([Uther] Mastery Defend), Ubertip (Tooltip - Normal - Extended)
+{
+Activate to take only <A00T,DataA1,%>% of the damage from Piercing attacks. While Defend is active, movement is reduced by <A00T,DataC1,%>% of normal speed.
+}
+
+STRING 1793
+// Abilities: A00T ([Uther] Mastery Defend), Name (Name)
+{
+[Uther] Mastery Defend
+}
+
+STRING 1794
+// Abilities: A00T ([Uther] Mastery Defend), Tip (Tooltip - Normal)
+{
+Mastery Defend
+}
+
+STRING 1795
+// Abilities: A00T ([Uther] Mastery Defend), Untip (Tooltip - Turn Off)
+{
+Stop Mastery Defend
+}
+
+STRING 1796
+// Abilities: A000 ([Uther] Far Sight), Name (Name)
+{
+[Uther] Far Sight
+}
+
+STRING 1797
+// Abilities: A000 ([Uther] Far Sight), Tip (Tooltip - Normal)
+{
+Far Sight
+}
+
+STRING 1798
+// Abilities: A000 ([Uther] Far Sight), Ubertip (Tooltip - Normal - Extended)
+{
+Reveals the area of the map that it is cast upon for <A000,Dur1> seconds. Also reveals invisible units.
+}
+
+STRING 1801
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Develop a code of the Order
+}
+
+STRING 1802
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1803
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1804
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Develop a code of the Order
+}
+
+STRING 1805
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1806
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1807
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 1. What is Light?
+|R
+Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1808
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 2. Paths of Serving the Light
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1809
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 3. Sacred Duty
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1810
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect1 (Effect 1)
+{
+rarm
+}
+
+STRING 1811
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), class (Class)
+{
+caster
+}
+
+STRING 1812
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect1 (Effect 1)
+{
+rmnr
+}
+
+STRING 1813
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect2 (Effect 2)
+{
+rmnx
+}
+
+STRING 1814
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+{
+[Uther] (Icon)
+}
+
+STRING 1816
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+{
+[Uther] (Attack)
+}
+
+STRING 1818
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1819
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1820
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1821
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Expand the Order's Codex
+}
+
+STRING 1822
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 1. What is Light?
+|R
+Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1823
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 2. Paths of Serving the Light
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1824
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 3. Sacred Duty
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1825
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+{
+[Uther] (Armor)
+}
+
+STRING 1829
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Develop a code of the Order
+}
+
+STRING 1832
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 1. What is Light?
+|R
+Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1833
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 2. Paths of Serving the Light
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1834
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 3. Sacred Duty
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1835
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+{
+[Uther] (Mage)
+}
+
+STRING 1842
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 1. What is Light?
+|R
+Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1843
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 2. Paths of Serving the Light
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1844
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+|cFF81B4FFChapter 3. Sacred Duty
+|R
+Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
+}
+
+STRING 1856
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Develop the Order's Codex
+}
+
+STRING 1858
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), class (Class)
+{
+armor
+}
+
+STRING 1859
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1860
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1861
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1862
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1863
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1864
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1865
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1866
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1867
+// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1868
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1869
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1870
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Order's Codex
+}
+
+STRING 1871
+// Units: h005 (Shieldbearer), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1872
+// Units: h005 (Shieldbearer), Tip (Tooltip - Basic)
+{
+Shieldbearer
+}
+
+STRING 1873
+// Units: h00W (Knight-Paladin), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1874
+// Units: h00J (Cleric), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1875
+// Units: h00K (Rifleman), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1876
+// Units: h00N (Gryphon Rider), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1877
+// Units: h00L (Mortar Team), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1878
+// Units: h000 (Templar), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1879
+// Units: h009 (War Wagon), Casterupgradename (Caster Upgrade Names)
+{
+Squire, Knight, Crusader
+}
+
+STRING 1880
+// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect3 (Effect 3)
+{
+rhpx
 }
 

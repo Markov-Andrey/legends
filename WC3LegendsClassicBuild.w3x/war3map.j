@@ -247,6 +247,7 @@ globals
     trigger                 gg_trg_EnemyHeroAddItem    = null
     unit                    gg_unit_H004_0013          = null
     trigger                 gg_trg_DeadEnemyHero       = null
+    trigger                 gg_trg_UtherOrderCodex     = null
 
     // Random Groups
     integer array gg_rg_000
@@ -666,6 +667,17 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p = Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u = BlzCreateUnitWithSkin( p, 'h00D', 0.0, -192.0, 270.000, 'h00D' )
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p = Player(0)
     local unit u
@@ -674,6 +686,14 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u = BlzCreateUnitWithSkin( p, 'h001', 6216.4, -3390.4, 243.827, 'h001' )
+    set u = BlzCreateUnitWithSkin( p, 'h005', 315.2, -295.3, 238.097, 'h005' )
+    set u = BlzCreateUnitWithSkin( p, 'h00W', 534.7, -330.9, 242.545, 'h00W' )
+    set u = BlzCreateUnitWithSkin( p, 'h00K', 335.4, -89.5, 245.361, 'h00K' )
+    set u = BlzCreateUnitWithSkin( p, 'h00L', 583.7, -106.7, 246.231, 'h00L' )
+    set u = BlzCreateUnitWithSkin( p, 'h00N', 229.3, 12.7, 251.417, 'h00N' )
+    set u = BlzCreateUnitWithSkin( p, 'h00J', 457.2, 10.1, 246.744, 'h00J' )
+    set u = BlzCreateUnitWithSkin( p, 'h000', 809.4, -93.8, 256.150, 'h000' )
+    set u = BlzCreateUnitWithSkin( p, 'h009', 925.8, -282.7, 244.895, 'h009' )
 endfunction
 
 //===========================================================================
@@ -1025,6 +1045,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0(  )
     call CreateBuildingsForPlayer4(  )
     call CreateBuildingsForPlayer5(  )
 endfunction
@@ -3477,6 +3498,7 @@ function Trig_UtherIni_Actions takes nothing returns nothing
     call EnableTrigger( gg_trg_UtherDivineShield )
     call EnableTrigger( gg_trg_UtherChampions )
     call EnableTrigger( gg_trg_UtherChampionsDead )
+    call EnableTrigger( gg_trg_UtherOrderCodex )
 endfunction
 
 //===========================================================================
@@ -3488,7 +3510,7 @@ endfunction
 //===========================================================================
 // Trigger: UtherDivineShield
 //===========================================================================
-function Trig_UtherDivineShield_Func001Func007C takes nothing returns boolean
+function Trig_UtherDivineShield_Func001Func008C takes nothing returns boolean
     if ( ( GetOwningPlayer(GetAttackedUnitBJ()) == Player(0) ) ) then
         return true
     endif
@@ -3517,7 +3539,10 @@ function Trig_UtherDivineShield_Func001C takes nothing returns boolean
     if ( not ( IsUnitIllusionBJ(GetAttackedUnitBJ()) == false ) ) then
         return false
     endif
-    if ( not Trig_UtherDivineShield_Func001Func007C() ) then
+    if ( not ( IsUnitType(GetAttackedUnitBJ(), UNIT_TYPE_UNDEAD) == false ) ) then
+        return false
+    endif
+    if ( not Trig_UtherDivineShield_Func001Func008C() ) then
         return false
     endif
     return true
@@ -3525,6 +3550,27 @@ endfunction
 
 function Trig_UtherDivineShield_Conditions takes nothing returns boolean
     if ( not Trig_UtherDivineShield_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherDivineShield_Func002Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A00Q', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetAttackedUnitBJ()), 'H02D'))) == 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherDivineShield_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A00Q', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetAttackedUnitBJ()), 'H02D'))) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherDivineShield_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A00Q', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetAttackedUnitBJ()), 'H02D'))) == 1 ) ) then
         return false
     endif
     return true
@@ -3539,13 +3585,24 @@ endfunction
 
 function Trig_UtherDivineShield_Actions takes nothing returns nothing
     if ( Trig_UtherDivineShield_Func002C() ) then
+        if ( Trig_UtherDivineShield_Func002Func001C() ) then
+            call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 30.00 )
+        else
+            if ( Trig_UtherDivineShield_Func002Func001Func001C() ) then
+                call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 40.00 )
+            else
+                if ( Trig_UtherDivineShield_Func002Func001Func001Func001C() ) then
+                    call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 50.00 )
+                else
+                endif
+            endif
+        endif
         call SetUnitInvulnerable( GetAttackedUnitBJ(), true )
         call UnitAddAbilityBJ( 'A001', GetAttackedUnitBJ() )
         call TriggerSleepAction( 6.00 )
         call SetUnitInvulnerable( GetAttackedUnitBJ(), false )
         call UnitRemoveAbilityBJ( 'A001', GetAttackedUnitBJ() )
         call UnitAddAbilityBJ( 'A002', GetAttackedUnitBJ() )
-        call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 30.00 )
         call TriggerSleepAction( 240.00 )
         call UnitRemoveAbilityBJ( 'A002', GetAttackedUnitBJ() )
     else
@@ -3666,6 +3723,33 @@ function InitTrig_UtherChampionsDead takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherChampionsDead, EVENT_PLAYER_UNIT_DEATH )
     call TriggerAddCondition( gg_trg_UtherChampionsDead, Condition( function Trig_UtherChampionsDead_Conditions ) )
     call TriggerAddAction( gg_trg_UtherChampionsDead, function Trig_UtherChampionsDead_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: UtherOrderCodex
+//
+// A crutch for visual display of upgrades on a unit
+//===========================================================================
+function Trig_UtherOrderCodex_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R001' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherOrderCodex_Actions takes nothing returns nothing
+    call SetPlayerTechResearchedSwap( 'R003', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()) )
+    call SetPlayerTechResearchedSwap( 'R009', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()) )
+    call SetPlayerTechResearchedSwap( 'R00T', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()) )
+endfunction
+
+//===========================================================================
+function InitTrig_UtherOrderCodex takes nothing returns nothing
+    set gg_trg_UtherOrderCodex = CreateTrigger(  )
+    call DisableTrigger( gg_trg_UtherOrderCodex )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherOrderCodex, EVENT_PLAYER_UNIT_RESEARCH_FINISH )
+    call TriggerAddCondition( gg_trg_UtherOrderCodex, Condition( function Trig_UtherOrderCodex_Conditions ) )
+    call TriggerAddAction( gg_trg_UtherOrderCodex, function Trig_UtherOrderCodex_Actions )
 endfunction
 
 //===========================================================================
@@ -8433,6 +8517,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherDivineShield(  )
     call InitTrig_UtherChampions(  )
     call InitTrig_UtherChampionsDead(  )
+    call InitTrig_UtherOrderCodex(  )
     call InitTrig_PlayerCount(  )
     call InitTrig_SetDifficulty(  )
     call InitTrig_SetAIRace(  )
