@@ -142,6 +142,7 @@ globals
     trigger                 gg_trg_StartCameraP1       = null
     trigger                 gg_trg_StartCameraP2       = null
     trigger                 gg_trg_StartCameraReset    = null
+    trigger                 gg_trg_LimitUnits          = null
     trigger                 gg_trg_ChooseFirst         = null
     trigger                 gg_trg_UnSelect            = null
     trigger                 gg_trg_PreviewArthas       = null
@@ -172,6 +173,7 @@ globals
     trigger                 gg_trg_ArthasGhoulEffect   = null
     trigger                 gg_trg_ArthasPlagueNecropolis = null
     trigger                 gg_trg_ArthasSacrifice     = null
+    trigger                 gg_trg_UtherIni            = null
     trigger                 gg_trg_UtherDivineShield   = null
     trigger                 gg_trg_UtherChampions      = null
     trigger                 gg_trg_UtherChampionsDead  = null
@@ -244,8 +246,7 @@ globals
     trigger                 gg_trg_EnemyHero           = null
     trigger                 gg_trg_EnemyHeroAddItem    = null
     unit                    gg_unit_H004_0013          = null
-    trigger                 gg_trg_LimitUnits          = null
-    trigger                 gg_trg_UtherIni            = null
+    trigger                 gg_trg_DeadEnemyHero       = null
 
     // Random Groups
     integer array gg_rg_000
@@ -5649,7 +5650,7 @@ endfunction
 function Trig_MainQuest_Actions takes nothing returns nothing
     call ConditionalTriggerExecute( gg_trg_NPCGreetings )
     set udg_MaxCountDefeat = 5
-    call CreateQuestBJ( bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_903", "TRIGSTR_904", "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp" )
+    call CreateQuestBJ( bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_903", "TRIGSTR_904", "Maps/Alterac/BTNBanner_Alterac_Black.blp" )
     call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_906" )
     call CreateDefeatConditionBJ( ( ( "|cffff0000Defeat:|r Skip over " + I2S(udg_MaxCountDefeat) ) + " caravan wagons" ) )
 endfunction
@@ -6825,6 +6826,12 @@ function Trig_CreateHero_Actions takes nothing returns nothing
             endif
         endif
     endif
+    call ReplaceUnitBJ( GetLastCreatedUnit(), GetUnitTypeId(GetLastCreatedUnit()), bj_UNIT_STATE_METHOD_DEFAULTS )
+    // Console Log
+    set udg_ConsoleTrigger = "CreateHero"
+    set udg_ConsoleMessage = UnitId2StringBJ(GetUnitTypeId(GetLastCreatedUnit()))
+    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    //  
 endfunction
 
 //===========================================================================
@@ -7361,6 +7368,55 @@ endfunction
 function InitTrig_CreateSquadEnemy4 takes nothing returns nothing
     set gg_trg_CreateSquadEnemy4 = CreateTrigger(  )
     call TriggerAddAction( gg_trg_CreateSquadEnemy4, function Trig_CreateSquadEnemy4_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: DeadEnemyHero
+//
+// Fix bug Dead Enemy Hero after Replace Add Hero [AI]
+//===========================================================================
+function Trig_DeadEnemyHero_Func004Func003C takes nothing returns boolean
+    if ( ( GetOwningPlayer(GetDyingUnit()) == Player(4) ) ) then
+        return true
+    endif
+    if ( ( GetOwningPlayer(GetDyingUnit()) == Player(5) ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_DeadEnemyHero_Func004C takes nothing returns boolean
+    if ( not ( IsUnitType(GetDyingUnit(), UNIT_TYPE_SAPPER) == false ) ) then
+        return false
+    endif
+    if ( not ( IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true ) ) then
+        return false
+    endif
+    if ( not Trig_DeadEnemyHero_Func004Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_DeadEnemyHero_Conditions takes nothing returns boolean
+    if ( not Trig_DeadEnemyHero_Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_DeadEnemyHero_Actions takes nothing returns nothing
+    call ReplaceUnitBJ( GetDyingUnit(), GetUnitTypeId(GetDyingUnit()), bj_UNIT_STATE_METHOD_DEFAULTS )
+    call UnitAddTypeBJ( UNIT_TYPE_SAPPER, GetLastReplacedUnitBJ() )
+    call KillUnit( GetLastReplacedUnitBJ() )
+endfunction
+
+//===========================================================================
+function InitTrig_DeadEnemyHero takes nothing returns nothing
+    set gg_trg_DeadEnemyHero = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_DeadEnemyHero, EVENT_PLAYER_UNIT_DEATH )
+    call TriggerAddCondition( gg_trg_DeadEnemyHero, Condition( function Trig_DeadEnemyHero_Conditions ) )
+    call TriggerAddAction( gg_trg_DeadEnemyHero, function Trig_DeadEnemyHero_Actions )
 endfunction
 
 //===========================================================================
@@ -8426,6 +8482,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_CreateSquadEnemy2(  )
     call InitTrig_CreateSquadEnemy3(  )
     call InitTrig_CreateSquadEnemy4(  )
+    call InitTrig_DeadEnemyHero(  )
     call InitTrig_WaveTimer(  )
     call InitTrig_Wave1(  )
     call InitTrig_Wave2(  )
