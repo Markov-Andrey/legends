@@ -72,7 +72,6 @@ integer array udg_CurrentZone2
 player udg_PlayerArthas= null
 integer udg_ArthasReforgeSoulCost= 0
 unit udg_Arthas= null
-integer udg_AbominationSize= 0
 
     // Generated
 rect gg_rct_StartRegion= null
@@ -400,7 +399,6 @@ function InitGlobals takes nothing returns nothing
     endloop
 
     set udg_ArthasReforgeSoulCost=0
-    set udg_AbominationSize=0
 endfunction
 
 //***************************************************************************
@@ -1154,82 +1152,48 @@ endfunction
 // Trigger: ChooseClassicRace
 //===========================================================================
 function Trig_ChooseClassicRace_Func002C takes nothing returns boolean
-    if ( ( GetSpellAbilityId() == 'A00K' ) ) then
-        return true
-    endif
-    if ( ( GetSpellAbilityId() == 'A00L' ) ) then
-        return true
-    endif
-    if ( ( GetSpellAbilityId() == 'A00M' ) ) then
-        return true
-    endif
-    if ( ( GetSpellAbilityId() == 'A00N' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ChooseClassicRace_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseClassicRace_Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChooseClassicRace_Func001Func001Func001Func001C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A00N' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChooseClassicRace_Func001Func001Func001C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A00M' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChooseClassicRace_Func001Func001C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A00L' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChooseClassicRace_Func001C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A00K' ) ) then
-        return false
-    endif
-    return true
+    local integer array types
+    local integer i= 0
+    local boolean bool= false
+    
+    set types[0]='A00K'
+    set types[1]='A00L'
+    set types[2]='A00M'
+    set types[3]='A00N'
+    
+    loop
+        exitwhen i > 3
+        if ( GetSpellAbilityId() == types[i] ) then
+            set bool=true
+            exitwhen i > 3
+        endif
+        set i=i + 1
+    endloop
+    
+    return bool
 endfunction
 
 function Trig_ChooseClassicRace_Actions takes nothing returns nothing
-    if ( Trig_ChooseClassicRace_Func001C() ) then
+    local integer abilityId= GetSpellAbilityId()
+    
+    if ( abilityId == 'A00K' ) then
         call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-    else
-        if ( Trig_ChooseClassicRace_Func001Func001C() ) then
-            call MeleeStartingUnitsForPlayer(RACE_ORC, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-        else
-            if ( Trig_ChooseClassicRace_Func001Func001Func001C() ) then
-                call MeleeStartingUnitsForPlayer(RACE_NIGHTELF, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-            else
-                if ( Trig_ChooseClassicRace_Func001Func001Func001Func001C() ) then
-                    call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-                else
-                endif
-            endif
-        endif
+    elseif ( abilityId == 'A00L' ) then
+        call MeleeStartingUnitsForPlayer(RACE_ORC, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
+    elseif ( abilityId == 'A00M' ) then
+        call MeleeStartingUnitsForPlayer(RACE_NIGHTELF, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
+    elseif ( abilityId == 'A00N' ) then
+        call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
     endif
+    
     call RemoveUnit(GetSpellAbilityUnit())
     call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
 
-//===========================================================================
 function InitTrig_ChooseClassicRace takes nothing returns nothing
     set gg_trg_ChooseClassicRace=CreateTrigger()
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseClassicRace, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_ChooseClassicRace, Condition(function Trig_ChooseClassicRace_Conditions))
+    call TriggerAddCondition(gg_trg_ChooseClassicRace, Condition(function Trig_ChooseClassicRace_Func002C))
     call TriggerAddAction(gg_trg_ChooseClassicRace, function Trig_ChooseClassicRace_Actions)
 endfunction
 
@@ -1266,10 +1230,9 @@ function Trig_HeroesClassicTest takes nothing returns nothing
         endif
         set i=i + 1
     endloop
-
-    set i=0
     
     if bool then
+        set i=0
         loop
             exitwhen i >= 16
             call SetPlayerTechMaxAllowedSwap(types[i], 0, GetOwningPlayer(GetTrainedUnit()))
@@ -1675,25 +1638,17 @@ endfunction
 //===========================================================================
 // Trigger: Iseedeadpeople
 //===========================================================================
-function Trig_Iseedeadpeople_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Iseedeadpeople_Actions takes nothing returns nothing
-    call CreateFogModifierRectBJ(true, Player(0), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
-    call CreateFogModifierRectBJ(true, Player(1), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
-endfunction
-
-//===========================================================================
 function InitTrig_Iseedeadpeople takes nothing returns nothing
     set gg_trg_Iseedeadpeople=CreateTrigger()
+    
     call TriggerRegisterTimerEventSingle(gg_trg_Iseedeadpeople, 0.01)
-    call TriggerAddCondition(gg_trg_Iseedeadpeople, Condition(function Trig_Iseedeadpeople_Conditions))
-    call TriggerAddAction(gg_trg_Iseedeadpeople, function Trig_Iseedeadpeople_Actions)
+    
+    if ( udg_isTestVersion == true ) then
+        call CreateFogModifierRectBJ(true, Player(0), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+        call CreateFogModifierRectBJ(true, Player(1), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+    endif
 endfunction
+
 
 //===========================================================================
 // Trigger: MultiboardStart
@@ -1831,7 +1786,7 @@ endfunction
 function Trig_LimitUnits_Func001A takes nothing returns nothing
     // Arthas
     call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('U000', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('u01C', 1, GetEnumPlayer())
     // Uther
     call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
@@ -2153,6 +2108,7 @@ function Trig_ArthasIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_ArthasAbominationUnholyDead)
     call EnableTrigger(gg_trg_ArthasBloodFuel)
     call EnableTrigger(gg_trg_ArthasFrostmourne)
+    // НУЖНО УМНОЖАТЬ УРОВЕНЬ ПРОКАЧИВАЕМОГО МОБА НА 10! ТАКИМ ОБРАЗОМ ЦЕНА БУДЕТ СООТВЕТСТВОВАТЬ КРУТИЗНЕ ЮНИТА
     set udg_ArthasReforgeSoulCost=20
     call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 endfunction
@@ -3017,35 +2973,24 @@ endfunction
 // Trigger: ArthasSurfeit
 //===========================================================================
 function Trig_ArthasSurfeit_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A02J' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ArthasSurfeit_Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit()) < 6 ) ) then
-        return false
-    endif
-    return true
+    return ( GetSpellAbilityId() == 'A02J' )
 endfunction
 
 function Trig_ArthasSurfeit_Actions takes nothing returns nothing
-    if ( Trig_ArthasSurfeit_Func001C() ) then
-        set udg_AbominationSize=0
-        call SetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit(), ( GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit()) + 1 ))
-        call BlzSetUnitMaxHP(GetSpellAbilityUnit(), ( BlzGetUnitMaxHP(GetSpellAbilityUnit()) + 100 ))
-        set udg_AbominationSize=GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit())
-        set udg_AbominationSize=( 100 + ( udg_AbominationSize * 7 ) )
-        call SetUnitScalePercent(GetSpellAbilityUnit(), I2R(udg_AbominationSize), I2R(udg_AbominationSize), I2R(udg_AbominationSize))
-    else
+    local integer AbominationSize= 0
+    local unit caster= GetSpellAbilityUnit()
+    local integer level= GetUnitAbilityLevelSwapped('A02L', caster)
+    
+    if ( level < 6 ) then
+        call SetUnitAbilityLevelSwapped('A02L', caster, level + 1)
+        call BlzSetUnitMaxHP(caster, BlzGetUnitMaxHP(caster) + 100)
+        set AbominationSize=100 + ( level + 1 ) * 7
+        call SetUnitScalePercent(caster, I2R(AbominationSize), I2R(AbominationSize), I2R(AbominationSize))
     endif
 endfunction
 
-//===========================================================================
 function InitTrig_ArthasSurfeit takes nothing returns nothing
     set gg_trg_ArthasSurfeit=CreateTrigger()
-    call DisableTrigger(gg_trg_ArthasSurfeit)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasSurfeit, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_ArthasSurfeit, Condition(function Trig_ArthasSurfeit_Conditions))
     call TriggerAddAction(gg_trg_ArthasSurfeit, function Trig_ArthasSurfeit_Actions)
@@ -3413,18 +3358,15 @@ endfunction
 //===========================================================================
 // Trigger: UtherIni
 //===========================================================================
-function Trig_UtherIni_Actions takes nothing returns nothing
+function InitTrig_UtherIni takes nothing returns nothing
+    set gg_trg_UtherIni=CreateTrigger()
+    
     call EnableTrigger(gg_trg_UtherDivineShield)
     call EnableTrigger(gg_trg_UtherChampions)
     call EnableTrigger(gg_trg_UtherChampionsDead)
     call EnableTrigger(gg_trg_UtherOrderCodex)
 endfunction
 
-//===========================================================================
-function InitTrig_UtherIni takes nothing returns nothing
-    set gg_trg_UtherIni=CreateTrigger()
-    call TriggerAddAction(gg_trg_UtherIni, function Trig_UtherIni_Actions)
-endfunction
 
 //===========================================================================
 // Trigger: UtherDivineShield
