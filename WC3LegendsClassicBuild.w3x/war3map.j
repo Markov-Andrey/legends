@@ -57,7 +57,6 @@ real udg_WaveRandomWay= 0
 timer array udg_TimerEnemyWave
 real array udg_TimerMinEnemyWave
 real udg_EnemyRandomWay= 0
-real udg_RandHeroes= 0
 timerdialog udg_TimerEnemyInterface= null
 group udg_UnitGroup31= null
 integer udg_CountGroup3= 0
@@ -365,7 +364,6 @@ function InitGlobals takes nothing returns nothing
     endloop
 
     set udg_EnemyRandomWay=0
-    set udg_RandHeroes=0
     set udg_UnitGroup31=CreateGroup()
     set udg_CountGroup3=0
     set i=0
@@ -1120,15 +1118,11 @@ endfunction
 // When the isTest variable is set to True, all system messages are displayed!
 // The isTest value is set manually.
 //===========================================================================
-function Trig_CurrentBuild_Actions takes nothing returns nothing
+function InitTrig_CurrentBuild takes nothing returns nothing
+    set gg_trg_CurrentBuild=CreateTrigger()
     set udg_isTestVersion=true
 endfunction
 
-//===========================================================================
-function InitTrig_CurrentBuild takes nothing returns nothing
-    set gg_trg_CurrentBuild=CreateTrigger()
-    call TriggerAddAction(gg_trg_CurrentBuild, function Trig_CurrentBuild_Actions)
-endfunction
 
 //===========================================================================
 // Trigger: ConsoleLog
@@ -1136,48 +1130,23 @@ endfunction
 // Calling a system message with the name of the called trigger
 // Checks the passed parameters, if they are not present - gives default values
 //===========================================================================
-function Trig_ConsoleLog_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ConsoleLog_Func003C takes nothing returns boolean
-    if ( not ( udg_ConsoleTrigger == "" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ConsoleLog_Func004C takes nothing returns boolean
-    if ( not ( udg_ConsoleMessage == "" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_ConsoleLog_Actions takes nothing returns nothing
-    // Redefining variables if they are empty
-    if ( Trig_ConsoleLog_Func003C() ) then
+    if ( udg_ConsoleTrigger == "" ) then
         set udg_ConsoleTrigger="ConsoleLog"
-    else
     endif
-    if ( Trig_ConsoleLog_Func004C() ) then
+    
+    if ( udg_ConsoleMessage == "" ) then
         set udg_ConsoleMessage="[Run]"
-    else
     endif
-    // Running a message
-    call DisplayTextToForce(GetPlayersAll(), ( ( "|cFF00C850<" + ( udg_ConsoleTrigger + ">|R " ) ) + udg_ConsoleMessage ))
-    // Clearing Variables
+
+    call DisplayTextToForce(GetPlayersAll(), "|cFF00C850<" + udg_ConsoleTrigger + ">|R " + udg_ConsoleMessage)
+    
     set udg_ConsoleMessage=""
     set udg_ConsoleTrigger=""
 endfunction
 
-//===========================================================================
 function InitTrig_ConsoleLog takes nothing returns nothing
     set gg_trg_ConsoleLog=CreateTrigger()
-    call TriggerAddCondition(gg_trg_ConsoleLog, Condition(function Trig_ConsoleLog_Conditions))
     call TriggerAddAction(gg_trg_ConsoleLog, function Trig_ConsoleLog_Actions)
 endfunction
 
@@ -1267,90 +1236,54 @@ endfunction
 //===========================================================================
 // Trigger: HeroesClassicTest
 //===========================================================================
-function Trig_HeroesClassicTest_Func017C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Hpal' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Hamg' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Hmkg' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Hblm' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Obla' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Ofar' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Otch' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Oshd' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Udea' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Ulic' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Udre' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Ucrl' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Ekee' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Emoo' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Edem' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'Ewar' ) ) then
-        return true
-    endif
-    return false
-endfunction
+function Trig_HeroesClassicTest takes nothing returns nothing
+    local integer array types
+    local integer i= 0
+    local boolean bool= false
 
-function Trig_HeroesClassicTest_Conditions takes nothing returns boolean
-    if ( not Trig_HeroesClassicTest_Func017C() ) then
-        return false
-    endif
-    return true
-endfunction
+    set types[0]='Hpal'
+    set types[1]='Hamg'
+    set types[2]='Hmkg'
+    set types[3]='Hblm'
+    set types[4]='Obla'
+    set types[5]='Ofar'
+    set types[6]='Otch'
+    set types[7]='Oshd'
+    set types[8]='Udea'
+    set types[9]='Ulic'
+    set types[10]='Udre'
+    set types[11]='Ucrl'
+    set types[12]='Ekee'
+    set types[13]='Emoo'
+    set types[14]='Edem'
+    set types[15]='Ewar'
+    
+    loop
+        exitwhen i >= 16
+        if ( GetUnitTypeId(GetTrainedUnit()) == types[i] ) then
+            set bool=true
+            exitwhen i >= 16
+        endif
+        set i=i + 1
+    endloop
 
-function Trig_HeroesClassicTest_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('Hpal', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Hamg', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Hmkg', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Hblm', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Obla', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Ofar', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Otch', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Oshd', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Udea', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Ulic', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Udre', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Ucrl', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Ekee', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Emoo', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Edem', 0, GetOwningPlayer(GetTrainedUnit()))
-    call SetPlayerTechMaxAllowedSwap('Ewar', 0, GetOwningPlayer(GetTrainedUnit()))
+    set i=0
+    
+    if bool then
+        loop
+            exitwhen i >= 16
+            call SetPlayerTechMaxAllowedSwap(types[i], 0, GetOwningPlayer(GetTrainedUnit()))
+        
+            set i=i + 1
+        endloop
+    endif
 endfunction
 
 //===========================================================================
 function InitTrig_HeroesClassicTest takes nothing returns nothing
     set gg_trg_HeroesClassicTest=CreateTrigger()
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HeroesClassicTest, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerAddCondition(gg_trg_HeroesClassicTest, Condition(function Trig_HeroesClassicTest_Conditions))
-    call TriggerAddAction(gg_trg_HeroesClassicTest, function Trig_HeroesClassicTest_Actions)
+    call TriggerAddAction(gg_trg_HeroesClassicTest, function Trig_HeroesClassicTest)
 endfunction
 
 //===========================================================================
@@ -6858,43 +6791,23 @@ endfunction
 //===========================================================================
 // Trigger: CreateHero
 //===========================================================================
-function Trig_CreateHero_Func004Func001Func001C takes nothing returns boolean
-    if ( not ( udg_RandHeroes <= 75.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateHero_Func004Func001C takes nothing returns boolean
-    if ( not ( udg_RandHeroes <= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateHero_Func004C takes nothing returns boolean
-    if ( not ( udg_RandHeroes <= 25.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_CreateHero_Actions takes nothing returns nothing
-    // Hero Create
+    local unit newHero
+    local real randValue
+
     call CreateNUnitsAtLoc(1, 'h008', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-    set udg_RandHeroes=GetRandomReal(0, 100.00)
-    if ( Trig_CreateHero_Func004C() ) then
-        call SetUnitManaBJ(GetLastCreatedUnit(), 1.00)
+    set newHero=GetLastCreatedUnit()
+    
+    set randValue=GetRandomReal(0, 100.00)
+    
+    if ( randValue <= 25.00 ) then
+        call SetUnitManaBJ(newHero, 1.00)
+    elseif ( randValue <= 50.00 ) then
+        call SetUnitManaBJ(newHero, 2.00)
+    elseif ( randValue <= 75.00 ) then
+        call SetUnitManaBJ(newHero, 3.00)
     else
-        if ( Trig_CreateHero_Func004Func001C() ) then
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-        else
-            if ( Trig_CreateHero_Func004Func001Func001C() ) then
-                call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            else
-                call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-            endif
-        endif
+        call SetUnitManaBJ(newHero, 4.00)
     endif
 endfunction
 
