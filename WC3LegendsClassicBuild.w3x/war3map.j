@@ -1,3 +1,247 @@
+globals
+    // User-defined
+unit udg_CurrentUnit= null
+integer udg_ArthasSouls= 0
+rect array udg_Way1
+rect array udg_Way2
+integer udg_Way1Count= 0
+integer udg_Way2Count= 0
+real udg_RacesRandom= 0
+integer udg_Time_Min= 0
+integer udg_Time_Sec= 0
+integer udg_CountGroup1= 0
+integer udg_SetRaces_Unit= 0
+integer udg_SetRaces_Building= 0
+integer udg_SetRaces_Hero= 0
+group udg_UnitGroup11= null
+group udg_UnitGroup12= null
+group udg_UnitGroup13= null
+group array udg_UnitGroupArray1
+group udg_UnitGroup14= null
+group udg_UnitGroup15= null
+integer udg_CurrentCountDefeat= 0
+integer array udg_SetRaces_Upgrade
+integer udg_MaxCountDefeat= 0
+race udg_SetRaces= null
+string udg_ConsoleMessage
+string udg_ConsoleTrigger
+boolean udg_isTestVersion= false
+timer array udg_TimerAIUpgrade
+real udg_PingWaitTime= 0
+real udg_PingTimer= 0
+rect udg_SetZone= null
+player udg_SetEnemy= null
+integer udg_CountGroup2= 0
+group array udg_UnitGroupArray2
+group udg_UnitGroup21= null
+group udg_UnitGroup22= null
+group udg_UnitGroup23= null
+group udg_UnitGroup24= null
+group udg_UnitGroup25= null
+string udg_NPCName
+real udg_NPCNumberRandom= 0
+string udg_NPCText
+real udg_NPCOptions= 0
+real udg_NPCCount= 0
+string udg_NPCColorText
+real udg_NPCTextDuration= 0
+unit udg_NPCUnit= null
+string array udg_NPCText_Options
+string array udg_NPCText_MissCaravan
+timer array udg_TimerWave
+real array udg_TimerMinWave
+real array udg_TimerMinAIUpg
+timerdialog udg_TimerWaveInterface= null
+timerdialog udg_TimerUpgInterface= null
+real udg_WaveRandomWay= 0
+timer array udg_TimerEnemyWave
+real array udg_TimerMinEnemyWave
+real udg_EnemyRandomWay= 0
+real udg_RandHeroes= 0
+timerdialog udg_TimerEnemyInterface= null
+group udg_UnitGroup31= null
+integer udg_CountGroup3= 0
+group array udg_UnitGroupArray3
+integer udg_WaveComplete= 0
+integer array udg_SetPlayerDifficulty
+integer udg_PlayerCount= 0
+integer udg_PlayerChoise= 0
+integer udg_SetDifficulty= 0
+integer udg_EnemyHeroLevel= 0
+integer array udg_CurrentZone1
+integer array udg_CurrentZone2
+player udg_PlayerArthas= null
+integer udg_ArthasReforgeSoulCost= 0
+unit udg_Arthas= null
+integer udg_AbominationSize= 0
+
+    // Generated
+rect gg_rct_StartRegion= null
+rect gg_rct_Way1_p2= null
+rect gg_rct_Way1_p1= null
+rect gg_rct_Way1_p3= null
+rect gg_rct_Way1_p4= null
+rect gg_rct_Way1_p5= null
+rect gg_rct_Way1_p6= null
+rect gg_rct_Way1_p7= null
+rect gg_rct_Way1_p0= null
+rect gg_rct_Way2_p0= null
+rect gg_rct_Way2_p1= null
+rect gg_rct_Way2_p2= null
+rect gg_rct_Way2_p3= null
+rect gg_rct_Way2_p4= null
+rect gg_rct_Way2_p5= null
+rect gg_rct_Way2_p6= null
+rect gg_rct_Way2_p7= null
+rect gg_rct_Way1_p8= null
+rect gg_rct_Way1_p9= null
+rect gg_rct_Way2_p8= null
+camerasetup gg_cam_Camera_001= null
+trigger gg_trg_CurrentBuild= null
+trigger gg_trg_ConsoleLog= null
+trigger gg_trg_ExampleConsole= null
+trigger gg_trg_ChooseClassicRace= null
+trigger gg_trg_HeroesClassicTest= null
+trigger gg_trg_TimerMinus= null
+trigger gg_trg_TestWaveTimer1= null
+trigger gg_trg_TestWaveTimer2= null
+trigger gg_trg_TestWaveTimer3= null
+trigger gg_trg_TestWaveTimer4= null
+trigger gg_trg_TestWaveTimer5= null
+trigger gg_trg_TestWaveTimer6= null
+trigger gg_trg_TestUpgTimer1= null
+trigger gg_trg_TestUpgTimer2= null
+trigger gg_trg_TestUpgTimer3= null
+trigger gg_trg_TestUpgTimer4= null
+trigger gg_trg_TestEnemyTimer1= null
+trigger gg_trg_TestEnemyTimer2= null
+trigger gg_trg_TestEnemyTimer3= null
+trigger gg_trg_TestEnemyTimer4= null
+trigger gg_trg_TestEnemyTimer5= null
+trigger gg_trg_Iseedeadpeople= null
+trigger gg_trg_MultiboardStart= null
+trigger gg_trg_MultiboardPeriodicInfo= null
+trigger gg_trg_StartResouces= null
+trigger gg_trg_StartVisiblity= null
+trigger gg_trg_StartCameraP1= null
+trigger gg_trg_StartCameraP2= null
+trigger gg_trg_StartCameraReset= null
+trigger gg_trg_LimitUnits= null
+trigger gg_trg_ChooseFirst= null
+trigger gg_trg_UnSelect= null
+trigger gg_trg_PreviewArthas= null
+trigger gg_trg_PreviewUther= null
+trigger gg_trg_ChooseArthas= null
+trigger gg_trg_ChooseUther= null
+trigger gg_trg_ArthasIni= null
+trigger gg_trg_ArthasNewRuneSecond= null
+trigger gg_trg_ArthasNewRuneThree= null
+trigger gg_trg_ArthasMaxRuneLevel= null
+trigger gg_trg_ArthasRunesUpdate= null
+trigger gg_trg_ArthasFrostmourne= null
+trigger gg_trg_ArthasSouls= null
+trigger gg_trg_ArthasHarvestSoulDead= null
+trigger gg_trg_ArthasHarvestSoul= null
+trigger gg_trg_ArthasDebugSoul= null
+trigger gg_trg_ArthasUnholySoulReforge= null
+trigger gg_trg_ArthasFrostSoulReforge= null
+trigger gg_trg_ArthasBloodSoulReforge= null
+trigger gg_trg_ArthasBloodFuel= null
+trigger gg_trg_ArthasAbominationUnholyDead= null
+trigger gg_trg_ArthasSurfeit= null
+trigger gg_trg_ArthasGlacialGusto= null
+trigger gg_trg_ArthasBloodFestAura= null
+trigger gg_trg_ArthasPlagueDeadCorpse= null
+trigger gg_trg_ArthasUnholyRune2and3= null
+trigger gg_trg_ArthasPlagueStoneForm= null
+trigger gg_trg_ArthasGhoulEffect= null
+trigger gg_trg_ArthasPlagueNecropolis= null
+trigger gg_trg_ArthasSacrifice= null
+trigger gg_trg_UtherIni= null
+trigger gg_trg_UtherDivineShield= null
+trigger gg_trg_UtherChampions= null
+trigger gg_trg_UtherChampionsDead= null
+trigger gg_trg_UtherOrderCodex= null
+trigger gg_trg_PlayerCount= null
+trigger gg_trg_SetDifficulty= null
+trigger gg_trg_SetAIRace= null
+trigger gg_trg_AddUnitBuildingHero= null
+trigger gg_trg_SetUpgradeList= null
+trigger gg_trg_SetUpgradeTimer= null
+trigger gg_trg_AddUpgradeT1= null
+trigger gg_trg_AddUpgradeT2= null
+trigger gg_trg_AddUpgradeT3= null
+trigger gg_trg_AddHeroAbility= null
+trigger gg_trg_AlliesEnemyAndNeutral= null
+trigger gg_trg_NPCInitialization= null
+trigger gg_trg_NPCGreetings= null
+trigger gg_trg_NPCMissCaravan= null
+trigger gg_trg_NPCNextWave= null
+trigger gg_trg_NPCEnemyWave= null
+trigger gg_trg_NPCLastWave= null
+trigger gg_trg_NPCCompleteWave= null
+trigger gg_trg_NPCWin= null
+trigger gg_trg_NPCDefeat= null
+trigger gg_trg_SetWayPoint= null
+trigger gg_trg_WayPingIni= null
+trigger gg_trg_Way1Ping= null
+trigger gg_trg_Way2Ping= null
+trigger gg_trg_WayMovement1= null
+trigger gg_trg_WayMovement2= null
+trigger gg_trg_IniZone= null
+trigger gg_trg_AlternateMovement= null
+trigger gg_trg_UnitGroupDead= null
+trigger gg_trg_MainQuest= null
+trigger gg_trg_WaveComplete= null
+trigger gg_trg_LastWaveComplete= null
+trigger gg_trg_DefeatCondition= null
+trigger gg_trg_SetGroupArray= null
+trigger gg_trg_UnitsInitializationWay1= null
+trigger gg_trg_UnitsInitializationWay2= null
+trigger gg_trg_UnitsInitializationWay3= null
+trigger gg_trg_GroupArrayReset= null
+trigger gg_trg_CreateSquad1= null
+trigger gg_trg_CreateSquad2= null
+trigger gg_trg_CreateSquad3= null
+trigger gg_trg_CreateSquad4= null
+trigger gg_trg_CreateSquad5= null
+trigger gg_trg_CreateSquad6= null
+trigger gg_trg_CreateSquad7= null
+trigger gg_trg_CreateSquad8= null
+trigger gg_trg_CreateHero= null
+trigger gg_trg_CreateSquadEnemy1= null
+trigger gg_trg_CreateSquadEnemy2= null
+trigger gg_trg_CreateSquadEnemy3= null
+trigger gg_trg_CreateSquadEnemy4= null
+trigger gg_trg_DeadEnemyHero= null
+trigger gg_trg_ExampleWaveSouth= null
+trigger gg_trg_ExampleWaveNorth= null
+trigger gg_trg_ExampleWaveBoth= null
+trigger gg_trg_WaveTimer= null
+trigger gg_trg_Wave1= null
+trigger gg_trg_Wave2= null
+trigger gg_trg_Wave3= null
+trigger gg_trg_Wave4= null
+trigger gg_trg_Wave5= null
+trigger gg_trg_EnemyTimer= null
+trigger gg_trg_EnemyRandomSpawn= null
+trigger gg_trg_EnemyWave1= null
+trigger gg_trg_EnemyWave2= null
+trigger gg_trg_EnemyWave3= null
+trigger gg_trg_EnemyWave4= null
+trigger gg_trg_EnemyHero= null
+trigger gg_trg_EnemyHeroAddItem= null
+unit gg_unit_H004_0013= null
+
+    // Random Groups
+integer array gg_rg_000
+
+
+//JASSHelper struct globals:
+
+endglobals
+
+
 //===========================================================================
 // 
 // Alterac's Justice
@@ -14,389 +258,151 @@
 //*
 //***************************************************************************
 
-globals
-    // User-defined
-    unit                    udg_CurrentUnit            = null
-    integer                 udg_ArthasSouls            = 0
-    rect array              udg_Way1
-    rect array              udg_Way2
-    integer                 udg_Way1Count              = 0
-    integer                 udg_Way2Count              = 0
-    real                    udg_RacesRandom            = 0
-    integer                 udg_Time_Min               = 0
-    integer                 udg_Time_Sec               = 0
-    integer                 udg_CountGroup1            = 0
-    integer                 udg_SetRaces_Unit          = 0
-    integer                 udg_SetRaces_Building      = 0
-    integer                 udg_SetRaces_Hero          = 0
-    group                   udg_UnitGroup11            = null
-    group                   udg_UnitGroup12            = null
-    group                   udg_UnitGroup13            = null
-    group array             udg_UnitGroupArray1
-    group                   udg_UnitGroup14            = null
-    group                   udg_UnitGroup15            = null
-    integer                 udg_CurrentCountDefeat     = 0
-    integer array           udg_SetRaces_Upgrade
-    integer                 udg_MaxCountDefeat         = 0
-    race                    udg_SetRaces               = null
-    string                  udg_ConsoleMessage
-    string                  udg_ConsoleTrigger
-    boolean                 udg_isTestVersion          = false
-    timer array             udg_TimerAIUpgrade
-    real                    udg_PingWaitTime           = 0
-    real                    udg_PingTimer              = 0
-    rect                    udg_SetZone                = null
-    player                  udg_SetEnemy               = null
-    integer                 udg_CountGroup2            = 0
-    group array             udg_UnitGroupArray2
-    group                   udg_UnitGroup21            = null
-    group                   udg_UnitGroup22            = null
-    group                   udg_UnitGroup23            = null
-    group                   udg_UnitGroup24            = null
-    group                   udg_UnitGroup25            = null
-    string                  udg_NPCName
-    real                    udg_NPCNumberRandom        = 0
-    string                  udg_NPCText
-    real                    udg_NPCOptions             = 0
-    real                    udg_NPCCount               = 0
-    string                  udg_NPCColorText
-    real                    udg_NPCTextDuration        = 0
-    unit                    udg_NPCUnit                = null
-    string array            udg_NPCText_Options
-    string array            udg_NPCText_MissCaravan
-    timer array             udg_TimerWave
-    real array              udg_TimerMinWave
-    real array              udg_TimerMinAIUpg
-    timerdialog             udg_TimerWaveInterface     = null
-    timerdialog             udg_TimerUpgInterface      = null
-    real                    udg_WaveRandomWay          = 0
-    timer array             udg_TimerEnemyWave
-    real array              udg_TimerMinEnemyWave
-    real                    udg_EnemyRandomWay         = 0
-    real                    udg_RandHeroes             = 0
-    timerdialog             udg_TimerEnemyInterface    = null
-    group                   udg_UnitGroup31            = null
-    integer                 udg_CountGroup3            = 0
-    group array             udg_UnitGroupArray3
-    integer                 udg_WaveComplete           = 0
-    integer array           udg_SetPlayerDifficulty
-    integer                 udg_PlayerCount            = 0
-    integer                 udg_PlayerChoise           = 0
-    integer                 udg_SetDifficulty          = 0
-    integer                 udg_EnemyHeroLevel         = 0
-    integer array           udg_CurrentZone1
-    integer array           udg_CurrentZone2
-    player                  udg_PlayerArthas           = null
-    integer                 udg_ArthasReforgeSoulCost  = 0
-    unit                    udg_Arthas                 = null
-    integer                 udg_AbominationSize        = 0
-
-    // Generated
-    rect                    gg_rct_StartRegion         = null
-    rect                    gg_rct_Way1_p2             = null
-    rect                    gg_rct_Way1_p1             = null
-    rect                    gg_rct_Way1_p3             = null
-    rect                    gg_rct_Way1_p4             = null
-    rect                    gg_rct_Way1_p5             = null
-    rect                    gg_rct_Way1_p6             = null
-    rect                    gg_rct_Way1_p7             = null
-    rect                    gg_rct_Way1_p0             = null
-    rect                    gg_rct_Way2_p0             = null
-    rect                    gg_rct_Way2_p1             = null
-    rect                    gg_rct_Way2_p2             = null
-    rect                    gg_rct_Way2_p3             = null
-    rect                    gg_rct_Way2_p4             = null
-    rect                    gg_rct_Way2_p5             = null
-    rect                    gg_rct_Way2_p6             = null
-    rect                    gg_rct_Way2_p7             = null
-    rect                    gg_rct_Way1_p8             = null
-    rect                    gg_rct_Way1_p9             = null
-    rect                    gg_rct_Way2_p8             = null
-    camerasetup             gg_cam_Camera_001          = null
-    trigger                 gg_trg_CurrentBuild        = null
-    trigger                 gg_trg_ConsoleLog          = null
-    trigger                 gg_trg_ExampleConsole      = null
-    trigger                 gg_trg_ChooseClassicRace   = null
-    trigger                 gg_trg_HeroesClassicTest   = null
-    trigger                 gg_trg_TimerMinus          = null
-    trigger                 gg_trg_TestWaveTimer1      = null
-    trigger                 gg_trg_TestWaveTimer2      = null
-    trigger                 gg_trg_TestWaveTimer3      = null
-    trigger                 gg_trg_TestWaveTimer4      = null
-    trigger                 gg_trg_TestWaveTimer5      = null
-    trigger                 gg_trg_TestWaveTimer6      = null
-    trigger                 gg_trg_TestUpgTimer1       = null
-    trigger                 gg_trg_TestUpgTimer2       = null
-    trigger                 gg_trg_TestUpgTimer3       = null
-    trigger                 gg_trg_TestUpgTimer4       = null
-    trigger                 gg_trg_TestEnemyTimer1     = null
-    trigger                 gg_trg_TestEnemyTimer2     = null
-    trigger                 gg_trg_TestEnemyTimer3     = null
-    trigger                 gg_trg_TestEnemyTimer4     = null
-    trigger                 gg_trg_TestEnemyTimer5     = null
-    trigger                 gg_trg_Iseedeadpeople      = null
-    trigger                 gg_trg_MultiboardStart     = null
-    trigger                 gg_trg_MultiboardPeriodicInfo = null
-    trigger                 gg_trg_StartResouces       = null
-    trigger                 gg_trg_StartVisiblity      = null
-    trigger                 gg_trg_StartCameraP1       = null
-    trigger                 gg_trg_StartCameraP2       = null
-    trigger                 gg_trg_StartCameraReset    = null
-    trigger                 gg_trg_LimitUnits          = null
-    trigger                 gg_trg_ChooseFirst         = null
-    trigger                 gg_trg_UnSelect            = null
-    trigger                 gg_trg_PreviewArthas       = null
-    trigger                 gg_trg_PreviewUther        = null
-    trigger                 gg_trg_ChooseArthas        = null
-    trigger                 gg_trg_ChooseUther         = null
-    trigger                 gg_trg_ArthasIni           = null
-    trigger                 gg_trg_ArthasNewRuneSecond = null
-    trigger                 gg_trg_ArthasNewRuneThree  = null
-    trigger                 gg_trg_ArthasMaxRuneLevel  = null
-    trigger                 gg_trg_ArthasRunesUpdate   = null
-    trigger                 gg_trg_ArthasFrostmourne   = null
-    trigger                 gg_trg_ArthasSouls         = null
-    trigger                 gg_trg_ArthasHarvestSoulDead = null
-    trigger                 gg_trg_ArthasHarvestSoul   = null
-    trigger                 gg_trg_ArthasDebugSoul     = null
-    trigger                 gg_trg_ArthasUnholySoulReforge = null
-    trigger                 gg_trg_ArthasFrostSoulReforge = null
-    trigger                 gg_trg_ArthasBloodSoulReforge = null
-    trigger                 gg_trg_ArthasBloodFuel     = null
-    trigger                 gg_trg_ArthasAbominationUnholyDead = null
-    trigger                 gg_trg_ArthasSurfeit       = null
-    trigger                 gg_trg_ArthasGlacialGusto  = null
-    trigger                 gg_trg_ArthasBloodFestAura = null
-    trigger                 gg_trg_ArthasPlagueDeadCorpse = null
-    trigger                 gg_trg_ArthasUnholyRune2and3 = null
-    trigger                 gg_trg_ArthasPlagueStoneForm = null
-    trigger                 gg_trg_ArthasGhoulEffect   = null
-    trigger                 gg_trg_ArthasPlagueNecropolis = null
-    trigger                 gg_trg_ArthasSacrifice     = null
-    trigger                 gg_trg_UtherIni            = null
-    trigger                 gg_trg_UtherDivineShield   = null
-    trigger                 gg_trg_UtherChampions      = null
-    trigger                 gg_trg_UtherChampionsDead  = null
-    trigger                 gg_trg_PlayerCount         = null
-    trigger                 gg_trg_SetDifficulty       = null
-    trigger                 gg_trg_SetAIRace           = null
-    trigger                 gg_trg_AddUnitBuildingHero = null
-    trigger                 gg_trg_SetUpgradeList      = null
-    trigger                 gg_trg_SetUpgradeTimer     = null
-    trigger                 gg_trg_AddUpgradeT1        = null
-    trigger                 gg_trg_AddUpgradeT2        = null
-    trigger                 gg_trg_AddUpgradeT3        = null
-    trigger                 gg_trg_AddHeroAbility      = null
-    trigger                 gg_trg_AlliesEnemyAndNeutral = null
-    trigger                 gg_trg_NPCInitialization   = null
-    trigger                 gg_trg_NPCGreetings        = null
-    trigger                 gg_trg_NPCMissCaravan      = null
-    trigger                 gg_trg_NPCNextWave         = null
-    trigger                 gg_trg_NPCEnemyWave        = null
-    trigger                 gg_trg_NPCLastWave         = null
-    trigger                 gg_trg_NPCCompleteWave     = null
-    trigger                 gg_trg_NPCWin              = null
-    trigger                 gg_trg_NPCDefeat           = null
-    trigger                 gg_trg_SetWayPoint         = null
-    trigger                 gg_trg_WayPingIni          = null
-    trigger                 gg_trg_Way1Ping            = null
-    trigger                 gg_trg_Way2Ping            = null
-    trigger                 gg_trg_WayMovement1        = null
-    trigger                 gg_trg_WayMovement2        = null
-    trigger                 gg_trg_IniZone             = null
-    trigger                 gg_trg_AlternateMovement   = null
-    trigger                 gg_trg_UnitGroupDead       = null
-    trigger                 gg_trg_MainQuest           = null
-    trigger                 gg_trg_WaveComplete        = null
-    trigger                 gg_trg_LastWaveComplete    = null
-    trigger                 gg_trg_DefeatCondition     = null
-    trigger                 gg_trg_SetGroupArray       = null
-    trigger                 gg_trg_UnitsInitializationWay1 = null
-    trigger                 gg_trg_UnitsInitializationWay2 = null
-    trigger                 gg_trg_UnitsInitializationWay3 = null
-    trigger                 gg_trg_GroupArrayReset     = null
-    trigger                 gg_trg_CreateSquad1        = null
-    trigger                 gg_trg_CreateSquad2        = null
-    trigger                 gg_trg_CreateSquad3        = null
-    trigger                 gg_trg_CreateSquad4        = null
-    trigger                 gg_trg_CreateSquad5        = null
-    trigger                 gg_trg_CreateSquad6        = null
-    trigger                 gg_trg_CreateSquad7        = null
-    trigger                 gg_trg_CreateSquad8        = null
-    trigger                 gg_trg_CreateHero          = null
-    trigger                 gg_trg_CreateSquadEnemy1   = null
-    trigger                 gg_trg_CreateSquadEnemy2   = null
-    trigger                 gg_trg_CreateSquadEnemy3   = null
-    trigger                 gg_trg_CreateSquadEnemy4   = null
-    trigger                 gg_trg_ExampleWaveSouth    = null
-    trigger                 gg_trg_ExampleWaveNorth    = null
-    trigger                 gg_trg_ExampleWaveBoth     = null
-    trigger                 gg_trg_WaveTimer           = null
-    trigger                 gg_trg_Wave1               = null
-    trigger                 gg_trg_Wave2               = null
-    trigger                 gg_trg_Wave3               = null
-    trigger                 gg_trg_Wave4               = null
-    trigger                 gg_trg_Wave5               = null
-    trigger                 gg_trg_EnemyTimer          = null
-    trigger                 gg_trg_EnemyRandomSpawn    = null
-    trigger                 gg_trg_EnemyWave1          = null
-    trigger                 gg_trg_EnemyWave2          = null
-    trigger                 gg_trg_EnemyWave3          = null
-    trigger                 gg_trg_EnemyWave4          = null
-    trigger                 gg_trg_EnemyHero           = null
-    trigger                 gg_trg_EnemyHeroAddItem    = null
-    unit                    gg_unit_H004_0013          = null
-    trigger                 gg_trg_DeadEnemyHero       = null
-    trigger                 gg_trg_UtherOrderCodex     = null
-
-    // Random Groups
-    integer array gg_rg_000
-endglobals
 
 function InitGlobals takes nothing returns nothing
-    local integer i = 0
-    set udg_ArthasSouls = 0
-    set udg_Way1Count = 0
-    set udg_Way2Count = 0
-    set udg_RacesRandom = 0
-    set udg_Time_Min = 0
-    set udg_Time_Sec = 0
-    set udg_CountGroup1 = 0
-    set udg_UnitGroup11 = CreateGroup()
-    set udg_UnitGroup12 = CreateGroup()
-    set udg_UnitGroup13 = CreateGroup()
-    set i = 0
+    local integer i= 0
+    set udg_ArthasSouls=0
+    set udg_Way1Count=0
+    set udg_Way2Count=0
+    set udg_RacesRandom=0
+    set udg_Time_Min=0
+    set udg_Time_Sec=0
+    set udg_CountGroup1=0
+    set udg_UnitGroup11=CreateGroup()
+    set udg_UnitGroup12=CreateGroup()
+    set udg_UnitGroup13=CreateGroup()
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_UnitGroupArray1[i] = CreateGroup()
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_UnitGroupArray1[i]=CreateGroup()
+        set i=i + 1
     endloop
 
-    set udg_UnitGroup14 = CreateGroup()
-    set udg_UnitGroup15 = CreateGroup()
-    set udg_CurrentCountDefeat = 0
-    set udg_MaxCountDefeat = 0
-    set udg_ConsoleMessage = ""
-    set udg_ConsoleTrigger = ""
-    set udg_isTestVersion = false
-    set i = 0
+    set udg_UnitGroup14=CreateGroup()
+    set udg_UnitGroup15=CreateGroup()
+    set udg_CurrentCountDefeat=0
+    set udg_MaxCountDefeat=0
+    set udg_ConsoleMessage=""
+    set udg_ConsoleTrigger=""
+    set udg_isTestVersion=false
+    set i=0
     loop
-        exitwhen (i > 3)
-        set udg_TimerAIUpgrade[i] = CreateTimer()
-        set i = i + 1
+        exitwhen ( i > 3 )
+        set udg_TimerAIUpgrade[i]=CreateTimer()
+        set i=i + 1
     endloop
 
-    set udg_PingWaitTime = 0
-    set udg_PingTimer = 0
-    set udg_CountGroup2 = 0
-    set i = 0
+    set udg_PingWaitTime=0
+    set udg_PingTimer=0
+    set udg_CountGroup2=0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_UnitGroupArray2[i] = CreateGroup()
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_UnitGroupArray2[i]=CreateGroup()
+        set i=i + 1
     endloop
 
-    set udg_UnitGroup21 = CreateGroup()
-    set udg_UnitGroup22 = CreateGroup()
-    set udg_UnitGroup23 = CreateGroup()
-    set udg_UnitGroup24 = CreateGroup()
-    set udg_UnitGroup25 = CreateGroup()
-    set udg_NPCName = ""
-    set udg_NPCNumberRandom = 0
-    set udg_NPCText = ""
-    set udg_NPCOptions = 0
-    set udg_NPCCount = 0
-    set udg_NPCColorText = ""
-    set udg_NPCTextDuration = 0
-    set i = 0
+    set udg_UnitGroup21=CreateGroup()
+    set udg_UnitGroup22=CreateGroup()
+    set udg_UnitGroup23=CreateGroup()
+    set udg_UnitGroup24=CreateGroup()
+    set udg_UnitGroup25=CreateGroup()
+    set udg_NPCName=""
+    set udg_NPCNumberRandom=0
+    set udg_NPCText=""
+    set udg_NPCOptions=0
+    set udg_NPCCount=0
+    set udg_NPCColorText=""
+    set udg_NPCTextDuration=0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_NPCText_Options[i] = ""
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_NPCText_Options[i]=""
+        set i=i + 1
     endloop
 
-    set i = 0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_NPCText_MissCaravan[i] = ""
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_NPCText_MissCaravan[i]=""
+        set i=i + 1
     endloop
 
-    set i = 0
+    set i=0
     loop
-        exitwhen (i > 5)
-        set udg_TimerWave[i] = CreateTimer()
-        set i = i + 1
+        exitwhen ( i > 5 )
+        set udg_TimerWave[i]=CreateTimer()
+        set i=i + 1
     endloop
 
-    set i = 0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_TimerMinWave[i] = 0
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_TimerMinWave[i]=0
+        set i=i + 1
     endloop
 
-    set i = 0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_TimerMinAIUpg[i] = 0
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_TimerMinAIUpg[i]=0
+        set i=i + 1
     endloop
 
-    set udg_WaveRandomWay = 0
-    set i = 0
+    set udg_WaveRandomWay=0
+    set i=0
     loop
-        exitwhen (i > 5)
-        set udg_TimerEnemyWave[i] = CreateTimer()
-        set i = i + 1
+        exitwhen ( i > 5 )
+        set udg_TimerEnemyWave[i]=CreateTimer()
+        set i=i + 1
     endloop
 
-    set i = 0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_TimerMinEnemyWave[i] = 0
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_TimerMinEnemyWave[i]=0
+        set i=i + 1
     endloop
 
-    set udg_EnemyRandomWay = 0
-    set udg_RandHeroes = 0
-    set udg_UnitGroup31 = CreateGroup()
-    set udg_CountGroup3 = 0
-    set i = 0
+    set udg_EnemyRandomWay=0
+    set udg_RandHeroes=0
+    set udg_UnitGroup31=CreateGroup()
+    set udg_CountGroup3=0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_UnitGroupArray3[i] = CreateGroup()
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_UnitGroupArray3[i]=CreateGroup()
+        set i=i + 1
     endloop
 
-    set udg_WaveComplete = 0
-    set i = 0
+    set udg_WaveComplete=0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_SetPlayerDifficulty[i] = 0
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_SetPlayerDifficulty[i]=0
+        set i=i + 1
     endloop
 
-    set udg_PlayerCount = 0
-    set udg_PlayerChoise = 0
-    set udg_SetDifficulty = 0
-    set udg_EnemyHeroLevel = 0
-    set i = 0
+    set udg_PlayerCount=0
+    set udg_PlayerChoise=0
+    set udg_SetDifficulty=0
+    set udg_EnemyHeroLevel=0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_CurrentZone1[i] = 0
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_CurrentZone1[i]=0
+        set i=i + 1
     endloop
 
-    set i = 0
+    set i=0
     loop
-        exitwhen (i > 1)
-        set udg_CurrentZone2[i] = 0
-        set i = i + 1
+        exitwhen ( i > 1 )
+        set udg_CurrentZone2[i]=0
+        set i=i + 1
     endloop
 
-    set udg_ArthasReforgeSoulCost = 0
-    set udg_AbominationSize = 0
+    set udg_ArthasReforgeSoulCost=0
+    set udg_AbominationSize=0
 endfunction
 
 //***************************************************************************
@@ -412,250 +418,250 @@ endfunction
 //***************************************************************************
 
 function ItemTable000000_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_PERMANENT, 1 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
 function ItemTable000001_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_PERMANENT, 2 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
 function ItemTable000002_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_PERMANENT, 3 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
 function ItemTable000003_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_PERMANENT, 4 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
 function ItemTable000004_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_PERMANENT, 5 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
 function ItemTable000005_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_PERMANENT, 6 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 6), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
 function ItemTable000006_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
 
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
     endif
 
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
         endif
     endif
 
-    if (canDrop) then
+    if ( canDrop ) then
         // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( 'ratf', 25 )
-        call RandomDistAddItem( 'ckng', 25 )
-        call RandomDistAddItem( 'modt', 25 )
-        call RandomDistAddItem( 'rde4', 25 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
+        call RandomDistReset()
+        call RandomDistAddItem('ratf', 25)
+        call RandomDistAddItem('ckng', 25)
+        call RandomDistAddItem('modt', 25)
+        call RandomDistAddItem('rde4', 25)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
         else
-            call WidgetDropItem( trigWidget, itemID )
+            call WidgetDropItem(trigWidget, itemID)
         endif
 
     endif
 
-    set bj_lastDyingWidget = null
+    set bj_lastDyingWidget=null
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
@@ -667,403 +673,383 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p = Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u = BlzCreateUnitWithSkin( p, 'h00D', 0.0, -192.0, 270.000, 'h00D' )
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
-    local player p = Player(0)
+    local player p= Player(0)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h001', 6216.4, -3390.4, 243.827, 'h001' )
-    set u = BlzCreateUnitWithSkin( p, 'h005', 315.2, -295.3, 238.097, 'h005' )
-    set u = BlzCreateUnitWithSkin( p, 'h00W', 534.7, -330.9, 242.545, 'h00W' )
-    set u = BlzCreateUnitWithSkin( p, 'h00K', 335.4, -89.5, 245.361, 'h00K' )
-    set u = BlzCreateUnitWithSkin( p, 'h00L', 583.7, -106.7, 246.231, 'h00L' )
-    set u = BlzCreateUnitWithSkin( p, 'h00N', 229.3, 12.7, 251.417, 'h00N' )
-    set u = BlzCreateUnitWithSkin( p, 'h00J', 457.2, 10.1, 246.744, 'h00J' )
-    set u = BlzCreateUnitWithSkin( p, 'h000', 809.4, -93.8, 256.150, 'h000' )
-    set u = BlzCreateUnitWithSkin( p, 'h009', 925.8, -282.7, 244.895, 'h009' )
+    set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 243.827, 'h001')
 endfunction
 
 //===========================================================================
 function CreateUnitsForPlayer1 takes nothing returns nothing
-    local player p = Player(1)
+    local player p= Player(1)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h001', 6353.4, -3530.6, 221.323, 'h001' )
+    set u=BlzCreateUnitWithSkin(p, 'h001', 6353.4, - 3530.6, 221.323, 'h001')
 endfunction
 
 //===========================================================================
 function CreateUnitsForPlayer2 takes nothing returns nothing
-    local player p = Player(2)
+    local player p= Player(2)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set gg_unit_H004_0013 = BlzCreateUnitWithSkin( p, 'H004', -505.8, -1304.2, 261.010, 'H004' )
+    set gg_unit_H004_0013=BlzCreateUnitWithSkin(p, 'H004', - 505.8, - 1304.2, 261.010, 'H004')
 endfunction
 
 //===========================================================================
 function CreateBuildingsForPlayer4 takes nothing returns nothing
-    local player p = Player(4)
+    local player p= Player(4)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h007', 8193.8, 8671.4, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5073.0, -8290.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6857.9, 7503.0, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5510.1, -7269.9, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -4594.3, -7630.4, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5853.3, -7736.1, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -4545.7, -8109.5, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6098.5, -8417.3, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5135.8, -8880.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6527.7, -8821.2, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6224.8, 8641.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 9638.2, 752.4, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 5569.1, 8323.0, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 8156.9, 96.0, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 8627.2, 440.7, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 5570.6, 7781.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7340.2, 7708.7, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7722.9, 8231.5, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -8554.6, -3933.2, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -9405.1, -4505.1, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -8824.8, -4510.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -9856.5, -5126.6, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 9196.5, 253.2, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6787.9, 9092.3, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 9113.7, 1670.6, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 8315.6, 1663.0, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7952.1, 1063.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 9747.6, 1888.0, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -9759.5, -3092.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -9204.2, -3051.8, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -8643.7, -2845.0, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 9 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -9912.9, -3623.6, 53.920, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8193.8, 8671.4, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5073.0, - 8290.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6857.9, 7503.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5510.1, - 7269.9, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 4594.3, - 7630.4, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5853.3, - 7736.1, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 4545.7, - 8109.5, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6098.5, - 8417.3, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5135.8, - 8880.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6527.7, - 8821.2, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6224.8, 8641.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 9638.2, 752.4, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5569.1, 8323.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8156.9, 96.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8627.2, 440.7, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5570.6, 7781.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7340.2, 7708.7, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7722.9, 8231.5, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8554.6, - 3933.2, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9405.1, - 4505.1, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8824.8, - 4510.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9856.5, - 5126.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 9196.5, 253.2, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6787.9, 9092.3, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 9113.7, 1670.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8315.6, 1663.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7952.1, 1063.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 9747.6, 1888.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9759.5, - 3092.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9204.2, - 3051.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8643.7, - 2845.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9912.9, - 3623.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
 endfunction
 
 //===========================================================================
 function CreateBuildingsForPlayer5 takes nothing returns nothing
-    local player p = Player(5)
+    local player p= Player(5)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6879.6, -7503.9, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7480.8, 4096.6, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7038.5, -5636.9, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 7 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5739.4, -6711.6, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6842.7, -6214.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 14 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6330.7, -6406.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6586.7, -4934.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7710.7, -6235.2, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7446.4, -5198.2, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7638.4, -5198.2, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7638.4, -5006.2, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7446.4, -5006.2, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7071.6, -7567.9, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5867.4, -6839.6, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6394.7, -5894.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 5517.3, 3941.4, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6266.7, -5382.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 13 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -7098.7, -6918.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 12 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -5818.7, -5830.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 8 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6778.7, -4934.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 5827.4, 3368.4, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7528.5, 3012.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 10 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6778.7, -5126.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', -6586.7, -5126.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6416.4, 2658.3, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6349.8, 3750.4, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7039.6, 3660.6, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7354.2, 5832.4, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 6 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7126.5, 3329.5, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7469.2, 5313.8, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7661.2, 5121.8, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6323.4, 4885.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 13 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7679.6, 3596.6, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 12 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 6140.7, 3503.7, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 7 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 7469.2, 4737.8, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 8 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 8174.0, 2947.8, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
-    set u = BlzCreateUnitWithSkin( p, 'h007', 5996.1, 4008.5, 270.000, 'h007' )
-    call SetUnitState( u, UNIT_STATE_MANA, 11 )
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6879.6, - 7503.9, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7480.8, 4096.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7038.5, - 5636.9, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 7)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5739.4, - 6711.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6842.7, - 6214.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 14)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6330.7, - 6406.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6586.7, - 4934.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7710.7, - 6235.2, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7446.4, - 5198.2, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7638.4, - 5198.2, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7638.4, - 5006.2, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7446.4, - 5006.2, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7071.6, - 7567.9, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5867.4, - 6839.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6394.7, - 5894.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5517.3, 3941.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6266.7, - 5382.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 13)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7098.7, - 6918.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 12)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 5818.7, - 5830.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6778.7, - 4934.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5827.4, 3368.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7528.5, 3012.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6778.7, - 5126.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6586.7, - 5126.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6416.4, 2658.3, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6349.8, 3750.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7039.6, 3660.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7354.2, 5832.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7126.5, 3329.5, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7469.2, 5313.8, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7661.2, 5121.8, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6323.4, 4885.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 13)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7679.6, 3596.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 12)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6140.7, 3503.7, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 7)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7469.2, 4737.8, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8174.0, 2947.8, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5996.1, 4008.5, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
 endfunction
 
 //===========================================================================
 function CreateUnitsForPlayer5 takes nothing returns nothing
-    local player p = Player(5)
+    local player p= Player(5)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7057.4, -7425.6, 292.718, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6043.8, -6792.3, 120.886, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7161.5, -7441.5, 222.370, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -5967.8, -6710.8, 29.350, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7247.6, 3657.7, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7378.0, 3695.1, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7011.3, -6530.2, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7445.6, -6362.7, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 8 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6891.0, -6513.2, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7533.7, -6481.3, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 8 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6856.3, -6657.3, 292.718, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6960.4, -6673.2, 222.370, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6238.7, -5699.5, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6118.4, -5682.5, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6083.7, -5826.6, 292.718, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -6187.8, -5842.5, 222.370, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7679.1, -6552.5, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 7 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', -7368.2, -6228.5, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7476.4, 3241.7, 213.976, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7983.3, 2948.7, 340.806, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 5756.6, 3855.3, 213.980, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 6184.9, 3839.5, 340.810, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7402.6, 3530.5, 292.718, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7298.5, 3514.6, 222.370, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 6500.5, 4482.2, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 4 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 2744.6, -2666.2, 298.628, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 2510.0, -2787.0, 274.515, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 6620.7, 4499.3, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 6655.5, 4355.1, 292.718, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 2 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 6551.3, 4339.2, 222.370, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7565.7, 4387.2, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 8 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7700.0, 4317.9, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 8 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7400.2, 4309.0, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 7 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 7760.2, 4168.0, 292.720, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 5 )
-    set u = BlzCreateUnitWithSkin( p, 'h006', 2343.4, -2562.1, 287.532, 'h006' )
-    call SetUnitState( u, UNIT_STATE_MANA, 3 )
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7057.4, - 7425.6, 292.718, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6043.8, - 6792.3, 120.886, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7161.5, - 7441.5, 222.370, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 5967.8, - 6710.8, 29.350, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7247.6, 3657.7, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7378.0, 3695.1, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7011.3, - 6530.2, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7445.6, - 6362.7, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6891.0, - 6513.2, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7533.7, - 6481.3, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6856.3, - 6657.3, 292.718, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6960.4, - 6673.2, 222.370, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6238.7, - 5699.5, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6118.4, - 5682.5, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6083.7, - 5826.6, 292.718, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 6187.8, - 5842.5, 222.370, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7679.1, - 6552.5, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 7)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 7368.2, - 6228.5, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7476.4, 3241.7, 213.976, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7983.3, 2948.7, 340.806, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 5756.6, 3855.3, 213.980, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 6184.9, 3839.5, 340.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7402.6, 3530.5, 292.718, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7298.5, 3514.6, 222.370, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 6500.5, 4482.2, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2744.6, - 2666.2, 298.628, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2510.0, - 2787.0, 274.515, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 6620.7, 4499.3, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 6655.5, 4355.1, 292.718, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 6551.3, 4339.2, 222.370, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7565.7, 4387.2, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7700.0, 4317.9, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7400.2, 4309.0, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 7)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 7760.2, 4168.0, 292.720, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2343.4, - 2562.1, 287.532, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
 endfunction
 
 //===========================================================================
 function CreateNeutralHostile takes nothing returns nothing
-    local player p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    local player p= Player(PLAYER_NEUTRAL_AGGRESSIVE)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'nogm', -9015.2, 3055.8, 305.778, 'nogm' )
-    set u = BlzCreateUnitWithSkin( p, 'nwlg', 1144.9, 7889.8, 305.519, 'nwlg' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqe', -4240.6, 7839.2, 316.457, 'nsqe' )
-    set u = BlzCreateUnitWithSkin( p, 'nomg', -8003.8, 8628.1, 344.288, 'nomg' )
-    set u = BlzCreateUnitWithSkin( p, 'nogl', -7805.7, 8663.1, 308.356, 'nogl' )
-    set u = BlzCreateUnitWithSkin( p, 'nogm', -7928.5, 8412.6, 332.989, 'nogm' )
-    set u = BlzCreateUnitWithSkin( p, 'nwld', 3843.3, 1268.0, 2.442, 'nwld' )
-    set u = BlzCreateUnitWithSkin( p, 'nwld', 1051.7, 7704.7, 298.872, 'nwld' )
-    set u = BlzCreateUnitWithSkin( p, 'nwlg', 877.7, 7653.6, 302.558, 'nwlg' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqo', -4213.3, 8065.4, 303.138, 'nsqo' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqe', -3979.3, 8066.4, 299.197, 'nsqe' )
-    set u = BlzCreateUnitWithSkin( p, 'nwlg', 3716.1, 1104.0, 1.076, 'nwlg' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', -1893.0, -8766.6, 74.606, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', -2374.0, -8972.9, 135.530, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nwlg', 3753.0, 1430.5, 6.739, 'nwlg' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqo', 6735.2, -8284.7, 112.976, 'nsqo' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqe', 6903.9, -8137.6, 100.223, 'nsqe' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqe', 6475.3, -8324.4, 60.960, 'nsqe' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqe', 7020.7, -8287.0, 111.250, 'nsqe' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', -2046.7, -8733.4, 88.769, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrm', -2143.9, -8868.8, 122.738, 'nmrm' )
-    set u = BlzCreateUnitWithSkin( p, 'nogm', -7543.5, 8640.4, 290.114, 'nogm' )
-    set u = BlzCreateUnitWithSkin( p, 'nomg', -7600.6, 8919.3, 275.195, 'nomg' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', -2323.1, -8811.1, 128.018, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nsqe', 6590.8, -8202.3, 93.991, 'nsqe' )
-    set u = BlzCreateUnitWithSkin( p, 'nogm', -9212.2, 2922.6, 305.500, 'nogm' )
-    set u = BlzCreateUnitWithSkin( p, 'nomg', -9177.8, 3081.1, 299.400, 'nomg' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', 8948.1, -2889.3, 118.304, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nsgt', 2677.5, -8216.0, 133.422, 'nsgt' )
-    set t = CreateTrigger(  )
-    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
-    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
-    call TriggerAddAction( t, function ItemTable000002_DropItems )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', 2572.4, -8381.3, 151.435, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', 2789.8, -8062.1, 95.549, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', 2492.4, -8240.6, 151.435, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', 2639.9, -8057.5, 103.348, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nsgt', -5238.4, -3578.0, 311.296, 'nsgt' )
-    set t = CreateTrigger(  )
-    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
-    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
-    call TriggerAddAction( t, function ItemTable000002_DropItems )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', -5127.3, -3416.8, 329.309, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', -5356.4, -3727.7, 273.423, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', -5052.6, -3560.3, 329.309, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nssp', -5206.8, -3737.9, 281.222, 'nssp' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', 8781.3, -3259.0, 165.064, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', 9098.2, -2842.4, 104.141, 'nmrr' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrm', 8930.2, -3055.0, 152.273, 'nmrm' )
-    set u = BlzCreateUnitWithSkin( p, 'nmrr', 8746.0, -3093.1, 157.553, 'nmrr' )
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 9015.2, 3055.8, 305.778, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1144.9, 7889.8, 305.519, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nsqe', - 4240.6, 7839.2, 316.457, 'nsqe')
+    set u=BlzCreateUnitWithSkin(p, 'nomg', - 8003.8, 8628.1, 344.288, 'nomg')
+    set u=BlzCreateUnitWithSkin(p, 'nogl', - 7805.7, 8663.1, 308.356, 'nogl')
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7928.5, 8412.6, 332.989, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nwld', 3843.3, 1268.0, 2.442, 'nwld')
+    set u=BlzCreateUnitWithSkin(p, 'nwld', 1051.7, 7704.7, 298.872, 'nwld')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 877.7, 7653.6, 302.558, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nsqo', - 4213.3, 8065.4, 303.138, 'nsqo')
+    set u=BlzCreateUnitWithSkin(p, 'nsqe', - 3979.3, 8066.4, 299.197, 'nsqe')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 3716.1, 1104.0, 1.076, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1893.0, - 8766.6, 74.606, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2374.0, - 8972.9, 135.530, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 3753.0, 1430.5, 6.739, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nsqo', 6735.2, - 8284.7, 112.976, 'nsqo')
+    set u=BlzCreateUnitWithSkin(p, 'nsqe', 6903.9, - 8137.6, 100.223, 'nsqe')
+    set u=BlzCreateUnitWithSkin(p, 'nsqe', 6475.3, - 8324.4, 60.960, 'nsqe')
+    set u=BlzCreateUnitWithSkin(p, 'nsqe', 7020.7, - 8287.0, 111.250, 'nsqe')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2046.7, - 8733.4, 88.769, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 2143.9, - 8868.8, 122.738, 'nmrm')
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7543.5, 8640.4, 290.114, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7600.6, 8919.3, 275.195, 'nomg')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2323.1, - 8811.1, 128.018, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nsqe', 6590.8, - 8202.3, 93.991, 'nsqe')
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 9212.2, 2922.6, 305.500, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nomg', - 9177.8, 3081.1, 299.400, 'nomg')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', 8948.1, - 2889.3, 118.304, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nsgt', 2677.5, - 8216.0, 133.422, 'nsgt')
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000002_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nssp', 2572.4, - 8381.3, 151.435, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', 2789.8, - 8062.1, 95.549, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', 2492.4, - 8240.6, 151.435, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', 2639.9, - 8057.5, 103.348, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.296, 'nsgt')
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000002_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5127.3, - 3416.8, 329.309, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5356.4, - 3727.7, 273.423, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5052.6, - 3560.3, 329.309, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5206.8, - 3737.9, 281.222, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', 8781.3, - 3259.0, 165.064, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', 9098.2, - 2842.4, 104.141, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrm', 8930.2, - 3055.0, 152.273, 'nmrm')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', 8746.0, - 3093.1, 157.553, 'nmrr')
 endfunction
 
 //===========================================================================
 function CreateNeutralPassiveBuildings takes nothing returns nothing
-    local player p = Player(PLAYER_NEUTRAL_PASSIVE)
+    local player p= Player(PLAYER_NEUTRAL_PASSIVE)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'ngol', -2176.0, 832.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 12500 )
-    set u = BlzCreateUnitWithSkin( p, 'ngol', 1152.0, 896.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 12500 )
-    set u = BlzCreateUnitWithSkin( p, 'ngol', -4352.0, 8320.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 12500 )
-    set u = BlzCreateUnitWithSkin( p, 'n000', 2560.0, -2560.0, 270.000, 'n000' )
-    call SetUnitColor( u, ConvertPlayerColor(18) )
-    set u = BlzCreateUnitWithSkin( p, 'ngol', -8320.0, -6336.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 12500 )
-    set u = BlzCreateUnitWithSkin( p, 'ngol', 8128.0, 4416.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 12500 )
-    set u = BlzCreateUnitWithSkin( p, 'nmh0', -2144.0, -9120.0, 270.000, 'nmh0' )
-    set u = BlzCreateUnitWithSkin( p, 'nmh1', -1632.0, -8928.0, 270.000, 'nmh1' )
-    set u = BlzCreateUnitWithSkin( p, 'nmh1', -2464.0, -9632.0, 270.000, 'nmh1' )
-    set u = BlzCreateUnitWithSkin( p, 'ngol', 2944.0, -8448.0, 270.000, 'ngol' )
-    call SetResourceAmount( u, 12500 )
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 2176.0, 832.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 1152.0, 896.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 4352.0, 8320.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
+    set u=BlzCreateUnitWithSkin(p, 'n000', 2560.0, - 2560.0, 270.000, 'n000')
+    call SetUnitColor(u, ConvertPlayerColor(18))
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 8320.0, - 6336.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 8128.0, 4416.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
+    set u=BlzCreateUnitWithSkin(p, 'nmh0', - 2144.0, - 9120.0, 270.000, 'nmh0')
+    set u=BlzCreateUnitWithSkin(p, 'nmh1', - 1632.0, - 8928.0, 270.000, 'nmh1')
+    set u=BlzCreateUnitWithSkin(p, 'nmh1', - 2464.0, - 9632.0, 270.000, 'nmh1')
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 2944.0, - 8448.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
 endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0(  )
-    call CreateBuildingsForPlayer4(  )
-    call CreateBuildingsForPlayer5(  )
+    call CreateBuildingsForPlayer4()
+    call CreateBuildingsForPlayer5()
 endfunction
 
 //===========================================================================
 function CreatePlayerUnits takes nothing returns nothing
-    call CreateUnitsForPlayer0(  )
-    call CreateUnitsForPlayer1(  )
-    call CreateUnitsForPlayer2(  )
-    call CreateUnitsForPlayer5(  )
+    call CreateUnitsForPlayer0()
+    call CreateUnitsForPlayer1()
+    call CreateUnitsForPlayer2()
+    call CreateUnitsForPlayer5()
 endfunction
 
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
-    call CreateNeutralPassiveBuildings(  )
-    call CreatePlayerBuildings(  )
-    call CreateNeutralHostile(  )
-    call CreatePlayerUnits(  )
+    call CreateNeutralPassiveBuildings()
+    call CreatePlayerBuildings()
+    call CreateNeutralHostile()
+    call CreatePlayerUnits()
 endfunction
 
 //***************************************************************************
@@ -1075,26 +1061,26 @@ endfunction
 function CreateRegions takes nothing returns nothing
     local weathereffect we
 
-    set gg_rct_StartRegion = Rect( 5952.0, -3776.0, 6656.0, -3008.0 )
-    set gg_rct_Way1_p2 = Rect( -3584.0, -7648.0, -1984.0, -6688.0 )
-    set gg_rct_Way1_p1 = Rect( -5216.0, -7232.0, -3200.0, -6240.0 )
-    set gg_rct_Way1_p3 = Rect( -800.0, -5632.0, 1536.0, -4736.0 )
-    set gg_rct_Way1_p4 = Rect( 1536.0, -6336.0, 3584.0, -5472.0 )
-    set gg_rct_Way1_p5 = Rect( 3584.0, -5792.0, 4800.0, -4608.0 )
-    set gg_rct_Way1_p6 = Rect( 4608.0, -4928.0, 5568.0, -3648.0 )
-    set gg_rct_Way1_p7 = Rect( 5088.0, -3168.0, 6144.0, -1888.0 )
-    set gg_rct_Way1_p0 = Rect( -6848.0, -9632.0, -6176.0, -9056.0 )
-    set gg_rct_Way2_p0 = Rect( -9632.0, -4128.0, -8992.0, -3552.0 )
-    set gg_rct_Way2_p1 = Rect( -8096.0, -2848.0, -7232.0, -1792.0 )
-    set gg_rct_Way2_p2 = Rect( -8640.0, -608.0, -6720.0, 64.0 )
-    set gg_rct_Way2_p3 = Rect( -6528.0, 160.0, -5696.0, 1472.0 )
-    set gg_rct_Way2_p4 = Rect( -6624.0, 2848.0, -5056.0, 4032.0 )
-    set gg_rct_Way2_p5 = Rect( -3520.0, 3232.0, -2176.0, 4256.0 )
-    set gg_rct_Way2_p6 = Rect( -64.0, 4608.0, 1824.0, 5632.0 )
-    set gg_rct_Way2_p7 = Rect( 4256.0, 5536.0, 5248.0, 6368.0 )
-    set gg_rct_Way1_p8 = Rect( 6528.0, -864.0, 7520.0, 224.0 )
-    set gg_rct_Way1_p9 = Rect( 9504.0, 864.0, 9856.0, 1696.0 )
-    set gg_rct_Way2_p8 = Rect( 7360.0, 9024.0, 8032.0, 9760.0 )
+    set gg_rct_StartRegion=Rect(5952.0, - 3776.0, 6656.0, - 3008.0)
+    set gg_rct_Way1_p2=Rect(- 3584.0, - 7648.0, - 1984.0, - 6688.0)
+    set gg_rct_Way1_p1=Rect(- 5216.0, - 7232.0, - 3200.0, - 6240.0)
+    set gg_rct_Way1_p3=Rect(- 800.0, - 5632.0, 1536.0, - 4736.0)
+    set gg_rct_Way1_p4=Rect(1536.0, - 6336.0, 3584.0, - 5472.0)
+    set gg_rct_Way1_p5=Rect(3584.0, - 5792.0, 4800.0, - 4608.0)
+    set gg_rct_Way1_p6=Rect(4608.0, - 4928.0, 5568.0, - 3648.0)
+    set gg_rct_Way1_p7=Rect(5088.0, - 3168.0, 6144.0, - 1888.0)
+    set gg_rct_Way1_p0=Rect(- 6848.0, - 9632.0, - 6176.0, - 9056.0)
+    set gg_rct_Way2_p0=Rect(- 9632.0, - 4128.0, - 8992.0, - 3552.0)
+    set gg_rct_Way2_p1=Rect(- 8096.0, - 2848.0, - 7232.0, - 1792.0)
+    set gg_rct_Way2_p2=Rect(- 8640.0, - 608.0, - 6720.0, 64.0)
+    set gg_rct_Way2_p3=Rect(- 6528.0, 160.0, - 5696.0, 1472.0)
+    set gg_rct_Way2_p4=Rect(- 6624.0, 2848.0, - 5056.0, 4032.0)
+    set gg_rct_Way2_p5=Rect(- 3520.0, 3232.0, - 2176.0, 4256.0)
+    set gg_rct_Way2_p6=Rect(- 64.0, 4608.0, 1824.0, 5632.0)
+    set gg_rct_Way2_p7=Rect(4256.0, 5536.0, 5248.0, 6368.0)
+    set gg_rct_Way1_p8=Rect(6528.0, - 864.0, 7520.0, 224.0)
+    set gg_rct_Way1_p9=Rect(9504.0, 864.0, 9856.0, 1696.0)
+    set gg_rct_Way2_p8=Rect(7360.0, 9024.0, 8032.0, 9760.0)
 endfunction
 
 //***************************************************************************
@@ -1105,19 +1091,19 @@ endfunction
 
 function CreateCameras takes nothing returns nothing
 
-    set gg_cam_Camera_001 = CreateCameraSetup(  )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_ZOFFSET, 0.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_ROTATION, 61.4, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 348.3, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 1539.5, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_ROLL, 0.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_FARZ, 8857.8, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_NEARZ, 16.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_001, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0 )
-    call CameraSetupSetDestPosition( gg_cam_Camera_001, 6518.3, -3034.6, 0.0 )
+    set gg_cam_Camera_001=CreateCameraSetup()
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROTATION, 61.4, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 348.3, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 1539.5, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROLL, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FARZ, 8857.8, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_NEARZ, 16.0, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
+    call CameraSetupSetDestPosition(gg_cam_Camera_001, 6518.3, - 3034.6, 0.0)
 
 endfunction
 
@@ -1135,13 +1121,13 @@ endfunction
 // The isTest value is set manually.
 //===========================================================================
 function Trig_CurrentBuild_Actions takes nothing returns nothing
-    set udg_isTestVersion = true
+    set udg_isTestVersion=true
 endfunction
 
 //===========================================================================
 function InitTrig_CurrentBuild takes nothing returns nothing
-    set gg_trg_CurrentBuild = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CurrentBuild, function Trig_CurrentBuild_Actions )
+    set gg_trg_CurrentBuild=CreateTrigger()
+    call TriggerAddAction(gg_trg_CurrentBuild, function Trig_CurrentBuild_Actions)
 endfunction
 
 //===========================================================================
@@ -1174,25 +1160,25 @@ endfunction
 function Trig_ConsoleLog_Actions takes nothing returns nothing
     // Redefining variables if they are empty
     if ( Trig_ConsoleLog_Func003C() ) then
-        set udg_ConsoleTrigger = "ConsoleLog"
+        set udg_ConsoleTrigger="ConsoleLog"
     else
     endif
     if ( Trig_ConsoleLog_Func004C() ) then
-        set udg_ConsoleMessage = "[Run]"
+        set udg_ConsoleMessage="[Run]"
     else
     endif
     // Running a message
-    call DisplayTextToForce( GetPlayersAll(), ( ( "|cFF00C850<" + ( udg_ConsoleTrigger + ">|R " ) ) + udg_ConsoleMessage ) )
+    call DisplayTextToForce(GetPlayersAll(), ( ( "|cFF00C850<" + ( udg_ConsoleTrigger + ">|R " ) ) + udg_ConsoleMessage ))
     // Clearing Variables
-    set udg_ConsoleMessage = ""
-    set udg_ConsoleTrigger = ""
+    set udg_ConsoleMessage=""
+    set udg_ConsoleTrigger=""
 endfunction
 
 //===========================================================================
 function InitTrig_ConsoleLog takes nothing returns nothing
-    set gg_trg_ConsoleLog = CreateTrigger(  )
-    call TriggerAddCondition( gg_trg_ConsoleLog, Condition( function Trig_ConsoleLog_Conditions ) )
-    call TriggerAddAction( gg_trg_ConsoleLog, function Trig_ConsoleLog_Actions )
+    set gg_trg_ConsoleLog=CreateTrigger()
+    call TriggerAddCondition(gg_trg_ConsoleLog, Condition(function Trig_ConsoleLog_Conditions))
+    call TriggerAddAction(gg_trg_ConsoleLog, function Trig_ConsoleLog_Actions)
 endfunction
 
 //===========================================================================
@@ -1251,31 +1237,31 @@ endfunction
 
 function Trig_ChooseClassicRace_Actions takes nothing returns nothing
     if ( Trig_ChooseClassicRace_Func001C() ) then
-        call MeleeStartingUnitsForPlayer( RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false )
+        call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
     else
         if ( Trig_ChooseClassicRace_Func001Func001C() ) then
-            call MeleeStartingUnitsForPlayer( RACE_ORC, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false )
+            call MeleeStartingUnitsForPlayer(RACE_ORC, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
         else
             if ( Trig_ChooseClassicRace_Func001Func001Func001C() ) then
-                call MeleeStartingUnitsForPlayer( RACE_NIGHTELF, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false )
+                call MeleeStartingUnitsForPlayer(RACE_NIGHTELF, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
             else
                 if ( Trig_ChooseClassicRace_Func001Func001Func001Func001C() ) then
-                    call MeleeStartingUnitsForPlayer( RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false )
+                    call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
                 else
                 endif
             endif
         endif
     endif
-    call RemoveUnit( GetSpellAbilityUnit() )
-    call TriggerExecute( gg_trg_StartCameraReset )
+    call RemoveUnit(GetSpellAbilityUnit())
+    call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
 
 //===========================================================================
 function InitTrig_ChooseClassicRace takes nothing returns nothing
-    set gg_trg_ChooseClassicRace = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ChooseClassicRace, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ChooseClassicRace, Condition( function Trig_ChooseClassicRace_Conditions ) )
-    call TriggerAddAction( gg_trg_ChooseClassicRace, function Trig_ChooseClassicRace_Actions )
+    set gg_trg_ChooseClassicRace=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseClassicRace, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseClassicRace, Condition(function Trig_ChooseClassicRace_Conditions))
+    call TriggerAddAction(gg_trg_ChooseClassicRace, function Trig_ChooseClassicRace_Actions)
 endfunction
 
 //===========================================================================
@@ -1341,30 +1327,30 @@ function Trig_HeroesClassicTest_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_HeroesClassicTest_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap( 'Hpal', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Hamg', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Hmkg', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Hblm', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Obla', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Ofar', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Otch', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Oshd', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Udea', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Ulic', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Udre', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Ucrl', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Ekee', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Emoo', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Edem', 0, GetOwningPlayer(GetTrainedUnit()) )
-    call SetPlayerTechMaxAllowedSwap( 'Ewar', 0, GetOwningPlayer(GetTrainedUnit()) )
+    call SetPlayerTechMaxAllowedSwap('Hpal', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Hamg', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Hmkg', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Hblm', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Obla', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Ofar', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Otch', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Oshd', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Udea', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Ulic', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Udre', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Ucrl', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Ekee', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Emoo', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Edem', 0, GetOwningPlayer(GetTrainedUnit()))
+    call SetPlayerTechMaxAllowedSwap('Ewar', 0, GetOwningPlayer(GetTrainedUnit()))
 endfunction
 
 //===========================================================================
 function InitTrig_HeroesClassicTest takes nothing returns nothing
-    set gg_trg_HeroesClassicTest = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_HeroesClassicTest, EVENT_PLAYER_UNIT_TRAIN_FINISH )
-    call TriggerAddCondition( gg_trg_HeroesClassicTest, Condition( function Trig_HeroesClassicTest_Conditions ) )
-    call TriggerAddAction( gg_trg_HeroesClassicTest, function Trig_HeroesClassicTest_Actions )
+    set gg_trg_HeroesClassicTest=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HeroesClassicTest, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_HeroesClassicTest, Condition(function Trig_HeroesClassicTest_Conditions))
+    call TriggerAddAction(gg_trg_HeroesClassicTest, function Trig_HeroesClassicTest_Actions)
 endfunction
 
 //===========================================================================
@@ -1378,28 +1364,28 @@ function Trig_TimerMinus_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TimerMinus_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 3
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_TimerMinAIUpg[GetForLoopIndexA()] = ( udg_TimerMinAIUpg[GetForLoopIndexA()] - 1.00 )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        set udg_TimerMinAIUpg[GetForLoopIndexA()]=( udg_TimerMinAIUpg[GetForLoopIndexA()] - 1.00 )
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 5
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_TimerMinWave[GetForLoopIndexA()] = ( udg_TimerMinWave[GetForLoopIndexA()] - 1.00 )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        set udg_TimerMinWave[GetForLoopIndexA()]=( udg_TimerMinWave[GetForLoopIndexA()] - 1.00 )
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_TimerMinus takes nothing returns nothing
-    set gg_trg_TimerMinus = CreateTrigger(  )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_TimerMinus, 1.00 )
-    call TriggerAddCondition( gg_trg_TimerMinus, Condition( function Trig_TimerMinus_Conditions ) )
-    call TriggerAddAction( gg_trg_TimerMinus, function Trig_TimerMinus_Actions )
+    set gg_trg_TimerMinus=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_TimerMinus, 1.00)
+    call TriggerAddCondition(gg_trg_TimerMinus, Condition(function Trig_TimerMinus_Conditions))
+    call TriggerAddAction(gg_trg_TimerMinus, function Trig_TimerMinus_Actions)
 endfunction
 
 //===========================================================================
@@ -1413,16 +1399,16 @@ function Trig_TestWaveTimer1_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestWaveTimer1_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ( udg_TimerWave[1], "TRIGSTR_1139" )
-    set udg_TimerWaveInterface = GetLastCreatedTimerDialogBJ()
+    call CreateTimerDialogBJ(udg_TimerWave[1], "TRIGSTR_1139")
+    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestWaveTimer1 takes nothing returns nothing
-    set gg_trg_TestWaveTimer1 = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_TestWaveTimer1, 1.00 )
-    call TriggerAddCondition( gg_trg_TestWaveTimer1, Condition( function Trig_TestWaveTimer1_Conditions ) )
-    call TriggerAddAction( gg_trg_TestWaveTimer1, function Trig_TestWaveTimer1_Actions )
+    set gg_trg_TestWaveTimer1=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_TestWaveTimer1, 1.00)
+    call TriggerAddCondition(gg_trg_TestWaveTimer1, Condition(function Trig_TestWaveTimer1_Conditions))
+    call TriggerAddAction(gg_trg_TestWaveTimer1, function Trig_TestWaveTimer1_Actions)
 endfunction
 
 //===========================================================================
@@ -1436,17 +1422,17 @@ function Trig_TestWaveTimer2_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestWaveTimer2_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerWaveInterface )
-    call CreateTimerDialogBJ( udg_TimerWave[2], "TRIGSTR_1140" )
-    set udg_TimerWaveInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
+    call CreateTimerDialogBJ(udg_TimerWave[2], "TRIGSTR_1140")
+    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestWaveTimer2 takes nothing returns nothing
-    set gg_trg_TestWaveTimer2 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestWaveTimer2, udg_TimerWave[1] )
-    call TriggerAddCondition( gg_trg_TestWaveTimer2, Condition( function Trig_TestWaveTimer2_Conditions ) )
-    call TriggerAddAction( gg_trg_TestWaveTimer2, function Trig_TestWaveTimer2_Actions )
+    set gg_trg_TestWaveTimer2=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer2, udg_TimerWave[1])
+    call TriggerAddCondition(gg_trg_TestWaveTimer2, Condition(function Trig_TestWaveTimer2_Conditions))
+    call TriggerAddAction(gg_trg_TestWaveTimer2, function Trig_TestWaveTimer2_Actions)
 endfunction
 
 //===========================================================================
@@ -1460,17 +1446,17 @@ function Trig_TestWaveTimer3_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestWaveTimer3_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerWaveInterface )
-    call CreateTimerDialogBJ( udg_TimerWave[3], "TRIGSTR_1142" )
-    set udg_TimerWaveInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
+    call CreateTimerDialogBJ(udg_TimerWave[3], "TRIGSTR_1142")
+    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestWaveTimer3 takes nothing returns nothing
-    set gg_trg_TestWaveTimer3 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestWaveTimer3, udg_TimerWave[2] )
-    call TriggerAddCondition( gg_trg_TestWaveTimer3, Condition( function Trig_TestWaveTimer3_Conditions ) )
-    call TriggerAddAction( gg_trg_TestWaveTimer3, function Trig_TestWaveTimer3_Actions )
+    set gg_trg_TestWaveTimer3=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer3, udg_TimerWave[2])
+    call TriggerAddCondition(gg_trg_TestWaveTimer3, Condition(function Trig_TestWaveTimer3_Conditions))
+    call TriggerAddAction(gg_trg_TestWaveTimer3, function Trig_TestWaveTimer3_Actions)
 endfunction
 
 //===========================================================================
@@ -1484,17 +1470,17 @@ function Trig_TestWaveTimer4_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestWaveTimer4_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerWaveInterface )
-    call CreateTimerDialogBJ( udg_TimerWave[4], "TRIGSTR_1143" )
-    set udg_TimerWaveInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
+    call CreateTimerDialogBJ(udg_TimerWave[4], "TRIGSTR_1143")
+    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestWaveTimer4 takes nothing returns nothing
-    set gg_trg_TestWaveTimer4 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestWaveTimer4, udg_TimerWave[3] )
-    call TriggerAddCondition( gg_trg_TestWaveTimer4, Condition( function Trig_TestWaveTimer4_Conditions ) )
-    call TriggerAddAction( gg_trg_TestWaveTimer4, function Trig_TestWaveTimer4_Actions )
+    set gg_trg_TestWaveTimer4=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer4, udg_TimerWave[3])
+    call TriggerAddCondition(gg_trg_TestWaveTimer4, Condition(function Trig_TestWaveTimer4_Conditions))
+    call TriggerAddAction(gg_trg_TestWaveTimer4, function Trig_TestWaveTimer4_Actions)
 endfunction
 
 //===========================================================================
@@ -1508,17 +1494,17 @@ function Trig_TestWaveTimer5_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestWaveTimer5_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerWaveInterface )
-    call CreateTimerDialogBJ( udg_TimerWave[5], "TRIGSTR_1144" )
-    set udg_TimerWaveInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
+    call CreateTimerDialogBJ(udg_TimerWave[5], "TRIGSTR_1144")
+    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestWaveTimer5 takes nothing returns nothing
-    set gg_trg_TestWaveTimer5 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestWaveTimer5, udg_TimerWave[4] )
-    call TriggerAddCondition( gg_trg_TestWaveTimer5, Condition( function Trig_TestWaveTimer5_Conditions ) )
-    call TriggerAddAction( gg_trg_TestWaveTimer5, function Trig_TestWaveTimer5_Actions )
+    set gg_trg_TestWaveTimer5=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer5, udg_TimerWave[4])
+    call TriggerAddCondition(gg_trg_TestWaveTimer5, Condition(function Trig_TestWaveTimer5_Conditions))
+    call TriggerAddAction(gg_trg_TestWaveTimer5, function Trig_TestWaveTimer5_Actions)
 endfunction
 
 //===========================================================================
@@ -1532,15 +1518,15 @@ function Trig_TestWaveTimer6_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestWaveTimer6_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerWaveInterface )
+    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
 endfunction
 
 //===========================================================================
 function InitTrig_TestWaveTimer6 takes nothing returns nothing
-    set gg_trg_TestWaveTimer6 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestWaveTimer6, udg_TimerWave[5] )
-    call TriggerAddCondition( gg_trg_TestWaveTimer6, Condition( function Trig_TestWaveTimer6_Conditions ) )
-    call TriggerAddAction( gg_trg_TestWaveTimer6, function Trig_TestWaveTimer6_Actions )
+    set gg_trg_TestWaveTimer6=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer6, udg_TimerWave[5])
+    call TriggerAddCondition(gg_trg_TestWaveTimer6, Condition(function Trig_TestWaveTimer6_Conditions))
+    call TriggerAddAction(gg_trg_TestWaveTimer6, function Trig_TestWaveTimer6_Actions)
 endfunction
 
 //===========================================================================
@@ -1554,16 +1540,16 @@ function Trig_TestUpgTimer1_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestUpgTimer1_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ( udg_TimerAIUpgrade[1], "TRIGSTR_1146" )
-    set udg_TimerUpgInterface = GetLastCreatedTimerDialogBJ()
+    call CreateTimerDialogBJ(udg_TimerAIUpgrade[1], "TRIGSTR_1146")
+    set udg_TimerUpgInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestUpgTimer1 takes nothing returns nothing
-    set gg_trg_TestUpgTimer1 = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_TestUpgTimer1, 1.00 )
-    call TriggerAddCondition( gg_trg_TestUpgTimer1, Condition( function Trig_TestUpgTimer1_Conditions ) )
-    call TriggerAddAction( gg_trg_TestUpgTimer1, function Trig_TestUpgTimer1_Actions )
+    set gg_trg_TestUpgTimer1=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_TestUpgTimer1, 1.00)
+    call TriggerAddCondition(gg_trg_TestUpgTimer1, Condition(function Trig_TestUpgTimer1_Conditions))
+    call TriggerAddAction(gg_trg_TestUpgTimer1, function Trig_TestUpgTimer1_Actions)
 endfunction
 
 //===========================================================================
@@ -1577,17 +1563,17 @@ function Trig_TestUpgTimer2_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestUpgTimer2_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerUpgInterface )
-    call CreateTimerDialogBJ( udg_TimerAIUpgrade[2], "TRIGSTR_1147" )
-    set udg_TimerUpgInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerUpgInterface)
+    call CreateTimerDialogBJ(udg_TimerAIUpgrade[2], "TRIGSTR_1147")
+    set udg_TimerUpgInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestUpgTimer2 takes nothing returns nothing
-    set gg_trg_TestUpgTimer2 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestUpgTimer2, udg_TimerAIUpgrade[1] )
-    call TriggerAddCondition( gg_trg_TestUpgTimer2, Condition( function Trig_TestUpgTimer2_Conditions ) )
-    call TriggerAddAction( gg_trg_TestUpgTimer2, function Trig_TestUpgTimer2_Actions )
+    set gg_trg_TestUpgTimer2=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestUpgTimer2, udg_TimerAIUpgrade[1])
+    call TriggerAddCondition(gg_trg_TestUpgTimer2, Condition(function Trig_TestUpgTimer2_Conditions))
+    call TriggerAddAction(gg_trg_TestUpgTimer2, function Trig_TestUpgTimer2_Actions)
 endfunction
 
 //===========================================================================
@@ -1601,17 +1587,17 @@ function Trig_TestUpgTimer3_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestUpgTimer3_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerUpgInterface )
-    call CreateTimerDialogBJ( udg_TimerAIUpgrade[3], "TRIGSTR_1148" )
-    set udg_TimerUpgInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerUpgInterface)
+    call CreateTimerDialogBJ(udg_TimerAIUpgrade[3], "TRIGSTR_1148")
+    set udg_TimerUpgInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestUpgTimer3 takes nothing returns nothing
-    set gg_trg_TestUpgTimer3 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestUpgTimer3, udg_TimerAIUpgrade[2] )
-    call TriggerAddCondition( gg_trg_TestUpgTimer3, Condition( function Trig_TestUpgTimer3_Conditions ) )
-    call TriggerAddAction( gg_trg_TestUpgTimer3, function Trig_TestUpgTimer3_Actions )
+    set gg_trg_TestUpgTimer3=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestUpgTimer3, udg_TimerAIUpgrade[2])
+    call TriggerAddCondition(gg_trg_TestUpgTimer3, Condition(function Trig_TestUpgTimer3_Conditions))
+    call TriggerAddAction(gg_trg_TestUpgTimer3, function Trig_TestUpgTimer3_Actions)
 endfunction
 
 //===========================================================================
@@ -1625,15 +1611,15 @@ function Trig_TestUpgTimer4_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestUpgTimer4_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerUpgInterface )
+    call DestroyTimerDialogBJ(udg_TimerUpgInterface)
 endfunction
 
 //===========================================================================
 function InitTrig_TestUpgTimer4 takes nothing returns nothing
-    set gg_trg_TestUpgTimer4 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestUpgTimer4, udg_TimerAIUpgrade[3] )
-    call TriggerAddCondition( gg_trg_TestUpgTimer4, Condition( function Trig_TestUpgTimer4_Conditions ) )
-    call TriggerAddAction( gg_trg_TestUpgTimer4, function Trig_TestUpgTimer4_Actions )
+    set gg_trg_TestUpgTimer4=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestUpgTimer4, udg_TimerAIUpgrade[3])
+    call TriggerAddCondition(gg_trg_TestUpgTimer4, Condition(function Trig_TestUpgTimer4_Conditions))
+    call TriggerAddAction(gg_trg_TestUpgTimer4, function Trig_TestUpgTimer4_Actions)
 endfunction
 
 //===========================================================================
@@ -1647,16 +1633,16 @@ function Trig_TestEnemyTimer1_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestEnemyTimer1_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ( udg_TimerEnemyWave[1], "TRIGSTR_1151" )
-    set udg_TimerEnemyInterface = GetLastCreatedTimerDialogBJ()
+    call CreateTimerDialogBJ(udg_TimerEnemyWave[1], "TRIGSTR_1151")
+    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestEnemyTimer1 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer1 = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_TestEnemyTimer1, 1.00 )
-    call TriggerAddCondition( gg_trg_TestEnemyTimer1, Condition( function Trig_TestEnemyTimer1_Conditions ) )
-    call TriggerAddAction( gg_trg_TestEnemyTimer1, function Trig_TestEnemyTimer1_Actions )
+    set gg_trg_TestEnemyTimer1=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_TestEnemyTimer1, 1.00)
+    call TriggerAddCondition(gg_trg_TestEnemyTimer1, Condition(function Trig_TestEnemyTimer1_Conditions))
+    call TriggerAddAction(gg_trg_TestEnemyTimer1, function Trig_TestEnemyTimer1_Actions)
 endfunction
 
 //===========================================================================
@@ -1670,17 +1656,17 @@ function Trig_TestEnemyTimer2_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestEnemyTimer2_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerEnemyInterface )
-    call CreateTimerDialogBJ( udg_TimerEnemyWave[2], "TRIGSTR_1152" )
-    set udg_TimerEnemyInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
+    call CreateTimerDialogBJ(udg_TimerEnemyWave[2], "TRIGSTR_1152")
+    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestEnemyTimer2 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer2 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestEnemyTimer2, udg_TimerEnemyWave[1] )
-    call TriggerAddCondition( gg_trg_TestEnemyTimer2, Condition( function Trig_TestEnemyTimer2_Conditions ) )
-    call TriggerAddAction( gg_trg_TestEnemyTimer2, function Trig_TestEnemyTimer2_Actions )
+    set gg_trg_TestEnemyTimer2=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer2, udg_TimerEnemyWave[1])
+    call TriggerAddCondition(gg_trg_TestEnemyTimer2, Condition(function Trig_TestEnemyTimer2_Conditions))
+    call TriggerAddAction(gg_trg_TestEnemyTimer2, function Trig_TestEnemyTimer2_Actions)
 endfunction
 
 //===========================================================================
@@ -1694,17 +1680,17 @@ function Trig_TestEnemyTimer3_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestEnemyTimer3_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerEnemyInterface )
-    call CreateTimerDialogBJ( udg_TimerEnemyWave[3], "TRIGSTR_1153" )
-    set udg_TimerEnemyInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
+    call CreateTimerDialogBJ(udg_TimerEnemyWave[3], "TRIGSTR_1153")
+    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestEnemyTimer3 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer3 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestEnemyTimer3, udg_TimerEnemyWave[2] )
-    call TriggerAddCondition( gg_trg_TestEnemyTimer3, Condition( function Trig_TestEnemyTimer3_Conditions ) )
-    call TriggerAddAction( gg_trg_TestEnemyTimer3, function Trig_TestEnemyTimer3_Actions )
+    set gg_trg_TestEnemyTimer3=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer3, udg_TimerEnemyWave[2])
+    call TriggerAddCondition(gg_trg_TestEnemyTimer3, Condition(function Trig_TestEnemyTimer3_Conditions))
+    call TriggerAddAction(gg_trg_TestEnemyTimer3, function Trig_TestEnemyTimer3_Actions)
 endfunction
 
 //===========================================================================
@@ -1718,17 +1704,17 @@ function Trig_TestEnemyTimer4_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestEnemyTimer4_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerEnemyInterface )
-    call CreateTimerDialogBJ( udg_TimerEnemyWave[4], "TRIGSTR_1154" )
-    set udg_TimerEnemyInterface = GetLastCreatedTimerDialogBJ()
+    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
+    call CreateTimerDialogBJ(udg_TimerEnemyWave[4], "TRIGSTR_1154")
+    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
 endfunction
 
 //===========================================================================
 function InitTrig_TestEnemyTimer4 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer4 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestEnemyTimer4, udg_TimerEnemyWave[3] )
-    call TriggerAddCondition( gg_trg_TestEnemyTimer4, Condition( function Trig_TestEnemyTimer4_Conditions ) )
-    call TriggerAddAction( gg_trg_TestEnemyTimer4, function Trig_TestEnemyTimer4_Actions )
+    set gg_trg_TestEnemyTimer4=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer4, udg_TimerEnemyWave[3])
+    call TriggerAddCondition(gg_trg_TestEnemyTimer4, Condition(function Trig_TestEnemyTimer4_Conditions))
+    call TriggerAddAction(gg_trg_TestEnemyTimer4, function Trig_TestEnemyTimer4_Actions)
 endfunction
 
 //===========================================================================
@@ -1742,15 +1728,15 @@ function Trig_TestEnemyTimer5_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_TestEnemyTimer5_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ( udg_TimerEnemyInterface )
+    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
 endfunction
 
 //===========================================================================
 function InitTrig_TestEnemyTimer5 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer5 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_TestEnemyTimer5, udg_TimerEnemyWave[4] )
-    call TriggerAddCondition( gg_trg_TestEnemyTimer5, Condition( function Trig_TestEnemyTimer5_Conditions ) )
-    call TriggerAddAction( gg_trg_TestEnemyTimer5, function Trig_TestEnemyTimer5_Actions )
+    set gg_trg_TestEnemyTimer5=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer5, udg_TimerEnemyWave[4])
+    call TriggerAddCondition(gg_trg_TestEnemyTimer5, Condition(function Trig_TestEnemyTimer5_Conditions))
+    call TriggerAddAction(gg_trg_TestEnemyTimer5, function Trig_TestEnemyTimer5_Actions)
 endfunction
 
 //===========================================================================
@@ -1764,36 +1750,36 @@ function Trig_Iseedeadpeople_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_Iseedeadpeople_Actions takes nothing returns nothing
-    call CreateFogModifierRectBJ( true, Player(0), FOG_OF_WAR_VISIBLE, GetPlayableMapRect() )
-    call CreateFogModifierRectBJ( true, Player(1), FOG_OF_WAR_VISIBLE, GetPlayableMapRect() )
+    call CreateFogModifierRectBJ(true, Player(0), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+    call CreateFogModifierRectBJ(true, Player(1), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
 endfunction
 
 //===========================================================================
 function InitTrig_Iseedeadpeople takes nothing returns nothing
-    set gg_trg_Iseedeadpeople = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_Iseedeadpeople, 0.01 )
-    call TriggerAddCondition( gg_trg_Iseedeadpeople, Condition( function Trig_Iseedeadpeople_Conditions ) )
-    call TriggerAddAction( gg_trg_Iseedeadpeople, function Trig_Iseedeadpeople_Actions )
+    set gg_trg_Iseedeadpeople=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_Iseedeadpeople, 0.01)
+    call TriggerAddCondition(gg_trg_Iseedeadpeople, Condition(function Trig_Iseedeadpeople_Conditions))
+    call TriggerAddAction(gg_trg_Iseedeadpeople, function Trig_Iseedeadpeople_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: MultiboardStart
 //===========================================================================
 function Trig_MultiboardStart_Actions takes nothing returns nothing
-    call CreateMultiboardBJ( 2, 1, "TRIGSTR_1046" )
-    call MultiboardSetItemStyleBJ( GetLastCreatedMultiboard(), 1, 1, true, false )
-    call MultiboardSetItemStyleBJ( GetLastCreatedMultiboard(), 2, 1, true, false )
-    call MultiboardSetItemWidthBJ( GetLastCreatedMultiboard(), 1, 1, 5.00 )
-    call MultiboardSetItemWidthBJ( GetLastCreatedMultiboard(), 2, 1, 5.00 )
-    call MultiboardSetItemValueBJ( GetLastCreatedMultiboard(), 1, 1, "TRIGSTR_1052" )
-    call MultiboardDisplayBJ( true, GetLastCreatedMultiboard() )
+    call CreateMultiboardBJ(2, 1, "TRIGSTR_1046")
+    call MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 1, true, false)
+    call MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 1, true, false)
+    call MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 1, 5.00)
+    call MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 1, 5.00)
+    call MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 1, "TRIGSTR_1052")
+    call MultiboardDisplayBJ(true, GetLastCreatedMultiboard())
 endfunction
 
 //===========================================================================
 function InitTrig_MultiboardStart takes nothing returns nothing
-    set gg_trg_MultiboardStart = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_MultiboardStart, 0.01 )
-    call TriggerAddAction( gg_trg_MultiboardStart, function Trig_MultiboardStart_Actions )
+    set gg_trg_MultiboardStart=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_MultiboardStart, 0.01)
+    call TriggerAddAction(gg_trg_MultiboardStart, function Trig_MultiboardStart_Actions)
 endfunction
 
 //===========================================================================
@@ -1815,93 +1801,93 @@ endfunction
 
 function Trig_MultiboardPeriodicInfo_Actions takes nothing returns nothing
     if ( Trig_MultiboardPeriodicInfo_Func001C() ) then
-        set udg_Time_Sec = ( udg_Time_Sec + 1 )
+        set udg_Time_Sec=( udg_Time_Sec + 1 )
     else
-        set udg_Time_Min = ( udg_Time_Min + 1 )
-        set udg_Time_Sec = 0
+        set udg_Time_Min=( udg_Time_Min + 1 )
+        set udg_Time_Sec=0
     endif
     if ( Trig_MultiboardPeriodicInfo_Func002C() ) then
-        call MultiboardSetItemValueBJ( GetLastCreatedMultiboard(), 2, 1, ( I2S(udg_Time_Min) + ( ":0" + I2S(udg_Time_Sec) ) ) )
+        call MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 1, ( I2S(udg_Time_Min) + ( ":0" + I2S(udg_Time_Sec) ) ))
     else
-        call MultiboardSetItemValueBJ( GetLastCreatedMultiboard(), 2, 1, ( I2S(udg_Time_Min) + ( ":" + I2S(udg_Time_Sec) ) ) )
+        call MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 1, ( I2S(udg_Time_Min) + ( ":" + I2S(udg_Time_Sec) ) ))
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_MultiboardPeriodicInfo takes nothing returns nothing
-    set gg_trg_MultiboardPeriodicInfo = CreateTrigger(  )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_MultiboardPeriodicInfo, 1.00 )
-    call TriggerAddAction( gg_trg_MultiboardPeriodicInfo, function Trig_MultiboardPeriodicInfo_Actions )
+    set gg_trg_MultiboardPeriodicInfo=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_MultiboardPeriodicInfo, 1.00)
+    call TriggerAddAction(gg_trg_MultiboardPeriodicInfo, function Trig_MultiboardPeriodicInfo_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: StartResouces
 //===========================================================================
 function Trig_StartResouces_Actions takes nothing returns nothing
-    call MeleeStartingResources(  )
+    call MeleeStartingResources()
 endfunction
 
 //===========================================================================
 function InitTrig_StartResouces takes nothing returns nothing
-    set gg_trg_StartResouces = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_StartResouces, function Trig_StartResouces_Actions )
+    set gg_trg_StartResouces=CreateTrigger()
+    call TriggerAddAction(gg_trg_StartResouces, function Trig_StartResouces_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: StartVisiblity
 //===========================================================================
 function Trig_StartVisiblity_Actions takes nothing returns nothing
-    call CreateFogModifierRectBJ( true, Player(0), FOG_OF_WAR_VISIBLE, gg_rct_StartRegion )
+    call CreateFogModifierRectBJ(true, Player(0), FOG_OF_WAR_VISIBLE, gg_rct_StartRegion)
 endfunction
 
 //===========================================================================
 function InitTrig_StartVisiblity takes nothing returns nothing
-    set gg_trg_StartVisiblity = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_StartVisiblity, function Trig_StartVisiblity_Actions )
+    set gg_trg_StartVisiblity=CreateTrigger()
+    call TriggerAddAction(gg_trg_StartVisiblity, function Trig_StartVisiblity_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: StartCameraP1
 //===========================================================================
 function Trig_StartCameraP1_Actions takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_001, Player(0), 0 )
+    call CameraSetupApplyForPlayer(true, gg_cam_Camera_001, Player(0), 0)
 endfunction
 
 //===========================================================================
 function InitTrig_StartCameraP1 takes nothing returns nothing
-    set gg_trg_StartCameraP1 = CreateTrigger(  )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_StartCameraP1, 0.10 )
-    call TriggerAddAction( gg_trg_StartCameraP1, function Trig_StartCameraP1_Actions )
+    set gg_trg_StartCameraP1=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP1, 0.10)
+    call TriggerAddAction(gg_trg_StartCameraP1, function Trig_StartCameraP1_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: StartCameraP2
 //===========================================================================
 function Trig_StartCameraP2_Actions takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_001, Player(1), 0 )
+    call CameraSetupApplyForPlayer(true, gg_cam_Camera_001, Player(1), 0)
 endfunction
 
 //===========================================================================
 function InitTrig_StartCameraP2 takes nothing returns nothing
-    set gg_trg_StartCameraP2 = CreateTrigger(  )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_StartCameraP2, 0.10 )
-    call TriggerAddAction( gg_trg_StartCameraP2, function Trig_StartCameraP2_Actions )
+    set gg_trg_StartCameraP2=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP2, 0.10)
+    call TriggerAddAction(gg_trg_StartCameraP2, function Trig_StartCameraP2_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: StartCameraReset
 //===========================================================================
 function Trig_StartCameraReset_Actions takes nothing returns nothing
-    call DisableTrigger( gg_trg_StartCameraP1 )
-    call DisableTrigger( gg_trg_StartCameraP2 )
-    call ResetToGameCameraForPlayer( GetOwningPlayer(GetSpellAbilityUnit()), 0 )
-    call PanCameraToTimedLocForPlayer( GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0 )
+    call DisableTrigger(gg_trg_StartCameraP1)
+    call DisableTrigger(gg_trg_StartCameraP2)
+    call ResetToGameCameraForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), 0)
+    call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
 endfunction
 
 //===========================================================================
 function InitTrig_StartCameraReset takes nothing returns nothing
-    set gg_trg_StartCameraReset = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_StartCameraReset, function Trig_StartCameraReset_Actions )
+    set gg_trg_StartCameraReset=CreateTrigger()
+    call TriggerAddAction(gg_trg_StartCameraReset, function Trig_StartCameraReset_Actions)
 endfunction
 
 //===========================================================================
@@ -1911,42 +1897,42 @@ endfunction
 //===========================================================================
 function Trig_LimitUnits_Func001A takes nothing returns nothing
     // Arthas
-    call SetPlayerTechMaxAllowedSwap( 'U006', 1, GetEnumPlayer() )
-    call SetPlayerTechMaxAllowedSwap( 'U000', 1, GetEnumPlayer() )
-    call SetPlayerTechMaxAllowedSwap( 'u01C', 1, GetEnumPlayer() )
+    call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('U000', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('u01C', 1, GetEnumPlayer())
     // Uther
-    call SetPlayerTechMaxAllowedSwap( 'H02D', 1, GetEnumPlayer() )
-    call SetPlayerTechMaxAllowedSwap( 'H00B', 1, GetEnumPlayer() )
+    call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
 endfunction
 
 function Trig_LimitUnits_Actions takes nothing returns nothing
-    call ForForce( GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnits_Func001A )
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnits_Func001A)
 endfunction
 
 //===========================================================================
 function InitTrig_LimitUnits takes nothing returns nothing
-    set gg_trg_LimitUnits = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_LimitUnits, function Trig_LimitUnits_Actions )
+    set gg_trg_LimitUnits=CreateTrigger()
+    call TriggerAddAction(gg_trg_LimitUnits, function Trig_LimitUnits_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: ChooseFirst
 //===========================================================================
 function Trig_ChooseFirst_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 24
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=24
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SelectUnitForPlayerSingle( GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(ConvertedPlayer(GetForLoopIndexA()), 'h001')), ConvertedPlayer(GetForLoopIndexA()) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SelectUnitForPlayerSingle(GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(ConvertedPlayer(GetForLoopIndexA()), 'h001')), ConvertedPlayer(GetForLoopIndexA()))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_ChooseFirst takes nothing returns nothing
-    set gg_trg_ChooseFirst = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_ChooseFirst, 0.01 )
-    call TriggerAddAction( gg_trg_ChooseFirst, function Trig_ChooseFirst_Actions )
+    set gg_trg_ChooseFirst=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_ChooseFirst, 0.01)
+    call TriggerAddAction(gg_trg_ChooseFirst, function Trig_ChooseFirst_Actions)
 endfunction
 
 //===========================================================================
@@ -1960,7 +1946,7 @@ function Trig_UnSelect_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UnSelect_Func005Func001Func002A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ( true, 'A01C', GetEnumPlayer() )
+    call SetPlayerAbilityAvailableBJ(true, 'A01C', GetEnumPlayer())
 endfunction
 
 function Trig_UnSelect_Func005Func001C takes nothing returns boolean
@@ -1971,7 +1957,7 @@ function Trig_UnSelect_Func005Func001C takes nothing returns boolean
 endfunction
 
 function Trig_UnSelect_Func005Func003A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ( true, 'A01J', GetEnumPlayer() )
+    call SetPlayerAbilityAvailableBJ(true, 'A01J', GetEnumPlayer())
 endfunction
 
 function Trig_UnSelect_Func005C takes nothing returns boolean
@@ -1982,15 +1968,15 @@ function Trig_UnSelect_Func005C takes nothing returns boolean
 endfunction
 
 function Trig_UnSelect_Actions takes nothing returns nothing
-    call ShowUnitHide( GetSpellAbilityUnit() )
-    call CreateNUnitsAtLoc( 1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()) )
-    call SelectUnitForPlayerSingle( GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()) )
-    call RemoveUnit( GetSpellAbilityUnit() )
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
+    call RemoveUnit(GetSpellAbilityUnit())
     if ( Trig_UnSelect_Func005C() ) then
-        call ForForce( GetPlayersAll(), function Trig_UnSelect_Func005Func003A )
+        call ForForce(GetPlayersAll(), function Trig_UnSelect_Func005Func003A)
     else
         if ( Trig_UnSelect_Func005Func001C() ) then
-            call ForForce( GetPlayersAll(), function Trig_UnSelect_Func005Func001Func002A )
+            call ForForce(GetPlayersAll(), function Trig_UnSelect_Func005Func001Func002A)
         else
         endif
     endif
@@ -1998,10 +1984,10 @@ endfunction
 
 //===========================================================================
 function InitTrig_UnSelect takes nothing returns nothing
-    set gg_trg_UnSelect = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UnSelect, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_UnSelect, Condition( function Trig_UnSelect_Conditions ) )
-    call TriggerAddAction( gg_trg_UnSelect, function Trig_UnSelect_Actions )
+    set gg_trg_UnSelect=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UnSelect, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_UnSelect, Condition(function Trig_UnSelect_Conditions))
+    call TriggerAddAction(gg_trg_UnSelect, function Trig_UnSelect_Actions)
 endfunction
 
 //===========================================================================
@@ -2015,23 +2001,23 @@ function Trig_PreviewArthas_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_PreviewArthas_Func005A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ( false, 'A01C', GetEnumPlayer() )
+    call SetPlayerAbilityAvailableBJ(false, 'A01C', GetEnumPlayer())
 endfunction
 
 function Trig_PreviewArthas_Actions takes nothing returns nothing
-    call ShowUnitHide( GetSpellAbilityUnit() )
-    call CreateNUnitsAtLoc( 1, 'h00T', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()) )
-    call SelectUnitForPlayerSingle( GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()) )
-    call RemoveUnit( GetSpellAbilityUnit() )
-    call ForForce( GetPlayersAll(), function Trig_PreviewArthas_Func005A )
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'h00T', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
+    call RemoveUnit(GetSpellAbilityUnit())
+    call ForForce(GetPlayersAll(), function Trig_PreviewArthas_Func005A)
 endfunction
 
 //===========================================================================
 function InitTrig_PreviewArthas takes nothing returns nothing
-    set gg_trg_PreviewArthas = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_PreviewArthas, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_PreviewArthas, Condition( function Trig_PreviewArthas_Conditions ) )
-    call TriggerAddAction( gg_trg_PreviewArthas, function Trig_PreviewArthas_Actions )
+    set gg_trg_PreviewArthas=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewArthas, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_PreviewArthas, Condition(function Trig_PreviewArthas_Conditions))
+    call TriggerAddAction(gg_trg_PreviewArthas, function Trig_PreviewArthas_Actions)
 endfunction
 
 //===========================================================================
@@ -2045,23 +2031,23 @@ function Trig_PreviewUther_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_PreviewUther_Func005A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ( false, 'A01J', GetEnumPlayer() )
+    call SetPlayerAbilityAvailableBJ(false, 'A01J', GetEnumPlayer())
 endfunction
 
 function Trig_PreviewUther_Actions takes nothing returns nothing
-    call ShowUnitHide( GetSpellAbilityUnit() )
-    call CreateNUnitsAtLoc( 1, 'h00U', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()) )
-    call SelectUnitForPlayerSingle( GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()) )
-    call RemoveUnit( GetSpellAbilityUnit() )
-    call ForForce( GetPlayersAll(), function Trig_PreviewUther_Func005A )
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'h00U', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
+    call RemoveUnit(GetSpellAbilityUnit())
+    call ForForce(GetPlayersAll(), function Trig_PreviewUther_Func005A)
 endfunction
 
 //===========================================================================
 function InitTrig_PreviewUther takes nothing returns nothing
-    set gg_trg_PreviewUther = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_PreviewUther, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_PreviewUther, Condition( function Trig_PreviewUther_Conditions ) )
-    call TriggerAddAction( gg_trg_PreviewUther, function Trig_PreviewUther_Actions )
+    set gg_trg_PreviewUther=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewUther, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_PreviewUther, Condition(function Trig_PreviewUther_Conditions))
+    call TriggerAddAction(gg_trg_PreviewUther, function Trig_PreviewUther_Actions)
 endfunction
 
 //===========================================================================
@@ -2085,55 +2071,55 @@ function Trig_ChooseArthas_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ChooseArthas_Actions takes nothing returns nothing
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl" )
-    call TriggerSleepAction( 1.00 )
-    call ShowUnitHide( GetSpellAbilityUnit() )
-    call MeleeStartingUnitsForPlayer( RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true )
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'u009', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'u009', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
     // Ghoul
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'u010', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'u010', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
     // Acolyte
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
-    call TriggerSleepAction( 0.01 )
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
-    call TriggerSleepAction( 0.01 )
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
+    call TriggerSleepAction(0.01)
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
+    call TriggerSleepAction(0.01)
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
     // ----------------------
-    call RemoveUnit( GetSpellAbilityUnit() )
+    call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers-Arthas
-    set udg_PlayerArthas = GetOwningPlayer(GetSpellAbilityUnit())
-    call SetPlayerTechResearchedSwap( 'R00E', 1, GetOwningPlayer(GetSpellAbilityUnit()) )
-    call ConditionalTriggerExecute( gg_trg_ArthasIni )
-    call DisableTrigger( gg_trg_StartCameraP1 )
+    set udg_PlayerArthas=GetOwningPlayer(GetSpellAbilityUnit())
+    call SetPlayerTechResearchedSwap('R00E', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    call ConditionalTriggerExecute(gg_trg_ArthasIni)
+    call DisableTrigger(gg_trg_StartCameraP1)
     // SoulsScore
-    set udg_ArthasSouls = 0
-    call CreateLeaderboardBJ( GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_800" )
-    call LeaderboardAddItemBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_801", 0 )
-    call TriggerExecute( gg_trg_StartCameraReset )
+    set udg_ArthasSouls=0
+    call CreateLeaderboardBJ(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_800")
+    call LeaderboardAddItemBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_801", 0)
+    call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
 
 //===========================================================================
 function InitTrig_ChooseArthas takes nothing returns nothing
-    set gg_trg_ChooseArthas = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ChooseArthas, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ChooseArthas, Condition( function Trig_ChooseArthas_Conditions ) )
-    call TriggerAddAction( gg_trg_ChooseArthas, function Trig_ChooseArthas_Actions )
+    set gg_trg_ChooseArthas=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseArthas, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseArthas, Condition(function Trig_ChooseArthas_Conditions))
+    call TriggerAddAction(gg_trg_ChooseArthas, function Trig_ChooseArthas_Actions)
 endfunction
 
 //===========================================================================
@@ -2157,91 +2143,91 @@ function Trig_ChooseUther_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ChooseUther_Actions takes nothing returns nothing
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl" )
-    call TriggerSleepAction( 1.00 )
-    call ShowUnitHide( GetSpellAbilityUnit() )
-    call MeleeStartingUnitsForPlayer( RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true )
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'h00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'h00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
     // WorkerX5
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'h00O', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
-    call TriggerSleepAction( 0.01 )
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
-    call TriggerSleepAction( 0.01 )
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
-    call TriggerSleepAction( 0.01 )
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
-    call TriggerSleepAction( 0.01 )
-    set udg_CurrentUnit = GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide( udg_CurrentUnit )
-    call CreateNUnitsAtLoc( 1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING )
-    call RemoveUnit( udg_CurrentUnit )
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
+    call TriggerSleepAction(0.01)
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
+    call TriggerSleepAction(0.01)
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
+    call TriggerSleepAction(0.01)
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
+    call TriggerSleepAction(0.01)
+    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
+    call ShowUnitHide(udg_CurrentUnit)
+    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
+    call RemoveUnit(udg_CurrentUnit)
     // ----------------------
-    call RemoveUnit( GetSpellAbilityUnit() )
+    call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers-Uther
-    call SetPlayerTechResearchedSwap( 'R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()) )
-    call ConditionalTriggerExecute( gg_trg_UtherIni )
-    call TriggerExecute( gg_trg_StartCameraReset )
+    call SetPlayerTechResearchedSwap('R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    call ConditionalTriggerExecute(gg_trg_UtherIni)
+    call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
 
 //===========================================================================
 function InitTrig_ChooseUther takes nothing returns nothing
-    set gg_trg_ChooseUther = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ChooseUther, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ChooseUther, Condition( function Trig_ChooseUther_Conditions ) )
-    call TriggerAddAction( gg_trg_ChooseUther, function Trig_ChooseUther_Actions )
+    set gg_trg_ChooseUther=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseUther, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseUther, Condition(function Trig_ChooseUther_Conditions))
+    call TriggerAddAction(gg_trg_ChooseUther, function Trig_ChooseUther_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: ArthasIni
 //===========================================================================
 function Trig_ArthasIni_Actions takes nothing returns nothing
-    call EnableTrigger( gg_trg_ArthasPlagueNecropolis )
-    call EnableTrigger( gg_trg_ArthasSouls )
-    call EnableTrigger( gg_trg_ArthasSacrifice )
-    call EnableTrigger( gg_trg_ArthasBloodSoulReforge )
-    call EnableTrigger( gg_trg_ArthasFrostSoulReforge )
-    call EnableTrigger( gg_trg_ArthasUnholySoulReforge )
-    call EnableTrigger( gg_trg_ArthasHarvestSoulDead )
-    call EnableTrigger( gg_trg_ArthasHarvestSoul )
-    call EnableTrigger( gg_trg_ArthasMaxRuneLevel )
-    call EnableTrigger( gg_trg_ArthasNewRuneSecond )
-    call EnableTrigger( gg_trg_ArthasNewRuneThree )
-    call EnableTrigger( gg_trg_ArthasDebugSoul )
-    call EnableTrigger( gg_trg_ArthasRunesUpdate )
-    call EnableTrigger( gg_trg_ArthasPlagueDeadCorpse )
-    call EnableTrigger( gg_trg_ArthasUnholyRune2and3 )
-    call EnableTrigger( gg_trg_ArthasGhoulEffect )
-    call EnableTrigger( gg_trg_ArthasPlagueStoneForm )
-    call EnableTrigger( gg_trg_ArthasBloodFestAura )
-    call EnableTrigger( gg_trg_ArthasSurfeit )
-    call EnableTrigger( gg_trg_ArthasGlacialGusto )
-    call EnableTrigger( gg_trg_ArthasAbominationUnholyDead )
-    call EnableTrigger( gg_trg_ArthasBloodFuel )
-    call EnableTrigger( gg_trg_ArthasFrostmourne )
-    set udg_ArthasReforgeSoulCost = 20
-    call CreateNUnitsAtLoc( 1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING )
+    call EnableTrigger(gg_trg_ArthasPlagueNecropolis)
+    call EnableTrigger(gg_trg_ArthasSouls)
+    call EnableTrigger(gg_trg_ArthasSacrifice)
+    call EnableTrigger(gg_trg_ArthasBloodSoulReforge)
+    call EnableTrigger(gg_trg_ArthasFrostSoulReforge)
+    call EnableTrigger(gg_trg_ArthasUnholySoulReforge)
+    call EnableTrigger(gg_trg_ArthasHarvestSoulDead)
+    call EnableTrigger(gg_trg_ArthasHarvestSoul)
+    call EnableTrigger(gg_trg_ArthasMaxRuneLevel)
+    call EnableTrigger(gg_trg_ArthasNewRuneSecond)
+    call EnableTrigger(gg_trg_ArthasNewRuneThree)
+    call EnableTrigger(gg_trg_ArthasDebugSoul)
+    call EnableTrigger(gg_trg_ArthasRunesUpdate)
+    call EnableTrigger(gg_trg_ArthasPlagueDeadCorpse)
+    call EnableTrigger(gg_trg_ArthasUnholyRune2and3)
+    call EnableTrigger(gg_trg_ArthasGhoulEffect)
+    call EnableTrigger(gg_trg_ArthasPlagueStoneForm)
+    call EnableTrigger(gg_trg_ArthasBloodFestAura)
+    call EnableTrigger(gg_trg_ArthasSurfeit)
+    call EnableTrigger(gg_trg_ArthasGlacialGusto)
+    call EnableTrigger(gg_trg_ArthasAbominationUnholyDead)
+    call EnableTrigger(gg_trg_ArthasBloodFuel)
+    call EnableTrigger(gg_trg_ArthasFrostmourne)
+    set udg_ArthasReforgeSoulCost=20
+    call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasIni takes nothing returns nothing
-    set gg_trg_ArthasIni = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_ArthasIni, function Trig_ArthasIni_Actions )
+    set gg_trg_ArthasIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_ArthasIni, function Trig_ArthasIni_Actions)
 endfunction
 
 //===========================================================================
@@ -2256,21 +2242,21 @@ endfunction
 
 function Trig_ArthasNewRuneSecond_Actions takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "ArthasNewRuneSecond"
-    set udg_ConsoleMessage = "New Rune"
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="ArthasNewRuneSecond"
+    set udg_ConsoleMessage="New Rune"
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    call CreateNUnitsAtLoc( 1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING )
-    call DisableTrigger( GetTriggeringTrigger() )
+    call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasNewRuneSecond takes nothing returns nothing
-    set gg_trg_ArthasNewRuneSecond = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasNewRuneSecond )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasNewRuneSecond, EVENT_PLAYER_UNIT_UPGRADE_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasNewRuneSecond, Condition( function Trig_ArthasNewRuneSecond_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasNewRuneSecond, function Trig_ArthasNewRuneSecond_Actions )
+    set gg_trg_ArthasNewRuneSecond=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasNewRuneSecond)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasNewRuneSecond, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasNewRuneSecond, Condition(function Trig_ArthasNewRuneSecond_Conditions))
+    call TriggerAddAction(gg_trg_ArthasNewRuneSecond, function Trig_ArthasNewRuneSecond_Actions)
 endfunction
 
 //===========================================================================
@@ -2285,21 +2271,21 @@ endfunction
 
 function Trig_ArthasNewRuneThree_Actions takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "ArthasNewRuneThree"
-    set udg_ConsoleMessage = "New Rune"
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="ArthasNewRuneThree"
+    set udg_ConsoleMessage="New Rune"
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    call CreateNUnitsAtLoc( 1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING )
-    call DisableTrigger( GetTriggeringTrigger() )
+    call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call DisableTrigger(GetTriggeringTrigger())
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasNewRuneThree takes nothing returns nothing
-    set gg_trg_ArthasNewRuneThree = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasNewRuneThree )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasNewRuneThree, EVENT_PLAYER_UNIT_UPGRADE_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasNewRuneThree, Condition( function Trig_ArthasNewRuneThree_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasNewRuneThree, function Trig_ArthasNewRuneThree_Actions )
+    set gg_trg_ArthasNewRuneThree=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasNewRuneThree)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasNewRuneThree, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasNewRuneThree, Condition(function Trig_ArthasNewRuneThree_Conditions))
+    call TriggerAddAction(gg_trg_ArthasNewRuneThree, function Trig_ArthasNewRuneThree_Actions)
 endfunction
 
 //===========================================================================
@@ -2326,16 +2312,16 @@ function Trig_ArthasMaxRuneLevel_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasMaxRuneLevel_Actions takes nothing returns nothing
-    call RemoveUnit( GroupPickRandomUnit(GetUnitsOfTypeIdAll('u002')) )
+    call RemoveUnit(GroupPickRandomUnit(GetUnitsOfTypeIdAll('u002')))
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasMaxRuneLevel takes nothing returns nothing
-    set gg_trg_ArthasMaxRuneLevel = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasMaxRuneLevel )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasMaxRuneLevel, EVENT_PLAYER_UNIT_RESEARCH_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasMaxRuneLevel, Condition( function Trig_ArthasMaxRuneLevel_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasMaxRuneLevel, function Trig_ArthasMaxRuneLevel_Actions )
+    set gg_trg_ArthasMaxRuneLevel=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasMaxRuneLevel)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasMaxRuneLevel, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasMaxRuneLevel, Condition(function Trig_ArthasMaxRuneLevel_Conditions))
+    call TriggerAddAction(gg_trg_ArthasMaxRuneLevel, function Trig_ArthasMaxRuneLevel_Actions)
 endfunction
 
 //===========================================================================
@@ -2399,33 +2385,33 @@ endfunction
 
 function Trig_ArthasRunesUpdate_Actions takes nothing returns nothing
     if ( Trig_ArthasRunesUpdate_Func001C() ) then
-        call SetPlayerTechResearchedSwap( 'R00J', 1, GetOwningPlayer(GetTriggerUnit()) )
+        call SetPlayerTechResearchedSwap('R00J', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     if ( Trig_ArthasRunesUpdate_Func002C() ) then
-        call SetPlayerTechResearchedSwap( 'R00L', 1, GetOwningPlayer(GetTriggerUnit()) )
+        call SetPlayerTechResearchedSwap('R00L', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     if ( Trig_ArthasRunesUpdate_Func003C() ) then
-        call SetPlayerTechResearchedSwap( 'R00K', 1, GetOwningPlayer(GetTriggerUnit()) )
+        call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     if ( Trig_ArthasRunesUpdate_Func004C() ) then
-        call SetPlayerTechResearchedSwap( 'Rupc', 1, GetOwningPlayer(GetTriggerUnit()) )
+        call SetPlayerTechResearchedSwap('Rupc', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     if ( Trig_ArthasRunesUpdate_Func005C() ) then
-        call SetPlayerTechResearchedSwap( 'R00O', 1, GetOwningPlayer(GetTriggerUnit()) )
+        call SetPlayerTechResearchedSwap('R00O', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasRunesUpdate takes nothing returns nothing
-    set gg_trg_ArthasRunesUpdate = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasRunesUpdate )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasRunesUpdate, EVENT_PLAYER_UNIT_RESEARCH_FINISH )
-    call TriggerAddAction( gg_trg_ArthasRunesUpdate, function Trig_ArthasRunesUpdate_Actions )
+    set gg_trg_ArthasRunesUpdate=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasRunesUpdate)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRunesUpdate, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddAction(gg_trg_ArthasRunesUpdate, function Trig_ArthasRunesUpdate_Actions)
 endfunction
 
 //===========================================================================
@@ -2439,16 +2425,16 @@ function Trig_ArthasFrostmourne_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasFrostmourne_Actions takes nothing returns nothing
-    call SetPlayerTechResearchedSwap( 'R00S', GetUnitAbilityLevelSwapped('A02R', GetLearningUnit()), GetOwningPlayer(GetLearningUnit()) )
+    call SetPlayerTechResearchedSwap('R00S', GetUnitAbilityLevelSwapped('A02R', GetLearningUnit()), GetOwningPlayer(GetLearningUnit()))
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasFrostmourne takes nothing returns nothing
-    set gg_trg_ArthasFrostmourne = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasFrostmourne )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasFrostmourne, EVENT_PLAYER_HERO_SKILL )
-    call TriggerAddCondition( gg_trg_ArthasFrostmourne, Condition( function Trig_ArthasFrostmourne_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasFrostmourne, function Trig_ArthasFrostmourne_Actions )
+    set gg_trg_ArthasFrostmourne=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasFrostmourne)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasFrostmourne, EVENT_PLAYER_HERO_SKILL)
+    call TriggerAddCondition(gg_trg_ArthasFrostmourne, Condition(function Trig_ArthasFrostmourne_Conditions))
+    call TriggerAddAction(gg_trg_ArthasFrostmourne, function Trig_ArthasFrostmourne_Actions)
 endfunction
 
 //===========================================================================
@@ -2512,28 +2498,28 @@ endfunction
 
 function Trig_ArthasSouls_Actions takes nothing returns nothing
     if ( Trig_ArthasSouls_Func001C() ) then
-        call CreateNUnitsAtLoc( 1, 'u001', udg_PlayerArthas, GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-        call SetUnitLifeBJ( GetLastCreatedUnit(), GetRandomReal(4.00, 6.99) )
-        call UnitApplyTimedLifeBJ( 60, 'BTLF', GetLastCreatedUnit() )
-        call IssueTargetOrderBJ( GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')) )
+        call CreateNUnitsAtLoc(1, 'u001', udg_PlayerArthas, GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+        call SetUnitLifeBJ(GetLastCreatedUnit(), GetRandomReal(4.00, 6.99))
+        call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
     else
     endif
     if ( Trig_ArthasSouls_Func002C() ) then
-        call CreateNUnitsAtLoc( 1, 'u001', udg_PlayerArthas, GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-        call SetUnitLifeBJ( GetLastCreatedUnit(), GetRandomReal(4.00, 6.99) )
-        call UnitApplyTimedLifeBJ( 60, 'BTLF', GetLastCreatedUnit() )
-        call IssueTargetOrderBJ( GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')) )
+        call CreateNUnitsAtLoc(1, 'u001', udg_PlayerArthas, GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+        call SetUnitLifeBJ(GetLastCreatedUnit(), GetRandomReal(4.00, 6.99))
+        call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasSouls takes nothing returns nothing
-    set gg_trg_ArthasSouls = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasSouls )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasSouls, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_ArthasSouls, Condition( function Trig_ArthasSouls_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasSouls, function Trig_ArthasSouls_Actions )
+    set gg_trg_ArthasSouls=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasSouls)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasSouls, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasSouls, Condition(function Trig_ArthasSouls_Conditions))
+    call TriggerAddAction(gg_trg_ArthasSouls, function Trig_ArthasSouls_Actions)
 endfunction
 
 //===========================================================================
@@ -2547,16 +2533,16 @@ function Trig_ArthasHarvestSoulDead_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasHarvestSoulDead_Actions takes nothing returns nothing
-    call KillUnit( GetSpellAbilityUnit() )
+    call KillUnit(GetSpellAbilityUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasHarvestSoulDead takes nothing returns nothing
-    set gg_trg_ArthasHarvestSoulDead = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasHarvestSoulDead )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasHarvestSoulDead, EVENT_PLAYER_UNIT_SPELL_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasHarvestSoulDead, Condition( function Trig_ArthasHarvestSoulDead_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasHarvestSoulDead, function Trig_ArthasHarvestSoulDead_Actions )
+    set gg_trg_ArthasHarvestSoulDead=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasHarvestSoulDead)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasHarvestSoulDead, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasHarvestSoulDead, Condition(function Trig_ArthasHarvestSoulDead_Conditions))
+    call TriggerAddAction(gg_trg_ArthasHarvestSoulDead, function Trig_ArthasHarvestSoulDead_Actions)
 endfunction
 
 //===========================================================================
@@ -2570,25 +2556,25 @@ function Trig_ArthasHarvestSoul_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasHarvestSoul_Actions takes nothing returns nothing
-    call SetUnitVertexColorBJ( GetSpellAbilityUnit(), 100, 100, 100, 100.00 )
-    set udg_ArthasSouls = ( udg_ArthasSouls + R2I(GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit())) )
-    call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellTargetUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellTargetUnit())), udg_ArthasSouls )
+    call SetUnitVertexColorBJ(GetSpellAbilityUnit(), 100, 100, 100, 100.00)
+    set udg_ArthasSouls=( udg_ArthasSouls + R2I(GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit())) )
+    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellTargetUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellTargetUnit())), udg_ArthasSouls)
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasHarvestSoul takes nothing returns nothing
-    set gg_trg_ArthasHarvestSoul = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasHarvestSoul )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasHarvestSoul, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ArthasHarvestSoul, Condition( function Trig_ArthasHarvestSoul_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasHarvestSoul, function Trig_ArthasHarvestSoul_Actions )
+    set gg_trg_ArthasHarvestSoul=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasHarvestSoul)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasHarvestSoul, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasHarvestSoul, Condition(function Trig_ArthasHarvestSoul_Conditions))
+    call TriggerAddAction(gg_trg_ArthasHarvestSoul, function Trig_ArthasHarvestSoul_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: ArthasDebugSoul
 //===========================================================================
 function Trig_ArthasDebugSoul_Func001Func001A takes nothing returns nothing
-    call IssueImmediateOrderBJ( GetEnumUnit(), "stop" )
+    call IssueImmediateOrderBJ(GetEnumUnit(), "stop")
 endfunction
 
 function Trig_ArthasDebugSoul_Func001Func002Func001C takes nothing returns boolean
@@ -2600,7 +2586,7 @@ endfunction
 
 function Trig_ArthasDebugSoul_Func001Func002A takes nothing returns nothing
     if ( Trig_ArthasDebugSoul_Func001Func002Func001C() ) then
-        call IssueTargetOrderBJ( GetEnumUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')) )
+        call IssueTargetOrderBJ(GetEnumUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
     else
     endif
 endfunction
@@ -2614,18 +2600,18 @@ endfunction
 
 function Trig_ArthasDebugSoul_Actions takes nothing returns nothing
     if ( Trig_ArthasDebugSoul_Func001C() ) then
-        call ForGroupBJ( GetUnitsOfTypeIdAll('u001'), function Trig_ArthasDebugSoul_Func001Func002A )
+        call ForGroupBJ(GetUnitsOfTypeIdAll('u001'), function Trig_ArthasDebugSoul_Func001Func002A)
     else
-        call ForGroupBJ( GetUnitsOfTypeIdAll('u001'), function Trig_ArthasDebugSoul_Func001Func001A )
+        call ForGroupBJ(GetUnitsOfTypeIdAll('u001'), function Trig_ArthasDebugSoul_Func001Func001A)
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasDebugSoul takes nothing returns nothing
-    set gg_trg_ArthasDebugSoul = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasDebugSoul )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_ArthasDebugSoul, 3.00 )
-    call TriggerAddAction( gg_trg_ArthasDebugSoul, function Trig_ArthasDebugSoul_Actions )
+    set gg_trg_ArthasDebugSoul=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasDebugSoul)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_ArthasDebugSoul, 3.00)
+    call TriggerAddAction(gg_trg_ArthasDebugSoul, function Trig_ArthasDebugSoul_Actions)
 endfunction
 
 //===========================================================================
@@ -2690,40 +2676,40 @@ endfunction
 function Trig_ArthasUnholySoulReforge_Actions takes nothing returns nothing
     if ( Trig_ArthasUnholySoulReforge_Func001C() ) then
         if ( Trig_ArthasUnholySoulReforge_Func001Func002C() ) then
-            call UnitAddAbilityBJ( 'S00H', GetSpellTargetUnit() )
-            call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-            set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-            call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+            call UnitAddAbilityBJ('S00H', GetSpellTargetUnit())
+            call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+            call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001C() ) then
-                call UnitAddAbilityBJ( 'S00F', GetSpellTargetUnit() )
-                call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-                set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                call UnitAddAbilityBJ('S00F', GetSpellTargetUnit())
+                call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
                 if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001C() ) then
-                    call UnitAddAbilityBJ( 'S00E', GetSpellTargetUnit() )
-                    call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-                    set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                    call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                    call UnitAddAbilityBJ('S00E', GetSpellTargetUnit())
+                    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+                    set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
                     if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001C() ) then
-                        call UnitAddAbilityBJ( 'S00I', GetSpellTargetUnit() )
-                        call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-                        set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                        call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                        call UnitAddAbilityBJ('S00I', GetSpellTargetUnit())
+                        call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+                        set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                        call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
                         if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001C() ) then
-                            call UnitAddAbilityBJ( 'S00G', GetSpellTargetUnit() )
-                            call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-                            set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                            call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                            call UnitAddAbilityBJ('S00G', GetSpellTargetUnit())
+                            call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+                            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                            call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
                             if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001Func001C() ) then
-                                call UnitAddAbilityBJ( 'S00J', GetSpellTargetUnit() )
-                                call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-                                set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                                call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                                call UnitAddAbilityBJ('S00J', GetSpellTargetUnit())
+                                call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+                                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                                call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                             else
                             endif
                         endif
@@ -2732,17 +2718,17 @@ function Trig_ArthasUnholySoulReforge_Actions takes nothing returns nothing
             endif
         endif
     else
-        call DisplayTextToForce( GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_1246" )
+        call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_1246")
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasUnholySoulReforge takes nothing returns nothing
-    set gg_trg_ArthasUnholySoulReforge = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasUnholySoulReforge )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasUnholySoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ArthasUnholySoulReforge, Condition( function Trig_ArthasUnholySoulReforge_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasUnholySoulReforge, function Trig_ArthasUnholySoulReforge_Actions )
+    set gg_trg_ArthasUnholySoulReforge=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasUnholySoulReforge)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasUnholySoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasUnholySoulReforge, Condition(function Trig_ArthasUnholySoulReforge_Conditions))
+    call TriggerAddAction(gg_trg_ArthasUnholySoulReforge, function Trig_ArthasUnholySoulReforge_Actions)
 endfunction
 
 //===========================================================================
@@ -2807,40 +2793,40 @@ endfunction
 function Trig_ArthasFrostSoulReforge_Actions takes nothing returns nothing
     if ( Trig_ArthasFrostSoulReforge_Func001C() ) then
         if ( Trig_ArthasFrostSoulReforge_Func001Func002C() ) then
-            call UnitAddAbilityBJ( 'S00D', GetSpellTargetUnit() )
-            call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" )
-            set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-            call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+            call UnitAddAbilityBJ('S00D', GetSpellTargetUnit())
+            call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+            call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001C() ) then
-                call UnitAddAbilityBJ( 'S009', GetSpellTargetUnit() )
-                call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" )
-                set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                call UnitAddAbilityBJ('S009', GetSpellTargetUnit())
+                call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
                 if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001C() ) then
-                    call UnitAddAbilityBJ( 'S008', GetSpellTargetUnit() )
-                    call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" )
-                    set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                    call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                    call UnitAddAbilityBJ('S008', GetSpellTargetUnit())
+                    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+                    set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
                     if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001C() ) then
-                        call UnitAddAbilityBJ( 'S00B', GetSpellTargetUnit() )
-                        call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" )
-                        set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                        call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                        call UnitAddAbilityBJ('S00B', GetSpellTargetUnit())
+                        call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+                        set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                        call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
                         if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001C() ) then
-                            call UnitAddAbilityBJ( 'S00A', GetSpellTargetUnit() )
-                            call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" )
-                            set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                            call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                            call UnitAddAbilityBJ('S00A', GetSpellTargetUnit())
+                            call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+                            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                            call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
                             if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001Func001C() ) then
-                                call UnitAddAbilityBJ( 'S00C', GetSpellTargetUnit() )
-                                call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl" )
-                                set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                                call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                                call UnitAddAbilityBJ('S00C', GetSpellTargetUnit())
+                                call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+                                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                                call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                             else
                             endif
                         endif
@@ -2849,17 +2835,17 @@ function Trig_ArthasFrostSoulReforge_Actions takes nothing returns nothing
             endif
         endif
     else
-        call DisplayTextToForce( GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_1247" )
+        call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_1247")
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasFrostSoulReforge takes nothing returns nothing
-    set gg_trg_ArthasFrostSoulReforge = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasFrostSoulReforge )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasFrostSoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ArthasFrostSoulReforge, Condition( function Trig_ArthasFrostSoulReforge_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasFrostSoulReforge, function Trig_ArthasFrostSoulReforge_Actions )
+    set gg_trg_ArthasFrostSoulReforge=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasFrostSoulReforge)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasFrostSoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasFrostSoulReforge, Condition(function Trig_ArthasFrostSoulReforge_Conditions))
+    call TriggerAddAction(gg_trg_ArthasFrostSoulReforge, function Trig_ArthasFrostSoulReforge_Actions)
 endfunction
 
 //===========================================================================
@@ -2924,40 +2910,40 @@ endfunction
 function Trig_ArthasBloodSoulReforge_Actions takes nothing returns nothing
     if ( Trig_ArthasBloodSoulReforge_Func001C() ) then
         if ( Trig_ArthasBloodSoulReforge_Func001Func003C() ) then
-            call UnitAddAbilityBJ( 'S002', GetSpellTargetUnit() )
-            call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl" )
-            set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-            call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+            call UnitAddAbilityBJ('S002', GetSpellTargetUnit())
+            call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+            call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001C() ) then
-                call UnitAddAbilityBJ( 'S003', GetSpellTargetUnit() )
-                call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl" )
-                set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                call UnitAddAbilityBJ('S003', GetSpellTargetUnit())
+                call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
                 if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001C() ) then
-                    call UnitAddAbilityBJ( 'S004', GetSpellTargetUnit() )
-                    call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl" )
-                    set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                    call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                    call UnitAddAbilityBJ('S004', GetSpellTargetUnit())
+                    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+                    set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
                     if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001C() ) then
-                        call UnitAddAbilityBJ( 'S005', GetSpellTargetUnit() )
-                        call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl" )
-                        set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                        call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                        call UnitAddAbilityBJ('S005', GetSpellTargetUnit())
+                        call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+                        set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                        call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
                         if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001C() ) then
-                            call UnitAddAbilityBJ( 'S006', GetSpellTargetUnit() )
-                            call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl" )
-                            set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                            call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                            call UnitAddAbilityBJ('S006', GetSpellTargetUnit())
+                            call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+                            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                            call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
                             if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001Func001C() ) then
-                                call UnitAddAbilityBJ( 'S007', GetSpellTargetUnit() )
-                                call AddSpecialEffectLocBJ( GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl" )
-                                set udg_ArthasSouls = ( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
-                                call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls )
+                                call UnitAddAbilityBJ('S007', GetSpellTargetUnit())
+                                call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+                                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                                call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                             else
                             endif
                         endif
@@ -2966,17 +2952,17 @@ function Trig_ArthasBloodSoulReforge_Actions takes nothing returns nothing
             endif
         endif
     else
-        call DisplayTextToForce( GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_1248" )
+        call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_1248")
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasBloodSoulReforge takes nothing returns nothing
-    set gg_trg_ArthasBloodSoulReforge = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasBloodSoulReforge )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasBloodSoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ArthasBloodSoulReforge, Condition( function Trig_ArthasBloodSoulReforge_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasBloodSoulReforge, function Trig_ArthasBloodSoulReforge_Actions )
+    set gg_trg_ArthasBloodSoulReforge=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasBloodSoulReforge)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasBloodSoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasBloodSoulReforge, Condition(function Trig_ArthasBloodSoulReforge_Conditions))
+    call TriggerAddAction(gg_trg_ArthasBloodSoulReforge, function Trig_ArthasBloodSoulReforge_Actions)
 endfunction
 
 //===========================================================================
@@ -2990,20 +2976,20 @@ function Trig_ArthasBloodFuel_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasBloodFuel_Actions takes nothing returns nothing
-    call SetUnitLifeBJ( GetSpellTargetUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) - 200.00 ) )
-    call CreateNUnitsAtLoc( 1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING )
-    call UnitAddAbilityBJ( 'A02Q', GetLastCreatedUnit() )
-    call IssueTargetOrderBJ( GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit() )
-    call UnitApplyTimedLifeBJ( 5.00, 'BTLF', GetLastCreatedUnit() )
+    call SetUnitLifeBJ(GetSpellTargetUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) - 200.00 ))
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A02Q', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit())
+    call UnitApplyTimedLifeBJ(5.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasBloodFuel takes nothing returns nothing
-    set gg_trg_ArthasBloodFuel = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasBloodFuel )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasBloodFuel, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ArthasBloodFuel, Condition( function Trig_ArthasBloodFuel_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasBloodFuel, function Trig_ArthasBloodFuel_Actions )
+    set gg_trg_ArthasBloodFuel=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasBloodFuel)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasBloodFuel, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasBloodFuel, Condition(function Trig_ArthasBloodFuel_Conditions))
+    call TriggerAddAction(gg_trg_ArthasBloodFuel, function Trig_ArthasBloodFuel_Actions)
 endfunction
 
 //===========================================================================
@@ -3048,50 +3034,50 @@ function Trig_ArthasAbominationUnholyDead_Func005C takes nothing returns boolean
 endfunction
 
 function Trig_ArthasAbominationUnholyDead_Actions takes nothing returns nothing
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetDyingUnit()), "Units\\Undead\\Abomination\\AbominationExplosion.mdl" )
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetDyingUnit()), "Units\\Undead\\Abomination\\AbominationExplosion.mdl")
     if ( Trig_ArthasAbominationUnholyDead_Func003C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = GetPlayerTechCountSimple('R00G', GetOwningPlayer(GetDyingUnit()))
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=GetPlayerTechCountSimple('R00G', GetOwningPlayer(GetDyingUnit()))
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'u00Y', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-            call AddSpecialEffectLocBJ( GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl" )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'u00Y', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+            call AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     if ( Trig_ArthasAbominationUnholyDead_Func004C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetDyingUnit()))
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetDyingUnit()))
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'u01H', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-            call AddSpecialEffectLocBJ( GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl" )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'u01H', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+            call AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     if ( Trig_ArthasAbominationUnholyDead_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetDyingUnit()))
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetDyingUnit()))
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'u01F', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-            call AddSpecialEffectLocBJ( GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl" )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'u01F', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+            call AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
-    call RemoveUnit( GetDyingUnit() )
+    call RemoveUnit(GetDyingUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasAbominationUnholyDead takes nothing returns nothing
-    set gg_trg_ArthasAbominationUnholyDead = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasAbominationUnholyDead )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasAbominationUnholyDead, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_ArthasAbominationUnholyDead, Condition( function Trig_ArthasAbominationUnholyDead_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasAbominationUnholyDead, function Trig_ArthasAbominationUnholyDead_Actions )
+    set gg_trg_ArthasAbominationUnholyDead=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasAbominationUnholyDead)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasAbominationUnholyDead, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasAbominationUnholyDead, Condition(function Trig_ArthasAbominationUnholyDead_Conditions))
+    call TriggerAddAction(gg_trg_ArthasAbominationUnholyDead, function Trig_ArthasAbominationUnholyDead_Actions)
 endfunction
 
 //===========================================================================
@@ -3113,23 +3099,23 @@ endfunction
 
 function Trig_ArthasSurfeit_Actions takes nothing returns nothing
     if ( Trig_ArthasSurfeit_Func001C() ) then
-        set udg_AbominationSize = 0
-        call SetUnitAbilityLevelSwapped( 'A02L', GetSpellAbilityUnit(), ( GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit()) + 1 ) )
-        call BlzSetUnitMaxHP( GetSpellAbilityUnit(), ( BlzGetUnitMaxHP(GetSpellAbilityUnit()) + 100 ) )
-        set udg_AbominationSize = GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit())
-        set udg_AbominationSize = ( 100 + ( udg_AbominationSize * 7 ) )
-        call SetUnitScalePercent( GetSpellAbilityUnit(), I2R(udg_AbominationSize), I2R(udg_AbominationSize), I2R(udg_AbominationSize) )
+        set udg_AbominationSize=0
+        call SetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit(), ( GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit()) + 1 ))
+        call BlzSetUnitMaxHP(GetSpellAbilityUnit(), ( BlzGetUnitMaxHP(GetSpellAbilityUnit()) + 100 ))
+        set udg_AbominationSize=GetUnitAbilityLevelSwapped('A02L', GetSpellAbilityUnit())
+        set udg_AbominationSize=( 100 + ( udg_AbominationSize * 7 ) )
+        call SetUnitScalePercent(GetSpellAbilityUnit(), I2R(udg_AbominationSize), I2R(udg_AbominationSize), I2R(udg_AbominationSize))
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasSurfeit takes nothing returns nothing
-    set gg_trg_ArthasSurfeit = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasSurfeit )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasSurfeit, EVENT_PLAYER_UNIT_SPELL_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasSurfeit, Condition( function Trig_ArthasSurfeit_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasSurfeit, function Trig_ArthasSurfeit_Actions )
+    set gg_trg_ArthasSurfeit=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasSurfeit)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasSurfeit, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasSurfeit, Condition(function Trig_ArthasSurfeit_Conditions))
+    call TriggerAddAction(gg_trg_ArthasSurfeit, function Trig_ArthasSurfeit_Actions)
 endfunction
 
 //===========================================================================
@@ -3143,19 +3129,19 @@ function Trig_ArthasGlacialGusto_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasGlacialGusto_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc( 1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING )
-    call UnitAddAbilityBJ( 'A02M', GetLastCreatedUnit() )
-    call IssueTargetOrderBJ( GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit() )
-    call UnitApplyTimedLifeBJ( 5.00, 'BTLF', GetLastCreatedUnit() )
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A02M', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit())
+    call UnitApplyTimedLifeBJ(5.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasGlacialGusto takes nothing returns nothing
-    set gg_trg_ArthasGlacialGusto = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasGlacialGusto )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasGlacialGusto, EVENT_PLAYER_UNIT_SPELL_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasGlacialGusto, Condition( function Trig_ArthasGlacialGusto_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasGlacialGusto, function Trig_ArthasGlacialGusto_Actions )
+    set gg_trg_ArthasGlacialGusto=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasGlacialGusto)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasGlacialGusto, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasGlacialGusto, Condition(function Trig_ArthasGlacialGusto_Conditions))
+    call TriggerAddAction(gg_trg_ArthasGlacialGusto, function Trig_ArthasGlacialGusto_Actions)
 endfunction
 
 //===========================================================================
@@ -3224,18 +3210,18 @@ function Trig_ArthasBloodFestAura_Func001A takes nothing returns nothing
     if ( Trig_ArthasBloodFestAura_Func001Func001C() ) then
         // Additional check
         if ( Trig_ArthasBloodFestAura_Func001Func001Func004C() ) then
-            call UnitRemoveAbilityBJ( 'A02G', GetEnumUnit() )
+            call UnitRemoveAbilityBJ('A02G', GetEnumUnit())
         else
         endif
         // Scenario for bloody troops at level 3
         if ( Trig_ArthasBloodFestAura_Func001Func001Func006C() ) then
             if ( Trig_ArthasBloodFestAura_Func001Func001Func006Func002C() ) then
-                call SetUnitAbilityLevelSwapped( 'A022', GetEnumUnit(), 2 )
+                call SetUnitAbilityLevelSwapped('A022', GetEnumUnit(), 2)
             else
             endif
         else
             if ( Trig_ArthasBloodFestAura_Func001Func001Func006Func001C() ) then
-                call SetUnitAbilityLevelSwapped( 'A022', GetEnumUnit(), 1 )
+                call SetUnitAbilityLevelSwapped('A022', GetEnumUnit(), 1)
             else
             endif
         endif
@@ -3243,12 +3229,12 @@ function Trig_ArthasBloodFestAura_Func001A takes nothing returns nothing
         // Standard Scenario
         if ( Trig_ArthasBloodFestAura_Func001Func001Func002C() ) then
             if ( Trig_ArthasBloodFestAura_Func001Func001Func002Func002C() ) then
-                call UnitAddAbilityBJ( 'A02G', GetEnumUnit() )
+                call UnitAddAbilityBJ('A02G', GetEnumUnit())
             else
             endif
         else
             if ( Trig_ArthasBloodFestAura_Func001Func001Func002Func001C() ) then
-                call UnitRemoveAbilityBJ( 'A02G', GetEnumUnit() )
+                call UnitRemoveAbilityBJ('A02G', GetEnumUnit())
             else
             endif
         endif
@@ -3256,15 +3242,15 @@ function Trig_ArthasBloodFestAura_Func001A takes nothing returns nothing
 endfunction
 
 function Trig_ArthasBloodFestAura_Actions takes nothing returns nothing
-    call ForGroupBJ( GetUnitsInRectAll(GetPlayableMapRect()), function Trig_ArthasBloodFestAura_Func001A )
+    call ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), function Trig_ArthasBloodFestAura_Func001A)
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasBloodFestAura takes nothing returns nothing
-    set gg_trg_ArthasBloodFestAura = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasBloodFestAura )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_ArthasBloodFestAura, 1.00 )
-    call TriggerAddAction( gg_trg_ArthasBloodFestAura, function Trig_ArthasBloodFestAura_Actions )
+    set gg_trg_ArthasBloodFestAura=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasBloodFestAura)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_ArthasBloodFestAura, 1.00)
+    call TriggerAddAction(gg_trg_ArthasBloodFestAura, function Trig_ArthasBloodFestAura_Actions)
 endfunction
 
 //===========================================================================
@@ -3293,16 +3279,16 @@ function Trig_ArthasPlagueDeadCorpse_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasPlagueDeadCorpse_Actions takes nothing returns nothing
-    call CreateCorpseLocBJ( GetUnitTypeId(GetDyingUnit()), GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()) )
+    call CreateCorpseLocBJ(GetUnitTypeId(GetDyingUnit()), GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()))
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasPlagueDeadCorpse takes nothing returns nothing
-    set gg_trg_ArthasPlagueDeadCorpse = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasPlagueDeadCorpse )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasPlagueDeadCorpse, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_ArthasPlagueDeadCorpse, Condition( function Trig_ArthasPlagueDeadCorpse_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasPlagueDeadCorpse, function Trig_ArthasPlagueDeadCorpse_Actions )
+    set gg_trg_ArthasPlagueDeadCorpse=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasPlagueDeadCorpse)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasPlagueDeadCorpse, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasPlagueDeadCorpse, Condition(function Trig_ArthasPlagueDeadCorpse_Conditions))
+    call TriggerAddAction(gg_trg_ArthasPlagueDeadCorpse, function Trig_ArthasPlagueDeadCorpse_Actions)
 endfunction
 
 //===========================================================================
@@ -3338,7 +3324,7 @@ function Trig_ArthasUnholyRune2and3_Conditions takes nothing returns boolean
     if ( not Trig_ArthasUnholyRune2and3_Func003C() ) then
         return false
     endif
-    if ( not Trig_ArthasUnholyRune2and3_Func004C() ) then
+    if ( not (true) ) then // INLINED!!
         return false
     endif
     return true
@@ -3360,48 +3346,48 @@ endfunction
 
 function Trig_ArthasUnholyRune2and3_Actions takes nothing returns nothing
     if ( Trig_ArthasUnholyRune2and3_Func001C() ) then
-        call CreateNUnitsAtLoc( 1, 'u001', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-        call SetUnitLifeBJ( GetLastCreatedUnit(), GetRandomReal(2.00, 4.99) )
-        call UnitApplyTimedLifeBJ( 60, 'BTLF', GetLastCreatedUnit() )
-        call IssueTargetOrderBJ( GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')) )
+        call CreateNUnitsAtLoc(1, 'u001', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+        call SetUnitLifeBJ(GetLastCreatedUnit(), GetRandomReal(2.00, 4.99))
+        call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
     else
     endif
     if ( Trig_ArthasUnholyRune2and3_Func002C() ) then
-        call CreateNUnitsAtLoc( 1, 'n002', GetOwningPlayer(udg_Arthas), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING )
-        call UnitApplyTimedLifeBJ( 60, 'BTLF', GetLastCreatedUnit() )
-        call SetUnitAnimation( GetLastCreatedUnit(), "birth" )
+        call CreateNUnitsAtLoc(1, 'n002', GetOwningPlayer(udg_Arthas), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+        call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        call SetUnitAnimation(GetLastCreatedUnit(), "birth")
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasUnholyRune2and3 takes nothing returns nothing
-    set gg_trg_ArthasUnholyRune2and3 = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasUnholyRune2and3 )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasUnholyRune2and3, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_ArthasUnholyRune2and3, Condition( function Trig_ArthasUnholyRune2and3_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasUnholyRune2and3, function Trig_ArthasUnholyRune2and3_Actions )
+    set gg_trg_ArthasUnholyRune2and3=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasUnholyRune2and3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasUnholyRune2and3, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasUnholyRune2and3, Condition(function Trig_ArthasUnholyRune2and3_Conditions))
+    call TriggerAddAction(gg_trg_ArthasUnholyRune2and3, function Trig_ArthasUnholyRune2and3_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: ArthasPlagueStoneForm
 //===========================================================================
 function Trig_ArthasPlagueStoneForm_Func001A takes nothing returns nothing
-    call SetUnitManaBJ( GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 30.00 ) )
-    call SetBlightRadiusLocBJ( true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) )
-    call SetUnitAbilityLevelSwapped( 'A02C', GetEnumUnit(), ( R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())) / 100 ) )
+    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 30.00 ))
+    call SetBlightRadiusLocBJ(true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()))
+    call SetUnitAbilityLevelSwapped('A02C', GetEnumUnit(), ( R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())) / 100 ))
 endfunction
 
 function Trig_ArthasPlagueStoneForm_Actions takes nothing returns nothing
-    call ForGroupBJ( GetUnitsOfTypeIdAll('u01Z'), function Trig_ArthasPlagueStoneForm_Func001A )
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u01Z'), function Trig_ArthasPlagueStoneForm_Func001A)
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasPlagueStoneForm takes nothing returns nothing
-    set gg_trg_ArthasPlagueStoneForm = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasPlagueStoneForm )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_ArthasPlagueStoneForm, 3.00 )
-    call TriggerAddAction( gg_trg_ArthasPlagueStoneForm, function Trig_ArthasPlagueStoneForm_Actions )
+    set gg_trg_ArthasPlagueStoneForm=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasPlagueStoneForm)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_ArthasPlagueStoneForm, 3.00)
+    call TriggerAddAction(gg_trg_ArthasPlagueStoneForm, function Trig_ArthasPlagueStoneForm_Actions)
 endfunction
 
 //===========================================================================
@@ -3423,46 +3409,46 @@ function Trig_ArthasGhoulEffect_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasGhoulEffect_Actions takes nothing returns nothing
-    call AddSpecialEffectTargetUnitBJ( "weapon", GetSpellTargetUnit(), "Arthas_Sweep_Blight_Small.mdx" )
-    call AddSpecialEffectTargetUnitBJ( "overhead", GetSpellTargetUnit(), "Doodads\\LordaeronSummer\\Props\\Flies\\Flies" )
+    call AddSpecialEffectTargetUnitBJ("weapon", GetSpellTargetUnit(), "Arthas_Sweep_Blight_Small.mdx")
+    call AddSpecialEffectTargetUnitBJ("overhead", GetSpellTargetUnit(), "Doodads\\LordaeronSummer\\Props\\Flies\\Flies")
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasGhoulEffect takes nothing returns nothing
-    set gg_trg_ArthasGhoulEffect = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasGhoulEffect )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasGhoulEffect, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_ArthasGhoulEffect, Condition( function Trig_ArthasGhoulEffect_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasGhoulEffect, function Trig_ArthasGhoulEffect_Actions )
+    set gg_trg_ArthasGhoulEffect=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasGhoulEffect)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasGhoulEffect, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasGhoulEffect, Condition(function Trig_ArthasGhoulEffect_Conditions))
+    call TriggerAddAction(gg_trg_ArthasGhoulEffect, function Trig_ArthasGhoulEffect_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: ArthasPlagueNecropolis
 //===========================================================================
 function Trig_ArthasPlagueNecropolis_Func001A takes nothing returns nothing
-    call SetBlightRadiusLocBJ( true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) )
+    call SetBlightRadiusLocBJ(true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()))
 endfunction
 
 function Trig_ArthasPlagueNecropolis_Func002A takes nothing returns nothing
-    call SetBlightRadiusLocBJ( true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) )
+    call SetBlightRadiusLocBJ(true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()))
 endfunction
 
 function Trig_ArthasPlagueNecropolis_Func003A takes nothing returns nothing
-    call SetBlightRadiusLocBJ( true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) )
+    call SetBlightRadiusLocBJ(true, GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()))
 endfunction
 
 function Trig_ArthasPlagueNecropolis_Actions takes nothing returns nothing
-    call ForGroupBJ( GetUnitsOfTypeIdAll('u009'), function Trig_ArthasPlagueNecropolis_Func001A )
-    call ForGroupBJ( GetUnitsOfTypeIdAll('u00B'), function Trig_ArthasPlagueNecropolis_Func002A )
-    call ForGroupBJ( GetUnitsOfTypeIdAll('u00C'), function Trig_ArthasPlagueNecropolis_Func003A )
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u009'), function Trig_ArthasPlagueNecropolis_Func001A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00B'), function Trig_ArthasPlagueNecropolis_Func002A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00C'), function Trig_ArthasPlagueNecropolis_Func003A)
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasPlagueNecropolis takes nothing returns nothing
-    set gg_trg_ArthasPlagueNecropolis = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasPlagueNecropolis )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_ArthasPlagueNecropolis, 3.00 )
-    call TriggerAddAction( gg_trg_ArthasPlagueNecropolis, function Trig_ArthasPlagueNecropolis_Actions )
+    set gg_trg_ArthasPlagueNecropolis=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasPlagueNecropolis)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_ArthasPlagueNecropolis, 3.00)
+    call TriggerAddAction(gg_trg_ArthasPlagueNecropolis, function Trig_ArthasPlagueNecropolis_Actions)
 endfunction
 
 //===========================================================================
@@ -3476,35 +3462,35 @@ function Trig_ArthasSacrifice_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasSacrifice_Actions takes nothing returns nothing
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetTrainedUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl" )
-    call RemoveUnit( GetTrainedUnit() )
-    set udg_ArthasSouls = ( udg_ArthasSouls + 5 )
-    call LeaderboardSetPlayerItemValueBJ( GetOwningPlayer(GetTrainedUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetTrainedUnit())), udg_ArthasSouls )
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetTrainedUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
+    call RemoveUnit(GetTrainedUnit())
+    set udg_ArthasSouls=( udg_ArthasSouls + 5 )
+    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetTrainedUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetTrainedUnit())), udg_ArthasSouls)
 endfunction
 
 //===========================================================================
 function InitTrig_ArthasSacrifice takes nothing returns nothing
-    set gg_trg_ArthasSacrifice = CreateTrigger(  )
-    call DisableTrigger( gg_trg_ArthasSacrifice )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_ArthasSacrifice, EVENT_PLAYER_UNIT_TRAIN_FINISH )
-    call TriggerAddCondition( gg_trg_ArthasSacrifice, Condition( function Trig_ArthasSacrifice_Conditions ) )
-    call TriggerAddAction( gg_trg_ArthasSacrifice, function Trig_ArthasSacrifice_Actions )
+    set gg_trg_ArthasSacrifice=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasSacrifice)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasSacrifice, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasSacrifice, Condition(function Trig_ArthasSacrifice_Conditions))
+    call TriggerAddAction(gg_trg_ArthasSacrifice, function Trig_ArthasSacrifice_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: UtherIni
 //===========================================================================
 function Trig_UtherIni_Actions takes nothing returns nothing
-    call EnableTrigger( gg_trg_UtherDivineShield )
-    call EnableTrigger( gg_trg_UtherChampions )
-    call EnableTrigger( gg_trg_UtherChampionsDead )
-    call EnableTrigger( gg_trg_UtherOrderCodex )
+    call EnableTrigger(gg_trg_UtherDivineShield)
+    call EnableTrigger(gg_trg_UtherChampions)
+    call EnableTrigger(gg_trg_UtherChampionsDead)
+    call EnableTrigger(gg_trg_UtherOrderCodex)
 endfunction
 
 //===========================================================================
 function InitTrig_UtherIni takes nothing returns nothing
-    set gg_trg_UtherIni = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_UtherIni, function Trig_UtherIni_Actions )
+    set gg_trg_UtherIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_UtherIni, function Trig_UtherIni_Actions)
 endfunction
 
 //===========================================================================
@@ -3586,36 +3572,36 @@ endfunction
 function Trig_UtherDivineShield_Actions takes nothing returns nothing
     if ( Trig_UtherDivineShield_Func002C() ) then
         if ( Trig_UtherDivineShield_Func002Func001C() ) then
-            call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 30.00 )
+            call SetUnitLifePercentBJ(GetAttackedUnitBJ(), 30.00)
         else
             if ( Trig_UtherDivineShield_Func002Func001Func001C() ) then
-                call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 40.00 )
+                call SetUnitLifePercentBJ(GetAttackedUnitBJ(), 40.00)
             else
                 if ( Trig_UtherDivineShield_Func002Func001Func001Func001C() ) then
-                    call SetUnitLifePercentBJ( GetAttackedUnitBJ(), 50.00 )
+                    call SetUnitLifePercentBJ(GetAttackedUnitBJ(), 50.00)
                 else
                 endif
             endif
         endif
-        call SetUnitInvulnerable( GetAttackedUnitBJ(), true )
-        call UnitAddAbilityBJ( 'A001', GetAttackedUnitBJ() )
-        call TriggerSleepAction( 6.00 )
-        call SetUnitInvulnerable( GetAttackedUnitBJ(), false )
-        call UnitRemoveAbilityBJ( 'A001', GetAttackedUnitBJ() )
-        call UnitAddAbilityBJ( 'A002', GetAttackedUnitBJ() )
-        call TriggerSleepAction( 240.00 )
-        call UnitRemoveAbilityBJ( 'A002', GetAttackedUnitBJ() )
+        call SetUnitInvulnerable(GetAttackedUnitBJ(), true)
+        call UnitAddAbilityBJ('A001', GetAttackedUnitBJ())
+        call TriggerSleepAction(6.00)
+        call SetUnitInvulnerable(GetAttackedUnitBJ(), false)
+        call UnitRemoveAbilityBJ('A001', GetAttackedUnitBJ())
+        call UnitAddAbilityBJ('A002', GetAttackedUnitBJ())
+        call TriggerSleepAction(240.00)
+        call UnitRemoveAbilityBJ('A002', GetAttackedUnitBJ())
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_UtherDivineShield takes nothing returns nothing
-    set gg_trg_UtherDivineShield = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherDivineShield )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherDivineShield, EVENT_PLAYER_UNIT_DAMAGED )
-    call TriggerAddCondition( gg_trg_UtherDivineShield, Condition( function Trig_UtherDivineShield_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherDivineShield, function Trig_UtherDivineShield_Actions )
+    set gg_trg_UtherDivineShield=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherDivineShield)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherDivineShield, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_UtherDivineShield, Condition(function Trig_UtherDivineShield_Conditions))
+    call TriggerAddAction(gg_trg_UtherDivineShield, function Trig_UtherDivineShield_Actions)
 endfunction
 
 //===========================================================================
@@ -3664,28 +3650,28 @@ endfunction
 
 function Trig_UtherChampions_Actions takes nothing returns nothing
     if ( Trig_UtherChampions_Func001C() ) then
-        call CreateNUnitsAtLoc( 1, 'h00R', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING )
+        call CreateNUnitsAtLoc(1, 'h00R', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
     else
     endif
     if ( Trig_UtherChampions_Func002C() ) then
-        call CreateNUnitsAtLoc( 1, 'h00Q', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING )
+        call CreateNUnitsAtLoc(1, 'h00Q', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
     else
     endif
     if ( Trig_UtherChampions_Func003C() ) then
-        call CreateNUnitsAtLoc( 1, 'h00P', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING )
+        call CreateNUnitsAtLoc(1, 'h00P', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
     else
     endif
-    call AddSpecialEffectTargetUnitBJ( "origin", GetLastCreatedUnit(), "Uther_Void Teleport Yellow Target.mdx" )
-    call UnitApplyTimedLifeBJ( 60, 'BTLF', GetLastCreatedUnit() )
+    call AddSpecialEffectTargetUnitBJ("origin", GetLastCreatedUnit(), "Uther_Void Teleport Yellow Target.mdx")
+    call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_UtherChampions takes nothing returns nothing
-    set gg_trg_UtherChampions = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherChampions )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherChampions, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_UtherChampions, Condition( function Trig_UtherChampions_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherChampions, function Trig_UtherChampions_Actions )
+    set gg_trg_UtherChampions=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherChampions)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherChampions, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_UtherChampions, Condition(function Trig_UtherChampions_Conditions))
+    call TriggerAddAction(gg_trg_UtherChampions, function Trig_UtherChampions_Actions)
 endfunction
 
 //===========================================================================
@@ -3712,17 +3698,17 @@ function Trig_UtherChampionsDead_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherChampionsDead_Actions takes nothing returns nothing
-    call AddSpecialEffectLocBJ( GetUnitLoc(GetDyingUnit()), "Uther_Void Teleport Yellow Target.mdx" )
-    call RemoveUnit( GetDyingUnit() )
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetDyingUnit()), "Uther_Void Teleport Yellow Target.mdx")
+    call RemoveUnit(GetDyingUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_UtherChampionsDead takes nothing returns nothing
-    set gg_trg_UtherChampionsDead = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherChampionsDead )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherChampionsDead, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_UtherChampionsDead, Condition( function Trig_UtherChampionsDead_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherChampionsDead, function Trig_UtherChampionsDead_Actions )
+    set gg_trg_UtherChampionsDead=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherChampionsDead)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherChampionsDead, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_UtherChampionsDead, Condition(function Trig_UtherChampionsDead_Conditions))
+    call TriggerAddAction(gg_trg_UtherChampionsDead, function Trig_UtherChampionsDead_Actions)
 endfunction
 
 //===========================================================================
@@ -3738,18 +3724,18 @@ function Trig_UtherOrderCodex_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherOrderCodex_Actions takes nothing returns nothing
-    call SetPlayerTechResearchedSwap( 'R003', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()) )
-    call SetPlayerTechResearchedSwap( 'R009', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()) )
-    call SetPlayerTechResearchedSwap( 'R00T', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()) )
+    call SetPlayerTechResearchedSwap('R003', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()))
+    call SetPlayerTechResearchedSwap('R009', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()))
+    call SetPlayerTechResearchedSwap('R00T', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()))
 endfunction
 
 //===========================================================================
 function InitTrig_UtherOrderCodex takes nothing returns nothing
-    set gg_trg_UtherOrderCodex = CreateTrigger(  )
-    call DisableTrigger( gg_trg_UtherOrderCodex )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UtherOrderCodex, EVENT_PLAYER_UNIT_RESEARCH_FINISH )
-    call TriggerAddCondition( gg_trg_UtherOrderCodex, Condition( function Trig_UtherOrderCodex_Conditions ) )
-    call TriggerAddAction( gg_trg_UtherOrderCodex, function Trig_UtherOrderCodex_Actions )
+    set gg_trg_UtherOrderCodex=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherOrderCodex)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherOrderCodex, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_UtherOrderCodex, Condition(function Trig_UtherOrderCodex_Conditions))
+    call TriggerAddAction(gg_trg_UtherOrderCodex, function Trig_UtherOrderCodex_Actions)
 endfunction
 
 //===========================================================================
@@ -3766,24 +3752,24 @@ function Trig_PlayerCount_Func003Func001C takes nothing returns boolean
 endfunction
 
 function Trig_PlayerCount_Actions takes nothing returns nothing
-    set udg_PlayerChoise = 0
-    set udg_PlayerCount = 0
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 24
+    set udg_PlayerChoise=0
+    set udg_PlayerCount=0
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=24
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
         if ( Trig_PlayerCount_Func003Func001C() ) then
-            set udg_PlayerCount = ( udg_PlayerCount + 1 )
+            set udg_PlayerCount=( udg_PlayerCount + 1 )
         else
         endif
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_PlayerCount takes nothing returns nothing
-    set gg_trg_PlayerCount = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_PlayerCount, function Trig_PlayerCount_Actions )
+    set gg_trg_PlayerCount=CreateTrigger()
+    call TriggerAddAction(gg_trg_PlayerCount, function Trig_PlayerCount_Actions)
 endfunction
 
 //===========================================================================
@@ -3869,56 +3855,56 @@ endfunction
 function Trig_SetDifficulty_Actions takes nothing returns nothing
     // Set Difficulty
     if ( Trig_SetDifficulty_Func002C() ) then
-        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = 1
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=1
     else
     endif
     if ( Trig_SetDifficulty_Func003C() ) then
-        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = 2
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=2
     else
     endif
     if ( Trig_SetDifficulty_Func004C() ) then
-        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = 3
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=3
     else
     endif
     if ( Trig_SetDifficulty_Func005C() ) then
-        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))] = 4
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=4
     else
     endif
     // Made a choice
-    set udg_SetDifficulty = ( udg_SetDifficulty / udg_PlayerCount )
-    set udg_PlayerChoise = ( udg_PlayerChoise + 1 )
-    call ShowUnitHide( GetSpellAbilityUnit() )
-    call CreateNUnitsAtLoc( 1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), 185.00 )
-    call RemoveUnit( GetSpellAbilityUnit() )
-    call SelectUnitForPlayerSingle( GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()) )
+    set udg_SetDifficulty=( udg_SetDifficulty / udg_PlayerCount )
+    set udg_PlayerChoise=( udg_PlayerChoise + 1 )
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), 185.00)
+    call RemoveUnit(GetSpellAbilityUnit())
+    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
     // Everyone player made a choice
     if ( Trig_SetDifficulty_Func014C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 24
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=24
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
             if ( Trig_SetDifficulty_Func014Func001Func001C() ) then
-                set udg_SetDifficulty = ( udg_SetDifficulty + udg_SetPlayerDifficulty[GetForLoopIndexA()] )
+                set udg_SetDifficulty=( udg_SetDifficulty + udg_SetPlayerDifficulty[GetForLoopIndexA()] )
             else
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
-    set udg_SetDifficulty = ( udg_SetDifficulty / udg_PlayerCount )
+    set udg_SetDifficulty=( udg_SetDifficulty / udg_PlayerCount )
     // Console Log
-    set udg_ConsoleTrigger = "SetDifficulty"
-    set udg_ConsoleMessage = I2S(udg_SetDifficulty)
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="SetDifficulty"
+    set udg_ConsoleMessage=I2S(udg_SetDifficulty)
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
 endfunction
 
 //===========================================================================
 function InitTrig_SetDifficulty takes nothing returns nothing
-    set gg_trg_SetDifficulty = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_SetDifficulty, EVENT_PLAYER_UNIT_SPELL_CAST )
-    call TriggerAddCondition( gg_trg_SetDifficulty, Condition( function Trig_SetDifficulty_Conditions ) )
-    call TriggerAddAction( gg_trg_SetDifficulty, function Trig_SetDifficulty_Actions )
+    set gg_trg_SetDifficulty=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_SetDifficulty, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_SetDifficulty, Condition(function Trig_SetDifficulty_Conditions))
+    call TriggerAddAction(gg_trg_SetDifficulty, function Trig_SetDifficulty_Actions)
 endfunction
 
 //===========================================================================
@@ -3959,59 +3945,59 @@ function Trig_SetAIRace_Func003C takes nothing returns boolean
 endfunction
 
 function Trig_SetAIRace_Actions takes nothing returns nothing
-    set udg_RacesRandom = GetRandomReal(0, 100.00)
+    set udg_RacesRandom=GetRandomReal(0, 100.00)
     if ( Trig_SetAIRace_Func003C() ) then
         // Console Log
-        set udg_ConsoleMessage = "Human"
+        set udg_ConsoleMessage="Human"
         //  
-        set udg_SetRaces = RACE_HUMAN
-        set udg_SetRaces_Building = 'S00P'
-        set udg_SetRaces_Hero = 'S00T'
-        set udg_SetRaces_Unit = 'S001'
+        set udg_SetRaces=RACE_HUMAN
+        set udg_SetRaces_Building='S00P'
+        set udg_SetRaces_Hero='S00T'
+        set udg_SetRaces_Unit='S001'
     else
         if ( Trig_SetAIRace_Func003Func005C() ) then
             // Console Log
-            set udg_ConsoleMessage = "Orc"
+            set udg_ConsoleMessage="Orc"
             //  
-            set udg_SetRaces = RACE_ORC
-            set udg_SetRaces_Building = 'S00Q'
-            set udg_SetRaces_Hero = 'S00U'
-            set udg_SetRaces_Unit = 'S000'
+            set udg_SetRaces=RACE_ORC
+            set udg_SetRaces_Building='S00Q'
+            set udg_SetRaces_Hero='S00U'
+            set udg_SetRaces_Unit='S000'
         else
             if ( Trig_SetAIRace_Func003Func005Func004C() ) then
                 // Console Log
-                set udg_ConsoleMessage = "Undead"
+                set udg_ConsoleMessage="Undead"
                 //  
-                set udg_SetRaces = RACE_UNDEAD
-                set udg_SetRaces_Building = 'S00R'
-                set udg_SetRaces_Hero = 'S00W'
-                set udg_SetRaces_Unit = 'S00N'
+                set udg_SetRaces=RACE_UNDEAD
+                set udg_SetRaces_Building='S00R'
+                set udg_SetRaces_Hero='S00W'
+                set udg_SetRaces_Unit='S00N'
             else
                 if ( Trig_SetAIRace_Func003Func005Func004Func008C() ) then
                     // Console Log
-                    set udg_ConsoleMessage = "Night Elf"
+                    set udg_ConsoleMessage="Night Elf"
                     //  
-                    set udg_SetRaces = RACE_NIGHTELF
-                    set udg_SetRaces_Building = 'S00S'
-                    set udg_SetRaces_Hero = 'S00V'
-                    set udg_SetRaces_Unit = 'S00O'
+                    set udg_SetRaces=RACE_NIGHTELF
+                    set udg_SetRaces_Building='S00S'
+                    set udg_SetRaces_Hero='S00V'
+                    set udg_SetRaces_Unit='S00O'
                 else
                 endif
             endif
         endif
     endif
     // Console Log
-    set udg_ConsoleTrigger = "SetAIRace"
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="SetAIRace"
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    call ConditionalTriggerExecute( gg_trg_AddUnitBuildingHero )
-    call ConditionalTriggerExecute( gg_trg_SetUpgradeList )
+    call ConditionalTriggerExecute(gg_trg_AddUnitBuildingHero)
+    call ConditionalTriggerExecute(gg_trg_SetUpgradeList)
 endfunction
 
 //===========================================================================
 function InitTrig_SetAIRace takes nothing returns nothing
-    set gg_trg_SetAIRace = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_SetAIRace, function Trig_SetAIRace_Actions )
+    set gg_trg_SetAIRace=CreateTrigger()
+    call TriggerAddAction(gg_trg_SetAIRace, function Trig_SetAIRace_Actions)
 endfunction
 
 //===========================================================================
@@ -4024,30 +4010,30 @@ endfunction
 // 4 - Night Elf
 //===========================================================================
 function Trig_AddUnitBuildingHero_Func001A takes nothing returns nothing
-    call UnitAddAbilityBJ( udg_SetRaces_Unit, GetEnumUnit() )
-    call SetUnitAbilityLevelSwapped( udg_SetRaces_Unit, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())) )
+    call UnitAddAbilityBJ(udg_SetRaces_Unit, GetEnumUnit())
+    call SetUnitAbilityLevelSwapped(udg_SetRaces_Unit, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
 endfunction
 
 function Trig_AddUnitBuildingHero_Func002A takes nothing returns nothing
-    call UnitAddAbilityBJ( udg_SetRaces_Hero, GetEnumUnit() )
-    call SetUnitAbilityLevelSwapped( udg_SetRaces_Hero, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())) )
+    call UnitAddAbilityBJ(udg_SetRaces_Hero, GetEnumUnit())
+    call SetUnitAbilityLevelSwapped(udg_SetRaces_Hero, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
 endfunction
 
 function Trig_AddUnitBuildingHero_Func003A takes nothing returns nothing
-    call UnitAddAbilityBJ( udg_SetRaces_Building, GetEnumUnit() )
-    call SetUnitAbilityLevelSwapped( udg_SetRaces_Building, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())) )
+    call UnitAddAbilityBJ(udg_SetRaces_Building, GetEnumUnit())
+    call SetUnitAbilityLevelSwapped(udg_SetRaces_Building, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
 endfunction
 
 function Trig_AddUnitBuildingHero_Actions takes nothing returns nothing
-    call ForGroupBJ( GetUnitsOfTypeIdAll('h006'), function Trig_AddUnitBuildingHero_Func001A )
-    call ForGroupBJ( GetUnitsOfTypeIdAll('h008'), function Trig_AddUnitBuildingHero_Func002A )
-    call ForGroupBJ( GetUnitsOfTypeIdAll('h007'), function Trig_AddUnitBuildingHero_Func003A )
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h006'), function Trig_AddUnitBuildingHero_Func001A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h008'), function Trig_AddUnitBuildingHero_Func002A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h007'), function Trig_AddUnitBuildingHero_Func003A)
 endfunction
 
 //===========================================================================
 function InitTrig_AddUnitBuildingHero takes nothing returns nothing
-    set gg_trg_AddUnitBuildingHero = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_AddUnitBuildingHero, function Trig_AddUnitBuildingHero_Actions )
+    set gg_trg_AddUnitBuildingHero=CreateTrigger()
+    call TriggerAddAction(gg_trg_AddUnitBuildingHero, function Trig_AddUnitBuildingHero_Actions)
 endfunction
 
 //===========================================================================
@@ -4089,108 +4075,108 @@ endfunction
 function Trig_SetUpgradeList_Actions takes nothing returns nothing
     if ( Trig_SetUpgradeList_Func001C() ) then
         // T1
-        set udg_SetRaces_Upgrade[0] = 'Rhme'
-        set udg_SetRaces_Upgrade[1] = 'Rhar'
-        set udg_SetRaces_Upgrade[2] = 'Rhra'
-        set udg_SetRaces_Upgrade[3] = 'Rhla'
-        set udg_SetRaces_Upgrade[4] = 'Rhde'
-        set udg_SetRaces_Upgrade[5] = 'Rhac'
+        set udg_SetRaces_Upgrade[0]='Rhme'
+        set udg_SetRaces_Upgrade[1]='Rhar'
+        set udg_SetRaces_Upgrade[2]='Rhra'
+        set udg_SetRaces_Upgrade[3]='Rhla'
+        set udg_SetRaces_Upgrade[4]='Rhde'
+        set udg_SetRaces_Upgrade[5]='Rhac'
         // T2
-        set udg_SetRaces_Upgrade[6] = 'Rhri'
-        set udg_SetRaces_Upgrade[7] = 'Rhse'
-        set udg_SetRaces_Upgrade[8] = 'Rhst'
-        set udg_SetRaces_Upgrade[9] = 'Rhpt'
-        set udg_SetRaces_Upgrade[11] = 'Rhfl'
+        set udg_SetRaces_Upgrade[6]='Rhri'
+        set udg_SetRaces_Upgrade[7]='Rhse'
+        set udg_SetRaces_Upgrade[8]='Rhst'
+        set udg_SetRaces_Upgrade[9]='Rhpt'
+        set udg_SetRaces_Upgrade[11]='Rhfl'
         // T3
-        set udg_SetRaces_Upgrade[14] = 'Rhan'
-        set udg_SetRaces_Upgrade[15] = 'Rhss'
-        set udg_SetRaces_Upgrade[16] = 'Rhrt'
-        set udg_SetRaces_Upgrade[17] = 'Rhcd'
-        set udg_SetRaces_Upgrade[18] = 'Rhfc'
-        set udg_SetRaces_Upgrade[19] = 'Rhgb'
-        set udg_SetRaces_Upgrade[20] = 'Rhfs'
-        set udg_SetRaces_Upgrade[21] = 'Rhhb'
+        set udg_SetRaces_Upgrade[14]='Rhan'
+        set udg_SetRaces_Upgrade[15]='Rhss'
+        set udg_SetRaces_Upgrade[16]='Rhrt'
+        set udg_SetRaces_Upgrade[17]='Rhcd'
+        set udg_SetRaces_Upgrade[18]='Rhfc'
+        set udg_SetRaces_Upgrade[19]='Rhgb'
+        set udg_SetRaces_Upgrade[20]='Rhfs'
+        set udg_SetRaces_Upgrade[21]='Rhhb'
     else
     endif
     if ( Trig_SetUpgradeList_Func002C() ) then
         // T1
-        set udg_SetRaces_Upgrade[0] = 'Rome'
-        set udg_SetRaces_Upgrade[1] = 'Roar'
-        set udg_SetRaces_Upgrade[2] = 'Rora'
-        set udg_SetRaces_Upgrade[4] = 'Ropg'
-        set udg_SetRaces_Upgrade[5] = 'Rosp'
+        set udg_SetRaces_Upgrade[0]='Rome'
+        set udg_SetRaces_Upgrade[1]='Roar'
+        set udg_SetRaces_Upgrade[2]='Rora'
+        set udg_SetRaces_Upgrade[4]='Ropg'
+        set udg_SetRaces_Upgrade[5]='Rosp'
         // T2
-        set udg_SetRaces_Upgrade[6] = 'Robs'
-        set udg_SetRaces_Upgrade[7] = 'Rotr'
-        set udg_SetRaces_Upgrade[8] = 'Rost'
-        set udg_SetRaces_Upgrade[9] = 'Rowd'
-        set udg_SetRaces_Upgrade[10] = 'Rowt'
-        set udg_SetRaces_Upgrade[11] = 'Roen'
+        set udg_SetRaces_Upgrade[6]='Robs'
+        set udg_SetRaces_Upgrade[7]='Rotr'
+        set udg_SetRaces_Upgrade[8]='Rost'
+        set udg_SetRaces_Upgrade[9]='Rowd'
+        set udg_SetRaces_Upgrade[10]='Rowt'
+        set udg_SetRaces_Upgrade[11]='Roen'
         // T3
-        set udg_SetRaces_Upgrade[14] = 'Robk'
-        set udg_SetRaces_Upgrade[15] = 'Robf'
-        set udg_SetRaces_Upgrade[17] = 'Rolf'
-        set udg_SetRaces_Upgrade[18] = 'Rovs'
-        set udg_SetRaces_Upgrade[19] = 'Rwdm'
-        set udg_SetRaces_Upgrade[20] = 'Rorb'
-        set udg_SetRaces_Upgrade[21] = 'Rows'
+        set udg_SetRaces_Upgrade[14]='Robk'
+        set udg_SetRaces_Upgrade[15]='Robf'
+        set udg_SetRaces_Upgrade[17]='Rolf'
+        set udg_SetRaces_Upgrade[18]='Rovs'
+        set udg_SetRaces_Upgrade[19]='Rwdm'
+        set udg_SetRaces_Upgrade[20]='Rorb'
+        set udg_SetRaces_Upgrade[21]='Rows'
     else
     endif
     if ( Trig_SetUpgradeList_Func003C() ) then
         // T1
-        set udg_SetRaces_Upgrade[0] = 'Rume'
-        set udg_SetRaces_Upgrade[1] = 'Ruar'
-        set udg_SetRaces_Upgrade[2] = 'Rura'
-        set udg_SetRaces_Upgrade[3] = 'Rucr'
-        set udg_SetRaces_Upgrade[4] = 'Ruac'
+        set udg_SetRaces_Upgrade[0]='Rume'
+        set udg_SetRaces_Upgrade[1]='Ruar'
+        set udg_SetRaces_Upgrade[2]='Rura'
+        set udg_SetRaces_Upgrade[3]='Rucr'
+        set udg_SetRaces_Upgrade[4]='Ruac'
         // T2
-        set udg_SetRaces_Upgrade[6] = 'Rusl'
-        set udg_SetRaces_Upgrade[7] = 'Rubu'
-        set udg_SetRaces_Upgrade[8] = 'Rune'
-        set udg_SetRaces_Upgrade[9] = 'Ruba'
-        set udg_SetRaces_Upgrade[11] = 'Ruwb'
+        set udg_SetRaces_Upgrade[6]='Rusl'
+        set udg_SetRaces_Upgrade[7]='Rubu'
+        set udg_SetRaces_Upgrade[8]='Rune'
+        set udg_SetRaces_Upgrade[9]='Ruba'
+        set udg_SetRaces_Upgrade[11]='Ruwb'
         // T3
-        set udg_SetRaces_Upgrade[14] = 'Rugf'
-        set udg_SetRaces_Upgrade[15] = 'Rusf'
-        set udg_SetRaces_Upgrade[17] = 'Ruex'
-        set udg_SetRaces_Upgrade[18] = 'Rupc'
-        set udg_SetRaces_Upgrade[19] = 'Rusm'
-        set udg_SetRaces_Upgrade[20] = 'Rusp'
-        set udg_SetRaces_Upgrade[21] = 'Rufb'
+        set udg_SetRaces_Upgrade[14]='Rugf'
+        set udg_SetRaces_Upgrade[15]='Rusf'
+        set udg_SetRaces_Upgrade[17]='Ruex'
+        set udg_SetRaces_Upgrade[18]='Rupc'
+        set udg_SetRaces_Upgrade[19]='Rusm'
+        set udg_SetRaces_Upgrade[20]='Rusp'
+        set udg_SetRaces_Upgrade[21]='Rufb'
     else
     endif
     if ( Trig_SetUpgradeList_Func004C() ) then
         // T1
-        set udg_SetRaces_Upgrade[0] = 'Resm'
-        set udg_SetRaces_Upgrade[1] = 'Rema'
-        set udg_SetRaces_Upgrade[2] = 'Resw'
-        set udg_SetRaces_Upgrade[3] = 'Rerh'
-        set udg_SetRaces_Upgrade[4] = 'Reuv'
+        set udg_SetRaces_Upgrade[0]='Resm'
+        set udg_SetRaces_Upgrade[1]='Rema'
+        set udg_SetRaces_Upgrade[2]='Resw'
+        set udg_SetRaces_Upgrade[3]='Rerh'
+        set udg_SetRaces_Upgrade[4]='Reuv'
         // T2
-        set udg_SetRaces_Upgrade[6] = 'Reib'
-        set udg_SetRaces_Upgrade[7] = 'Resc'
-        set udg_SetRaces_Upgrade[8] = 'Redc'
-        set udg_SetRaces_Upgrade[9] = 'Redt'
-        set udg_SetRaces_Upgrade[11] = 'Repb'
-        set udg_SetRaces_Upgrade[12] = 'Renb'
-        set udg_SetRaces_Upgrade[13] = 'Resi'
+        set udg_SetRaces_Upgrade[6]='Reib'
+        set udg_SetRaces_Upgrade[7]='Resc'
+        set udg_SetRaces_Upgrade[8]='Redc'
+        set udg_SetRaces_Upgrade[9]='Redt'
+        set udg_SetRaces_Upgrade[11]='Repb'
+        set udg_SetRaces_Upgrade[12]='Renb'
+        set udg_SetRaces_Upgrade[13]='Resi'
         // T3
-        set udg_SetRaces_Upgrade[14] = 'Remk'
-        set udg_SetRaces_Upgrade[15] = 'Remg'
-        set udg_SetRaces_Upgrade[16] = 'Rews'
-        set udg_SetRaces_Upgrade[17] = 'Reec'
-        set udg_SetRaces_Upgrade[18] = 'Reeb'
-        set udg_SetRaces_Upgrade[19] = 'Rehs'
-        set udg_SetRaces_Upgrade[20] = 'Rers'
-        set udg_SetRaces_Upgrade[21] = 'Recb'
+        set udg_SetRaces_Upgrade[14]='Remk'
+        set udg_SetRaces_Upgrade[15]='Remg'
+        set udg_SetRaces_Upgrade[16]='Rews'
+        set udg_SetRaces_Upgrade[17]='Reec'
+        set udg_SetRaces_Upgrade[18]='Reeb'
+        set udg_SetRaces_Upgrade[19]='Rehs'
+        set udg_SetRaces_Upgrade[20]='Rers'
+        set udg_SetRaces_Upgrade[21]='Recb'
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_SetUpgradeList takes nothing returns nothing
-    set gg_trg_SetUpgradeList = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_SetUpgradeList, function Trig_SetUpgradeList_Actions )
+    set gg_trg_SetUpgradeList=CreateTrigger()
+    call TriggerAddAction(gg_trg_SetUpgradeList, function Trig_SetUpgradeList_Actions)
 endfunction
 
 //===========================================================================
@@ -4199,23 +4185,23 @@ endfunction
 // Sharing AI Upgrade Timers
 //===========================================================================
 function Trig_SetUpgradeTimer_Actions takes nothing returns nothing
-    set udg_TimerMinAIUpg[1] = ( 10.00 * 60.00 )
-    set udg_TimerMinAIUpg[2] = ( 20.00 * 60.00 )
-    set udg_TimerMinAIUpg[3] = ( 30.00 * 60.00 )
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 3
+    set udg_TimerMinAIUpg[1]=( 10.00 * 60.00 )
+    set udg_TimerMinAIUpg[2]=( 20.00 * 60.00 )
+    set udg_TimerMinAIUpg[3]=( 30.00 * 60.00 )
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call StartTimerBJ( udg_TimerAIUpgrade[GetForLoopIndexA()], false, udg_TimerMinAIUpg[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call StartTimerBJ(udg_TimerAIUpgrade[GetForLoopIndexA()], false, udg_TimerMinAIUpg[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_SetUpgradeTimer takes nothing returns nothing
-    set gg_trg_SetUpgradeTimer = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_SetUpgradeTimer, 0.01 )
-    call TriggerAddAction( gg_trg_SetUpgradeTimer, function Trig_SetUpgradeTimer_Actions )
+    set gg_trg_SetUpgradeTimer=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_SetUpgradeTimer, 0.01)
+    call TriggerAddAction(gg_trg_SetUpgradeTimer, function Trig_SetUpgradeTimer_Actions)
 endfunction
 
 //===========================================================================
@@ -4223,25 +4209,25 @@ endfunction
 //===========================================================================
 function Trig_AddUpgradeT1_Actions takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "AddUpgradeT1"
-    set udg_ConsoleMessage = "Enemy upgrade"
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="AddUpgradeT1"
+    set udg_ConsoleMessage="Enemy upgrade"
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    set bj_forLoopAIndex = 0
-    set bj_forLoopAIndexEnd = 5
+    set bj_forLoopAIndex=0
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_AddUpgradeT1 takes nothing returns nothing
-    set gg_trg_AddUpgradeT1 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_AddUpgradeT1, udg_TimerAIUpgrade[1] )
-    call TriggerAddAction( gg_trg_AddUpgradeT1, function Trig_AddUpgradeT1_Actions )
+    set gg_trg_AddUpgradeT1=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_AddUpgradeT1, udg_TimerAIUpgrade[1])
+    call TriggerAddAction(gg_trg_AddUpgradeT1, function Trig_AddUpgradeT1_Actions)
 endfunction
 
 //===========================================================================
@@ -4251,41 +4237,41 @@ endfunction
 //===========================================================================
 function Trig_AddUpgradeT2_Actions takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "AddUpgradeT2"
-    set udg_ConsoleMessage = "Enemy upgrade"
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="AddUpgradeT2"
+    set udg_ConsoleMessage="Enemy upgrade"
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    set bj_forLoopAIndex = 6
-    set bj_forLoopAIndexEnd = 13
+    set bj_forLoopAIndex=6
+    set bj_forLoopAIndexEnd=13
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 0
-    set bj_forLoopAIndexEnd = 3
+    set bj_forLoopAIndex=0
+    set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 5
-    set bj_forLoopAIndexEnd = 5
+    set bj_forLoopAIndex=5
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_AddUpgradeT2 takes nothing returns nothing
-    set gg_trg_AddUpgradeT2 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_AddUpgradeT2, udg_TimerAIUpgrade[2] )
-    call TriggerAddAction( gg_trg_AddUpgradeT2, function Trig_AddUpgradeT2_Actions )
+    set gg_trg_AddUpgradeT2=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_AddUpgradeT2, udg_TimerAIUpgrade[2])
+    call TriggerAddAction(gg_trg_AddUpgradeT2, function Trig_AddUpgradeT2_Actions)
 endfunction
 
 //===========================================================================
@@ -4295,49 +4281,49 @@ endfunction
 //===========================================================================
 function Trig_AddUpgradeT3_Actions takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "AddUpgradeT3"
-    set udg_ConsoleMessage = "Enemy upgrade"
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="AddUpgradeT3"
+    set udg_ConsoleMessage="Enemy upgrade"
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    set bj_forLoopAIndex = 14
-    set bj_forLoopAIndexEnd = 21
+    set bj_forLoopAIndex=14
+    set bj_forLoopAIndexEnd=21
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 1, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 0
-    set bj_forLoopAIndexEnd = 3
+    set bj_forLoopAIndex=0
+    set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 5
-    set bj_forLoopAIndexEnd = 5
+    set bj_forLoopAIndex=5
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 3, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 8
-    set bj_forLoopAIndexEnd = 10
+    set bj_forLoopAIndex=8
+    set bj_forLoopAIndexEnd=10
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(4) )
-        call SetPlayerTechResearchedSwap( udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(5) )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(4))
+        call SetPlayerTechResearchedSwap(udg_SetRaces_Upgrade[GetForLoopIndexA()], 2, Player(5))
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_AddUpgradeT3 takes nothing returns nothing
-    set gg_trg_AddUpgradeT3 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_AddUpgradeT3, udg_TimerAIUpgrade[3] )
-    call TriggerAddAction( gg_trg_AddUpgradeT3, function Trig_AddUpgradeT3_Actions )
+    set gg_trg_AddUpgradeT3=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_AddUpgradeT3, udg_TimerAIUpgrade[3])
+    call TriggerAddAction(gg_trg_AddUpgradeT3, function Trig_AddUpgradeT3_Actions)
 endfunction
 
 //===========================================================================
@@ -4490,53 +4476,53 @@ function Trig_AddHeroAbility_Actions takes nothing returns nothing
     // Alliance
     if ( Trig_AddHeroAbility_Func002C() ) then
         if ( Trig_AddHeroAbility_Func002Func001C() ) then
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AHbz' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHwe' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHab' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AHbz')
+                call SelectHeroSkill(GetEnumUnit(), 'AHwe')
+                call SelectHeroSkill(GetEnumUnit(), 'AHab')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func002Func002C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AHpx' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AHpx')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AHfs' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHbn' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHdr' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AHfs')
+                call SelectHeroSkill(GetEnumUnit(), 'AHbn')
+                call SelectHeroSkill(GetEnumUnit(), 'AHdr')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func002Func003C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AHav' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AHav')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AHtb' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHtc' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHbh' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AHtb')
+                call SelectHeroSkill(GetEnumUnit(), 'AHtc')
+                call SelectHeroSkill(GetEnumUnit(), 'AHbh')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func002Func004C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AHre' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AHre')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AHds' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHhb' )
-                call SelectHeroSkill( GetEnumUnit(), 'AHad' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AHds')
+                call SelectHeroSkill(GetEnumUnit(), 'AHhb')
+                call SelectHeroSkill(GetEnumUnit(), 'AHad')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
@@ -4545,53 +4531,53 @@ function Trig_AddHeroAbility_Actions takes nothing returns nothing
     // Orc
     if ( Trig_AddHeroAbility_Func004C() ) then
         if ( Trig_AddHeroAbility_Func004Func001C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AOww' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AOww')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AOmi' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOcr' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AOmi')
+                call SelectHeroSkill(GetEnumUnit(), 'AOcr')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func004Func002C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AOeq' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AOeq')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AOcl' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOfs' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOsf' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AOcl')
+                call SelectHeroSkill(GetEnumUnit(), 'AOfs')
+                call SelectHeroSkill(GetEnumUnit(), 'AOsf')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func004Func003C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AOvd' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AOvd')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AOhw' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOhx' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOsw' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AOhw')
+                call SelectHeroSkill(GetEnumUnit(), 'AOhx')
+                call SelectHeroSkill(GetEnumUnit(), 'AOsw')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func004Func004C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AOre' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AOre')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AOsh' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOws' )
-                call SelectHeroSkill( GetEnumUnit(), 'AOae' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AOsh')
+                call SelectHeroSkill(GetEnumUnit(), 'AOws')
+                call SelectHeroSkill(GetEnumUnit(), 'AOae')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
@@ -4600,54 +4586,54 @@ function Trig_AddHeroAbility_Actions takes nothing returns nothing
     // Undead
     if ( Trig_AddHeroAbility_Func006C() ) then
         if ( Trig_AddHeroAbility_Func006Func001C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AUls' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AUls')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AUim' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUts' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUcb' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AUim')
+                call SelectHeroSkill(GetEnumUnit(), 'AUts')
+                call SelectHeroSkill(GetEnumUnit(), 'AUcb')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func006Func002C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AUan' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AUan')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AUdc' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUdp' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUau' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AUdc')
+                call SelectHeroSkill(GetEnumUnit(), 'AUdp')
+                call SelectHeroSkill(GetEnumUnit(), 'AUau')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func006Func003C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AUin' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AUin')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AUcs' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUsl' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUav' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AUcs')
+                call SelectHeroSkill(GetEnumUnit(), 'AUsl')
+                call SelectHeroSkill(GetEnumUnit(), 'AUav')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func006Func004C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AUdd' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AUdd')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AUfn' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUfa' )
-                call SelectHeroSkill( GetEnumUnit(), 'AUdr' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AUfn')
+                call SelectHeroSkill(GetEnumUnit(), 'AUfa')
+                call SelectHeroSkill(GetEnumUnit(), 'AUdr')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
@@ -4656,54 +4642,54 @@ function Trig_AddHeroAbility_Actions takes nothing returns nothing
     // Night Elf
     if ( Trig_AddHeroAbility_Func008C() ) then
         if ( Trig_AddHeroAbility_Func008Func001C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AEme' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AEme')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AEmb' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEim' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEev' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AEmb')
+                call SelectHeroSkill(GetEnumUnit(), 'AEim')
+                call SelectHeroSkill(GetEnumUnit(), 'AEev')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func008Func002C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AEtq' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AEtq')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AEer' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEfn' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEah' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AEer')
+                call SelectHeroSkill(GetEnumUnit(), 'AEfn')
+                call SelectHeroSkill(GetEnumUnit(), 'AEah')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func008Func003C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AEsf' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AEsf')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AHfa' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEar' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEst' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AHfa')
+                call SelectHeroSkill(GetEnumUnit(), 'AEar')
+                call SelectHeroSkill(GetEnumUnit(), 'AEst')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
         if ( Trig_AddHeroAbility_Func008Func004C() ) then
-            call SelectHeroSkill( GetEnumUnit(), 'AEsv' )
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 3
+            call SelectHeroSkill(GetEnumUnit(), 'AEsv')
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=3
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call SelectHeroSkill( GetEnumUnit(), 'AEfk' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEsh' )
-                call SelectHeroSkill( GetEnumUnit(), 'AEbl' )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call SelectHeroSkill(GetEnumUnit(), 'AEfk')
+                call SelectHeroSkill(GetEnumUnit(), 'AEsh')
+                call SelectHeroSkill(GetEnumUnit(), 'AEbl')
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
@@ -4713,8 +4699,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_AddHeroAbility takes nothing returns nothing
-    set gg_trg_AddHeroAbility = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_AddHeroAbility, function Trig_AddHeroAbility_Actions )
+    set gg_trg_AddHeroAbility=CreateTrigger()
+    call TriggerAddAction(gg_trg_AddHeroAbility, function Trig_AddHeroAbility_Actions)
 endfunction
 
 //===========================================================================
@@ -4723,20 +4709,20 @@ endfunction
 // Crutch solution to force the enemy to ignore neutral-hostile troops
 //===========================================================================
 function Trig_AlliesEnemyAndNeutral_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 5
-    set bj_forLoopAIndexEnd = 6
+    set bj_forLoopAIndex=5
+    set bj_forLoopAIndexEnd=6
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerAllianceStateBJ( ConvertedPlayer(GetForLoopIndexA()), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED )
-        call SetPlayerAllianceStateBJ( Player(PLAYER_NEUTRAL_AGGRESSIVE), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED)
+        call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_AlliesEnemyAndNeutral takes nothing returns nothing
-    set gg_trg_AlliesEnemyAndNeutral = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_AlliesEnemyAndNeutral, function Trig_AlliesEnemyAndNeutral_Actions )
+    set gg_trg_AlliesEnemyAndNeutral=CreateTrigger()
+    call TriggerAddAction(gg_trg_AlliesEnemyAndNeutral, function Trig_AlliesEnemyAndNeutral_Actions)
 endfunction
 
 //===========================================================================
@@ -4745,19 +4731,19 @@ endfunction
 // <Initialization>
 //===========================================================================
 function Trig_NPCInitialization_Actions takes nothing returns nothing
-    call SetPlayerAllianceBJ( Player(0), ALLIANCE_SHARED_CONTROL, true, Player(2) )
-    call SetPlayerAllianceBJ( Player(1), ALLIANCE_SHARED_CONTROL, true, Player(2) )
-    call SetPlayerAllianceBJ( Player(2), ALLIANCE_SHARED_CONTROL, true, Player(0) )
-    call SetPlayerAllianceBJ( Player(2), ALLIANCE_SHARED_CONTROL, true, Player(1) )
-    set udg_NPCUnit = gg_unit_H004_0013
-    set udg_NPCName = "Stonebeard"
-    set udg_NPCColorText = "|cFF48BBFF"
+    call SetPlayerAllianceBJ(Player(0), ALLIANCE_SHARED_CONTROL, true, Player(2))
+    call SetPlayerAllianceBJ(Player(1), ALLIANCE_SHARED_CONTROL, true, Player(2))
+    call SetPlayerAllianceBJ(Player(2), ALLIANCE_SHARED_CONTROL, true, Player(0))
+    call SetPlayerAllianceBJ(Player(2), ALLIANCE_SHARED_CONTROL, true, Player(1))
+    set udg_NPCUnit=gg_unit_H004_0013
+    set udg_NPCName="Stonebeard"
+    set udg_NPCColorText="|cFF48BBFF"
 endfunction
 
 //===========================================================================
 function InitTrig_NPCInitialization takes nothing returns nothing
-    set gg_trg_NPCInitialization = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCInitialization, function Trig_NPCInitialization_Actions )
+    set gg_trg_NPCInitialization=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCInitialization, function Trig_NPCInitialization_Actions)
 endfunction
 
 //===========================================================================
@@ -4802,49 +4788,49 @@ function Trig_NPCGreetings_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCGreetings_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 15.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "Welcome, my fellow legends! I am Stonebeard, and it seems we have a common enemy to face. Are you ready to take down the Syndicate and bring justice to the region?"
-    set udg_NPCText_Options[2] = "Ah, a legends! You don't look like the usual riff-raff that passes through here. I'm Stonebeard, and I've got a job that requires your skills. Care to lend me a hand against the Syndicate?"
-    set udg_NPCText_Options[3] = "By the hammers of Khaz Modan, it's good to see you all! I'm Stonebeard, and I'm on a mission to take down the Syndicate. Will you join me in battle?"
-    set udg_NPCText_Options[4] = "Greetings, legends! I'm Stonebeard, and it seems fate has brought us together. The Syndicate has been causing havoc in these parts for too long. Let's show them the might of our guns... or blades... or magic!"
-    set udg_NPCText_Options[5] = "By the forge of Ironforge, it's an honor to meet you! I'm Stonebeard, and I'm in dire need of legends to help me take down the Syndicate. Will you fight by my side?"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=15.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="Welcome, my fellow legends! I am Stonebeard, and it seems we have a common enemy to face. Are you ready to take down the Syndicate and bring justice to the region?"
+    set udg_NPCText_Options[2]="Ah, a legends! You don't look like the usual riff-raff that passes through here. I'm Stonebeard, and I've got a job that requires your skills. Care to lend me a hand against the Syndicate?"
+    set udg_NPCText_Options[3]="By the hammers of Khaz Modan, it's good to see you all! I'm Stonebeard, and I'm on a mission to take down the Syndicate. Will you join me in battle?"
+    set udg_NPCText_Options[4]="Greetings, legends! I'm Stonebeard, and it seems fate has brought us together. The Syndicate has been causing havoc in these parts for too long. Let's show them the might of our guns... or blades... or magic!"
+    set udg_NPCText_Options[5]="By the forge of Ironforge, it's an honor to meet you! I'm Stonebeard, and I'm in dire need of legends to help me take down the Syndicate. Will you fight by my side?"
     // All options
     if ( Trig_NPCGreetings_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCGreetings_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCGreetings_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCGreetings_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCGreetings_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, true )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, true)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCGreetings takes nothing returns nothing
-    set gg_trg_NPCGreetings = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCGreetings, function Trig_NPCGreetings_Actions )
+    set gg_trg_NPCGreetings=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCGreetings, function Trig_NPCGreetings_Actions)
 endfunction
 
 //===========================================================================
@@ -4889,49 +4875,49 @@ function Trig_NPCMissCaravan_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCMissCaravan_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 10.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "Don't worry, my friends, we'll catch up to them. It's a game of cat and mouse, and I intend to be the cat!"
-    set udg_NPCText_Options[2] = "Well, we may have missed that one, but we'll catch the next one. The Syndicate won't know what hit them!"
-    set udg_NPCText_Options[3] = "We missed one, but that's just a minor setback. We'll find another way to disrupt their supplies and bring them to their knees!"
-    set udg_NPCText_Options[4] = "Looks like we let one slip by us, but we'll make up for it. We'll hit them harder next time and show them that they can't outrun us!"
-    set udg_NPCText_Options[5] = "Aye, we may have missed that one, but the battle is far from over. We'll keep at it until the Syndicate is defeated, mark my words!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=10.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="Don't worry, my friends, we'll catch up to them. It's a game of cat and mouse, and I intend to be the cat!"
+    set udg_NPCText_Options[2]="Well, we may have missed that one, but we'll catch the next one. The Syndicate won't know what hit them!"
+    set udg_NPCText_Options[3]="We missed one, but that's just a minor setback. We'll find another way to disrupt their supplies and bring them to their knees!"
+    set udg_NPCText_Options[4]="Looks like we let one slip by us, but we'll make up for it. We'll hit them harder next time and show them that they can't outrun us!"
+    set udg_NPCText_Options[5]="Aye, we may have missed that one, but the battle is far from over. We'll keep at it until the Syndicate is defeated, mark my words!"
     // All options
     if ( Trig_NPCMissCaravan_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCMissCaravan_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCMissCaravan_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCMissCaravan_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCMissCaravan_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCMissCaravan takes nothing returns nothing
-    set gg_trg_NPCMissCaravan = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCMissCaravan, function Trig_NPCMissCaravan_Actions )
+    set gg_trg_NPCMissCaravan=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCMissCaravan, function Trig_NPCMissCaravan_Actions)
 endfunction
 
 //===========================================================================
@@ -4976,49 +4962,49 @@ function Trig_NPCNextWave_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCNextWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 7.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "Looks like the Syndicate is on the move. We need to act fast if we're going to catch them!"
-    set udg_NPCText_Options[2] = "The caravans are moving. We move forward. My rifle is at your service."
-    set udg_NPCText_Options[3] = "The Syndicate is moving their contraband, but we're not going to let them get away with it. It's time to take the fight to them!"
-    set udg_NPCText_Options[4] = "Those caravans won't stay on the move forever. We need to intercept them before they can reach their destination. Are you with me, legends?"
-    set udg_NPCText_Options[5] = "The caravans have left their bases, but we're not going to let them get far. We'll track them down and make sure the Syndicate regrets ever crossing us!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=7.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="Looks like the Syndicate is on the move. We need to act fast if we're going to catch them!"
+    set udg_NPCText_Options[2]="The caravans are moving. We move forward. My rifle is at your service."
+    set udg_NPCText_Options[3]="The Syndicate is moving their contraband, but we're not going to let them get away with it. It's time to take the fight to them!"
+    set udg_NPCText_Options[4]="Those caravans won't stay on the move forever. We need to intercept them before they can reach their destination. Are you with me, legends?"
+    set udg_NPCText_Options[5]="The caravans have left their bases, but we're not going to let them get far. We'll track them down and make sure the Syndicate regrets ever crossing us!"
     // All options
     if ( Trig_NPCNextWave_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCNextWave_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCNextWave_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCNextWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCNextWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCNextWave takes nothing returns nothing
-    set gg_trg_NPCNextWave = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCNextWave, function Trig_NPCNextWave_Actions )
+    set gg_trg_NPCNextWave=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCNextWave, function Trig_NPCNextWave_Actions)
 endfunction
 
 //===========================================================================
@@ -5063,49 +5049,49 @@ function Trig_NPCEnemyWave_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCEnemyWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 7.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "The Syndicate is on the attack! We need to defend our base and drive them back. Are you ready, legends?"
-    set udg_NPCText_Options[2] = "Looks like the Syndicate is feeling desperate. But that's no excuse for them to attack our base! Let's teach them a lesson they won't forget!"
-    set udg_NPCText_Options[3] = "The Syndicate is throwing everything they've got at us. But they're no match for our skill and determination. Let's show them what we're made of, heroes!"
-    set udg_NPCText_Options[4] = "Our base is under attack, but we're not going to back down. We'll fight tooth and nail to protect what's ours and drive the Syndicate back where they belong!"
-    set udg_NPCText_Options[5] = "They want a fight? They've got it! Defend our base and send the Syndicate running with their tails between their legs!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=7.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="The Syndicate is on the attack! We need to defend our base and drive them back. Are you ready, legends?"
+    set udg_NPCText_Options[2]="Looks like the Syndicate is feeling desperate. But that's no excuse for them to attack our base! Let's teach them a lesson they won't forget!"
+    set udg_NPCText_Options[3]="The Syndicate is throwing everything they've got at us. But they're no match for our skill and determination. Let's show them what we're made of, heroes!"
+    set udg_NPCText_Options[4]="Our base is under attack, but we're not going to back down. We'll fight tooth and nail to protect what's ours and drive the Syndicate back where they belong!"
+    set udg_NPCText_Options[5]="They want a fight? They've got it! Defend our base and send the Syndicate running with their tails between their legs!"
     // All options
     if ( Trig_NPCEnemyWave_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCEnemyWave_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCEnemyWave_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCEnemyWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCEnemyWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCEnemyWave takes nothing returns nothing
-    set gg_trg_NPCEnemyWave = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCEnemyWave, function Trig_NPCEnemyWave_Actions )
+    set gg_trg_NPCEnemyWave=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCEnemyWave, function Trig_NPCEnemyWave_Actions)
 endfunction
 
 //===========================================================================
@@ -5150,49 +5136,49 @@ function Trig_NPCLastWave_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCLastWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 7.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "This is it, legends! The final wave. Let's give it everything we've got and show the Syndicate that we're not to be trifled with!"
-    set udg_NPCText_Options[2] = "We've made it to the last wave. This is where the real test begins. Keep your wits about you, friends, and let's finish this once and for all!"
-    set udg_NPCText_Options[3] = "This is what we've been waiting for, heroes. The final showdown. Let's make sure that the Syndicate knows they messed with the wrong crew!"
-    set udg_NPCText_Options[4] = "It's all come down to this, friends. The last wave. But we've come too far to back down now. Let's show the Syndicate what true courage and determination looks like!"
-    set udg_NPCText_Options[5] = "This is the moment we've been training for, friends. The last wave is here, and we're going to face it head-on. Let's do this!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=7.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="This is it, legends! The final wave. Let's give it everything we've got and show the Syndicate that we're not to be trifled with!"
+    set udg_NPCText_Options[2]="We've made it to the last wave. This is where the real test begins. Keep your wits about you, friends, and let's finish this once and for all!"
+    set udg_NPCText_Options[3]="This is what we've been waiting for, heroes. The final showdown. Let's make sure that the Syndicate knows they messed with the wrong crew!"
+    set udg_NPCText_Options[4]="It's all come down to this, friends. The last wave. But we've come too far to back down now. Let's show the Syndicate what true courage and determination looks like!"
+    set udg_NPCText_Options[5]="This is the moment we've been training for, friends. The last wave is here, and we're going to face it head-on. Let's do this!"
     // All options
     if ( Trig_NPCLastWave_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCLastWave_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCLastWave_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCLastWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCLastWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCLastWave takes nothing returns nothing
-    set gg_trg_NPCLastWave = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCLastWave, function Trig_NPCLastWave_Actions )
+    set gg_trg_NPCLastWave=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCLastWave, function Trig_NPCLastWave_Actions)
 endfunction
 
 //===========================================================================
@@ -5237,49 +5223,49 @@ function Trig_NPCCompleteWave_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCCompleteWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 10.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "Well done, legends! But don't let your guard down just yet. There's still more work to be done!"
-    set udg_NPCText_Options[2] = "That was a good strike, but we need to keep the pressure on. The Syndicate won't give up that easily!"
-    set udg_NPCText_Options[3] = "We may have taken out one caravan, but there are more on the way. We need to stay alert and keep disrupting their supplies!"
-    set udg_NPCText_Options[4] = "That was just the beginning. We'll keep hitting them hard until they're running scared!"
-    set udg_NPCText_Options[5] = "Excellent work, friends! But we can't rest on our laurels. There's still more to be done to ensure that the Syndicate is brought to justice!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=10.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="Well done, legends! But don't let your guard down just yet. There's still more work to be done!"
+    set udg_NPCText_Options[2]="That was a good strike, but we need to keep the pressure on. The Syndicate won't give up that easily!"
+    set udg_NPCText_Options[3]="We may have taken out one caravan, but there are more on the way. We need to stay alert and keep disrupting their supplies!"
+    set udg_NPCText_Options[4]="That was just the beginning. We'll keep hitting them hard until they're running scared!"
+    set udg_NPCText_Options[5]="Excellent work, friends! But we can't rest on our laurels. There's still more to be done to ensure that the Syndicate is brought to justice!"
     // All options
     if ( Trig_NPCCompleteWave_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCCompleteWave_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCCompleteWave_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCCompleteWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCCompleteWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCCompleteWave takes nothing returns nothing
-    set gg_trg_NPCCompleteWave = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCCompleteWave, function Trig_NPCCompleteWave_Actions )
+    set gg_trg_NPCCompleteWave=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCCompleteWave, function Trig_NPCCompleteWave_Actions)
 endfunction
 
 //===========================================================================
@@ -5324,49 +5310,49 @@ function Trig_NPCWin_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCWin_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 10.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "Ha! That'll teach 'em not to mess with us."
-    set udg_NPCText_Options[2] = "We showed them what it means to be a true hero. Let's celebrate this victory!"
-    set udg_NPCText_Options[3] = "The Syndicate may have thought they had us, but they didn't count on our resilience."
-    set udg_NPCText_Options[4] = "It wasn't easy, but we did it. We defended our base, and we won."
-    set udg_NPCText_Options[5] = "The final victory against our enemies. Let's celebrate this moment, and remember it when we face future challenges!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=10.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="Ha! That'll teach 'em not to mess with us."
+    set udg_NPCText_Options[2]="We showed them what it means to be a true hero. Let's celebrate this victory!"
+    set udg_NPCText_Options[3]="The Syndicate may have thought they had us, but they didn't count on our resilience."
+    set udg_NPCText_Options[4]="It wasn't easy, but we did it. We defended our base, and we won."
+    set udg_NPCText_Options[5]="The final victory against our enemies. Let's celebrate this moment, and remember it when we face future challenges!"
     // All options
     if ( Trig_NPCWin_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCWin_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCWin_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCWin_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCWin_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCWin takes nothing returns nothing
-    set gg_trg_NPCWin = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCWin, function Trig_NPCWin_Actions )
+    set gg_trg_NPCWin=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCWin, function Trig_NPCWin_Actions)
 endfunction
 
 //===========================================================================
@@ -5411,49 +5397,49 @@ function Trig_NPCDefeat_Func012C takes nothing returns boolean
 endfunction
 
 function Trig_NPCDefeat_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom = GetRandomReal(0, 100.00)
-    set udg_NPCText = udg_NPCColorText
-    set udg_NPCTextDuration = 10.00
-    set udg_NPCOptions = 5.00
-    set udg_NPCCount = 1.00
-    set udg_NPCText_Options[1] = "I can't believe it. This is the final defeat. We fought with all our might, but the Syndicate was just too powerful."
-    set udg_NPCText_Options[2] = "I knew you *** legends had no honor, no respect, no beer!"
-    set udg_NPCText_Options[3] = "This is a dark day for all of us. The final defeat."
-    set udg_NPCText_Options[4] = "We've been defeated, but we're not broken. This final defeat will be a powerful motivator for us to come back even stronger."
-    set udg_NPCText_Options[5] = "This is a bitter pill to swallow. The final defeat. But we can't let it break our spirits. We'll come back with renewed determination, and show the Syndicate that we're not done yet!"
+    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
+    set udg_NPCText=udg_NPCColorText
+    set udg_NPCTextDuration=10.00
+    set udg_NPCOptions=5.00
+    set udg_NPCCount=1.00
+    set udg_NPCText_Options[1]="I can't believe it. This is the final defeat. We fought with all our might, but the Syndicate was just too powerful."
+    set udg_NPCText_Options[2]="I knew you *** legends had no honor, no respect, no beer!"
+    set udg_NPCText_Options[3]="This is a dark day for all of us. The final defeat."
+    set udg_NPCText_Options[4]="We've been defeated, but we're not broken. This final defeat will be a powerful motivator for us to come back even stronger."
+    set udg_NPCText_Options[5]="This is a bitter pill to swallow. The final defeat. But we can't let it break our spirits. We'll come back with renewed determination, and show the Syndicate that we're not done yet!"
     // All options
     if ( Trig_NPCDefeat_Func012C() ) then
-        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
     else
-        set udg_NPCCount = ( udg_NPCCount + 1 )
+        set udg_NPCCount=( udg_NPCCount + 1 )
         if ( Trig_NPCDefeat_Func012Func002C() ) then
-            set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
         else
-            set udg_NPCCount = ( udg_NPCCount + 1 )
+            set udg_NPCCount=( udg_NPCCount + 1 )
             if ( Trig_NPCDefeat_Func012Func002Func002C() ) then
-                set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
             else
-                set udg_NPCCount = ( udg_NPCCount + 1 )
+                set udg_NPCCount=( udg_NPCCount + 1 )
                 if ( Trig_NPCDefeat_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                 else
-                    set udg_NPCCount = ( udg_NPCCount + 1 )
+                    set udg_NPCCount=( udg_NPCCount + 1 )
                     if ( Trig_NPCDefeat_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText = ( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
                     else
                     endif
                 endif
             endif
         endif
     endif
-    set udg_NPCText = ( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false )
+    set udg_NPCText=( udg_NPCText + "|R" )
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCDefeat takes nothing returns nothing
-    set gg_trg_NPCDefeat = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_NPCDefeat, function Trig_NPCDefeat_Actions )
+    set gg_trg_NPCDefeat=CreateTrigger()
+    call TriggerAddAction(gg_trg_NPCDefeat, function Trig_NPCDefeat_Actions)
 endfunction
 
 //===========================================================================
@@ -5465,67 +5451,67 @@ endfunction
 //===========================================================================
 function Trig_SetWayPoint_Actions takes nothing returns nothing
     // Way1
-    set udg_Way1Count = 0
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p0
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p1
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p2
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p3
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p4
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p5
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p6
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p7
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p8
-    set udg_Way1Count = ( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count] = gg_rct_Way1_p9
+    set udg_Way1Count=0
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p0
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p1
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p2
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p3
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p4
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p5
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p6
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p7
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p8
+    set udg_Way1Count=( udg_Way1Count + 1 )
+    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p9
     // Way2
-    set udg_Way2Count = 0
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p0
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p1
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p2
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p3
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p4
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p5
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p6
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p7
-    set udg_Way2Count = ( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count] = gg_rct_Way2_p8
+    set udg_Way2Count=0
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p0
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p1
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p2
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p3
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p4
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p5
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p6
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p7
+    set udg_Way2Count=( udg_Way2Count + 1 )
+    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p8
 endfunction
 
 //===========================================================================
 function InitTrig_SetWayPoint takes nothing returns nothing
-    set gg_trg_SetWayPoint = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_SetWayPoint, 0.01 )
-    call TriggerAddAction( gg_trg_SetWayPoint, function Trig_SetWayPoint_Actions )
+    set gg_trg_SetWayPoint=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_SetWayPoint, 0.01)
+    call TriggerAddAction(gg_trg_SetWayPoint, function Trig_SetWayPoint_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: WayPingIni
 //===========================================================================
 function Trig_WayPingIni_Actions takes nothing returns nothing
-    set udg_PingWaitTime = 0.33
-    set udg_PingTimer = 2.50
+    set udg_PingWaitTime=0.33
+    set udg_PingTimer=2.50
 endfunction
 
 //===========================================================================
 function InitTrig_WayPingIni takes nothing returns nothing
-    set gg_trg_WayPingIni = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_WayPingIni, 0.01 )
-    call TriggerAddAction( gg_trg_WayPingIni, function Trig_WayPingIni_Actions )
+    set gg_trg_WayPingIni=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_WayPingIni, 0.01)
+    call TriggerAddAction(gg_trg_WayPingIni, function Trig_WayPingIni_Actions)
 endfunction
 
 //===========================================================================
@@ -5535,31 +5521,31 @@ endfunction
 // Warning! The cycle does not allow you to display points sequentially.
 //===========================================================================
 function Trig_Way1Ping_Actions takes nothing returns nothing
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[0]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[1]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[2]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[3]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[4]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[5]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[6]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[7]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[8]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way1[9]), udg_PingTimer )
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[0]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[1]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[2]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[3]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[4]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[5]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[6]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[7]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[8]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way1[9]), udg_PingTimer)
 endfunction
 
 //===========================================================================
 function InitTrig_Way1Ping takes nothing returns nothing
-    set gg_trg_Way1Ping = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_Way1Ping, function Trig_Way1Ping_Actions )
+    set gg_trg_Way1Ping=CreateTrigger()
+    call TriggerAddAction(gg_trg_Way1Ping, function Trig_Way1Ping_Actions)
 endfunction
 
 //===========================================================================
@@ -5569,50 +5555,50 @@ endfunction
 // Warning! The cycle does not allow you to display points sequentially.
 //===========================================================================
 function Trig_Way2Ping_Actions takes nothing returns nothing
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[0]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[1]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[2]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[3]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[4]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[5]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[6]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[7]), udg_PingTimer )
-    call TriggerSleepAction( udg_PingWaitTime )
-    call PingMinimapLocForForce( GetPlayersAll(), GetRectCenter(udg_Way2[8]), udg_PingTimer )
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[0]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[1]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[2]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[3]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[4]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[5]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[6]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[7]), udg_PingTimer)
+    call TriggerSleepAction(udg_PingWaitTime)
+    call PingMinimapLocForForce(GetPlayersAll(), GetRectCenter(udg_Way2[8]), udg_PingTimer)
 endfunction
 
 //===========================================================================
 function InitTrig_Way2Ping takes nothing returns nothing
-    set gg_trg_Way2Ping = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_Way2Ping, function Trig_Way2Ping_Actions )
+    set gg_trg_Way2Ping=CreateTrigger()
+    call TriggerAddAction(gg_trg_Way2Ping, function Trig_Way2Ping_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: IniZone
 //===========================================================================
 function Trig_IniZone_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 5
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_CurrentZone1[GetForLoopIndexA()] = 1
-        set udg_CurrentZone2[GetForLoopIndexA()] = 1
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        set udg_CurrentZone1[GetForLoopIndexA()]=1
+        set udg_CurrentZone2[GetForLoopIndexA()]=1
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_IniZone takes nothing returns nothing
-    set gg_trg_IniZone = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_IniZone, 0.10 )
-    call TriggerAddAction( gg_trg_IniZone, function Trig_IniZone_Actions )
+    set gg_trg_IniZone=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_IniZone, 0.10)
+    call TriggerAddAction(gg_trg_IniZone, function Trig_IniZone_Actions)
 endfunction
 
 //===========================================================================
@@ -5645,47 +5631,47 @@ function Trig_AlternateMovement_Func002Func002Func001C takes nothing returns boo
 endfunction
 
 function Trig_AlternateMovement_Actions takes nothing returns nothing
-    set bj_forLoopBIndex = 1
-    set bj_forLoopBIndexEnd = 5
+    set bj_forLoopBIndex=1
+    set bj_forLoopBIndexEnd=5
     loop
         exitwhen bj_forLoopBIndex > bj_forLoopBIndexEnd
-        call GroupPointOrderLocBJ( udg_UnitGroupArray1[GetForLoopIndexB()], "attack", GetRectCenter(udg_Way1[udg_CurrentZone1[GetForLoopIndexB()]]) )
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = udg_Way1Count
+        call GroupPointOrderLocBJ(udg_UnitGroupArray1[GetForLoopIndexB()], "attack", GetRectCenter(udg_Way1[udg_CurrentZone1[GetForLoopIndexB()]]))
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=udg_Way1Count
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
             if ( Trig_AlternateMovement_Func001Func002Func001C() ) then
-                set udg_CurrentZone1[GetForLoopIndexB()] = ( udg_CurrentZone1[GetForLoopIndexB()] + 1 )
+                set udg_CurrentZone1[GetForLoopIndexB()]=( udg_CurrentZone1[GetForLoopIndexB()] + 1 )
             else
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopBIndex = bj_forLoopBIndex + 1
+        set bj_forLoopBIndex=bj_forLoopBIndex + 1
     endloop
-    set bj_forLoopBIndex = 1
-    set bj_forLoopBIndexEnd = 5
+    set bj_forLoopBIndex=1
+    set bj_forLoopBIndexEnd=5
     loop
         exitwhen bj_forLoopBIndex > bj_forLoopBIndexEnd
-        call GroupPointOrderLocBJ( udg_UnitGroupArray2[GetForLoopIndexB()], "attack", GetRectCenter(udg_Way2[udg_CurrentZone2[GetForLoopIndexB()]]) )
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = udg_Way2Count
+        call GroupPointOrderLocBJ(udg_UnitGroupArray2[GetForLoopIndexB()], "attack", GetRectCenter(udg_Way2[udg_CurrentZone2[GetForLoopIndexB()]]))
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=udg_Way2Count
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
             if ( Trig_AlternateMovement_Func002Func002Func001C() ) then
-                set udg_CurrentZone2[GetForLoopIndexB()] = ( udg_CurrentZone2[GetForLoopIndexB()] + 1 )
+                set udg_CurrentZone2[GetForLoopIndexB()]=( udg_CurrentZone2[GetForLoopIndexB()] + 1 )
             else
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopBIndex = bj_forLoopBIndex + 1
+        set bj_forLoopBIndex=bj_forLoopBIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_AlternateMovement takes nothing returns nothing
-    set gg_trg_AlternateMovement = CreateTrigger(  )
-    call TriggerRegisterTimerEventPeriodic( gg_trg_AlternateMovement, 1.00 )
-    call TriggerAddAction( gg_trg_AlternateMovement, function Trig_AlternateMovement_Actions )
+    set gg_trg_AlternateMovement=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_AlternateMovement, 1.00)
+    call TriggerAddAction(gg_trg_AlternateMovement, function Trig_AlternateMovement_Actions)
 endfunction
 
 //===========================================================================
@@ -5709,41 +5695,41 @@ function Trig_UnitGroupDead_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UnitGroupDead_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 5
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call GroupRemoveUnitSimple( GetDyingUnit(), udg_UnitGroupArray1[GetForLoopIndexA()] )
-        call GroupRemoveUnitSimple( GetDyingUnit(), udg_UnitGroupArray2[GetForLoopIndexA()] )
-        call GroupRemoveUnitSimple( GetDyingUnit(), udg_UnitGroupArray3[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call GroupRemoveUnitSimple(GetDyingUnit(), udg_UnitGroupArray1[GetForLoopIndexA()])
+        call GroupRemoveUnitSimple(GetDyingUnit(), udg_UnitGroupArray2[GetForLoopIndexA()])
+        call GroupRemoveUnitSimple(GetDyingUnit(), udg_UnitGroupArray3[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_UnitGroupDead takes nothing returns nothing
-    set gg_trg_UnitGroupDead = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_UnitGroupDead, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_UnitGroupDead, Condition( function Trig_UnitGroupDead_Conditions ) )
-    call TriggerAddAction( gg_trg_UnitGroupDead, function Trig_UnitGroupDead_Actions )
+    set gg_trg_UnitGroupDead=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UnitGroupDead, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_UnitGroupDead, Condition(function Trig_UnitGroupDead_Conditions))
+    call TriggerAddAction(gg_trg_UnitGroupDead, function Trig_UnitGroupDead_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: MainQuest
 //===========================================================================
 function Trig_MainQuest_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_NPCGreetings )
-    set udg_MaxCountDefeat = 5
-    call CreateQuestBJ( bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_903", "TRIGSTR_904", "Maps/Alterac/BTNBanner_Alterac_Black.blp" )
-    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_906" )
-    call CreateDefeatConditionBJ( ( ( "|cffff0000Defeat:|r Skip over " + I2S(udg_MaxCountDefeat) ) + " caravan wagons" ) )
+    call ConditionalTriggerExecute(gg_trg_NPCGreetings)
+    set udg_MaxCountDefeat=5
+    call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_903", "TRIGSTR_904", "Maps/Alterac/BTNBanner_Alterac_Black.blp")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_906")
+    call CreateDefeatConditionBJ(( ( "|cffff0000Defeat:|r Skip over " + I2S(udg_MaxCountDefeat) ) + " caravan wagons" ))
 endfunction
 
 //===========================================================================
 function InitTrig_MainQuest takes nothing returns nothing
-    set gg_trg_MainQuest = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_MainQuest, 45.00 )
-    call TriggerAddAction( gg_trg_MainQuest, function Trig_MainQuest_Actions )
+    set gg_trg_MainQuest=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_MainQuest, 45.00)
+    call TriggerAddAction(gg_trg_MainQuest, function Trig_MainQuest_Actions)
 endfunction
 
 //===========================================================================
@@ -5765,19 +5751,19 @@ endfunction
 
 function Trig_WaveComplete_Actions takes nothing returns nothing
     if ( Trig_WaveComplete_Func001C() ) then
-        set udg_WaveComplete = ( udg_WaveComplete + 1 )
-        call DisplayTextToForce( GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ) )
-        call ConditionalTriggerExecute( gg_trg_NPCCompleteWave )
+        set udg_WaveComplete=( udg_WaveComplete + 1 )
+        call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
+        call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_WaveComplete takes nothing returns nothing
-    set gg_trg_WaveComplete = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_WaveComplete, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_WaveComplete, Condition( function Trig_WaveComplete_Conditions ) )
-    call TriggerAddAction( gg_trg_WaveComplete, function Trig_WaveComplete_Actions )
+    set gg_trg_WaveComplete=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WaveComplete, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_WaveComplete, Condition(function Trig_WaveComplete_Conditions))
+    call TriggerAddAction(gg_trg_WaveComplete, function Trig_WaveComplete_Actions)
 endfunction
 
 //===========================================================================
@@ -5799,14 +5785,14 @@ endfunction
 
 function Trig_LastWaveComplete_Actions takes nothing returns nothing
     if ( Trig_LastWaveComplete_Func002C() ) then
-        call ConditionalTriggerExecute( gg_trg_NPCWin )
-        call TriggerSleepAction( 10.00 )
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        call ConditionalTriggerExecute(gg_trg_NPCWin)
+        call TriggerSleepAction(10.00)
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CustomVictoryBJ( ConvertedPlayer(GetForLoopIndexA()), true, true )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CustomVictoryBJ(ConvertedPlayer(GetForLoopIndexA()), true, true)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
@@ -5814,11 +5800,11 @@ endfunction
 
 //===========================================================================
 function InitTrig_LastWaveComplete takes nothing returns nothing
-    set gg_trg_LastWaveComplete = CreateTrigger(  )
-    call DisableTrigger( gg_trg_LastWaveComplete )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_LastWaveComplete, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_LastWaveComplete, Condition( function Trig_LastWaveComplete_Conditions ) )
-    call TriggerAddAction( gg_trg_LastWaveComplete, function Trig_LastWaveComplete_Actions )
+    set gg_trg_LastWaveComplete=CreateTrigger()
+    call DisableTrigger(gg_trg_LastWaveComplete)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_LastWaveComplete, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_LastWaveComplete, Condition(function Trig_LastWaveComplete_Conditions))
+    call TriggerAddAction(gg_trg_LastWaveComplete, function Trig_LastWaveComplete_Actions)
 endfunction
 
 //===========================================================================
@@ -5854,63 +5840,63 @@ endfunction
 
 function Trig_DefeatCondition_Actions takes nothing returns nothing
     if ( Trig_DefeatCondition_Func004C() ) then
-        set udg_CurrentCountDefeat = ( udg_CurrentCountDefeat + 1 )
-        call DisplayTextToForce( GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ) )
-        call ConditionalTriggerExecute( gg_trg_NPCMissCaravan )
-        call TriggerExecute( gg_trg_WaveComplete )
+        set udg_CurrentCountDefeat=( udg_CurrentCountDefeat + 1 )
+        call DisplayTextToForce(GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ))
+        call ConditionalTriggerExecute(gg_trg_NPCMissCaravan)
+        call TriggerExecute(gg_trg_WaveComplete)
     else
     endif
-    call RemoveUnit( GetEnteringUnit() )
+    call RemoveUnit(GetEnteringUnit())
     if ( Trig_DefeatCondition_Func006C() ) then
-        call DisableTrigger( GetTriggeringTrigger() )
-        call ConditionalTriggerExecute( gg_trg_NPCDefeat )
-        call TriggerSleepAction( 10.00 )
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        call DisableTrigger(GetTriggeringTrigger())
+        call ConditionalTriggerExecute(gg_trg_NPCDefeat)
+        call TriggerSleepAction(10.00)
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CustomDefeatBJ( ConvertedPlayer(GetForLoopIndexA()), "TRIGSTR_1156" )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CustomDefeatBJ(ConvertedPlayer(GetForLoopIndexA()), "TRIGSTR_1156")
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // Checking for the last horse that successfully left
     if ( Trig_DefeatCondition_Func008C() ) then
-        call TriggerExecute( gg_trg_LastWaveComplete )
+        call TriggerExecute(gg_trg_LastWaveComplete)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_DefeatCondition takes nothing returns nothing
-    set gg_trg_DefeatCondition = CreateTrigger(  )
-    call TriggerRegisterEnterRectSimple( gg_trg_DefeatCondition, gg_rct_Way1_p9 )
-    call TriggerRegisterEnterRectSimple( gg_trg_DefeatCondition, gg_rct_Way2_p8 )
-    call TriggerAddCondition( gg_trg_DefeatCondition, Condition( function Trig_DefeatCondition_Conditions ) )
-    call TriggerAddAction( gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions )
+    set gg_trg_DefeatCondition=CreateTrigger()
+    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, gg_rct_Way1_p9)
+    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, gg_rct_Way2_p8)
+    call TriggerAddCondition(gg_trg_DefeatCondition, Condition(function Trig_DefeatCondition_Conditions))
+    call TriggerAddAction(gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: SetGroupArray
 //===========================================================================
 function Trig_SetGroupArray_Actions takes nothing returns nothing
-    set udg_UnitGroupArray1[1] = udg_UnitGroup11
-    set udg_UnitGroupArray1[2] = udg_UnitGroup12
-    set udg_UnitGroupArray1[3] = udg_UnitGroup13
-    set udg_UnitGroupArray1[4] = udg_UnitGroup14
-    set udg_UnitGroupArray1[5] = udg_UnitGroup15
-    set udg_UnitGroupArray2[1] = udg_UnitGroup21
-    set udg_UnitGroupArray2[2] = udg_UnitGroup22
-    set udg_UnitGroupArray2[3] = udg_UnitGroup23
-    set udg_UnitGroupArray2[4] = udg_UnitGroup24
-    set udg_UnitGroupArray2[5] = udg_UnitGroup25
-    set udg_UnitGroupArray3[1] = udg_UnitGroup31
+    set udg_UnitGroupArray1[1]=udg_UnitGroup11
+    set udg_UnitGroupArray1[2]=udg_UnitGroup12
+    set udg_UnitGroupArray1[3]=udg_UnitGroup13
+    set udg_UnitGroupArray1[4]=udg_UnitGroup14
+    set udg_UnitGroupArray1[5]=udg_UnitGroup15
+    set udg_UnitGroupArray2[1]=udg_UnitGroup21
+    set udg_UnitGroupArray2[2]=udg_UnitGroup22
+    set udg_UnitGroupArray2[3]=udg_UnitGroup23
+    set udg_UnitGroupArray2[4]=udg_UnitGroup24
+    set udg_UnitGroupArray2[5]=udg_UnitGroup25
+    set udg_UnitGroupArray3[1]=udg_UnitGroup31
 endfunction
 
 //===========================================================================
 function InitTrig_SetGroupArray takes nothing returns nothing
-    set gg_trg_SetGroupArray = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_SetGroupArray, function Trig_SetGroupArray_Actions )
+    set gg_trg_SetGroupArray=CreateTrigger()
+    call TriggerAddAction(gg_trg_SetGroupArray, function Trig_SetGroupArray_Actions)
 endfunction
 
 //===========================================================================
@@ -5927,37 +5913,37 @@ endfunction
 
 function Trig_UnitsInitializationWay1_Func004A takes nothing returns nothing
     if ( Trig_UnitsInitializationWay1_Func004Func001C() ) then
-        call GroupAddUnitSimple( GetEnumUnit(), udg_UnitGroupArray1[udg_CountGroup1] )
+        call GroupAddUnitSimple(GetEnumUnit(), udg_UnitGroupArray1[udg_CountGroup1])
     else
     endif
 endfunction
 
 function Trig_UnitsInitializationWay1_Func011A takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "UnitsInitializationWay1"
-    set udg_ConsoleMessage = ( " - " + GetUnitName(GetEnumUnit()) )
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="UnitsInitializationWay1"
+    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
 endfunction
 
 function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
     // Units Initialization
-    call TriggerExecute( gg_trg_AddUnitBuildingHero )
-    call PolledWait( 0.01 )
-    call ForGroupBJ( GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay1_Func004A )
-    call GroupPointOrderLocBJ( udg_UnitGroupArray1[udg_CountGroup1], "attack", GetRectCenter(gg_rct_Way1_p1) )
+    call TriggerExecute(gg_trg_AddUnitBuildingHero)
+    call PolledWait(0.01)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay1_Func004A)
+    call GroupPointOrderLocBJ(udg_UnitGroupArray1[udg_CountGroup1], "attack", GetRectCenter(gg_rct_Way1_p1))
     // Console Log
-    set udg_ConsoleTrigger = "UnitsInitializationWay1"
-    set udg_ConsoleMessage = ( ( "Group " + I2S(udg_CountGroup1) ) + ":" )
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="UnitsInitializationWay1"
+    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup1) ) + ":" )
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    call ForGroupBJ( udg_UnitGroupArray1[udg_CountGroup1], function Trig_UnitsInitializationWay1_Func011A )
+    call ForGroupBJ(udg_UnitGroupArray1[udg_CountGroup1], function Trig_UnitsInitializationWay1_Func011A)
 endfunction
 
 //===========================================================================
 function InitTrig_UnitsInitializationWay1 takes nothing returns nothing
-    set gg_trg_UnitsInitializationWay1 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_UnitsInitializationWay1, function Trig_UnitsInitializationWay1_Actions )
+    set gg_trg_UnitsInitializationWay1=CreateTrigger()
+    call TriggerAddAction(gg_trg_UnitsInitializationWay1, function Trig_UnitsInitializationWay1_Actions)
 endfunction
 
 //===========================================================================
@@ -5974,37 +5960,37 @@ endfunction
 
 function Trig_UnitsInitializationWay2_Func004A takes nothing returns nothing
     if ( Trig_UnitsInitializationWay2_Func004Func001C() ) then
-        call GroupAddUnitSimple( GetEnumUnit(), udg_UnitGroupArray2[udg_CountGroup2] )
+        call GroupAddUnitSimple(GetEnumUnit(), udg_UnitGroupArray2[udg_CountGroup2])
     else
     endif
 endfunction
 
 function Trig_UnitsInitializationWay2_Func011A takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "UnitsInitializationWay2"
-    set udg_ConsoleMessage = ( " - " + GetUnitName(GetEnumUnit()) )
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="UnitsInitializationWay2"
+    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
 endfunction
 
 function Trig_UnitsInitializationWay2_Actions takes nothing returns nothing
     // Units Initialization
-    call TriggerExecute( gg_trg_AddUnitBuildingHero )
-    call PolledWait( 0.01 )
-    call ForGroupBJ( GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay2_Func004A )
-    call GroupPointOrderLocBJ( udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(gg_rct_Way2_p1) )
+    call TriggerExecute(gg_trg_AddUnitBuildingHero)
+    call PolledWait(0.01)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay2_Func004A)
+    call GroupPointOrderLocBJ(udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(gg_rct_Way2_p1))
     // Console Log
-    set udg_ConsoleTrigger = "UnitsInitializationWay2"
-    set udg_ConsoleMessage = ( ( "Group " + I2S(udg_CountGroup2) ) + ":" )
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="UnitsInitializationWay2"
+    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup2) ) + ":" )
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    call ForGroupBJ( udg_UnitGroupArray2[udg_CountGroup2], function Trig_UnitsInitializationWay2_Func011A )
+    call ForGroupBJ(udg_UnitGroupArray2[udg_CountGroup2], function Trig_UnitsInitializationWay2_Func011A)
 endfunction
 
 //===========================================================================
 function InitTrig_UnitsInitializationWay2 takes nothing returns nothing
-    set gg_trg_UnitsInitializationWay2 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_UnitsInitializationWay2, function Trig_UnitsInitializationWay2_Actions )
+    set gg_trg_UnitsInitializationWay2=CreateTrigger()
+    call TriggerAddAction(gg_trg_UnitsInitializationWay2, function Trig_UnitsInitializationWay2_Actions)
 endfunction
 
 //===========================================================================
@@ -6021,70 +6007,70 @@ endfunction
 
 function Trig_UnitsInitializationWay3_Func005A takes nothing returns nothing
     if ( Trig_UnitsInitializationWay3_Func005Func001C() ) then
-        call GroupAddUnitSimple( GetEnumUnit(), udg_UnitGroupArray3[udg_CountGroup3] )
+        call GroupAddUnitSimple(GetEnumUnit(), udg_UnitGroupArray3[udg_CountGroup3])
     else
     endif
 endfunction
 
 function Trig_UnitsInitializationWay3_Func012A takes nothing returns nothing
     // Console Log
-    set udg_ConsoleTrigger = "UnitsInitializationWay3"
-    set udg_ConsoleMessage = ( " - " + GetUnitName(GetEnumUnit()) )
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="UnitsInitializationWay3"
+    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
 endfunction
 
 function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 0
-    set bj_forLoopAIndexEnd = udg_CountGroup3
+    set bj_forLoopAIndex=0
+    set bj_forLoopAIndexEnd=udg_CountGroup3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call GroupClear( udg_UnitGroupArray3[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call GroupClear(udg_UnitGroupArray3[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
     // Units Initialization
-    call TriggerExecute( gg_trg_AddUnitBuildingHero )
-    call PolledWait( 0.01 )
-    call ForGroupBJ( GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay3_Func005A )
-    call GroupPointOrderLocBJ( udg_UnitGroupArray3[udg_CountGroup3], "attack", GetPlayerStartLocationLoc(Player(2)) )
+    call TriggerExecute(gg_trg_AddUnitBuildingHero)
+    call PolledWait(0.01)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay3_Func005A)
+    call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", GetPlayerStartLocationLoc(Player(2)))
     // Console Log
-    set udg_ConsoleTrigger = "UnitsInitializationWay3"
-    set udg_ConsoleMessage = ( ( "Group " + I2S(udg_CountGroup3) ) + ":" )
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+    set udg_ConsoleTrigger="UnitsInitializationWay3"
+    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup3) ) + ":" )
+    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
     //  
-    call ForGroupBJ( udg_UnitGroupArray3[udg_CountGroup3], function Trig_UnitsInitializationWay3_Func012A )
+    call ForGroupBJ(udg_UnitGroupArray3[udg_CountGroup3], function Trig_UnitsInitializationWay3_Func012A)
 endfunction
 
 //===========================================================================
 function InitTrig_UnitsInitializationWay3 takes nothing returns nothing
-    set gg_trg_UnitsInitializationWay3 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_UnitsInitializationWay3, function Trig_UnitsInitializationWay3_Actions )
+    set gg_trg_UnitsInitializationWay3=CreateTrigger()
+    call TriggerAddAction(gg_trg_UnitsInitializationWay3, function Trig_UnitsInitializationWay3_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: GroupArrayReset
 //===========================================================================
 function Trig_GroupArrayReset_Actions takes nothing returns nothing
-    set bj_forLoopAIndex = 0
-    set bj_forLoopAIndexEnd = udg_CountGroup1
+    set bj_forLoopAIndex=0
+    set bj_forLoopAIndexEnd=udg_CountGroup1
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call GroupClear( udg_UnitGroupArray1[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call GroupClear(udg_UnitGroupArray1[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
-    set bj_forLoopAIndex = 0
-    set bj_forLoopAIndexEnd = udg_CountGroup2
+    set bj_forLoopAIndex=0
+    set bj_forLoopAIndexEnd=udg_CountGroup2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call GroupClear( udg_UnitGroupArray2[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call GroupClear(udg_UnitGroupArray2[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_GroupArrayReset takes nothing returns nothing
-    set gg_trg_GroupArrayReset = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_GroupArrayReset, function Trig_GroupArrayReset_Actions )
+    set gg_trg_GroupArrayReset=CreateTrigger()
+    call TriggerAddAction(gg_trg_GroupArrayReset, function Trig_GroupArrayReset_Actions)
 endfunction
 
 //===========================================================================
@@ -6113,54 +6099,54 @@ endfunction
 
 function Trig_CreateSquad1_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad1_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquad1_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
     else
     endif
     // 3
     if ( Trig_CreateSquad1_Func009C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad1 takes nothing returns nothing
-    set gg_trg_CreateSquad1 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad1, function Trig_CreateSquad1_Actions )
+    set gg_trg_CreateSquad1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad1, function Trig_CreateSquad1_Actions)
 endfunction
 
 //===========================================================================
@@ -6189,54 +6175,54 @@ endfunction
 
 function Trig_CreateSquad2_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad2_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquad2_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
     else
     endif
     // 3
     if ( Trig_CreateSquad2_Func009C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad2 takes nothing returns nothing
-    set gg_trg_CreateSquad2 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad2, function Trig_CreateSquad2_Actions )
+    set gg_trg_CreateSquad2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad2, function Trig_CreateSquad2_Actions)
 endfunction
 
 //===========================================================================
@@ -6286,75 +6272,75 @@ endfunction
 
 function Trig_CreateSquad3_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad3_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
         if ( Trig_CreateSquad3_Func005Func002C() ) then
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
         else
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
         endif
     else
     endif
     // 2
     if ( Trig_CreateSquad3_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
         if ( Trig_CreateSquad3_Func007Func002C() ) then
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
         else
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
         endif
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 7.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
     else
     endif
     // 3
     if ( Trig_CreateSquad3_Func009C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
             if ( Trig_CreateSquad3_Func009Func001Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 7.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad3 takes nothing returns nothing
-    set gg_trg_CreateSquad3 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad3, function Trig_CreateSquad3_Actions )
+    set gg_trg_CreateSquad3=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad3, function Trig_CreateSquad3_Actions)
 endfunction
 
 //===========================================================================
@@ -6390,51 +6376,51 @@ endfunction
 
 function Trig_CreateSquad4_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad4_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
     else
     endif
     // 2
     if ( Trig_CreateSquad4_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquad4_Func009C() ) then
         if ( Trig_CreateSquad4_Func009Func001C() ) then
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 2
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=2
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 7.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
         else
         endif
     else
@@ -6443,8 +6429,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad4 takes nothing returns nothing
-    set gg_trg_CreateSquad4 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad4, function Trig_CreateSquad4_Actions )
+    set gg_trg_CreateSquad4=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad4, function Trig_CreateSquad4_Actions)
 endfunction
 
 //===========================================================================
@@ -6501,65 +6487,65 @@ endfunction
 
 function Trig_CreateSquad5_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad5_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
         if ( Trig_CreateSquad5_Func005Func002C() ) then
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
         else
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
         endif
     else
     endif
     // 2
     if ( Trig_CreateSquad5_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
             if ( Trig_CreateSquad5_Func007Func001Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquad5_Func009C() ) then
         if ( Trig_CreateSquad5_Func009Func001C() ) then
-            set bj_forLoopAIndex = 1
-            set bj_forLoopAIndexEnd = 2
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=2
             loop
                 exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
                 if ( Trig_CreateSquad5_Func009Func001Func001Func003C() ) then
-                    call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                    call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                    call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
                 else
-                    call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                    call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                    call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
                 endif
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 7.00 )
-                set bj_forLoopAIndex = bj_forLoopAIndex + 1
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
             endloop
         else
         endif
@@ -6569,8 +6555,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad5 takes nothing returns nothing
-    set gg_trg_CreateSquad5 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad5, function Trig_CreateSquad5_Actions )
+    set gg_trg_CreateSquad5=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad5, function Trig_CreateSquad5_Actions)
 endfunction
 
 //===========================================================================
@@ -6620,62 +6606,62 @@ endfunction
 
 function Trig_CreateSquad6_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad6_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
         if ( Trig_CreateSquad6_Func005Func002C() ) then
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
         else
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
         endif
     else
     endif
     // 2
     if ( Trig_CreateSquad6_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
             if ( Trig_CreateSquad6_Func007Func001Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquad6_Func009C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
             if ( Trig_CreateSquad6_Func009Func001Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
@@ -6683,8 +6669,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad6 takes nothing returns nothing
-    set gg_trg_CreateSquad6 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad6, function Trig_CreateSquad6_Actions )
+    set gg_trg_CreateSquad6=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad6, function Trig_CreateSquad6_Actions)
 endfunction
 
 //===========================================================================
@@ -6713,69 +6699,69 @@ endfunction
 
 function Trig_CreateSquad7_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad7_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquad7_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
     else
     endif
     // 3
     if ( Trig_CreateSquad7_Func009C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
@@ -6783,8 +6769,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad7 takes nothing returns nothing
-    set gg_trg_CreateSquad7 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad7, function Trig_CreateSquad7_Actions )
+    set gg_trg_CreateSquad7=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad7, function Trig_CreateSquad7_Actions)
 endfunction
 
 //===========================================================================
@@ -6813,60 +6799,60 @@ endfunction
 
 function Trig_CreateSquad8_Actions takes nothing returns nothing
     // Units Create
-    call CreateNUnitsAtLoc( 1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    call CampaignMinimapIconUnitBJ( GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY )
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
     // 1
     if ( Trig_CreateSquad8_Func005C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquad8_Func007C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 11.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 11.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquad8_Func009C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_CreateSquad8 takes nothing returns nothing
-    set gg_trg_CreateSquad8 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquad8, function Trig_CreateSquad8_Actions )
+    set gg_trg_CreateSquad8=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquad8, function Trig_CreateSquad8_Actions)
 endfunction
 
 //===========================================================================
@@ -6895,33 +6881,27 @@ endfunction
 
 function Trig_CreateHero_Actions takes nothing returns nothing
     // Hero Create
-    call CreateNUnitsAtLoc( 1, 'h008', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-    set udg_RandHeroes = GetRandomReal(0, 100.00)
+    call CreateNUnitsAtLoc(1, 'h008', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    set udg_RandHeroes=GetRandomReal(0, 100.00)
     if ( Trig_CreateHero_Func004C() ) then
-        call SetUnitManaBJ( GetLastCreatedUnit(), 1.00 )
+        call SetUnitManaBJ(GetLastCreatedUnit(), 1.00)
     else
         if ( Trig_CreateHero_Func004Func001C() ) then
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
         else
             if ( Trig_CreateHero_Func004Func001Func001C() ) then
-                call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+                call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             else
-                call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
+                call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
             endif
         endif
     endif
-    call ReplaceUnitBJ( GetLastCreatedUnit(), GetUnitTypeId(GetLastCreatedUnit()), bj_UNIT_STATE_METHOD_DEFAULTS )
-    // Console Log
-    set udg_ConsoleTrigger = "CreateHero"
-    set udg_ConsoleMessage = UnitId2StringBJ(GetUnitTypeId(GetLastCreatedUnit()))
-    call ConditionalTriggerExecute( gg_trg_ConsoleLog )
-    //  
 endfunction
 
 //===========================================================================
 function InitTrig_CreateHero takes nothing returns nothing
-    set gg_trg_CreateHero = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateHero, function Trig_CreateHero_Actions )
+    set gg_trg_CreateHero=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateHero, function Trig_CreateHero_Actions)
 endfunction
 
 //===========================================================================
@@ -6949,64 +6929,64 @@ function Trig_CreateSquadEnemy1_Func008C takes nothing returns boolean
 endfunction
 
 function Trig_CreateSquadEnemy1_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_CreateHero )
+    call ConditionalTriggerExecute(gg_trg_CreateHero)
     // Units Create
     // 1
     if ( Trig_CreateSquadEnemy1_Func004C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
     else
     endif
     // 2
     if ( Trig_CreateSquadEnemy1_Func006C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquadEnemy1_Func008C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_CreateSquadEnemy1 takes nothing returns nothing
-    set gg_trg_CreateSquadEnemy1 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquadEnemy1, function Trig_CreateSquadEnemy1_Actions )
+    set gg_trg_CreateSquadEnemy1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadEnemy1, function Trig_CreateSquadEnemy1_Actions)
 endfunction
 
 //===========================================================================
@@ -7055,86 +7035,86 @@ function Trig_CreateSquadEnemy2_Func008C takes nothing returns boolean
 endfunction
 
 function Trig_CreateSquadEnemy2_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_CreateHero )
+    call ConditionalTriggerExecute(gg_trg_CreateHero)
     // Units Create
     // 1
     if ( Trig_CreateSquadEnemy2_Func004C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy2_Func004Func002Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquadEnemy2_Func006C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 4
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=4
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 2.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy2_Func006Func002Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquadEnemy2_Func008C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy2_Func008Func002Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
@@ -7142,8 +7122,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_CreateSquadEnemy2 takes nothing returns nothing
-    set gg_trg_CreateSquadEnemy2 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquadEnemy2, function Trig_CreateSquadEnemy2_Actions )
+    set gg_trg_CreateSquadEnemy2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadEnemy2, function Trig_CreateSquadEnemy2_Actions)
 endfunction
 
 //===========================================================================
@@ -7192,74 +7172,74 @@ function Trig_CreateSquadEnemy3_Func008C takes nothing returns boolean
 endfunction
 
 function Trig_CreateSquadEnemy3_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_CreateHero )
+    call ConditionalTriggerExecute(gg_trg_CreateHero)
     // Units Create
     // 1
     if ( Trig_CreateSquadEnemy3_Func004C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy3_Func004Func001Func005C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquadEnemy3_Func006C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy3_Func006Func001Func005C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 3
     if ( Trig_CreateSquadEnemy3_Func008C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 4
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=4
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
             if ( Trig_CreateSquadEnemy3_Func008Func002Func001C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
@@ -7267,8 +7247,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_CreateSquadEnemy3 takes nothing returns nothing
-    set gg_trg_CreateSquadEnemy3 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquadEnemy3, function Trig_CreateSquadEnemy3_Actions )
+    set gg_trg_CreateSquadEnemy3=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadEnemy3, function Trig_CreateSquadEnemy3_Actions)
 endfunction
 
 //===========================================================================
@@ -7338,120 +7318,120 @@ function Trig_CreateSquadEnemy4_Func008C takes nothing returns boolean
 endfunction
 
 function Trig_CreateSquadEnemy4_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_CreateHero )
+    call ConditionalTriggerExecute(gg_trg_CreateHero)
     // Units Create
     // 1
     if ( Trig_CreateSquadEnemy4_Func004C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy4_Func004Func002Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
             if ( Trig_CreateSquadEnemy4_Func004Func002Func004C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
     else
     endif
     // 2
     if ( Trig_CreateSquadEnemy4_Func006C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 3
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=3
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy4_Func006Func002Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
             if ( Trig_CreateSquadEnemy4_Func006Func002Func004C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
     else
     endif
     // 3
     if ( Trig_CreateSquadEnemy4_Func008C() ) then
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 4
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=4
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 8.00 )
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        set bj_forLoopAIndex = 1
-        set bj_forLoopAIndexEnd = 2
+        set bj_forLoopAIndex=1
+        set bj_forLoopAIndexEnd=2
         loop
             exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-            call SetUnitManaBJ( GetLastCreatedUnit(), 3.00 )
+            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
             if ( Trig_CreateSquadEnemy4_Func008Func002Func003C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 5.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 6.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
             endif
             if ( Trig_CreateSquadEnemy4_Func008Func002Func004C() ) then
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 9.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
             else
-                call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-                call SetUnitManaBJ( GetLastCreatedUnit(), 10.00 )
+                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+                call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
             endif
-            set bj_forLoopAIndex = bj_forLoopAIndex + 1
+            set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-        call CreateNUnitsAtLoc( 1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING )
-        call SetUnitManaBJ( GetLastCreatedUnit(), 4.00 )
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
     else
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_CreateSquadEnemy4 takes nothing returns nothing
-    set gg_trg_CreateSquadEnemy4 = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_CreateSquadEnemy4, function Trig_CreateSquadEnemy4_Actions )
+    set gg_trg_CreateSquadEnemy4=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadEnemy4, function Trig_CreateSquadEnemy4_Actions)
 endfunction
 
 //===========================================================================
@@ -7459,48 +7439,24 @@ endfunction
 //
 // Fix bug Dead Enemy Hero after Replace Add Hero [AI]
 //===========================================================================
-function Trig_DeadEnemyHero_Func004Func003C takes nothing returns boolean
-    if ( ( GetOwningPlayer(GetDyingUnit()) == Player(4) ) ) then
+function Trig_DeadEnemyHero_Conditions takes nothing returns boolean
+    local unit dyingUnit= GetDyingUnit()
+    local player dyingPlayer= GetOwningPlayer(dyingUnit)
+
+    if IsUnitType(dyingUnit, UNIT_TYPE_HERO) and not IsUnitType(dyingUnit, UNIT_TYPE_SAPPER) and ( dyingPlayer == Player(4) or dyingPlayer == Player(5) ) then
+        call ReplaceUnitBJ(dyingUnit, GetUnitTypeId(dyingUnit), bj_UNIT_STATE_METHOD_DEFAULTS)
+        call UnitAddTypeBJ(UNIT_TYPE_SAPPER, GetLastReplacedUnitBJ())
+        call KillUnit(GetLastReplacedUnitBJ())
         return true
     endif
-    if ( ( GetOwningPlayer(GetDyingUnit()) == Player(5) ) ) then
-        return true
-    endif
+
     return false
 endfunction
 
-function Trig_DeadEnemyHero_Func004C takes nothing returns boolean
-    if ( not ( IsUnitType(GetDyingUnit(), UNIT_TYPE_SAPPER) == false ) ) then
-        return false
-    endif
-    if ( not ( IsUnitType(GetDyingUnit(), UNIT_TYPE_HERO) == true ) ) then
-        return false
-    endif
-    if ( not Trig_DeadEnemyHero_Func004Func003C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_DeadEnemyHero_Conditions takes nothing returns boolean
-    if ( not Trig_DeadEnemyHero_Func004C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_DeadEnemyHero_Actions takes nothing returns nothing
-    call ReplaceUnitBJ( GetDyingUnit(), GetUnitTypeId(GetDyingUnit()), bj_UNIT_STATE_METHOD_DEFAULTS )
-    call UnitAddTypeBJ( UNIT_TYPE_SAPPER, GetLastReplacedUnitBJ() )
-    call KillUnit( GetLastReplacedUnitBJ() )
-endfunction
-
-//===========================================================================
 function InitTrig_DeadEnemyHero takes nothing returns nothing
-    set gg_trg_DeadEnemyHero = CreateTrigger(  )
-    call TriggerRegisterAnyUnitEventBJ( gg_trg_DeadEnemyHero, EVENT_PLAYER_UNIT_DEATH )
-    call TriggerAddCondition( gg_trg_DeadEnemyHero, Condition( function Trig_DeadEnemyHero_Conditions ) )
-    call TriggerAddAction( gg_trg_DeadEnemyHero, function Trig_DeadEnemyHero_Actions )
+    set gg_trg_DeadEnemyHero=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_DeadEnemyHero, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_DeadEnemyHero, Condition(function Trig_DeadEnemyHero_Conditions))
 endfunction
 
 //===========================================================================
@@ -7510,25 +7466,25 @@ endfunction
 //===========================================================================
 function Trig_WaveTimer_Actions takes nothing returns nothing
     // 5-13-19-26-33
-    set udg_TimerMinWave[1] = ( 5.00 * 60.00 )
-    set udg_TimerMinWave[2] = ( 13.00 * 60.00 )
-    set udg_TimerMinWave[3] = ( 19.00 * 60.00 )
-    set udg_TimerMinWave[4] = ( 26.00 * 60.00 )
-    set udg_TimerMinWave[5] = ( 33.00 * 60.00 )
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 5
+    set udg_TimerMinWave[1]=( 5.00 * 60.00 )
+    set udg_TimerMinWave[2]=( 13.00 * 60.00 )
+    set udg_TimerMinWave[3]=( 19.00 * 60.00 )
+    set udg_TimerMinWave[4]=( 26.00 * 60.00 )
+    set udg_TimerMinWave[5]=( 33.00 * 60.00 )
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=5
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call StartTimerBJ( udg_TimerWave[GetForLoopIndexA()], false, udg_TimerMinWave[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call StartTimerBJ(udg_TimerWave[GetForLoopIndexA()], false, udg_TimerMinWave[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_WaveTimer takes nothing returns nothing
-    set gg_trg_WaveTimer = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_WaveTimer, 0.01 )
-    call TriggerAddAction( gg_trg_WaveTimer, function Trig_WaveTimer_Actions )
+    set gg_trg_WaveTimer=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_WaveTimer, 0.01)
+    call TriggerAddAction(gg_trg_WaveTimer, function Trig_WaveTimer_Actions)
 endfunction
 
 //===========================================================================
@@ -7545,42 +7501,42 @@ function Trig_Wave1_Func007C takes nothing returns boolean
 endfunction
 
 function Trig_Wave1_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_GroupArrayReset )
-    call ConditionalTriggerExecute( gg_trg_IniZone )
-    call ConditionalTriggerExecute( gg_trg_NPCNextWave )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(4)
-    set udg_WaveRandomWay = GetRandomReal(0, 100.00)
+    call ConditionalTriggerExecute(gg_trg_GroupArrayReset)
+    call ConditionalTriggerExecute(gg_trg_IniZone)
+    call ConditionalTriggerExecute(gg_trg_NPCNextWave)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(4)
+    set udg_WaveRandomWay=GetRandomReal(0, 100.00)
     if ( Trig_Wave1_Func007C() ) then
-        call ConditionalTriggerExecute( gg_trg_Way2Ping )
-        set udg_SetZone = gg_rct_Way2_p0
+        call ConditionalTriggerExecute(gg_trg_Way2Ping)
+        set udg_SetZone=gg_rct_Way2_p0
         //  
-        set udg_CountGroup2 = 1
-        call TriggerExecute( gg_trg_CreateSquad1 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad2 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+        set udg_CountGroup2=1
+        call TriggerExecute(gg_trg_CreateSquad1)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad2)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
-        call ConditionalTriggerExecute( gg_trg_Way1Ping )
-        set udg_SetZone = gg_rct_Way1_p0
+        call ConditionalTriggerExecute(gg_trg_Way1Ping)
+        set udg_SetZone=gg_rct_Way1_p0
         //  
-        set udg_CountGroup1 = 1
-        call TriggerExecute( gg_trg_CreateSquad1 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad2 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+        set udg_CountGroup1=1
+        call TriggerExecute(gg_trg_CreateSquad1)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad2)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_Wave1 takes nothing returns nothing
-    set gg_trg_Wave1 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_Wave1, udg_TimerWave[1] )
-    call TriggerAddAction( gg_trg_Wave1, function Trig_Wave1_Actions )
+    set gg_trg_Wave1=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave1, udg_TimerWave[1])
+    call TriggerAddAction(gg_trg_Wave1, function Trig_Wave1_Actions)
 endfunction
 
 //===========================================================================
@@ -7597,54 +7553,54 @@ function Trig_Wave2_Func006C takes nothing returns boolean
 endfunction
 
 function Trig_Wave2_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_GroupArrayReset )
-    call ConditionalTriggerExecute( gg_trg_IniZone )
-    call ConditionalTriggerExecute( gg_trg_NPCNextWave )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(4)
+    call ConditionalTriggerExecute(gg_trg_GroupArrayReset)
+    call ConditionalTriggerExecute(gg_trg_IniZone)
+    call ConditionalTriggerExecute(gg_trg_NPCNextWave)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(4)
     if ( Trig_Wave2_Func006C() ) then
-        call ConditionalTriggerExecute( gg_trg_Way2Ping )
-        set udg_SetZone = gg_rct_Way2_p0
+        call ConditionalTriggerExecute(gg_trg_Way2Ping)
+        set udg_SetZone=gg_rct_Way2_p0
         //  
-        set udg_CountGroup2 = 1
-        call TriggerExecute( gg_trg_CreateSquad3 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad4 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad3 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+        set udg_CountGroup2=1
+        call TriggerExecute(gg_trg_CreateSquad3)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad4)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad3)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
         // Console Log
-        set udg_ConsoleTrigger = "Wave2"
-        set udg_ConsoleMessage = "Way1"
-        call ConditionalTriggerExecute( gg_trg_ConsoleLog )
+        set udg_ConsoleTrigger="Wave2"
+        set udg_ConsoleMessage="Way1"
+        call ConditionalTriggerExecute(gg_trg_ConsoleLog)
         //  
-        call ConditionalTriggerExecute( gg_trg_Way1Ping )
-        set udg_SetZone = gg_rct_Way1_p0
+        call ConditionalTriggerExecute(gg_trg_Way1Ping)
+        set udg_SetZone=gg_rct_Way1_p0
         //  
-        set udg_CountGroup1 = 1
-        call TriggerExecute( gg_trg_CreateSquad3 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad4 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad3 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+        set udg_CountGroup1=1
+        call TriggerExecute(gg_trg_CreateSquad3)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad4)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad3)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_Wave2 takes nothing returns nothing
-    set gg_trg_Wave2 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_Wave2, udg_TimerWave[2] )
-    call TriggerAddAction( gg_trg_Wave2, function Trig_Wave2_Actions )
+    set gg_trg_Wave2=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave2, udg_TimerWave[2])
+    call TriggerAddAction(gg_trg_Wave2, function Trig_Wave2_Actions)
 endfunction
 
 //===========================================================================
@@ -7654,75 +7610,75 @@ endfunction
 // 4 caravans
 //===========================================================================
 function Trig_Wave3_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_GroupArrayReset )
-    call ConditionalTriggerExecute( gg_trg_IniZone )
-    call ConditionalTriggerExecute( gg_trg_NPCNextWave )
-    call TriggerSleepAction( 15.00 )
-    call ConditionalTriggerExecute( gg_trg_Way1Ping )
-    call ConditionalTriggerExecute( gg_trg_Way2Ping )
-    set udg_SetEnemy = Player(4)
+    call ConditionalTriggerExecute(gg_trg_GroupArrayReset)
+    call ConditionalTriggerExecute(gg_trg_IniZone)
+    call ConditionalTriggerExecute(gg_trg_NPCNextWave)
+    call TriggerSleepAction(15.00)
+    call ConditionalTriggerExecute(gg_trg_Way1Ping)
+    call ConditionalTriggerExecute(gg_trg_Way2Ping)
+    set udg_SetEnemy=Player(4)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = 1
-    call TriggerExecute( gg_trg_CreateSquad1 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=1
+    call TriggerExecute(gg_trg_CreateSquad1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = 1
-    call TriggerExecute( gg_trg_CreateSquad1 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=1
+    call TriggerExecute(gg_trg_CreateSquad1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
-    call TriggerSleepAction( 12.00 )
+    call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad2 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=( udg_CountGroup1 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad2 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=( udg_CountGroup2 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
-    call TriggerSleepAction( 12.00 )
+    call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad1 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=( udg_CountGroup1 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad1 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=( udg_CountGroup2 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     //  
-    call TriggerSleepAction( 12.00 )
+    call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad2 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=( udg_CountGroup1 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad2 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=( udg_CountGroup2 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
 endfunction
 
 //===========================================================================
 function InitTrig_Wave3 takes nothing returns nothing
-    set gg_trg_Wave3 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_Wave3, udg_TimerWave[3] )
-    call TriggerAddAction( gg_trg_Wave3, function Trig_Wave3_Actions )
+    set gg_trg_Wave3=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave3, udg_TimerWave[3])
+    call TriggerAddAction(gg_trg_Wave3, function Trig_Wave3_Actions)
 endfunction
 
 //===========================================================================
@@ -7732,76 +7688,76 @@ endfunction
 // 4 caravans
 //===========================================================================
 function Trig_Wave4_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_GroupArrayReset )
-    call ConditionalTriggerExecute( gg_trg_IniZone )
-    call ConditionalTriggerExecute( gg_trg_NPCNextWave )
-    call TriggerSleepAction( 15.00 )
-    call ConditionalTriggerExecute( gg_trg_Way1Ping )
-    call ConditionalTriggerExecute( gg_trg_Way2Ping )
-    set udg_SetEnemy = Player(4)
+    call ConditionalTriggerExecute(gg_trg_GroupArrayReset)
+    call ConditionalTriggerExecute(gg_trg_IniZone)
+    call ConditionalTriggerExecute(gg_trg_NPCNextWave)
+    call TriggerSleepAction(15.00)
+    call ConditionalTriggerExecute(gg_trg_Way1Ping)
+    call ConditionalTriggerExecute(gg_trg_Way2Ping)
+    set udg_SetEnemy=Player(4)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = 1
-    call TriggerExecute( gg_trg_CreateSquad3 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=1
+    call TriggerExecute(gg_trg_CreateSquad3)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = 1
-    call TriggerExecute( gg_trg_CreateSquad3 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=1
+    call TriggerExecute(gg_trg_CreateSquad3)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
-    call TriggerSleepAction( 12.00 )
+    call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad4 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=( udg_CountGroup1 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad4)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad4 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=( udg_CountGroup2 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad4)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
-    call TriggerSleepAction( 12.00 )
+    call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad3 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=( udg_CountGroup1 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad3)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad3 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=( udg_CountGroup2 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad3)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     //  
-    call TriggerSleepAction( 12.00 )
+    call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone = gg_rct_Way1_p0
-    set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad4 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+    set udg_SetZone=gg_rct_Way1_p0
+    set udg_CountGroup1=( udg_CountGroup1 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad4)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
-    call TriggerSleepAction( 0.10 )
+    call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone = gg_rct_Way2_p0
-    set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-    call TriggerExecute( gg_trg_CreateSquad4 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+    set udg_SetZone=gg_rct_Way2_p0
+    set udg_CountGroup2=( udg_CountGroup2 + 1 )
+    call TriggerExecute(gg_trg_CreateSquad4)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
 endfunction
 
 //===========================================================================
 function InitTrig_Wave4 takes nothing returns nothing
-    set gg_trg_Wave4 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_Wave4, udg_TimerWave[4] )
-    call TriggerAddAction( gg_trg_Wave4, function Trig_Wave4_Actions )
+    set gg_trg_Wave4=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave4, udg_TimerWave[4])
+    call TriggerAddAction(gg_trg_Wave4, function Trig_Wave4_Actions)
 endfunction
 
 //===========================================================================
@@ -7818,68 +7774,68 @@ function Trig_Wave5_Func009C takes nothing returns boolean
 endfunction
 
 function Trig_Wave5_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_GroupArrayReset )
-    call ConditionalTriggerExecute( gg_trg_IniZone )
-    call ConditionalTriggerExecute( gg_trg_NPCLastWave )
-    call EnableTrigger( gg_trg_LastWaveComplete )
-    call DisableTrigger( gg_trg_WaveComplete )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(4)
-    set udg_WaveRandomWay = GetRandomReal(0, 100.00)
+    call ConditionalTriggerExecute(gg_trg_GroupArrayReset)
+    call ConditionalTriggerExecute(gg_trg_IniZone)
+    call ConditionalTriggerExecute(gg_trg_NPCLastWave)
+    call EnableTrigger(gg_trg_LastWaveComplete)
+    call DisableTrigger(gg_trg_WaveComplete)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(4)
+    set udg_WaveRandomWay=GetRandomReal(0, 100.00)
     if ( Trig_Wave5_Func009C() ) then
-        call ConditionalTriggerExecute( gg_trg_Way2Ping )
-        set udg_SetZone = gg_rct_Way2_p0
+        call ConditionalTriggerExecute(gg_trg_Way2Ping)
+        set udg_SetZone=gg_rct_Way2_p0
         //  
-        set udg_CountGroup2 = 1
-        call TriggerExecute( gg_trg_CreateSquad6 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad7 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad8 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad7 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup2 = ( udg_CountGroup2 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad6 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay2 )
+        set udg_CountGroup2=1
+        call TriggerExecute(gg_trg_CreateSquad6)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad7)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad8)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad7)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad6)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
-        call ConditionalTriggerExecute( gg_trg_Way1Ping )
-        set udg_SetZone = gg_rct_Way1_p0
+        call ConditionalTriggerExecute(gg_trg_Way1Ping)
+        set udg_SetZone=gg_rct_Way1_p0
         //  
-        set udg_CountGroup1 = 1
-        call TriggerExecute( gg_trg_CreateSquad6 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad7 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad8 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad7 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
-        call TriggerSleepAction( 12.00 )
-        set udg_CountGroup1 = ( udg_CountGroup1 + 1 )
-        call TriggerExecute( gg_trg_CreateSquad6 )
-        call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay1 )
+        set udg_CountGroup1=1
+        call TriggerExecute(gg_trg_CreateSquad6)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad7)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad8)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad7)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
+        call TriggerSleepAction(12.00)
+        set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSquad6)
+        call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
 endfunction
 
 //===========================================================================
 function InitTrig_Wave5 takes nothing returns nothing
-    set gg_trg_Wave5 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_Wave5, udg_TimerWave[5] )
-    call TriggerAddAction( gg_trg_Wave5, function Trig_Wave5_Actions )
+    set gg_trg_Wave5=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave5, udg_TimerWave[5])
+    call TriggerAddAction(gg_trg_Wave5, function Trig_Wave5_Actions)
 endfunction
 
 //===========================================================================
@@ -7889,24 +7845,24 @@ endfunction
 //===========================================================================
 function Trig_EnemyTimer_Actions takes nothing returns nothing
     // 9-16-22-29
-    set udg_TimerMinEnemyWave[1] = ( 9.00 * 60.00 )
-    set udg_TimerMinEnemyWave[2] = ( 16.00 * 60.00 )
-    set udg_TimerMinEnemyWave[3] = ( 22.00 * 60.00 )
-    set udg_TimerMinEnemyWave[4] = ( 29.00 * 60.00 )
-    set bj_forLoopAIndex = 1
-    set bj_forLoopAIndexEnd = 4
+    set udg_TimerMinEnemyWave[1]=( 9.00 * 60.00 )
+    set udg_TimerMinEnemyWave[2]=( 16.00 * 60.00 )
+    set udg_TimerMinEnemyWave[3]=( 22.00 * 60.00 )
+    set udg_TimerMinEnemyWave[4]=( 29.00 * 60.00 )
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=4
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call StartTimerBJ( udg_TimerEnemyWave[GetForLoopIndexA()], false, udg_TimerMinEnemyWave[GetForLoopIndexA()] )
-        set bj_forLoopAIndex = bj_forLoopAIndex + 1
+        call StartTimerBJ(udg_TimerEnemyWave[GetForLoopIndexA()], false, udg_TimerMinEnemyWave[GetForLoopIndexA()])
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
 endfunction
 
 //===========================================================================
 function InitTrig_EnemyTimer takes nothing returns nothing
-    set gg_trg_EnemyTimer = CreateTrigger(  )
-    call TriggerRegisterTimerEventSingle( gg_trg_EnemyTimer, 0.01 )
-    call TriggerAddAction( gg_trg_EnemyTimer, function Trig_EnemyTimer_Actions )
+    set gg_trg_EnemyTimer=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_EnemyTimer, 0.01)
+    call TriggerAddAction(gg_trg_EnemyTimer, function Trig_EnemyTimer_Actions)
 endfunction
 
 //===========================================================================
@@ -7943,18 +7899,18 @@ function Trig_EnemyRandomSpawn_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_EnemyRandomSpawn_Actions takes nothing returns nothing
-    set udg_EnemyRandomWay = GetRandomReal(0, 100.00)
+    set udg_EnemyRandomWay=GetRandomReal(0, 100.00)
     if ( Trig_EnemyRandomSpawn_Func002C() ) then
-        set udg_SetZone = gg_rct_Way2_p0
+        set udg_SetZone=gg_rct_Way2_p0
     else
         if ( Trig_EnemyRandomSpawn_Func002Func001C() ) then
-            set udg_SetZone = gg_rct_Way2_p8
+            set udg_SetZone=gg_rct_Way2_p8
         else
             if ( Trig_EnemyRandomSpawn_Func002Func001Func001C() ) then
-                set udg_SetZone = gg_rct_Way1_p9
+                set udg_SetZone=gg_rct_Way1_p9
             else
                 if ( Trig_EnemyRandomSpawn_Func002Func001Func001Func001C() ) then
-                    set udg_SetZone = gg_rct_Way1_p0
+                    set udg_SetZone=gg_rct_Way1_p0
                 else
                 endif
             endif
@@ -7964,8 +7920,8 @@ endfunction
 
 //===========================================================================
 function InitTrig_EnemyRandomSpawn takes nothing returns nothing
-    set gg_trg_EnemyRandomSpawn = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_EnemyRandomSpawn, function Trig_EnemyRandomSpawn_Actions )
+    set gg_trg_EnemyRandomSpawn=CreateTrigger()
+    call TriggerAddAction(gg_trg_EnemyRandomSpawn, function Trig_EnemyRandomSpawn_Actions)
 endfunction
 
 //===========================================================================
@@ -7993,35 +7949,35 @@ function Trig_EnemyWave1_Func010C takes nothing returns boolean
 endfunction
 
 function Trig_EnemyWave1_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_NPCEnemyWave )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(5)
-    call ConditionalTriggerExecute( gg_trg_EnemyRandomSpawn )
-    set udg_CountGroup3 = 1
-    call TriggerExecute( gg_trg_CreateSquadEnemy1 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay3 )
-    call TriggerSleepAction( 0.10 )
+    call ConditionalTriggerExecute(gg_trg_NPCEnemyWave)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(5)
+    call ConditionalTriggerExecute(gg_trg_EnemyRandomSpawn)
+    set udg_CountGroup3=1
+    call TriggerExecute(gg_trg_CreateSquadEnemy1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay3)
+    call TriggerSleepAction(0.10)
     // Enemy Hero
     if ( Trig_EnemyWave1_Func010C() ) then
-        set udg_EnemyHeroLevel = 1
+        set udg_EnemyHeroLevel=1
     else
         if ( Trig_EnemyWave1_Func010Func001C() ) then
-            set udg_EnemyHeroLevel = 2
+            set udg_EnemyHeroLevel=2
         else
             if ( Trig_EnemyWave1_Func010Func001Func001C() ) then
-                set udg_EnemyHeroLevel = 3
+                set udg_EnemyHeroLevel=3
             else
             endif
         endif
     endif
-    call ConditionalTriggerExecute( gg_trg_EnemyHero )
+    call ConditionalTriggerExecute(gg_trg_EnemyHero)
 endfunction
 
 //===========================================================================
 function InitTrig_EnemyWave1 takes nothing returns nothing
-    set gg_trg_EnemyWave1 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_EnemyWave1, udg_TimerEnemyWave[1] )
-    call TriggerAddAction( gg_trg_EnemyWave1, function Trig_EnemyWave1_Actions )
+    set gg_trg_EnemyWave1=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave1, udg_TimerEnemyWave[1])
+    call TriggerAddAction(gg_trg_EnemyWave1, function Trig_EnemyWave1_Actions)
 endfunction
 
 //===========================================================================
@@ -8049,35 +8005,35 @@ function Trig_EnemyWave2_Func010C takes nothing returns boolean
 endfunction
 
 function Trig_EnemyWave2_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_NPCEnemyWave )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(5)
-    call ConditionalTriggerExecute( gg_trg_EnemyRandomSpawn )
-    set udg_CountGroup3 = 1
-    call TriggerExecute( gg_trg_CreateSquadEnemy2 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay3 )
-    call TriggerSleepAction( 0.10 )
+    call ConditionalTriggerExecute(gg_trg_NPCEnemyWave)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(5)
+    call ConditionalTriggerExecute(gg_trg_EnemyRandomSpawn)
+    set udg_CountGroup3=1
+    call TriggerExecute(gg_trg_CreateSquadEnemy2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay3)
+    call TriggerSleepAction(0.10)
     // Enemy Hero
     if ( Trig_EnemyWave2_Func010C() ) then
-        set udg_EnemyHeroLevel = 3
+        set udg_EnemyHeroLevel=3
     else
         if ( Trig_EnemyWave2_Func010Func001C() ) then
-            set udg_EnemyHeroLevel = 5
+            set udg_EnemyHeroLevel=5
         else
             if ( Trig_EnemyWave2_Func010Func001Func001C() ) then
-                set udg_EnemyHeroLevel = 6
+                set udg_EnemyHeroLevel=6
             else
             endif
         endif
     endif
-    call ConditionalTriggerExecute( gg_trg_EnemyHero )
+    call ConditionalTriggerExecute(gg_trg_EnemyHero)
 endfunction
 
 //===========================================================================
 function InitTrig_EnemyWave2 takes nothing returns nothing
-    set gg_trg_EnemyWave2 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_EnemyWave2, udg_TimerEnemyWave[2] )
-    call TriggerAddAction( gg_trg_EnemyWave2, function Trig_EnemyWave2_Actions )
+    set gg_trg_EnemyWave2=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave2, udg_TimerEnemyWave[2])
+    call TriggerAddAction(gg_trg_EnemyWave2, function Trig_EnemyWave2_Actions)
 endfunction
 
 //===========================================================================
@@ -8105,35 +8061,35 @@ function Trig_EnemyWave3_Func010C takes nothing returns boolean
 endfunction
 
 function Trig_EnemyWave3_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_NPCEnemyWave )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(5)
-    call ConditionalTriggerExecute( gg_trg_EnemyRandomSpawn )
-    set udg_CountGroup3 = 1
-    call TriggerExecute( gg_trg_CreateSquadEnemy3 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay3 )
-    call TriggerSleepAction( 0.10 )
+    call ConditionalTriggerExecute(gg_trg_NPCEnemyWave)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(5)
+    call ConditionalTriggerExecute(gg_trg_EnemyRandomSpawn)
+    set udg_CountGroup3=1
+    call TriggerExecute(gg_trg_CreateSquadEnemy3)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay3)
+    call TriggerSleepAction(0.10)
     // Enemy Hero
     if ( Trig_EnemyWave3_Func010C() ) then
-        set udg_EnemyHeroLevel = 5
+        set udg_EnemyHeroLevel=5
     else
         if ( Trig_EnemyWave3_Func010Func001C() ) then
-            set udg_EnemyHeroLevel = 7
+            set udg_EnemyHeroLevel=7
         else
             if ( Trig_EnemyWave3_Func010Func001Func001C() ) then
-                set udg_EnemyHeroLevel = 8
+                set udg_EnemyHeroLevel=8
             else
             endif
         endif
     endif
-    call ConditionalTriggerExecute( gg_trg_EnemyHero )
+    call ConditionalTriggerExecute(gg_trg_EnemyHero)
 endfunction
 
 //===========================================================================
 function InitTrig_EnemyWave3 takes nothing returns nothing
-    set gg_trg_EnemyWave3 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_EnemyWave3, udg_TimerEnemyWave[3] )
-    call TriggerAddAction( gg_trg_EnemyWave3, function Trig_EnemyWave3_Actions )
+    set gg_trg_EnemyWave3=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave3, udg_TimerEnemyWave[3])
+    call TriggerAddAction(gg_trg_EnemyWave3, function Trig_EnemyWave3_Actions)
 endfunction
 
 //===========================================================================
@@ -8161,35 +8117,35 @@ function Trig_EnemyWave4_Func010C takes nothing returns boolean
 endfunction
 
 function Trig_EnemyWave4_Actions takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_NPCEnemyWave )
-    call TriggerSleepAction( 15.00 )
-    set udg_SetEnemy = Player(5)
-    call ConditionalTriggerExecute( gg_trg_EnemyRandomSpawn )
-    set udg_CountGroup3 = 1
-    call TriggerExecute( gg_trg_CreateSquadEnemy4 )
-    call ConditionalTriggerExecute( gg_trg_UnitsInitializationWay3 )
-    call TriggerSleepAction( 0.10 )
+    call ConditionalTriggerExecute(gg_trg_NPCEnemyWave)
+    call TriggerSleepAction(15.00)
+    set udg_SetEnemy=Player(5)
+    call ConditionalTriggerExecute(gg_trg_EnemyRandomSpawn)
+    set udg_CountGroup3=1
+    call TriggerExecute(gg_trg_CreateSquadEnemy4)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay3)
+    call TriggerSleepAction(0.10)
     // Enemy Hero
     if ( Trig_EnemyWave4_Func010C() ) then
-        set udg_EnemyHeroLevel = 7
+        set udg_EnemyHeroLevel=7
     else
         if ( Trig_EnemyWave4_Func010Func001C() ) then
-            set udg_EnemyHeroLevel = 9
+            set udg_EnemyHeroLevel=9
         else
             if ( Trig_EnemyWave4_Func010Func001Func001C() ) then
-                set udg_EnemyHeroLevel = 10
+                set udg_EnemyHeroLevel=10
             else
             endif
         endif
     endif
-    call ConditionalTriggerExecute( gg_trg_EnemyHero )
+    call ConditionalTriggerExecute(gg_trg_EnemyHero)
 endfunction
 
 //===========================================================================
 function InitTrig_EnemyWave4 takes nothing returns nothing
-    set gg_trg_EnemyWave4 = CreateTrigger(  )
-    call TriggerRegisterTimerExpireEventBJ( gg_trg_EnemyWave4, udg_TimerEnemyWave[4] )
-    call TriggerAddAction( gg_trg_EnemyWave4, function Trig_EnemyWave4_Actions )
+    set gg_trg_EnemyWave4=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave4, udg_TimerEnemyWave[4])
+    call TriggerAddAction(gg_trg_EnemyWave4, function Trig_EnemyWave4_Actions)
 endfunction
 
 //===========================================================================
@@ -8214,23 +8170,23 @@ endfunction
 
 function Trig_EnemyHero_Func002A takes nothing returns nothing
     if ( Trig_EnemyHero_Func002Func001C() ) then
-        call SetHeroLevelBJ( GetEnumUnit(), udg_EnemyHeroLevel, false )
-        call CampaignMinimapIconUnitBJ( GetEnumUnit(), bj_CAMPPINGSTYLE_BOSS )
-        call ConditionalTriggerExecute( gg_trg_AddHeroAbility )
-        call ConditionalTriggerExecute( gg_trg_EnemyHeroAddItem )
+        call SetHeroLevelBJ(GetEnumUnit(), udg_EnemyHeroLevel, false)
+        call CampaignMinimapIconUnitBJ(GetEnumUnit(), bj_CAMPPINGSTYLE_BOSS)
+        call ConditionalTriggerExecute(gg_trg_AddHeroAbility)
+        call ConditionalTriggerExecute(gg_trg_EnemyHeroAddItem)
     else
     endif
 endfunction
 
 function Trig_EnemyHero_Actions takes nothing returns nothing
     // Enemy Hero
-    call ForGroupBJ( GetUnitsOfPlayerAll(Player(5)), function Trig_EnemyHero_Func002A )
+    call ForGroupBJ(GetUnitsOfPlayerAll(Player(5)), function Trig_EnemyHero_Func002A)
 endfunction
 
 //===========================================================================
 function InitTrig_EnemyHero takes nothing returns nothing
-    set gg_trg_EnemyHero = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_EnemyHero, function Trig_EnemyHero_Actions )
+    set gg_trg_EnemyHero=CreateTrigger()
+    call TriggerAddAction(gg_trg_EnemyHero, function Trig_EnemyHero_Actions)
 endfunction
 
 //===========================================================================
@@ -8344,26 +8300,26 @@ endfunction
 function Trig_EnemyHeroAddItem_Actions takes nothing returns nothing
     if ( Trig_EnemyHeroAddItem_Func001C() ) then
         if ( Trig_EnemyHeroAddItem_Func001Func001C() ) then
-            call UnitAddItemByIdSwapped( 'phea', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'pman', GetEnumUnit() )
+            call UnitAddItemByIdSwapped('phea', GetEnumUnit())
+            call UnitAddItemByIdSwapped('pman', GetEnumUnit())
         else
             if ( Trig_EnemyHeroAddItem_Func001Func001Func001C() ) then
-                call UnitAddItemByIdSwapped( 'phea', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'pman', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'rde1', GetEnumUnit() )
+                call UnitAddItemByIdSwapped('phea', GetEnumUnit())
+                call UnitAddItemByIdSwapped('pman', GetEnumUnit())
+                call UnitAddItemByIdSwapped('rde1', GetEnumUnit())
             else
                 if ( Trig_EnemyHeroAddItem_Func001Func001Func001Func001C() ) then
-                    call UnitAddItemByIdSwapped( 'phea', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'pman', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'rde1', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'cnob', GetEnumUnit() )
+                    call UnitAddItemByIdSwapped('phea', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('pman', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('rde1', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('cnob', GetEnumUnit())
                 else
                     if ( Trig_EnemyHeroAddItem_Func001Func001Func001Func001Func001C() ) then
-                        call UnitAddItemByIdSwapped( 'phea', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'pman', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'rde1', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'cnob', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'gcel', GetEnumUnit() )
+                        call UnitAddItemByIdSwapped('phea', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('pman', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('rde1', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('cnob', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('gcel', GetEnumUnit())
                     else
                     endif
                 endif
@@ -8373,33 +8329,33 @@ function Trig_EnemyHeroAddItem_Actions takes nothing returns nothing
     endif
     if ( Trig_EnemyHeroAddItem_Func002C() ) then
         if ( Trig_EnemyHeroAddItem_Func002Func001C() ) then
-            call UnitAddItemByIdSwapped( 'pghe', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'pgma', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'spro', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'rde1', GetEnumUnit() )
+            call UnitAddItemByIdSwapped('pghe', GetEnumUnit())
+            call UnitAddItemByIdSwapped('pgma', GetEnumUnit())
+            call UnitAddItemByIdSwapped('spro', GetEnumUnit())
+            call UnitAddItemByIdSwapped('rde1', GetEnumUnit())
         else
             if ( Trig_EnemyHeroAddItem_Func002Func001Func001C() ) then
-                call UnitAddItemByIdSwapped( 'pghe', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'pgma', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'spro', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'rat6', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'rde2', GetEnumUnit() )
+                call UnitAddItemByIdSwapped('pghe', GetEnumUnit())
+                call UnitAddItemByIdSwapped('pgma', GetEnumUnit())
+                call UnitAddItemByIdSwapped('spro', GetEnumUnit())
+                call UnitAddItemByIdSwapped('rat6', GetEnumUnit())
+                call UnitAddItemByIdSwapped('rde2', GetEnumUnit())
             else
                 if ( Trig_EnemyHeroAddItem_Func002Func001Func001Func004C() ) then
-                    call UnitAddItemByIdSwapped( 'pghe', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'pgma', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'spro', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'rat6', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'rde3', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'cnob', GetEnumUnit() )
+                    call UnitAddItemByIdSwapped('pghe', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('pgma', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('spro', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('rat6', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('rde3', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('cnob', GetEnumUnit())
                 else
                     if ( Trig_EnemyHeroAddItem_Func002Func001Func001Func004Func007C() ) then
-                        call UnitAddItemByIdSwapped( 'pghe', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'pgma', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'spro', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'rat9', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'ckng', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'gcel', GetEnumUnit() )
+                        call UnitAddItemByIdSwapped('pghe', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('pgma', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('spro', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('rat9', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('ckng', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('gcel', GetEnumUnit())
                     else
                     endif
                 endif
@@ -8409,34 +8365,34 @@ function Trig_EnemyHeroAddItem_Actions takes nothing returns nothing
     endif
     if ( Trig_EnemyHeroAddItem_Func003C() ) then
         if ( Trig_EnemyHeroAddItem_Func003Func001C() ) then
-            call UnitAddItemByIdSwapped( 'hlst', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'mnst', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'sror', GetEnumUnit() )
-            call UnitAddItemByIdSwapped( 'rde2', GetEnumUnit() )
+            call UnitAddItemByIdSwapped('hlst', GetEnumUnit())
+            call UnitAddItemByIdSwapped('mnst', GetEnumUnit())
+            call UnitAddItemByIdSwapped('sror', GetEnumUnit())
+            call UnitAddItemByIdSwapped('rde2', GetEnumUnit())
         else
             if ( Trig_EnemyHeroAddItem_Func003Func001Func001C() ) then
-                call UnitAddItemByIdSwapped( 'hlst', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'mnst', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'sror', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'rde3', GetEnumUnit() )
-                call UnitAddItemByIdSwapped( 'rat9', GetEnumUnit() )
+                call UnitAddItemByIdSwapped('hlst', GetEnumUnit())
+                call UnitAddItemByIdSwapped('mnst', GetEnumUnit())
+                call UnitAddItemByIdSwapped('sror', GetEnumUnit())
+                call UnitAddItemByIdSwapped('rde3', GetEnumUnit())
+                call UnitAddItemByIdSwapped('rat9', GetEnumUnit())
             else
                 if ( Trig_EnemyHeroAddItem_Func003Func001Func001Func005C() ) then
-                    call UnitAddItemByIdSwapped( 'hlst', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'mnst', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'sror', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'rde4', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'ratc', GetEnumUnit() )
-                    call UnitAddItemByIdSwapped( 'ckng', GetEnumUnit() )
+                    call UnitAddItemByIdSwapped('hlst', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('mnst', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('sror', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('rde4', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('ratc', GetEnumUnit())
+                    call UnitAddItemByIdSwapped('ckng', GetEnumUnit())
                 else
                     if ( Trig_EnemyHeroAddItem_Func003Func001Func001Func005Func007C() ) then
-                        call UnitAddItemByIdSwapped( 'hlst', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'mnst', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'sror', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'rde4', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'ratf', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'ckng', GetEnumUnit() )
-                        call UnitAddItemByIdSwapped( 'gcel', GetEnumUnit() )
+                        call UnitAddItemByIdSwapped('hlst', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('mnst', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('sror', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('rde4', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('ratf', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('ckng', GetEnumUnit())
+                        call UnitAddItemByIdSwapped('gcel', GetEnumUnit())
                     else
                     endif
                 endif
@@ -8448,153 +8404,153 @@ endfunction
 
 //===========================================================================
 function InitTrig_EnemyHeroAddItem takes nothing returns nothing
-    set gg_trg_EnemyHeroAddItem = CreateTrigger(  )
-    call TriggerAddAction( gg_trg_EnemyHeroAddItem, function Trig_EnemyHeroAddItem_Actions )
+    set gg_trg_EnemyHeroAddItem=CreateTrigger()
+    call TriggerAddAction(gg_trg_EnemyHeroAddItem, function Trig_EnemyHeroAddItem_Actions)
 endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_CurrentBuild(  )
-    call InitTrig_ConsoleLog(  )
-    call InitTrig_ChooseClassicRace(  )
-    call InitTrig_HeroesClassicTest(  )
-    call InitTrig_TimerMinus(  )
-    call InitTrig_TestWaveTimer1(  )
-    call InitTrig_TestWaveTimer2(  )
-    call InitTrig_TestWaveTimer3(  )
-    call InitTrig_TestWaveTimer4(  )
-    call InitTrig_TestWaveTimer5(  )
-    call InitTrig_TestWaveTimer6(  )
-    call InitTrig_TestUpgTimer1(  )
-    call InitTrig_TestUpgTimer2(  )
-    call InitTrig_TestUpgTimer3(  )
-    call InitTrig_TestUpgTimer4(  )
-    call InitTrig_TestEnemyTimer1(  )
-    call InitTrig_TestEnemyTimer2(  )
-    call InitTrig_TestEnemyTimer3(  )
-    call InitTrig_TestEnemyTimer4(  )
-    call InitTrig_TestEnemyTimer5(  )
-    call InitTrig_Iseedeadpeople(  )
-    call InitTrig_MultiboardStart(  )
-    call InitTrig_MultiboardPeriodicInfo(  )
-    call InitTrig_StartResouces(  )
-    call InitTrig_StartVisiblity(  )
-    call InitTrig_StartCameraP1(  )
-    call InitTrig_StartCameraP2(  )
-    call InitTrig_StartCameraReset(  )
-    call InitTrig_LimitUnits(  )
-    call InitTrig_ChooseFirst(  )
-    call InitTrig_UnSelect(  )
-    call InitTrig_PreviewArthas(  )
-    call InitTrig_PreviewUther(  )
-    call InitTrig_ChooseArthas(  )
-    call InitTrig_ChooseUther(  )
-    call InitTrig_ArthasIni(  )
-    call InitTrig_ArthasNewRuneSecond(  )
-    call InitTrig_ArthasNewRuneThree(  )
-    call InitTrig_ArthasMaxRuneLevel(  )
-    call InitTrig_ArthasRunesUpdate(  )
-    call InitTrig_ArthasFrostmourne(  )
-    call InitTrig_ArthasSouls(  )
-    call InitTrig_ArthasHarvestSoulDead(  )
-    call InitTrig_ArthasHarvestSoul(  )
-    call InitTrig_ArthasDebugSoul(  )
-    call InitTrig_ArthasUnholySoulReforge(  )
-    call InitTrig_ArthasFrostSoulReforge(  )
-    call InitTrig_ArthasBloodSoulReforge(  )
-    call InitTrig_ArthasBloodFuel(  )
-    call InitTrig_ArthasAbominationUnholyDead(  )
-    call InitTrig_ArthasSurfeit(  )
-    call InitTrig_ArthasGlacialGusto(  )
-    call InitTrig_ArthasBloodFestAura(  )
-    call InitTrig_ArthasPlagueDeadCorpse(  )
-    call InitTrig_ArthasUnholyRune2and3(  )
-    call InitTrig_ArthasPlagueStoneForm(  )
-    call InitTrig_ArthasGhoulEffect(  )
-    call InitTrig_ArthasPlagueNecropolis(  )
-    call InitTrig_ArthasSacrifice(  )
-    call InitTrig_UtherIni(  )
-    call InitTrig_UtherDivineShield(  )
-    call InitTrig_UtherChampions(  )
-    call InitTrig_UtherChampionsDead(  )
-    call InitTrig_UtherOrderCodex(  )
-    call InitTrig_PlayerCount(  )
-    call InitTrig_SetDifficulty(  )
-    call InitTrig_SetAIRace(  )
-    call InitTrig_AddUnitBuildingHero(  )
-    call InitTrig_SetUpgradeList(  )
-    call InitTrig_SetUpgradeTimer(  )
-    call InitTrig_AddUpgradeT1(  )
-    call InitTrig_AddUpgradeT2(  )
-    call InitTrig_AddUpgradeT3(  )
-    call InitTrig_AddHeroAbility(  )
-    call InitTrig_AlliesEnemyAndNeutral(  )
-    call InitTrig_NPCInitialization(  )
-    call InitTrig_NPCGreetings(  )
-    call InitTrig_NPCMissCaravan(  )
-    call InitTrig_NPCNextWave(  )
-    call InitTrig_NPCEnemyWave(  )
-    call InitTrig_NPCLastWave(  )
-    call InitTrig_NPCCompleteWave(  )
-    call InitTrig_NPCWin(  )
-    call InitTrig_NPCDefeat(  )
-    call InitTrig_SetWayPoint(  )
-    call InitTrig_WayPingIni(  )
-    call InitTrig_Way1Ping(  )
-    call InitTrig_Way2Ping(  )
-    call InitTrig_IniZone(  )
-    call InitTrig_AlternateMovement(  )
-    call InitTrig_UnitGroupDead(  )
-    call InitTrig_MainQuest(  )
-    call InitTrig_WaveComplete(  )
-    call InitTrig_LastWaveComplete(  )
-    call InitTrig_DefeatCondition(  )
-    call InitTrig_SetGroupArray(  )
-    call InitTrig_UnitsInitializationWay1(  )
-    call InitTrig_UnitsInitializationWay2(  )
-    call InitTrig_UnitsInitializationWay3(  )
-    call InitTrig_GroupArrayReset(  )
-    call InitTrig_CreateSquad1(  )
-    call InitTrig_CreateSquad2(  )
-    call InitTrig_CreateSquad3(  )
-    call InitTrig_CreateSquad4(  )
-    call InitTrig_CreateSquad5(  )
-    call InitTrig_CreateSquad6(  )
-    call InitTrig_CreateSquad7(  )
-    call InitTrig_CreateSquad8(  )
-    call InitTrig_CreateHero(  )
-    call InitTrig_CreateSquadEnemy1(  )
-    call InitTrig_CreateSquadEnemy2(  )
-    call InitTrig_CreateSquadEnemy3(  )
-    call InitTrig_CreateSquadEnemy4(  )
-    call InitTrig_DeadEnemyHero(  )
-    call InitTrig_WaveTimer(  )
-    call InitTrig_Wave1(  )
-    call InitTrig_Wave2(  )
-    call InitTrig_Wave3(  )
-    call InitTrig_Wave4(  )
-    call InitTrig_Wave5(  )
-    call InitTrig_EnemyTimer(  )
-    call InitTrig_EnemyRandomSpawn(  )
-    call InitTrig_EnemyWave1(  )
-    call InitTrig_EnemyWave2(  )
-    call InitTrig_EnemyWave3(  )
-    call InitTrig_EnemyWave4(  )
-    call InitTrig_EnemyHero(  )
-    call InitTrig_EnemyHeroAddItem(  )
+    call InitTrig_CurrentBuild()
+    call InitTrig_ConsoleLog()
+    call InitTrig_ChooseClassicRace()
+    call InitTrig_HeroesClassicTest()
+    call InitTrig_TimerMinus()
+    call InitTrig_TestWaveTimer1()
+    call InitTrig_TestWaveTimer2()
+    call InitTrig_TestWaveTimer3()
+    call InitTrig_TestWaveTimer4()
+    call InitTrig_TestWaveTimer5()
+    call InitTrig_TestWaveTimer6()
+    call InitTrig_TestUpgTimer1()
+    call InitTrig_TestUpgTimer2()
+    call InitTrig_TestUpgTimer3()
+    call InitTrig_TestUpgTimer4()
+    call InitTrig_TestEnemyTimer1()
+    call InitTrig_TestEnemyTimer2()
+    call InitTrig_TestEnemyTimer3()
+    call InitTrig_TestEnemyTimer4()
+    call InitTrig_TestEnemyTimer5()
+    call InitTrig_Iseedeadpeople()
+    call InitTrig_MultiboardStart()
+    call InitTrig_MultiboardPeriodicInfo()
+    call InitTrig_StartResouces()
+    call InitTrig_StartVisiblity()
+    call InitTrig_StartCameraP1()
+    call InitTrig_StartCameraP2()
+    call InitTrig_StartCameraReset()
+    call InitTrig_LimitUnits()
+    call InitTrig_ChooseFirst()
+    call InitTrig_UnSelect()
+    call InitTrig_PreviewArthas()
+    call InitTrig_PreviewUther()
+    call InitTrig_ChooseArthas()
+    call InitTrig_ChooseUther()
+    call InitTrig_ArthasIni()
+    call InitTrig_ArthasNewRuneSecond()
+    call InitTrig_ArthasNewRuneThree()
+    call InitTrig_ArthasMaxRuneLevel()
+    call InitTrig_ArthasRunesUpdate()
+    call InitTrig_ArthasFrostmourne()
+    call InitTrig_ArthasSouls()
+    call InitTrig_ArthasHarvestSoulDead()
+    call InitTrig_ArthasHarvestSoul()
+    call InitTrig_ArthasDebugSoul()
+    call InitTrig_ArthasUnholySoulReforge()
+    call InitTrig_ArthasFrostSoulReforge()
+    call InitTrig_ArthasBloodSoulReforge()
+    call InitTrig_ArthasBloodFuel()
+    call InitTrig_ArthasAbominationUnholyDead()
+    call InitTrig_ArthasSurfeit()
+    call InitTrig_ArthasGlacialGusto()
+    call InitTrig_ArthasBloodFestAura()
+    call InitTrig_ArthasPlagueDeadCorpse()
+    call InitTrig_ArthasUnholyRune2and3()
+    call InitTrig_ArthasPlagueStoneForm()
+    call InitTrig_ArthasGhoulEffect()
+    call InitTrig_ArthasPlagueNecropolis()
+    call InitTrig_ArthasSacrifice()
+    call InitTrig_UtherIni()
+    call InitTrig_UtherDivineShield()
+    call InitTrig_UtherChampions()
+    call InitTrig_UtherChampionsDead()
+    call InitTrig_UtherOrderCodex()
+    call InitTrig_PlayerCount()
+    call InitTrig_SetDifficulty()
+    call InitTrig_SetAIRace()
+    call InitTrig_AddUnitBuildingHero()
+    call InitTrig_SetUpgradeList()
+    call InitTrig_SetUpgradeTimer()
+    call InitTrig_AddUpgradeT1()
+    call InitTrig_AddUpgradeT2()
+    call InitTrig_AddUpgradeT3()
+    call InitTrig_AddHeroAbility()
+    call InitTrig_AlliesEnemyAndNeutral()
+    call InitTrig_NPCInitialization()
+    call InitTrig_NPCGreetings()
+    call InitTrig_NPCMissCaravan()
+    call InitTrig_NPCNextWave()
+    call InitTrig_NPCEnemyWave()
+    call InitTrig_NPCLastWave()
+    call InitTrig_NPCCompleteWave()
+    call InitTrig_NPCWin()
+    call InitTrig_NPCDefeat()
+    call InitTrig_SetWayPoint()
+    call InitTrig_WayPingIni()
+    call InitTrig_Way1Ping()
+    call InitTrig_Way2Ping()
+    call InitTrig_IniZone()
+    call InitTrig_AlternateMovement()
+    call InitTrig_UnitGroupDead()
+    call InitTrig_MainQuest()
+    call InitTrig_WaveComplete()
+    call InitTrig_LastWaveComplete()
+    call InitTrig_DefeatCondition()
+    call InitTrig_SetGroupArray()
+    call InitTrig_UnitsInitializationWay1()
+    call InitTrig_UnitsInitializationWay2()
+    call InitTrig_UnitsInitializationWay3()
+    call InitTrig_GroupArrayReset()
+    call InitTrig_CreateSquad1()
+    call InitTrig_CreateSquad2()
+    call InitTrig_CreateSquad3()
+    call InitTrig_CreateSquad4()
+    call InitTrig_CreateSquad5()
+    call InitTrig_CreateSquad6()
+    call InitTrig_CreateSquad7()
+    call InitTrig_CreateSquad8()
+    call InitTrig_CreateHero()
+    call InitTrig_CreateSquadEnemy1()
+    call InitTrig_CreateSquadEnemy2()
+    call InitTrig_CreateSquadEnemy3()
+    call InitTrig_CreateSquadEnemy4()
+    call InitTrig_DeadEnemyHero()
+    call InitTrig_WaveTimer()
+    call InitTrig_Wave1()
+    call InitTrig_Wave2()
+    call InitTrig_Wave3()
+    call InitTrig_Wave4()
+    call InitTrig_Wave5()
+    call InitTrig_EnemyTimer()
+    call InitTrig_EnemyRandomSpawn()
+    call InitTrig_EnemyWave1()
+    call InitTrig_EnemyWave2()
+    call InitTrig_EnemyWave3()
+    call InitTrig_EnemyWave4()
+    call InitTrig_EnemyHero()
+    call InitTrig_EnemyHeroAddItem()
 endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute( gg_trg_CurrentBuild )
-    call ConditionalTriggerExecute( gg_trg_StartResouces )
-    call ConditionalTriggerExecute( gg_trg_StartVisiblity )
-    call ConditionalTriggerExecute( gg_trg_LimitUnits )
-    call ConditionalTriggerExecute( gg_trg_PlayerCount )
-    call ConditionalTriggerExecute( gg_trg_SetAIRace )
-    call ConditionalTriggerExecute( gg_trg_AlliesEnemyAndNeutral )
-    call ConditionalTriggerExecute( gg_trg_NPCInitialization )
-    call ConditionalTriggerExecute( gg_trg_SetGroupArray )
+    call ConditionalTriggerExecute(gg_trg_CurrentBuild)
+    call ConditionalTriggerExecute(gg_trg_StartResouces)
+    call ConditionalTriggerExecute(gg_trg_StartVisiblity)
+    call ConditionalTriggerExecute(gg_trg_LimitUnits)
+    call ConditionalTriggerExecute(gg_trg_PlayerCount)
+    call ConditionalTriggerExecute(gg_trg_SetAIRace)
+    call ConditionalTriggerExecute(gg_trg_AlliesEnemyAndNeutral)
+    call ConditionalTriggerExecute(gg_trg_NPCInitialization)
+    call ConditionalTriggerExecute(gg_trg_SetGroupArray)
 endfunction
 
 //***************************************************************************
@@ -8606,120 +8562,120 @@ endfunction
 function InitCustomPlayerSlots takes nothing returns nothing
 
     // Player 0
-    call SetPlayerStartLocation( Player(0), 0 )
-    call ForcePlayerStartLocation( Player(0), 0 )
-    call SetPlayerColor( Player(0), ConvertPlayerColor(0) )
-    call SetPlayerRacePreference( Player(0), RACE_PREF_RANDOM )
-    call SetPlayerRaceSelectable( Player(0), true )
-    call SetPlayerController( Player(0), MAP_CONTROL_USER )
+    call SetPlayerStartLocation(Player(0), 0)
+    call ForcePlayerStartLocation(Player(0), 0)
+    call SetPlayerColor(Player(0), ConvertPlayerColor(0))
+    call SetPlayerRacePreference(Player(0), RACE_PREF_RANDOM)
+    call SetPlayerRaceSelectable(Player(0), true)
+    call SetPlayerController(Player(0), MAP_CONTROL_USER)
 
     // Player 1
-    call SetPlayerStartLocation( Player(1), 1 )
-    call ForcePlayerStartLocation( Player(1), 1 )
-    call SetPlayerColor( Player(1), ConvertPlayerColor(1) )
-    call SetPlayerRacePreference( Player(1), RACE_PREF_RANDOM )
-    call SetPlayerRaceSelectable( Player(1), true )
-    call SetPlayerController( Player(1), MAP_CONTROL_USER )
+    call SetPlayerStartLocation(Player(1), 1)
+    call ForcePlayerStartLocation(Player(1), 1)
+    call SetPlayerColor(Player(1), ConvertPlayerColor(1))
+    call SetPlayerRacePreference(Player(1), RACE_PREF_RANDOM)
+    call SetPlayerRaceSelectable(Player(1), true)
+    call SetPlayerController(Player(1), MAP_CONTROL_USER)
 
     // Player 2
-    call SetPlayerStartLocation( Player(2), 2 )
-    call ForcePlayerStartLocation( Player(2), 2 )
-    call SetPlayerColor( Player(2), ConvertPlayerColor(2) )
-    call SetPlayerRacePreference( Player(2), RACE_PREF_HUMAN )
-    call SetPlayerRaceSelectable( Player(2), false )
-    call SetPlayerController( Player(2), MAP_CONTROL_COMPUTER )
+    call SetPlayerStartLocation(Player(2), 2)
+    call ForcePlayerStartLocation(Player(2), 2)
+    call SetPlayerColor(Player(2), ConvertPlayerColor(2))
+    call SetPlayerRacePreference(Player(2), RACE_PREF_HUMAN)
+    call SetPlayerRaceSelectable(Player(2), false)
+    call SetPlayerController(Player(2), MAP_CONTROL_COMPUTER)
 
     // Player 4
-    call SetPlayerStartLocation( Player(4), 3 )
-    call ForcePlayerStartLocation( Player(4), 3 )
-    call SetPlayerColor( Player(4), ConvertPlayerColor(4) )
-    call SetPlayerRacePreference( Player(4), RACE_PREF_HUMAN )
-    call SetPlayerRaceSelectable( Player(4), false )
-    call SetPlayerController( Player(4), MAP_CONTROL_COMPUTER )
+    call SetPlayerStartLocation(Player(4), 3)
+    call ForcePlayerStartLocation(Player(4), 3)
+    call SetPlayerColor(Player(4), ConvertPlayerColor(4))
+    call SetPlayerRacePreference(Player(4), RACE_PREF_HUMAN)
+    call SetPlayerRaceSelectable(Player(4), false)
+    call SetPlayerController(Player(4), MAP_CONTROL_COMPUTER)
 
     // Player 5
-    call SetPlayerStartLocation( Player(5), 4 )
-    call ForcePlayerStartLocation( Player(5), 4 )
-    call SetPlayerColor( Player(5), ConvertPlayerColor(5) )
-    call SetPlayerRacePreference( Player(5), RACE_PREF_HUMAN )
-    call SetPlayerRaceSelectable( Player(5), false )
-    call SetPlayerController( Player(5), MAP_CONTROL_COMPUTER )
+    call SetPlayerStartLocation(Player(5), 4)
+    call ForcePlayerStartLocation(Player(5), 4)
+    call SetPlayerColor(Player(5), ConvertPlayerColor(5))
+    call SetPlayerRacePreference(Player(5), RACE_PREF_HUMAN)
+    call SetPlayerRaceSelectable(Player(5), false)
+    call SetPlayerController(Player(5), MAP_CONTROL_COMPUTER)
 
 endfunction
 
 function InitCustomTeams takes nothing returns nothing
     // Force: TRIGSTR_006
-    call SetPlayerTeam( Player(0), 0 )
-    call SetPlayerState( Player(0), PLAYER_STATE_ALLIED_VICTORY, 1 )
-    call SetPlayerTeam( Player(1), 0 )
-    call SetPlayerState( Player(1), PLAYER_STATE_ALLIED_VICTORY, 1 )
-    call SetPlayerTeam( Player(2), 0 )
-    call SetPlayerState( Player(2), PLAYER_STATE_ALLIED_VICTORY, 1 )
+    call SetPlayerTeam(Player(0), 0)
+    call SetPlayerState(Player(0), PLAYER_STATE_ALLIED_VICTORY, 1)
+    call SetPlayerTeam(Player(1), 0)
+    call SetPlayerState(Player(1), PLAYER_STATE_ALLIED_VICTORY, 1)
+    call SetPlayerTeam(Player(2), 0)
+    call SetPlayerState(Player(2), PLAYER_STATE_ALLIED_VICTORY, 1)
 
     //   Allied
-    call SetPlayerAllianceStateAllyBJ( Player(0), Player(1), true )
-    call SetPlayerAllianceStateAllyBJ( Player(0), Player(2), true )
-    call SetPlayerAllianceStateAllyBJ( Player(1), Player(0), true )
-    call SetPlayerAllianceStateAllyBJ( Player(1), Player(2), true )
-    call SetPlayerAllianceStateAllyBJ( Player(2), Player(0), true )
-    call SetPlayerAllianceStateAllyBJ( Player(2), Player(1), true )
+    call SetPlayerAllianceStateAllyBJ(Player(0), Player(1), true)
+    call SetPlayerAllianceStateAllyBJ(Player(0), Player(2), true)
+    call SetPlayerAllianceStateAllyBJ(Player(1), Player(0), true)
+    call SetPlayerAllianceStateAllyBJ(Player(1), Player(2), true)
+    call SetPlayerAllianceStateAllyBJ(Player(2), Player(0), true)
+    call SetPlayerAllianceStateAllyBJ(Player(2), Player(1), true)
 
     //   Shared Vision
-    call SetPlayerAllianceStateVisionBJ( Player(0), Player(1), true )
-    call SetPlayerAllianceStateVisionBJ( Player(0), Player(2), true )
-    call SetPlayerAllianceStateVisionBJ( Player(1), Player(0), true )
-    call SetPlayerAllianceStateVisionBJ( Player(1), Player(2), true )
-    call SetPlayerAllianceStateVisionBJ( Player(2), Player(0), true )
-    call SetPlayerAllianceStateVisionBJ( Player(2), Player(1), true )
+    call SetPlayerAllianceStateVisionBJ(Player(0), Player(1), true)
+    call SetPlayerAllianceStateVisionBJ(Player(0), Player(2), true)
+    call SetPlayerAllianceStateVisionBJ(Player(1), Player(0), true)
+    call SetPlayerAllianceStateVisionBJ(Player(1), Player(2), true)
+    call SetPlayerAllianceStateVisionBJ(Player(2), Player(0), true)
+    call SetPlayerAllianceStateVisionBJ(Player(2), Player(1), true)
 
     // Force: TRIGSTR_467
-    call SetPlayerTeam( Player(4), 1 )
-    call SetPlayerState( Player(4), PLAYER_STATE_ALLIED_VICTORY, 1 )
-    call SetPlayerTeam( Player(5), 1 )
-    call SetPlayerState( Player(5), PLAYER_STATE_ALLIED_VICTORY, 1 )
+    call SetPlayerTeam(Player(4), 1)
+    call SetPlayerState(Player(4), PLAYER_STATE_ALLIED_VICTORY, 1)
+    call SetPlayerTeam(Player(5), 1)
+    call SetPlayerState(Player(5), PLAYER_STATE_ALLIED_VICTORY, 1)
 
     //   Allied
-    call SetPlayerAllianceStateAllyBJ( Player(4), Player(5), true )
-    call SetPlayerAllianceStateAllyBJ( Player(5), Player(4), true )
+    call SetPlayerAllianceStateAllyBJ(Player(4), Player(5), true)
+    call SetPlayerAllianceStateAllyBJ(Player(5), Player(4), true)
 
     //   Shared Vision
-    call SetPlayerAllianceStateVisionBJ( Player(4), Player(5), true )
-    call SetPlayerAllianceStateVisionBJ( Player(5), Player(4), true )
+    call SetPlayerAllianceStateVisionBJ(Player(4), Player(5), true)
+    call SetPlayerAllianceStateVisionBJ(Player(5), Player(4), true)
 
 endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
-    call SetStartLocPrioCount( 0, 1 )
-    call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount(0, 1)
+    call SetStartLocPrio(0, 0, 1, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount( 1, 1 )
-    call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount(1, 1)
+    call SetStartLocPrio(1, 0, 0, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount( 2, 4 )
-    call SetStartLocPrio( 2, 0, 0, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 2, 1, 3, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 2, 2, 4, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount(2, 4)
+    call SetStartLocPrio(2, 0, 0, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(2, 1, 3, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(2, 2, 4, MAP_LOC_PRIO_HIGH)
 
-    call SetEnemyStartLocPrioCount( 2, 1 )
-    call SetEnemyStartLocPrio( 2, 0, 4, MAP_LOC_PRIO_HIGH )
+    call SetEnemyStartLocPrioCount(2, 1)
+    call SetEnemyStartLocPrio(2, 0, 4, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount( 3, 5 )
-    call SetStartLocPrio( 3, 0, 0, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 3, 1, 1, MAP_LOC_PRIO_LOW )
-    call SetStartLocPrio( 3, 2, 2, MAP_LOC_PRIO_LOW )
-    call SetStartLocPrio( 3, 3, 4, MAP_LOC_PRIO_LOW )
+    call SetStartLocPrioCount(3, 5)
+    call SetStartLocPrio(3, 0, 0, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(3, 1, 1, MAP_LOC_PRIO_LOW)
+    call SetStartLocPrio(3, 2, 2, MAP_LOC_PRIO_LOW)
+    call SetStartLocPrio(3, 3, 4, MAP_LOC_PRIO_LOW)
 
-    call SetEnemyStartLocPrioCount( 3, 3 )
-    call SetEnemyStartLocPrio( 3, 0, 0, MAP_LOC_PRIO_HIGH )
-    call SetEnemyStartLocPrio( 3, 1, 2, MAP_LOC_PRIO_HIGH )
-    call SetEnemyStartLocPrio( 3, 2, 4, MAP_LOC_PRIO_LOW )
+    call SetEnemyStartLocPrioCount(3, 3)
+    call SetEnemyStartLocPrio(3, 0, 0, MAP_LOC_PRIO_HIGH)
+    call SetEnemyStartLocPrio(3, 1, 2, MAP_LOC_PRIO_HIGH)
+    call SetEnemyStartLocPrio(3, 2, 4, MAP_LOC_PRIO_LOW)
 
-    call SetStartLocPrioCount( 4, 1 )
-    call SetStartLocPrio( 4, 0, 3, MAP_LOC_PRIO_LOW )
+    call SetStartLocPrioCount(4, 1)
+    call SetStartLocPrio(4, 0, 3, MAP_LOC_PRIO_LOW)
 
-    call SetEnemyStartLocPrioCount( 4, 1 )
-    call SetEnemyStartLocPrio( 4, 0, 3, MAP_LOC_PRIO_HIGH )
+    call SetEnemyStartLocPrioCount(4, 1)
+    call SetEnemyStartLocPrio(4, 0, 3, MAP_LOC_PRIO_HIGH)
 endfunction
 
 //***************************************************************************
@@ -8730,19 +8686,21 @@ endfunction
 
 //===========================================================================
 function main takes nothing returns nothing
-    call SetCameraBounds( -10240.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 10240.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 10240.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -10240.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 10240.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 10240.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM) )
-    call SetDayNightModels( "Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl" )
-    call NewSoundEnvironment( "Default" )
-    call SetAmbientDaySound( "LordaeronWinterDay" )
-    call SetAmbientNightSound( "LordaeronWinterNight" )
-    call SetMapMusic( "Music", true, 0 )
-    call CreateRegions(  )
-    call CreateCameras(  )
-    call CreateAllUnits(  )
-    call InitBlizzard(  )
-    call InitGlobals(  )
-    call InitCustomTriggers(  )
-    call RunInitializationTriggers(  )
+    call SetCameraBounds(- 10240.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 10240.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 10240.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 10240.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 10240.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 10240.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
+    call SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
+    call NewSoundEnvironment("Default")
+    call SetAmbientDaySound("LordaeronWinterDay")
+    call SetAmbientNightSound("LordaeronWinterNight")
+    call SetMapMusic("Music", true, 0)
+    call CreateRegions()
+    call CreateCameras()
+    call CreateAllUnits()
+    call InitBlizzard()
+
+
+    call InitGlobals()
+    call InitCustomTriggers()
+    call RunInitializationTriggers()
 
 endfunction
 
@@ -8753,21 +8711,26 @@ endfunction
 //***************************************************************************
 
 function config takes nothing returns nothing
-    call SetMapName( "TRIGSTR_001" )
-    call SetMapDescription( "TRIGSTR_003" )
-    call SetPlayers( 5 )
-    call SetTeams( 5 )
-    call SetGamePlacement( MAP_PLACEMENT_TEAMS_TOGETHER )
+    call SetMapName("TRIGSTR_001")
+    call SetMapDescription("TRIGSTR_003")
+    call SetPlayers(5)
+    call SetTeams(5)
+    call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
-    call DefineStartLocation( 0, 704.0, 384.0 )
-    call DefineStartLocation( 1, -1728.0, 384.0 )
-    call DefineStartLocation( 2, -512.0, -1216.0 )
-    call DefineStartLocation( 3, -5824.0, -8704.0 )
-    call DefineStartLocation( 4, -7680.0, -6208.0 )
+    call DefineStartLocation(0, 704.0, 384.0)
+    call DefineStartLocation(1, - 1728.0, 384.0)
+    call DefineStartLocation(2, - 512.0, - 1216.0)
+    call DefineStartLocation(3, - 5824.0, - 8704.0)
+    call DefineStartLocation(4, - 7680.0, - 6208.0)
 
     // Player setup
-    call InitCustomPlayerSlots(  )
-    call InitCustomTeams(  )
-    call InitAllyPriorities(  )
+    call InitCustomPlayerSlots()
+    call InitCustomTeams()
+    call InitAllyPriorities()
 endfunction
+
+
+
+
+//Struct method generated initializers/callers:
 
