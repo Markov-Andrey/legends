@@ -669,6 +669,17 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p= Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'h00D', 64.0, 64.0, 270.000, 'h00D')
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1028,6 +1039,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer4()
     call CreateBuildingsForPlayer5()
 endfunction
@@ -1999,6 +2011,7 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     set udg_ArthasSouls=0
     call CreateLeaderboardBJ(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_800")
     call LeaderboardAddItemBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_801", 0)
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_PURPLE, true)
     call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
 
@@ -2067,6 +2080,7 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     call RemoveUnit(udg_CurrentUnit)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_LIGHT_BLUE, true)
     // Run-ALL-triggers-Uther
     call SetPlayerTechResearchedSwap('R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_UtherIni)
@@ -3599,9 +3613,6 @@ function Trig_UtherOrderCodex_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherOrderCodex_Actions takes nothing returns nothing
-    call SetPlayerTechResearchedSwap('R003', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()))
-    call SetPlayerTechResearchedSwap('R009', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()))
-    call SetPlayerTechResearchedSwap('R00T', GetPlayerTechCountSimple('R001', GetOwningPlayer(GetResearchingUnit())), GetOwningPlayer(GetResearchingUnit()))
 endfunction
 
 //===========================================================================

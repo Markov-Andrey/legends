@@ -948,7 +948,7 @@ STRING 645
 }
 
 STRING 647
-// Units: h00D (Library), EditorSuffix (Name - Editor Suffix)
+// Units: h00D (Armory), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -4930,20 +4930,8 @@ STRING 1787
 Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
 }
 
-STRING 1788
-// Units: h00D (Library), Name (Name)
-{
-Library
-}
-
-STRING 1789
-// Units: h00D (Library), Tip (Tooltip - Basic)
-{
-Build Library
-}
-
 STRING 1790
-// Units: h00D (Library), Ubertip (Tooltip - Extended)
+// Units: h00D (Armory), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#upgrade
 |R
@@ -5000,352 +4988,10 @@ STRING 1798
 Reveals the area of the map that it is cast upon for <A000,Dur1> seconds. Also reveals invisible units.
 }
 
-STRING 1801
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Develop a code of the Order
-}
-
-STRING 1802
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1803
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1804
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Develop a code of the Order
-}
-
-STRING 1805
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1806
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1807
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 1. What is Light?
-|R
-Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1808
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 2. Paths of Serving the Light
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1809
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 3. Sacred Duty
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1810
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect1 (Effect 1)
-{
-rarm
-}
-
 STRING 1811
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), class (Class)
 {
 caster
-}
-
-STRING 1812
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect1 (Effect 1)
-{
-rmnr
-}
-
-STRING 1813
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect2 (Effect 2)
-{
-rmnx
-}
-
-STRING 1814
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther] (Icon)
-}
-
-STRING 1816
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther] (Attack)
-}
-
-STRING 1818
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1819
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1820
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1821
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Expand the Order's Codex
-}
-
-STRING 1822
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 1. What is Light?
-|R
-Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1823
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 2. Paths of Serving the Light
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1824
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 3. Sacred Duty
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1825
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther] (Armor)
-}
-
-STRING 1829
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Develop a code of the Order
-}
-
-STRING 1832
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 1. What is Light?
-|R
-Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1833
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 2. Paths of Serving the Light
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1834
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 3. Sacred Duty
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1835
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther] (Mage)
-}
-
-STRING 1842
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 1. What is Light?
-|R
-Increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1843
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 2. Paths of Serving the Light
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1844
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
-{
-|cFF81B4FFChapter 3. Sacred Duty
-|R
-Further increases the attack damage of Militia, Footmen, Spellbreakers, Dragonhawk Riders, Gryphon Riders and Knights.
-}
-
-STRING 1856
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-Develop the Order's Codex
-}
-
-STRING 1858
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), class (Class)
-{
-armor
-}
-
-STRING 1859
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1860
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1861
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1862
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1863
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1864
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1865
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1866
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1867
-// Upgrades: R009 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1868
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1869
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1870
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Order's Codex
-}
-
-STRING 1871
-// Units: h005 (Protector), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1873
-// Units: h00W (Knight-Paladin), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1874
-// Units: h00J (Cleric), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1875
-// Units: h00K (Rifleman), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1876
-// Units: h00N (Gryphon Rider), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1877
-// Units: h00L (Mortar Team), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1878
-// Units: h000 (Templar), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1879
-// Units: h009 (War Wagon), Casterupgradename (Caster Upgrade Names)
-{
-Squire, Knight, Crusader
-}
-
-STRING 1880
-// Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect3 (Effect 3)
-{
-rhpx
 }
 
 STRING 1881
@@ -5358,5 +5004,167 @@ STRING 1882
 // Units: h005 (Protector), Tip (Tooltip - Basic)
 {
 Protector
+}
+
+STRING 1883
+// Upgrades: R00D (Defend), Name (Name)
+{
+Mastery Defend
+}
+
+STRING 1884
+// Upgrades: R00D (Defend), Tip (Tooltip)
+{
+Research Mastery Defend
+}
+
+STRING 1885
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1886
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Libram of Ancient Kings
+}
+
+STRING 1887
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Libram of the Lightbringer
+}
+
+STRING 1888
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Libram of Light
+}
+
+STRING 1889
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Libram of Ancient Kings
+}
+
+STRING 1890
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Libram of the Lightbringer
+}
+
+STRING 1891
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Libram of Light
+}
+
+STRING 1892
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Divine Intervention heals 30% of health while active
+}
+
+STRING 1893
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Divine Intervention heals 40% of health while active
+}
+
+STRING 1894
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Divine Intervention heals 50% of health while active
+}
+
+STRING 1895
+// Units: h005 (Protector), Casterupgradename (Caster Upgrade Names)
+{
+Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1896
+// Units: h00W (Knight-Paladin), Casterupgradename (Caster Upgrade Names)
+{
+Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1897
+// Units: h00K (Rifleman), Casterupgradename (Caster Upgrade Names)
+{
+Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1898
+// Units: h00N (Gryphon Rider), Casterupgradename (Caster Upgrade Names)
+{
+Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1899
+// Units: h00L (Mortar Team), Casterupgradename (Caster Upgrade Names)
+{
+Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1900
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1901
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1902
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Tip (Tooltip)
+{
+Upgrade to Blessed Armor
+}
+
+STRING 1903
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Militia, Footmen, Spellbreakers, Knights, Flying Machines and Siege Engines.
+}
+
+STRING 1904
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
+{
+Blessed Armor
+}
+
+STRING 1905
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Hotkey (Hotkey)
+{
+P
+}
+
+STRING 1906
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1907
+// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1908
+// Units: h00D (Armory), Name (Name)
+{
+Armory
+}
+
+STRING 1909
+// Units: h00D (Armory), Tip (Tooltip - Basic)
+{
+Build Armory
 }
 
