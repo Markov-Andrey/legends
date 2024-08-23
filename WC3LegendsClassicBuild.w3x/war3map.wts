@@ -234,7 +234,7 @@ STRING 497
 }
 
 STRING 498
-// Units: h005 (Shieldbearer), EditorSuffix (Name - Editor Suffix)
+// Units: h005 (Protector), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -4755,7 +4755,7 @@ Revive Uther
 }
 
 STRING 1765
-// Units: h005 (Shieldbearer), Ubertip (Tooltip - Extended)
+// Units: h005 (Protector), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#melee #foot
 |R
@@ -4880,12 +4880,6 @@ STRING 1780
 |cffffcc00#melee #siege #foot
 |R
 Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
-}
-
-STRING 1781
-// Units: h005 (Shieldbearer), Name (Name)
-{
-Shieldbearer
 }
 
 STRING 1782
@@ -5301,15 +5295,9 @@ Order's Codex
 }
 
 STRING 1871
-// Units: h005 (Shieldbearer), Casterupgradename (Caster Upgrade Names)
+// Units: h005 (Protector), Casterupgradename (Caster Upgrade Names)
 {
 Squire, Knight, Crusader
-}
-
-STRING 1872
-// Units: h005 (Shieldbearer), Tip (Tooltip - Basic)
-{
-Shieldbearer
 }
 
 STRING 1873
@@ -5358,5 +5346,17 @@ STRING 1880
 // Upgrades: R00T (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), effect3 (Effect 3)
 {
 rhpx
+}
+
+STRING 1881
+// Units: h005 (Protector), Name (Name)
+{
+Protector
+}
+
+STRING 1882
+// Units: h005 (Protector), Tip (Tooltip - Basic)
+{
+Protector
 }
 
