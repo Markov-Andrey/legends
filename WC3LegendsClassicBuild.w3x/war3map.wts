@@ -5320,3 +5320,57 @@ STRING 1974
 Income is generated once every 30 seconds during the day, amounting to 10 times the number of Monuments of Light, divided equally among allies
 }
 
+STRING 1975
+// Abilities: A013 ([Uther] Seal Of Wisdom), Tip (Tooltip - Normal)
+{
+Seal Of Wisdom - [|cffffcc00Level 1|r]
+}
+
+STRING 1976
+// Abilities: A013 ([Uther] Seal Of Wisdom), Tip (Tooltip - Normal)
+{
+Seal Of Wisdom - [|cffffcc00Level 2|r]
+}
+
+STRING 1977
+// Abilities: A013 ([Uther] Seal Of Wisdom), Tip (Tooltip - Normal)
+{
+Seal Of Wisdom - [|cffffcc00Level 3|r]
+}
+
+STRING 1978
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 1.5% mana when attacking
+}
+
+STRING 1979
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 2.5% mana when attacking
+}
+
+STRING 1980
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 3.5% mana when attacking
+}
+
+STRING 1981
+// Abilities: A013 ([Uther] Seal Of Wisdom), Name (Name)
+{
+[Uther] Seal Of Wisdom
+}
+
+STRING 1982
+// Abilities: A013 ([Uther] Seal Of Wisdom), Researchtip (Tooltip - Learn)
+{
+Learn Seal Of Wisdom - [|cffffcc00Level %d|r]
+}
+
+STRING 1985
+// Abilities: A013 ([Uther] Seal Of Wisdom), Researchubertip (Tooltip - Learn - Extended)
+{
+Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Level 1|r - Restores 1.5% mana when attacking. |n|cffffcc00Level 2|r - Restores 2.5% mana when attacking. |n|cffffcc00Level 3|r - Restores 3.5% mana when attacking.
+}
+

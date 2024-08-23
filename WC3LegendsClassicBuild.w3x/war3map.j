@@ -230,6 +230,7 @@ trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
 trigger gg_trg_UtherIni= null
+trigger gg_trg_UtherSealOfWisdom= null
 
     // Random Groups
 integer array gg_rg_000
@@ -669,27 +670,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'h01H', - 192.0, 640.0, 270.000, 'h01H')
-    set u=BlzCreateUnitWithSkin(p, 'H00B', 544.0, - 224.0, 270.000, 'H00B')
-    set u=BlzCreateUnitWithSkin(p, 'h02L', 960.0, - 384.0, 270.000, 'h02L')
-    set u=BlzCreateUnitWithSkin(p, 'h01P', 128.0, - 384.0, 270.000, 'h01P')
-    set u=BlzCreateUnitWithSkin(p, 'h00D', 576.0, 1024.0, 270.000, 'h00D')
-    set u=BlzCreateUnitWithSkin(p, 'h003', 1568.0, - 96.0, 270.000, 'h003')
-    set u=BlzCreateUnitWithSkin(p, 'h02F', 416.0, - 736.0, 270.000, 'h02F')
-    set u=BlzCreateUnitWithSkin(p, 'h02F', 672.0, - 736.0, 270.000, 'h02F')
-    set u=BlzCreateUnitWithSkin(p, 'h02F', 672.0, - 992.0, 270.000, 'h02F')
-    set u=BlzCreateUnitWithSkin(p, 'h02F', 416.0, - 992.0, 270.000, 'h02F')
-    set u=BlzCreateUnitWithSkin(p, 'hcas', - 384.0, 1152.0, 270.000, 'hcas')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -698,8 +678,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 243.827, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h00W', - 45.2, 43.8, 324.453, 'h00W')
-    set u=BlzCreateUnitWithSkin(p, 'h00W', - 185.6, 153.3, 324.453, 'h00W')
 endfunction
 
 //===========================================================================
@@ -1051,7 +1029,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer4()
     call CreateBuildingsForPlayer5()
 endfunction
@@ -3385,6 +3362,7 @@ endfunction
 // Trigger: UtherIni
 //===========================================================================
 function Trig_UtherIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_UtherSealOfWisdom)
     call EnableTrigger(gg_trg_UtherDivineShield)
     call EnableTrigger(gg_trg_UtherChampions)
     call EnableTrigger(gg_trg_UtherChampionsDead)
@@ -3395,6 +3373,45 @@ endfunction
 function InitTrig_UtherIni takes nothing returns nothing
     set gg_trg_UtherIni=CreateTrigger()
     call TriggerAddAction(gg_trg_UtherIni, function Trig_UtherIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UtherSealOfWisdom
+//===========================================================================
+function Trig_UtherSealOfWisdom_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetAttacker()) == 'H02D' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A013', GetAttacker()) >= 1 ) ) then
+        return false
+    endif
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetAttackedUnitBJ())) == true ) ) then
+        return false
+    endif
+    if ( not ( IsUnitType(GetAttackedUnitBJ(), UNIT_TYPE_STRUCTURE) == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherSealOfWisdom_Conditions takes nothing returns boolean
+    if ( not Trig_UtherSealOfWisdom_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherSealOfWisdom_Actions takes nothing returns nothing
+    call SetUnitManaPercentBJ(GetAttacker(), ( GetUnitManaPercent(GetAttacker()) + ( I2R(GetUnitAbilityLevelSwapped('A013', GetAttacker())) + 0.50 ) ))
+endfunction
+
+//===========================================================================
+function InitTrig_UtherSealOfWisdom takes nothing returns nothing
+    set gg_trg_UtherSealOfWisdom=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherSealOfWisdom)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherSealOfWisdom, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_UtherSealOfWisdom, Condition(function Trig_UtherSealOfWisdom_Conditions))
+    call TriggerAddAction(gg_trg_UtherSealOfWisdom, function Trig_UtherSealOfWisdom_Actions)
 endfunction
 
 //===========================================================================
@@ -3446,21 +3463,21 @@ function Trig_UtherDivineShield_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherDivineShield_Func002Func001Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A00Q', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetAttackedUnitBJ()), 'H02D'))) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple('R001', GetOwningPlayer(GetAttackedUnitBJ())) == 3 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_UtherDivineShield_Func002Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A00Q', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetAttackedUnitBJ()), 'H02D'))) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple('R001', GetOwningPlayer(GetAttackedUnitBJ())) == 2 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_UtherDivineShield_Func002Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A00Q', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetAttackedUnitBJ()), 'H02D'))) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple('R001', GetOwningPlayer(GetAttackedUnitBJ())) == 1 ) ) then
         return false
     endif
     return true
@@ -8379,6 +8396,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasPlagueNecropolis()
     call InitTrig_ArthasSacrifice()
     call InitTrig_UtherIni()
+    call InitTrig_UtherSealOfWisdom()
     call InitTrig_UtherDivineShield()
     call InitTrig_UtherChampions()
     call InitTrig_UtherChampionsDead()
