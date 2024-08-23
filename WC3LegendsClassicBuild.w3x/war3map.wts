@@ -948,7 +948,7 @@ STRING 645
 }
 
 STRING 647
-// Units: h00D (Armory), EditorSuffix (Name - Editor Suffix)
+// Units: h00D (Brotherhood Armory), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -960,31 +960,31 @@ STRING 648
 }
 
 STRING 651
-// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 655
 // Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 656
+STRING 655
 // Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 657
+STRING 656
 // Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 662
+STRING 657
 // Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 662
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -1282,46 +1282,10 @@ STRING 806
 Explorer's League
 }
 
-STRING 808
-// Abilities: A013 ([Uther] Hand Cannon), Tip (Tooltip - Normal)
-{
-Hand Cannon
-}
-
-STRING 809
-// Upgrades: R000 (Long Rifles), Name (Name)
-{
-Hand Cannon
-}
-
-STRING 811
-// Upgrades: R000 (Long Rifles), Tip (Tooltip)
-{
-Upgrade to Hand Cannon
-}
-
-STRING 817
-// Abilities: A013 ([Uther] Hand Cannon), Ubertip (Tooltip - Normal - Extended)
-{
-Shotgun deals <A013,DataA1,%>% damage in an AoE of 150
-}
-
-STRING 818
-// Upgrades: R000 (Long Rifles), Ubertip (Tooltip - Extended)
-{
-Shotgun deals <A013,DataA1,%>% damage in an AoE of 150
-}
-
 STRING 828
 // Upgrades: R00F (Magic Sentry), Tip (Tooltip)
 {
 Uther
-}
-
-STRING 834
-// Abilities: A013 ([Uther] Hand Cannon), Name (Name)
-{
-[Uther] Hand Cannon
 }
 
 STRING 836
@@ -1366,34 +1330,10 @@ STRING 848
 [Uther] Holy Nova
 }
 
-STRING 851
-// Abilities: A00P ([Uther] Grace of the Ancestors), Name (Name)
-{
-[Uther] Grace of the Ancestors
-}
-
 STRING 852
-// Abilities: A00P ([Uther] Grace of the Ancestors), Tip (Tooltip - Normal)
+// Buffs/Effects: B00L ([Uther] Mercy of the People), Bufftip (Tooltip)
 {
 Grace of the Ancestors
-}
-
-STRING 854
-// Upgrades: R002 (Control Magic), Ubertip (Tooltip - Extended)
-{
-Increases Faith to 4 per Monument of Light
-}
-
-STRING 855
-// Buffs/Effects: B00L ([Arthas] Grace of the Ancestors), Bufftip (Tooltip)
-{
-Grace of the Ancestors
-}
-
-STRING 856
-// Upgrades: R002 (Control Magic), Tip (Tooltip)
-{
-Research Grace of the Ancestors
 }
 
 STRING 861
@@ -2102,18 +2042,6 @@ STRING 1117
 // Units: H00B (Light's Hope Chapel), Propernames (Proper Names)
 {
 Light's Hope Chapel
-}
-
-STRING 1119
-// Abilities: A00W ([Uther] Launch Mechanism), Tip (Tooltip - Normal)
-{
-Launch Mechanism
-}
-
-STRING 1122
-// Abilities: A00W ([Uther] Launch Mechanism), Name (Name)
-{
-[Uther] Launch Mechanism
 }
 
 STRING 1124
@@ -4622,28 +4550,10 @@ STRING 1738
 Build Aviary
 }
 
-STRING 1740
-// Buffs/Effects: B00L ([Arthas] Grace of the Ancestors), EditorName (Name (Editor Only))
-{
-[Arthas] Grace of the Ancestors
-}
-
 STRING 1741
-// Buffs/Effects: B00L ([Arthas] Grace of the Ancestors), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B00L ([Uther] Mercy of the People), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Grace of the Ancestors; it has an increased hit point regeneration.
-}
-
-STRING 1742
-// Abilities: A00P ([Uther] Grace of the Ancestors), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units life regeneration rate.
-}
-
-STRING 1743
-// Upgrades: R002 (Control Magic), Name (Name)
-{
-Grace of the Ancestors
 }
 
 STRING 1747
@@ -4931,7 +4841,7 @@ Magical defensive tower. Particularly effective against enemy Heroes and spellca
 }
 
 STRING 1790
-// Units: h00D (Armory), Ubertip (Tooltip - Extended)
+// Units: h00D (Brotherhood Armory), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#upgrade
 |R
@@ -4994,6 +4904,12 @@ STRING 1811
 caster
 }
 
+STRING 1813
+// Upgrades: R00V (Animal War Training), effect1 (Effect 1)
+{
+rmnx
+}
+
 STRING 1881
 // Units: h005 (Protector), Name (Name)
 {
@@ -5019,7 +4935,7 @@ Research Mastery Defend
 }
 
 STRING 1885
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -5078,44 +4994,14 @@ STRING 1894
 Divine Intervention heals 50% of health while active
 }
 
-STRING 1895
-// Units: h005 (Protector), Casterupgradename (Caster Upgrade Names)
-{
-Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
-}
-
-STRING 1896
-// Units: h00W (Knight-Paladin), Casterupgradename (Caster Upgrade Names)
-{
-Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
-}
-
-STRING 1897
-// Units: h00K (Rifleman), Casterupgradename (Caster Upgrade Names)
-{
-Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
-}
-
-STRING 1898
-// Units: h00N (Gryphon Rider), Casterupgradename (Caster Upgrade Names)
-{
-Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
-}
-
-STRING 1899
-// Units: h00L (Mortar Team), Casterupgradename (Caster Upgrade Names)
-{
-Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
-}
-
 STRING 1900
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 1901
-// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -5145,26 +5031,292 @@ P
 }
 
 STRING 1906
-// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 1907
 // Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 1908
-// Units: h00D (Armory), Name (Name)
+STRING 1907
+// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
 {
-Armory
+[Uther]
 }
 
-STRING 1909
-// Units: h00D (Armory), Tip (Tooltip - Basic)
+STRING 1910
+// Units: h00D (Brotherhood Armory), Name (Name)
 {
-Build Armory
+Brotherhood Armory
+}
+
+STRING 1911
+// Units: h00D (Brotherhood Armory), Tip (Tooltip - Basic)
+{
+Build Brotherhood Armory
+}
+
+STRING 1912
+// Abilities: A009 ([Uther] Rapid Fire), Name (Name)
+{
+[Uther] Rapid Fire
+}
+
+STRING 1913
+// Buffs/Effects: B005 ([Uther] Rapid Fire), Bufftip (Tooltip)
+{
+Rapid Fire
+}
+
+STRING 1925
+// Buffs/Effects: B005 ([Uther] Rapid Fire), EditorName (Name (Editor Only))
+{
+[Uther] Rapid Fire
+}
+
+STRING 1926
+// Units: h005 (Protector), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1927
+// Units: h00W (Knight-Paladin), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1928
+// Units: h00K (Rifleman), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1929
+// Units: h00N (Gryphon Rider), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1930
+// Units: h00L (Mortar Team), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 1931
+// Upgrades: R000 (Long Rifles), Name (Name)
+{
+Rapid Fire
+}
+
+STRING 1932
+// Upgrades: R000 (Long Rifles), Tip (Tooltip)
+{
+Upgrade to Rapid Fire
+}
+
+STRING 1936
+// Upgrades: R00V (Animal War Training), Name (Name)
+{
+Initiate into Paladins
+}
+
+STRING 1937
+// Upgrades: R00V (Animal War Training), Tip (Tooltip)
+{
+Research Initiate into Paladins
+}
+
+STRING 1938
+// Upgrades: R00V (Animal War Training), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1939
+// Abilities: A00R ([Uther] Holy Flash), Name (Name)
+{
+[Uther] Holy Flash
+}
+
+STRING 1940
+// Abilities: A00R ([Uther] Holy Flash), Tip (Tooltip - Normal)
+{
+Holy Flash
+}
+
+STRING 1941
+// Abilities: A014 ([Uther] Hammer of Justice), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A014,DataA1>% chance that an attack will do <A014,DataC1> bonus damage and stun an opponent for <A014,Dur1> seconds.
+}
+
+STRING 1942
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1943
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Cleric Adept Training
+}
+
+STRING 1944
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Cleric Master Training
+}
+
+STRING 1945
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Cleric Adept Training
+}
+
+STRING 1946
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Cleric Master Training
+}
+
+STRING 1947
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Clerics' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+}
+
+STRING 1948
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Clerics' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
+}
+
+STRING 1949
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1950
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Templar Adept Training
+}
+
+STRING 1951
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Templar Master Training
+}
+
+STRING 1952
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Templar Adept Training
+}
+
+STRING 1953
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Templar Master Training
+}
+
+STRING 1954
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
+}
+
+STRING 1955
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Polymorph.
+}
+
+STRING 1956
+// Abilities: A00W ([Uther] Magic Sentry), Name (Name)
+{
+[Uther] Magic Sentry
+}
+
+STRING 1957
+// Upgrades: R00Y (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1958
+// Upgrades: R00Z (Flying Machine Bombs), Name (Name)
+{
+Hammer of Justice
+}
+
+STRING 1959
+// Upgrades: R00Z (Flying Machine Bombs), Tip (Tooltip)
+{
+Research Hammer of Justice
+}
+
+STRING 1961
+// Upgrades: R00Z (Flying Machine Bombs), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1962
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of lumber that Peasants can carry by <R00B,mod1>.
+}
+
+STRING 1963
+// Upgrades: R00Z (Flying Machine Bombs), Ubertip (Tooltip - Extended)
+{
+|cFF00C2FF"I strike twice: first to the forehead, second to the coffin lid"|r
+
+Gives a <A014,DataA1>% chance that an attack will do <A014,DataC1> bonus damage and stun an opponent for <A014,Dur1> seconds.
+}
+
+STRING 1965
+// Abilities: A00P ([Uther] Mercy of the People), Tip (Tooltip - Normal)
+{
+Mercy of the People
+}
+
+STRING 1966
+// Upgrades: R002 (Control Magic), Tip (Tooltip)
+{
+Research Mercy of the People
+}
+
+STRING 1970
+// Abilities: A00P ([Uther] Mercy of the People), Name (Name)
+{
+[Uther] Mercy of the People
+}
+
+STRING 1971
+// Abilities: A00P ([Uther] Mercy of the People), Ubertip (Tooltip - Normal - Extended)
+{
+Income is generated once every 30 seconds during the day, amounting to 10 times the number of Monuments of Light, divided equally among allies
+}
+
+STRING 1972
+// Buffs/Effects: B00L ([Uther] Mercy of the People), EditorName (Name (Editor Only))
+{
+[Uther] Mercy of the People
+}
+
+STRING 1973
+// Upgrades: R002 (Control Magic), Name (Name)
+{
+Mercy of the People
+}
+
+STRING 1974
+// Upgrades: R002 (Control Magic), Ubertip (Tooltip - Extended)
+{
+Income is generated once every 30 seconds during the day, amounting to 10 times the number of Monuments of Light, divided equally among allies
 }
 

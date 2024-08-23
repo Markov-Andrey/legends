@@ -155,11 +155,10 @@ trigger gg_trg_ArthasPlagueStoneForm= null
 trigger gg_trg_ArthasGhoulEffect= null
 trigger gg_trg_ArthasPlagueNecropolis= null
 trigger gg_trg_ArthasSacrifice= null
-trigger gg_trg_UtherIni= null
 trigger gg_trg_UtherDivineShield= null
 trigger gg_trg_UtherChampions= null
 trigger gg_trg_UtherChampionsDead= null
-trigger gg_trg_UtherOrderCodex= null
+trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -230,6 +229,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_UtherIni= null
 
     // Random Groups
 integer array gg_rg_000
@@ -676,7 +676,17 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h00D', 64.0, 64.0, 270.000, 'h00D')
+    set u=BlzCreateUnitWithSkin(p, 'h01H', - 192.0, 640.0, 270.000, 'h01H')
+    set u=BlzCreateUnitWithSkin(p, 'H00B', 544.0, - 224.0, 270.000, 'H00B')
+    set u=BlzCreateUnitWithSkin(p, 'h02L', 960.0, - 384.0, 270.000, 'h02L')
+    set u=BlzCreateUnitWithSkin(p, 'h01P', 128.0, - 384.0, 270.000, 'h01P')
+    set u=BlzCreateUnitWithSkin(p, 'h00D', 576.0, 1024.0, 270.000, 'h00D')
+    set u=BlzCreateUnitWithSkin(p, 'h003', 1568.0, - 96.0, 270.000, 'h003')
+    set u=BlzCreateUnitWithSkin(p, 'h02F', 416.0, - 736.0, 270.000, 'h02F')
+    set u=BlzCreateUnitWithSkin(p, 'h02F', 672.0, - 736.0, 270.000, 'h02F')
+    set u=BlzCreateUnitWithSkin(p, 'h02F', 672.0, - 992.0, 270.000, 'h02F')
+    set u=BlzCreateUnitWithSkin(p, 'h02F', 416.0, - 992.0, 270.000, 'h02F')
+    set u=BlzCreateUnitWithSkin(p, 'hcas', - 384.0, 1152.0, 270.000, 'hcas')
 endfunction
 
 //===========================================================================
@@ -688,6 +698,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 243.827, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h00W', - 45.2, 43.8, 324.453, 'h00W')
+    set u=BlzCreateUnitWithSkin(p, 'h00W', - 185.6, 153.3, 324.453, 'h00W')
 endfunction
 
 //===========================================================================
@@ -3372,15 +3384,18 @@ endfunction
 //===========================================================================
 // Trigger: UtherIni
 //===========================================================================
-function InitTrig_UtherIni takes nothing returns nothing
-    set gg_trg_UtherIni=CreateTrigger()
-    
+function Trig_UtherIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_UtherDivineShield)
     call EnableTrigger(gg_trg_UtherChampions)
     call EnableTrigger(gg_trg_UtherChampionsDead)
-    call EnableTrigger(gg_trg_UtherOrderCodex)
+    call EnableTrigger(gg_trg_UtherChurchDonations)
 endfunction
 
+//===========================================================================
+function InitTrig_UtherIni takes nothing returns nothing
+    set gg_trg_UtherIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_UtherIni, function Trig_UtherIni_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: UtherDivineShield
@@ -3601,28 +3616,56 @@ function InitTrig_UtherChampionsDead takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: UtherOrderCodex
-//
-// A crutch for visual display of upgrades on a unit
+// Trigger: UtherChurchDonations
 //===========================================================================
-function Trig_UtherOrderCodex_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R001' ) ) then
-        return false
+function Trig_UtherChurchDonations_Func001A takes nothing returns nothing
+    local player p= GetEnumPlayer()
+    local integer allyCount= 0
+    local integer i= 0
+    local integer goldAmount
+    local integer unitCount= CountUnitsInGroup(GetUnitsOfPlayerAndTypeId(p, 'h02F'))
+    local player ally
+    
+    loop
+        set ally=Player(i)
+        if ( IsPlayerAlly(ally, p) and GetPlayerSlotState(ally) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(ally) == MAP_CONTROL_USER ) then
+            set allyCount=allyCount + 1
+        endif
+        set i=i + 1
+        if ( i >= bj_MAX_PLAYERS ) then
+            exitwhen true
+        endif
+    endloop
+    
+    if ( GetPlayerTechCountSimple('R010', p) == 1 and allyCount > 0 ) then
+        set goldAmount=unitCount * ( 10 / allyCount )
+        call AdjustPlayerStateBJ(goldAmount, p, PLAYER_STATE_RESOURCE_GOLD)
     endif
-    return true
+    
+    set p=null
+    set ally=null
 endfunction
 
-function Trig_UtherOrderCodex_Actions takes nothing returns nothing
+function Trig_UtherChurchDonations_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_UtherChurchDonations_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_UtherOrderCodex takes nothing returns nothing
-    set gg_trg_UtherOrderCodex=CreateTrigger()
-    call DisableTrigger(gg_trg_UtherOrderCodex)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherOrderCodex, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_UtherOrderCodex, Condition(function Trig_UtherOrderCodex_Conditions))
-    call TriggerAddAction(gg_trg_UtherOrderCodex, function Trig_UtherOrderCodex_Actions)
+function Trig_UtherChurchDonations_Condition takes nothing returns boolean
+    local real currentTime= GetTimeOfDay()
+    
+    return ( currentTime > 6.00 and currentTime < 18.00 )
 endfunction
+
+function InitTrig_UtherChurchDonations takes nothing returns nothing
+    local real dayTimer= 30.00
+    set gg_trg_UtherChurchDonations=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherChurchDonations)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_UtherChurchDonations, dayTimer)
+    call TriggerAddCondition(gg_trg_UtherChurchDonations, Condition(function Trig_UtherChurchDonations_Condition))
+    call TriggerAddAction(gg_trg_UtherChurchDonations, function Trig_UtherChurchDonations_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: PlayerCount
@@ -8339,7 +8382,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherDivineShield()
     call InitTrig_UtherChampions()
     call InitTrig_UtherChampionsDead()
-    call InitTrig_UtherOrderCodex()
+    call InitTrig_UtherChurchDonations()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()
