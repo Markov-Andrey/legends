@@ -1728,12 +1728,6 @@ STRING 1000
 Sniper Shot
 }
 
-STRING 1002
-// Doodads: D000 (Watch Post), Name (Name)
-{
-Watch Post
-}
-
 STRING 1009
 // Units: h006 (Add Unit), EditorSuffix (Name - Editor Suffix)
 {
@@ -2154,18 +2148,6 @@ Attack 4
 STRING 1156
 {
 Defeat! Caravans lost.
-}
-
-STRING 1157
-// Doodads: D001 (Egg Sack 1), Name (Name)
-{
-Egg Sack 1
-}
-
-STRING 1158
-// Doodads: D002 (Egg Sack 2), Name (Name)
-{
-Egg Sack 2
 }
 
 STRING 1159
@@ -3416,54 +3398,6 @@ STRING 1486
 // Destructibles: B004 (Summer Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Summ
-}
-
-STRING 1487
-// Doodads: D003 (RocksClash1), Name (Name)
-{
-RocksClash1
-}
-
-STRING 1488
-// Doodads: D004 (RocksClash2), Name (Name)
-{
-RocksClash2
-}
-
-STRING 1489
-// Doodads: D005 (RocksClash3), Name (Name)
-{
-RocksClash3
-}
-
-STRING 1490
-// Doodads: D006 (RocksClash4), Name (Name)
-{
-RocksClash4
-}
-
-STRING 1491
-// Doodads: D007 (RocksClash6), Name (Name)
-{
-RocksClash6
-}
-
-STRING 1492
-// Doodads: D008 (RocksClash5), Name (Name)
-{
-RocksClash5
-}
-
-STRING 1493
-// Doodads: D009 (Fire Pit(Grounded)), Name (Name)
-{
-Fire Pit(Grounded)
-}
-
-STRING 1494
-// Doodads: D00A (Кусты), Name (Name)
-{
-Кусты
 }
 
 STRING 1496
@@ -5447,9 +5381,75 @@ Mana recovery occurs only during the day
 
 }
 
-STRING 2000
-// Doodads: D00B (Barricade), Name (Name)
+STRING 2001
+// Doodads: D000 ([Alterac] Watch Post), Name (Name)
 {
-Barricade
+[Alterac] Watch Post
+}
+
+STRING 2002
+// Doodads: D001 ([Alterac] Egg Sack 1), Name (Name)
+{
+[Alterac] Egg Sack 1
+}
+
+STRING 2003
+// Doodads: D002 ([Alterac] Egg Sack 2), Name (Name)
+{
+[Alterac] Egg Sack 2
+}
+
+STRING 2004
+// Doodads: D003 ([Alterac] RocksClash1), Name (Name)
+{
+[Alterac] RocksClash1
+}
+
+STRING 2005
+// Doodads: D004 ([Alterac] RocksClash2), Name (Name)
+{
+[Alterac] RocksClash2
+}
+
+STRING 2006
+// Doodads: D005 ([Alterac] RocksClash3), Name (Name)
+{
+[Alterac] RocksClash3
+}
+
+STRING 2007
+// Doodads: D006 ([Alterac] RocksClash4), Name (Name)
+{
+[Alterac] RocksClash4
+}
+
+STRING 2008
+// Doodads: D007 ([Alterac] RocksClash6), Name (Name)
+{
+[Alterac] RocksClash6
+}
+
+STRING 2009
+// Doodads: D008 ([Alterac] RocksClash5), Name (Name)
+{
+[Alterac] RocksClash5
+}
+
+STRING 2010
+// Doodads: D009 ([Alterac] Fire Pit(Grounded)), Name (Name)
+{
+[Alterac] Fire Pit(Grounded)
+}
+
+STRING 2011
+// Doodads: D00A ([Alterac] Bush), Name (Name)
+{
+[Alterac] Bush
+}
+
+STRING 2012
+// Doodads: D00B ([Alterac] Barricade), Name (Name)
+{
+[Alterac] Barricade
 }
 
