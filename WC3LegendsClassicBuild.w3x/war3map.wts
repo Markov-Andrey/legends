@@ -5447,3 +5447,9 @@ Mana recovery occurs only during the day
 
 }
 
+STRING 2000
+// Doodads: D00B (Barricade), Name (Name)
+{
+Barricade
+}
+

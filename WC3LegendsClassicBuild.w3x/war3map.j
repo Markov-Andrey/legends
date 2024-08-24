@@ -198,14 +198,14 @@ trigger gg_trg_UnitsInitializationWay1= null
 trigger gg_trg_UnitsInitializationWay2= null
 trigger gg_trg_UnitsInitializationWay3= null
 trigger gg_trg_GroupArrayReset= null
-trigger gg_trg_CreateSquad1= null
-trigger gg_trg_CreateSquad2= null
-trigger gg_trg_CreateSquad3= null
-trigger gg_trg_CreateSquad4= null
-trigger gg_trg_CreateSquad5= null
-trigger gg_trg_CreateSquad6= null
-trigger gg_trg_CreateSquad7= null
-trigger gg_trg_CreateSquad8= null
+trigger gg_trg_CreateSquadWave1n1= null
+trigger gg_trg_CreateSquadWave1n2= null
+trigger gg_trg_CreateSquadWave2n1= null
+trigger gg_trg_CreateSquadWave2n2= null
+trigger gg_trg_CreateSquadWave4n1= null
+trigger gg_trg_CreateSquadWave4n2= null
+trigger gg_trg_CreateSquadWave5n1= null
+trigger gg_trg_CreateSquadWave5n2= null
 trigger gg_trg_CreateHero= null
 trigger gg_trg_CreateSquadEnemy1= null
 trigger gg_trg_CreateSquadEnemy2= null
@@ -232,6 +232,9 @@ trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
 trigger gg_trg_UtherLightTower= null
 trigger gg_trg_AddUnitBuildingHero= null
+rect gg_rct_EnemyWayAttackPoint= null
+trigger gg_trg_CreateSquadWave3n1= null
+trigger gg_trg_CreateSquadWave3n2= null
 
     // Random Groups
 integer array gg_rg_000
@@ -833,17 +836,13 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 14)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 6330.7, - 6406.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6586.7, - 4934.7, 270.000, 'h007')
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6714.7, - 5190.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 7710.7, - 6235.2, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7446.4, - 5198.2, 270.000, 'h007')
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7958.4, - 5518.2, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7638.4, - 5198.2, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7638.4, - 5006.2, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7446.4, - 5006.2, 270.000, 'h007')
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7958.4, - 5326.2, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 7071.6, - 7567.9, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
@@ -859,15 +858,11 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 12)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 5818.7, - 5830.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6778.7, - 4934.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
     set u=BlzCreateUnitWithSkin(p, 'h007', 5827.4, 3368.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7528.5, 3012.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6778.7, - 5126.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6586.7, - 5126.7, 270.000, 'h007')
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6522.7, - 5190.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6416.4, 2658.3, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
@@ -895,6 +890,46 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', 5996.1, 4008.5, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6202.2, 6024.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7098.2, 6472.4, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6330.2, 5832.4, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7098.2, 6280.4, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6394.2, 6024.4, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6906.2, 6408.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8005.8, - 4727.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6853.8, - 4663.6, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7877.8, - 4919.6, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6853.8, - 4855.6, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7813.8, - 4727.6, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7045.8, - 4727.6, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
 endfunction
 
 //===========================================================================
@@ -1162,6 +1197,7 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_Way1_p8=Rect(6528.0, - 864.0, 7520.0, 224.0)
     set gg_rct_Way1_p9=Rect(9504.0, 864.0, 9856.0, 1696.0)
     set gg_rct_Way2_p8=Rect(7360.0, 9024.0, 8032.0, 9760.0)
+    set gg_rct_EnemyWayAttackPoint=Rect(- 544.0, 416.0, - 512.0, 448.0)
 endfunction
 
 //***************************************************************************
@@ -3980,7 +4016,7 @@ endfunction
 //===========================================================================
 // Trigger: SetAIRace
 //
-// Initialized when the game starts
+// Selecting a race based on random numbers
 // 1 - Human (0-25)
 // 2 - Orcs (26-50)
 // 3 - Undead (51-75)
@@ -4071,10 +4107,6 @@ endfunction
 // Trigger: AddUnitBuildingHero
 //
 // Replace dummy with units (based on current mana = level of ability)
-// 1 - Human
-// 2 - Orcs
-// 3 - Undead
-// 4 - Night Elf
 // Delete units for Difficulty level (Health = Difficulty level)
 // 3 - Easy
 // 2 - Normal
@@ -4082,7 +4114,7 @@ endfunction
 // The problem is that by default the unit has max health, so for convenience, the health check is inverted (4 - constant of max Difficulty level + 1)
 //===========================================================================
 function Trig_AddUnitBuildingHero_Func001Func001C takes nothing returns boolean
-    if ( not ( I2R(udg_SetDifficulty) <= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
+    if ( not ( I2R(udg_SetDifficulty) >= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
         return false
     endif
     return true
@@ -4092,13 +4124,14 @@ function Trig_AddUnitBuildingHero_Func001A takes nothing returns nothing
     if ( Trig_AddUnitBuildingHero_Func001Func001C() ) then
         call UnitAddAbilityBJ(udg_SetRaces_Unit, GetEnumUnit())
         call SetUnitAbilityLevelSwapped(udg_SetRaces_Unit, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+        call SetUnitLifePercentBJ(GetEnumUnit(), 100)
     else
         call RemoveUnit(GetEnumUnit())
     endif
 endfunction
 
 function Trig_AddUnitBuildingHero_Func002Func001C takes nothing returns boolean
-    if ( not ( I2R(udg_SetDifficulty) <= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
+    if ( not ( I2R(udg_SetDifficulty) >= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
         return false
     endif
     return true
@@ -4108,13 +4141,14 @@ function Trig_AddUnitBuildingHero_Func002A takes nothing returns nothing
     if ( Trig_AddUnitBuildingHero_Func002Func001C() ) then
         call UnitAddAbilityBJ(udg_SetRaces_Hero, GetEnumUnit())
         call SetUnitAbilityLevelSwapped(udg_SetRaces_Hero, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+        call SetUnitLifePercentBJ(GetEnumUnit(), 100)
     else
         call RemoveUnit(GetEnumUnit())
     endif
 endfunction
 
 function Trig_AddUnitBuildingHero_Func003Func001C takes nothing returns boolean
-    if ( not ( I2R(udg_SetDifficulty) <= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
+    if ( not ( I2R(udg_SetDifficulty) >= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
         return false
     endif
     return true
@@ -4124,6 +4158,7 @@ function Trig_AddUnitBuildingHero_Func003A takes nothing returns nothing
     if ( Trig_AddUnitBuildingHero_Func003Func001C() ) then
         call UnitAddAbilityBJ(udg_SetRaces_Building, GetEnumUnit())
         call SetUnitAbilityLevelSwapped(udg_SetRaces_Building, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+        call SetUnitLifePercentBJ(GetEnumUnit(), 100)
     else
         call RemoveUnit(GetEnumUnit())
     endif
@@ -6179,785 +6214,342 @@ function InitTrig_GroupArrayReset takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: CreateSquad1
+// Trigger: CreateSquadWave1n1
 //===========================================================================
-function Trig_CreateSquad1_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad1_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad1_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad1_Actions takes nothing returns nothing
+function Trig_CreateSquadWave1n1_Actions takes nothing returns nothing
     // Units Create
     call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
     call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad1_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
+endfunction
+
+//===========================================================================
+function InitTrig_CreateSquadWave1n1 takes nothing returns nothing
+    set gg_trg_CreateSquadWave1n1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave1n1, function Trig_CreateSquadWave1n1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CreateSquadWave1n2
+//===========================================================================
+function Trig_CreateSquadWave1n2_Actions takes nothing returns nothing
+    // Units Create
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
+endfunction
+
+//===========================================================================
+function InitTrig_CreateSquadWave1n2 takes nothing returns nothing
+    set gg_trg_CreateSquadWave1n2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave1n2, function Trig_CreateSquadWave1n2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CreateSquadWave2n1
+//===========================================================================
+function Trig_CreateSquadWave2n1_Func007C takes nothing returns boolean
+    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
+        return false
     endif
-    // 2
-    if ( Trig_CreateSquad1_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
+    return true
+endfunction
+
+function Trig_CreateSquadWave2n1_Actions takes nothing returns nothing
+    // Units Create
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+    if ( Trig_CreateSquadWave2n1_Func007C() ) then
         call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
         call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
     else
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
     endif
-    // 3
-    if ( Trig_CreateSquad1_Func009C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
+endfunction
+
+//===========================================================================
+function InitTrig_CreateSquadWave2n1 takes nothing returns nothing
+    set gg_trg_CreateSquadWave2n1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave2n1, function Trig_CreateSquadWave2n1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CreateSquadWave2n2
+//===========================================================================
+function Trig_CreateSquadWave2n2_Actions takes nothing returns nothing
+    // Units Create
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
+endfunction
+
+//===========================================================================
+function InitTrig_CreateSquadWave2n2 takes nothing returns nothing
+    set gg_trg_CreateSquadWave2n2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave2n2, function Trig_CreateSquadWave2n2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CreateSquadWave3n1
+//===========================================================================
+function Trig_CreateSquadWave3n1_Func008C takes nothing returns boolean
+    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CreateSquadWave3n1_Actions takes nothing returns nothing
+    // Units Create
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
+    // Medium
+    if ( Trig_CreateSquadWave3n1_Func008C() ) then
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
+    else
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
+    endif
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+endfunction
+
+//===========================================================================
+function InitTrig_CreateSquadWave3n1 takes nothing returns nothing
+    set gg_trg_CreateSquadWave3n1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave3n1, function Trig_CreateSquadWave3n1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CreateSquadWave3n2
+//===========================================================================
+function Trig_CreateSquadWave3n2_Actions takes nothing returns nothing
+    // Units Create
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
+endfunction
+
+//===========================================================================
+function InitTrig_CreateSquadWave3n2 takes nothing returns nothing
+    set gg_trg_CreateSquadWave3n2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave3n2, function Trig_CreateSquadWave3n2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CreateSquadWave4n1
+//===========================================================================
+function Trig_CreateSquadWave4n1_Func007C takes nothing returns boolean
+    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CreateSquadWave4n1_Func016C takes nothing returns boolean
+    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CreateSquadWave4n1_Actions takes nothing returns nothing
+    // Units Create
+    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+    if ( Trig_CreateSquadWave4n1_Func007C() ) then
         call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
         call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
     else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_CreateSquad1 takes nothing returns nothing
-    set gg_trg_CreateSquad1=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad1, function Trig_CreateSquad1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: CreateSquad2
-//===========================================================================
-function Trig_CreateSquad2_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad2_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad2_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad2_Actions takes nothing returns nothing
-    // Units Create
-    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad2_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad2_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
         call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
         call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-    else
     endif
-    // 3
-    if ( Trig_CreateSquad2_Func009C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+    if ( Trig_CreateSquadWave4n1_Func016C() ) then
         call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+        call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
+    else
+        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+        call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
         call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-    else
     endif
 endfunction
 
 //===========================================================================
-function InitTrig_CreateSquad2 takes nothing returns nothing
-    set gg_trg_CreateSquad2=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad2, function Trig_CreateSquad2_Actions)
+function InitTrig_CreateSquadWave4n1 takes nothing returns nothing
+    set gg_trg_CreateSquadWave4n1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave4n1, function Trig_CreateSquadWave4n1_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: CreateSquad3
+// Trigger: CreateSquadWave4n2
 //===========================================================================
-function Trig_CreateSquad3_Func005Func002C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad3_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad3_Func007Func002C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad3_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad3_Func009Func001Func003C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad3_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad3_Actions takes nothing returns nothing
+function Trig_CreateSquadWave4n2_Actions takes nothing returns nothing
     // Units Create
     call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
     call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad3_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        if ( Trig_CreateSquad3_Func005Func002C() ) then
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-        else
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-        endif
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad3_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        if ( Trig_CreateSquad3_Func007Func002C() ) then
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-        else
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-        endif
-        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-        call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
-    else
-    endif
-    // 3
-    if ( Trig_CreateSquad3_Func009C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 2.00)
-            if ( Trig_CreateSquad3_Func009Func001Func003C() ) then
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-            else
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-            endif
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-        call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
-    else
-    endif
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
 endfunction
 
 //===========================================================================
-function InitTrig_CreateSquad3 takes nothing returns nothing
-    set gg_trg_CreateSquad3=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad3, function Trig_CreateSquad3_Actions)
+function InitTrig_CreateSquadWave4n2 takes nothing returns nothing
+    set gg_trg_CreateSquadWave4n2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave4n2, function Trig_CreateSquadWave4n2_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: CreateSquad4
+// Trigger: CreateSquadWave5n1
 //===========================================================================
-function Trig_CreateSquad4_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad4_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad4_Func009Func001C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad4_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad4_Actions takes nothing returns nothing
+function Trig_CreateSquadWave5n1_Actions takes nothing returns nothing
     // Units Create
     call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
     call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad4_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-        call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad4_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 3
-    if ( Trig_CreateSquad4_Func009C() ) then
-        if ( Trig_CreateSquad4_Func009Func001C() ) then
-            set bj_forLoopAIndex=1
-            set bj_forLoopAIndexEnd=2
-            loop
-                exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-                set bj_forLoopAIndex=bj_forLoopAIndex + 1
-            endloop
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
-        else
-        endif
-    else
-    endif
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
 endfunction
 
 //===========================================================================
-function InitTrig_CreateSquad4 takes nothing returns nothing
-    set gg_trg_CreateSquad4=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad4, function Trig_CreateSquad4_Actions)
+function InitTrig_CreateSquadWave5n1 takes nothing returns nothing
+    set gg_trg_CreateSquadWave5n1=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave5n1, function Trig_CreateSquadWave5n1_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: CreateSquad5
+// Trigger: CreateSquadWave5n2
 //===========================================================================
-function Trig_CreateSquad5_Func005Func002C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Func007Func001Func003C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Func009Func001Func001Func003C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Func009Func001C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad5_Actions takes nothing returns nothing
+function Trig_CreateSquadWave5n2_Actions takes nothing returns nothing
     // Units Create
     call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
     call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad5_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        if ( Trig_CreateSquad5_Func005Func002C() ) then
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-        else
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-        endif
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad5_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
-            if ( Trig_CreateSquad5_Func007Func001Func003C() ) then
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-            else
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-            endif
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 3
-    if ( Trig_CreateSquad5_Func009C() ) then
-        if ( Trig_CreateSquad5_Func009Func001C() ) then
-            set bj_forLoopAIndex=1
-            set bj_forLoopAIndexEnd=2
-            loop
-                exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 8.00)
-                if ( Trig_CreateSquad5_Func009Func001Func001Func003C() ) then
-                    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                    call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-                else
-                    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                    call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-                endif
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 7.00)
-                set bj_forLoopAIndex=bj_forLoopAIndex + 1
-            endloop
-        else
-        endif
-    else
-    endif
+    // Easy
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+    // Medium
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 67.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
+    // Hard
+    call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
+    call SetUnitLifePercentBJ(GetLastCreatedUnit(), 34.00)
+    call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
 endfunction
 
 //===========================================================================
-function InitTrig_CreateSquad5 takes nothing returns nothing
-    set gg_trg_CreateSquad5=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad5, function Trig_CreateSquad5_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: CreateSquad6
-//===========================================================================
-function Trig_CreateSquad6_Func005Func002C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad6_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad6_Func007Func001Func003C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad6_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad6_Func009Func001Func003C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad6_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad6_Actions takes nothing returns nothing
-    // Units Create
-    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad6_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        if ( Trig_CreateSquad6_Func005Func002C() ) then
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-        else
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-        endif
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad6_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
-            if ( Trig_CreateSquad6_Func007Func001Func003C() ) then
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-            else
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-            endif
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 3
-    if ( Trig_CreateSquad6_Func009C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
-            if ( Trig_CreateSquad6_Func009Func001Func003C() ) then
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 5.00)
-            else
-                call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-                call SetUnitManaBJ(GetLastCreatedUnit(), 6.00)
-            endif
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_CreateSquad6 takes nothing returns nothing
-    set gg_trg_CreateSquad6=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad6, function Trig_CreateSquad6_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: CreateSquad7
-//===========================================================================
-function Trig_CreateSquad7_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad7_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad7_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad7_Actions takes nothing returns nothing
-    // Units Create
-    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad7_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad7_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-        call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
-    else
-    endif
-    // 3
-    if ( Trig_CreateSquad7_Func009C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 3.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 4.00)
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_CreateSquad7 takes nothing returns nothing
-    set gg_trg_CreateSquad7=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad7, function Trig_CreateSquad7_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: CreateSquad8
-//===========================================================================
-function Trig_CreateSquad8_Func005C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad8_Func007C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad8_Func009C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_CreateSquad8_Actions takes nothing returns nothing
-    // Units Create
-    call CreateNUnitsAtLoc(1, 'h002', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-    call CampaignMinimapIconUnitBJ(GetLastCreatedUnit(), bj_CAMPPINGSTYLE_PRIMARY)
-    // 1
-    if ( Trig_CreateSquad8_Func005C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 2
-    if ( Trig_CreateSquad8_Func007C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 11.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // 3
-    if ( Trig_CreateSquad8_Func009C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=3
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-            call SetUnitManaBJ(GetLastCreatedUnit(), 10.00)
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-        call CreateNUnitsAtLoc(1, 'h006', udg_SetEnemy, GetRectCenter(udg_SetZone), bj_UNIT_FACING)
-        call SetUnitManaBJ(GetLastCreatedUnit(), 9.00)
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_CreateSquad8 takes nothing returns nothing
-    set gg_trg_CreateSquad8=CreateTrigger()
-    call TriggerAddAction(gg_trg_CreateSquad8, function Trig_CreateSquad8_Actions)
+function InitTrig_CreateSquadWave5n2 takes nothing returns nothing
+    set gg_trg_CreateSquadWave5n2=CreateTrigger()
+    call TriggerAddAction(gg_trg_CreateSquadWave5n2, function Trig_CreateSquadWave5n2_Actions)
 endfunction
 
 //===========================================================================
@@ -7598,22 +7190,22 @@ function Trig_Wave1_Actions takes nothing returns nothing
         set udg_SetZone=gg_rct_Way2_p0
         //  
         set udg_CountGroup2=1
-        call TriggerExecute(gg_trg_CreateSquad1)
+        call TriggerExecute(gg_trg_CreateSquadWave1n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad2)
+        call TriggerExecute(gg_trg_CreateSquadWave1n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
         call ConditionalTriggerExecute(gg_trg_Way1Ping)
         set udg_SetZone=gg_rct_Way1_p0
         //  
         set udg_CountGroup1=1
-        call TriggerExecute(gg_trg_CreateSquad1)
+        call TriggerExecute(gg_trg_CreateSquadWave1n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad2)
+        call TriggerExecute(gg_trg_CreateSquadWave1n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
 endfunction
@@ -7649,15 +7241,15 @@ function Trig_Wave2_Actions takes nothing returns nothing
         set udg_SetZone=gg_rct_Way2_p0
         //  
         set udg_CountGroup2=1
-        call TriggerExecute(gg_trg_CreateSquad3)
+        call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad4)
+        call TriggerExecute(gg_trg_CreateSquadWave2n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad3)
+        call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
         // Console Log
@@ -7669,15 +7261,15 @@ function Trig_Wave2_Actions takes nothing returns nothing
         set udg_SetZone=gg_rct_Way1_p0
         //  
         set udg_CountGroup1=1
-        call TriggerExecute(gg_trg_CreateSquad3)
+        call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad4)
+        call TriggerExecute(gg_trg_CreateSquadWave2n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad3)
+        call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
 endfunction
@@ -7706,42 +7298,42 @@ function Trig_Wave3_Actions takes nothing returns nothing
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=1
-    call TriggerExecute(gg_trg_CreateSquad1)
+    call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=1
-    call TriggerExecute(gg_trg_CreateSquad1)
+    call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad2)
+    call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad2)
+    call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad1)
+    call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad1)
+    call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     //  
@@ -7749,14 +7341,14 @@ function Trig_Wave3_Actions takes nothing returns nothing
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad2)
+    call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad2)
+    call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
 endfunction
 
@@ -7784,42 +7376,42 @@ function Trig_Wave4_Actions takes nothing returns nothing
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=1
-    call TriggerExecute(gg_trg_CreateSquad3)
+    call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=1
-    call TriggerExecute(gg_trg_CreateSquad3)
+    call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad4)
+    call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad4)
+    call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad3)
+    call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad3)
+    call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     //  
@@ -7827,14 +7419,14 @@ function Trig_Wave4_Actions takes nothing returns nothing
     //  
     set udg_SetZone=gg_rct_Way1_p0
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad4)
+    call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=gg_rct_Way2_p0
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
-    call TriggerExecute(gg_trg_CreateSquad4)
+    call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
 endfunction
@@ -7873,46 +7465,46 @@ function Trig_Wave5_Actions takes nothing returns nothing
         set udg_SetZone=gg_rct_Way2_p0
         //  
         set udg_CountGroup2=1
-        call TriggerExecute(gg_trg_CreateSquad6)
+        call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad7)
+        call TriggerExecute(gg_trg_CreateSquadWave5n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad8)
+        call TriggerExecute(gg_trg_CreateSquadWave5n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad7)
+        call TriggerExecute(gg_trg_CreateSquadWave5n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad6)
+        call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
         call ConditionalTriggerExecute(gg_trg_Way1Ping)
         set udg_SetZone=gg_rct_Way1_p0
         //  
         set udg_CountGroup1=1
-        call TriggerExecute(gg_trg_CreateSquad6)
+        call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad7)
+        call TriggerExecute(gg_trg_CreateSquadWave5n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad8)
+        call TriggerExecute(gg_trg_CreateSquadWave5n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad7)
+        call TriggerExecute(gg_trg_CreateSquadWave5n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
-        call TriggerExecute(gg_trg_CreateSquad6)
+        call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
 endfunction
@@ -8598,14 +8190,16 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UnitsInitializationWay2()
     call InitTrig_UnitsInitializationWay3()
     call InitTrig_GroupArrayReset()
-    call InitTrig_CreateSquad1()
-    call InitTrig_CreateSquad2()
-    call InitTrig_CreateSquad3()
-    call InitTrig_CreateSquad4()
-    call InitTrig_CreateSquad5()
-    call InitTrig_CreateSquad6()
-    call InitTrig_CreateSquad7()
-    call InitTrig_CreateSquad8()
+    call InitTrig_CreateSquadWave1n1()
+    call InitTrig_CreateSquadWave1n2()
+    call InitTrig_CreateSquadWave2n1()
+    call InitTrig_CreateSquadWave2n2()
+    call InitTrig_CreateSquadWave3n1()
+    call InitTrig_CreateSquadWave3n2()
+    call InitTrig_CreateSquadWave4n1()
+    call InitTrig_CreateSquadWave4n2()
+    call InitTrig_CreateSquadWave5n1()
+    call InitTrig_CreateSquadWave5n2()
     call InitTrig_CreateHero()
     call InitTrig_CreateSquadEnemy1()
     call InitTrig_CreateSquadEnemy2()
