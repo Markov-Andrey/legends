@@ -3769,7 +3769,7 @@ function Trig_UtherDivineShield_Actions takes nothing returns nothing
         call SetUnitInvulnerable(GetAttackedUnitBJ(), false)
         call UnitRemoveAbilityBJ('A001', GetAttackedUnitBJ())
         call UnitAddAbilityBJ('A002', GetAttackedUnitBJ())
-        call TriggerSleepAction(300.00)
+        call TriggerSleepAction(360.00)
         call UnitRemoveAbilityBJ('A002', GetAttackedUnitBJ())
     else
     endif
@@ -3841,8 +3841,8 @@ function Trig_UtherChampions_Actions takes nothing returns nothing
         call CreateNUnitsAtLoc(1, 'h00P', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
     else
     endif
-    call AddSpecialEffectTargetUnitBJ("origin", GetLastCreatedUnit(), "Uther_Void Teleport Yellow Target.mdx")
-    call UnitApplyTimedLifeBJ(45.00, 'BTLF', GetLastCreatedUnit())
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetLastCreatedUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl")
+    call UnitApplyTimedLifeBJ(100.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================

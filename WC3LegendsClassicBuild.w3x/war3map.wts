@@ -1554,12 +1554,6 @@ STRING 952
 [Uther] Divine Intervention
 }
 
-STRING 955
-// Abilities: A00J ([Uther] Divine Intervention), Ubertip (Tooltip - Normal - Extended)
-{
-Protects your unit and an ally's unit with Divine Shield no more than once every 3 minutes when on low health. Ally effect time reduced.
-}
-
 STRING 958
 // Abilities: A00F (Neutral Non-combat mana), Name (Name)
 {
@@ -1967,7 +1961,7 @@ STRING 1096
 }
 
 STRING 1097
-// Abilities: A011 ([Uther] Retribution Aura), Tip (Tooltip - Normal)
+// Buffs/Effects: B008 ([Uther] Retribution Aura), Bufftip (Tooltip)
 {
 Retribution Aura
 }
@@ -1984,22 +1978,10 @@ STRING 1099
 [Uther] Retribution Aura
 }
 
-STRING 1100
-// Buffs/Effects: B008 ([Uther] Retribution Aura), Bufftip (Tooltip)
-{
-Retribution Aura
-}
-
 STRING 1110
 // Abilities: A00U ([Uther] Devotion Aura), Name (Name)
 {
 [Uther] Devotion Aura
-}
-
-STRING 1111
-// Abilities: A00U ([Uther] Devotion Aura), Tip (Tooltip - Normal)
-{
-Devotion Aura
 }
 
 STRING 1112
@@ -2009,7 +1991,7 @@ STRING 1112
 }
 
 STRING 1113
-// Abilities: A00V ([Uther] Holy Aura), Tip (Tooltip - Normal)
+// Buffs/Effects: B009 ([Uther] Holy Aura), Bufftip (Tooltip)
 {
 Holy Aura
 }
@@ -2018,12 +2000,6 @@ STRING 1114
 // Buffs/Effects: B009 ([Uther] Holy Aura), EditorName (Name (Editor Only))
 {
 [Uther] Holy Aura
-}
-
-STRING 1115
-// Buffs/Effects: B009 ([Uther] Holy Aura), Bufftip (Tooltip)
-{
-Holy Aura
 }
 
 STRING 1116
@@ -5450,5 +5426,161 @@ STRING 2013
 // Abilities: A02T ([Uther] Sun Key), Ubertip (Tooltip - Normal - Extended)
 {
 Mana regeneration rate is higher during the day
+}
+
+STRING 2014
+// Abilities: A011 ([Uther] Retribution Aura), Tip (Tooltip - Normal)
+{
+Retribution Aura - [|cffffcc00Level 1|r]
+}
+
+STRING 2015
+// Abilities: A011 ([Uther] Retribution Aura), Tip (Tooltip - Normal)
+{
+Retribution Aura - [|cffffcc00Level 2|r]
+}
+
+STRING 2016
+// Abilities: A011 ([Uther] Retribution Aura), Tip (Tooltip - Normal)
+{
+Retribution Aura - [|cffffcc00Level 3|r]
+}
+
+STRING 2017
+// Abilities: A011 ([Uther] Retribution Aura), Ubertip (Tooltip - Normal - Extended)
+{
+An aura that gives friendly nearby units a damage shield, which deals <A011,DataA1> of an enemy unit's melee attack damage back to it.
+}
+
+STRING 2018
+// Abilities: A011 ([Uther] Retribution Aura), Ubertip (Tooltip - Normal - Extended)
+{
+An aura that gives friendly nearby units a damage shield, which deals <A011,DataA2,> of an enemy unit's melee attack damage back to it.
+}
+
+STRING 2019
+// Abilities: A011 ([Uther] Retribution Aura), Ubertip (Tooltip - Normal - Extended)
+{
+An aura that gives friendly nearby units a damage shield, which deals <A011,DataA3> of an enemy unit's melee attack damage back to it.
+}
+
+STRING 2020
+// Abilities: A00J ([Uther] Divine Intervention), Ubertip (Tooltip - Normal - Extended)
+{
+Protects your unit and an ally's unit with Divine Shield no more than once every 6 minutes when on low health. Ally effect time reduced.
+}
+
+STRING 2021
+// Abilities: A00U ([Uther] Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A00U,DataA1,.> additional armor to nearby friendly units.
+}
+
+STRING 2022
+// Abilities: A00U ([Uther] Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A00U,DataA2,.> additional armor to nearby friendly units.
+}
+
+STRING 2023
+// Abilities: A00U ([Uther] Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A00U,,DataA3,.> additional armor to nearby friendly units.
+}
+
+STRING 2024
+// Abilities: A00V ([Uther] Holy Aura), Tip (Tooltip - Normal)
+{
+Holy Aura - [|cffffcc00Level 1|r]
+}
+
+STRING 2025
+// Abilities: A00V ([Uther] Holy Aura), Tip (Tooltip - Normal)
+{
+Holy Aura - [|cffffcc00Level 2|r]
+}
+
+STRING 2026
+// Abilities: A00V ([Uther] Holy Aura), Tip (Tooltip - Normal)
+{
+Holy Aura - [|cffffcc00Level 3|r]
+}
+
+STRING 2027
+// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' movement speed by <A00V,DataA1>
+}
+
+STRING 2028
+// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' movement speed by <A00V,DataA2>
+}
+
+STRING 2029
+// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' movement speed by <A00V,DataA3>
+}
+
+STRING 2030
+// Abilities: A005 ([Uther] Divine Shield), Untip (Tooltip - Turn Off)
+{
+Deactivate Divine Shield
+}
+
+STRING 2031
+// Abilities: A005 ([Uther] Divine Shield), Untip (Tooltip - Turn Off)
+{
+Deactivate Divine Shield
+}
+
+STRING 2032
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), effect4 (Effect 4)
+{
+rlev
+}
+
+STRING 2033
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), effect2 (Effect 2)
+{
+rlev
+}
+
+STRING 2034
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), effect3 (Effect 3)
+{
+rlev
+}
+
+STRING 2035
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Crusader's Glory
+}
+
+STRING 2036
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Crusader's Glory
+}
+
+STRING 2037
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Radiant Glory
+}
+
+STRING 2038
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Radiant Glory
+}
+
+STRING 2039
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+{
+[Uther]
 }
 
