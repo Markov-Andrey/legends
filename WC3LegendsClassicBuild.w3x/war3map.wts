@@ -5374,13 +5374,6 @@ STRING 1998
 Sun Key
 }
 
-STRING 1999
-// Abilities: A02T ([Uther] Sun Key), Ubertip (Tooltip - Normal - Extended)
-{
-Mana recovery occurs only during the day
-
-}
-
 STRING 2001
 // Doodads: D000 ([Alterac] Watch Post), Name (Name)
 {
@@ -5451,5 +5444,11 @@ STRING 2012
 // Doodads: D00B ([Alterac] Barricade), Name (Name)
 {
 [Alterac] Barricade
+}
+
+STRING 2013
+// Abilities: A02T ([Uther] Sun Key), Ubertip (Tooltip - Normal - Extended)
+{
+Mana regeneration rate is higher during the day
 }
 

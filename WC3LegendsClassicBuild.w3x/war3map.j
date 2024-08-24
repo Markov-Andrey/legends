@@ -94,6 +94,7 @@ rect gg_rct_Way2_p7= null
 rect gg_rct_Way1_p8= null
 rect gg_rct_Way1_p9= null
 rect gg_rct_Way2_p8= null
+rect gg_rct_EnemyWayAttackPoint= null
 camerasetup gg_cam_Camera_001= null
 trigger gg_trg_CurrentBuild= null
 trigger gg_trg_ConsoleLog= null
@@ -161,9 +162,11 @@ trigger gg_trg_UtherDivineShield= null
 trigger gg_trg_UtherChampions= null
 trigger gg_trg_UtherChampionsDead= null
 trigger gg_trg_UtherChurchDonations= null
+trigger gg_trg_UtherLightTower= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
+trigger gg_trg_AddUnitBuildingHero= null
 trigger gg_trg_SetUpgradeList= null
 trigger gg_trg_SetUpgradeTimer= null
 trigger gg_trg_AddUpgradeT1= null
@@ -202,6 +205,8 @@ trigger gg_trg_CreateSquadWave1n1= null
 trigger gg_trg_CreateSquadWave1n2= null
 trigger gg_trg_CreateSquadWave2n1= null
 trigger gg_trg_CreateSquadWave2n2= null
+trigger gg_trg_CreateSquadWave3n1= null
+trigger gg_trg_CreateSquadWave3n2= null
 trigger gg_trg_CreateSquadWave4n1= null
 trigger gg_trg_CreateSquadWave4n2= null
 trigger gg_trg_CreateSquadWave5n1= null
@@ -230,11 +235,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_UtherLightTower= null
-trigger gg_trg_AddUnitBuildingHero= null
-rect gg_rct_EnemyWayAttackPoint= null
-trigger gg_trg_CreateSquadWave3n1= null
-trigger gg_trg_CreateSquadWave3n2= null
 
     // Random Groups
 integer array gg_rg_000
@@ -868,6 +868,8 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     local trigger t
     local real life
 
+    set u=BlzCreateUnitWithSkin(p, 'h007', 2360.8, - 8063.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 6815.6, - 7567.9, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7480.8, 4096.6, 270.000, 'h007')
@@ -920,6 +922,12 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 4)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7354.2, 5832.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 2104.8, - 7551.4, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 1784.8, - 8191.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7126.5, 3329.5, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7469.2, 5313.8, 270.000, 'h007')
@@ -938,6 +946,22 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 9)
     set u=BlzCreateUnitWithSkin(p, 'h007', 5996.1, 4008.5, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 2872.8, - 7871.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 1848.8, - 7615.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 4216.8, 7999.4, 90.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 2040.8, - 7807.4, 270.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 2680.8, - 7679.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 3960.8, 7487.4, 90.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6202.2, 6024.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7098.2, 6472.4, 270.000, 'h007')
@@ -996,6 +1020,18 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6842.2, 2440.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 3640.8, 8127.4, 90.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 3704.8, 7551.4, 90.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 9)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 3896.8, 7743.4, 90.000, 'h007')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 4664.8, 7423.4, 90.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 4600.8, 7679.4, 90.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
 endfunction
 
 //===========================================================================
@@ -1076,6 +1112,50 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 5)
     set u=BlzCreateUnitWithSkin(p, 'h006', 2343.4, - 2562.1, 287.532, 'h006')
     call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 4139.4, 7355.9, 340.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 3642.0, 7697.4, 340.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 4154.1, 7537.2, 340.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 3768.3, 7809.9, 340.810, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 4296.9, 7465.2, 340.810, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 3532.7, 7772.6, 340.810, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2255.3, - 7488.6, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 1729.4, - 7894.4, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2239.7, - 7737.3, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 1855.7, - 8006.9, 160.810, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2355.9, - 7613.9, 160.810, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 5)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 1620.1, - 7969.6, 160.810, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2660.5, - 7984.0, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2550.5, - 7873.2, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 4440.3, 7588.1, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
+    set u=BlzCreateUnitWithSkin(p, 'h006', - 4485.6, 7441.8, 160.810, 'h006')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
 endfunction
 
 //===========================================================================
@@ -1088,26 +1168,23 @@ function CreateNeutralHostile takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 9015.2, 3055.8, 305.778, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1144.9, 7889.8, 305.519, 'nwlg')
-    set u=BlzCreateUnitWithSkin(p, 'nsqe', - 4240.6, 7839.2, 316.457, 'nsqe')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2296.3, 2511.8, 42.836, 'nbrg')
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2228.7, 2855.6, - 65.737, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2228.7, 2855.6, 294.263, 'nbrg')
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 2026.5, 2642.6, 182.431, 'nenf')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 7964.6, 8541.8, 269.264, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nogl', - 7800.2, 8804.7, - 72.117, 'nogl')
+    set u=BlzCreateUnitWithSkin(p, 'nogl', - 7800.2, 8804.7, 287.883, 'nogl')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000008_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7918.8, 8294.6, - 72.729, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7918.8, 8294.6, 287.271, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 5293.7, - 171.8, 40.327, 'nwlt')
     set u=BlzCreateUnitWithSkin(p, 'nwld', 1051.7, 7704.7, 298.872, 'nwld')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 877.7, 7653.6, 302.558, 'nwlg')
-    set u=BlzCreateUnitWithSkin(p, 'nsqo', - 4213.3, 8065.4, 303.138, 'nsqo')
-    set u=BlzCreateUnitWithSkin(p, 'nsqe', - 3979.3, 8066.4, 299.197, 'nsqe')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 5415.2, - 369.9, 83.310, 'nwlg')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -1119,16 +1196,15 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nsqt', 6609.9, - 8175.0, 74.292, 'nsqt')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7595.5, 8367.0, 290.114, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nsqe', 6776.6, - 8408.8, 93.081, 'nsqe')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
-    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7454.5, 8802.4, - 58.025, 'nomg')
+    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7454.5, 8802.4, 301.975, 'nomg')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2046.7, - 8733.4, 88.769, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nmrm', - 2143.9, - 8868.8, 122.738, 'nmrm')
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7380.1, 8607.2, - 68.325, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7703.3, 8594.4, - 80.241, 'nomg')
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7380.1, 8607.2, 291.675, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7703.3, 8594.4, 279.759, 'nomg')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2323.1, - 8811.1, 128.018, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 9212.2, 2922.6, 305.500, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 9177.8, 3081.1, 299.400, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 3654.7, 1452.3, - 30.793, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 3654.7, 1452.3, 329.207, 'nwlt')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', 8948.1, - 2889.3, 118.304, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 3746.5, 1120.4, 26.606, 'nwlt')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 3615.7, 1242.3, 1.360, 'nwlg')
@@ -1136,7 +1212,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 4071.2, 3534.9, - 80.779, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 4071.2, 3534.9, 279.221, 'nwlt')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 4273.7, 3480.7, 211.580, 'nwlg')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -1144,16 +1220,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 4262.7, 3291.5, 159.998, 'nwlt')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
-    set u=BlzCreateUnitWithSkin(p, 'nsgt', 2677.5, - 8216.0, 133.422, 'nsgt')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000002_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'nssp', 2572.4, - 8381.3, 151.435, 'nssp')
-    set u=BlzCreateUnitWithSkin(p, 'nssp', 2789.8, - 8062.1, 95.549, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
-    set u=BlzCreateUnitWithSkin(p, 'nssp', 2492.4, - 8240.6, 151.435, 'nssp')
-    set u=BlzCreateUnitWithSkin(p, 'nssp', 2639.9, - 8057.5, 103.348, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.296, 'nsgt')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -3775,7 +3842,7 @@ function Trig_UtherChampions_Actions takes nothing returns nothing
     else
     endif
     call AddSpecialEffectTargetUnitBJ("origin", GetLastCreatedUnit(), "Uther_Void Teleport Yellow Target.mdx")
-    call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+    call UnitApplyTimedLifeBJ(45.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
@@ -3811,7 +3878,7 @@ function Trig_UtherChampionsDead_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherChampionsDead_Actions takes nothing returns nothing
-    call AddSpecialEffectLocBJ(GetUnitLoc(GetDyingUnit()), "Uther_Void Teleport Yellow Target.mdx")
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetDyingUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl")
     call RemoveUnit(GetDyingUnit())
 endfunction
 
@@ -3897,7 +3964,7 @@ function Trig_UtherLightTower_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherLightTower_Func001A takes nothing returns nothing
-    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 1.25 ))
+    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 0.75 ))
 endfunction
 
 function Trig_UtherLightTower_Actions takes nothing returns nothing
