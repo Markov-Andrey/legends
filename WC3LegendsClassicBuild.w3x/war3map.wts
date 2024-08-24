@@ -942,7 +942,7 @@ STRING 643
 }
 
 STRING 645
-// Units: h00C (Holy Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h00C (Light Tower), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -4514,18 +4514,6 @@ STRING 1730
 Upgrade to Parish
 }
 
-STRING 1731
-// Units: h00C (Holy Tower), Name (Name)
-{
-Holy Tower
-}
-
-STRING 1732
-// Units: h00C (Holy Tower), Tip (Tooltip - Basic)
-{
-Upgrade to Holy Tower
-}
-
 STRING 1735
 // Units: h02L (Abbey), Name (Name)
 {
@@ -4833,7 +4821,7 @@ Heavy defensive structure. Particularly effective against clusters of troops. Ca
 }
 
 STRING 1787
-// Units: h00C (Holy Tower), Ubertip (Tooltip - Extended)
+// Units: h00C (Light Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -5372,5 +5360,90 @@ STRING 1985
 // Abilities: A013 ([Uther] Seal Of Wisdom), Researchubertip (Tooltip - Learn - Extended)
 {
 Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Level 1|r - Restores 1.5% mana when attacking. |n|cffffcc00Level 2|r - Restores 2.5% mana when attacking. |n|cffffcc00Level 3|r - Restores 3.5% mana when attacking.
+}
+
+STRING 1986
+// Abilities: A01Z ([Uther] Shake), Name (Name)
+{
+[Uther] Shake
+}
+
+STRING 1987
+// Abilities: A01Z ([Uther] Shake), Tip (Tooltip - Normal)
+{
+Shake
+}
+
+STRING 1988
+// Upgrades: R010 (Flying Machine Bombs), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 1989
+// Abilities: A02S ([Uther] Shake), Name (Name)
+{
+[Uther] Shake
+}
+
+STRING 1990
+// Abilities: A02S ([Uther] Shake), Tip (Tooltip - Normal)
+{
+Shake
+}
+
+STRING 1991
+// Buffs/Effects: B00M ([Uther] Shake), EditorName (Name (Editor Only))
+{
+[Uther] Shake
+}
+
+STRING 1992
+// Buffs/Effects: B00M ([Uther] Shake), Bufftip (Tooltip)
+{
+Shake
+}
+
+STRING 1993
+// Upgrades: R010 (Flying Machine Bombs), Name (Name)
+{
+Shake
+}
+
+STRING 1994
+// Upgrades: R010 (Flying Machine Bombs), Tip (Tooltip)
+{
+Research Shake
+}
+
+STRING 1995
+// Units: h00C (Light Tower), Name (Name)
+{
+Light Tower
+}
+
+STRING 1996
+// Units: h00C (Light Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Light Tower
+}
+
+STRING 1997
+// Abilities: A02T ([Uther] Sun Key), Name (Name)
+{
+[Uther] Sun Key
+}
+
+STRING 1998
+// Abilities: A02T ([Uther] Sun Key), Tip (Tooltip - Normal)
+{
+Sun Key
+}
+
+STRING 1999
+// Abilities: A02T ([Uther] Sun Key), Ubertip (Tooltip - Normal - Extended)
+{
+Mana recovery occurs only during the day
+
 }
 

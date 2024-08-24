@@ -155,6 +155,8 @@ trigger gg_trg_ArthasPlagueStoneForm= null
 trigger gg_trg_ArthasGhoulEffect= null
 trigger gg_trg_ArthasPlagueNecropolis= null
 trigger gg_trg_ArthasSacrifice= null
+trigger gg_trg_UtherIni= null
+trigger gg_trg_UtherSealOfWisdom= null
 trigger gg_trg_UtherDivineShield= null
 trigger gg_trg_UtherChampions= null
 trigger gg_trg_UtherChampionsDead= null
@@ -162,7 +164,6 @@ trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
-trigger gg_trg_AddUnitBuildingHero= null
 trigger gg_trg_SetUpgradeList= null
 trigger gg_trg_SetUpgradeTimer= null
 trigger gg_trg_AddUpgradeT1= null
@@ -229,8 +230,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_UtherIni= null
-trigger gg_trg_UtherSealOfWisdom= null
+trigger gg_trg_UtherLightTower= null
+trigger gg_trg_AddUnitBuildingHero= null
 
     // Random Groups
 integer array gg_rg_000
@@ -662,6 +663,42 @@ function ItemTable000006_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
+function ItemTable000007_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 50)
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 50)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
 
 //***************************************************************************
 //*
@@ -954,15 +991,22 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 8003.8, 8628.1, 344.288, 'nomg')
     set u=BlzCreateUnitWithSkin(p, 'nogl', - 7805.7, 8663.1, 308.356, 'nogl')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7928.5, 8412.6, 332.989, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nwld', 3843.3, 1268.0, 2.442, 'nwld')
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 5293.7, - 171.8, 40.327, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwld', 1051.7, 7704.7, 298.872, 'nwld')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 877.7, 7653.6, 302.558, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nsqo', - 4213.3, 8065.4, 303.138, 'nsqo')
     set u=BlzCreateUnitWithSkin(p, 'nsqe', - 3979.3, 8066.4, 299.197, 'nsqe')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 3716.1, 1104.0, 1.076, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 5415.2, - 369.9, 83.310, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1893.0, - 8766.6, 74.606, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2374.0, - 8972.9, 135.530, 'nmrr')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 3753.0, 1430.5, 6.739, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 5581.6, - 218.9, 112.050, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsqo', 6735.2, - 8284.7, 112.976, 'nsqo')
     set u=BlzCreateUnitWithSkin(p, 'nsqe', 6903.9, - 8137.6, 100.223, 'nsqe')
     set u=BlzCreateUnitWithSkin(p, 'nsqe', 6475.3, - 8324.4, 60.960, 'nsqe')
@@ -975,7 +1019,29 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nsqe', 6590.8, - 8202.3, 93.991, 'nsqe')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 9212.2, 2922.6, 305.500, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 9177.8, 3081.1, 299.400, 'nomg')
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 3624.0, 1398.8, - 0.635, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nmrr', 8948.1, - 2889.3, 118.304, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 3719.4, 1116.2, - 7.422, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 3704.4, 1276.9, 1.360, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000007_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 5737.6, 1629.1, 266.260, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 5918.9, 1729.9, 240.806, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000007_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 5937.0, 1522.6, 223.121, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsgt', 2677.5, - 8216.0, 133.422, 'nsgt')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -983,6 +1049,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function ItemTable000002_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nssp', 2572.4, - 8381.3, 151.435, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nssp', 2789.8, - 8062.1, 95.549, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nssp', 2492.4, - 8240.6, 151.435, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nssp', 2639.9, - 8057.5, 103.348, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.296, 'nsgt')
@@ -994,6 +1062,22 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5356.4, - 3727.7, 273.423, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5052.6, - 3560.3, 329.309, 'nssp')
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5206.8, - 3737.9, 281.222, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 4181.1, 1986.8, 113.379, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 3975.2, 2246.9, 159.892, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 5176.6, - 702.9, 146.850, 'nenf')
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000007_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 4147.4, 2183.2, 146.850, 'nenf')
+    call SetUnitAcquireRange(u, 200.0)
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nmrr', 8781.3, - 3259.0, 165.064, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', 9098.2, - 2842.4, 104.141, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nmrm', 8930.2, - 3055.0, 152.273, 'nmrm')
@@ -3367,6 +3451,7 @@ function Trig_UtherIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_UtherChampions)
     call EnableTrigger(gg_trg_UtherChampionsDead)
     call EnableTrigger(gg_trg_UtherChurchDonations)
+    call EnableTrigger(gg_trg_UtherLightTower)
 endfunction
 
 //===========================================================================
@@ -3510,7 +3595,7 @@ function Trig_UtherDivineShield_Actions takes nothing returns nothing
         call SetUnitInvulnerable(GetAttackedUnitBJ(), false)
         call UnitRemoveAbilityBJ('A001', GetAttackedUnitBJ())
         call UnitAddAbilityBJ('A002', GetAttackedUnitBJ())
-        call TriggerSleepAction(240.00)
+        call TriggerSleepAction(300.00)
         call UnitRemoveAbilityBJ('A002', GetAttackedUnitBJ())
     else
     endif
@@ -3685,6 +3770,43 @@ endfunction
 
 
 //===========================================================================
+// Trigger: UtherLightTower
+//===========================================================================
+function Trig_UtherLightTower_Func002C takes nothing returns boolean
+    if ( not ( GetTimeOfDay() >= 6.00 ) ) then
+        return false
+    endif
+    if ( not ( GetTimeOfDay() <= 18.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherLightTower_Conditions takes nothing returns boolean
+    if ( not Trig_UtherLightTower_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherLightTower_Func001A takes nothing returns nothing
+    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 1.25 ))
+endfunction
+
+function Trig_UtherLightTower_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h00C'), function Trig_UtherLightTower_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_UtherLightTower takes nothing returns nothing
+    set gg_trg_UtherLightTower=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherLightTower)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_UtherLightTower, 1.00)
+    call TriggerAddCondition(gg_trg_UtherLightTower, Condition(function Trig_UtherLightTower_Conditions))
+    call TriggerAddAction(gg_trg_UtherLightTower, function Trig_UtherLightTower_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: PlayerCount
 //===========================================================================
 function Trig_PlayerCount_Func003Func001C takes nothing returns boolean
@@ -3723,7 +3845,7 @@ endfunction
 //
 // Difficulty selection system from the arithmetic average selection of all players (24)
 //===========================================================================
-function Trig_SetDifficulty_Func021C takes nothing returns boolean
+function Trig_SetDifficulty_Func023C takes nothing returns boolean
     if ( ( GetSpellAbilityId() == 'A003' ) ) then
         return true
     endif
@@ -3740,7 +3862,7 @@ function Trig_SetDifficulty_Func021C takes nothing returns boolean
 endfunction
 
 function Trig_SetDifficulty_Conditions takes nothing returns boolean
-    if ( not Trig_SetDifficulty_Func021C() ) then
+    if ( not Trig_SetDifficulty_Func023C() ) then
         return false
     endif
     return true
@@ -3842,7 +3964,9 @@ function Trig_SetDifficulty_Actions takes nothing returns nothing
     set udg_ConsoleTrigger="SetDifficulty"
     set udg_ConsoleMessage=I2S(udg_SetDifficulty)
     call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
+    // Инициазация создания юнитов
+    call ConditionalTriggerExecute(gg_trg_AddUnitBuildingHero)
+    call ConditionalTriggerExecute(gg_trg_SetUpgradeList)
 endfunction
 
 //===========================================================================
@@ -3935,9 +4059,6 @@ function Trig_SetAIRace_Actions takes nothing returns nothing
     // Console Log
     set udg_ConsoleTrigger="SetAIRace"
     call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
-    call ConditionalTriggerExecute(gg_trg_AddUnitBuildingHero)
-    call ConditionalTriggerExecute(gg_trg_SetUpgradeList)
 endfunction
 
 //===========================================================================
@@ -3954,20 +4075,58 @@ endfunction
 // 2 - Orcs
 // 3 - Undead
 // 4 - Night Elf
+// Delete units for Difficulty level (Health = Difficulty level)
+// 3 - Easy
+// 2 - Normal
+// 1 - Hard
+// The problem is that by default the unit has max health, so for convenience, the health check is inverted (4 - constant of max Difficulty level + 1)
 //===========================================================================
+function Trig_AddUnitBuildingHero_Func001Func001C takes nothing returns boolean
+    if ( not ( I2R(udg_SetDifficulty) <= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_AddUnitBuildingHero_Func001A takes nothing returns nothing
-    call UnitAddAbilityBJ(udg_SetRaces_Unit, GetEnumUnit())
-    call SetUnitAbilityLevelSwapped(udg_SetRaces_Unit, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+    if ( Trig_AddUnitBuildingHero_Func001Func001C() ) then
+        call UnitAddAbilityBJ(udg_SetRaces_Unit, GetEnumUnit())
+        call SetUnitAbilityLevelSwapped(udg_SetRaces_Unit, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+    else
+        call RemoveUnit(GetEnumUnit())
+    endif
+endfunction
+
+function Trig_AddUnitBuildingHero_Func002Func001C takes nothing returns boolean
+    if ( not ( I2R(udg_SetDifficulty) <= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
+        return false
+    endif
+    return true
 endfunction
 
 function Trig_AddUnitBuildingHero_Func002A takes nothing returns nothing
-    call UnitAddAbilityBJ(udg_SetRaces_Hero, GetEnumUnit())
-    call SetUnitAbilityLevelSwapped(udg_SetRaces_Hero, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+    if ( Trig_AddUnitBuildingHero_Func002Func001C() ) then
+        call UnitAddAbilityBJ(udg_SetRaces_Hero, GetEnumUnit())
+        call SetUnitAbilityLevelSwapped(udg_SetRaces_Hero, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+    else
+        call RemoveUnit(GetEnumUnit())
+    endif
+endfunction
+
+function Trig_AddUnitBuildingHero_Func003Func001C takes nothing returns boolean
+    if ( not ( I2R(udg_SetDifficulty) <= ( 4.00 - GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) ) ) ) then
+        return false
+    endif
+    return true
 endfunction
 
 function Trig_AddUnitBuildingHero_Func003A takes nothing returns nothing
-    call UnitAddAbilityBJ(udg_SetRaces_Building, GetEnumUnit())
-    call SetUnitAbilityLevelSwapped(udg_SetRaces_Building, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+    if ( Trig_AddUnitBuildingHero_Func003Func001C() ) then
+        call UnitAddAbilityBJ(udg_SetRaces_Building, GetEnumUnit())
+        call SetUnitAbilityLevelSwapped(udg_SetRaces_Building, GetEnumUnit(), R2I(GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit())))
+    else
+        call RemoveUnit(GetEnumUnit())
+    endif
 endfunction
 
 function Trig_AddUnitBuildingHero_Actions takes nothing returns nothing
@@ -6822,6 +6981,7 @@ function Trig_CreateHero_Actions takes nothing returns nothing
     else
         call SetUnitManaBJ(newHero, 4.00)
     endif
+    set newHero=null
 endfunction
 
 //===========================================================================
@@ -8401,6 +8561,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherChampions()
     call InitTrig_UtherChampionsDead()
     call InitTrig_UtherChurchDonations()
+    call InitTrig_UtherLightTower()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()
