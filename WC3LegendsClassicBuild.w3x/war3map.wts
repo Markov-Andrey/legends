@@ -342,7 +342,7 @@ STRING 531
 }
 
 STRING 532
-// Units: h00N (Gryphon Rider), EditorSuffix (Name - Editor Suffix)
+// Units: h00N (Gryphon Knight), EditorSuffix (Name - Editor Suffix)
 {
 [Uther]
 }
@@ -4635,7 +4635,7 @@ Highly skilled sharpshooter, effective against air units. Can gain the Long Rifl
 }
 
 STRING 1774
-// Units: h00N (Gryphon Rider), Ubertip (Tooltip - Extended)
+// Units: h00N (Gryphon Knight), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #fly
 |R
@@ -4989,7 +4989,7 @@ No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
 STRING 1929
-// Units: h00N (Gryphon Rider), Casterupgradename (Caster Upgrade Names)
+// Units: h00N (Gryphon Knight), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
@@ -5582,5 +5582,53 @@ STRING 2039
 // Upgrades: R011 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
+}
+
+STRING 2040
+// Abilities: A02V ([Uther] Exorcism), Tip (Tooltip - Normal)
+{
+Exorcism
+}
+
+STRING 2041
+// Abilities: A02V ([Uther] Exorcism), Name (Name)
+{
+[Uther] Exorcism
+}
+
+STRING 2043
+// Upgrades: R012 (Storm Hammers), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 2044
+// Upgrades: R012 (Storm Hammers), Name (Name)
+{
+Exorcism
+}
+
+STRING 2045
+// Upgrades: R012 (Storm Hammers), Tip (Tooltip)
+{
+Research Exorcism
+}
+
+STRING 2048
+// Abilities: A02V ([Uther] Exorcism), Ubertip (Tooltip - Normal - Extended)
+{
+This tower's attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 2049
+// Units: h00N (Gryphon Knight), Name (Name)
+{
+Gryphon Knight
+}
+
+STRING 2050
+// Units: h00N (Gryphon Knight), Tip (Tooltip - Basic)
+{
+Train Gryphon Knight
 }
 
