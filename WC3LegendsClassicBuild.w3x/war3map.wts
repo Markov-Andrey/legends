@@ -5837,18 +5837,6 @@ STRING 2219
 Build Mage Tower
 }
 
-STRING 2220
-// Units: h012 ([Wrynn] Aviary), Name (Name)
-{
-[Wrynn] Aviary
-}
-
-STRING 2221
-// Units: h012 ([Wrynn] Aviary), Tip (Tooltip - Basic)
-{
-Build Aviary
-}
-
 STRING 2222
 // Units: h013 ([Wrynn] Scout Tower), Name (Name)
 {
@@ -5901,5 +5889,137 @@ STRING 2231
 // Units: h018 ([Wrynn] Footman), Name (Name)
 {
 [Wrynn] Footman
+}
+
+STRING 2232
+// Units: h019 ([Wrynn] Rifleman), Name (Name)
+{
+[Wrynn] Rifleman
+}
+
+STRING 2234
+// Units: h01A ([Wrynn] Cavalry), Tip (Tooltip - Basic)
+{
+Train Cavalry
+}
+
+STRING 2235
+// Units: h01A ([Wrynn] Cavalry), Name (Name)
+{
+[Wrynn] Cavalry
+}
+
+STRING 2236
+// Units: h01B ([Wrynn] Mortar Team), Name (Name)
+{
+[Wrynn] Mortar Team
+}
+
+STRING 2237
+// Units: h01C ([Wrynn] Flying Machine), Name (Name)
+{
+[Wrynn] Flying Machine
+}
+
+STRING 2238
+// Units: h01D ([Wrynn] Priest), Name (Name)
+{
+[Wrynn] Priest
+}
+
+STRING 2239
+// Units: h01E ([Wrynn] Sorceress), Name (Name)
+{
+[Wrynn] Sorceress
+}
+
+STRING 2240
+// Units: h01F ([Wrynn] Siege Engine), Name (Name)
+{
+[Wrynn] Siege Engine
+}
+
+STRING 2241
+// Units: h01G ([Wrynn] Skyfire Gunship), Name (Name)
+{
+[Wrynn] Skyfire Gunship
+}
+
+STRING 2242
+// Units: h01G ([Wrynn] Skyfire Gunship), Tip (Tooltip - Basic)
+{
+Train Skyfire Gunship
+}
+
+STRING 2243
+// Abilities: A030 ([Wrynn] Level1), Name (Name)
+{
+[Wrynn] Level1
+}
+
+STRING 2244
+// Units: h012 (Varian Wrynn), Name (Name)
+{
+Varian Wrynn
+}
+
+STRING 2245
+// Units: h012 (Varian Wrynn), Tip (Tooltip - Basic)
+{
+Varian Wrynn
+}
+
+STRING 2246
+// Units: h012 (Varian Wrynn), EditorSuffix (Name - Editor Suffix)
+{
+[UI]
+}
+
+STRING 2247
+// Abilities: A031 ([UI] Legends: Varian Wrynn), Tip (Tooltip - Normal)
+{
+Varian Wrynn
+}
+
+STRING 2248
+// Abilities: A031 ([UI] Legends: Varian Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 2249
+// Abilities: A031 ([UI] Legends: Varian Wrynn), Name (Name)
+{
+[UI] Legends: Varian Wrynn
+}
+
+STRING 2250
+// Upgrades: R00K (Magic Sentry), Name (Name)
+{
+[Special] Wrynn
+}
+
+STRING 2251
+// Upgrades: R00K (Magic Sentry), Tip (Tooltip)
+{
+Wrynn
+}
+
+STRING 2252
+// Upgrades: R00K (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 2253
+// Units: h01I ([Wrynn] Bank of Stormwind), Name (Name)
+{
+[Wrynn] Bank of Stormwind
+}
+
+STRING 2254
+// Units: h01I ([Wrynn] Bank of Stormwind), Tip (Tooltip - Basic)
+{
+Build Bank of Stormwind
 }
 

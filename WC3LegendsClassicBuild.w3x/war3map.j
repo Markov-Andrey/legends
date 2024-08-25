@@ -1,6 +1,5 @@
 globals
     // User-defined
-unit udg_CurrentUnit= null
 integer udg_ArthasSouls= 0
 rect array udg_Way1
 rect array udg_Way2
@@ -134,6 +133,7 @@ trigger gg_trg_ArthasIni= null
 trigger gg_trg_ArthasNewRuneSecond= null
 trigger gg_trg_ArthasNewRuneThree= null
 trigger gg_trg_ArthasRuneResearch= null
+trigger gg_trg_ArthasRuneCancel= null
 trigger gg_trg_ArthasRunesUpdate= null
 trigger gg_trg_ArthasFrostmourne= null
 trigger gg_trg_ArthasSouls= null
@@ -143,6 +143,8 @@ trigger gg_trg_ArthasDebugSoul= null
 trigger gg_trg_ArthasUnholySoulReforge= null
 trigger gg_trg_ArthasFrostSoulReforge= null
 trigger gg_trg_ArthasBloodSoulReforge= null
+trigger gg_trg_ArthasDeadUnholyLvl3= null
+trigger gg_trg_ArthasIceImpale= null
 trigger gg_trg_ArthasBloodFuel= null
 trigger gg_trg_ArthasAbominationUnholyDead= null
 trigger gg_trg_ArthasSurfeit= null
@@ -235,9 +237,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_ArthasRuneCancel= null
-trigger gg_trg_ArthasIceImpale= null
-trigger gg_trg_ArthasDeadUnholyLvl3= null
+trigger gg_trg_WrynnIni= null
+trigger gg_trg_PreviewWrynn= null
+trigger gg_trg_ChooseWrynn= null
 
     // Random Groups
 integer array gg_rg_000
@@ -785,36 +787,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'h00F', - 832.0, - 192.0, 270.000, 'h00F')
-    set u=BlzCreateUnitWithSkin(p, 'h00G', - 320.0, - 64.0, 270.000, 'h00G')
-    set u=BlzCreateUnitWithSkin(p, 'h00H', 192.0, - 320.0, 270.000, 'h00H')
-    set u=BlzCreateUnitWithSkin(p, 'h00M', - 768.0, 256.0, 270.000, 'h00M')
-    set u=BlzCreateUnitWithSkin(p, 'h00V', - 128.0, 320.0, 270.000, 'h00V')
-    set u=BlzCreateUnitWithSkin(p, 'h00V', - 128.0, 448.0, 270.000, 'h00V')
-    set u=BlzCreateUnitWithSkin(p, 'h00V', - 256.0, 448.0, 270.000, 'h00V')
-    set u=BlzCreateUnitWithSkin(p, 'h00V', - 256.0, 320.0, 270.000, 'h00V')
-    set u=BlzCreateUnitWithSkin(p, 'h00V', 0.0, 320.0, 270.000, 'h00V')
-    set u=BlzCreateUnitWithSkin(p, 'h00V', 0.0, 448.0, 270.000, 'h00V')
-    set u=BlzCreateUnitWithSkin(p, 'h00X', 224.0, 96.0, 270.000, 'h00X')
-    set u=BlzCreateUnitWithSkin(p, 'h00Y', - 544.0, 608.0, 270.000, 'h00Y')
-    set u=BlzCreateUnitWithSkin(p, 'h00Z', - 256.0, 704.0, 270.000, 'h00Z')
-    set u=BlzCreateUnitWithSkin(p, 'h010', - 1152.0, 448.0, 270.000, 'h010')
-    set u=BlzCreateUnitWithSkin(p, 'h011', - 896.0, 832.0, 270.000, 'h011')
-    set u=BlzCreateUnitWithSkin(p, 'h012', - 448.0, 960.0, 270.000, 'h012')
-    set u=BlzCreateUnitWithSkin(p, 'h016', - 192.0, 960.0, 270.000, 'h016')
-    set u=BlzCreateUnitWithSkin(p, 'h015', - 64.0, 960.0, 270.000, 'h015')
-    set u=BlzCreateUnitWithSkin(p, 'h014', 64.0, 960.0, 270.000, 'h014')
-    set u=BlzCreateUnitWithSkin(p, 'h013', 192.0, 960.0, 270.000, 'h013')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -822,9 +794,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 243.827, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h017', - 669.5, - 522.8, 262.680, 'h017')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 521.8, - 542.1, 267.736, 'h018')
+    set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 263.830, 'h001')
 endfunction
 
 //===========================================================================
@@ -1387,7 +1357,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'ngnw', 1410.5, 3196.5, 228.206, 'ngnw')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngns', 1192.6, 2850.4, 92.375, 'ngns')
     call SetUnitAcquireRange(u, 200.0)
@@ -1427,7 +1396,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer4()
     call CreateBuildingsForPlayer5()
 endfunction
@@ -2191,6 +2159,8 @@ function Trig_LimitUnits_Func001A takes nothing returns nothing
     // Uther
     call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
+    // Wrynn
+    call SetPlayerTechMaxAllowedSwap('O000', 1, GetEnumPlayer())
 endfunction
 
 function Trig_LimitUnits_Actions takes nothing returns nothing
@@ -2339,6 +2309,36 @@ function InitTrig_PreviewUther takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: PreviewWrynn
+//===========================================================================
+function Trig_PreviewWrynn_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A031' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PreviewWrynn_Func005A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(false, 'A031', GetEnumPlayer())
+endfunction
+
+function Trig_PreviewWrynn_Actions takes nothing returns nothing
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'h012', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
+    call RemoveUnit(GetSpellAbilityUnit())
+    call ForForce(GetPlayersAll(), function Trig_PreviewWrynn_Func005A)
+endfunction
+
+//===========================================================================
+function InitTrig_PreviewWrynn takes nothing returns nothing
+    set gg_trg_PreviewWrynn=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewWrynn, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_PreviewWrynn, Condition(function Trig_PreviewWrynn_Conditions))
+    call TriggerAddAction(gg_trg_PreviewWrynn, function Trig_PreviewWrynn_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ChooseArthas
 //===========================================================================
 function Trig_ChooseArthas_Func001C takes nothing returns boolean
@@ -2358,36 +2358,29 @@ function Trig_ChooseArthas_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_ChooseArthas_Func007A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'u009', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseArthas_Func009A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'u010', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseArthas_Func011A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'u00A', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
 function Trig_ChooseArthas_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'u009', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func007A)
     // Ghoul
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'u010', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func009A)
     // Acolyte
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
-    call TriggerSleepAction(0.01)
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
-    call TriggerSleepAction(0.01)
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'u00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func011A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers-Arthas
@@ -2431,41 +2424,23 @@ function Trig_ChooseUther_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_ChooseUther_Func007A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h00A', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseUther_Func009A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h00O', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
 function Trig_ChooseUther_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'h00A', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func007A)
     // WorkerX5
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
-    call TriggerSleepAction(0.01)
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
-    call TriggerSleepAction(0.01)
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
-    call TriggerSleepAction(0.01)
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
-    call TriggerSleepAction(0.01)
-    set udg_CurrentUnit=GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetLastCreatedUnit()), 'hpea'))
-    call ShowUnitHide(udg_CurrentUnit)
-    call CreateNUnitsAtLoc(1, 'h00O', GetOwningPlayer(GetLastCreatedUnit()), GetUnitLoc(udg_CurrentUnit), bj_UNIT_FACING)
-    call RemoveUnit(udg_CurrentUnit)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func009A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_LIGHT_BLUE, true)
@@ -2481,6 +2456,60 @@ function InitTrig_ChooseUther takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseUther, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ChooseUther, Condition(function Trig_ChooseUther_Conditions))
     call TriggerAddAction(gg_trg_ChooseUther, function Trig_ChooseUther_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ChooseWrynn
+//===========================================================================
+function Trig_ChooseWrynn_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h012' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseWrynn_Conditions takes nothing returns boolean
+    if ( not Trig_ChooseWrynn_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseWrynn_Func007A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h00F', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseWrynn_Func009A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h017', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseWrynn_Actions takes nothing returns nothing
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
+    // Town Hall
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func007A)
+    // WorkerX5
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func009A)
+    // ----------------------
+    call RemoveUnit(GetSpellAbilityUnit())
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_BLUE, true)
+    // Run-ALL-triggers-Uther
+    call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    call ConditionalTriggerExecute(gg_trg_WrynnIni)
+    call TriggerExecute(gg_trg_StartCameraReset)
+endfunction
+
+//===========================================================================
+function InitTrig_ChooseWrynn takes nothing returns nothing
+    set gg_trg_ChooseWrynn=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseWrynn, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseWrynn, Condition(function Trig_ChooseWrynn_Conditions))
+    call TriggerAddAction(gg_trg_ChooseWrynn, function Trig_ChooseWrynn_Actions)
 endfunction
 
 //===========================================================================
@@ -4289,6 +4318,19 @@ function InitTrig_UtherLightTower takes nothing returns nothing
     call TriggerRegisterTimerEventPeriodic(gg_trg_UtherLightTower, 1.00)
     call TriggerAddCondition(gg_trg_UtherLightTower, Condition(function Trig_UtherLightTower_Conditions))
     call TriggerAddAction(gg_trg_UtherLightTower, function Trig_UtherLightTower_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnIni
+//===========================================================================
+function Trig_WrynnIni_Actions takes nothing returns nothing
+    call DoNothing()
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnIni takes nothing returns nothing
+    set gg_trg_WrynnIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_WrynnIni, function Trig_WrynnIni_Actions)
 endfunction
 
 //===========================================================================
@@ -8303,8 +8345,10 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UnSelect()
     call InitTrig_PreviewArthas()
     call InitTrig_PreviewUther()
+    call InitTrig_PreviewWrynn()
     call InitTrig_ChooseArthas()
     call InitTrig_ChooseUther()
+    call InitTrig_ChooseWrynn()
     call InitTrig_ArthasIni()
     call InitTrig_ArthasNewRuneSecond()
     call InitTrig_ArthasNewRuneThree()
@@ -8340,6 +8384,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherLiturgy()
     call InitTrig_UtherChurchDonations()
     call InitTrig_UtherLightTower()
+    call InitTrig_WrynnIni()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()
