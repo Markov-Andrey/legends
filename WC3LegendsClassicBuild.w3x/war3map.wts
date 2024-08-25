@@ -1336,64 +1336,10 @@ STRING 852
 Grace of the Ancestors
 }
 
-STRING 861
-// Abilities: A006 ([Uther] Humility), Name (Name)
-{
-[Uther] Humility
-}
-
-STRING 862
-// Abilities: A006 ([Uther] Humility), Tip (Tooltip - Normal)
-{
-Humility
-}
-
-STRING 863
-// Buffs/Effects: B002 ([Uther] Humility), EditorName (Name (Editor Only))
-{
-[Uther] Humility
-}
-
-STRING 865
-// Buffs/Effects: B002 ([Uther] Humility), Buffubertip (Tooltip - Extended)
-{
-This unit has Humility; its attack damage is reduced.
-}
-
-STRING 866
-// Buffs/Effects: B002 ([Uther] Humility), Bufftip (Tooltip)
-{
-|cFFFF0000Humility|R
-}
-
 STRING 869
 // Units: h00J (Cleric), Name (Name)
 {
 Cleric
-}
-
-STRING 878
-// Abilities: A007 ([Uther] Lightning Shield), Name (Name)
-{
-[Uther] Lightning Shield
-}
-
-STRING 879
-// Abilities: A007 ([Uther] Lightning Shield), Ubertip (Tooltip - Normal - Extended)
-{
-Forms a shield of electricity around a target unit, dealing <A007,DataA1> damage per second to units around it. |nLasts <A007,Dur1> seconds.
-}
-
-STRING 880
-// Buffs/Effects: B003 ([Uther] Lightning Shield), EditorName (Name (Editor Only))
-{
-[Uther] Lightning Shield
-}
-
-STRING 881
-// Buffs/Effects: B004 ([Uther] Lightning Shield (Caster)), EditorName (Name (Editor Only))
-{
-[Uther] Lightning Shield (Caster)
 }
 
 STRING 895
@@ -2036,18 +1982,6 @@ STRING 1127
 // Units: h01P (Garrison), Tip (Tooltip - Basic)
 {
 Build Garrison
-}
-
-STRING 1128
-// Abilities: A00X ([Uther] Heal), Name (Name)
-{
-[Uther] Heal
-}
-
-STRING 1129
-// Abilities: A00X ([Uther] Heal), Tip (Tooltip - Normal)
-{
-Heal
 }
 
 STRING 1131
@@ -4562,38 +4496,6 @@ STRING 1764
 Revive Uther
 }
 
-STRING 1765
-// Units: h005 (Protector), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee #foot
-|R
-Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 1766
-// Units: h00A (Cathedral), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#townhall #food #storage #T1
-|R
-Primary structure, used to train Peasants and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
-}
-
-STRING 1767
-// Units: h00I (Diocese), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#townhall #food #storage #T2
-|R
-Upgrade to Keep to enable the production of additional types of structures and units.
-}
-
-STRING 1768
-// Units: h01H (Parish), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#townhall #food #storage #T3
-|R
-Upgrade to Castle to enable the production of additional types of structures and units.
-}
-
 STRING 1769
 // Units: h01P (Garrison), Ubertip (Tooltip - Extended)
 {
@@ -4610,60 +4512,12 @@ STRING 1770
 Provides food, which increases the maximum number of units that can be trained.
 }
 
-STRING 1771
-// Units: h00W (Knight-Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee #foot
-|R
-Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 1772
-// Units: h00J (Cleric), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support #foot
-|R
-Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 1773
-// Units: h00K (Rifleman), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #foot
-|R
-Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 1774
 // Units: h00N (Gryphon Knight), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #fly
 |R
 Powerful flying creature, mounted by a Dwarven hammer-thrower. Can learn Animal War Training, and the Storm Hammers ability. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 1775
-// Units: h00O (Pilgrim), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#worker #builder #foot
-|R
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 1776
-// Units: h00L (Mortar Team), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #siege #foot
-|R
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 1777
-// Units: h000 (Templar), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support #foot
-|R
-Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 1778
@@ -4680,14 +4534,6 @@ STRING 1779
 |cffffcc00#heroes #mechanics
 |R
 Summons Heroes. Revives slain Heroes.
-}
-
-STRING 1780
-// Units: h009 (War Wagon), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee #siege #foot
-|R
-Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
 }
 
 STRING 1782
@@ -5630,5 +5476,310 @@ STRING 2050
 // Units: h00N (Gryphon Knight), Tip (Tooltip - Basic)
 {
 Train Gryphon Knight
+}
+
+STRING 2054
+// Upgrades: R013 (Fragmentation Shards), Name (Name)
+{
+Holy Bomb
+}
+
+STRING 2055
+// Upgrades: R013 (Fragmentation Shards), effect1 (Effect 1)
+{
+renw
+}
+
+STRING 2056
+// Upgrades: R013 (Fragmentation Shards), EditorSuffix (Editor Suffix)
+{
+[Uther]
+}
+
+STRING 2057
+// Upgrades: R013 (Fragmentation Shards), Tip (Tooltip)
+{
+Research Holy Bomb
+}
+
+STRING 2058
+// Upgrades: R013 (Fragmentation Shards), Ubertip (Tooltip - Extended)
+{
+Damage no longer causes damage to allied troops
+}
+
+STRING 2059
+// Abilities: A02U ([Uther] Repentance), Tip (Tooltip - Normal)
+{
+Repentance
+}
+
+STRING 2060
+// Abilities: A02U ([Uther] Repentance), Name (Name)
+{
+[Uther] Repentance
+}
+
+STRING 2062
+// Buffs/Effects: B00N ([Uther] Repentance), EditorName (Name (Editor Only))
+{
+[Uther] Repentance
+}
+
+STRING 2063
+// Buffs/Effects: B00N ([Uther] Repentance), Bufftip (Tooltip)
+{
+Repentance
+}
+
+STRING 2065
+// Abilities: A006 ([Uther] Trail of Light), Name (Name)
+{
+[Uther] Trail of Light
+}
+
+STRING 2066
+// Abilities: A006 ([Uther] Trail of Light), Tip (Tooltip - Normal)
+{
+[Uther] Dispel Magic
+}
+
+STRING 2067
+// Abilities: A006 ([Uther] Trail of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Add speed army <A006,DataA1,%>%
+}
+
+STRING 2068
+// Abilities: A002 ([Uther] Divine Shield), Tip (Tooltip - Normal)
+{
+Divine Shield
+}
+
+STRING 2069
+// Abilities: A002 ([Uther] Divine Shield), Ubertip (Tooltip - Normal - Extended)
+{
+After some time, Divine Provided will be available again
+
+}
+
+STRING 2070
+// Buffs/Effects: B000 ([Uther] Reload Divine Shield), Buffubertip (Tooltip - Extended)
+{
+After some time, Divine Provided will be available again
+
+}
+
+STRING 2071
+// Buffs/Effects: B002 ([Uther] Trail of Light), EditorName (Name (Editor Only))
+{
+[Uther] Trail of Light
+}
+
+STRING 2072
+// Buffs/Effects: B002 ([Uther] Trail of Light), Bufftip (Tooltip)
+{
+Trail of Light
+}
+
+STRING 2073
+// Abilities: A02U ([Uther] Repentance), Ubertip (Tooltip - Normal - Extended)
+{
+Puts a target enemy unit to sleep for <A02U,Dur1> seconds. A sleeping unit can be awoken by attacking it.
+}
+
+STRING 2074
+// Abilities: A006 ([Uther] Trail of Light), Hotkey (Hotkey - Normal)
+{
+T
+}
+
+STRING 2075
+// Abilities: A007 ([Uther] Magic Defense), Name (Name)
+{
+[Uther] Magic Defense
+}
+
+STRING 2076
+// Abilities: A02W ([Uther] Liturgy), Name (Name)
+{
+[Uther] Liturgy
+}
+
+STRING 2077
+// Abilities: A02W ([Uther] Liturgy), Tip (Tooltip - Normal)
+{
+Liturgy
+}
+
+STRING 2079
+{
++
+}
+
+STRING 2080
+// Units: h00J (Cleric), Casterupgradetip (Caster Upgrade Tips)
+{
+- Far Sight,- Far Sight|n- Liturgy ,- Far Sight|n- Liturgy |n- Inner Fire
+}
+
+STRING 2081
+// Units: h000 (Templar), Casterupgradetip (Caster Upgrade Tips)
+{
+- Repentance,- Repentance|n- Dispel Magic,- Repentance|n- Dispel Magic|n- Trail of Light
+}
+
+STRING 2082
+// Units: h005 (Protector), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 2083
+// Units: h00W (Knight-Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 2084
+// Units: h00J (Cleric), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 2085
+// Units: h00J (Cleric), Tip (Tooltip - Basic)
+{
+Train Cleric
+}
+
+STRING 2086
+// Units: h00K (Rifleman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 2087
+// Units: h00O (Pilgrim), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2088
+// Units: h00L (Mortar Team), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2089
+// Units: h000 (Templar), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 2090
+// Units: h000 (Templar), Tip (Tooltip - Basic)
+{
+Train Templar
+}
+
+STRING 2091
+// Units: h009 (War Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
+}
+
+STRING 2092
+// Items: I004 (Bottled Alterac Spring Water), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|r|nRegenerates the Hero's mana by <A00F,DataB1> over <A00F,Dur1> seconds when used.
+}
+
+STRING 2093
+// Items: I005 (Alterac Manna Biscuit), Ubertip (Tooltip - Extended)
+{
+|cff87ceebNon-Combat Consumable|r|nRegenerates the Hero's mana by <A00I,DataB1> over <A00I,Dur1> seconds when used.
+}
+
+STRING 2094
+// Abilities: A00X ([Uther] Heal), Name (Name)
+{
+[Uther] Heal
+}
+
+STRING 2095
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 2096
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 2097
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 2098
+// Units: h00A (Cathedral), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Peasants and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
+}
+
+STRING 2099
+// Units: h00I (Diocese), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Keep to enable the production of additional types of structures and units.
+}
+
+STRING 2100
+// Units: h01H (Parish), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Castle to enable the production of additional types of structures and units.
+}
+
+STRING 2101
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful champion who supports the army with his aura
+}
+
+STRING 2102
+// Abilities: A00D ([Uther] Summon Champion of Protection), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful champion who supports the army with his aura
+}
+
+STRING 2103
+// Abilities: A00E ([Uther] Summon Champion of Holy), Ubertip (Tooltip - Normal - Extended)
+{
+A powerful champion who supports the army with his aura
 }
 
