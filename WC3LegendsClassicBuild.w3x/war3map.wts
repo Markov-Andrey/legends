@@ -54,61 +54,43 @@ STRING 467
 }
 
 STRING 468
-// Units: u009 (Plague Necropolis), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 469
-// Units: u009 (Plague Necropolis), Name (Name)
-{
-Plague Necropolis
-}
-
-STRING 470
-// Units: u009 (Plague Necropolis), Tip (Tooltip - Basic)
-{
-Summon Plague Necropolis
-}
-
-STRING 471
 // Units: u00A (Acolyte), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
-STRING 472
-// Units: u00B (Plague Halls of the Dead), EditorSuffix (Name - Editor Suffix)
+STRING 470
+// Units: u009 ([Arthas] Plague Necropolis), Tip (Tooltip - Basic)
+{
+Summon Plague Necropolis
+}
+
+STRING 471
+// Units: u010 (Ghoul), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
-STRING 473
-// Units: u00B (Plague Halls of the Dead), Name (Name)
+STRING 472
+// Units: u011 (Crypt Fiend), EditorSuffix (Name - Editor Suffix)
 {
-Plague Halls of the Dead
+[Arthas]
 }
 
 STRING 474
-// Units: u00B (Plague Halls of the Dead), Tip (Tooltip - Basic)
+// Units: u00B ([Arthas] Plague Halls of the Dead), Tip (Tooltip - Basic)
 {
 Upgrade to Plague Halls of the Dead
 }
 
 STRING 475
-// Units: u00C (Plague Black Citadel), EditorSuffix (Name - Editor Suffix)
+// Units: u012 (Gargoyle), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
-STRING 476
-// Units: u00C (Plague Black Citadel), Name (Name)
-{
-Plague Black Citadel
-}
-
 STRING 477
-// Units: u00C (Plague Black Citadel), Tip (Tooltip - Basic)
+// Units: u00C ([Arthas] Plague Black Citadel), Tip (Tooltip - Basic)
 {
 Upgrade to Plague Black Citadel
 }
@@ -234,205 +216,175 @@ STRING 497
 }
 
 STRING 498
-// Units: h005 (Protector), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 501
-// Units: h00A (Cathedral), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 504
-// Units: h00I (Diocese), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 507
-// Units: h01H (Parish), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 510
-// Units: h01P (Garrison), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 511
-// Units: h02F (Monument of Light), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
-STRING 512
-// Units: h02F (Monument of Light), Name (Name)
-{
-Monument of Light
-}
-
 STRING 513
-// Units: h02F (Monument of Light), Tip (Tooltip - Basic)
+// Units: h02F ([Uther] Monument of Light), Tip (Tooltip - Basic)
 {
 Build Monument of Light
 }
 
 STRING 514
-// Units: h02L (Abbey), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 515
-// Units: H00B (Light's Hope Chapel), Name (Name)
+// Units: H00B ([Uther] Light's Hope Chapel), Tip (Tooltip - Basic)
 {
 Light's Hope Chapel
 }
 
 STRING 516
-// Units: H00B (Light's Hope Chapel), Tip (Tooltip - Basic)
+// Units: H00B ([Uther] Light's Hope Chapel), Propernames (Proper Names)
 {
 Light's Hope Chapel
 }
 
 STRING 517
-// Units: h02N (Aviary), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 520
-// Units: h02O (Scout Tower), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 523
-// Units: h02P (Guard Tower), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 526
-// Units: h02Q (Cannon Tower), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00V (Animal War Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 529
-// Units: h00W (Knight-Paladin), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 530
-// Units: h00J (Cleric), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 531
-// Units: h00K (Rifleman), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00Y (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 532
-// Units: h00N (Gryphon Knight), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R00Z (Flying Machine Bombs), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 533
-// Units: h00O (Pilgrim), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R010 (Flying Machine Bombs), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 535
-// Units: h00P (Champion of Holy), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 537
-// Units: h00Q (Champion of Protection), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R012 (Storm Hammers), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 540
-// Units: h00R (Champion of Retribution), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 541
-// Units: h00L (Mortar Team), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 544
-// Units: h000 (Templar), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 547
-// Units: h003 (Lumber Mill), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 550
-// Units: H00B (Light's Hope Chapel), EditorSuffix (Name - Editor Suffix)
+// Upgrades: R013 (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
 
 STRING 551
-// Units: u010 (Ghoul), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 552
-// Units: u011 (Crypt Fiend), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 553
-// Units: u012 (Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 554
 // Units: u014 (Abomination), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
-STRING 555
+STRING 552
 // Units: u015 (Wagon), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
-STRING 556
+STRING 553
 // Units: u016 (Dead Wyrm), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
+STRING 554
+// Units: u00Y (Wild Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 555
+// Units: u01F (Frozen Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
+STRING 556
+// Units: u01H (Decaying Ghoul), EditorSuffix (Name - Editor Suffix)
+{
+[Arthas]
+}
+
 STRING 557
-// Units: u00Z (Ziggurat), EditorSuffix (Name - Editor Suffix)
+// Units: u01I (Ravenous Crypt Fiend), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
@@ -450,61 +402,61 @@ Dead Wyrm
 }
 
 STRING 560
-// Units: u017 (Spirit Tower), EditorSuffix (Name - Editor Suffix)
+// Units: u01J (Frost Crypt Fiend), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 561
-// Units: u018 (Nerubian Tower), EditorSuffix (Name - Editor Suffix)
+// Units: u01K (Toxic Crypt Fiend), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 562
-// Units: u01A (Crypt), EditorSuffix (Name - Editor Suffix)
+// Units: u01L (Bloody Gargoyle), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 563
-// Units: u01C (Frostmourne Pedestal), EditorSuffix (Name - Editor Suffix)
+// Units: u01M (Northrend Gargoyle), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 564
-// Units: u01D (Slaughterhouse), EditorSuffix (Name - Editor Suffix)
+// Units: u01N (Corrupted Gargoyle), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 565
-// Units: u01E (Boneyard), EditorSuffix (Name - Editor Suffix)
+// Units: u01O (Fat Abomination), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 566
-// Units: u00Y (Wild Ghoul), EditorSuffix (Name - Editor Suffix)
+// Units: u01P (Cold Abomination), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 567
-// Units: u01F (Frozen Ghoul), EditorSuffix (Name - Editor Suffix)
+// Units: u01Q (Glutton Abomination), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 568
-// Units: u01H (Decaying Ghoul), EditorSuffix (Name - Editor Suffix)
+// Units: u01R (Blood Wagon), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
 
 STRING 569
-// Units: u01I (Ravenous Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+// Units: u01S (Ice Wagon), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
@@ -564,7 +516,7 @@ STRING 580
 }
 
 STRING 581
-// Units: u01J (Frost Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+// Units: u01T (Plague Horde Wagon), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
@@ -582,7 +534,7 @@ Wild Ghoul
 }
 
 STRING 584
-// Units: u01K (Toxic Crypt Fiend), EditorSuffix (Name - Editor Suffix)
+// Units: u01U (Hungry Wyrm), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
@@ -600,7 +552,7 @@ Frozen Ghoul
 }
 
 STRING 587
-// Units: u01L (Bloody Gargoyle), EditorSuffix (Name - Editor Suffix)
+// Units: u01V (Frost Wyrm), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
@@ -618,7 +570,7 @@ Frozen Ghoul
 }
 
 STRING 590
-// Units: u01M (Northrend Gargoyle), EditorSuffix (Name - Editor Suffix)
+// Units: u01W (Poison Wyrm), EditorSuffix (Name - Editor Suffix)
 {
 [Arthas]
 }
@@ -635,12 +587,6 @@ STRING 592
 Ravenous Crypt Fiend
 }
 
-STRING 593
-// Units: u01N (Corrupted Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 594
 // Units: u01J (Frost Crypt Fiend), Name (Name)
 {
@@ -651,12 +597,6 @@ STRING 595
 // Units: u01J (Frost Crypt Fiend), Tip (Tooltip - Basic)
 {
 Frost Crypt Fiend
-}
-
-STRING 596
-// Units: u01O (Fat Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 597
@@ -671,12 +611,6 @@ STRING 598
 Toxic Crypt Fiend
 }
 
-STRING 599
-// Units: u01P (Cold Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 600
 // Units: u01L (Bloody Gargoyle), Name (Name)
 {
@@ -687,12 +621,6 @@ STRING 601
 // Units: u01L (Bloody Gargoyle), Tip (Tooltip - Basic)
 {
 Bloody Gargoyle
-}
-
-STRING 602
-// Units: u01Q (Glutton Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 603
@@ -707,12 +635,6 @@ STRING 604
 Northrend Gargoyle
 }
 
-STRING 605
-// Units: u01R (Blood Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 606
 // Units: u01N (Corrupted Gargoyle), Name (Name)
 {
@@ -723,12 +645,6 @@ STRING 607
 // Units: u01N (Corrupted Gargoyle), Tip (Tooltip - Basic)
 {
 Corrupted Gargoyle
-}
-
-STRING 608
-// Units: u01S (Ice Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 609
@@ -743,12 +659,6 @@ STRING 610
 Fat Abomination
 }
 
-STRING 611
-// Units: u01T (Plague Horde Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 612
 // Units: u01P (Cold Abomination), Name (Name)
 {
@@ -759,12 +669,6 @@ STRING 613
 // Units: u01P (Cold Abomination), Tip (Tooltip - Basic)
 {
 Cold Abomination
-}
-
-STRING 614
-// Units: u01U (Hungry Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 615
@@ -779,12 +683,6 @@ STRING 616
 Glutton Abomination
 }
 
-STRING 617
-// Units: u01V (Frost Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 618
 // Units: u01R (Blood Wagon), Name (Name)
 {
@@ -795,12 +693,6 @@ STRING 619
 // Units: u01R (Blood Wagon), Tip (Tooltip - Basic)
 {
 Blood Wagon
-}
-
-STRING 620
-// Units: u01W (Poison Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 621
@@ -815,12 +707,6 @@ STRING 622
 Ice Wagon
 }
 
-STRING 623
-// Units: u01X (Stone Form Bloody Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 624
 // Units: u01T (Plague Horde Wagon), Name (Name)
 {
@@ -831,12 +717,6 @@ STRING 625
 // Units: u01T (Plague Horde Wagon), Tip (Tooltip - Basic)
 {
 Plague Horde Wagon
-}
-
-STRING 626
-// Units: u01Y (Stone Form Northrend Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 627
@@ -851,22 +731,10 @@ STRING 628
 Hungry Wyrm
 }
 
-STRING 629
-// Units: u01Z (Stone Form Corrupted Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 630
 // Units: u01V (Frost Wyrm), Tip (Tooltip - Basic)
 {
 Frost Wyrm
-}
-
-STRING 631
-// Units: u001 (Soul), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 632
@@ -881,124 +749,22 @@ STRING 633
 Poison Wyrm
 }
 
-STRING 634
-// Units: u002 (New tech level), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 635
-// Units: u01X (Stone Form Bloody Gargoyle), Name (Name)
+// Units: u01X ([Arthas] Stone Form Bloody Gargoyle), Tip (Tooltip - Basic)
 {
 Stone Form Bloody Gargoyle
-}
-
-STRING 636
-// Units: u01X (Stone Form Bloody Gargoyle), Tip (Tooltip - Basic)
-{
-Stone Form Bloody Gargoyle
-}
-
-STRING 637
-// Units: u003 (Graveyard), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 638
-// Units: u01Y (Stone Form Northrend Gargoyle), Name (Name)
+// Units: u01Y ([Arthas] Stone Form Northrend Gargoyle), Tip (Tooltip - Basic)
 {
 Stone Form Northrend Gargoyle
-}
-
-STRING 639
-// Units: u01Y (Stone Form Northrend Gargoyle), Tip (Tooltip - Basic)
-{
-Stone Form Northrend Gargoyle
-}
-
-STRING 640
-// Units: n002 (Zombie), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 641
-// Units: u01Z (Stone Form Corrupted Gargoyle), Name (Name)
+// Units: u01Z ([Arthas] Stone Form Corrupted Gargoyle), Tip (Tooltip - Basic)
 {
 Stone Form Corrupted Gargoyle
-}
-
-STRING 642
-// Units: u01Z (Stone Form Corrupted Gargoyle), Tip (Tooltip - Basic)
-{
-Stone Form Corrupted Gargoyle
-}
-
-STRING 643
-// Units: h009 (War Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 645
-// Units: h00C (Light Tower), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 647
-// Units: h00D (Brotherhood Armory), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 648
-// Units: h00E (Workshop), EditorSuffix (Name - Editor Suffix)
-{
-[Uther]
-}
-
-STRING 651
-// Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 655
-// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 656
-// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 657
-// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 662
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 663
-// Units: u004 (Dummy), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 664
-// Units: U005 (Altar of Darkness), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 667
@@ -1324,12 +1090,6 @@ STRING 852
 Grace of the Ancestors
 }
 
-STRING 869
-// Units: h00J (Cleric), Name (Name)
-{
-Cleric
-}
-
 STRING 895
 // Abilities: A014 ([Uther] Hammer of Justice), Name (Name)
 {
@@ -1369,14 +1129,8 @@ STRING 906
 |cff32de00Victory:|r Destroy 5 waves of caravans
 }
 
-STRING 907
-// Units: h00W (Knight-Paladin), Name (Name)
-{
-Knight-Paladin
-}
-
 STRING 908
-// Units: h00W (Knight-Paladin), Tip (Tooltip - Basic)
+// Units: h00W ([Uther] Knight-Paladin), Tip (Tooltip - Basic)
 {
 Train Knight-Paladin
 }
@@ -1805,37 +1559,19 @@ Time:
 }
 
 STRING 1065
-// Units: h00P (Champion of Holy), Name (Name)
-{
-Champion of Holy
-}
-
-STRING 1066
-// Units: h00P (Champion of Holy), Tip (Tooltip - Basic)
+// Units: h00P ([Uther] Champion of Holy), Tip (Tooltip - Basic)
 {
 Champion of Holy
 }
 
 STRING 1067
-// Units: h00Q (Champion of Protection), Name (Name)
-{
-Champion of Protection
-}
-
-STRING 1068
-// Units: h00Q (Champion of Protection), Tip (Tooltip - Basic)
+// Units: h00Q ([Uther] Champion of Protection), Tip (Tooltip - Basic)
 {
 Champion of Protection
 }
 
 STRING 1069
-// Units: h00R (Champion of Retribution), Name (Name)
-{
-Champion of Retribution
-}
-
-STRING 1070
-// Units: h00R (Champion of Retribution), Tip (Tooltip - Basic)
+// Units: h00R ([Uther] Champion of Retribution), Tip (Tooltip - Basic)
 {
 Champion of Retribution
 }
@@ -1942,12 +1678,6 @@ STRING 1116
 This unit is under the effects of Holy Aura; it has an increased movement speed and hit point regeneration.
 }
 
-STRING 1117
-// Units: H00B (Light's Hope Chapel), Propernames (Proper Names)
-{
-Light's Hope Chapel
-}
-
 STRING 1124
 // Abilities: A01L ([UI] Mechanics: Uther), Ubertip (Tooltip - Normal - Extended)
 {
@@ -1960,14 +1690,8 @@ STRING 1125
 Lord Uther the Lightbringer was the first paladin of the Knights of the Silver Hand who led his Order in battle against the Horde during the Second war.
 }
 
-STRING 1126
-// Units: h01P (Garrison), Name (Name)
-{
-Garrison
-}
-
 STRING 1127
-// Units: h01P (Garrison), Tip (Tooltip - Basic)
+// Units: h01P ([Uther] Garrison), Tip (Tooltip - Basic)
 {
 Build Garrison
 }
@@ -2156,12 +1880,6 @@ STRING 1179
 Syndicate Caravans
 }
 
-STRING 1180
-// Units: h000 (Templar), Name (Name)
-{
-Templar
-}
-
 STRING 1192
 // Upgrades: R00A (Magic Sentry), Name (Name)
 {
@@ -2196,12 +1914,6 @@ STRING 1199
 // Upgrades: R00F (Magic Sentry), Name (Name)
 {
 [Special] Uther
-}
-
-STRING 1201
-// Units: u001 (Soul), Name (Name)
-{
-Soul
 }
 
 STRING 1203
@@ -2454,14 +2166,8 @@ Your ally also spawns souls for you
 
 }
 
-STRING 1332
-// Units: u01C (Frostmourne Pedestal), Name (Name)
-{
-Frostmourne Pedestal
-}
-
 STRING 1333
-// Units: u01C (Frostmourne Pedestal), Tip (Tooltip - Basic)
+// Units: u01C ([Arthas] Frostmourne Pedestal), Tip (Tooltip - Basic)
 {
 Summon Frostmourne Pedestal
 }
@@ -3106,12 +2812,6 @@ STRING 1480
 Ice of Northrend
 }
 
-STRING 1481
-// Units: u002 (New tech level), Name (Name)
-{
-New tech level
-}
-
 STRING 1482
 // Destructibles: B000 (Winter Tree Wall), EditorSuffix (Editor Suffix)
 {
@@ -3573,7 +3273,7 @@ Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A
 }
 
 STRING 1602
-// Units: u009 (Plague Necropolis), Ubertip (Tooltip - Extended)
+// Units: u009 ([Arthas] Plague Necropolis), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Town Hall |R
 
@@ -3581,7 +3281,7 @@ Primary structure, used to train Acolytes and receive lumber gathered by Ghouls.
 }
 
 STRING 1603
-// Units: u00B (Plague Halls of the Dead), Ubertip (Tooltip - Extended)
+// Units: u00B ([Arthas] Plague Halls of the Dead), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Town Hall |R
 
@@ -3589,7 +3289,7 @@ Upgrade to Halls of the Dead to enable the production of additional types of str
 }
 
 STRING 1604
-// Units: u00C (Plague Black Citadel), Ubertip (Tooltip - Extended)
+// Units: u00C ([Arthas] Plague Black Citadel), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Town Hall |R
 
@@ -3597,7 +3297,7 @@ Upgrade to Black Citadel to enable the production of additional types of structu
 }
 
 STRING 1605
-// Units: u00Z (Ziggurat), Ubertip (Tooltip - Extended)
+// Units: u00Z ([Arthas] Ziggurat), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Food #Defense |R
 
@@ -3605,7 +3305,7 @@ Provides food, which increases the maximum number of units that can be trained. 
 }
 
 STRING 1606
-// Units: u017 (Spirit Tower), Ubertip (Tooltip - Extended)
+// Units: u017 ([Arthas] Spirit Tower), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Food #Defense |R
 
@@ -3613,7 +3313,7 @@ Upgrade to create a defensive structure. |n|n|cffffcc00Attacks land and air unit
 }
 
 STRING 1607
-// Units: u018 (Nerubian Tower), Ubertip (Tooltip - Extended)
+// Units: u018 ([Arthas] Nerubian Tower), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Food #Defense |R
 
@@ -3621,7 +3321,7 @@ Upgrade to create a defensive structure that deals cold damage and slows enemy u
 }
 
 STRING 1608
-// Units: U005 (Altar of Darkness), Ubertip (Tooltip - Extended)
+// Units: U005 ([Arthas] Altar of Darkness), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Altar|R
 
@@ -3629,7 +3329,7 @@ Summons Heroes. Revives slain Heroes.
 }
 
 STRING 1609
-// Units: u01A (Crypt), Ubertip (Tooltip - Extended)
+// Units: u01A ([Arthas] Crypt), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Barrack |R
 
@@ -3637,7 +3337,7 @@ Primary troop production building. Trains Ghouls, Crypt Fiends, and Gargoyles. A
 }
 
 STRING 1610
-// Units: u01C (Frostmourne Pedestal), Ubertip (Tooltip - Extended)
+// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Unique #Mechanics |R
 
@@ -3645,7 +3345,7 @@ Provides attack and armor upgrades for Undead units. Also produces corpses and s
 }
 
 STRING 1611
-// Units: u01D (Slaughterhouse), Ubertip (Tooltip - Extended)
+// Units: u01D ([Arthas] Slaughterhouse), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Barrack |R
 
@@ -3653,7 +3353,7 @@ Produces Abominations, Obsidian Statues, and Meat Wagons. Also contains the Dise
 }
 
 STRING 1612
-// Units: u01E (Boneyard), Ubertip (Tooltip - Extended)
+// Units: u01E ([Arthas] Boneyard), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Barrack |R
 
@@ -3748,7 +3448,7 @@ Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A
 }
 
 STRING 1630
-// Units: u003 (Graveyard), Ubertip (Tooltip - Extended)
+// Units: u003 ([Arthas] Graveyard), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Upgrade #Storage |R
 
@@ -3885,12 +3585,6 @@ STRING 1666
 // Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Tip (Tooltip - Normal)
 {
 Glacial Gusto
-}
-
-STRING 1667
-// Units: u004 (Dummy), Name (Name)
-{
-Dummy
 }
 
 STRING 1669
@@ -4100,116 +3794,68 @@ STRING 1707
 Heartstone
 }
 
-STRING 1708
-// Units: h00O (Pilgrim), Name (Name)
-{
-Pilgrim
-}
-
 STRING 1709
-// Units: h00O (Pilgrim), Tip (Tooltip - Basic)
+// Units: h00O ([Uther] Pilgrim), Tip (Tooltip - Basic)
 {
 Train Pilgrim
 }
 
 STRING 1718
-// Abilities: A00G ([Uther] First Aid), Tip (Tooltip - Normal)
+// Abilities: A00G ([Wrynn] First Aid), Tip (Tooltip - Normal)
 {
 First Aid
 }
 
-STRING 1719
-// Abilities: A00G ([Uther] First Aid), Name (Name)
-{
-[Uther] First Aid
-}
-
 STRING 1720
-// Abilities: A00G ([Uther] First Aid), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A00G ([Wrynn] First Aid), Ubertip (Tooltip - Normal - Extended)
 {
 Heal organic troops using resources.
 }
 
 STRING 1721
-// Abilities: A00G ([Uther] First Aid), Hotkey (Hotkey - Normal)
+// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 1722
-// Abilities: A00G ([Uther] First Aid), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
 
-STRING 1723
-// Units: h009 (War Wagon), Name (Name)
-{
-War Wagon
-}
-
 STRING 1724
-// Units: h009 (War Wagon), Tip (Tooltip - Basic)
+// Units: h009 ([Uther] War Wagon), Tip (Tooltip - Basic)
 {
 Train War Wagon
 }
 
-STRING 1725
-// Units: h00A (Cathedral), Name (Name)
-{
-Cathedral
-}
-
 STRING 1726
-// Units: h00A (Cathedral), Tip (Tooltip - Basic)
+// Units: h00A ([Uther] Cathedral), Tip (Tooltip - Basic)
 {
 Build Cathedral
 }
 
-STRING 1727
-// Units: h00I (Diocese), Name (Name)
-{
-Diocese
-}
-
 STRING 1728
-// Units: h00I (Diocese), Tip (Tooltip - Basic)
+// Units: h00I ([Uther] Diocese), Tip (Tooltip - Basic)
 {
 Upgrade to Diocese
 }
 
-STRING 1729
-// Units: h01H (Parish), Name (Name)
-{
-Parish
-}
-
 STRING 1730
-// Units: h01H (Parish), Tip (Tooltip - Basic)
+// Units: h01H ([Uther] Parish), Tip (Tooltip - Basic)
 {
 Upgrade to Parish
 }
 
 STRING 1735
-// Units: h02L (Abbey), Name (Name)
+// Units: h02L ([Uther] Abbey), Tip (Tooltip - Basic)
 {
 Abbey
-}
-
-STRING 1736
-// Units: h02L (Abbey), Tip (Tooltip - Basic)
-{
-Abbey
-}
-
-STRING 1737
-// Units: h02N (Aviary), Name (Name)
-{
-Aviary
 }
 
 STRING 1738
-// Units: h02N (Aviary), Tip (Tooltip - Basic)
+// Units: h02N ([Uther] Aviary), Tip (Tooltip - Basic)
 {
 Build Aviary
 }
@@ -4329,7 +3975,7 @@ Revive Uther
 }
 
 STRING 1769
-// Units: h01P (Garrison), Ubertip (Tooltip - Extended)
+// Units: h01P ([Uther] Garrison), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack
 |R
@@ -4337,7 +3983,7 @@ Primary troop production building. Trains Footmen, Riflemen and Knights. |nAlso 
 }
 
 STRING 1770
-// Units: h02F (Monument of Light), Ubertip (Tooltip - Extended)
+// Units: h02F ([Uther] Monument of Light), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#food
 |R
@@ -4345,7 +3991,7 @@ Provides food, which increases the maximum number of units that can be trained.
 }
 
 STRING 1774
-// Units: h00N (Gryphon Knight), Ubertip (Tooltip - Extended)
+// Units: h00N ([Uther] Gryphon Knight), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #fly
 |R
@@ -4353,7 +3999,7 @@ Powerful flying creature, mounted by a Dwarven hammer-thrower. Can learn Animal 
 }
 
 STRING 1778
-// Units: h003 (Lumber Mill), Ubertip (Tooltip - Extended)
+// Units: h003 ([Uther] Lumber Mill), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#upgrade #storage
 |R
@@ -4361,7 +4007,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 1779
-// Units: H00B (Light's Hope Chapel), Ubertip (Tooltip - Extended)
+// Units: H00B ([Uther] Light's Hope Chapel), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#heroes #mechanics
 |R
@@ -4369,7 +4015,7 @@ Summons Heroes. Revives slain Heroes.
 }
 
 STRING 1782
-// Units: h02L (Abbey), Ubertip (Tooltip - Extended)
+// Units: h02L ([Uther] Abbey), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack #upgrade
 |R
@@ -4377,7 +4023,7 @@ Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades f
 }
 
 STRING 1783
-// Units: h02N (Aviary), Ubertip (Tooltip - Extended)
+// Units: h02N ([Uther] Aviary), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack
 |R
@@ -4385,7 +4031,7 @@ Trains Gryphon Riders, and Dragonhawk Riders. |nAlso contains the Storm Hammers 
 }
 
 STRING 1784
-// Units: h02O (Scout Tower), Ubertip (Tooltip - Extended)
+// Units: h02O ([Uther] Scout Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -4393,7 +4039,7 @@ Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, 
 }
 
 STRING 1785
-// Units: h02P (Guard Tower), Ubertip (Tooltip - Extended)
+// Units: h02P ([Uther] Guard Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -4401,7 +4047,7 @@ Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00A
 }
 
 STRING 1786
-// Units: h02Q (Cannon Tower), Ubertip (Tooltip - Extended)
+// Units: h02Q ([Uther] Cannon Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -4409,7 +4055,7 @@ Heavy defensive structure. Particularly effective against clusters of troops. Ca
 }
 
 STRING 1787
-// Units: h00C (Light Tower), Ubertip (Tooltip - Extended)
+// Units: h00C ([Uther] Light Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -4417,7 +4063,7 @@ Magical defensive tower. Particularly effective against enemy Heroes and spellca
 }
 
 STRING 1790
-// Units: h00D (Brotherhood Armory), Ubertip (Tooltip - Extended)
+// Units: h00D ([Uther] Brotherhood Armory), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#upgrade
 |R
@@ -4425,7 +4071,7 @@ Contains upgrades for improved armor, weaponry and gunpowder.
 }
 
 STRING 1791
-// Units: h00E (Workshop), Ubertip (Tooltip - Extended)
+// Units: h00E ([Uther] Workshop), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack
 |R
@@ -4487,13 +4133,7 @@ rmnx
 }
 
 STRING 1881
-// Units: h005 (Protector), Name (Name)
-{
-Protector
-}
-
-STRING 1882
-// Units: h005 (Protector), Tip (Tooltip - Basic)
+// Units: h005 ([Uther] Protector), Tip (Tooltip - Basic)
 {
 Protector
 }
@@ -4508,12 +4148,6 @@ STRING 1884
 // Upgrades: R00D (Defend), Tip (Tooltip)
 {
 Research Mastery Defend
-}
-
-STRING 1885
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 1886
@@ -4570,18 +4204,6 @@ STRING 1894
 Divine Intervention heals 50% of health while active
 }
 
-STRING 1900
-// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 1901
-// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
 STRING 1902
 // Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Tip (Tooltip)
 {
@@ -4606,26 +4228,8 @@ STRING 1905
 P
 }
 
-STRING 1906
-// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 1907
-// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 1910
-// Units: h00D (Brotherhood Armory), Name (Name)
-{
-Brotherhood Armory
-}
-
 STRING 1911
-// Units: h00D (Brotherhood Armory), Tip (Tooltip - Basic)
+// Units: h00D ([Uther] Brotherhood Armory), Tip (Tooltip - Basic)
 {
 Build Brotherhood Armory
 }
@@ -4649,31 +4253,31 @@ STRING 1925
 }
 
 STRING 1926
-// Units: h005 (Protector), Casterupgradename (Caster Upgrade Names)
+// Units: h005 ([Uther] Protector), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
 STRING 1927
-// Units: h00W (Knight-Paladin), Casterupgradename (Caster Upgrade Names)
+// Units: h00W ([Uther] Knight-Paladin), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
 STRING 1928
-// Units: h00K (Rifleman), Casterupgradename (Caster Upgrade Names)
+// Units: h00K ([Uther] Rifleman), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
 STRING 1929
-// Units: h00N (Gryphon Knight), Casterupgradename (Caster Upgrade Names)
+// Units: h00N ([Uther] Gryphon Knight), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
 STRING 1930
-// Units: h00L (Mortar Team), Casterupgradename (Caster Upgrade Names)
+// Units: h00L ([Uther] Mortar Team), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
@@ -4702,12 +4306,6 @@ STRING 1937
 Research Initiate into Paladins
 }
 
-STRING 1938
-// Upgrades: R00V (Animal War Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
 STRING 1939
 // Abilities: A00R ([Uther] Holy Flash), Name (Name)
 {
@@ -4724,12 +4322,6 @@ STRING 1941
 // Abilities: A014 ([Uther] Hammer of Justice), Ubertip (Tooltip - Normal - Extended)
 {
 Gives a <A014,DataA1>% chance that an attack will do <A014,DataC1> bonus damage and stun an opponent for <A014,Dur1> seconds.
-}
-
-STRING 1942
-// Upgrades: R00W (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 1943
@@ -4766,12 +4358,6 @@ STRING 1948
 // Upgrades: R00W (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
 Increases Clerics' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
-}
-
-STRING 1949
-// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 1950
@@ -4816,12 +4402,6 @@ STRING 1956
 [Uther] Magic Sentry
 }
 
-STRING 1957
-// Upgrades: R00Y (Magic Sentry), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
 STRING 1958
 // Upgrades: R00Z (Flying Machine Bombs), Name (Name)
 {
@@ -4832,12 +4412,6 @@ STRING 1959
 // Upgrades: R00Z (Flying Machine Bombs), Tip (Tooltip)
 {
 Research Hammer of Justice
-}
-
-STRING 1961
-// Upgrades: R00Z (Flying Machine Bombs), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 1962
@@ -4962,12 +4536,6 @@ STRING 1987
 Shake
 }
 
-STRING 1988
-// Upgrades: R010 (Flying Machine Bombs), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
 STRING 1989
 // Abilities: A02S ([Uther] Shake), Name (Name)
 {
@@ -5004,14 +4572,8 @@ STRING 1994
 Research Shake
 }
 
-STRING 1995
-// Units: h00C (Light Tower), Name (Name)
-{
-Light Tower
-}
-
 STRING 1996
-// Units: h00C (Light Tower), Tip (Tooltip - Basic)
+// Units: h00C ([Uther] Light Tower), Tip (Tooltip - Basic)
 {
 Upgrade to Light Tower
 }
@@ -5256,12 +4818,6 @@ STRING 2038
 Radiant Glory
 }
 
-STRING 2039
-// Upgrades: R011 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
 STRING 2040
 // Abilities: A02V ([Uther] Exorcism), Tip (Tooltip - Normal)
 {
@@ -5272,12 +4828,6 @@ STRING 2041
 // Abilities: A02V ([Uther] Exorcism), Name (Name)
 {
 [Uther] Exorcism
-}
-
-STRING 2043
-// Upgrades: R012 (Storm Hammers), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 2044
@@ -5298,14 +4848,8 @@ STRING 2048
 This tower's attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
 }
 
-STRING 2049
-// Units: h00N (Gryphon Knight), Name (Name)
-{
-Gryphon Knight
-}
-
 STRING 2050
-// Units: h00N (Gryphon Knight), Tip (Tooltip - Basic)
+// Units: h00N ([Uther] Gryphon Knight), Tip (Tooltip - Basic)
 {
 Train Gryphon Knight
 }
@@ -5320,12 +4864,6 @@ STRING 2055
 // Upgrades: R013 (Fragmentation Shards), effect1 (Effect 1)
 {
 renw
-}
-
-STRING 2056
-// Upgrades: R013 (Fragmentation Shards), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 2057
@@ -5450,19 +4988,19 @@ STRING 2079
 }
 
 STRING 2080
-// Units: h00J (Cleric), Casterupgradetip (Caster Upgrade Tips)
+// Units: h00J ([Uther] Cleric), Casterupgradetip (Caster Upgrade Tips)
 {
 - Far Sight,- Far Sight|n- Liturgy ,- Far Sight|n- Liturgy |n- Inner Fire
 }
 
 STRING 2081
-// Units: h000 (Templar), Casterupgradetip (Caster Upgrade Tips)
+// Units: h000 ([Uther] Templar), Casterupgradetip (Caster Upgrade Tips)
 {
 - Repentance,- Repentance|n- Dispel Magic,- Repentance|n- Dispel Magic|n- Trail of Light
 }
 
 STRING 2082
-// Units: h005 (Protector), Ubertip (Tooltip - Extended)
+// Units: h005 ([Uther] Protector), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#melee
 |R
@@ -5470,7 +5008,7 @@ Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land
 }
 
 STRING 2083
-// Units: h00W (Knight-Paladin), Ubertip (Tooltip - Extended)
+// Units: h00W ([Uther] Knight-Paladin), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#melee
 |R
@@ -5478,7 +5016,7 @@ Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks l
 }
 
 STRING 2084
-// Units: h00J (Cleric), Ubertip (Tooltip - Extended)
+// Units: h00J ([Uther] Cleric), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #support
 |R
@@ -5486,13 +5024,13 @@ Supporting spellcaster. Can initially cast Heal, which increases the life of wou
 }
 
 STRING 2085
-// Units: h00J (Cleric), Tip (Tooltip - Basic)
+// Units: h00J ([Uther] Cleric), Tip (Tooltip - Basic)
 {
 Train Cleric
 }
 
 STRING 2086
-// Units: h00K (Rifleman), Ubertip (Tooltip - Extended)
+// Units: h00K ([Uther] Rifleman), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged
 |R
@@ -5500,7 +5038,7 @@ Highly skilled sharpshooter, effective against air units. Can gain the Long Rifl
 }
 
 STRING 2087
-// Units: h00O (Pilgrim), Ubertip (Tooltip - Extended)
+// Units: h00O ([Uther] Pilgrim), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#worker #builder
 |R
@@ -5508,7 +5046,7 @@ Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can
 }
 
 STRING 2088
-// Units: h00L (Mortar Team), Ubertip (Tooltip - Extended)
+// Units: h00L ([Uther] Mortar Team), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #siege
 |R
@@ -5516,7 +5054,7 @@ Long-range siege weaponry. Exceptional damage versus buildings, but slow and vul
 }
 
 STRING 2089
-// Units: h000 (Templar), Ubertip (Tooltip - Extended)
+// Units: h000 ([Uther] Templar), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #support
 |R
@@ -5524,13 +5062,13 @@ Versatile spellcaster. Can initially cast Slow, which decreases movement and att
 }
 
 STRING 2090
-// Units: h000 (Templar), Tip (Tooltip - Basic)
+// Units: h000 ([Uther] Templar), Tip (Tooltip - Basic)
 {
 Train Templar
 }
 
 STRING 2091
-// Units: h009 (War Wagon), Ubertip (Tooltip - Extended)
+// Units: h009 ([Uther] War Wagon), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#melee #siege
 |R
@@ -5574,7 +5112,7 @@ L
 }
 
 STRING 2098
-// Units: h00A (Cathedral), Ubertip (Tooltip - Extended)
+// Units: h00A ([Uther] Cathedral), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T1 #food #storage
 |R
@@ -5582,7 +5120,7 @@ Primary structure, used to train Peasants and receive gathered resources. Can be
 }
 
 STRING 2099
-// Units: h00I (Diocese), Ubertip (Tooltip - Extended)
+// Units: h00I ([Uther] Diocese), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T2 #food #storage
 |R
@@ -5590,7 +5128,7 @@ Upgrade to Keep to enable the production of additional types of structures and u
 }
 
 STRING 2100
-// Units: h01H (Parish), Ubertip (Tooltip - Extended)
+// Units: h01H ([Uther] Parish), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T3 #food #storage
 |R
@@ -5913,5 +5451,455 @@ STRING 2155
 // Abilities: A02Y ([Arthas] Ice Impale), Ubertip (Tooltip - Normal - Extended)
 {
 Killing grants 25% mana
+}
+
+STRING 2156
+// Units: u009 ([Arthas] Plague Necropolis), Name (Name)
+{
+[Arthas] Plague Necropolis
+}
+
+STRING 2157
+// Units: u00B ([Arthas] Plague Halls of the Dead), Name (Name)
+{
+[Arthas] Plague Halls of the Dead
+}
+
+STRING 2158
+// Units: u00C ([Arthas] Plague Black Citadel), Name (Name)
+{
+[Arthas] Plague Black Citadel
+}
+
+STRING 2159
+// Units: h005 ([Uther] Protector), Name (Name)
+{
+[Uther] Protector
+}
+
+STRING 2160
+// Units: h00A ([Uther] Cathedral), Name (Name)
+{
+[Uther] Cathedral
+}
+
+STRING 2161
+// Units: h00I ([Uther] Diocese), Name (Name)
+{
+[Uther] Diocese
+}
+
+STRING 2162
+// Units: h01H ([Uther] Parish), Name (Name)
+{
+[Uther] Parish
+}
+
+STRING 2163
+// Units: h01P ([Uther] Garrison), Name (Name)
+{
+[Uther] Garrison
+}
+
+STRING 2164
+// Units: h02F ([Uther] Monument of Light), Name (Name)
+{
+[Uther] Monument of Light
+}
+
+STRING 2165
+// Units: h02L ([Uther] Abbey), Name (Name)
+{
+[Uther] Abbey
+}
+
+STRING 2166
+// Units: h02N ([Uther] Aviary), Name (Name)
+{
+[Uther] Aviary
+}
+
+STRING 2167
+// Units: h02O ([Uther] Scout Tower), Name (Name)
+{
+[Uther] Scout Tower
+}
+
+STRING 2168
+// Units: h02P ([Uther] Guard Tower), Name (Name)
+{
+[Uther] Guard Tower
+}
+
+STRING 2169
+// Units: h02Q ([Uther] Cannon Tower), Name (Name)
+{
+[Uther] Cannon Tower
+}
+
+STRING 2170
+// Units: h00W ([Uther] Knight-Paladin), Name (Name)
+{
+[Uther] Knight-Paladin
+}
+
+STRING 2171
+// Units: h00J ([Uther] Cleric), Name (Name)
+{
+[Uther] Cleric
+}
+
+STRING 2172
+// Units: h00K ([Uther] Rifleman), Name (Name)
+{
+[Uther] Rifleman
+}
+
+STRING 2173
+// Units: h00N ([Uther] Gryphon Knight), Name (Name)
+{
+[Uther] Gryphon Knight
+}
+
+STRING 2174
+// Units: h00O ([Uther] Pilgrim), Name (Name)
+{
+[Uther] Pilgrim
+}
+
+STRING 2175
+// Units: h00P ([Uther] Champion of Holy), Name (Name)
+{
+[Uther] Champion of Holy
+}
+
+STRING 2176
+// Units: h00Q ([Uther] Champion of Protection), Name (Name)
+{
+[Uther] Champion of Protection
+}
+
+STRING 2177
+// Units: h00R ([Uther] Champion of Retribution), Name (Name)
+{
+[Uther] Champion of Retribution
+}
+
+STRING 2178
+// Units: u00Z ([Arthas] Ziggurat), Name (Name)
+{
+[Arthas] Ziggurat
+}
+
+STRING 2179
+// Units: u017 ([Arthas] Spirit Tower), Name (Name)
+{
+[Arthas] Spirit Tower
+}
+
+STRING 2180
+// Units: u018 ([Arthas] Nerubian Tower), Name (Name)
+{
+[Arthas] Nerubian Tower
+}
+
+STRING 2181
+// Units: u01A ([Arthas] Crypt), Name (Name)
+{
+[Arthas] Crypt
+}
+
+STRING 2182
+// Units: u01C ([Arthas] Frostmourne Pedestal), Name (Name)
+{
+[Arthas] Frostmourne Pedestal
+}
+
+STRING 2183
+// Units: u01D ([Arthas] Slaughterhouse), Name (Name)
+{
+[Arthas] Slaughterhouse
+}
+
+STRING 2184
+// Units: u01E ([Arthas] Boneyard), Name (Name)
+{
+[Arthas] Boneyard
+}
+
+STRING 2185
+// Units: u01X ([Arthas] Stone Form Bloody Gargoyle), Name (Name)
+{
+[Arthas] Stone Form Bloody Gargoyle
+}
+
+STRING 2186
+// Units: u01Y ([Arthas] Stone Form Northrend Gargoyle), Name (Name)
+{
+[Arthas] Stone Form Northrend Gargoyle
+}
+
+STRING 2187
+// Units: u01Z ([Arthas] Stone Form Corrupted Gargoyle), Name (Name)
+{
+[Arthas] Stone Form Corrupted Gargoyle
+}
+
+STRING 2188
+// Units: h00L ([Uther] Mortar Team), Name (Name)
+{
+[Uther] Mortar Team
+}
+
+STRING 2189
+// Units: h000 ([Uther] Templar), Name (Name)
+{
+[Uther] Templar
+}
+
+STRING 2190
+// Units: h003 ([Uther] Lumber Mill), Name (Name)
+{
+[Uther] Lumber Mill
+}
+
+STRING 2191
+// Units: H00B ([Uther] Light's Hope Chapel), Name (Name)
+{
+[Uther] Light's Hope Chapel
+}
+
+STRING 2192
+// Units: u001 ([Arthas] Soul), Name (Name)
+{
+[Arthas] Soul
+}
+
+STRING 2193
+// Units: u002 ([Arthas] New tech level), Name (Name)
+{
+[Arthas] New tech level
+}
+
+STRING 2194
+// Units: u003 ([Arthas] Graveyard), Name (Name)
+{
+[Arthas] Graveyard
+}
+
+STRING 2195
+// Units: n002 ([Arthas] Zombie), Name (Name)
+{
+[Arthas] Zombie
+}
+
+STRING 2196
+// Units: u004 ([Arthas] Dummy), Name (Name)
+{
+[Arthas] Dummy
+}
+
+STRING 2197
+// Units: h009 ([Uther] War Wagon), Name (Name)
+{
+[Uther] War Wagon
+}
+
+STRING 2198
+// Units: h00C ([Uther] Light Tower), Name (Name)
+{
+[Uther] Light Tower
+}
+
+STRING 2199
+// Units: h00D ([Uther] Brotherhood Armory), Name (Name)
+{
+[Uther] Brotherhood Armory
+}
+
+STRING 2200
+// Units: h00E ([Uther] Workshop), Name (Name)
+{
+[Uther] Workshop
+}
+
+STRING 2201
+// Units: U005 ([Arthas] Altar of Darkness), Name (Name)
+{
+[Arthas] Altar of Darkness
+}
+
+STRING 2202
+// Units: O000 (King of Stormwind), Propernames (Proper Names)
+{
+Varian Wrynn
+}
+
+STRING 2203
+// Units: O000 (King of Stormwind), Name (Name)
+{
+King of Stormwind
+}
+
+STRING 2204
+// Units: O000 (King of Stormwind), Awakentip (Tooltip - Awaken)
+{
+Revive Varian Wrynn
+}
+
+STRING 2205
+// Units: O000 (King of Stormwind), Tip (Tooltip - Basic)
+{
+Summon Varian Wrynn
+}
+
+STRING 2206
+// Units: O000 (King of Stormwind), Revivetip (Tooltip - Revive)
+{
+Revive Varian Wrynn
+}
+
+STRING 2207
+// Units: h00F ([Wrynn] City Hall), Name (Name)
+{
+[Wrynn] City Hall
+}
+
+STRING 2208
+// Units: h00F ([Wrynn] City Hall), Tip (Tooltip - Basic)
+{
+Build City Hall
+}
+
+STRING 2209
+// Units: h00G ([Wrynn] Keep), Name (Name)
+{
+[Wrynn] Keep
+}
+
+STRING 2210
+// Units: h00H ([Wrynn] Castle), Name (Name)
+{
+[Wrynn] Castle
+}
+
+STRING 2211
+// Units: h00M ([Wrynn] Barracks), Name (Name)
+{
+[Wrynn] Barracks
+}
+
+STRING 2212
+// Units: h00V ([Wrynn] House), Name (Name)
+{
+[Wrynn] House
+}
+
+STRING 2213
+// Units: h00V ([Wrynn] House), Tip (Tooltip - Basic)
+{
+Build House
+}
+
+STRING 2214
+// Units: h00X ([Wrynn] Altar of Kings), Name (Name)
+{
+[Wrynn] Altar of Kings
+}
+
+STRING 2215
+// Units: h00Y ([Wrynn] Lumber Mill), Name (Name)
+{
+[Wrynn] Lumber Mill
+}
+
+STRING 2216
+// Units: h00Z ([Wrynn] Blacksmith), Name (Name)
+{
+[Wrynn] Blacksmith
+}
+
+STRING 2217
+// Units: h010 ([Wrynn] Workshop), Name (Name)
+{
+[Wrynn] Workshop
+}
+
+STRING 2218
+// Units: h011 ([Wrynn] Mage Tower), Name (Name)
+{
+[Wrynn] Mage Tower
+}
+
+STRING 2219
+// Units: h011 ([Wrynn] Mage Tower), Tip (Tooltip - Basic)
+{
+Build Mage Tower
+}
+
+STRING 2220
+// Units: h012 ([Wrynn] Aviary), Name (Name)
+{
+[Wrynn] Aviary
+}
+
+STRING 2221
+// Units: h012 ([Wrynn] Aviary), Tip (Tooltip - Basic)
+{
+Build Aviary
+}
+
+STRING 2222
+// Units: h013 ([Wrynn] Scout Tower), Name (Name)
+{
+[Wrynn] Scout Tower
+}
+
+STRING 2223
+// Units: h014 ([Wrynn] Guard Tower), Name (Name)
+{
+[Wrynn] Guard Tower
+}
+
+STRING 2224
+// Units: h015 ([Wrynn] Cannon Tower), Name (Name)
+{
+[Wrynn] Cannon Tower
+}
+
+STRING 2225
+// Units: h016 ([Wrynn] Arcane Tower), Name (Name)
+{
+[Wrynn] Arcane Tower
+}
+
+STRING 2227
+// Abilities: A02Z ([Wrynn_Effect] Reiforce), Name (Name)
+{
+[Wrynn_Effect] Reiforce
+}
+
+STRING 2228
+// Units: h017 ([Wrynn] Сitizen), Name (Name)
+{
+[Wrynn] Сitizen
+}
+
+STRING 2229
+// Units: h017 ([Wrynn] Сitizen), Tip (Tooltip - Basic)
+{
+Train Сitizen
+}
+
+STRING 2230
+// Abilities: A00G ([Wrynn] First Aid), Name (Name)
+{
+[Wrynn] First Aid
+}
+
+STRING 2231
+// Units: h018 ([Wrynn] Footman), Name (Name)
+{
+[Wrynn] Footman
 }
 
