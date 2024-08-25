@@ -1306,12 +1306,6 @@ STRING 840
  (Reload)
 }
 
-STRING 843
-// Buffs/Effects: B001 ([Uther] Holy Nova), Bufftip (Tooltip)
-{
-Holy Nova
-}
-
 STRING 845
 // Buffs/Effects: B000 ([Uther] Reload Divine Shield), Bufftip (Tooltip)
 {
@@ -1322,12 +1316,6 @@ STRING 847
 // Buffs/Effects: B000 ([Uther] Reload Divine Shield), EditorName (Name (Editor Only))
 {
 [Uther] Reload Divine Shield
-}
-
-STRING 848
-// Buffs/Effects: B001 ([Uther] Holy Nova), EditorName (Name (Editor Only))
-{
-[Uther] Holy Nova
 }
 
 STRING 852
@@ -2400,13 +2388,13 @@ rlev
 }
 
 STRING 1308
-// Upgrades: R00J (Cannibalize), effect1 (Effect 1)
+// Upgrades: R014 (Cannibalize), effect1 (Effect 1)
 {
 rhpo
 }
 
 STRING 1310
-// Upgrades: R00K (Cannibalize), effect1 (Effect 1)
+// Upgrades: R015 (Cannibalize), effect2 (Effect 2)
 {
 ratx
 }
@@ -2845,42 +2833,6 @@ STRING 1414
 [Arthas] Frost Rune
 }
 
-STRING 1415
-// Upgrades: R00J (Cannibalize), Name (Name)
-{
-[Arthas] Blood Rune Max HP
-}
-
-STRING 1416
-// Upgrades: R00J (Cannibalize), EditorSuffix (Editor Suffix)
-{
-(dependency)
-}
-
-STRING 1417
-// Upgrades: R00K (Cannibalize), Name (Name)
-{
-[Arthas] Frost Rune Add Damage
-}
-
-STRING 1418
-// Upgrades: R00K (Cannibalize), EditorSuffix (Editor Suffix)
-{
-(dependency)
-}
-
-STRING 1419
-// Upgrades: R00L (Ghoul Frenzy), Name (Name)
-{
-[Arthas] Blood Rune Attack Speed
-}
-
-STRING 1420
-// Upgrades: R00L (Ghoul Frenzy), EditorSuffix (Editor Suffix)
-{
-(dependency)
-}
-
 STRING 1421
 // Upgrades: R00M (Backpack), Name (Name)
 {
@@ -3063,108 +3015,6 @@ Current rune level:
 - Death breeds plague zombies
 }
 
-STRING 1446
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced bloody unit reforging
-
-Current rune level:
-- Higher health
-|cff6f6f6f- Higher attack speed
-- Personal vampirism|r
-}
-
-STRING 1447
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master bloody unit reforging
-
-Current rune level:
-- Higher health
-- Higher attack speed
-|cff6f6f6f- Personal vampirism|r
-}
-
-STRING 1448
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks bloody reforging units
-
-Current rune level:
-|cff6f6f6f- Higher health
-- Higher attack speed
-- Personal vampirism|r
-}
-
-STRING 1449
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced unholy unit reforging
-
-Current rune level:
-- Spreading the plague
-|cff6f6f6f- Death brings back some of the souls
-- Death breeds plague zombies
-|r
-}
-
-STRING 1450
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master unholy unit reforging
-
-Current rune level:
-- Spreading the plague
-- Death brings back some of the souls
-|cff6f6f6f- Death breeds plague zombies
-|r
-}
-
-STRING 1451
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks unholy reforging units
-
-Current rune level:
-|cff6f6f6f- Spreading the plague
-- Death brings back some of the souls
-- Death breeds plague zombies
-|r
-}
-
-STRING 1452
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced frost unit reforging
-
-Current rune level:
-- Increased Damage
-|cff6f6f6f- Increased mana
-- Chance to freeze the target|r
-}
-
-STRING 1453
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master frost unit reforging
-
-Current rune level:
-- Increased Damage
-- Increased mana
-|cff6f6f6f- Chance to freeze the target|r
-}
-
-STRING 1454
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks frost reforging units
-
-Current rune level:
-|cff6f6f6f- Increased Damage
-- Increased mana
-- Chance to freeze the target|r
-}
-
 STRING 1455
 // Buffs/Effects: B00C ([Arthas] Blood Rage), EditorName (Name (Editor Only))
 {
@@ -3220,26 +3070,8 @@ STRING 1468
 Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
 }
 
-STRING 1470
-// Upgrades: R00O (Cannibalize), effect1 (Effect 1)
-{
-rman
-}
-
-STRING 1471
-// Upgrades: R00O (Cannibalize), Name (Name)
-{
-[Arthas] Frost Rune Max MP + regen
-}
-
-STRING 1472
-// Upgrades: R00O (Cannibalize), EditorSuffix (Editor Suffix)
-{
-(dependency)
-}
-
 STRING 1473
-// Upgrades: R00O (Cannibalize), effect2 (Effect 2)
+// Upgrades: R00L (Cannibalize), effect1 (Effect 1)
 {
 rmnr
 }
@@ -5781,5 +5613,305 @@ STRING 2103
 // Abilities: A00E ([Uther] Summon Champion of Holy), Ubertip (Tooltip - Normal - Extended)
 {
 A powerful champion who supports the army with his aura
+}
+
+STRING 2105
+// Units: u010 (Ghoul), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 20 souls|r
+
+Basic attack unit and lumber harvester. Can learn Cannibalize and Ghoul Frenzy. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2106
+// Units: u011 (Crypt Fiend), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 30 souls|r
+
+Ranged combat support creature. Can learn the Web, and Burrow abilities. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 2107
+// Units: u012 (Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 20 souls|r
+
+Flying attack creature. Can learn the Stone Form ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 2108
+// Units: u014 (Abomination), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 40 souls|r
+
+Heavy melee unit. Can learn the Disease Cloud ability and Cannibalize. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 2109
+// Units: u015 (Wagon), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 40 souls|r
+
+Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Disease Cloud ability. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2110
+// Units: u016 (Dead Wyrm), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 60 souls|r
+
+Flying heavy assault creature. Can learn the Freezing Breath ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 2111
+// Buffs/Effects: B001 ([Arthas] Stun no effect), EditorName (Name (Editor Only))
+{
+[Arthas] Stun no effect
+}
+
+STRING 2112
+// Upgrades: R014 (Cannibalize), Name (Name)
+{
+[Arthas] Unholy
+}
+
+STRING 2113
+// Upgrades: R014 (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(Level 1)
+}
+
+STRING 2114
+// Upgrades: R015 (Cannibalize), effect1 (Effect 1)
+{
+rhpo
+}
+
+STRING 2115
+// Upgrades: R015 (Cannibalize), Name (Name)
+{
+[Arthas] Blood
+}
+
+STRING 2116
+// Upgrades: R015 (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(Level 1)
+}
+
+STRING 2127
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced bloody unit reforging
+
+Rune level:
+1. Higher health, damage reduction|r
+|cFFFF7A6F2. Higher attack speed
+|cff6f6f6f3. Personal vampirism|r
+}
+
+STRING 2128
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master bloody unit reforging
+
+Rune level:
+1. Higher health, damage reduction|r
+2. Higher attack speed
+|cFFFF7A6F3. Personal vampirism|r
+}
+
+STRING 2129
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks bloody reforging units
+
+Rune level:
+|cFFFF7A6F1. Higher health, damage reduction|r
+|cff6f6f6f2. Higher attack speed
+3. Personal vampirism|r
+}
+
+STRING 2130
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced unholy unit reforging
+
+Rune level:
+1. Spreading the plague, army consume less food, health reserve reduced
+|cFF2ED8642. Plague reduces enemy attack speed
+|cff6f6f6f3. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2131
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master unholy unit reforging
+
+Rune level:
+1. Spreading the plague, army consume less food, health reserve reduced
+2. Plague reduces enemy attack speed
+|cFF2ED8643. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2132
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks unholy reforging units
+
+Rune level:
+|cFF2ED8641. Spreading the plague, army consume less food, health reserve reduced
+|cff6f6f6f2. Plague reduces enemy attack speed
+3. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2133
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced frost unit reforging
+
+Rune level:
+1. Add mana to units, armor reduce |R
+|cFF4F8CFF2. Increased mana regeneration
+|cff6f6f6f3. Killing replenishes mana|r
+}
+
+STRING 2134
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master frost unit reforging
+
+Rune level:
+1. Add mana to units, armor reduce |R
+2. Increased mana regeneration
+|cFF4F8CFF3. Killing replenishes mana|r
+}
+
+STRING 2135
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks frost reforging units
+
+Rune level:
+|cFF4F8CFF1. Add mana to units, armor reduce |R
+|cff6f6f6f2. Increased mana regeneration
+3. Killing replenishes mana|r
+}
+
+STRING 2137
+// Abilities: A01A ([Arthas] Armor Decay), Name (Name)
+{
+[Arthas] Armor Decay
+}
+
+STRING 2138
+// Abilities: A01A ([Arthas] Armor Decay), Tip (Tooltip - Normal)
+{
+Armor Decay
+}
+
+STRING 2139
+// Abilities: A01A ([Arthas] Armor Decay), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A01A,DataA1,.> additional armor to nearby friendly units.
+}
+
+STRING 2140
+// Upgrades: R00J (Cannibalize), Name (Name)
+{
+[Arthas] Blood
+}
+
+STRING 2141
+// Upgrades: R00J (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(Level 2)
+}
+
+STRING 2142
+// Upgrades: R00J (Cannibalize), effect1 (Effect 1)
+{
+rhpr
+}
+
+STRING 2143
+// Upgrades: R00L (Cannibalize), Name (Name)
+{
+[Arthas] Frost
+}
+
+STRING 2144
+// Upgrades: R00L (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(Level 2)
+}
+
+STRING 2145
+// Upgrades: R016 (Cannibalize), Name (Name)
+{
+[Arthas] Unholy
+}
+
+STRING 2146
+// Upgrades: R016 (Cannibalize), EditorSuffix (Editor Suffix)
+{
+(Level 2)
+}
+
+STRING 2147
+// Buffs/Effects: B003 ([Arthas] Armor Decay), EditorName (Name (Editor Only))
+{
+[Arthas] Armor Decay
+}
+
+STRING 2148
+// Buffs/Effects: B003 ([Arthas] Armor Decay), Bufftip (Tooltip)
+{
+Armor Decay
+}
+
+STRING 2149
+// Buffs/Effects: B003 ([Arthas] Armor Decay), Buffubertip (Tooltip - Extended)
+{
+Unit armor reduced
+}
+
+STRING 2150
+// Abilities: A02X ([Arthas] Icecrown Plague Spread), Name (Name)
+{
+[Arthas] Icecrown Plague Spread
+}
+
+STRING 2151
+// Abilities: A02X ([Arthas] Icecrown Plague Spread), Tip (Tooltip - Normal)
+{
+Icecrown Plague Spread
+}
+
+STRING 2152
+// Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
+{
+Plague continues to grow as Necropolis's mana pool grows
+}
+
+STRING 2153
+// Abilities: A02Y ([Arthas] Ice Impale), Name (Name)
+{
+[Arthas] Ice Impale
+}
+
+STRING 2154
+// Abilities: A02Y ([Arthas] Ice Impale), Tip (Tooltip - Normal)
+{
+Ice Impale
+}
+
+STRING 2155
+// Abilities: A02Y ([Arthas] Ice Impale), Ubertip (Tooltip - Normal - Extended)
+{
+Killing grants 25% mana
 }
 

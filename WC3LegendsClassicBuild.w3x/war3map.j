@@ -69,7 +69,6 @@ integer udg_EnemyHeroLevel= 0
 integer array udg_CurrentZone1
 integer array udg_CurrentZone2
 player udg_PlayerArthas= null
-integer udg_ArthasReforgeSoulCost= 0
 unit udg_Arthas= null
 
     // Generated
@@ -93,6 +92,7 @@ rect gg_rct_Way2_p7= null
 rect gg_rct_Way1_p8= null
 rect gg_rct_Way1_p9= null
 rect gg_rct_Way2_p8= null
+rect gg_rct_EnemyWayAttackPoint= null
 camerasetup gg_cam_Camera_001= null
 trigger gg_trg_CurrentBuild= null
 trigger gg_trg_ConsoleLog= null
@@ -133,7 +133,7 @@ trigger gg_trg_ChooseUther= null
 trigger gg_trg_ArthasIni= null
 trigger gg_trg_ArthasNewRuneSecond= null
 trigger gg_trg_ArthasNewRuneThree= null
-trigger gg_trg_ArthasMaxRuneLevel= null
+trigger gg_trg_ArthasRuneResearch= null
 trigger gg_trg_ArthasRunesUpdate= null
 trigger gg_trg_ArthasFrostmourne= null
 trigger gg_trg_ArthasSouls= null
@@ -199,6 +199,7 @@ trigger gg_trg_SetGroupArray= null
 trigger gg_trg_UnitsInitializationWay1= null
 trigger gg_trg_UnitsInitializationWay2= null
 trigger gg_trg_UnitsInitializationWay3= null
+trigger gg_trg_DebugUnitsIniWay3= null
 trigger gg_trg_GroupArrayReset= null
 trigger gg_trg_CreateSquadWave1n1= null
 trigger gg_trg_CreateSquadWave1n2= null
@@ -234,8 +235,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-rect gg_rct_EnemyWayAttackPoint= null
-trigger gg_trg_DebugUnitsIniWay3= null
+trigger gg_trg_ArthasRuneCancel= null
+trigger gg_trg_ArthasIceImpale= null
+trigger gg_trg_ArthasDeadUnholyLvl3= null
 
     // Random Groups
 integer array gg_rg_000
@@ -403,7 +405,6 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
-    set udg_ArthasReforgeSoulCost=0
 endfunction
 
 //***************************************************************************
@@ -1194,6 +1195,22 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 1)
     set u=BlzCreateUnitWithSkin(p, 'h006', - 4485.6, 7441.8, 160.810, 'h006')
     call SetUnitState(u, UNIT_STATE_MANA, 1)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2310.0, - 2729.9, 298.630, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 2)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2725.6, - 2419.6, 287.530, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2381.9, - 2861.4, 298.630, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 8)
+    set u=BlzCreateUnitWithSkin(p, 'h006', 2508.8, - 2347.5, 287.530, 'h006')
+    set life=GetUnitState(u, UNIT_STATE_LIFE)
+    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 3)
 endfunction
 
 //===========================================================================
@@ -1207,8 +1224,11 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 8937.4, 2961.2, 305.778, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1058.7, 7712.7, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2296.3, 2511.8, 42.836, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2228.7, 2855.6, 294.263, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 2026.5, 2642.6, 182.431, 'nenf')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
@@ -1221,6 +1241,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function ItemTable000008_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7918.8, 8294.6, 287.271, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 5293.7, - 171.8, 40.327, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwld', 949.6, 7915.7, 298.870, 'nwld')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -1228,6 +1249,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 832.4, 7752.1, 302.558, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 5415.2, - 369.9, 83.310, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
@@ -1235,6 +1257,7 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1864.3, - 8710.1, 139.002, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2374.0, - 8972.9, 135.530, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 5581.6, - 218.9, 112.050, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsqt', 6803.5, - 8277.3, 74.292, 'nsqt')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7595.5, 8367.0, 290.114, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nsqe', 6771.5, - 8514.3, 93.081, 'nsqe')
@@ -1255,39 +1278,56 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 3654.7, 1452.3, 329.207, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 8867.2, - 3265.3, 145.083, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 3746.5, 1120.4, 26.606, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 3615.7, 1242.3, 1.360, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 4071.2, 3534.9, 279.221, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 4273.7, 3480.7, 211.580, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 4262.7, 3291.5, 159.998, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.300, 'nsgt')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5127.3, - 3416.8, 329.309, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5356.4, - 3727.7, 273.423, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5052.6, - 3560.3, 329.309, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5206.8, - 3737.9, 281.222, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 4181.1, 1986.8, 113.379, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 3975.2, 2246.9, 159.892, 'nbrg')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 5176.6, - 702.9, 146.850, 'nenf')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 4147.4, 2183.2, 146.850, 'nenf')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
@@ -1309,14 +1349,20 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1180.8, 7892.0, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nsqt', 7047.7, - 8136.9, 143.456, 'nsqt')
     set u=BlzCreateUnitWithSkin(p, 'ngnv', 1340.3, 2953.5, 143.426, 'ngnv')
+    call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'ngnw', 1410.5, 3196.5, 228.206, 'ngnw')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngns', 1192.6, 2850.4, 92.375, 'ngns')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1064.5, 3056.3, 1.894, 'ngnb')
+    call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
+    call SetUnitAcquireRange(u, 200.0)
 endfunction
 
 //===========================================================================
@@ -1440,7 +1486,7 @@ endfunction
 //===========================================================================
 function InitTrig_CurrentBuild takes nothing returns nothing
     set gg_trg_CurrentBuild=CreateTrigger()
-    set udg_isTestVersion=false
+    set udg_isTestVersion=true
 endfunction
 //===========================================================================
 // Trigger: ConsoleLog
@@ -2416,10 +2462,11 @@ function Trig_ArthasIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_ArthasUnholySoulReforge)
     call EnableTrigger(gg_trg_ArthasHarvestSoulDead)
     call EnableTrigger(gg_trg_ArthasHarvestSoul)
-    call EnableTrigger(gg_trg_ArthasMaxRuneLevel)
+    call EnableTrigger(gg_trg_ArthasRuneResearch)
     call EnableTrigger(gg_trg_ArthasNewRuneSecond)
     call EnableTrigger(gg_trg_ArthasNewRuneThree)
     call EnableTrigger(gg_trg_ArthasDebugSoul)
+    call EnableTrigger(gg_trg_ArthasRuneCancel)
     call EnableTrigger(gg_trg_ArthasRunesUpdate)
     call EnableTrigger(gg_trg_ArthasPlagueDeadCorpse)
     call EnableTrigger(gg_trg_ArthasUnholyRune2and3)
@@ -2431,8 +2478,8 @@ function Trig_ArthasIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_ArthasAbominationUnholyDead)
     call EnableTrigger(gg_trg_ArthasBloodFuel)
     call EnableTrigger(gg_trg_ArthasFrostmourne)
-    // НУЖНО УМНОЖАТЬ УРОВЕНЬ ПРОКАЧИВАЕМОГО МОБА НА 10! ТАКИМ ОБРАЗОМ ЦЕНА БУДЕТ СООТВЕТСТВОВАТЬ КРУТИЗНЕ ЮНИТА
-    set udg_ArthasReforgeSoulCost=20
+    call EnableTrigger(gg_trg_ArthasIceImpale)
+    call EnableTrigger(gg_trg_ArthasDeadUnholyLvl3)
     call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 endfunction
 
@@ -2501,9 +2548,9 @@ function InitTrig_ArthasNewRuneThree takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ArthasMaxRuneLevel
+// Trigger: ArthasRuneResearch
 //===========================================================================
-function Trig_ArthasMaxRuneLevel_Func002C takes nothing returns boolean
+function Trig_ArthasRuneResearch_Func002C takes nothing returns boolean
     if ( ( GetResearched() == 'R00G' ) ) then
         return true
     endif
@@ -2516,36 +2563,66 @@ function Trig_ArthasMaxRuneLevel_Func002C takes nothing returns boolean
     return false
 endfunction
 
-function Trig_ArthasMaxRuneLevel_Conditions takes nothing returns boolean
-    if ( not Trig_ArthasMaxRuneLevel_Func002C() ) then
+function Trig_ArthasRuneResearch_Conditions takes nothing returns boolean
+    if ( not Trig_ArthasRuneResearch_Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasMaxRuneLevel_Actions takes nothing returns nothing
+function Trig_ArthasRuneResearch_Actions takes nothing returns nothing
     call RemoveUnit(GroupPickRandomUnit(GetUnitsOfTypeIdAll('u002')))
 endfunction
 
 //===========================================================================
-function InitTrig_ArthasMaxRuneLevel takes nothing returns nothing
-    set gg_trg_ArthasMaxRuneLevel=CreateTrigger()
-    call DisableTrigger(gg_trg_ArthasMaxRuneLevel)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasMaxRuneLevel, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_ArthasMaxRuneLevel, Condition(function Trig_ArthasMaxRuneLevel_Conditions))
-    call TriggerAddAction(gg_trg_ArthasMaxRuneLevel, function Trig_ArthasMaxRuneLevel_Actions)
+function InitTrig_ArthasRuneResearch takes nothing returns nothing
+    set gg_trg_ArthasRuneResearch=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasRuneResearch)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRuneResearch, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_ArthasRuneResearch, Condition(function Trig_ArthasRuneResearch_Conditions))
+    call TriggerAddAction(gg_trg_ArthasRuneResearch, function Trig_ArthasRuneResearch_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ArthasRuneCancel
+//===========================================================================
+function Trig_ArthasRuneCancel_Func002C takes nothing returns boolean
+    if ( ( GetResearched() == 'R00G' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R00H' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R00I' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ArthasRuneCancel_Conditions takes nothing returns boolean
+    if ( not Trig_ArthasRuneCancel_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasRuneCancel_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasRuneCancel takes nothing returns nothing
+    set gg_trg_ArthasRuneCancel=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasRuneCancel)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRuneCancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_ArthasRuneCancel, Condition(function Trig_ArthasRuneCancel_Conditions))
+    call TriggerAddAction(gg_trg_ArthasRuneCancel, function Trig_ArthasRuneCancel_Actions)
 endfunction
 
 //===========================================================================
 // Trigger: ArthasRunesUpdate
-//
-// Blood rune 1 - Add health
-// Blood rune 2 - Add attack speed
-// Frost rune 1 - Add damage
-// Unholy  rune 1 - Plague
-// Frost rune 2 - Add mana + regeneration
 //===========================================================================
-function Trig_ArthasRunesUpdate_Func001C takes nothing returns boolean
+function Trig_ArthasRunesUpdate_Func002C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00G' ) ) then
         return false
     endif
@@ -2555,7 +2632,7 @@ function Trig_ArthasRunesUpdate_Func001C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasRunesUpdate_Func002C takes nothing returns boolean
+function Trig_ArthasRunesUpdate_Func004C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00G' ) ) then
         return false
     endif
@@ -2565,27 +2642,7 @@ function Trig_ArthasRunesUpdate_Func002C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasRunesUpdate_Func003C takes nothing returns boolean
-    if ( not ( GetResearched() == 'R00I' ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ArthasRunesUpdate_Func004C takes nothing returns boolean
-    if ( not ( GetResearched() == 'R00H' ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ArthasRunesUpdate_Func005C takes nothing returns boolean
+function Trig_ArthasRunesUpdate_Func006C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00I' ) ) then
         return false
     endif
@@ -2595,25 +2652,50 @@ function Trig_ArthasRunesUpdate_Func005C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_ArthasRunesUpdate_Func008C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R00I' ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasRunesUpdate_Func010C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R00H' ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_ArthasRunesUpdate_Actions takes nothing returns nothing
-    if ( Trig_ArthasRunesUpdate_Func001C() ) then
+    // Blood (Level 1)
+    if ( Trig_ArthasRunesUpdate_Func002C() ) then
+        call SetPlayerTechResearchedSwap('R015', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    // Blood (Level 2)
+    if ( Trig_ArthasRunesUpdate_Func004C() ) then
         call SetPlayerTechResearchedSwap('R00J', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
-    if ( Trig_ArthasRunesUpdate_Func002C() ) then
+    // Frost (Level 2)
+    if ( Trig_ArthasRunesUpdate_Func006C() ) then
         call SetPlayerTechResearchedSwap('R00L', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
-    if ( Trig_ArthasRunesUpdate_Func003C() ) then
-        call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetTriggerUnit()))
+    // Frost (Level 3)
+    if ( Trig_ArthasRunesUpdate_Func008C() ) then
     else
     endif
-    if ( Trig_ArthasRunesUpdate_Func004C() ) then
+    // Unholy (Level 2)
+    if ( Trig_ArthasRunesUpdate_Func010C() ) then
         call SetPlayerTechResearchedSwap('Rupc', 1, GetOwningPlayer(GetTriggerUnit()))
-    else
-    endif
-    if ( Trig_ArthasRunesUpdate_Func005C() ) then
-        call SetPlayerTechResearchedSwap('R00O', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R014', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
 endfunction
@@ -2804,7 +2886,7 @@ function Trig_ArthasDebugSoul_Func001Func002A takes nothing returns nothing
 endfunction
 
 function Trig_ArthasDebugSoul_Func001C takes nothing returns boolean
-    if ( not ( IsUnitAliveBJ(udg_Arthas) == true ) ) then
+    if ( not ( IsUnitAliveBJ(GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006'))) == true ) ) then
         return false
     endif
     return true
@@ -2879,7 +2961,7 @@ function Trig_ArthasUnholySoulReforge_Func001Func002C takes nothing returns bool
 endfunction
 
 function Trig_ArthasUnholySoulReforge_Func001C takes nothing returns boolean
-    if ( not ( udg_ArthasSouls >= udg_ArthasReforgeSoulCost ) ) then
+    if ( not ( I2R(udg_ArthasSouls) >= ( I2R(GetUnitLevel(GetSpellTargetUnit())) * 10.00 ) ) ) then
         return false
     endif
     return true
@@ -2890,37 +2972,37 @@ function Trig_ArthasUnholySoulReforge_Actions takes nothing returns nothing
         if ( Trig_ArthasUnholySoulReforge_Func001Func002C() ) then
             call UnitAddAbilityBJ('S00H', GetSpellTargetUnit())
             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
-            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+            set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001C() ) then
                 call UnitAddAbilityBJ('S00F', GetSpellTargetUnit())
                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
-                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
                 if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001C() ) then
                     call UnitAddAbilityBJ('S00E', GetSpellTargetUnit())
                     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
-                    set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                    set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                     call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
                     if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001C() ) then
                         call UnitAddAbilityBJ('S00I', GetSpellTargetUnit())
                         call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
-                        set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                        set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                         call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
                         if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001C() ) then
                             call UnitAddAbilityBJ('S00G', GetSpellTargetUnit())
                             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
-                            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                            set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
                             if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001Func001C() ) then
                                 call UnitAddAbilityBJ('S00J', GetSpellTargetUnit())
                                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
-                                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                                set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                             else
                             endif
@@ -2996,7 +3078,7 @@ function Trig_ArthasFrostSoulReforge_Func001Func002C takes nothing returns boole
 endfunction
 
 function Trig_ArthasFrostSoulReforge_Func001C takes nothing returns boolean
-    if ( not ( udg_ArthasSouls >= udg_ArthasReforgeSoulCost ) ) then
+    if ( not ( I2R(udg_ArthasSouls) >= ( I2R(GetUnitLevel(GetSpellTargetUnit())) * 10.00 ) ) ) then
         return false
     endif
     return true
@@ -3007,37 +3089,37 @@ function Trig_ArthasFrostSoulReforge_Actions takes nothing returns nothing
         if ( Trig_ArthasFrostSoulReforge_Func001Func002C() ) then
             call UnitAddAbilityBJ('S00D', GetSpellTargetUnit())
             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+            set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001C() ) then
                 call UnitAddAbilityBJ('S009', GetSpellTargetUnit())
                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
                 if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001C() ) then
                     call UnitAddAbilityBJ('S008', GetSpellTargetUnit())
                     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-                    set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                    set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                     call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
                     if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001C() ) then
                         call UnitAddAbilityBJ('S00B', GetSpellTargetUnit())
                         call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-                        set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                        set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                         call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
                         if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001C() ) then
                             call UnitAddAbilityBJ('S00A', GetSpellTargetUnit())
                             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-                            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                            set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
                             if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001Func001C() ) then
                                 call UnitAddAbilityBJ('S00C', GetSpellTargetUnit())
                                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
-                                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                                set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                             else
                             endif
@@ -3113,7 +3195,7 @@ function Trig_ArthasBloodSoulReforge_Func001Func003C takes nothing returns boole
 endfunction
 
 function Trig_ArthasBloodSoulReforge_Func001C takes nothing returns boolean
-    if ( not ( udg_ArthasSouls >= udg_ArthasReforgeSoulCost ) ) then
+    if ( not ( I2R(udg_ArthasSouls) >= ( I2R(GetUnitLevel(GetSpellTargetUnit())) * 10.00 ) ) ) then
         return false
     endif
     return true
@@ -3124,37 +3206,37 @@ function Trig_ArthasBloodSoulReforge_Actions takes nothing returns nothing
         if ( Trig_ArthasBloodSoulReforge_Func001Func003C() ) then
             call UnitAddAbilityBJ('S002', GetSpellTargetUnit())
             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+            set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001C() ) then
                 call UnitAddAbilityBJ('S003', GetSpellTargetUnit())
                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
                 if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001C() ) then
                     call UnitAddAbilityBJ('S004', GetSpellTargetUnit())
                     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-                    set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                    set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                     call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
                     if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001C() ) then
                         call UnitAddAbilityBJ('S005', GetSpellTargetUnit())
                         call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-                        set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                        set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                         call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
                         if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001C() ) then
                             call UnitAddAbilityBJ('S006', GetSpellTargetUnit())
                             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-                            set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                            set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
                             if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001Func001C() ) then
                                 call UnitAddAbilityBJ('S007', GetSpellTargetUnit())
                                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-                                set udg_ArthasSouls=( udg_ArthasSouls - udg_ArthasReforgeSoulCost )
+                                set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                             else
                             endif
@@ -3175,6 +3257,105 @@ function InitTrig_ArthasBloodSoulReforge takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasBloodSoulReforge, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ArthasBloodSoulReforge, Condition(function Trig_ArthasBloodSoulReforge_Conditions))
     call TriggerAddAction(gg_trg_ArthasBloodSoulReforge, function Trig_ArthasBloodSoulReforge_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ArthasDeadUnholyLvl3
+//===========================================================================
+function Trig_ArthasDeadUnholyLvl3_Func006C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01H' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01T' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01K' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01W' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ArthasDeadUnholyLvl3_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetDyingUnit())) == 3 ) ) then
+        return false
+    endif
+    if ( not Trig_ArthasDeadUnholyLvl3_Func006C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasDeadUnholyLvl3_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u001', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+    call SetUnitLifeBJ(GetLastCreatedUnit(), ( I2R(GetUnitLevel(GetDyingUnit())) * 7.50 ))
+    call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasDeadUnholyLvl3 takes nothing returns nothing
+    set gg_trg_ArthasDeadUnholyLvl3=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasDeadUnholyLvl3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasDeadUnholyLvl3, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasDeadUnholyLvl3, Condition(function Trig_ArthasDeadUnholyLvl3_Conditions))
+    call TriggerAddAction(gg_trg_ArthasDeadUnholyLvl3, function Trig_ArthasDeadUnholyLvl3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ArthasIceImpale
+//===========================================================================
+function Trig_ArthasIceImpale_Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetKillingUnitBJ()) == 'u01F' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetKillingUnitBJ()) == 'u01P' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetKillingUnitBJ()) == 'u01S' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetKillingUnitBJ()) == 'u01J' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetKillingUnitBJ()) == 'u01M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetKillingUnitBJ()) == 'u01V' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ArthasIceImpale_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetKillingUnitBJ())) == 3 ) ) then
+        return false
+    endif
+    if ( not Trig_ArthasIceImpale_Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasIceImpale_Actions takes nothing returns nothing
+    call SetUnitManaPercentBJ(GetKillingUnitBJ(), ( GetUnitManaPercent(GetKillingUnitBJ()) + 25.00 ))
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasIceImpale takes nothing returns nothing
+    set gg_trg_ArthasIceImpale=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasIceImpale)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasIceImpale, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasIceImpale, Condition(function Trig_ArthasIceImpale_Conditions))
+    call TriggerAddAction(gg_trg_ArthasIceImpale, function Trig_ArthasIceImpale_Actions)
 endfunction
 
 //===========================================================================
@@ -3600,7 +3781,7 @@ function Trig_ArthasGhoulEffect_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01Y' ) ) then
         return false
     endif
-    if ( not ( udg_ArthasSouls >= udg_ArthasReforgeSoulCost ) ) then
+    if ( not ( I2R(udg_ArthasSouls) >= ( I2R(GetUnitLevel(GetSpellTargetUnit())) * 10.00 ) ) ) then
         return false
     endif
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u010' ) ) then
@@ -3832,7 +4013,7 @@ function Trig_UtherDivineShield_Actions takes nothing returns nothing
         call SetUnitInvulnerable(GetAttackedUnitBJ(), false)
         call UnitRemoveAbilityBJ('A001', GetAttackedUnitBJ())
         call UnitAddAbilityBJ('A002', GetAttackedUnitBJ())
-        call TriggerSleepAction(360.00)
+        call TriggerSleepAction(240.00)
         call UnitRemoveAbilityBJ('A002', GetAttackedUnitBJ())
     else
     endif
@@ -4031,7 +4212,7 @@ function Trig_UtherChurchDonations_Condition takes nothing returns boolean
 endfunction
 
 function InitTrig_UtherChurchDonations takes nothing returns nothing
-    local real dayTimer= 30.00
+    local real dayTimer= 45.00
     set gg_trg_UtherChurchDonations=CreateTrigger()
     call DisableTrigger(gg_trg_UtherChurchDonations)
     call TriggerRegisterTimerEventPeriodic(gg_trg_UtherChurchDonations, dayTimer)
@@ -8094,7 +8275,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasIni()
     call InitTrig_ArthasNewRuneSecond()
     call InitTrig_ArthasNewRuneThree()
-    call InitTrig_ArthasMaxRuneLevel()
+    call InitTrig_ArthasRuneResearch()
+    call InitTrig_ArthasRuneCancel()
     call InitTrig_ArthasRunesUpdate()
     call InitTrig_ArthasFrostmourne()
     call InitTrig_ArthasSouls()
@@ -8104,6 +8286,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasUnholySoulReforge()
     call InitTrig_ArthasFrostSoulReforge()
     call InitTrig_ArthasBloodSoulReforge()
+    call InitTrig_ArthasDeadUnholyLvl3()
+    call InitTrig_ArthasIceImpale()
     call InitTrig_ArthasBloodFuel()
     call InitTrig_ArthasAbominationUnholyDead()
     call InitTrig_ArthasSurfeit()
