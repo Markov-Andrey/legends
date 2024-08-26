@@ -127,8 +127,10 @@ trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
 trigger gg_trg_PreviewArthas= null
 trigger gg_trg_PreviewUther= null
+trigger gg_trg_PreviewWrynn= null
 trigger gg_trg_ChooseArthas= null
 trigger gg_trg_ChooseUther= null
+trigger gg_trg_ChooseWrynn= null
 trigger gg_trg_ArthasIni= null
 trigger gg_trg_ArthasNewRuneSecond= null
 trigger gg_trg_ArthasNewRuneThree= null
@@ -164,6 +166,7 @@ trigger gg_trg_UtherChampionsDead= null
 trigger gg_trg_UtherLiturgy= null
 trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_UtherLightTower= null
+trigger gg_trg_WrynnIni= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -237,9 +240,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnIni= null
-trigger gg_trg_PreviewWrynn= null
-trigger gg_trg_ChooseWrynn= null
+trigger gg_trg_ArthasReplaceZombie= null
 
     // Random Groups
 integer array gg_rg_000
@@ -787,6 +788,27 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p= Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'u01A', 640.0, - 320.0, 270.000, 'u01A')
+    set u=BlzCreateUnitWithSkin(p, 'u01C', 1248.0, - 416.0, 270.000, 'u01C')
+    set u=BlzCreateUnitWithSkin(p, 'u003', 1536.0, - 64.0, 270.000, 'u003')
+    set u=BlzCreateUnitWithSkin(p, 'U005', - 224.0, 608.0, 270.000, 'U005')
+    set u=BlzCreateUnitWithSkin(p, 'u01D', - 704.0, 640.0, 270.000, 'u01D')
+    set u=BlzCreateUnitWithSkin(p, 'u01E', - 448.0, 1024.0, 270.000, 'u01E')
+    set u=BlzCreateUnitWithSkin(p, 'u00C', 256.0, 832.0, 270.000, 'u00C')
+    set u=BlzCreateUnitWithSkin(p, 'u00Z', 1696.0, 672.0, 270.000, 'u00Z')
+    set u=BlzCreateUnitWithSkin(p, 'u00Z', 1696.0, 416.0, 270.000, 'u00Z')
+    set u=BlzCreateUnitWithSkin(p, 'u00Z', - 736.0, 1312.0, 270.000, 'u00Z')
+    set u=BlzCreateUnitWithSkin(p, 'u00Z', - 416.0, 1376.0, 270.000, 'u00Z')
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -795,6 +817,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 263.830, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'u01S', 133.4, 44.5, 332.017, 'u01S')
+    set u=BlzCreateUnitWithSkin(p, 'u01S', 224.7, - 162.7, 39.003, 'u01S')
 endfunction
 
 //===========================================================================
@@ -1364,6 +1388,9 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2764.9, - 349.8, 252.265, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2783.7, - 515.4, 345.333, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2892.6, - 439.6, 256.121, 'ngno')
 endfunction
 
 //===========================================================================
@@ -1396,6 +1423,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer4()
     call CreateBuildingsForPlayer5()
 endfunction
@@ -3811,6 +3839,36 @@ function InitTrig_ArthasUnholyRune2and3 takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasUnholyRune2and3, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_ArthasUnholyRune2and3, Condition(function Trig_ArthasUnholyRune2and3_Conditions))
     call TriggerAddAction(gg_trg_ArthasUnholyRune2and3, function Trig_ArthasUnholyRune2and3_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ArthasReplaceZombie
+//===========================================================================
+function Trig_ArthasReplaceZombie_Func001Func001C takes nothing returns boolean
+    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_SAPPER) == false ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasReplaceZombie_Func001A takes nothing returns nothing
+    if ( Trig_ArthasReplaceZombie_Func001Func001C() ) then
+        call ReplaceUnitBJ(GetEnumUnit(), 'n002', bj_UNIT_STATE_METHOD_RELATIVE)
+        call UnitAddTypeBJ(UNIT_TYPE_SAPPER, GetLastReplacedUnitBJ())
+        call UnitApplyTimedLifeBJ(15.00, 'BTLF', GetLastReplacedUnitBJ())
+    else
+    endif
+endfunction
+
+function Trig_ArthasReplaceZombie_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('n002'), function Trig_ArthasReplaceZombie_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasReplaceZombie takes nothing returns nothing
+    set gg_trg_ArthasReplaceZombie=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_ArthasReplaceZombie, 1.00)
+    call TriggerAddAction(gg_trg_ArthasReplaceZombie, function Trig_ArthasReplaceZombie_Actions)
 endfunction
 
 //===========================================================================
@@ -8372,6 +8430,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasBloodFestAura()
     call InitTrig_ArthasPlagueDeadCorpse()
     call InitTrig_ArthasUnholyRune2and3()
+    call InitTrig_ArthasReplaceZombie()
     call InitTrig_ArthasPlagueStoneForm()
     call InitTrig_ArthasGhoulEffect()
     call InitTrig_ArthasPlagueNecropolis()

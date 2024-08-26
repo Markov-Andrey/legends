@@ -2848,22 +2848,10 @@ STRING 1496
 [Test] Chance to cast on attack
 }
 
-STRING 1500
-// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), EditorSuffix (Editor Suffix)
-{
-(Dependency spell)
-}
-
 STRING 1501
-// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), Tip (Tooltip - Normal)
+// Abilities: A029 ([Arthas] Corrosion), Tip (Tooltip - Normal)
 {
 Corrosion
-}
-
-STRING 1504
-// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), Ubertip (Tooltip - Normal - Extended)
-{
-<A02A,DataC1,%>% сhance to attack with <A02A,DataA1> damage with ignoring target's armor
 }
 
 STRING 1505
@@ -2966,12 +2954,6 @@ STRING 1527
 // Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Name (Name)
 {
 [Arthas_Units_Unholy] Unholy Soul
-}
-
-STRING 1531
-// Abilities: A029 ([Arthas_CryptFiend_Unholy] Corrosion), Name (Name)
-{
-[Arthas_CryptFiend_Unholy] Corrosion
 }
 
 STRING 1534
@@ -3412,12 +3394,6 @@ STRING 1625
 // Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Name (Name)
 {
 [Arthas_Gargoyle_Unholy] Necrotic Breath
-}
-
-STRING 1626
-// Abilities: A02A ([Arthas_CryptFiend_Unholy] Corrosion), Name (Name)
-{
-[Arthas_CryptFiend_Unholy] Corrosion
 }
 
 STRING 1627
@@ -6021,5 +5997,65 @@ STRING 2254
 // Units: h01I ([Wrynn] Bank of Stormwind), Tip (Tooltip - Basic)
 {
 Build Bank of Stormwind
+}
+
+STRING 2255
+// Abilities: A029 ([Arthas] Corrosion), Name (Name)
+{
+[Arthas] Corrosion
+}
+
+STRING 2257
+// Buffs/Effects: B004 ([Arthas] Corrosion), EditorName (Name (Editor Only))
+{
+[Arthas] Corrosion
+}
+
+STRING 2258
+// Buffs/Effects: B004 ([Arthas] Corrosion), Bufftip (Tooltip)
+{
+Corrosion
+}
+
+STRING 2259
+// Buffs/Effects: B004 ([Arthas] Corrosion), Buffubertip (Tooltip - Extended)
+{
+Unit armor reduced
+}
+
+STRING 2260
+// Abilities: A029 ([Arthas] Corrosion), Ubertip (Tooltip - Normal - Extended)
+{
+Reduce enemy armor
+}
+
+STRING 2261
+// Abilities: A02A ([Arthas] Swallow), Name (Name)
+{
+[Arthas] Swallow
+}
+
+STRING 2262
+// Abilities: A032 ([Arthas] Swallow), Name (Name)
+{
+[Arthas] Swallow
+}
+
+STRING 2263
+// Abilities: A032 ([Arthas] Swallow), EditorSuffix (Editor Suffix)
+{
+ (Cargo)
+}
+
+STRING 2264
+// Abilities: A033 ([Arthas] Undead Horde), Name (Name)
+{
+[Arthas] Undead Horde
+}
+
+STRING 2265
+// Abilities: A034 (TEST), Name (Name)
+{
+TEST
 }
 
