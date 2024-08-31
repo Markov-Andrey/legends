@@ -2707,21 +2707,6 @@ STRING 1628
 Research Gargoyle Upgrade
 }
 
-STRING 1629
-// Upgrades: R00R (Disease Cloud), Ubertip (Tooltip - Extended)
-{
-Gargoyles reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
-
-|cFF007EFFFrost:|r
-Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
-
-|cff00ff00Unholy:|r
-Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
-}
-
 STRING 1630
 // Units: u003 ([Arthas] Graveyard), Ubertip (Tooltip - Extended)
 {
@@ -2790,42 +2775,6 @@ STRING 1647
 Surfeit
 }
 
-STRING 1649
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
-{
-Abomination increases in size and maximum health by 100.
-}
-
-STRING 1650
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
-{
-Abomination increases in size and maximum health by 200.
-}
-
-STRING 1651
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
-{
-Abomination increases in size and maximum health by 300.
-}
-
-STRING 1652
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
-{
-Abomination increases in size and maximum health by 400.
-}
-
-STRING 1653
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
-{
-Abomination increases in size and maximum health by 500.
-}
-
-STRING 1654
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
-{
-Abomination increases in size and max health by 0.
-}
-
 STRING 1656
 // Abilities: A02G ([Arthas_StoneForm_Blood] Life Steal), Name (Name)
 {
@@ -2890,24 +2839,6 @@ STRING 1675
 // Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Tip (Tooltip - Normal)
 {
 Infectious Outbreak
-}
-
-STRING 1678
-// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoul Spawn), Tip (Tooltip - Normal)
-{
-Ghoul Spawn
-}
-
-STRING 1679
-// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoul Spawn), Ubertip (Tooltip - Normal - Extended)
-{
-On death, spawn a reforged ghoul corresponding to each rune used
-}
-
-STRING 1680
-// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoul Spawn), Name (Name)
-{
-[Arthas_Abomination_Unholy] Ghoul Spawn
 }
 
 STRING 1681
@@ -5840,5 +5771,101 @@ Rune level:
 |cFF4F8CFF1. Novice. Add mana to units, armor reduce |R
 |cff6f6f6f2. Advanced. Increased mana regeneration
 3. Mastery. Killing replenishes mana|r
+}
+
+STRING 2420
+// Abilities: A02J ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Consumes a nearby corpse to heal <A02J,DataA1> hit points per second. If a corpse is completely consumed, the maximum health increases by <A02L,Rng2> (max - <A02L,Rng6>).
+}
+
+STRING 2421
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by <A02L,Rng2>.
+}
+
+STRING 2422
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by <A02L,Rng3>.
+}
+
+STRING 2423
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by <A02L,Rng4>.
+}
+
+STRING 2424
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by <A02L,Rng5>.
+}
+
+STRING 2425
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by <A02L,Rng6>.
+}
+
+STRING 2426
+// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+{
+Abomination increases in size and max health by <A02L,Rng1>.
+}
+
+STRING 2427
+// Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Ubertip (Tooltip - Normal - Extended)
+{
+Consumes a nearby corpse gives +<A02M,DataA1,%>% damage for <A02M,Dur1> sec.
+}
+
+STRING 2429
+// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Ubertip (Tooltip - Normal - Extended)
+{
+Activate Immolation to engulf this unit in flames, causing <A02N,DataA1> damage per 0.5 second to nearby enemy land units. |nDrains health until deactivated.
+}
+
+STRING 2430
+// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Unubertip (Tooltip - Turn Off - Extended)
+{
+Deactivate Immolation to stop draining health.
+}
+
+STRING 2431
+// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Tip (Tooltip - Normal)
+{
+Ghoulish Return
+}
+
+STRING 2432
+// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Trojan Horse"|r
+
+Upon death, spawn Decaying Ghouls equal to the mastery level of Unholy Runes
+}
+
+STRING 2433
+// Upgrades: R00R (Disease Cloud), Ubertip (Tooltip - Extended)
+{
+Abominations reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Surfeit - Consumes a nearby corpse to heal <A02J,DataA1> hit points per second. If a corpse is completely consumed, the maximum health increases by <A02L,Rng2> (max - <A02L,Rng6>).
+
+|cFF007EFFFrost:|r
+Glacial Gusto - Consumes a nearby corpse gives +<A02M,DataA1,%>% damage for <A02M,Dur1> sec.
+
+|cff00ff00Unholy:|r
+Infectious Outbreak - Activate Immolation to engulf this unit in flames, causing <A02N,DataA1> damage per 0.5 second to nearby enemy land units. Drains health until deactivated.
+Ghoulish Return - Upon death, spawn Decaying Ghouls equal to the mastery level of Unholy Runes
+}
+
+STRING 2434
+// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Name (Name)
+{
+[Arthas_Abomination_Unholy] Ghoulish Return
 }
 
