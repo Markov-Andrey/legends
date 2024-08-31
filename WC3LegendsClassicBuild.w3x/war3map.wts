@@ -53,40 +53,16 @@ STRING 467
 Синдикат
 }
 
-STRING 468
-// Units: u00A (Acolyte), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 470
 // Units: u009 ([Arthas] Plague Necropolis), Tip (Tooltip - Basic)
 {
 Summon Plague Necropolis
 }
 
-STRING 471
-// Units: u010 (Ghoul), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 472
-// Units: u011 (Crypt Fiend), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 474
 // Units: u00B ([Arthas] Plague Halls of the Dead), Tip (Tooltip - Basic)
 {
 Upgrade to Plague Halls of the Dead
-}
-
-STRING 475
-// Units: u012 (Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 477
@@ -347,404 +323,146 @@ STRING 540
 [Uther]
 }
 
-STRING 551
-// Units: u014 (Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 552
-// Units: u015 (Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 553
-// Units: u016 (Dead Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 554
-// Units: u00Y (Wild Ghoul), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 555
-// Units: u01F (Frozen Ghoul), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 556
-// Units: u01H (Decaying Ghoul), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 557
-// Units: u01I (Ravenous Crypt Fiend), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 558
-// Units: u016 (Dead Wyrm), Name (Name)
+// Units: u016 ([Arthas] Dead Wyrm), Tip (Tooltip - Basic)
 {
 Dead Wyrm
-}
-
-STRING 559
-// Units: u016 (Dead Wyrm), Tip (Tooltip - Basic)
-{
-Dead Wyrm
-}
-
-STRING 560
-// Units: u01J (Frost Crypt Fiend), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 561
-// Units: u01K (Toxic Crypt Fiend), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 562
-// Units: u01L (Bloody Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 563
-// Units: u01M (Northrend Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 564
-// Units: u01N (Corrupted Gargoyle), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 565
-// Units: u01O (Fat Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 566
-// Units: u01P (Cold Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 567
-// Units: u01Q (Glutton Abomination), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 568
-// Units: u01R (Blood Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 569
-// Units: u01S (Ice Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 572
-// Units: h00S (Choose of Legends), Name (Name)
+// Units: h00S ([AI] Choose of Legends), Tip (Tooltip - Basic)
 {
 Choose of Legends
-}
-
-STRING 573
-// Units: h00S (Choose of Legends), Tip (Tooltip - Basic)
-{
-Choose of Legends
-}
-
-STRING 574
-// Units: h00S (Choose of Legends), EditorSuffix (Name - Editor Suffix)
-{
-[UI]
 }
 
 STRING 575
-// Units: h00T (Arthas), Name (Name)
+// Units: h00T ([AI] Arthas), Tip (Tooltip - Basic)
 {
 Arthas
 }
 
 STRING 576
-// Units: h00T (Arthas), Tip (Tooltip - Basic)
+// Abilities: A01C ([UI] Legends: Arthas), Tip (Tooltip - Normal)
 {
 Arthas
 }
 
-STRING 577
-// Units: h00T (Arthas), EditorSuffix (Name - Editor Suffix)
-{
-[UI]
-}
-
 STRING 578
-// Units: h00U (Uther), Name (Name)
+// Units: h00U ([AI] Uther), Tip (Tooltip - Basic)
 {
 Uther
 }
 
 STRING 579
-// Units: h00U (Uther), Tip (Tooltip - Basic)
+// Abilities: A01J ([UI] Legends: Uther), Tip (Tooltip - Normal)
 {
 Uther
 }
 
-STRING 580
-// Units: h00U (Uther), EditorSuffix (Name - Editor Suffix)
-{
-[UI]
-}
-
-STRING 581
-// Units: u01T (Plague Horde Wagon), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
 STRING 582
-// Units: u00Y (Wild Ghoul), Name (Name)
+// Units: u00Y ([Arthas] Wild Ghoul), Tip (Tooltip - Basic)
 {
 Wild Ghoul
-}
-
-STRING 583
-// Units: u00Y (Wild Ghoul), Tip (Tooltip - Basic)
-{
-Wild Ghoul
-}
-
-STRING 584
-// Units: u01U (Hungry Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 585
-// Units: u01F (Frozen Ghoul), Name (Name)
+// Units: u01F ([Arthas] Frozen Ghoul), Tip (Tooltip - Basic)
 {
 Frozen Ghoul
 }
 
 STRING 586
-// Units: u01F (Frozen Ghoul), Tip (Tooltip - Basic)
+// Units: u01H ([Arthas] Decaying Ghoul), Tip (Tooltip - Basic)
 {
 Frozen Ghoul
-}
-
-STRING 587
-// Units: u01V (Frost Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
-}
-
-STRING 588
-// Units: u01H (Decaying Ghoul), Name (Name)
-{
-Decaying Ghoul
-}
-
-STRING 589
-// Units: u01H (Decaying Ghoul), Tip (Tooltip - Basic)
-{
-Frozen Ghoul
-}
-
-STRING 590
-// Units: u01W (Poison Wyrm), EditorSuffix (Name - Editor Suffix)
-{
-[Arthas]
 }
 
 STRING 591
-// Units: u01I (Ravenous Crypt Fiend), Name (Name)
-{
-Ravenous Crypt Fiend
-}
-
-STRING 592
-// Units: u01I (Ravenous Crypt Fiend), Tip (Tooltip - Basic)
+// Units: u01I ([Arthas] Ravenous Crypt Fiend), Tip (Tooltip - Basic)
 {
 Ravenous Crypt Fiend
 }
 
 STRING 594
-// Units: u01J (Frost Crypt Fiend), Name (Name)
-{
-Frost Crypt Fiend
-}
-
-STRING 595
-// Units: u01J (Frost Crypt Fiend), Tip (Tooltip - Basic)
+// Units: u01J ([Arthas] Frost Crypt Fiend), Tip (Tooltip - Basic)
 {
 Frost Crypt Fiend
 }
 
 STRING 597
-// Units: u01K (Toxic Crypt Fiend), Name (Name)
-{
-Toxic Crypt Fiend
-}
-
-STRING 598
-// Units: u01K (Toxic Crypt Fiend), Tip (Tooltip - Basic)
+// Units: u01K ([Arthas] Toxic Crypt Fiend), Tip (Tooltip - Basic)
 {
 Toxic Crypt Fiend
 }
 
 STRING 600
-// Units: u01L (Bloody Gargoyle), Name (Name)
-{
-Bloody Gargoyle
-}
-
-STRING 601
-// Units: u01L (Bloody Gargoyle), Tip (Tooltip - Basic)
+// Units: u01L ([Arthas] Bloody Gargoyle), Tip (Tooltip - Basic)
 {
 Bloody Gargoyle
 }
 
 STRING 603
-// Units: u01M (Northrend Gargoyle), Name (Name)
-{
-Northrend Gargoyle
-}
-
-STRING 604
-// Units: u01M (Northrend Gargoyle), Tip (Tooltip - Basic)
+// Units: u01M ([Arthas] Northrend Gargoyle), Tip (Tooltip - Basic)
 {
 Northrend Gargoyle
 }
 
 STRING 606
-// Units: u01N (Corrupted Gargoyle), Name (Name)
-{
-Corrupted Gargoyle
-}
-
-STRING 607
-// Units: u01N (Corrupted Gargoyle), Tip (Tooltip - Basic)
+// Units: u01N ([Arthas] Corrupted Gargoyle), Tip (Tooltip - Basic)
 {
 Corrupted Gargoyle
 }
 
 STRING 609
-// Units: u01O (Fat Abomination), Name (Name)
-{
-Fat Abomination
-}
-
-STRING 610
-// Units: u01O (Fat Abomination), Tip (Tooltip - Basic)
+// Units: u01O ([Arthas] Fat Abomination), Tip (Tooltip - Basic)
 {
 Fat Abomination
 }
 
 STRING 612
-// Units: u01P (Cold Abomination), Name (Name)
-{
-Cold Abomination
-}
-
-STRING 613
-// Units: u01P (Cold Abomination), Tip (Tooltip - Basic)
+// Units: u01P ([Arthas] Cold Abomination), Tip (Tooltip - Basic)
 {
 Cold Abomination
 }
 
 STRING 615
-// Units: u01Q (Glutton Abomination), Name (Name)
-{
-Glutton Abomination
-}
-
-STRING 616
-// Units: u01Q (Glutton Abomination), Tip (Tooltip - Basic)
+// Units: u01Q ([Arthas] Glutton Abomination), Tip (Tooltip - Basic)
 {
 Glutton Abomination
 }
 
 STRING 618
-// Units: u01R (Blood Wagon), Name (Name)
-{
-Blood Wagon
-}
-
-STRING 619
-// Units: u01R (Blood Wagon), Tip (Tooltip - Basic)
+// Units: u01R ([Arthas] Blood Wagon), Tip (Tooltip - Basic)
 {
 Blood Wagon
 }
 
 STRING 621
-// Units: u01S (Ice Wagon), Name (Name)
-{
-Ice Wagon
-}
-
-STRING 622
-// Units: u01S (Ice Wagon), Tip (Tooltip - Basic)
+// Units: u01S ([Arthas] Ice Wagon), Tip (Tooltip - Basic)
 {
 Ice Wagon
 }
 
 STRING 624
-// Units: u01T (Plague Horde Wagon), Name (Name)
-{
-Plague Horde Wagon
-}
-
-STRING 625
-// Units: u01T (Plague Horde Wagon), Tip (Tooltip - Basic)
+// Units: u01T ([Arthas] Plague Horde Wagon), Tip (Tooltip - Basic)
 {
 Plague Horde Wagon
 }
 
 STRING 627
-// Units: u01U (Hungry Wyrm), Name (Name)
-{
-Hungry Wyrm
-}
-
-STRING 628
-// Units: u01U (Hungry Wyrm), Tip (Tooltip - Basic)
+// Units: u01U ([Arthas] Hungry Wyrm), Tip (Tooltip - Basic)
 {
 Hungry Wyrm
 }
 
 STRING 630
-// Units: u01V (Frost Wyrm), Tip (Tooltip - Basic)
+// Units: u01V ([Arthas] Frost Wyrm), Tip (Tooltip - Basic)
 {
 Frost Wyrm
 }
 
 STRING 632
-// Units: u01W (Poison Wyrm), Tip (Tooltip - Basic)
-{
-Poison Wyrm
-}
-
-STRING 633
-// Units: u01W (Poison Wyrm), Name (Name)
+// Units: u01W ([Arthas] Poison Wyrm), Tip (Tooltip - Basic)
 {
 Poison Wyrm
 }
@@ -768,7 +486,7 @@ Stone Form Corrupted Gargoyle
 }
 
 STRING 667
-// Abilities: A01C ([UI] Legends: Arthas), Tip (Tooltip - Normal)
+// Upgrades: R00E (Magic Sentry), Tip (Tooltip)
 {
 Arthas
 }
@@ -856,7 +574,7 @@ STRING 694
 }
 
 STRING 695
-// Abilities: A01J ([UI] Legends: Uther), Tip (Tooltip - Normal)
+// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
 {
 Uther
 }
@@ -1043,15 +761,9 @@ Souls
 }
 
 STRING 806
-// Units: H004 (Stonebeard), Tip (Tooltip - Basic)
+// Units: H004 ([Alterac] Stonebeard), Tip (Tooltip - Basic)
 {
 Explorer's League
-}
-
-STRING 828
-// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
-{
-Uther
 }
 
 STRING 836
@@ -1108,12 +820,6 @@ STRING 897
 Divine Shield
 }
 
-STRING 898
-// Units: h002 (Pack Horse), EditorSuffix (Name - Editor Suffix)
-{
-[Alterac]
-}
-
 STRING 903
 {
 Alterac's Justice
@@ -1168,12 +874,6 @@ STRING 928
 // Items: I002 (Heartstone), Tip (Tooltip - Basic)
 {
 Purchase Heartstone
-}
-
-STRING 939
-// Units: n000 (Tavern), EditorSuffix (Name - Editor Suffix)
-{
-[Alterac]
 }
 
 STRING 940
@@ -1392,12 +1092,6 @@ STRING 996
 [UI] RaceTest: Undead
 }
 
-STRING 998
-// Units: H004 (Stonebeard), EditorSuffix (Name - Editor Suffix)
-{
-[Alterac]
-}
-
 STRING 999
 // Abilities: A00O ([Alterac] Sniper Shot), Name (Name)
 {
@@ -1410,14 +1104,8 @@ STRING 1000
 Sniper Shot
 }
 
-STRING 1009
-// Units: h006 (Add Unit), EditorSuffix (Name - Editor Suffix)
-{
-[AI]
-}
-
 STRING 1010
-// Units: h006 (Add Unit), Name (Name)
+// Units: h006 ([AI] Add Unit), Tip (Tooltip - Basic)
 {
 Add Unit
 }
@@ -1507,45 +1195,15 @@ STRING 1037
 }
 
 STRING 1038
-// Units: h007 (Add Building), Name (Name)
-{
-Add Building
-}
-
-STRING 1040
-// Units: h007 (Add Building), EditorSuffix (Name - Editor Suffix)
-{
-[AI]
-}
-
-STRING 1041
-// Units: h006 (Add Unit), Tip (Tooltip - Basic)
-{
-Add Unit
-}
-
-STRING 1042
-// Units: h007 (Add Building), Tip (Tooltip - Basic)
+// Units: h007 ([AI] Add Building), Tip (Tooltip - Basic)
 {
 Add Building
 }
 
 STRING 1043
-// Units: h008 (Add Hero), Name (Name)
+// Units: h008 ([AI] Add Hero), Tip (Tooltip - Basic)
 {
 Add Hero
-}
-
-STRING 1044
-// Units: h008 (Add Hero), Tip (Tooltip - Basic)
-{
-Add Hero
-}
-
-STRING 1045
-// Units: h008 (Add Hero), EditorSuffix (Name - Editor Suffix)
-{
-[AI]
 }
 
 STRING 1046
@@ -1701,12 +1359,6 @@ STRING 1131
 Stonebeard
 }
 
-STRING 1133
-// Units: H004 (Stonebeard), Name (Name)
-{
-Stonebeard
-}
-
 STRING 1139
 {
 MainQuest Wave 1
@@ -1773,21 +1425,9 @@ Defeat! Caravans lost.
 }
 
 STRING 1159
-// Units: h001 (Choose of Difficulty), Name (Name)
+// Units: h001 ([AI] Choose of Difficulty), Tip (Tooltip - Basic)
 {
 Choose of Difficulty
-}
-
-STRING 1160
-// Units: h001 (Choose of Difficulty), Tip (Tooltip - Basic)
-{
-Choose of Difficulty
-}
-
-STRING 1161
-// Units: h001 (Choose of Difficulty), EditorSuffix (Name - Editor Suffix)
-{
-[UI]
 }
 
 STRING 1162
@@ -1892,12 +1532,6 @@ STRING 1193
 [Special] Arthas
 }
 
-STRING 1194
-// Upgrades: R00E (Magic Sentry), Tip (Tooltip)
-{
-Arthas
-}
-
 STRING 1195
 // Upgrades: R00E (Magic Sentry), Ubertip (Tooltip - Extended)
 {
@@ -1949,14 +1583,8 @@ STRING 1248
 |cffff0000Not enough souls to reforge!|r
 }
 
-STRING 1253
-// Units: u015 (Wagon), Name (Name)
-{
-Wagon
-}
-
 STRING 1254
-// Units: u015 (Wagon), Tip (Tooltip - Basic)
+// Units: u015 ([Arthas] Wagon), Tip (Tooltip - Basic)
 {
 Train Wagon
 }
@@ -2261,12 +1889,6 @@ STRING 1353
 // Abilities: A021 ([Arthas] Death Pact), Researchubertip (Tooltip - Learn - Extended)
 {
 Kills a target friendly Undead unit, giving a percentage of its hit points to the Lich King.|n|n|cffffcc00Level 1|r - <A021,DataB1,%>% conversion. |n|cffffcc00Level 2|r - <A021,DataB2,%>% conversion. |n|cffffcc00Level 3|r - <A021,DataB3,%>% conversion.
-}
-
-STRING 1354
-// Abilities: A016 ([Arthas_Effect] Unholy), EditorSuffix (Editor Suffix)
-{
-(effect)
 }
 
 STRING 1356
@@ -3160,18 +2782,6 @@ STRING 1575
 [Arthas_Effect] Unholy
 }
 
-STRING 1577
-// Abilities: A023 ([Arthas_Effect] Flies), Name (Name)
-{
-[Arthas_Effect] Flies
-}
-
-STRING 1578
-// Abilities: A02E ([Arthas_Effect] Stone Form Aura Unholy), Name (Name)
-{
-[Arthas_Effect] Stone Form Aura Unholy
-}
-
 STRING 1580
 // Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Tip (Tooltip - Normal)
 {
@@ -3650,48 +3260,6 @@ Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cos
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
-STRING 1686
-// Abilities: A02P ([Arthas_Wagon_Blood] Blood Fuel), Name (Name)
-{
-[Arthas_Wagon_Blood] Blood Fuel
-}
-
-STRING 1687
-// Abilities: A02Q ([Arthas_Wagon_Blood] Blood Fuel), Name (Name)
-{
-[Arthas_Wagon_Blood] Blood Fuel
-}
-
-STRING 1688
-// Abilities: A02Q ([Arthas_Wagon_Blood] Blood Fuel), Tip (Tooltip - Normal)
-{
-Blood Fuel
-}
-
-STRING 1689
-// Abilities: A02Q ([Arthas_Wagon_Blood] Blood Fuel), EditorSuffix (Editor Suffix)
-{
-(dummy)
-}
-
-STRING 1690
-// Buffs/Effects: B00K ([Arthas] Blood Fuel), EditorName (Name (Editor Only))
-{
-[Arthas] Blood Fuel
-}
-
-STRING 1691
-// Buffs/Effects: B00K ([Arthas] Blood Fuel), Bufftip (Tooltip)
-{
-Blood Fuel
-}
-
-STRING 1692
-// Buffs/Effects: B00K ([Arthas] Blood Fuel), Buffubertip (Tooltip - Extended)
-{
-This unit is Blood Fuel; its damage have been improved.
-}
-
 STRING 1693
 // Abilities: A02R ([Arthas] Frostmourne's Hunger), Tip (Tooltip - Normal)
 {
@@ -3750,12 +3318,6 @@ STRING 1702
 // Upgrades: R00S (Ghoul Frenzy), effect1 (Effect 1)
 {
 rmvx
-}
-
-STRING 1703
-// Upgrades: R00S (Ghoul Frenzy), Name (Name)
-{
-Frostmourne's Hunger
 }
 
 STRING 1704
@@ -5130,7 +4692,7 @@ A powerful champion who supports the army with his aura
 }
 
 STRING 2105
-// Units: u010 (Ghoul), Ubertip (Tooltip - Extended)
+// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
 {
 |cFFA0FF00Reforge: 20 souls|r
 
@@ -5138,7 +4700,7 @@ Basic attack unit and lumber harvester. Can learn Cannibalize and Ghoul Frenzy. 
 }
 
 STRING 2106
-// Units: u011 (Crypt Fiend), Ubertip (Tooltip - Extended)
+// Units: u011 ([Arthas] Crypt Fiend), Ubertip (Tooltip - Extended)
 {
 |cFFA0FF00Reforge: 30 souls|r
 
@@ -5146,7 +4708,7 @@ Ranged combat support creature. Can learn the Web, and Burrow abilities. |n|n|cf
 }
 
 STRING 2107
-// Units: u012 (Gargoyle), Ubertip (Tooltip - Extended)
+// Units: u012 ([Arthas] Gargoyle), Ubertip (Tooltip - Extended)
 {
 |cFFA0FF00Reforge: 20 souls|r
 
@@ -5154,7 +4716,7 @@ Flying attack creature. Can learn the Stone Form ability. |n|n|cffffcc00Attacks 
 }
 
 STRING 2108
-// Units: u014 (Abomination), Ubertip (Tooltip - Extended)
+// Units: u014 ([Arthas] Abomination), Ubertip (Tooltip - Extended)
 {
 |cFFA0FF00Reforge: 40 souls|r
 
@@ -5162,7 +4724,7 @@ Heavy melee unit. Can learn the Disease Cloud ability and Cannibalize. |n|n|cfff
 }
 
 STRING 2109
-// Units: u015 (Wagon), Ubertip (Tooltip - Extended)
+// Units: u015 ([Arthas] Wagon), Ubertip (Tooltip - Extended)
 {
 |cFFA0FF00Reforge: 40 souls|r
 
@@ -5170,7 +4732,7 @@ Corpse storage machine. Also serves as long-range siege weaponry. Exceptional da
 }
 
 STRING 2110
-// Units: u016 (Dead Wyrm), Ubertip (Tooltip - Extended)
+// Units: u016 ([Arthas] Dead Wyrm), Ubertip (Tooltip - Extended)
 {
 |cFFA0FF00Reforge: 60 souls|r
 
@@ -5315,24 +4877,6 @@ Rune level:
 3. Killing replenishes mana|r
 }
 
-STRING 2137
-// Abilities: A01A ([Arthas] Armor Decay), Name (Name)
-{
-[Arthas] Armor Decay
-}
-
-STRING 2138
-// Abilities: A01A ([Arthas] Armor Decay), Tip (Tooltip - Normal)
-{
-Armor Decay
-}
-
-STRING 2139
-// Abilities: A01A ([Arthas] Armor Decay), Ubertip (Tooltip - Normal - Extended)
-{
-Gives <A01A,DataA1,.> additional armor to nearby friendly units.
-}
-
 STRING 2140
 // Upgrades: R00J (Cannibalize), Name (Name)
 {
@@ -5343,12 +4887,6 @@ STRING 2141
 // Upgrades: R00J (Cannibalize), EditorSuffix (Editor Suffix)
 {
 (Level 2)
-}
-
-STRING 2142
-// Upgrades: R00J (Cannibalize), effect1 (Effect 1)
-{
-rhpr
 }
 
 STRING 2143
@@ -5375,20 +4913,8 @@ STRING 2146
 (Level 2)
 }
 
-STRING 2147
-// Buffs/Effects: B003 ([Arthas] Armor Decay), EditorName (Name (Editor Only))
-{
-[Arthas] Armor Decay
-}
-
-STRING 2148
-// Buffs/Effects: B003 ([Arthas] Armor Decay), Bufftip (Tooltip)
-{
-Armor Decay
-}
-
 STRING 2149
-// Buffs/Effects: B003 ([Arthas] Armor Decay), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B004 ([Arthas] Corrosion), Buffubertip (Tooltip - Extended)
 {
 Unit armor reduced
 }
@@ -5934,24 +5460,12 @@ STRING 2243
 }
 
 STRING 2244
-// Units: h012 (Varian Wrynn), Name (Name)
+// Units: h012 ([AI] Varian Wrynn), Tip (Tooltip - Basic)
 {
 Varian Wrynn
 }
 
 STRING 2245
-// Units: h012 (Varian Wrynn), Tip (Tooltip - Basic)
-{
-Varian Wrynn
-}
-
-STRING 2246
-// Units: h012 (Varian Wrynn), EditorSuffix (Name - Editor Suffix)
-{
-[UI]
-}
-
-STRING 2247
 // Abilities: A031 ([UI] Legends: Varian Wrynn), Tip (Tooltip - Normal)
 {
 Varian Wrynn
@@ -6017,12 +5531,6 @@ STRING 2258
 Corrosion
 }
 
-STRING 2259
-// Buffs/Effects: B004 ([Arthas] Corrosion), Buffubertip (Tooltip - Extended)
-{
-Unit armor reduced
-}
-
 STRING 2260
 // Abilities: A029 ([Arthas] Corrosion), Ubertip (Tooltip - Normal - Extended)
 {
@@ -6047,15 +5555,389 @@ STRING 2263
  (Cargo)
 }
 
-STRING 2264
-// Abilities: A033 ([Arthas] Undead Horde), Name (Name)
+STRING 2267
+// Abilities: A035 ([Arthas] Disease Cloud), EditorSuffix (Editor Suffix)
 {
-[Arthas] Undead Horde
+(Melee)
 }
 
-STRING 2265
-// Abilities: A034 (TEST), Name (Name)
+STRING 2268
+// Abilities: A035 ([Arthas] Disease Cloud), Name (Name)
 {
-TEST
+[Arthas] Disease Cloud
+}
+
+STRING 2269
+// Abilities: A036 ([Arthas] Disease Cloud), Name (Name)
+{
+[Arthas] Disease Cloud
+}
+
+STRING 2270
+// Abilities: A036 ([Arthas] Disease Cloud), EditorSuffix (Editor Suffix)
+{
+ (Siege)
+}
+
+STRING 2271
+// Upgrades: R00J (Cannibalize), effect1 (Effect 1)
+{
+rarm
+}
+
+STRING 2272
+// Abilities: A034 ([Arthas] Deathfrost Shards), Name (Name)
+{
+[Arthas] Deathfrost Shards
+}
+
+STRING 2273
+// Abilities: A034 ([Arthas] Deathfrost Shards), Tip (Tooltip - Normal)
+{
+Deathfrost Shards
+}
+
+STRING 2277
+// Units: u015 ([Arthas] Wagon), Name (Name)
+{
+[Arthas] Wagon
+}
+
+STRING 2278
+// Upgrades: R00O (Exhume Corpses), Tip (Tooltip)
+{
+Research Wagon Upgrade
+}
+
+STRING 2279
+// Upgrades: R00O (Exhume Corpses), Ubertip (Tooltip - Extended)
+{
+Ghoul's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 2281
+// Abilities: A033 ([Arthas] Pandemic Horde), Ubertip (Tooltip - Normal - Extended)
+{
+Create a Zombie with Each Shot
+}
+
+STRING 2282
+// Abilities: A033 ([Arthas] Pandemic Horde), Name (Name)
+{
+[Arthas] Pandemic Horde
+}
+
+STRING 2283
+// Abilities: A033 ([Arthas] Pandemic Horde), Tip (Tooltip - Normal)
+{
+Pandemic Horde
+}
+
+STRING 2286
+// Abilities: A01A ([Arthas] Meat Grinder), Name (Name)
+{
+[Arthas] Meat Grinder
+}
+
+STRING 2287
+// Abilities: A023 ([Arthas] Blood Spray), Name (Name)
+{
+[Arthas] Blood Spray
+}
+
+STRING 2288
+// Abilities: A023 ([Arthas] Blood Spray), Tip (Tooltip - Normal)
+{
+Blood Spray
+}
+
+STRING 2291
+// Abilities: A01A ([Arthas] Meat Grinder), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Undead Eco-Activism. Zero Waste Production"|r
+
+Gain 150 mana by consuming a corpse.
+}
+
+STRING 2295
+// Upgrades: R017 (Freezing Breath), Name (Name)
+{
+[Arthas] Death Wyrm
+}
+
+STRING 2296
+// Upgrades: R017 (Freezing Breath), Tip (Tooltip)
+{
+Research Death Wyrm
+}
+
+STRING 2297
+// Upgrades: R017 (Freezing Breath), Ubertip (Tooltip - Extended)
+{
+Ghoul's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 2299
+// Upgrades: R00S (Ghoul Frenzy), Name (Name)
+{
+[Arthas] Frostmourne's Hunger
+}
+
+STRING 2300
+// Units: u01W ([Arthas] Poison Wyrm), Name (Name)
+{
+[Arthas] Poison Wyrm
+}
+
+STRING 2301
+// Upgrades: R018 (Fragmentation Shards), effect1 (Effect 1)
+{
+renw
+}
+
+STRING 2302
+// Abilities: A02A ([Arthas] Swallow), Ubertip (Tooltip - Normal - Extended)
+{
+The wyrm absorbs an enemy unit; however, no damage is dealt inside the wyrm's stomach, but you can deploy the unit at a convenient location for elimination
+}
+
+STRING 2303
+// Units: h002 ([Alterac] Pack Horse), Name (Name)
+{
+[Alterac] Pack Horse
+}
+
+STRING 2304
+// Units: n000 ([Alterac] Tavern), Name (Name)
+{
+[Alterac] Tavern
+}
+
+STRING 2305
+// Units: H004 ([Alterac] Stonebeard), Name (Name)
+{
+[Alterac] Stonebeard
+}
+
+STRING 2306
+// Units: h00S ([AI] Choose of Legends), Name (Name)
+{
+[AI] Choose of Legends
+}
+
+STRING 2307
+// Units: h00T ([AI] Arthas), Name (Name)
+{
+[AI] Arthas
+}
+
+STRING 2308
+// Units: h00U ([AI] Uther), Name (Name)
+{
+[AI] Uther
+}
+
+STRING 2309
+// Units: h006 ([AI] Add Unit), Name (Name)
+{
+[AI] Add Unit
+}
+
+STRING 2310
+// Units: h007 ([AI] Add Building), Name (Name)
+{
+[AI] Add Building
+}
+
+STRING 2311
+// Units: h008 ([AI] Add Hero), Name (Name)
+{
+[AI] Add Hero
+}
+
+STRING 2312
+// Units: h001 ([AI] Choose of Difficulty), Name (Name)
+{
+[AI] Choose of Difficulty
+}
+
+STRING 2313
+// Units: h012 ([AI] Varian Wrynn), Name (Name)
+{
+[AI] Varian Wrynn
+}
+
+STRING 2314
+// Units: u010 ([Arthas] Ghoul), Name (Name)
+{
+[Arthas] Ghoul
+}
+
+STRING 2315
+// Units: u011 ([Arthas] Crypt Fiend), Name (Name)
+{
+[Arthas] Crypt Fiend
+}
+
+STRING 2316
+// Units: u012 ([Arthas] Gargoyle), Name (Name)
+{
+[Arthas] Gargoyle
+}
+
+STRING 2317
+// Units: u014 ([Arthas] Abomination), Name (Name)
+{
+[Arthas] Abomination
+}
+
+STRING 2318
+// Units: u016 ([Arthas] Dead Wyrm), Name (Name)
+{
+[Arthas] Dead Wyrm
+}
+
+STRING 2319
+// Units: u00Y ([Arthas] Wild Ghoul), Name (Name)
+{
+[Arthas] Wild Ghoul
+}
+
+STRING 2320
+// Units: u01F ([Arthas] Frozen Ghoul), Name (Name)
+{
+[Arthas] Frozen Ghoul
+}
+
+STRING 2321
+// Units: u01H ([Arthas] Decaying Ghoul), Name (Name)
+{
+[Arthas] Decaying Ghoul
+}
+
+STRING 2322
+// Units: u01I ([Arthas] Ravenous Crypt Fiend), Name (Name)
+{
+[Arthas] Ravenous Crypt Fiend
+}
+
+STRING 2323
+// Units: u01J ([Arthas] Frost Crypt Fiend), Name (Name)
+{
+[Arthas] Frost Crypt Fiend
+}
+
+STRING 2324
+// Units: u01K ([Arthas] Toxic Crypt Fiend), Name (Name)
+{
+[Arthas] Toxic Crypt Fiend
+}
+
+STRING 2325
+// Units: u01L ([Arthas] Bloody Gargoyle), Name (Name)
+{
+[Arthas] Bloody Gargoyle
+}
+
+STRING 2326
+// Units: u01M ([Arthas] Northrend Gargoyle), Name (Name)
+{
+[Arthas] Northrend Gargoyle
+}
+
+STRING 2327
+// Units: u01N ([Arthas] Corrupted Gargoyle), Name (Name)
+{
+[Arthas] Corrupted Gargoyle
+}
+
+STRING 2328
+// Units: u01O ([Arthas] Fat Abomination), Name (Name)
+{
+[Arthas] Fat Abomination
+}
+
+STRING 2329
+// Units: u01P ([Arthas] Cold Abomination), Name (Name)
+{
+[Arthas] Cold Abomination
+}
+
+STRING 2330
+// Units: u01Q ([Arthas] Glutton Abomination), Name (Name)
+{
+[Arthas] Glutton Abomination
+}
+
+STRING 2331
+// Units: u01R ([Arthas] Blood Wagon), Name (Name)
+{
+[Arthas] Blood Wagon
+}
+
+STRING 2332
+// Units: u01S ([Arthas] Ice Wagon), Name (Name)
+{
+[Arthas] Ice Wagon
+}
+
+STRING 2333
+// Units: u01T ([Arthas] Plague Horde Wagon), Name (Name)
+{
+[Arthas] Plague Horde Wagon
+}
+
+STRING 2334
+// Units: u01U ([Arthas] Hungry Wyrm), Name (Name)
+{
+[Arthas] Hungry Wyrm
+}
+
+STRING 2335
+// Units: u01V ([Arthas] Frost Wyrm), Name (Name)
+{
+[Arthas] Frost Wyrm
+}
+
+STRING 2336
+// Upgrades: R00O (Exhume Corpses), Name (Name)
+{
+[Arthas] Wagon
+}
+
+STRING 2337
+// Upgrades: R018 (Fragmentation Shards), Name (Name)
+{
+[Arthas] Poison Wyrm
+}
+
+STRING 2338
+// Units: u00A ([Arthas] Acolyte), Name (Name)
+{
+[Arthas] Acolyte
+}
+
+STRING 2339
+// Abilities: A02E ([Arthas_StoneForm_Unholy] Effect Aura Unholy), Name (Name)
+{
+[Arthas_StoneForm_Unholy] Effect Aura Unholy
 }
 

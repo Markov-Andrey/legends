@@ -136,7 +136,8 @@ trigger gg_trg_ArthasNewRuneSecond= null
 trigger gg_trg_ArthasNewRuneThree= null
 trigger gg_trg_ArthasRuneResearch= null
 trigger gg_trg_ArthasRuneCancel= null
-trigger gg_trg_ArthasRunesUpdate= null
+trigger gg_trg_ArthasAutoUpgrades= null
+trigger gg_trg_ArthasDeadUnholyLvl3= null
 trigger gg_trg_ArthasFrostmourne= null
 trigger gg_trg_ArthasSouls= null
 trigger gg_trg_ArthasHarvestSoulDead= null
@@ -145,15 +146,14 @@ trigger gg_trg_ArthasDebugSoul= null
 trigger gg_trg_ArthasUnholySoulReforge= null
 trigger gg_trg_ArthasFrostSoulReforge= null
 trigger gg_trg_ArthasBloodSoulReforge= null
-trigger gg_trg_ArthasDeadUnholyLvl3= null
 trigger gg_trg_ArthasIceImpale= null
-trigger gg_trg_ArthasBloodFuel= null
 trigger gg_trg_ArthasAbominationUnholyDead= null
 trigger gg_trg_ArthasSurfeit= null
 trigger gg_trg_ArthasGlacialGusto= null
 trigger gg_trg_ArthasBloodFestAura= null
 trigger gg_trg_ArthasPlagueDeadCorpse= null
 trigger gg_trg_ArthasUnholyRune2and3= null
+trigger gg_trg_ArthasReplaceZombie= null
 trigger gg_trg_ArthasPlagueStoneForm= null
 trigger gg_trg_ArthasGhoulEffect= null
 trigger gg_trg_ArthasPlagueNecropolis= null
@@ -240,7 +240,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_ArthasReplaceZombie= null
+trigger gg_trg_ArthasMeatGrinder= null
 
     // Random Groups
 integer array gg_rg_000
@@ -801,7 +801,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'U005', - 224.0, 608.0, 270.000, 'U005')
     set u=BlzCreateUnitWithSkin(p, 'u01D', - 704.0, 640.0, 270.000, 'u01D')
     set u=BlzCreateUnitWithSkin(p, 'u01E', - 448.0, 1024.0, 270.000, 'u01E')
-    set u=BlzCreateUnitWithSkin(p, 'u00C', 256.0, 832.0, 270.000, 'u00C')
     set u=BlzCreateUnitWithSkin(p, 'u00Z', 1696.0, 672.0, 270.000, 'u00Z')
     set u=BlzCreateUnitWithSkin(p, 'u00Z', 1696.0, 416.0, 270.000, 'u00Z')
     set u=BlzCreateUnitWithSkin(p, 'u00Z', - 736.0, 1312.0, 270.000, 'u00Z')
@@ -817,8 +816,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 263.830, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'u01S', 133.4, 44.5, 332.017, 'u01S')
-    set u=BlzCreateUnitWithSkin(p, 'u01S', 224.7, - 162.7, 39.003, 'u01S')
+    set u=BlzCreateUnitWithSkin(p, 'u01U', 5.1, - 41.3, 28.488, 'u01U')
+    set u=BlzCreateUnitWithSkin(p, 'U006', - 74.5, - 198.7, 50.121, 'U006')
 endfunction
 
 //===========================================================================
@@ -1390,7 +1389,20 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngno', - 2764.9, - 349.8, 252.265, 'ngno')
     set u=BlzCreateUnitWithSkin(p, 'ngno', - 2783.7, - 515.4, 345.333, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2892.6, - 439.6, 256.121, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2766.4, - 439.2, 256.121, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'h002', - 2345.2, - 399.5, 210.450, 'h002')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2703.1, - 454.8, 256.121, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2720.4, - 531.0, 345.333, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2701.6, - 365.5, 252.265, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2632.4, - 451.1, 256.121, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2649.8, - 527.3, 345.333, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2631.0, - 361.7, 252.265, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2833.6, - 445.4, 256.121, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2851.0, - 521.6, 345.333, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2832.2, - 356.1, 252.265, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2563.7, - 443.5, 256.121, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2581.0, - 519.8, 345.333, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2562.2, - 354.2, 252.265, 'ngno')
 endfunction
 
 //===========================================================================
@@ -2557,7 +2569,7 @@ function Trig_ArthasIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_ArthasNewRuneThree)
     call EnableTrigger(gg_trg_ArthasDebugSoul)
     call EnableTrigger(gg_trg_ArthasRuneCancel)
-    call EnableTrigger(gg_trg_ArthasRunesUpdate)
+    call EnableTrigger(gg_trg_ArthasAutoUpgrades)
     call EnableTrigger(gg_trg_ArthasPlagueDeadCorpse)
     call EnableTrigger(gg_trg_ArthasUnholyRune2and3)
     call EnableTrigger(gg_trg_ArthasGhoulEffect)
@@ -2566,10 +2578,11 @@ function Trig_ArthasIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_ArthasSurfeit)
     call EnableTrigger(gg_trg_ArthasGlacialGusto)
     call EnableTrigger(gg_trg_ArthasAbominationUnholyDead)
-    call EnableTrigger(gg_trg_ArthasBloodFuel)
+    call EnableTrigger(gg_trg_ArthasMeatGrinder)
     call EnableTrigger(gg_trg_ArthasFrostmourne)
     call EnableTrigger(gg_trg_ArthasIceImpale)
     call EnableTrigger(gg_trg_ArthasDeadUnholyLvl3)
+    call EnableTrigger(gg_trg_ArthasReplaceZombie)
     call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 endfunction
 
@@ -2710,9 +2723,9 @@ function InitTrig_ArthasRuneCancel takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ArthasRunesUpdate
+// Trigger: ArthasAutoUpgrades
 //===========================================================================
-function Trig_ArthasRunesUpdate_Func002C takes nothing returns boolean
+function Trig_ArthasAutoUpgrades_Func002C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00G' ) ) then
         return false
     endif
@@ -2722,7 +2735,7 @@ function Trig_ArthasRunesUpdate_Func002C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasRunesUpdate_Func004C takes nothing returns boolean
+function Trig_ArthasAutoUpgrades_Func004C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00G' ) ) then
         return false
     endif
@@ -2732,7 +2745,7 @@ function Trig_ArthasRunesUpdate_Func004C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasRunesUpdate_Func006C takes nothing returns boolean
+function Trig_ArthasAutoUpgrades_Func006C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00I' ) ) then
         return false
     endif
@@ -2742,17 +2755,7 @@ function Trig_ArthasRunesUpdate_Func006C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasRunesUpdate_Func008C takes nothing returns boolean
-    if ( not ( GetResearched() == 'R00I' ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ArthasRunesUpdate_Func010C takes nothing returns boolean
+function Trig_ArthasAutoUpgrades_Func008C takes nothing returns boolean
     if ( not ( GetResearched() == 'R00H' ) ) then
         return false
     endif
@@ -2762,40 +2765,98 @@ function Trig_ArthasRunesUpdate_Func010C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasRunesUpdate_Actions takes nothing returns nothing
+function Trig_ArthasAutoUpgrades_Func010C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R017' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasAutoUpgrades_Actions takes nothing returns nothing
     // Blood (Level 1)
-    if ( Trig_ArthasRunesUpdate_Func002C() ) then
+    if ( Trig_ArthasAutoUpgrades_Func002C() ) then
         call SetPlayerTechResearchedSwap('R015', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     // Blood (Level 2)
-    if ( Trig_ArthasRunesUpdate_Func004C() ) then
+    if ( Trig_ArthasAutoUpgrades_Func004C() ) then
         call SetPlayerTechResearchedSwap('R00J', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     // Frost (Level 2)
-    if ( Trig_ArthasRunesUpdate_Func006C() ) then
+    if ( Trig_ArthasAutoUpgrades_Func006C() ) then
         call SetPlayerTechResearchedSwap('R00L', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
-    // Frost (Level 3)
-    if ( Trig_ArthasRunesUpdate_Func008C() ) then
+    // Unholy (Level 2)
+    if ( Trig_ArthasAutoUpgrades_Func008C() ) then
+        call SetPlayerTechResearchedSwap('R014', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
-    // Unholy (Level 2)
-    if ( Trig_ArthasRunesUpdate_Func010C() ) then
-        call SetPlayerTechResearchedSwap('Rupc', 1, GetOwningPlayer(GetTriggerUnit()))
-        call SetPlayerTechResearchedSwap('R014', 1, GetOwningPlayer(GetTriggerUnit()))
+    // Poison Wyrm
+    if ( Trig_ArthasAutoUpgrades_Func010C() ) then
+        call SetPlayerTechResearchedSwap('R018', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
 endfunction
 
 //===========================================================================
-function InitTrig_ArthasRunesUpdate takes nothing returns nothing
-    set gg_trg_ArthasRunesUpdate=CreateTrigger()
-    call DisableTrigger(gg_trg_ArthasRunesUpdate)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRunesUpdate, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddAction(gg_trg_ArthasRunesUpdate, function Trig_ArthasRunesUpdate_Actions)
+function InitTrig_ArthasAutoUpgrades takes nothing returns nothing
+    set gg_trg_ArthasAutoUpgrades=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasAutoUpgrades)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasAutoUpgrades, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddAction(gg_trg_ArthasAutoUpgrades, function Trig_ArthasAutoUpgrades_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ArthasDeadUnholyLvl3
+//===========================================================================
+function Trig_ArthasDeadUnholyLvl3_Func006C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01H' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01T' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01K' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01W' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ArthasDeadUnholyLvl3_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetDyingUnit())) == 3 ) ) then
+        return false
+    endif
+    if ( not Trig_ArthasDeadUnholyLvl3_Func006C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasDeadUnholyLvl3_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u001', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+    call SetUnitLifeBJ(GetLastCreatedUnit(), ( I2R(GetUnitLevel(GetDyingUnit())) * 7.50 ))
+    call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasDeadUnholyLvl3 takes nothing returns nothing
+    set gg_trg_ArthasDeadUnholyLvl3=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasDeadUnholyLvl3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasDeadUnholyLvl3, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasDeadUnholyLvl3, Condition(function Trig_ArthasDeadUnholyLvl3_Conditions))
+    call TriggerAddAction(gg_trg_ArthasDeadUnholyLvl3, function Trig_ArthasDeadUnholyLvl3_Actions)
 endfunction
 
 //===========================================================================
@@ -3350,57 +3411,6 @@ function InitTrig_ArthasBloodSoulReforge takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ArthasDeadUnholyLvl3
-//===========================================================================
-function Trig_ArthasDeadUnholyLvl3_Func006C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01H' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01Q' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01T' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01K' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01N' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetDyingUnit()) == 'u01W' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ArthasDeadUnholyLvl3_Conditions takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R00H', GetOwningPlayer(GetDyingUnit())) == 3 ) ) then
-        return false
-    endif
-    if ( not Trig_ArthasDeadUnholyLvl3_Func006C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ArthasDeadUnholyLvl3_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc(1, 'u001', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
-    call SetUnitLifeBJ(GetLastCreatedUnit(), ( I2R(GetUnitLevel(GetDyingUnit())) * 7.50 ))
-    call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GroupPickRandomUnit(GetUnitsOfTypeIdAll('U006')))
-endfunction
-
-//===========================================================================
-function InitTrig_ArthasDeadUnholyLvl3 takes nothing returns nothing
-    set gg_trg_ArthasDeadUnholyLvl3=CreateTrigger()
-    call DisableTrigger(gg_trg_ArthasDeadUnholyLvl3)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasDeadUnholyLvl3, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_ArthasDeadUnholyLvl3, Condition(function Trig_ArthasDeadUnholyLvl3_Conditions))
-    call TriggerAddAction(gg_trg_ArthasDeadUnholyLvl3, function Trig_ArthasDeadUnholyLvl3_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: ArthasIceImpale
 //===========================================================================
 function Trig_ArthasIceImpale_Func003C takes nothing returns boolean
@@ -3449,30 +3459,27 @@ function InitTrig_ArthasIceImpale takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ArthasBloodFuel
+// Trigger: ArthasMeatGrinder
 //===========================================================================
-function Trig_ArthasBloodFuel_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A02P' ) ) then
+function Trig_ArthasMeatGrinder_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A01A' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasBloodFuel_Actions takes nothing returns nothing
-    call SetUnitLifeBJ(GetSpellTargetUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) - 200.00 ))
-    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
-    call UnitAddAbilityBJ('A02Q', GetLastCreatedUnit())
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit())
-    call UnitApplyTimedLifeBJ(5.00, 'BTLF', GetLastCreatedUnit())
+function Trig_ArthasMeatGrinder_Actions takes nothing returns nothing
+    call SetUnitLifeBJ(GetSpellAbilityUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetSpellAbilityUnit()) + 150.00 ))
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Objects\\Spawnmodels\\Human\\HumanLargeDeathExplode\\HumanLargeDeathExplode.mdl")
 endfunction
 
 //===========================================================================
-function InitTrig_ArthasBloodFuel takes nothing returns nothing
-    set gg_trg_ArthasBloodFuel=CreateTrigger()
-    call DisableTrigger(gg_trg_ArthasBloodFuel)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasBloodFuel, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_ArthasBloodFuel, Condition(function Trig_ArthasBloodFuel_Conditions))
-    call TriggerAddAction(gg_trg_ArthasBloodFuel, function Trig_ArthasBloodFuel_Actions)
+function InitTrig_ArthasMeatGrinder takes nothing returns nothing
+    set gg_trg_ArthasMeatGrinder=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasMeatGrinder)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasMeatGrinder, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ArthasMeatGrinder, Condition(function Trig_ArthasMeatGrinder_Conditions))
+    call TriggerAddAction(gg_trg_ArthasMeatGrinder, function Trig_ArthasMeatGrinder_Actions)
 endfunction
 
 //===========================================================================
@@ -3843,6 +3850,8 @@ endfunction
 
 //===========================================================================
 // Trigger: ArthasReplaceZombie
+//
+// A crutch for replacing zombies with a bug
 //===========================================================================
 function Trig_ArthasReplaceZombie_Func001Func001C takes nothing returns boolean
     if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_SAPPER) == false ) ) then
@@ -3867,6 +3876,7 @@ endfunction
 //===========================================================================
 function InitTrig_ArthasReplaceZombie takes nothing returns nothing
     set gg_trg_ArthasReplaceZombie=CreateTrigger()
+    call DisableTrigger(gg_trg_ArthasReplaceZombie)
     call TriggerRegisterTimerEventPeriodic(gg_trg_ArthasReplaceZombie, 1.00)
     call TriggerAddAction(gg_trg_ArthasReplaceZombie, function Trig_ArthasReplaceZombie_Actions)
 endfunction
@@ -8412,7 +8422,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasNewRuneThree()
     call InitTrig_ArthasRuneResearch()
     call InitTrig_ArthasRuneCancel()
-    call InitTrig_ArthasRunesUpdate()
+    call InitTrig_ArthasAutoUpgrades()
+    call InitTrig_ArthasDeadUnholyLvl3()
     call InitTrig_ArthasFrostmourne()
     call InitTrig_ArthasSouls()
     call InitTrig_ArthasHarvestSoulDead()
@@ -8421,9 +8432,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasUnholySoulReforge()
     call InitTrig_ArthasFrostSoulReforge()
     call InitTrig_ArthasBloodSoulReforge()
-    call InitTrig_ArthasDeadUnholyLvl3()
     call InitTrig_ArthasIceImpale()
-    call InitTrig_ArthasBloodFuel()
+    call InitTrig_ArthasMeatGrinder()
     call InitTrig_ArthasAbominationUnholyDead()
     call InitTrig_ArthasSurfeit()
     call InitTrig_ArthasGlacialGusto()
