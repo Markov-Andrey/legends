@@ -2342,21 +2342,6 @@ STRING 1542
 Research Crypt Fiend Upgrade
 }
 
-STRING 1544
-// Upgrades: R00O (Exhume Corpses), Ubertip (Tooltip - Extended)
-{
-Ghoul's reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
-
-|cFF007EFFFrost:|r
-Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
-
-|cff00ff00Unholy:|r
-Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
-}
-
 STRING 1547
 // Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), EditorSuffix (Editor Suffix)
 {
@@ -2471,12 +2456,6 @@ STRING 1573
 [Arthas_Effect] Blood
 }
 
-STRING 1574
-// Abilities: A015 ([Arthas_Effect] Ice), Name (Name)
-{
-[Arthas_Effect] Ice
-}
-
 STRING 1575
 // Abilities: A016 ([Arthas_Effect] Unholy), Name (Name)
 {
@@ -2547,22 +2526,6 @@ STRING 1600
 // Upgrades: R008 (Stone Form), Name (Name)
 {
 [Arthas] Stone Form
-}
-
-STRING 1601
-// Upgrades: R008 (Stone Form), Ubertip (Tooltip - Extended)
-{
-Enables the ability for Gargoyles to assume Stone Form. Stone Form transforms the Gargoyle into a statue with high armor, spell immunity, and regeneration. The Gargoyle cannot attack in this form.
-Stone Form reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
-
-|cFF007EFFFrost:|r
-Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
-
-|cff00ff00Unholy:|r
-Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
 STRING 1602
@@ -4396,12 +4359,6 @@ STRING 2151
 Icecrown Plague Spread
 }
 
-STRING 2152
-// Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
-{
-Plague continues to grow as Necropolis's mana pool grows
-}
-
 STRING 2153
 // Abilities: A02Y ([Arthas] Ice Impale), Name (Name)
 {
@@ -5068,21 +5025,6 @@ STRING 2278
 Research Wagon Upgrade
 }
 
-STRING 2279
-// Upgrades: R017 (Freezing Breath), Ubertip (Tooltip - Extended)
-{
-Ghoul's reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
-
-|cFF007EFFFrost:|r
-Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
-
-|cff00ff00Unholy:|r
-Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
-}
-
 STRING 2281
 // Abilities: A033 ([Arthas] Pandemic Horde), Ubertip (Tooltip - Normal - Extended)
 {
@@ -5119,14 +5061,6 @@ STRING 2288
 Blood Spray
 }
 
-STRING 2291
-// Abilities: A01A ([Arthas] Meat Grinder), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF24BBFF"Undead Eco-Activism. Zero Waste Production"|r
-
-Gain 150 mana by consuming a corpse.
-}
-
 STRING 2295
 // Upgrades: R017 (Freezing Breath), Name (Name)
 {
@@ -5155,12 +5089,6 @@ STRING 2301
 // Upgrades: R018 (Fragmentation Shards), effect1 (Effect 1)
 {
 renw
-}
-
-STRING 2302
-// Abilities: A02A ([Arthas] Swallow), Ubertip (Tooltip - Normal - Extended)
-{
-The wyrm absorbs an enemy unit; however, no damage is dealt inside the wyrm's stomach, but you can deploy the unit at a convenient location for elimination
 }
 
 STRING 2303
@@ -5867,5 +5795,138 @@ STRING 2434
 // Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Name (Name)
 {
 [Arthas_Abomination_Unholy] Ghoulish Return
+}
+
+STRING 2435
+// Abilities: A02A ([Arthas] Swallow), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the enemy unit without dealing damage, allowing you to safely reposition and destroy it later
+}
+
+STRING 2437
+// Abilities: A02P ([Arthas] Noxious Breath), Name (Name)
+{
+[Arthas] Noxious Breath
+}
+
+STRING 2438
+// Abilities: A02P ([Arthas] Noxious Breath), Tip (Tooltip - Normal)
+{
+Noxious Breath
+}
+
+STRING 2439
+// Abilities: A02P ([Arthas] Noxious Breath), Ubertip (Tooltip - Normal - Extended)
+{
+Increases attack area and damage around the target.
+}
+
+STRING 2440
+// Upgrades: R017 (Freezing Breath), Ubertip (Tooltip - Extended)
+{
+Wyrm's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Swallow - Absorbs the enemy unit without dealing damage, allowing you to safely reposition and destroy it later
+
+|cFF007EFFFrost:|r
+Ice of Northrend - Gives <A027,DataA1>% chance to Freeze the enemy for <A027,Dur1> seconds.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 2450
+// Abilities: A037 ([Arthas_Effect] Frost), Name (Name)
+{
+[Arthas_Effect] Frost
+}
+
+STRING 2452
+// Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
+{
+Plague continues to grow as unit mana pool grows
+}
+
+STRING 2454
+// Abilities: A02H ([Arthas_StoneForm_Frost] Winds of Northrend), Ubertip (Tooltip - Normal - Extended)
+{
+Reduce nearby enemy units' movement speed by <A02H,DataA1,%>% and attack rate by <A02H,DataB1,%>%.
+}
+
+STRING 2455
+// Upgrades: R008 (Stone Form), Ubertip (Tooltip - Extended)
+{
+Enables the ability for Gargoyles to assume Stone Form. Stone Form transforms the Gargoyle into a statue with high armor, spell immunity, and regeneration. The Gargoyle cannot attack in this form.
+Stone Form reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Feast Aura - Nearby friendly melee units gain <A019,DataA1,%>% of their attack damage when they hit enemy units. Compatible with other lifesteal auras.
+
+|cFF007EFFFrost:|r
+Winds of Northrend - Reduce nearby enemy units' movement speed by <A02H,DataA1,%>% and attack rate by <A02H,DataB1,%>%.
+
+|cff00ff00Unholy:|r
+Icecrown Plague Spread - Plague continues to grow as unit mana pool grows.
+}
+
+STRING 2456
+// Abilities: A034 ([Arthas] Deathfrost Shards), Ubertip (Tooltip - Normal - Extended)
+{
+Bombards an area with shards, dealing up to <A034,Data1> damage to nearby enemy land units and stunning them for <A034,Dur1> second.
+}
+
+STRING 2457
+// Abilities: A01A ([Arthas] Meat Grinder), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Undead Eco-Activism. Zero Waste Production"|r
+
+Gain <A01A,Rng1> mana by consuming a corpse.
+}
+
+STRING 2458
+// Abilities: A01A ([Arthas] Meat Grinder), Tip (Tooltip - Normal)
+{
+Meat Grinder
+}
+
+STRING 2459
+// Abilities: A023 ([Arthas] Blood Spray), Ubertip (Tooltip - Normal - Extended)
+{
+Restores <A023,DataA1> hit points to nearby friendly units.
+}
+
+STRING 2460
+// Upgrades: R00O (Exhume Corpses), Ubertip (Tooltip - Extended)
+{
+Wagon's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Meat Grinder - Gain <A01A,Rng1> mana by consuming a corpse.
+Blood Spray - Restores <A023,DataA1> hit points to nearby friendly units.
+
+|cFF007EFFFrost:|r
+Deathfrost Shards - Bombards an area with shards, dealing up to <A034,Data1> damage to nearby enemy land units and stunning them for <A034,Dur1> second.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 2461
+// Units: U006 (Death Knight), Awakentip (Tooltip - Awaken)
+{
+Revive Arthas
+}
+
+STRING 2462
+// Units: U006 (Death Knight), Revivetip (Tooltip - Revive)
+{
+Revive Arthas
+}
+
+STRING 2463
+// Units: U006 (Death Knight), Tip (Tooltip - Basic)
+{
+Summon Arthas
 }
 
