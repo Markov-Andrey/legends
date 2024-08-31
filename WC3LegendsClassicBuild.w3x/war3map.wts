@@ -1568,21 +1568,6 @@ STRING 1209
 Hearthstone
 }
 
-STRING 1246
-{
-|cffff0000Not enough souls to reforge!|r
-}
-
-STRING 1247
-{
-|cffff0000Not enough souls to reforge!|r
-}
-
-STRING 1248
-{
-|cffff0000Not enough souls to reforge!|r
-}
-
 STRING 1254
 // Units: u015 ([Arthas] Wagon), Tip (Tooltip - Basic)
 {
@@ -1607,18 +1592,6 @@ STRING 1260
 rlev
 }
 
-STRING 1261
-// Upgrades: R00G (Cannibalize), Name (Name)
-{
-Blood Rune
-}
-
-STRING 1262
-// Upgrades: R00G (Cannibalize), Name (Name)
-{
-Blood Rune
-}
-
 STRING 1264
 // Upgrades: R00G (Cannibalize), Tip (Tooltip)
 {
@@ -1637,18 +1610,6 @@ STRING 1268
 Blood Rune Novice
 }
 
-STRING 1270
-// Upgrades: R00I (Cannibalize), Name (Name)
-{
-Frost Rune
-}
-
-STRING 1271
-// Upgrades: R00I (Cannibalize), Name (Name)
-{
-Frost Rune
-}
-
 STRING 1273
 // Upgrades: R00I (Cannibalize), Tip (Tooltip)
 {
@@ -1665,18 +1626,6 @@ STRING 1277
 // Upgrades: R00I (Cannibalize), Tip (Tooltip)
 {
 Frost Rune Novice
-}
-
-STRING 1279
-// Upgrades: R00H (Cannibalize), Name (Name)
-{
-Unholy Rune
-}
-
-STRING 1280
-// Upgrades: R00H (Cannibalize), Name (Name)
-{
-Unholy Rune
 }
 
 STRING 1282
@@ -2015,24 +1964,6 @@ STRING 1411
 // Upgrades: R007 (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Name (Name)
 {
 [Arthas] Unholy Strength
-}
-
-STRING 1412
-// Upgrades: R00G (Cannibalize), Name (Name)
-{
-[Arthas] Blood Rune
-}
-
-STRING 1413
-// Upgrades: R00H (Cannibalize), Name (Name)
-{
-[Arthas] Unholy Rune
-}
-
-STRING 1414
-// Upgrades: R00I (Cannibalize), Name (Name)
-{
-[Arthas] Frost Rune
 }
 
 STRING 1421
@@ -4480,12 +4411,6 @@ STRING 2111
 [Arthas] Stun no effect
 }
 
-STRING 2112
-// Upgrades: R014 (Cannibalize), Name (Name)
-{
-[Arthas] Unholy
-}
-
 STRING 2113
 // Upgrades: R014 (Cannibalize), EditorSuffix (Editor Suffix)
 {
@@ -4498,55 +4423,10 @@ STRING 2114
 rhpo
 }
 
-STRING 2115
-// Upgrades: R015 (Cannibalize), Name (Name)
-{
-[Arthas] Blood
-}
-
 STRING 2116
 // Upgrades: R015 (Cannibalize), EditorSuffix (Editor Suffix)
 {
 (Level 1)
-}
-
-STRING 2133
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced frost unit reforging
-
-Rune level:
-1. Add mana to units, armor reduce |R
-|cFF4F8CFF2. Increased mana regeneration
-|cff6f6f6f3. Killing replenishes mana|r
-}
-
-STRING 2134
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master frost unit reforging
-
-Rune level:
-1. Add mana to units, armor reduce |R
-2. Increased mana regeneration
-|cFF4F8CFF3. Killing replenishes mana|r
-}
-
-STRING 2135
-// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks frost reforging units
-
-Rune level:
-|cFF4F8CFF1. Add mana to units, armor reduce |R
-|cff6f6f6f2. Increased mana regeneration
-3. Killing replenishes mana|r
-}
-
-STRING 2140
-// Upgrades: R00J (Cannibalize), Name (Name)
-{
-[Arthas] Blood
 }
 
 STRING 2141
@@ -4555,22 +4435,10 @@ STRING 2141
 (Level 2)
 }
 
-STRING 2143
-// Upgrades: R00L (Cannibalize), Name (Name)
-{
-[Arthas] Frost
-}
-
 STRING 2144
 // Upgrades: R00L (Cannibalize), EditorSuffix (Editor Suffix)
 {
 (Level 2)
-}
-
-STRING 2145
-// Upgrades: R016 (Cannibalize), Name (Name)
-{
-[Arthas] Unholy
 }
 
 STRING 2146
@@ -5586,159 +5454,6 @@ STRING 2339
 [Arthas_StoneForm_Unholy] Effect Aura Unholy
 }
 
-STRING 2340
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-1. Higher health, damage reduction|r
-|cFFFF7A6F2. Additional armor
-|cff6f6f6f3. Personal vampirism|r
-}
-
-STRING 2341
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-1. Higher health, damage reduction|r
-2. Additional armor
-|cFFFF7A6F3. Personal vampirism|r
-}
-
-STRING 2342
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-|cFFFF7A6F1. Higher health, damage reduction|r
-|cff6f6f6f2. Additional armor
-3. Personal vampirism|r
-}
-
-STRING 2343
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-|cFF4F8CFF1. Add mana to units, armor reduce |R
-|cff6f6f6f2. Increased mana regeneration
-3. Killing replenishes mana|r
-}
-
-STRING 2344
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-1. Add mana to units, armor reduce |R
-|cFF4F8CFF2. Increased mana regeneration
-|cff6f6f6f3. Killing replenishes mana|r
-}
-
-STRING 2345
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-1. Add mana to units, armor reduce |R
-2. Increased mana regeneration
-|cFF4F8CFF3. Killing replenishes mana|r
-}
-
-STRING 2346
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-|cFF2ED8641. The cost in the limit has been reduced, health reserve reduced
-|cff6f6f6f2. Spreading the plague, army consume less food, health reserve reduced
-3. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2347
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-1. The cost in the limit has been reduced, health reserve reduced
-|cFF2ED8642. Spreading the plague, army consume less food, health reserve reduced
-|cff6f6f6f3. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2348
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Rune level:
-1. The cost in the limit has been reduced, health reserve reduced
-2. Spreading the plague, army consume less food, health reserve reduced
-|cFF2ED8643. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2349
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced bloody unit reforging
-
-Rune level:
-1. Higher health, damage reduction|r
-|cFFFF7A6F2. Additional armor
-|cff6f6f6f3. Personal vampirism|r
-}
-
-STRING 2350
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master bloody unit reforging
-
-Rune level:
-1. Higher health, damage reduction|r
-2. Additional armor
-|cFFFF7A6F3. Personal vampirism|r
-}
-
-STRING 2351
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks bloody reforging units
-
-Rune level:
-|cFFFF7A6F1. Higher health, damage reduction|r
-|cff6f6f6f2. Additional armor
-3. Personal vampirism|r
-}
-
-STRING 2352
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks bloody reforging units
-
-Rune level:
-1. The cost in the limit has been reduced, health reserve reduced
-|cFF2ED8642. Spreading the plague, army consume less food, health reserve reduced
-|cff6f6f6f3. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2353
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks bloody reforging units
-
-Rune level:
-1. The cost in the limit has been reduced, health reserve reduced
-2. Spreading the plague, army consume less food, health reserve reduced
-|cFF2ED8643. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2354
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks bloody reforging units
-
-Rune level:
-|cFF2ED8641. The cost in the limit has been reduced, health reserve reduced
-|cff6f6f6f2. Spreading the plague, army consume less food, health reserve reduced
-3. Return some of the spent souls after the death of a unit
-|r
-}
-
 STRING 2355
 // Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
 {
@@ -5850,5 +5565,280 @@ Overwhelming Sadness - Sends a bolt of negative energy that burns up to <A02I,Da
 
 |cff00ff00Unholy:|r
 Necrotic Breath - Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
+}
+
+STRING 2372
+{
+|cffff0000Not enough souls to reforge!|r
+}
+
+STRING 2377
+// Upgrades: R00G (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune Novice
+}
+
+STRING 2378
+// Upgrades: R00G (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune Advanced
+}
+
+STRING 2379
+// Upgrades: R00G (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune Mastery
+}
+
+STRING 2380
+// Upgrades: R00H (Cannibalize), Name (Name)
+{
+[Arthas] Unholy Rune Novice
+}
+
+STRING 2381
+// Upgrades: R00H (Cannibalize), Name (Name)
+{
+[Arthas] Unholy Rune Advanced
+}
+
+STRING 2382
+// Upgrades: R00H (Cannibalize), Name (Name)
+{
+[Arthas] Unholy Rune Mastery
+}
+
+STRING 2383
+// Upgrades: R00I (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune Novice
+}
+
+STRING 2384
+// Upgrades: R00I (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune Advanced
+}
+
+STRING 2385
+// Upgrades: R00I (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune Mastery
+}
+
+STRING 2386
+// Upgrades: R014 (Cannibalize), Name (Name)
+{
+[Arthas] Unholy Rune Novice
+}
+
+STRING 2387
+// Upgrades: R015 (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune Novice
+}
+
+STRING 2388
+// Upgrades: R00J (Cannibalize), Name (Name)
+{
+[Arthas] Blood Rune Advanced
+}
+
+STRING 2389
+// Upgrades: R00L (Cannibalize), Name (Name)
+{
+[Arthas] Frost Rune Advanced
+}
+
+STRING 2390
+// Upgrades: R016 (Cannibalize), Name (Name)
+{
+[Arthas] Unholy Rune Advanced
+}
+
+STRING 2391
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+New Level of Mastery in Blood Rune for units Reforging
+
+Rune level:
+1. Novice. Higher health, damage reduction|r
+|cFFFF7A6F2. Advanced. Additional armor
+|cff6f6f6f3. Mastery. Personal vampirism|r
+}
+
+STRING 2392
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+New Level of Mastery in Blood Rune for units Reforging
+
+Rune level:
+1. Novice. Higher health, damage reduction|r
+2. Advanced. Additional armor
+|cFFFF7A6F3. Mastery. Personal vampirism|r
+}
+
+STRING 2394
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+New Level of Mastery in Unholy Rune for units Reforging
+
+Rune level:
+1.Novice. The cost in the limit has been reduced, health reserve reduced
+|cFF2ED8642. Advanced. Spreading the plague, army consume less food, health reserve reduced
+|cff6f6f6f3. Mastery. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2395
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+New Level of Mastery in Unholy Rune for units Reforging
+
+Rune level:
+1.Novice. The cost in the limit has been reduced, health reserve reduced
+2. Advanced. Spreading the plague, army consume less food, health reserve reduced
+|cFF2ED8643. Mastery. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2397
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+New Level of Mastery in Frost Rune for units Reforging
+
+Rune level:
+1. Novice. Add mana to units, armor reduce |R
+|cFF4F8CFF2. Advanced. Increased mana regeneration
+|cff6f6f6f3. Mastery. Killing replenishes mana|r
+}
+
+STRING 2398
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+New Level of Mastery in Frost Rune for units Reforging
+
+Rune level:
+1. Novice. Add mana to units, armor reduce |R
+2. Advanced. Increased mana regeneration
+|cFF4F8CFF3. Mastery. Killing replenishes mana|r
+}
+
+STRING 2400
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Novice. Higher health, damage reduction|r
+|cFFFF7A6F2. Advanced. Additional armor
+|cff6f6f6f3. Mastery. Personal vampirism|r
+}
+
+STRING 2401
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Novice. Higher health, damage reduction|r
+2. Advanced. Additional armor
+|cFFFF7A6F3. Mastery. Personal vampirism|r
+}
+
+STRING 2402
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+|cFFFF7A6F1. Novice. Higher health, damage reduction|r
+|cff6f6f6f2. Advanced. Additional armor
+3. Mastery. Personal vampirism|r
+}
+
+STRING 2403
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+|cFF4F8CFF1. Novice. Add mana to units, armor reduce |R
+|cff6f6f6f2. Advanced. Increased mana regeneration
+3. Mastery. Killing replenishes mana|r
+}
+
+STRING 2404
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Novice. Add mana to units, armor reduce |R
+|cFF4F8CFF2. Advanced. Increased mana regeneration
+|cff6f6f6f3. Mastery. Killing replenishes mana|r
+}
+
+STRING 2405
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Novice. Add mana to units, armor reduce |R
+2. Advanced. Increased mana regeneration
+|cFF4F8CFF3. Mastery. Killing replenishes mana|r
+}
+
+STRING 2406
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+|cFF2ED8641.Novice. The cost in the limit has been reduced, health reserve reduced
+|cff6f6f6f2. Advanced. Spreading the plague, army consume less food, health reserve reduced
+3. Mastery. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2407
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1.Novice. The cost in the limit has been reduced, health reserve reduced
+|cFF2ED8642. Advanced. Spreading the plague, army consume less food, health reserve reduced
+|cff6f6f6f3. Mastery. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2408
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1.Novice. The cost in the limit has been reduced, health reserve reduced
+2. Advanced. Spreading the plague, army consume less food, health reserve reduced
+|cFF2ED8643. Mastery. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2409
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlock Unit Reforging through the Blood Rune
+
+Rune level:
+|cFFFF7A6F1. Novice. Higher health, damage reduction|r
+|cff6f6f6f2. Advanced. Additional armor
+3. Mastery. Personal vampirism|r
+}
+
+STRING 2410
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlock Unit Reforging through the Unholy Rune
+
+Rune level:
+|cFF2ED8641.Novice. The cost in the limit has been reduced, health reserve reduced
+|cff6f6f6f2. Advanced. Spreading the plague, army consume less food, health reserve reduced
+3. Mastery. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2411
+// Upgrades: R00I (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlock Unit Reforging through the Frost Rune
+
+Rune level:
+|cFF4F8CFF1. Novice. Add mana to units, armor reduce |R
+|cff6f6f6f2. Advanced. Increased mana regeneration
+3. Mastery. Killing replenishes mana|r
 }
 
