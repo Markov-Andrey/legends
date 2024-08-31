@@ -788,26 +788,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'u01A', 640.0, - 320.0, 270.000, 'u01A')
-    set u=BlzCreateUnitWithSkin(p, 'u01C', 1248.0, - 416.0, 270.000, 'u01C')
-    set u=BlzCreateUnitWithSkin(p, 'u003', 1536.0, - 64.0, 270.000, 'u003')
-    set u=BlzCreateUnitWithSkin(p, 'U005', - 224.0, 608.0, 270.000, 'U005')
-    set u=BlzCreateUnitWithSkin(p, 'u01D', - 704.0, 640.0, 270.000, 'u01D')
-    set u=BlzCreateUnitWithSkin(p, 'u01E', - 448.0, 1024.0, 270.000, 'u01E')
-    set u=BlzCreateUnitWithSkin(p, 'u00Z', 1696.0, 672.0, 270.000, 'u00Z')
-    set u=BlzCreateUnitWithSkin(p, 'u00Z', 1696.0, 416.0, 270.000, 'u00Z')
-    set u=BlzCreateUnitWithSkin(p, 'u00Z', - 736.0, 1312.0, 270.000, 'u00Z')
-    set u=BlzCreateUnitWithSkin(p, 'u00Z', - 416.0, 1376.0, 270.000, 'u00Z')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -816,8 +796,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 263.830, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'u01U', 5.1, - 41.3, 28.488, 'u01U')
-    set u=BlzCreateUnitWithSkin(p, 'U006', - 74.5, - 198.7, 50.121, 'U006')
 endfunction
 
 //===========================================================================
@@ -1387,22 +1365,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2764.9, - 349.8, 252.265, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2783.7, - 515.4, 345.333, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2766.4, - 439.2, 256.121, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'h002', - 2345.2, - 399.5, 210.450, 'h002')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2703.1, - 454.8, 256.121, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2720.4, - 531.0, 345.333, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2701.6, - 365.5, 252.265, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2632.4, - 451.1, 256.121, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2649.8, - 527.3, 345.333, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2631.0, - 361.7, 252.265, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2833.6, - 445.4, 256.121, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2851.0, - 521.6, 345.333, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2832.2, - 356.1, 252.265, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2563.7, - 443.5, 256.121, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2581.0, - 519.8, 345.333, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2562.2, - 354.2, 252.265, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2602.1, - 306.1, 44.353, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2616.1, - 441.8, 351.057, 'ngna')
 endfunction
 
 //===========================================================================
@@ -1435,7 +1399,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer4()
     call CreateBuildingsForPlayer5()
 endfunction
@@ -3069,35 +3032,35 @@ function Trig_ArthasUnholySoulReforge_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u016' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u012' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u015' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001C takes nothing returns boolean
+function Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u014' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasUnholySoulReforge_Func001Func002Func001C takes nothing returns boolean
+function Trig_ArthasUnholySoulReforge_Func001Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u011' ) ) then
         return false
     endif
@@ -3121,37 +3084,37 @@ endfunction
 function Trig_ArthasUnholySoulReforge_Actions takes nothing returns nothing
     if ( Trig_ArthasUnholySoulReforge_Func001C() ) then
         if ( Trig_ArthasUnholySoulReforge_Func001Func002C() ) then
-            call UnitAddAbilityBJ('S00H', GetSpellTargetUnit())
+            call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01H', bj_UNIT_STATE_METHOD_RELATIVE)
             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
             set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
-            if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001C() ) then
-                call UnitAddAbilityBJ('S00F', GetSpellTargetUnit())
+            if ( Trig_ArthasUnholySoulReforge_Func001Func002Func002C() ) then
+                call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01K', bj_UNIT_STATE_METHOD_RELATIVE)
                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
                 set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
-                if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001C() ) then
-                    call UnitAddAbilityBJ('S00E', GetSpellTargetUnit())
+                if ( Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002C() ) then
+                    call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01Q', bj_UNIT_STATE_METHOD_RELATIVE)
                     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
                     set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                     call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
-                    if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001C() ) then
-                        call UnitAddAbilityBJ('S00I', GetSpellTargetUnit())
+                    if ( Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002Func002C() ) then
+                        call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01T', bj_UNIT_STATE_METHOD_RELATIVE)
                         call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
                         set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                         call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
-                        if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001C() ) then
-                            call UnitAddAbilityBJ('S00G', GetSpellTargetUnit())
+                        if ( Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002Func002Func002C() ) then
+                            call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01N', bj_UNIT_STATE_METHOD_RELATIVE)
                             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
                             set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
-                            if ( Trig_ArthasUnholySoulReforge_Func001Func002Func001Func001Func001Func001Func001C() ) then
-                                call UnitAddAbilityBJ('S00J', GetSpellTargetUnit())
+                            if ( Trig_ArthasUnholySoulReforge_Func001Func002Func002Func002Func002Func002Func002C() ) then
+                                call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01W', bj_UNIT_STATE_METHOD_RELATIVE)
                                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
                                 set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
@@ -3186,35 +3149,35 @@ function Trig_ArthasFrostSoulReforge_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002Func002Func001Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u016' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002Func002Func001C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u012' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u015' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001C takes nothing returns boolean
+function Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u014' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasFrostSoulReforge_Func001Func002Func001C takes nothing returns boolean
+function Trig_ArthasFrostSoulReforge_Func001Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u011' ) ) then
         return false
     endif
@@ -3238,37 +3201,37 @@ endfunction
 function Trig_ArthasFrostSoulReforge_Actions takes nothing returns nothing
     if ( Trig_ArthasFrostSoulReforge_Func001C() ) then
         if ( Trig_ArthasFrostSoulReforge_Func001Func002C() ) then
-            call UnitAddAbilityBJ('S00D', GetSpellTargetUnit())
+            call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01F', bj_UNIT_STATE_METHOD_RELATIVE)
             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
             set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
-            if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001C() ) then
-                call UnitAddAbilityBJ('S009', GetSpellTargetUnit())
+            if ( Trig_ArthasFrostSoulReforge_Func001Func002Func002C() ) then
+                call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01J', bj_UNIT_STATE_METHOD_RELATIVE)
                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
                 set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
-                if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001C() ) then
-                    call UnitAddAbilityBJ('S008', GetSpellTargetUnit())
+                if ( Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002C() ) then
+                    call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01P', bj_UNIT_STATE_METHOD_RELATIVE)
                     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
                     set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                     call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
-                    if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001C() ) then
-                        call UnitAddAbilityBJ('S00B', GetSpellTargetUnit())
+                    if ( Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002Func002C() ) then
+                        call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01S', bj_UNIT_STATE_METHOD_RELATIVE)
                         call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
                         set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                         call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
-                        if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001C() ) then
-                            call UnitAddAbilityBJ('S00A', GetSpellTargetUnit())
+                        if ( Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002Func002Func001C() ) then
+                            call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01M', bj_UNIT_STATE_METHOD_RELATIVE)
                             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
                             set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
-                            if ( Trig_ArthasFrostSoulReforge_Func001Func002Func001Func001Func001Func001Func001C() ) then
-                                call UnitAddAbilityBJ('S00C', GetSpellTargetUnit())
+                            if ( Trig_ArthasFrostSoulReforge_Func001Func002Func002Func002Func002Func001Func002C() ) then
+                                call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01V', bj_UNIT_STATE_METHOD_RELATIVE)
                                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
                                 set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
@@ -3303,28 +3266,28 @@ function Trig_ArthasBloodSoulReforge_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u016' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u012' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001C takes nothing returns boolean
+function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u015' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001C takes nothing returns boolean
+function Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u014' ) ) then
         return false
     endif
@@ -3355,37 +3318,37 @@ endfunction
 function Trig_ArthasBloodSoulReforge_Actions takes nothing returns nothing
     if ( Trig_ArthasBloodSoulReforge_Func001C() ) then
         if ( Trig_ArthasBloodSoulReforge_Func001Func003C() ) then
-            call UnitAddAbilityBJ('S002', GetSpellTargetUnit())
+            call ReplaceUnitBJ(GetSpellTargetUnit(), 'u00Y', bj_UNIT_STATE_METHOD_RELATIVE)
             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
             set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
         else
             if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001C() ) then
-                call UnitAddAbilityBJ('S003', GetSpellTargetUnit())
+                call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01I', bj_UNIT_STATE_METHOD_RELATIVE)
                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
                 set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
             else
-                if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001C() ) then
-                    call UnitAddAbilityBJ('S004', GetSpellTargetUnit())
+                if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002C() ) then
+                    call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01O', bj_UNIT_STATE_METHOD_RELATIVE)
                     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
                     set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                     call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                 else
-                    if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001C() ) then
-                        call UnitAddAbilityBJ('S005', GetSpellTargetUnit())
+                    if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002Func002C() ) then
+                        call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01R', bj_UNIT_STATE_METHOD_RELATIVE)
                         call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
                         set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                         call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                     else
-                        if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001C() ) then
-                            call UnitAddAbilityBJ('S006', GetSpellTargetUnit())
+                        if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002Func002Func002C() ) then
+                            call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01L', bj_UNIT_STATE_METHOD_RELATIVE)
                             call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
                             set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                             call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
                         else
-                            if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func001Func001Func001Func001C() ) then
-                                call UnitAddAbilityBJ('S007', GetSpellTargetUnit())
+                            if ( Trig_ArthasBloodSoulReforge_Func001Func003Func001Func002Func002Func002Func002C() ) then
+                                call ReplaceUnitBJ(GetSpellTargetUnit(), 'u01U', bj_UNIT_STATE_METHOD_RELATIVE)
                                 call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
                                 set udg_ArthasSouls=( udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 ) )
                                 call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)

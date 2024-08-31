@@ -371,10 +371,10 @@ STRING 585
 Frozen Ghoul
 }
 
-STRING 586
+STRING 588
 // Units: u01H ([Arthas] Decaying Ghoul), Tip (Tooltip - Basic)
 {
-Frozen Ghoul
+Decaying Ghoul
 }
 
 STRING 591
@@ -1963,132 +1963,6 @@ STRING 1372
 [Arthas] Sacrifice
 }
 
-STRING 1377
-// Abilities: S002 ([Arthas] Transform to Blood Ghoul), Name (Name)
-{
-[Arthas] Transform to Blood Ghoul
-}
-
-STRING 1378
-// Abilities: S003 ([Arthas] Transform to Blood Crypt Fiend), Name (Name)
-{
-[Arthas] Transform to Blood Crypt Fiend
-}
-
-STRING 1379
-// Abilities: S004 ([Arthas] Transform to Blood Abomination), Name (Name)
-{
-[Arthas] Transform to Blood Abomination
-}
-
-STRING 1380
-// Abilities: S005 ([Arthas] Transform to Blood Wagon), Name (Name)
-{
-[Arthas] Transform to Blood Wagon
-}
-
-STRING 1381
-// Abilities: S006 ([Arthas] Transform to Blood Gargoyle), Name (Name)
-{
-[Arthas] Transform to Blood Gargoyle
-}
-
-STRING 1382
-// Abilities: S007 ([Arthas] Transform to Blood Wyrm), Name (Name)
-{
-[Arthas] Transform to Blood Wyrm
-}
-
-STRING 1383
-// Abilities: S008 ([Arthas] Transform to Frost Abomination), Name (Name)
-{
-[Arthas] Transform to Frost Abomination
-}
-
-STRING 1384
-// Abilities: S009 ([Arthas] Transform to Frost Crypt Fiend), Name (Name)
-{
-[Arthas] Transform to Frost Crypt Fiend
-}
-
-STRING 1385
-// Abilities: S00A ([Arthas] Transform to Frost Gargoyle), Name (Name)
-{
-[Arthas] Transform to Frost Gargoyle
-}
-
-STRING 1386
-// Abilities: S00B ([Arthas] Transform to Frost Wagon), Name (Name)
-{
-[Arthas] Transform to Frost Wagon
-}
-
-STRING 1387
-// Abilities: S00C ([Arthas] Transform to Frost Wyrm), Name (Name)
-{
-[Arthas] Transform to Frost Wyrm
-}
-
-STRING 1388
-// Abilities: S00D ([Arthas] Transform to Frost Ghoul), Name (Name)
-{
-[Arthas] Transform to Frost Ghoul
-}
-
-STRING 1389
-// Abilities: S00E ([Arthas] Transform to Unholy Abomination), Name (Name)
-{
-[Arthas] Transform to Unholy Abomination
-}
-
-STRING 1390
-// Abilities: S00F ([Arthas] Transform to Unholy Crypt Fiend), Name (Name)
-{
-[Arthas] Transform to Unholy Crypt Fiend
-}
-
-STRING 1391
-// Abilities: S00G ([Arthas] Transform to Unholy Gargoyle), Name (Name)
-{
-[Arthas] Transform to Unholy Gargoyle
-}
-
-STRING 1392
-// Abilities: S00H ([Arthas] Transform to Unholy Ghoul), Name (Name)
-{
-[Arthas] Transform to Unholy Ghoul
-}
-
-STRING 1393
-// Abilities: S00I ([Arthas] Transform to Unholy Wagon), Name (Name)
-{
-[Arthas] Transform to Unholy Wagon
-}
-
-STRING 1394
-// Abilities: S00J ([Arthas] Transform to Unholy Wyrm), Name (Name)
-{
-[Arthas] Transform to Unholy Wyrm
-}
-
-STRING 1395
-// Abilities: S00K ([Arthas] Transform to Unholy Stone Gargoyle), Name (Name)
-{
-[Arthas] Transform to Unholy Stone Gargoyle
-}
-
-STRING 1396
-// Abilities: S00L ([Arthas] Transform to Frost Stone Gargoyle), Name (Name)
-{
-[Arthas] Transform to Frost Stone Gargoyle
-}
-
-STRING 1397
-// Abilities: S00M ([Arthas] Transform to Blood Stone Gargoyle), Name (Name)
-{
-[Arthas] Transform to Blood Stone Gargoyle
-}
-
 STRING 1398
 // Buffs/Effects: B00A ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
 {
@@ -2166,89 +2040,6 @@ STRING 1421
 {
 [Arthas] Slave of the Lich King
 
-}
-
-STRING 1423
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Higher health
-- Higher attack speed
-|cff6f6f6f- Personal vampirism|r
-}
-
-STRING 1424
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Higher health
-- Higher attack speed
-- Personal vampirism
-}
-
-STRING 1425
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Higher health
-|cff6f6f6f- Higher attack speed
-- Personal vampirism|r
-}
-
-STRING 1427
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Increased Damage
-|cff6f6f6f- Increased mana
-- Chance to freeze the target|r
-}
-
-STRING 1428
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Increased Damage
-- Increased mana
-|cff6f6f6f- Chance to freeze the target|r
-}
-
-STRING 1429
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Increased Damage
-- Increased mana
-- Chance to freeze the target
-}
-
-STRING 1431
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Spreading the plague
-|cff6f6f6f- Death brings back some of the souls
-- Death breeds plague zombies
-|r
-}
-
-STRING 1432
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Spreading the plague
-- Death brings back some of the souls
-|cff6f6f6f- Death breeds plague zombies
-|r
-}
-
-STRING 1433
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
-{
-Current rune level:
-- Spreading the plague
-- Death brings back some of the souls
-- Death breeds plague zombies
 }
 
 STRING 1434
@@ -2353,12 +2144,6 @@ STRING 1456
 // Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Tip (Tooltip - Normal)
 {
 Blood Rage
-}
-
-STRING 1457
-// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Ubertip (Tooltip - Normal - Extended)
-{
-Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
 }
 
 STRING 1458
@@ -2627,7 +2412,7 @@ Research Crypt Fiend Upgrade
 }
 
 STRING 1544
-// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+// Upgrades: R00O (Exhume Corpses), Ubertip (Tooltip - Extended)
 {
 Ghoul's reforged form gains an additional ability.
 
@@ -2639,21 +2424,6 @@ Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cos
 
 |cff00ff00Unholy:|r
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
-}
-
-STRING 1545
-// Upgrades: R00P (Burrow), Ubertip (Tooltip - Extended)
-{
-Crypt Fiend's reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Rapacity - The unit has increased damage by <A02D,DataA1> and loses health equal to <A02D,DataB1,%>% of the damage dealt.
-
-|cFF007EFFFrost:|r
-Frost Beetles - Adds a cold effect to each attack, dealing <A02B,DataA1> bonus damage, slowing a target enemy unit's attacks by <A02B,DataB1,%>% and movement by <A02B,DataC1,%>% for <A02B,Dur1> seconds.
-
-|cff00ff00Unholy:|r
-<A02A,DataC1,%>% сhance to attack with <A02A,DataA1> damage with ignoring target's armor
 }
 
 STRING 1547
@@ -2952,12 +2722,6 @@ STRING 1612
 Produces Frost Wyrms. Also contains the Freezing Breath upgrade.
 }
 
-STRING 1616
-// Abilities: A02I ([Arthas_Gargoyle_Frost] Mana Burn), Tip (Tooltip - Normal)
-{
-Mana Burn
-}
-
 STRING 1617
 // Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Tip (Tooltip - Normal)
 {
@@ -2994,12 +2758,6 @@ STRING 1623
 [Arthas_Gargoyle_Blood] Blood Mark
 }
 
-STRING 1624
-// Abilities: A02I ([Arthas_Gargoyle_Frost] Mana Burn), Name (Name)
-{
-[Arthas_Gargoyle_Frost] Mana Burn
-}
-
 STRING 1625
 // Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Name (Name)
 {
@@ -3019,7 +2777,7 @@ Research Gargoyle Upgrade
 }
 
 STRING 1629
-// Upgrades: R00Q (Burrow), Ubertip (Tooltip - Extended)
+// Upgrades: R00R (Disease Cloud), Ubertip (Tooltip - Extended)
 {
 Gargoyles reforged form gains an additional ability.
 
@@ -3243,21 +3001,6 @@ STRING 1684
 // Upgrades: R00R (Disease Cloud), Tip (Tooltip)
 {
 Research Abomination Upgrade
-}
-
-STRING 1685
-// Upgrades: R00R (Disease Cloud), Ubertip (Tooltip - Extended)
-{
-Gargoyles reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
-
-|cFF007EFFFrost:|r
-Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
-
-|cff00ff00Unholy:|r
-Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
 STRING 1693
@@ -4691,14 +4434,6 @@ STRING 2103
 A powerful champion who supports the army with his aura
 }
 
-STRING 2105
-// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 20 souls|r
-
-Basic attack unit and lumber harvester. Can learn Cannibalize and Ghoul Frenzy. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
 STRING 2106
 // Units: u011 ([Arthas] Crypt Fiend), Ubertip (Tooltip - Extended)
 {
@@ -4773,75 +4508,6 @@ STRING 2116
 // Upgrades: R015 (Cannibalize), EditorSuffix (Editor Suffix)
 {
 (Level 1)
-}
-
-STRING 2127
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced bloody unit reforging
-
-Rune level:
-1. Higher health, damage reduction|r
-|cFFFF7A6F2. Higher attack speed
-|cff6f6f6f3. Personal vampirism|r
-}
-
-STRING 2128
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master bloody unit reforging
-
-Rune level:
-1. Higher health, damage reduction|r
-2. Higher attack speed
-|cFFFF7A6F3. Personal vampirism|r
-}
-
-STRING 2129
-// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks bloody reforging units
-
-Rune level:
-|cFFFF7A6F1. Higher health, damage reduction|r
-|cff6f6f6f2. Higher attack speed
-3. Personal vampirism|r
-}
-
-STRING 2130
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks advanced unholy unit reforging
-
-Rune level:
-1. Spreading the plague, army consume less food, health reserve reduced
-|cFF2ED8642. Plague reduces enemy attack speed
-|cff6f6f6f3. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2131
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks master unholy unit reforging
-
-Rune level:
-1. Spreading the plague, army consume less food, health reserve reduced
-2. Plague reduces enemy attack speed
-|cFF2ED8643. Return some of the spent souls after the death of a unit
-|r
-}
-
-STRING 2132
-// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
-{
-Unlocks unholy reforging units
-
-Rune level:
-|cFF2ED8641. Spreading the plague, army consume less food, health reserve reduced
-|cff6f6f6f2. Plague reduces enemy attack speed
-3. Return some of the spent souls after the death of a unit
-|r
 }
 
 STRING 2133
@@ -5531,12 +5197,6 @@ STRING 2258
 Corrosion
 }
 
-STRING 2260
-// Abilities: A029 ([Arthas] Corrosion), Ubertip (Tooltip - Normal - Extended)
-{
-Reduce enemy armor
-}
-
 STRING 2261
 // Abilities: A02A ([Arthas] Swallow), Name (Name)
 {
@@ -5610,7 +5270,7 @@ Research Wagon Upgrade
 }
 
 STRING 2279
-// Upgrades: R00O (Exhume Corpses), Ubertip (Tooltip - Extended)
+// Upgrades: R017 (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Ghoul's reforged form gains an additional ability.
 
@@ -5678,21 +5338,6 @@ STRING 2296
 // Upgrades: R017 (Freezing Breath), Tip (Tooltip)
 {
 Research Death Wyrm
-}
-
-STRING 2297
-// Upgrades: R017 (Freezing Breath), Ubertip (Tooltip - Extended)
-{
-Ghoul's reforged form gains an additional ability.
-
-|cffff0000Blood:|r
-Blood Rage - Causes this unit to attack <A024k,DataB1,%>% faster, but slower to <A024,DataA1,%>%.
-
-|cFF007EFFFrost:|r
-Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
-
-|cff00ff00Unholy:|r
-Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
 STRING 2299
@@ -5939,5 +5584,271 @@ STRING 2339
 // Abilities: A02E ([Arthas_StoneForm_Unholy] Effect Aura Unholy), Name (Name)
 {
 [Arthas_StoneForm_Unholy] Effect Aura Unholy
+}
+
+STRING 2340
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Higher health, damage reduction|r
+|cFFFF7A6F2. Additional armor
+|cff6f6f6f3. Personal vampirism|r
+}
+
+STRING 2341
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Higher health, damage reduction|r
+2. Additional armor
+|cFFFF7A6F3. Personal vampirism|r
+}
+
+STRING 2342
+// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+|cFFFF7A6F1. Higher health, damage reduction|r
+|cff6f6f6f2. Additional armor
+3. Personal vampirism|r
+}
+
+STRING 2343
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+|cFF4F8CFF1. Add mana to units, armor reduce |R
+|cff6f6f6f2. Increased mana regeneration
+3. Killing replenishes mana|r
+}
+
+STRING 2344
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Add mana to units, armor reduce |R
+|cFF4F8CFF2. Increased mana regeneration
+|cff6f6f6f3. Killing replenishes mana|r
+}
+
+STRING 2345
+// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. Add mana to units, armor reduce |R
+2. Increased mana regeneration
+|cFF4F8CFF3. Killing replenishes mana|r
+}
+
+STRING 2346
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+|cFF2ED8641. The cost in the limit has been reduced, health reserve reduced
+|cff6f6f6f2. Spreading the plague, army consume less food, health reserve reduced
+3. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2347
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. The cost in the limit has been reduced, health reserve reduced
+|cFF2ED8642. Spreading the plague, army consume less food, health reserve reduced
+|cff6f6f6f3. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2348
+// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+{
+Rune level:
+1. The cost in the limit has been reduced, health reserve reduced
+2. Spreading the plague, army consume less food, health reserve reduced
+|cFF2ED8643. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2349
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks advanced bloody unit reforging
+
+Rune level:
+1. Higher health, damage reduction|r
+|cFFFF7A6F2. Additional armor
+|cff6f6f6f3. Personal vampirism|r
+}
+
+STRING 2350
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks master bloody unit reforging
+
+Rune level:
+1. Higher health, damage reduction|r
+2. Additional armor
+|cFFFF7A6F3. Personal vampirism|r
+}
+
+STRING 2351
+// Upgrades: R00G (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks bloody reforging units
+
+Rune level:
+|cFFFF7A6F1. Higher health, damage reduction|r
+|cff6f6f6f2. Additional armor
+3. Personal vampirism|r
+}
+
+STRING 2352
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks bloody reforging units
+
+Rune level:
+1. The cost in the limit has been reduced, health reserve reduced
+|cFF2ED8642. Spreading the plague, army consume less food, health reserve reduced
+|cff6f6f6f3. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2353
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks bloody reforging units
+
+Rune level:
+1. The cost in the limit has been reduced, health reserve reduced
+2. Spreading the plague, army consume less food, health reserve reduced
+|cFF2ED8643. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2354
+// Upgrades: R00H (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Unlocks bloody reforging units
+
+Rune level:
+|cFF2ED8641. The cost in the limit has been reduced, health reserve reduced
+|cff6f6f6f2. Spreading the plague, army consume less food, health reserve reduced
+3. Return some of the spent souls after the death of a unit
+|r
+}
+
+STRING 2355
+// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
+{
+|cFFA0FF00Reforge: 20 souls|r
+
+Basic attack unit and lumber harvester. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2356
+// Units: u00Y ([Arthas] Wild Ghoul), Ubertip (Tooltip - Extended)
+{
+Basic attack unit and lumber harvester. Can learn Blood Rage. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2357
+// Units: u01F ([Arthas] Frozen Ghoul), Ubertip (Tooltip - Extended)
+{
+Basic attack unit and lumber harvester. Can learn Ice Shard.|n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2358
+// Units: u01H ([Arthas] Decaying Ghoul), Ubertip (Tooltip - Extended)
+{
+Basic attack unit and lumber harvester. Can learn Rotten teeth.|n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 2359
+// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Causes this unit to attack <A024,DataB1,%> faster and move <A024,DataA1,%> faster.
+}
+
+STRING 2360
+// Upgrades: R00N (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Ghoul's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Rage - Causes this unit to attack <A024,DataB1,%> faster and move <A024,DataA1,%> faster.
+
+|cFF007EFFFrost:|r
+Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
+
+|cff00ff00Unholy:|r
+Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
+}
+
+STRING 2361
+// Abilities: A029 ([Arthas] Corrosion), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces armor by <A029,DataB1> for <A029,Dur1> seconds on attack.
+}
+
+STRING 2362
+// Upgrades: R00P (Burrow), Ubertip (Tooltip - Extended)
+{
+Crypt Fiend's reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Rapacity - The unit has increased damage by <A02D,DataA1> and loses health equal to <A02D,DataB1,%>% of the damage dealt.
+
+|cFF007EFFFrost:|r
+Frost Beetles - Adds a cold effect to each attack, dealing <A02B,DataA1> bonus damage, slowing a target enemy unit's attacks by <A02B,DataB1,%>% and movement by <A02B,DataC1,%>% for <A02B,Dur1> seconds.
+
+|cff00ff00Unholy:|r
+Corrosion - Reduces armor by <A029,DataB1> for <A029,Dur1> seconds on attack
+}
+
+STRING 2363
+// Abilities: A02I ([Arthas_Gargoyle_Frost] Overwhelming Sadness), Name (Name)
+{
+[Arthas_Gargoyle_Frost] Overwhelming Sadness
+}
+
+STRING 2364
+// Abilities: A02I ([Arthas_Gargoyle_Frost] Overwhelming Sadness), Tip (Tooltip - Normal)
+{
+Overwhelming Sadness
+}
+
+STRING 2365
+// Abilities: A02I ([Arthas_Gargoyle_Frost] Overwhelming Sadness), Ubertip (Tooltip - Normal - Extended)
+{
+Sends a bolt of negative energy that burns up to <A02I,DataA1> points of a target enemy unit's mana. The mana combusts, dealing damage equal to the amount of mana burned.
+}
+
+STRING 2368
+// Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
+}
+
+STRING 2370
+// Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces armor by <A02F,DataB1>. |nLasts for <A02F,Dur1> seconds.
+}
+
+STRING 2371
+// Upgrades: R00Q (Burrow), Ubertip (Tooltip - Extended)
+{
+Gargoyles reforged form gains an additional ability.
+
+|cffff0000Blood:|r
+Blood Mark - Reduces armor by <A02F,DataB1>. |nLasts for <A02F,Dur1> seconds.
+
+|cFF007EFFFrost:|r
+Overwhelming Sadness - Sends a bolt of negative energy that burns up to <A02I,DataA1> points of a target enemy unit's mana. The mana combusts, dealing damage equal to the amount of mana burned.
+
+|cff00ff00Unholy:|r
+Necrotic Breath - Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
 }
 
