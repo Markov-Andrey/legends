@@ -69,6 +69,9 @@ integer array udg_CurrentZone1
 integer array udg_CurrentZone2
 player udg_PlayerArthas= null
 unit udg_Arthas= null
+integer udg_WrynnExp= 0
+integer udg_WrynnExpUnitCount= 0
+integer array udg_WrynnExpTable
 
     // Generated
 rect gg_rct_StartRegion= null
@@ -238,6 +241,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_WrynnExp= null
 
     // Random Groups
 integer array gg_rg_000
@@ -402,6 +406,15 @@ function InitGlobals takes nothing returns nothing
     loop
         exitwhen ( i > 1 )
         set udg_CurrentZone2[i]=0
+        set i=i + 1
+    endloop
+
+    set udg_WrynnExp=0
+    set udg_WrynnExpUnitCount=0
+    set i=0
+    loop
+        exitwhen ( i > 0 )
+        set udg_WrynnExpTable[i]=0
         set i=i + 1
     endloop
 
@@ -793,6 +806,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h018', - 109.1, 397.2, 82.903, 'h018')
+    set u=BlzCreateUnitWithSkin(p, 'h018', 0.1, 369.9, 100.017, 'h018')
+    set u=BlzCreateUnitWithSkin(p, 'h018', - 219.1, 411.8, 65.231, 'h018')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 222.4, 245.9, 72.550, 'h019')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 125.7, 221.4, 83.473, 'h019')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 9.3, 198.8, 95.933, 'h019')
 endfunction
 
 //===========================================================================
@@ -4013,13 +4032,349 @@ endfunction
 // Trigger: WrynnIni
 //===========================================================================
 function Trig_WrynnIni_Actions takes nothing returns nothing
-    call DoNothing()
+    set udg_WrynnExpTable[1]=25
+    set udg_WrynnExpTable[2]=40
+    set udg_WrynnExpTable[3]=60
+    set udg_WrynnExpTable[4]=85
+    set udg_WrynnExpTable[5]=115
+    set udg_WrynnExpTable[6]=150
+    set udg_WrynnExpTable[7]=190
+    set udg_WrynnExpTable[8]=235
+    set udg_WrynnExpTable[9]=285
+    set udg_WrynnExpTable[10]=340
+    call EnableTrigger(gg_trg_WrynnExp)
 endfunction
 
 //===========================================================================
 function InitTrig_WrynnIni takes nothing returns nothing
     set gg_trg_WrynnIni=CreateTrigger()
     call TriggerAddAction(gg_trg_WrynnIni, function Trig_WrynnIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnExp
+//
+// Need exp:
+// 1 rank - 26
+// 2 rank - 51
+// 3 rank - 78
+// x 4 rank - 91 x
+// x 5 rank - 99 x
+// Veterans receive a modifier:
+// 0 rank - 1
+// 1 rank - 0.7
+// 2 rank - 0.5
+// x 3 rank - 0.3 x
+// x 4 rank - 0.2 x
+// Killer modifier: 2.0
+// Summon modifier: 0.5
+// Per Rank:
+// Add Attack: +1/3/5/x6x/x7x
+// Add Max Health: +30/30/30/x30x/x30x
+// Add Max Mana (to mage): +25/25/25/x25x/x25x
+//===========================================================================
+function Trig_WrynnExp_Conditions takes nothing returns boolean
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetDyingUnit()), GetOwningPlayer(GetKillingUnitBJ())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func004Func001Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h019' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01A' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01B' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01C' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01G' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01D' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01E' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01F' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WrynnExp_Func004Func001C takes nothing returns boolean
+    if ( not Trig_WrynnExp_Func004Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func004A takes nothing returns nothing
+    if ( Trig_WrynnExp_Func004Func001C() ) then
+        set udg_WrynnExpUnitCount=( udg_WrynnExpUnitCount + 1 )
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_WrynnExp_Func007C takes nothing returns boolean
+    if ( not ( IsUnitType(GetDyingUnit(), UNIT_TYPE_SUMMONED) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A03A', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A039', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A038', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002Func002Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A03A', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A039', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A038', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func002C takes nothing returns boolean
+    if ( not ( GetEnumUnit() == GetKillingUnitBJ() ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func003Func006C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A038', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) > 25 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func004Func007C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func004C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A039', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) > 50 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func008C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A03A', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) > 75 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func006C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h019' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01A' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01B' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01C' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01G' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01D' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01E' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01F' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WrynnExp_Func009Func001C takes nothing returns boolean
+    if ( not Trig_WrynnExp_Func009Func001Func006C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009A takes nothing returns nothing
+    if ( Trig_WrynnExp_Func009Func001C() ) then
+        if ( Trig_WrynnExp_Func009Func001Func002C() ) then
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=2
+            loop
+                exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+                if ( Trig_WrynnExp_Func009Func001Func002Func002Func001C() ) then
+                    call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) + udg_WrynnExp ))
+                else
+                    if ( Trig_WrynnExp_Func009Func001Func002Func002Func001Func001C() ) then
+                        call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) + R2I(( I2R(udg_WrynnExp) * 0.70 )) ))
+                    else
+                        if ( Trig_WrynnExp_Func009Func001Func002Func002Func001Func001Func001C() ) then
+                            call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) + R2I(( I2R(udg_WrynnExp) * 0.50 )) ))
+                        else
+                            call DoNothing()
+                        endif
+                    endif
+                endif
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
+            endloop
+        else
+            if ( Trig_WrynnExp_Func009Func001Func002Func001C() ) then
+                call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) + udg_WrynnExp ))
+            else
+                if ( Trig_WrynnExp_Func009Func001Func002Func001Func001C() ) then
+                    call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) + R2I(( I2R(udg_WrynnExp) * 0.70 )) ))
+                else
+                    if ( Trig_WrynnExp_Func009Func001Func002Func001Func001Func001C() ) then
+                        call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) + R2I(( I2R(udg_WrynnExp) * 0.50 )) ))
+                    else
+                        call DoNothing()
+                    endif
+                endif
+            endif
+        endif
+        if ( Trig_WrynnExp_Func009Func001Func003C() ) then
+            call UnitRemoveAbilityBJ('A038', GetEnumUnit())
+            call UnitAddAbilityBJ('A039', GetEnumUnit())
+            call UnitAddAbilityBJ('A030', GetEnumUnit())
+            call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 25 ))
+            call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
+            if ( Trig_WrynnExp_Func009Func001Func003Func006C() ) then
+                call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+            else
+            endif
+        else
+        endif
+        if ( Trig_WrynnExp_Func009Func001Func004C() ) then
+            call UnitRemoveAbilityBJ('A039', GetEnumUnit())
+            call UnitRemoveAbilityBJ('A030', GetEnumUnit())
+            call UnitAddAbilityBJ('A03A', GetEnumUnit())
+            call UnitAddAbilityBJ('A02Q', GetEnumUnit())
+            call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 50 ))
+            call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
+            if ( Trig_WrynnExp_Func009Func001Func004Func007C() ) then
+                call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+            else
+            endif
+        else
+        endif
+        if ( Trig_WrynnExp_Func009Func001Func005C() ) then
+            call UnitRemoveAbilityBJ('A03A', GetEnumUnit())
+            call UnitRemoveAbilityBJ('A02Q', GetEnumUnit())
+            call UnitAddAbilityBJ('A03B', GetEnumUnit())
+            call UnitAddAbilityBJ('A02Z', GetEnumUnit())
+            call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 75 ))
+            call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
+            if ( Trig_WrynnExp_Func009Func001Func005Func008C() ) then
+                call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+            else
+            endif
+        else
+            call DoNothing()
+        endif
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_WrynnExp_Actions takes nothing returns nothing
+    set udg_WrynnExp=GetUnitLevel(GetDyingUnit())
+    set udg_WrynnExpUnitCount=0
+    // Count all units from 1200 range
+    call ForGroupBJ(GetUnitsInRangeOfLocAll(1200.00, GetUnitLoc(GetDyingUnit())), function Trig_WrynnExp_Func004A)
+    set udg_WrynnExp=udg_WrynnExpTable[udg_WrynnExp]
+    // Exp add from unit
+    if ( Trig_WrynnExp_Func007C() ) then
+        set udg_WrynnExp=( udg_WrynnExp / 2 )
+    else
+        call DoNothing()
+    endif
+    set udg_WrynnExp=( udg_WrynnExp / udg_WrynnExpUnitCount )
+    call ForGroupBJ(GetUnitsInRangeOfLocAll(1200.00, GetUnitLoc(GetDyingUnit())), function Trig_WrynnExp_Func009A)
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnExp takes nothing returns nothing
+    set gg_trg_WrynnExp=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnExp)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnExp, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_WrynnExp, Condition(function Trig_WrynnExp_Conditions))
+    call TriggerAddAction(gg_trg_WrynnExp, function Trig_WrynnExp_Actions)
 endfunction
 
 //===========================================================================
@@ -8072,6 +8427,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherChurchDonations()
     call InitTrig_UtherLightTower()
     call InitTrig_WrynnIni()
+    call InitTrig_WrynnExp()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

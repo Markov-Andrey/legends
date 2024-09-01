@@ -4785,12 +4785,6 @@ STRING 2225
 [Wrynn] Arcane Tower
 }
 
-STRING 2227
-// Abilities: A02Z ([Wrynn_Effect] Reiforce), Name (Name)
-{
-[Wrynn_Effect] Reiforce
-}
-
 STRING 2228
 // Units: h017 ([Wrynn] Сitizen), Name (Name)
 {
@@ -4873,12 +4867,6 @@ STRING 2242
 // Units: h01G ([Wrynn] Skyfire Gunship), Tip (Tooltip - Basic)
 {
 Train Skyfire Gunship
-}
-
-STRING 2243
-// Abilities: A030 ([Wrynn] Level1), Name (Name)
-{
-[Wrynn] Level1
 }
 
 STRING 2244
@@ -5958,5 +5946,1519 @@ STRING 2468
 // Units: h01J ([Alterac] Alterac Flag), Name (Name)
 {
 [Alterac] Alterac Flag
+}
+
+STRING 2469
+// Abilities: A03C ([Wrynn] Experience), Name (Name)
+{
+[Wrynn] Experience
+}
+
+STRING 2670
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2671
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2672
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2673
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2674
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2675
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2676
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2677
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2678
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2679
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2680
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2681
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2682
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2683
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2684
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2685
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2686
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2687
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2688
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2689
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2690
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2691
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2692
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2693
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2694
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2695
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2696
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2697
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2698
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2699
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2700
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2701
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2702
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2703
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2704
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2705
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2706
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2707
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2708
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2709
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2710
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2711
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2712
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2713
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2714
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2715
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2716
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2717
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2718
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2719
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2720
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2721
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2722
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2723
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2724
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2725
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2726
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2727
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2728
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2729
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2730
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2731
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2732
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2733
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2734
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2735
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2736
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2737
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2738
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2739
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2740
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2741
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2742
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2743
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2744
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2745
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2746
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2747
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2748
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2749
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2750
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2751
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2752
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2753
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2754
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2755
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2756
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2757
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2758
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2759
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2760
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2761
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2762
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2763
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2764
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2765
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2766
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2767
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2768
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2769
+// Abilities: A03C ([Wrynn] Experience), Tip (Tooltip - Normal)
+{
+Experience
+}
+
+STRING 2785
+// Abilities: A03B ([Wrynn] Rank 3 Master Sergeant), Ubertip (Tooltip - Normal - Extended)
+{
+There are no bonuses.
+}
+
+STRING 2787
+// Abilities: A038 ([Wrynn] Rank 0 Private), Tip (Tooltip - Normal)
+{
+Rank 0 Private
+}
+
+STRING 2788
+// Abilities: A038 ([Wrynn] Rank 0 Private), Name (Name)
+{
+[Wrynn] Rank 0 Private
+}
+
+STRING 2790
+// Abilities: A039 ([Wrynn] Rank 1 Corporal), Tip (Tooltip - Normal)
+{
+Rank 1 Corporal
+}
+
+STRING 2791
+// Abilities: A039 ([Wrynn] Rank 1 Corporal), Name (Name)
+{
+[Wrynn] Rank 1 Corporal
+}
+
+STRING 2793
+// Abilities: A03A ([Wrynn] Rank 2 Sergeant), Tip (Tooltip - Normal)
+{
+Rank 2 Corporal
+}
+
+STRING 2794
+// Abilities: A03A ([Wrynn] Rank 2 Sergeant), Name (Name)
+{
+[Wrynn] Rank 2 Sergeant
+}
+
+STRING 2795
+// Abilities: A039 ([Wrynn] Rank 1 Corporal), Ubertip (Tooltip - Normal - Extended)
+{
+There are no bonuses. Need 50 Exp to next Rank
+}
+
+STRING 2796
+// Abilities: A03B ([Wrynn] Rank 3 Master Sergeant), Tip (Tooltip - Normal)
+{
+Rank 3 Master Sergeant
+}
+
+STRING 2797
+// Abilities: A03B ([Wrynn] Rank 3 Master Sergeant), Name (Name)
+{
+[Wrynn] Rank 3 Master Sergeant
+}
+
+STRING 2802
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[1/100]
+
+Experience is gained in battle and shared among all participants within a 1200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2902
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[2/100]
+
+Experience is gained in battle and shared among all participants within a 1200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2903
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[3/100]
+
+Experience is gained in battle and shared among all participants within a 1300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2904
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[4/100]
+
+Experience is gained in battle and shared among all participants within a 1400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2905
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[5/100]
+
+Experience is gained in battle and shared among all participants within a 1500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2906
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[6/100]
+
+Experience is gained in battle and shared among all participants within a 1600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2907
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[7/100]
+
+Experience is gained in battle and shared among all participants within a 1700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2908
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[8/100]
+
+Experience is gained in battle and shared among all participants within a 1800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2909
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[9/100]
+
+Experience is gained in battle and shared among all participants within a 1900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2910
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[10/100]
+
+Experience is gained in battle and shared among all participants within a 11000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2911
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[11/100]
+
+Experience is gained in battle and shared among all participants within a 11100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2912
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[12/100]
+
+Experience is gained in battle and shared among all participants within a 11200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2913
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[13/100]
+
+Experience is gained in battle and shared among all participants within a 11300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2914
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[14/100]
+
+Experience is gained in battle and shared among all participants within a 11400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2915
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[15/100]
+
+Experience is gained in battle and shared among all participants within a 11500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2916
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[16/100]
+
+Experience is gained in battle and shared among all participants within a 11600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2917
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[17/100]
+
+Experience is gained in battle and shared among all participants within a 11700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2918
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[18/100]
+
+Experience is gained in battle and shared among all participants within a 11800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2919
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[19/100]
+
+Experience is gained in battle and shared among all participants within a 11900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2920
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[20/100]
+
+Experience is gained in battle and shared among all participants within a 12000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2921
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[21/100]
+
+Experience is gained in battle and shared among all participants within a 12100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2922
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[22/100]
+
+Experience is gained in battle and shared among all participants within a 12200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2923
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[23/100]
+
+Experience is gained in battle and shared among all participants within a 12300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2924
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[24/100]
+
+Experience is gained in battle and shared among all participants within a 12400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2925
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[25/100]
+
+Experience is gained in battle and shared among all participants within a 12500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2926
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[26/100]
+
+Experience is gained in battle and shared among all participants within a 12600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2927
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[27/100]
+
+Experience is gained in battle and shared among all participants within a 12700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2928
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[28/100]
+
+Experience is gained in battle and shared among all participants within a 12800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2929
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[29/100]
+
+Experience is gained in battle and shared among all participants within a 12900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2930
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[30/100]
+
+Experience is gained in battle and shared among all participants within a 13000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2931
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[31/100]
+
+Experience is gained in battle and shared among all participants within a 13100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2932
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[32/100]
+
+Experience is gained in battle and shared among all participants within a 13200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2933
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[33/100]
+
+Experience is gained in battle and shared among all participants within a 13300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2934
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[34/100]
+
+Experience is gained in battle and shared among all participants within a 13400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2935
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[35/100]
+
+Experience is gained in battle and shared among all participants within a 13500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2936
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[36/100]
+
+Experience is gained in battle and shared among all participants within a 13600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2937
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[37/100]
+
+Experience is gained in battle and shared among all participants within a 13700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2938
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[38/100]
+
+Experience is gained in battle and shared among all participants within a 13800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2939
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[39/100]
+
+Experience is gained in battle and shared among all participants within a 13900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2940
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[40/100]
+
+Experience is gained in battle and shared among all participants within a 14000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2941
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[41/100]
+
+Experience is gained in battle and shared among all participants within a 14100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2942
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[42/100]
+
+Experience is gained in battle and shared among all participants within a 14200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2943
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[43/100]
+
+Experience is gained in battle and shared among all participants within a 14300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2944
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[44/100]
+
+Experience is gained in battle and shared among all participants within a 14400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2945
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[45/100]
+
+Experience is gained in battle and shared among all participants within a 14500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2946
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[46/100]
+
+Experience is gained in battle and shared among all participants within a 14600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2947
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[47/100]
+
+Experience is gained in battle and shared among all participants within a 14700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2948
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[48/100]
+
+Experience is gained in battle and shared among all participants within a 14800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2949
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[49/100]
+
+Experience is gained in battle and shared among all participants within a 14900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2950
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[50/100]
+
+Experience is gained in battle and shared among all participants within a 15000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2951
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[51/100]
+
+Experience is gained in battle and shared among all participants within a 15100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2952
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[52/100]
+
+Experience is gained in battle and shared among all participants within a 15200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2953
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[53/100]
+
+Experience is gained in battle and shared among all participants within a 15300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2954
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[54/100]
+
+Experience is gained in battle and shared among all participants within a 15400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2955
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[55/100]
+
+Experience is gained in battle and shared among all participants within a 15500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2956
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[56/100]
+
+Experience is gained in battle and shared among all participants within a 15600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2957
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[57/100]
+
+Experience is gained in battle and shared among all participants within a 15700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2958
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[58/100]
+
+Experience is gained in battle and shared among all participants within a 15800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2959
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[59/100]
+
+Experience is gained in battle and shared among all participants within a 15900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2960
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[60/100]
+
+Experience is gained in battle and shared among all participants within a 16000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2961
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[61/100]
+
+Experience is gained in battle and shared among all participants within a 16100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2962
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[62/100]
+
+Experience is gained in battle and shared among all participants within a 16200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2963
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[63/100]
+
+Experience is gained in battle and shared among all participants within a 16300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2964
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[64/100]
+
+Experience is gained in battle and shared among all participants within a 16400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2965
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[65/100]
+
+Experience is gained in battle and shared among all participants within a 16500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2966
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[66/100]
+
+Experience is gained in battle and shared among all participants within a 16600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2967
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[67/100]
+
+Experience is gained in battle and shared among all participants within a 16700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2968
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[68/100]
+
+Experience is gained in battle and shared among all participants within a 16800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2969
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[69/100]
+
+Experience is gained in battle and shared among all participants within a 16900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2970
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[70/100]
+
+Experience is gained in battle and shared among all participants within a 17000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2971
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[71/100]
+
+Experience is gained in battle and shared among all participants within a 17100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2972
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[72/100]
+
+Experience is gained in battle and shared among all participants within a 17200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2973
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[73/100]
+
+Experience is gained in battle and shared among all participants within a 17300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2974
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[74/100]
+
+Experience is gained in battle and shared among all participants within a 17400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2975
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[75/100]
+
+Experience is gained in battle and shared among all participants within a 17500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2976
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[76/100]
+
+Experience is gained in battle and shared among all participants within a 17600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2977
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[77/100]
+
+Experience is gained in battle and shared among all participants within a 17700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2978
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[78/100]
+
+Experience is gained in battle and shared among all participants within a 17800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2979
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[79/100]
+
+Experience is gained in battle and shared among all participants within a 17900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2980
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[80/100]
+
+Experience is gained in battle and shared among all participants within a 18000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2981
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[81/100]
+
+Experience is gained in battle and shared among all participants within a 18100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2982
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[82/100]
+
+Experience is gained in battle and shared among all participants within a 18200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2983
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[83/100]
+
+Experience is gained in battle and shared among all participants within a 18300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2984
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[84/100]
+
+Experience is gained in battle and shared among all participants within a 18400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2985
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[85/100]
+
+Experience is gained in battle and shared among all participants within a 18500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2986
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[86/100]
+
+Experience is gained in battle and shared among all participants within a 18600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2987
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[87/100]
+
+Experience is gained in battle and shared among all participants within a 18700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2988
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[88/100]
+
+Experience is gained in battle and shared among all participants within a 18800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2989
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[89/100]
+
+Experience is gained in battle and shared among all participants within a 18900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2990
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[90/100]
+
+Experience is gained in battle and shared among all participants within a 19000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2991
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[91/100]
+
+Experience is gained in battle and shared among all participants within a 19100 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2992
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[92/100]
+
+Experience is gained in battle and shared among all participants within a 19200 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2993
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[93/100]
+
+Experience is gained in battle and shared among all participants within a 19300 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2994
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[94/100]
+
+Experience is gained in battle and shared among all participants within a 19400 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2995
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[95/100]
+
+Experience is gained in battle and shared among all participants within a 19500 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2996
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[96/100]
+
+Experience is gained in battle and shared among all participants within a 19600 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2997
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[97/100]
+
+Experience is gained in battle and shared among all participants within a 19700 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2998
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[98/100]
+
+Experience is gained in battle and shared among all participants within a 19800 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 2999
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[99/100]
+
+Experience is gained in battle and shared among all participants within a 19900 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 3000
+// Abilities: A03C ([Wrynn] Experience), Ubertip (Tooltip - Normal - Extended)
+{
+[100/100]
+
+Experience is gained in battle and shared among all participants within a 110000 radius. The amount depends on the enemy's level, with a 0.5 penalty for summons. Veterans receive a modifier (1/0.7/0.5). The unit that kills an enemy gains double XP.
+}
+
+STRING 3001
+// Abilities: A038 ([Wrynn] Rank 0 Private), Ubertip (Tooltip - Normal - Extended)
+{
+There are no bonuses. Need 25 Exp to next Rank
+}
+
+STRING 3002
+// Abilities: A03A ([Wrynn] Rank 2 Sergeant), Ubertip (Tooltip - Normal - Extended)
+{
+There are no bonuses. Need 75 Exp to next Rank
+}
+
+STRING 3004
+// Abilities: A030 ([Wrynn] Level 1), Name (Name)
+{
+[Wrynn] Level 1
+}
+
+STRING 3005
+// Abilities: A030 ([Wrynn] Level 1), Tip (Tooltip - Normal)
+{
+Rank 1
+}
+
+STRING 3006
+// Abilities: A02Q ([Wrynn] Level 2), Name (Name)
+{
+[Wrynn] Level 2
+}
+
+STRING 3007
+// Abilities: A02Q ([Wrynn] Level 2), Tip (Tooltip - Normal)
+{
+Rank 2
+}
+
+STRING 3008
+// Abilities: A02Z ([Wrynn] Level 3), Name (Name)
+{
+[Wrynn] Level 3
+}
+
+STRING 3009
+// Abilities: A02Z ([Wrynn] Level 3), Tip (Tooltip - Normal)
+{
+Rank 3
 }
 
