@@ -192,37 +192,7 @@ STRING 497
 }
 
 STRING 498
-// Upgrades: R002 (Control Magic), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 501
-// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 504
-// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 507
-// Upgrades: R00D (Defend), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 510
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 511
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R00V (Animal War Training), EditorSuffix (Editor Suffix)
 {
 [Uther]
 }
@@ -231,12 +201,6 @@ STRING 513
 // Units: h02F ([Uther] Monument of Light), Tip (Tooltip - Basic)
 {
 Build Monument of Light
-}
-
-STRING 514
-// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 515
@@ -249,78 +213,6 @@ STRING 516
 // Units: H00B ([Uther] Light's Hope Chapel), Propernames (Proper Names)
 {
 Light's Hope Chapel
-}
-
-STRING 517
-// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 520
-// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 523
-// Upgrades: R000 (Long Rifles), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 526
-// Upgrades: R00V (Animal War Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 529
-// Upgrades: R00W (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 530
-// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 531
-// Upgrades: R00Y (Magic Sentry), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 532
-// Upgrades: R00Z (Flying Machine Bombs), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 533
-// Upgrades: R010 (Flying Machine Bombs), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 535
-// Upgrades: R011 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 537
-// Upgrades: R012 (Storm Hammers), EditorSuffix (Editor Suffix)
-{
-[Uther]
-}
-
-STRING 540
-// Upgrades: R013 (Fragmentation Shards), EditorSuffix (Editor Suffix)
-{
-[Uther]
 }
 
 STRING 558
@@ -3244,12 +3136,6 @@ STRING 1881
 Protector
 }
 
-STRING 1883
-// Upgrades: R00D (Defend), Name (Name)
-{
-Mastery Defend
-}
-
 STRING 1884
 // Upgrades: R00D (Defend), Tip (Tooltip)
 {
@@ -3284,12 +3170,6 @@ STRING 1890
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
 {
 Upgrade to Libram of the Lightbringer
-}
-
-STRING 1891
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Libram of Light
 }
 
 STRING 1892
@@ -3388,22 +3268,10 @@ STRING 1930
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
-STRING 1931
-// Upgrades: R000 (Long Rifles), Name (Name)
-{
-Rapid Fire
-}
-
 STRING 1932
 // Upgrades: R000 (Long Rifles), Tip (Tooltip)
 {
 Upgrade to Rapid Fire
-}
-
-STRING 1936
-// Upgrades: R00V (Animal War Training), Name (Name)
-{
-Initiate into Paladins
 }
 
 STRING 1937
@@ -3431,7 +3299,7 @@ Gives a <A014,DataA1>% chance that an attack will do <A014,DataC1> bonus damage 
 }
 
 STRING 1943
-// Upgrades: R00W (Priest Adept Training,Priest Master Training), Name (Name)
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
 Cleric Adept Training
 }
@@ -3440,12 +3308,6 @@ STRING 1944
 // Upgrades: R00W (Priest Adept Training,Priest Master Training), Name (Name)
 {
 Cleric Master Training
-}
-
-STRING 1945
-// Upgrades: R00W (Priest Adept Training,Priest Master Training), Tip (Tooltip)
-{
-Cleric Adept Training
 }
 
 STRING 1946
@@ -3467,7 +3329,7 @@ Increases Clerics' mana capacity, mana regeneration rate, hit points, and gives 
 }
 
 STRING 1950
-// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
 Templar Adept Training
 }
@@ -3476,12 +3338,6 @@ STRING 1951
 // Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
 Templar Master Training
-}
-
-STRING 1952
-// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
-{
-Templar Adept Training
 }
 
 STRING 1953
@@ -3506,12 +3362,6 @@ STRING 1956
 // Abilities: A00W ([Uther] Magic Sentry), Name (Name)
 {
 [Uther] Magic Sentry
-}
-
-STRING 1958
-// Upgrades: R00Z (Flying Machine Bombs), Name (Name)
-{
-Hammer of Justice
 }
 
 STRING 1959
@@ -3562,12 +3412,6 @@ STRING 1972
 // Buffs/Effects: B00L ([Uther] Mercy of the People), EditorName (Name (Editor Only))
 {
 [Uther] Mercy of the People
-}
-
-STRING 1973
-// Upgrades: R002 (Control Magic), Name (Name)
-{
-Mercy of the People
 }
 
 STRING 1974
@@ -3662,12 +3506,6 @@ STRING 1991
 
 STRING 1992
 // Buffs/Effects: B00M ([Uther] Shake), Bufftip (Tooltip)
-{
-Shake
-}
-
-STRING 1993
-// Upgrades: R010 (Flying Machine Bombs), Name (Name)
 {
 Shake
 }
@@ -3901,12 +3739,6 @@ rlev
 }
 
 STRING 2035
-// Upgrades: R011 (Priest Adept Training,Priest Master Training), Name (Name)
-{
-Crusader's Glory
-}
-
-STRING 2036
 // Upgrades: R011 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
 Crusader's Glory
@@ -3936,12 +3768,6 @@ STRING 2041
 [Uther] Exorcism
 }
 
-STRING 2044
-// Upgrades: R012 (Storm Hammers), Name (Name)
-{
-Exorcism
-}
-
 STRING 2045
 // Upgrades: R012 (Storm Hammers), Tip (Tooltip)
 {
@@ -3958,12 +3784,6 @@ STRING 2050
 // Units: h00N ([Uther] Gryphon Knight), Tip (Tooltip - Basic)
 {
 Train Gryphon Knight
-}
-
-STRING 2054
-// Upgrades: R013 (Fragmentation Shards), Name (Name)
-{
-Holy Bomb
 }
 
 STRING 2055
@@ -7460,5 +7280,149 @@ STRING 3009
 // Abilities: A02Z ([Wrynn] Level 3), Tip (Tooltip - Normal)
 {
 Rank 3
+}
+
+STRING 3010
+// Abilities: A015 ([Wrynn] Defend), Name (Name)
+{
+[Wrynn] Defend
+}
+
+STRING 3011
+// Abilities: A03D ([Wrynn] Long Rifles), Name (Name)
+{
+[Wrynn] Long Rifles
+}
+
+STRING 3012
+// Upgrades: R002 (Control Magic), Name (Name)
+{
+[Uther] Mercy of the People
+}
+
+STRING 3013
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+[Uther] Improved Lumber Harvesting
+}
+
+STRING 3014
+// Upgrades: R00C (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Uther] Improved Masonry
+}
+
+STRING 3015
+// Upgrades: R00D (Defend), Name (Name)
+{
+[Uther] Mastery Defend
+}
+
+STRING 3016
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Uther] Libram of Light
+}
+
+STRING 3017
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Uther] Iron Forged Swords
+}
+
+STRING 3018
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
+{
+[Uther] Iron Plating
+}
+
+STRING 3019
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
+{
+[Uther] Studded Leather Armor
+}
+
+STRING 3020
+// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+[Uther] Black Gunpowder
+}
+
+STRING 3021
+// Upgrades: R000 (Long Rifles), Name (Name)
+{
+[Uther] Rapid Fire
+}
+
+STRING 3022
+// Upgrades: R00V (Animal War Training), Name (Name)
+{
+[Uther] Initiate into Paladins
+}
+
+STRING 3023
+// Upgrades: R00W (Priest Adept Training,Priest Master Training), Name (Name)
+{
+[Uther] Cleric Adept Training
+}
+
+STRING 3024
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+[Uther] Templar Adept Training
+}
+
+STRING 3025
+// Upgrades: R00Y (Magic Sentry), Name (Name)
+{
+[Uther] Magic Sentry
+}
+
+STRING 3026
+// Upgrades: R00Z (Flying Machine Bombs), Name (Name)
+{
+[Uther] Hammer of Justice
+}
+
+STRING 3027
+// Upgrades: R010 (Flying Machine Bombs), Name (Name)
+{
+[Uther] Shake
+}
+
+STRING 3028
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+[Uther] Crusader's Glory
+}
+
+STRING 3029
+// Upgrades: R012 (Storm Hammers), Name (Name)
+{
+[Uther] Exorcism
+}
+
+STRING 3030
+// Upgrades: R013 (Fragmentation Shards), Name (Name)
+{
+[Uther] Holy Bomb
+}
+
+STRING 3031
+// Upgrades: R019 (Defend), Name (Name)
+{
+[Wrynn] Defend
+}
+
+STRING 3032
+// Upgrades: R01A (Long Rifles), Name (Name)
+{
+[Wrynn] Long Rifles
+}
+
+STRING 3033
+// Upgrades: R01B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+[Wrynn] Improved Lumber Harvesting
 }
 
