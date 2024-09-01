@@ -5954,3 +5954,9 @@ STRING 2467
 [Alterac] Bench Wood
 }
 
+STRING 2468
+// Units: h01J ([Alterac] Alterac Flag), Name (Name)
+{
+[Alterac] Alterac Flag
+}
+
