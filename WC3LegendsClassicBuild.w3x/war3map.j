@@ -1211,8 +1211,6 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set life=GetUnitState(u, UNIT_STATE_LIFE)
     call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
     call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'ugho', - 2907.1, - 309.8, 351.606, 'ugho')
-    set u=BlzCreateUnitWithSkin(p, 'ugho', - 2887.8, - 534.1, 326.502, 'ugho')
 endfunction
 
 //===========================================================================
