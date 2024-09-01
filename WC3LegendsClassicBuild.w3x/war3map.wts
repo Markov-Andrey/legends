@@ -6374,12 +6374,6 @@ STRING 2769
 Experience
 }
 
-STRING 2785
-// Abilities: A03B ([Wrynn] Rank 3 Master Sergeant), Ubertip (Tooltip - Normal - Extended)
-{
-There are no bonuses.
-}
-
 STRING 2787
 // Abilities: A038 ([Wrynn] Rank 0 Private), Tip (Tooltip - Normal)
 {
@@ -6414,12 +6408,6 @@ STRING 2794
 // Abilities: A03A ([Wrynn] Rank 2 Sergeant), Name (Name)
 {
 [Wrynn] Rank 2 Sergeant
-}
-
-STRING 2795
-// Abilities: A039 ([Wrynn] Rank 1 Corporal), Ubertip (Tooltip - Normal - Extended)
-{
-There are no bonuses. Need 50 Exp to next Rank
 }
 
 STRING 2796
@@ -7240,12 +7228,6 @@ STRING 3001
 There are no bonuses. Need 25 Exp to next Rank
 }
 
-STRING 3002
-// Abilities: A03A ([Wrynn] Rank 2 Sergeant), Ubertip (Tooltip - Normal - Extended)
-{
-There are no bonuses. Need 75 Exp to next Rank
-}
-
 STRING 3004
 // Abilities: A030 ([Wrynn] Level 1), Name (Name)
 {
@@ -7424,5 +7406,309 @@ STRING 3033
 // Upgrades: R01B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
 {
 [Wrynn] Improved Lumber Harvesting
+}
+
+STRING 3034
+// Upgrades: R01C (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Wrynn] Improved Masonry
+}
+
+STRING 3036
+// Abilities: A03E ([Wrynn] Bastion Reinforcement), Name (Name)
+{
+[Wrynn] Bastion Reinforcement
+}
+
+STRING 3037
+// Abilities: A03E ([Wrynn] Bastion Reinforcement), Tip (Tooltip - Normal)
+{
+Bastion Reinforcement
+}
+
+STRING 3038
+// Abilities: A03F ([Wrynn] Bastion Reinforcement), Name (Name)
+{
+[Wrynn] Bastion Reinforcement
+}
+
+STRING 3039
+// Upgrades: R01D (Reinforced Defenses), Tip (Tooltip)
+{
+Bastion Reinforcement
+}
+
+STRING 3043
+// Abilities: A03F ([Wrynn] Bastion Reinforcement), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 3044
+// Upgrades: R01D (Reinforced Defenses), Name (Name)
+{
+[Wrynn] Bastion Reinforcement
+}
+
+STRING 3045
+// Upgrades: R01E (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Wrynn] Iron Forged Swords
+}
+
+STRING 3046
+// Upgrades: R01F (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
+{
+[Wrynn] Iron Plating
+}
+
+STRING 3047
+// Upgrades: R01G (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+[Wrynn] Black Gunpowder
+}
+
+STRING 3048
+// Upgrades: R01H (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
+{
+[Wrynn] Studded Leather Armor
+}
+
+STRING 3050
+// Abilities: A03G ([Wrynn] Lion's Fang), Name (Name)
+{
+[Wrynn] Lion's Fang
+}
+
+STRING 3051
+// Abilities: A03G ([Wrynn] Lion's Fang), Researchtip (Tooltip - Learn)
+{
+Learn Lion's Fang - [|cffffcc00Level %d|r]
+}
+
+STRING 3052
+// Abilities: A03G ([Wrynn] Lion's Fang), Tip (Tooltip - Normal)
+{
+Lion's Fang - [|cffffcc00Level 1|r]
+}
+
+STRING 3053
+// Abilities: A03G ([Wrynn] Lion's Fang), Tip (Tooltip - Normal)
+{
+Lion's Fang - [|cffffcc00Level 2|r]
+}
+
+STRING 3054
+// Abilities: A03G ([Wrynn] Lion's Fang), Tip (Tooltip - Normal)
+{
+Lion's Fang - [|cffffcc00Level 3|r]
+}
+
+STRING 3055
+// Abilities: A03G ([Wrynn] Lion's Fang), Ubertip (Tooltip - Normal - Extended)
+{
+A wave of force that ripples outward, causing <A03G,DataA1> damage to land units in a line.
+}
+
+STRING 3056
+// Abilities: A03G ([Wrynn] Lion's Fang), Ubertip (Tooltip - Normal - Extended)
+{
+A wave of force that ripples outward, causing <A03G,DataA2> damage to land units in a line.
+}
+
+STRING 3057
+// Abilities: A03G ([Wrynn] Lion's Fang), Ubertip (Tooltip - Normal - Extended)
+{
+A wave of force that ripples outward, causing <A03G,DataA3> damage to land units in a line.
+}
+
+STRING 3058
+// Abilities: A03H ([Wrynn] Heroic Strike), Name (Name)
+{
+[Wrynn] Heroic Strike
+}
+
+STRING 3059
+// Abilities: A03H ([Wrynn] Heroic Strike), Researchtip (Tooltip - Learn)
+{
+Learn Heroic Strike - [|cffffcc00Level %d|r]
+}
+
+STRING 3060
+// Abilities: A03H ([Wrynn] Heroic Strike), Tip (Tooltip - Normal)
+{
+Heroic Strike - [|cffffcc00Level 1|r]
+}
+
+STRING 3061
+// Abilities: A03H ([Wrynn] Heroic Strike), Tip (Tooltip - Normal)
+{
+Heroic Strike - [|cffffcc00Level 2|r]
+}
+
+STRING 3062
+// Abilities: A03H ([Wrynn] Heroic Strike), Tip (Tooltip - Normal)
+{
+Heroic Strike - [|cffffcc00Level 3|r]
+}
+
+STRING 3063
+// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A03H,DataA1>% chance to do <A03H,DataB1> times normal damage on an attack.
+}
+
+STRING 3064
+// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A03H,DataA2>% chance to do <A03H,DataB2> times normal damage on an attack.
+}
+
+STRING 3065
+// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A03H,DataA3>% chance to do <A03H,DataB3> times normal damage on an attack.
+}
+
+STRING 3066
+// Abilities: A03H ([Wrynn] Heroic Strike), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives a chance to do more damage on an attack. |n|n|cffffcc00Level 1|r - <A03H,DataA1>% chance, <A03H,DataB1> times normal damage. |n|cffffcc00Level 2|r - <A03H,DataA2>% chance, <A03H,DataB2> times normal damage. |n|cffffcc00Level 3|r - <A03H,DataA3>% chance, <A03H,DataB3> times normal damage.
+}
+
+STRING 3069
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A03I,DataA2,%>% bonus to damage. |nLasts <A03I,Dur2> seconds.
+}
+
+STRING 3070
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A03I,DataA3,%>% bonus to damage. |nLasts <A03I,Dur3> seconds.
+}
+
+STRING 3071
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A03I,DataA1,%>% bonus to damage. |nLasts <A03I,Dur1> seconds.
+}
+
+STRING 3074
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Tip (Tooltip - Normal)
+{
+Stormwind Battlecry - [|cffffcc00Level 2|r]
+}
+
+STRING 3075
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Tip (Tooltip - Normal)
+{
+Stormwind Battlecry - [|cffffcc00Level 3|r]
+}
+
+STRING 3076
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Name (Name)
+{
+[Wrynn] Stormwind Battlecry
+}
+
+STRING 3077
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Tip (Tooltip - Normal)
+{
+Stormwind Battlecry - [|cffffcc00Level 1|r]
+}
+
+STRING 3078
+// Buffs/Effects: B003 (), Bufftip (Tooltip)
+{
+[Wrynn] Stormwind Battlecry
+}
+
+STRING 3079
+// Buffs/Effects: B003 (), Buffubertip (Tooltip - Extended)
+{
+This unit has Stormwind Battlecry; its attack damage has been increased.
+}
+
+STRING 3080
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Researchtip (Tooltip - Learn)
+{
+Learn Stormwind Battlecry - [|cffffcc00Level %d|r]
+}
+
+STRING 3081
+// Abilities: A03I ([Wrynn] Stormwind Battlecry), Researchubertip (Tooltip - Learn - Extended)
+{
+A wave of force that ripples out from the Hero, causing damage to land units in a line. 
+
+|cffffcc00Level 1|r - Gives friendly nearby units a <A03I,DataA1,%>% bonus to damage. Lasts <A03I,Dur1> seconds. 
+|cffffcc00Level 2|r - Gives friendly nearby units a <A03I,DataA2,%>% bonus to damage. Lasts <A03I,Dur2> seconds. 
+|cffffcc00Level 3|r - Gives friendly nearby units a <A03I,DataA3,%>% bonus to damage. Lasts <A03I,Dur3> seconds. 
+}
+
+STRING 3082
+// Abilities: A03J ([Wrynn] Taunt), Name (Name)
+{
+[Wrynn] Taunt
+}
+
+STRING 3083
+// Abilities: A03K ([Wrynn] Taunt), Name (Name)
+{
+[Wrynn] Taunt
+}
+
+STRING 3084
+// Abilities: A03K ([Wrynn] Taunt), EditorSuffix (Editor Suffix)
+{
+(Shield)
+}
+
+STRING 3085
+// Buffs/Effects: B00K (), Bufftip (Tooltip)
+{
+[Wrynn] Taunt
+}
+
+STRING 3086
+// Buffs/Effects: B00K (), Buffubertip (Tooltip - Extended)
+{
+This unit has Taunt; its armor are increased.
+}
+
+STRING 3087
+// Abilities: A03J ([Wrynn] Taunt), Researchtip (Tooltip - Learn)
+{
+Taunt
+}
+
+STRING 3088
+// Abilities: A03J ([Wrynn] Taunt), Researchubertip (Tooltip - Learn - Extended)
+{
+The closest <A03J,DataA1> enemies are forced to attack this unit.
+}
+
+STRING 3089
+// Abilities: A03J ([Wrynn] Taunt), Ubertip (Tooltip - Normal - Extended)
+{
+The closest <A03J,DataA1> enemies are forced to attack this unit.
+}
+
+STRING 3090
+// Abilities: A039 ([Wrynn] Rank 1 Corporal), Ubertip (Tooltip - Normal - Extended)
+{
++1 damage, +30 max hp, +25 max mana (for mage).|n Need 50 Exp to next Rank
+}
+
+STRING 3091
+// Abilities: A03A ([Wrynn] Rank 2 Sergeant), Ubertip (Tooltip - Normal - Extended)
+{
++3 damage, +60 max hp, +50 max mana (for mage).|n Need 75 Exp to next Rank
+}
+
+STRING 3092
+// Abilities: A03B ([Wrynn] Rank 3 Master Sergeant), Ubertip (Tooltip - Normal - Extended)
+{
++5 damage, +90 max hp, +75 max mana (for mage).
 }
 

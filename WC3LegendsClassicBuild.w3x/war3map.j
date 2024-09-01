@@ -168,6 +168,7 @@ trigger gg_trg_UtherLiturgy= null
 trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
+trigger gg_trg_WrynnExp= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -241,7 +242,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnExp= null
+trigger gg_trg_WrynnTaunt= null
 
     // Random Groups
 integer array gg_rg_000
@@ -806,12 +807,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 109.1, 397.2, 82.903, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', 0.1, 369.9, 100.017, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 219.1, 411.8, 65.231, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 222.4, 245.9, 72.550, 'h019')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 125.7, 221.4, 83.473, 'h019')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 9.3, 198.8, 95.933, 'h019')
 endfunction
 
 //===========================================================================
@@ -1230,13 +1225,13 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set life=GetUnitState(u, UNIT_STATE_LIFE)
     call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
     call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 5837.6, - 2975.8, - 74.186, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 6804.4, 1490.8, - 77.368, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h01J', 5837.6, - 2975.8, 285.814, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h01J', 6804.4, 1490.8, 282.632, 'h01J')
     set u=BlzCreateUnitWithSkin(p, 'h01J', 7789.7, 101.1, 253.676, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 4743.3, 6267.7, - 69.849, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', - 7303.4, - 3735.9, - 64.923, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', - 7944.5, - 2418.4, - 32.683, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', - 4417.0, - 6941.2, - 75.010, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h01J', 4743.3, 6267.7, 290.151, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h01J', - 7303.4, - 3735.9, 295.077, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h01J', - 7944.5, - 2418.4, 327.317, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h01J', - 4417.0, - 6941.2, 284.990, 'h01J')
 endfunction
 
 //===========================================================================
@@ -4043,12 +4038,39 @@ function Trig_WrynnIni_Actions takes nothing returns nothing
     set udg_WrynnExpTable[9]=285
     set udg_WrynnExpTable[10]=340
     call EnableTrigger(gg_trg_WrynnExp)
+    call EnableTrigger(gg_trg_WrynnTaunt)
 endfunction
 
 //===========================================================================
 function InitTrig_WrynnIni takes nothing returns nothing
     set gg_trg_WrynnIni=CreateTrigger()
     call TriggerAddAction(gg_trg_WrynnIni, function Trig_WrynnIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnTaunt
+//===========================================================================
+function Trig_WrynnTaunt_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A03J' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnTaunt_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A03K', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit())
+    call UnitApplyTimedLifeBJ(5.00, 'BTLF', GetLastCreatedUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnTaunt takes nothing returns nothing
+    set gg_trg_WrynnTaunt=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnTaunt)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnTaunt, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WrynnTaunt, Condition(function Trig_WrynnTaunt_Conditions))
+    call TriggerAddAction(gg_trg_WrynnTaunt, function Trig_WrynnTaunt_Actions)
 endfunction
 
 //===========================================================================
@@ -8427,6 +8449,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherChurchDonations()
     call InitTrig_UtherLightTower()
     call InitTrig_WrynnIni()
+    call InitTrig_WrynnTaunt()
     call InitTrig_WrynnExp()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
