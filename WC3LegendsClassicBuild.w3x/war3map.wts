@@ -5930,3 +5930,27 @@ STRING 2463
 Summon Arthas
 }
 
+STRING 2464
+// Doodads: D00C ([Alterac] Flower Bed Straight), Name (Name)
+{
+[Alterac] Flower Bed Straight
+}
+
+STRING 2465
+// Doodads: D00D ([Alterac] Low Wall), Name (Name)
+{
+[Alterac] Low Wall
+}
+
+STRING 2466
+// Doodads: D00E ([Alterac] Fence Longe), Name (Name)
+{
+[Alterac] Fence Longe
+}
+
+STRING 2467
+// Doodads: D00F ([Alterac] Bench Wood), Name (Name)
+{
+[Alterac] Bench Wood
+}
+

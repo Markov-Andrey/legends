@@ -792,7 +792,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h001', 6216.4, - 3390.4, 263.830, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
 endfunction
 
 //===========================================================================
@@ -803,7 +803,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h001', 6353.4, - 3530.6, 221.323, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h001', 6320.8, - 3521.4, 272.000, 'h001')
 endfunction
 
 //===========================================================================
@@ -4151,7 +4151,7 @@ function Trig_SetDifficulty_Actions takes nothing returns nothing
     set udg_SetDifficulty=( udg_SetDifficulty / udg_PlayerCount )
     set udg_PlayerChoise=( udg_PlayerChoise + 1 )
     call ShowUnitHide(GetSpellAbilityUnit())
-    call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), 185.00)
+    call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), 225.00)
     call RemoveUnit(GetSpellAbilityUnit())
     call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
     // Everyone player made a choice
