@@ -72,6 +72,7 @@ unit udg_Arthas= null
 integer udg_WrynnExp= 0
 integer udg_WrynnExpUnitCount= 0
 integer array udg_WrynnExpTable
+integer array udg_WrynnDeposit
 
     // Generated
 rect gg_rct_StartRegion= null
@@ -168,6 +169,7 @@ trigger gg_trg_UtherLiturgy= null
 trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
+trigger gg_trg_WrynnTaunt= null
 trigger gg_trg_WrynnExp= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
@@ -242,7 +244,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnTaunt= null
+trigger gg_trg_WrynnRent= null
+trigger gg_trg_WrynnDeposit= null
+trigger gg_trg_WrynnDepositTimer= null
 
     // Random Groups
 integer array gg_rg_000
@@ -416,6 +420,13 @@ function InitGlobals takes nothing returns nothing
     loop
         exitwhen ( i > 0 )
         set udg_WrynnExpTable[i]=0
+        set i=i + 1
+    endloop
+
+    set i=0
+    loop
+        exitwhen ( i > 0 )
+        set udg_WrynnDeposit[i]=0
         set i=i + 1
     endloop
 
@@ -4039,6 +4050,9 @@ function Trig_WrynnIni_Actions takes nothing returns nothing
     set udg_WrynnExpTable[10]=340
     call EnableTrigger(gg_trg_WrynnExp)
     call EnableTrigger(gg_trg_WrynnTaunt)
+    call EnableTrigger(gg_trg_WrynnRent)
+    call EnableTrigger(gg_trg_WrynnDeposit)
+    call EnableTrigger(gg_trg_WrynnDepositTimer)
 endfunction
 
 //===========================================================================
@@ -4397,6 +4411,149 @@ function InitTrig_WrynnExp takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnExp, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_WrynnExp, Condition(function Trig_WrynnExp_Conditions))
     call TriggerAddAction(gg_trg_WrynnExp, function Trig_WrynnExp_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnRent
+//===========================================================================
+function Trig_WrynnRent_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h00V' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) >= 60.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnRent_Func001Func001A takes nothing returns nothing
+    if ( Trig_WrynnRent_Func001Func001Func001C() ) then
+        call AdjustPlayerStateBJ(5, GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_GOLD)
+        call SetUnitManaBJ(GetEnumUnit(), 0)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_WrynnRent_Func001A takes nothing returns nothing
+    call ForGroupBJ(GetUnitsInRectAll(RectFromCenterSizeBJ(GetUnitLoc(GetEnumUnit()), 600.00, 600.00)), function Trig_WrynnRent_Func001Func001A)
+endfunction
+
+function Trig_WrynnRent_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h01I'), function Trig_WrynnRent_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnRent takes nothing returns nothing
+    set gg_trg_WrynnRent=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnRent)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnRent, 1.00)
+    call TriggerAddAction(gg_trg_WrynnRent, function Trig_WrynnRent_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnDeposit
+//
+// Deposit 100, Deposit 1000, Check Deposit, Reset Deposit
+//===========================================================================
+function Trig_WrynnDeposit_Func002C takes nothing returns boolean
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I000' ) ) then
+        return true
+    endif
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I001' ) ) then
+        return true
+    endif
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I003' ) ) then
+        return true
+    endif
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I006' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WrynnDeposit_Conditions takes nothing returns boolean
+    if ( not Trig_WrynnDeposit_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnDeposit_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I003' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnDeposit_Func001Func001C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I000' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnDeposit_Func001C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I001' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnDeposit_Actions takes nothing returns nothing
+    if ( Trig_WrynnDeposit_Func001C() ) then
+        set udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))]=( udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))] + 1000 )
+    else
+        if ( Trig_WrynnDeposit_Func001Func001C() ) then
+            set udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))]=( udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))] + 100 )
+        else
+            if ( Trig_WrynnDeposit_Func001Func001Func001C() ) then
+                call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetManipulatingUnit())), ( "Your deposit amount: " + I2S(udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))]) ))
+            else
+                call AdjustPlayerStateBJ(udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))], GetOwningPlayer(GetManipulatingUnit()), PLAYER_STATE_RESOURCE_GOLD)
+                set udg_WrynnDeposit[GetConvertedPlayerId(GetOwningPlayer(GetManipulatingUnit()))]=0
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnDeposit takes nothing returns nothing
+    set gg_trg_WrynnDeposit=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnDeposit)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnDeposit, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(gg_trg_WrynnDeposit, Condition(function Trig_WrynnDeposit_Conditions))
+    call TriggerAddAction(gg_trg_WrynnDeposit, function Trig_WrynnDeposit_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnDepositTimer
+//===========================================================================
+function Trig_WrynnDepositTimer_Func001Func001C takes nothing returns boolean
+    if ( not ( udg_WrynnDeposit[GetConvertedPlayerId(GetEnumPlayer())] > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnDepositTimer_Func001A takes nothing returns nothing
+    if ( Trig_WrynnDepositTimer_Func001Func001C() ) then
+        call AdjustPlayerStateBJ(( udg_WrynnDeposit[GetConvertedPlayerId(GetEnumPlayer())] / 10 ), GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD)
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_WrynnDepositTimer_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_WrynnDepositTimer_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnDepositTimer takes nothing returns nothing
+    set gg_trg_WrynnDepositTimer=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnDepositTimer)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnDepositTimer, 5.00)
+    call TriggerAddAction(gg_trg_WrynnDepositTimer, function Trig_WrynnDepositTimer_Actions)
 endfunction
 
 //===========================================================================
@@ -8451,6 +8608,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnIni()
     call InitTrig_WrynnTaunt()
     call InitTrig_WrynnExp()
+    call InitTrig_WrynnRent()
+    call InitTrig_WrynnDeposit()
+    call InitTrig_WrynnDepositTimer()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

@@ -7712,3 +7712,223 @@ STRING 3092
 +5 damage, +90 max hp, +75 max mana (for mage).
 }
 
+STRING 3093
+// Abilities: A03L ([Wrynn] Magic Sentry), Name (Name)
+{
+[Wrynn] Magic Sentry
+}
+
+STRING 3094
+// Upgrades: R01I (Magic Sentry), Name (Name)
+{
+[Wrynn] Magic Sentry
+}
+
+STRING 3096
+// Items: I000 ([Wrynn] Gold Coins - 100), Name (Name)
+{
+[Wrynn] Gold Coins - 100
+}
+
+STRING 3098
+// Items: I001 ([Wrynn] Gold Coins - 1000), Name (Name)
+{
+[Wrynn] Gold Coins - 1000
+}
+
+STRING 3105
+// Items: I003 ([Wrynn] Check Deposit), Name (Name)
+{
+[Wrynn] Check Deposit
+}
+
+STRING 3107
+// Items: I003 ([Wrynn] Check Deposit), Tip (Tooltip - Basic)
+{
+Check Deposit
+}
+
+STRING 3109
+// Items: I000 ([Wrynn] Gold Coins - 100), Ubertip (Tooltip - Extended)
+{
+Invest 100 coins into the shared deposit and receive dividends every 2 minutes.
+}
+
+STRING 3110
+// Items: I000 ([Wrynn] Gold Coins - 100), Tip (Tooltip - Basic)
+{
+Invest Gold Coins
+}
+
+STRING 3111
+// Items: I001 ([Wrynn] Gold Coins - 1000), Ubertip (Tooltip - Extended)
+{
+Invest 1000 coins into the shared deposit and receive dividends every 2 minutes.
+}
+
+STRING 3112
+// Items: I001 ([Wrynn] Gold Coins - 1000), Tip (Tooltip - Basic)
+{
+Invest Gold Coins
+}
+
+STRING 3113
+// Items: I003 ([Wrynn] Check Deposit), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Gain 1 Mana Crystal this turn only... Oops, it seems this is the wrong game."|r
+
+Check the current bank deposit.
+}
+
+STRING 3114
+// Items: I006 ([Wrynn] Reset Deposit), Name (Name)
+{
+[Wrynn] Reset Deposit
+}
+
+STRING 3115
+// Items: I006 ([Wrynn] Reset Deposit), Ubertip (Tooltip - Extended)
+{
+Get your entire investment back, your deposit will be empty.
+}
+
+STRING 3116
+// Items: I006 ([Wrynn] Reset Deposit), Tip (Tooltip - Basic)
+{
+Reset Deposit
+}
+
+STRING 3117
+// Abilities: A03M ([Wrynn] Rent), Name (Name)
+{
+[Wrynn] Rent
+}
+
+STRING 3118
+// Abilities: A03M ([Wrynn] Rent), Tip (Tooltip - Normal)
+{
+Rent
+}
+
+STRING 3119
+// Abilities: A03M ([Wrynn] Rent), Ubertip (Tooltip - Normal - Extended)
+{
+Once every 60 seconds, the house generates 5 coins, which can only be collected by a nearby bank.
+}
+
+STRING 3122
+// Upgrades: R01J (Priest Adept Training,Priest Master Training), Name (Name)
+{
+[Wrynn] Priest Adept Training
+}
+
+STRING 3123
+// Upgrades: R01K (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+[Wrynn] Sorceress Adept Training
+}
+
+STRING 3124
+// Abilities: A03N ([Wrynn] Heal), Name (Name)
+{
+[Wrynn] Heal
+}
+
+STRING 3125
+// Abilities: A03O ([Wrynn] Inner Fire), Name (Name)
+{
+[Wrynn] Inner Fire
+}
+
+STRING 3126
+// Abilities: A03P ([Wrynn] Invisibility), Name (Name)
+{
+[Wrynn] Invisibility
+}
+
+STRING 3127
+// Abilities: A03Q ([Wrynn] Polymorph), Name (Name)
+{
+[Wrynn] Polymorph
+}
+
+STRING 3128
+// Abilities: A03R ([Wrynn] Slow), Name (Name)
+{
+[Wrynn] Slow
+}
+
+STRING 3129
+// Abilities: A03S ([Wrynn] Dispel Magic), Name (Name)
+{
+[Wrynn] Dispel Magic
+}
+
+STRING 3130
+// Units: h01D ([Wrynn] Priest), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Arrived straight from Northshire Abbey."|r
+
+Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3131
+// Abilities: A03T ([Wrynn] Flare), Name (Name)
+{
+[Wrynn] Flare
+}
+
+STRING 3132
+// Abilities: A03U ([Wrynn] Fragmentation Shards), Name (Name)
+{
+[Wrynn] Fragmentation Shards
+}
+
+STRING 3133
+// Upgrades: R01L (Flare), Name (Name)
+{
+[Wrynn] Flare
+}
+
+STRING 3134
+// Upgrades: R01M (Fragmentation Shards), Name (Name)
+{
+[Wrynn] Fragmentation Shards
+}
+
+STRING 3135
+// Abilities: A03V ([Wrynn] Flak Cannons), Name (Name)
+{
+[Wrynn] Flak Cannons
+}
+
+STRING 3136
+// Abilities: A03W ([Wrynn] Flying Machine Bombs), Name (Name)
+{
+[Wrynn] Flying Machine Bombs
+}
+
+STRING 3137
+// Upgrades: R01N (Flak Cannons), Name (Name)
+{
+[Wrynn] Flak Cannons
+}
+
+STRING 3138
+// Upgrades: R01O (Flying Machine Bombs), Name (Name)
+{
+[Wrynn] Flying Machine Bombs
+}
+
+STRING 3139
+// Abilities: A03X ([Wrynn] Auxiliary Gun), Name (Name)
+{
+[Wrynn] Auxiliary Gun
+}
+
+STRING 3140
+// Abilities: A03X ([Wrynn] Auxiliary Gun), Tip (Tooltip - Normal)
+{
+Auxiliary Gun
+}
+
