@@ -171,6 +171,9 @@ trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
 trigger gg_trg_WrynnTaunt= null
 trigger gg_trg_WrynnExp= null
+trigger gg_trg_WrynnRent= null
+trigger gg_trg_WrynnDeposit= null
+trigger gg_trg_WrynnDepositTimer= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -244,9 +247,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnRent= null
-trigger gg_trg_WrynnDeposit= null
-trigger gg_trg_WrynnDepositTimer= null
+trigger gg_trg_PreviewLegend= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1517,7 +1518,7 @@ endfunction
 //===========================================================================
 function InitTrig_CurrentBuild takes nothing returns nothing
     set gg_trg_CurrentBuild=CreateTrigger()
-    set udg_isTestVersion=false
+    set udg_isTestVersion=true
 endfunction
 //===========================================================================
 // Trigger: ConsoleLog
@@ -1538,7 +1539,7 @@ function InitTrig_ConsoleLog takes nothing returns nothing
             set udg_ConsoleMessage="[Run]"
         endif
 
-        call DisplayTextToForce(GetPlayersAll(), "|cFF00C850<" + udg_ConsoleTrigger + ">|R " + udg_ConsoleMessage)
+        call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, "|cFF00C850<" + udg_ConsoleTrigger + ">|R " + udg_ConsoleMessage)
     
         set udg_ConsoleMessage=null
         set udg_ConsoleTrigger=null
@@ -2206,14 +2207,12 @@ endfunction
 //===========================================================================
 // Trigger: ChooseFirst
 //===========================================================================
+function Trig_ChooseFirst_Func001A takes nothing returns nothing
+    call SelectUnitForPlayerSingle(GetEnumUnit(), GetOwningPlayer(GetEnumUnit()))
+endfunction
+
 function Trig_ChooseFirst_Actions takes nothing returns nothing
-    set bj_forLoopAIndex=1
-    set bj_forLoopAIndexEnd=24
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SelectUnitForPlayerSingle(GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(ConvertedPlayer(GetForLoopIndexA()), 'h001')), ConvertedPlayer(GetForLoopIndexA()))
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h001'), function Trig_ChooseFirst_Func001A)
 endfunction
 
 //===========================================================================
@@ -2294,93 +2293,54 @@ function InitTrig_UnSelect takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: PreviewArthas
+// Trigger: PreviewLegend
+//
+// preview and block legend
 //===========================================================================
-function Trig_PreviewArthas_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A01C' ) ) then
-        return false
+function Trig_PreviewLegend takes nothing returns nothing
+    local integer abilityId= GetSpellAbilityId()
+    local integer unitType
+    local integer i
+    local force allPlayers= bj_FORCE_ALL_PLAYERS
+    local player p
+
+    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' then
+        if abilityId == 'A01C' then
+            set unitType='h00T'
+        elseif abilityId == 'A01J' then
+            set unitType='h00U'
+        elseif abilityId == 'A031' then
+            set unitType='h012'
+        else
+            return
+        endif
+
+        call ShowUnit(GetSpellAbilityUnit(), false)
+        call CreateNUnitsAtLoc(1, unitType, GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+        call SelectUnitForPlayerSingle(bj_lastCreatedUnit, GetOwningPlayer(GetSpellAbilityUnit()))
+        call RemoveUnit(GetSpellAbilityUnit())
+
+        loop
+            set p=Player(0)
+            exitwhen p == null
+            if ( p != null ) then
+                if abilityId == 'A031' then
+                    call SetPlayerAbilityAvailable(p, 'A031', false)
+                elseif abilityId == 'A01J' then
+                    call SetPlayerAbilityAvailable(p, 'A01J', false)
+                elseif abilityId == 'A01C' then
+                    call SetPlayerAbilityAvailable(p, 'A01C', false)
+                endif
+            endif
+            set p=Player(23)
+        endloop
     endif
-    return true
 endfunction
 
-function Trig_PreviewArthas_Func005A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(false, 'A01C', GetEnumPlayer())
-endfunction
-
-function Trig_PreviewArthas_Actions takes nothing returns nothing
-    call ShowUnitHide(GetSpellAbilityUnit())
-    call CreateNUnitsAtLoc(1, 'h00T', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
-    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
-    call ForForce(GetPlayersAll(), function Trig_PreviewArthas_Func005A)
-endfunction
-
-//===========================================================================
-function InitTrig_PreviewArthas takes nothing returns nothing
-    set gg_trg_PreviewArthas=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewArthas, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_PreviewArthas, Condition(function Trig_PreviewArthas_Conditions))
-    call TriggerAddAction(gg_trg_PreviewArthas, function Trig_PreviewArthas_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: PreviewUther
-//===========================================================================
-function Trig_PreviewUther_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A01J' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PreviewUther_Func005A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(false, 'A01J', GetEnumPlayer())
-endfunction
-
-function Trig_PreviewUther_Actions takes nothing returns nothing
-    call ShowUnitHide(GetSpellAbilityUnit())
-    call CreateNUnitsAtLoc(1, 'h00U', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
-    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
-    call ForForce(GetPlayersAll(), function Trig_PreviewUther_Func005A)
-endfunction
-
-//===========================================================================
-function InitTrig_PreviewUther takes nothing returns nothing
-    set gg_trg_PreviewUther=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewUther, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_PreviewUther, Condition(function Trig_PreviewUther_Conditions))
-    call TriggerAddAction(gg_trg_PreviewUther, function Trig_PreviewUther_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: PreviewWrynn
-//===========================================================================
-function Trig_PreviewWrynn_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A031' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PreviewWrynn_Func005A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(false, 'A031', GetEnumPlayer())
-endfunction
-
-function Trig_PreviewWrynn_Actions takes nothing returns nothing
-    call ShowUnitHide(GetSpellAbilityUnit())
-    call CreateNUnitsAtLoc(1, 'h012', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
-    call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
-    call ForForce(GetPlayersAll(), function Trig_PreviewWrynn_Func005A)
-endfunction
-
-//===========================================================================
-function InitTrig_PreviewWrynn takes nothing returns nothing
-    set gg_trg_PreviewWrynn=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewWrynn, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_PreviewWrynn, Condition(function Trig_PreviewWrynn_Conditions))
-    call TriggerAddAction(gg_trg_PreviewWrynn, function Trig_PreviewWrynn_Actions)
+function InitTrig_PreviewLegend takes nothing returns nothing
+    set gg_trg_PreviewLegend=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PreviewLegend, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddAction(gg_trg_PreviewLegend, function Trig_PreviewLegend)
 endfunction
 
 //===========================================================================
@@ -4552,7 +4512,7 @@ endfunction
 function InitTrig_WrynnDepositTimer takes nothing returns nothing
     set gg_trg_WrynnDepositTimer=CreateTrigger()
     call DisableTrigger(gg_trg_WrynnDepositTimer)
-    call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnDepositTimer, 5.00)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnDepositTimer, 120.00)
     call TriggerAddAction(gg_trg_WrynnDepositTimer, function Trig_WrynnDepositTimer_Actions)
 endfunction
 
@@ -7298,6 +7258,8 @@ endfunction
 
 //===========================================================================
 // Trigger: CreateHero
+//
+// set random hero
 //===========================================================================
 function Trig_CreateHero_Actions takes nothing returns nothing
     local unit newHero
@@ -8566,9 +8528,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LimitUnits()
     call InitTrig_ChooseFirst()
     call InitTrig_UnSelect()
-    call InitTrig_PreviewArthas()
-    call InitTrig_PreviewUther()
-    call InitTrig_PreviewWrynn()
+    call InitTrig_PreviewLegend()
     call InitTrig_ChooseArthas()
     call InitTrig_ChooseUther()
     call InitTrig_ChooseWrynn()
