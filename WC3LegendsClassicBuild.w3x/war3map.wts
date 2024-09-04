@@ -7932,3 +7932,9 @@ STRING 3140
 Auxiliary Gun
 }
 
+STRING 3141
+// Abilities: A03Y ([Wrynn] TEST), Name (Name)
+{
+[Wrynn] TEST
+}
+

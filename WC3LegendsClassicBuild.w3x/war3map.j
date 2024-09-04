@@ -246,6 +246,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_WrynnStance= null
 
     // Random Groups
 integer array gg_rg_000
@@ -817,6 +818,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h018', - 757.7, - 121.1, 7.899, 'h018')
+    set u=BlzCreateUnitWithSkin(p, 'h018', - 628.9, - 70.1, 158.834, 'h018')
+    set u=BlzCreateUnitWithSkin(p, 'h018', - 662.4, - 190.0, 8.042, 'h018')
 endfunction
 
 //===========================================================================
@@ -4369,6 +4373,19 @@ function InitTrig_WrynnExp takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnExp, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_WrynnExp, Condition(function Trig_WrynnExp_Conditions))
     call TriggerAddAction(gg_trg_WrynnExp, function Trig_WrynnExp_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnStance
+//===========================================================================
+function Trig_WrynnStance_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnStance takes nothing returns nothing
+    set gg_trg_WrynnStance=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnStance, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddAction(gg_trg_WrynnStance, function Trig_WrynnStance_Actions)
 endfunction
 
 //===========================================================================
@@ -8571,6 +8588,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnIni()
     call InitTrig_WrynnTaunt()
     call InitTrig_WrynnExp()
+    call InitTrig_WrynnStance()
     call InitTrig_WrynnRent()
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
