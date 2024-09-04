@@ -7932,9 +7932,87 @@ STRING 3140
 Auxiliary Gun
 }
 
-STRING 3141
-// Abilities: A03Y ([Wrynn] TEST), Name (Name)
+STRING 3142
+// Abilities: A03Y ([Wrynn] Battle Stance), Name (Name)
 {
-[Wrynn] TEST
+[Wrynn] Battle Stance
+}
+
+STRING 3143
+// Abilities: A03Y ([Wrynn] Battle Stance), Tip (Tooltip - Normal)
+{
+Battle Stance
+}
+
+STRING 3144
+// Abilities: A03Y ([Wrynn] Battle Stance), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' attack rate by <A03Y,DataB1,%>%.
+}
+
+STRING 3145
+// Abilities: A03Z ([Wrynn] Battle Stance), Name (Name)
+{
+[Wrynn] Battle Stance
+}
+
+STRING 3146
+// Abilities: A03Z ([Wrynn] Battle Stance), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3147
+// Buffs/Effects: B00O (), Bufftip (Tooltip)
+{
+[Wrynn] Battle Stance
+}
+
+STRING 3148
+// Abilities: A040 ([Wrynn] Defensive Stance), Name (Name)
+{
+[Wrynn] Defensive Stance
+}
+
+STRING 3149
+// Abilities: A040 ([Wrynn] Defensive Stance), Tip (Tooltip - Normal)
+{
+Defensive Stance
+}
+
+STRING 3150
+// Abilities: A040 ([Wrynn] Defensive Stance), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A040,DataA1,.> additional armor to nearby friendly units.
+}
+
+STRING 3151
+// Abilities: A041 ([Wrynn] Defensive Stance), Name (Name)
+{
+[Wrynn] Defensive Stance
+}
+
+STRING 3152
+// Abilities: A041 ([Wrynn] Defensive Stance), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3153
+// Buffs/Effects: B00O (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Battle Stance; it has an increased attack rate.
+}
+
+STRING 3154
+// Buffs/Effects: B00P (), Bufftip (Tooltip)
+{
+[Wrynn] Defensive Stance
+}
+
+STRING 3155
+// Buffs/Effects: B00P (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Defensive Stance; it has increased armor.
 }
 

@@ -73,6 +73,7 @@ integer udg_WrynnExp= 0
 integer udg_WrynnExpUnitCount= 0
 integer array udg_WrynnExpTable
 integer array udg_WrynnDeposit
+unit udg_WrynnUnit= null
 
     // Generated
 rect gg_rct_StartRegion= null
@@ -246,7 +247,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnStance= null
+trigger gg_trg_WrynnUpgradeVeterans= null
+trigger gg_trg_WrynnAddUpg= null
 
     // Random Groups
 integer array gg_rg_000
@@ -818,9 +820,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 757.7, - 121.1, 7.899, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 628.9, - 70.1, 158.834, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 662.4, - 190.0, 8.042, 'h018')
 endfunction
 
 //===========================================================================
@@ -4214,7 +4213,7 @@ function Trig_WrynnExp_Func009Func001Func004C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func008C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func011C takes nothing returns boolean
     if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
         return false
     endif
@@ -4332,13 +4331,16 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
         else
         endif
         if ( Trig_WrynnExp_Func009Func001Func005C() ) then
+            set udg_WrynnUnit=GetEnumUnit()
+            call ConditionalTriggerExecute(gg_trg_WrynnAddUpg)
+            call UnitRemoveAbilityBJ('A03C', GetEnumUnit())
             call UnitRemoveAbilityBJ('A03A', GetEnumUnit())
             call UnitRemoveAbilityBJ('A02Q', GetEnumUnit())
             call UnitAddAbilityBJ('A03B', GetEnumUnit())
             call UnitAddAbilityBJ('A02Z', GetEnumUnit())
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 75 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
-            if ( Trig_WrynnExp_Func009Func001Func005Func008C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func011C() ) then
                 call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
             else
             endif
@@ -4376,16 +4378,87 @@ function InitTrig_WrynnExp takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: WrynnStance
+// Trigger: WrynnAddUpg
 //===========================================================================
-function Trig_WrynnStance_Actions takes nothing returns nothing
+function Trig_WrynnAddUpg_Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(udg_WrynnUnit) == 'h018' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnAddUpg_Actions takes nothing returns nothing
+    if ( Trig_WrynnAddUpg_Func001C() ) then
+        call UnitAddAbilityBJ('A03Z', udg_WrynnUnit)
+        call UnitAddAbilityBJ('A041', udg_WrynnUnit)
+        set udg_WrynnUnit=null
+    else
+    endif
 endfunction
 
 //===========================================================================
-function InitTrig_WrynnStance takes nothing returns nothing
-    set gg_trg_WrynnStance=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnStance, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddAction(gg_trg_WrynnStance, function Trig_WrynnStance_Actions)
+function InitTrig_WrynnAddUpg takes nothing returns nothing
+    set gg_trg_WrynnAddUpg=CreateTrigger()
+    call TriggerAddAction(gg_trg_WrynnAddUpg, function Trig_WrynnAddUpg_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnUpgradeVeterans
+//
+// improved 1, disabled both
+//===========================================================================
+function Trig_WrynnUpgradeVeterans_Func003C takes nothing returns boolean
+    if ( ( GetSpellAbilityId() == 'A03Z' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A041' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WrynnUpgradeVeterans_Conditions takes nothing returns boolean
+    if ( not Trig_WrynnUpgradeVeterans_Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnUpgradeVeterans_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A03Z' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnUpgradeVeterans_Func002C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A041' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
+    if ( Trig_WrynnUpgradeVeterans_Func001C() ) then
+        call UnitAddAbilityBJ('A03Y', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
+    else
+    endif
+    if ( Trig_WrynnUpgradeVeterans_Func002C() ) then
+        call UnitAddAbilityBJ('A040', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnUpgradeVeterans takes nothing returns nothing
+    set gg_trg_WrynnUpgradeVeterans=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnUpgradeVeterans, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_WrynnUpgradeVeterans, Condition(function Trig_WrynnUpgradeVeterans_Conditions))
+    call TriggerAddAction(gg_trg_WrynnUpgradeVeterans, function Trig_WrynnUpgradeVeterans_Actions)
 endfunction
 
 //===========================================================================
@@ -7992,7 +8065,7 @@ function Trig_EnemyTimer_Actions takes nothing returns nothing
     set udg_TimerMinEnemyWave[1]=( 10.00 * 60.00 )
     set udg_TimerMinEnemyWave[2]=( 17.00 * 60.00 )
     set udg_TimerMinEnemyWave[3]=( 23.00 * 60.00 )
-    set udg_TimerMinEnemyWave[4]=( 1.00 * 60.00 )
+    set udg_TimerMinEnemyWave[4]=( 30.00 * 60.00 )
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=4
     loop
@@ -8588,7 +8661,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnIni()
     call InitTrig_WrynnTaunt()
     call InitTrig_WrynnExp()
-    call InitTrig_WrynnStance()
+    call InitTrig_WrynnAddUpg()
+    call InitTrig_WrynnUpgradeVeterans()
     call InitTrig_WrynnRent()
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
