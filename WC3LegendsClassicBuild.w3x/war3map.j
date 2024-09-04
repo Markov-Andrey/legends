@@ -129,6 +129,7 @@ trigger gg_trg_StartCameraReset= null
 trigger gg_trg_LimitUnits= null
 trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
+trigger gg_trg_PreviewLegend= null
 trigger gg_trg_PreviewArthas= null
 trigger gg_trg_PreviewUther= null
 trigger gg_trg_PreviewWrynn= null
@@ -198,8 +199,6 @@ trigger gg_trg_SetWayPoint= null
 trigger gg_trg_WayPingIni= null
 trigger gg_trg_Way1Ping= null
 trigger gg_trg_Way2Ping= null
-trigger gg_trg_WayMovement1= null
-trigger gg_trg_WayMovement2= null
 trigger gg_trg_IniZone= null
 trigger gg_trg_AlternateMovement= null
 trigger gg_trg_UnitGroupDead= null
@@ -247,7 +246,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_PreviewLegend= null
 
     // Random Groups
 integer array gg_rg_000
@@ -6718,43 +6716,43 @@ endfunction
 //
 // Warning! A group is selected after 0.01 seconds to allow 'Chaos' abilities to work
 //===========================================================================
-function Trig_UnitsInitializationWay1_Func004Func001C takes nothing returns boolean
-    if ( not ( GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_UnitsInitializationWay1_Func004A takes nothing returns nothing
-    if ( Trig_UnitsInitializationWay1_Func004Func001C() ) then
-        call GroupAddUnitSimple(GetEnumUnit(), udg_UnitGroupArray1[udg_CountGroup1])
-    else
+    if GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy then
+        call GroupAddUnit(udg_UnitGroupArray1[udg_CountGroup1], GetEnumUnit())
     endif
 endfunction
 
 function Trig_UnitsInitializationWay1_Func011A takes nothing returns nothing
     // Console Log
     set udg_ConsoleTrigger="UnitsInitializationWay1"
-    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
+    set udg_ConsoleMessage=" - " + GetUnitName(GetEnumUnit())
+    call TriggerExecute(gg_trg_ConsoleLog)
 endfunction
 
 function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
-    // Units Initialization
+    local group g= GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
+    local location l= GetRectCenter(gg_rct_Way1_p1)
+    local integer i= udg_CountGroup1
+
+    // Initialize unit group and wait
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
     call PolledWait(0.01)
-    call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay1_Func004A)
-    call GroupPointOrderLocBJ(udg_UnitGroupArray1[udg_CountGroup1], "attack", GetRectCenter(gg_rct_Way1_p1))
-    // Console Log
+
+    // Add units to group and order attack
+    call ForGroupBJ(g, function Trig_UnitsInitializationWay1_Func004A)
+    call GroupPointOrderLocBJ(udg_UnitGroupArray1[i], "attack", l)
+    
+    // Console log
     set udg_ConsoleTrigger="UnitsInitializationWay1"
-    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup1) ) + ":" )
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
-    call ForGroupBJ(udg_UnitGroupArray1[udg_CountGroup1], function Trig_UnitsInitializationWay1_Func011A)
+    set udg_ConsoleMessage="Group " + I2S(i) + ":"
+    call TriggerExecute(gg_trg_ConsoleLog)
+    call ForGroupBJ(udg_UnitGroupArray1[i], function Trig_UnitsInitializationWay1_Func011A)
+
+    // Cleanup
+    call RemoveLocation(l)
+    call DestroyGroup(g)
 endfunction
 
-//===========================================================================
 function InitTrig_UnitsInitializationWay1 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay1=CreateTrigger()
     call TriggerAddAction(gg_trg_UnitsInitializationWay1, function Trig_UnitsInitializationWay1_Actions)
@@ -6765,17 +6763,9 @@ endfunction
 //
 // Warning! A group is selected after 0.01 seconds to allow 'Chaos' abilities to work
 //===========================================================================
-function Trig_UnitsInitializationWay2_Func004Func001C takes nothing returns boolean
-    if ( not ( GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_UnitsInitializationWay2_Func004A takes nothing returns nothing
-    if ( Trig_UnitsInitializationWay2_Func004Func001C() ) then
-        call GroupAddUnitSimple(GetEnumUnit(), udg_UnitGroupArray2[udg_CountGroup2])
-    else
+    if GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy then
+        call GroupAddUnit(udg_UnitGroupArray2[udg_CountGroup2], GetEnumUnit())
     endif
 endfunction
 
@@ -6783,8 +6773,7 @@ function Trig_UnitsInitializationWay2_Func011A takes nothing returns nothing
     // Console Log
     set udg_ConsoleTrigger="UnitsInitializationWay2"
     set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
+    call TriggerExecute(gg_trg_ConsoleLog)
 endfunction
 
 function Trig_UnitsInitializationWay2_Actions takes nothing returns nothing
@@ -6796,7 +6785,7 @@ function Trig_UnitsInitializationWay2_Actions takes nothing returns nothing
     // Console Log
     set udg_ConsoleTrigger="UnitsInitializationWay2"
     set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup2) ) + ":" )
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
+    call TriggerExecute(gg_trg_ConsoleLog)
     //  
     call ForGroupBJ(udg_UnitGroupArray2[udg_CountGroup2], function Trig_UnitsInitializationWay2_Func011A)
 endfunction
@@ -6807,60 +6796,65 @@ function InitTrig_UnitsInitializationWay2 takes nothing returns nothing
     call TriggerAddAction(gg_trg_UnitsInitializationWay2, function Trig_UnitsInitializationWay2_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: UnitsInitializationWay3
 //
 // Warning! A group is selected after 0.01 seconds to allow 'Chaos' abilities to work
 //===========================================================================
-function Trig_UnitsInitializationWay3_Func005Func001C takes nothing returns boolean
-    if ( not ( GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_UnitsInitializationWay3_Func005A takes nothing returns nothing
-    if ( Trig_UnitsInitializationWay3_Func005Func001C() ) then
-        call GroupAddUnitSimple(GetEnumUnit(), udg_UnitGroupArray3[udg_CountGroup3])
-    else
+    if GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy then
+        call GroupAddUnit(udg_UnitGroupArray3[udg_CountGroup3], GetEnumUnit())
     endif
 endfunction
 
 function Trig_UnitsInitializationWay3_Func012A takes nothing returns nothing
     // Console Log
     set udg_ConsoleTrigger="UnitsInitializationWay3"
-    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
+    set udg_ConsoleMessage=" - " + GetUnitName(GetEnumUnit())
+    call TriggerExecute(gg_trg_ConsoleLog)
 endfunction
 
 function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
-    set bj_forLoopAIndex=0
-    set bj_forLoopAIndexEnd=udg_CountGroup3
+    local group g
+    local location l
+    local integer i
+
+    // Clear groups
+    set i=0
     loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call GroupClear(udg_UnitGroupArray3[GetForLoopIndexA()])
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+        exitwhen i > udg_CountGroup3
+        call GroupClear(udg_UnitGroupArray3[i])
+        set i=i + 1
     endloop
+
     // Units Initialization
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
     call PolledWait(0.01)
-    call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay3_Func005A)
-    call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", GetRectCenter(gg_rct_EnemyWayAttackPoint))
-    // Console Log
+
+    // Add units to group and order attack
+    set g=GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
+    set l=GetRectCenter(gg_rct_EnemyWayAttackPoint)
+    call ForGroupBJ(g, function Trig_UnitsInitializationWay3_Func005A)
+    call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", l)
+
+    // Console log
     set udg_ConsoleTrigger="UnitsInitializationWay3"
-    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup3) ) + ":" )
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
+    set udg_ConsoleMessage="Group " + I2S(udg_CountGroup3) + ":"
+    call TriggerExecute(gg_trg_ConsoleLog)
+    
+    // Console log for units
     call ForGroupBJ(udg_UnitGroupArray3[udg_CountGroup3], function Trig_UnitsInitializationWay3_Func012A)
+
+    // Cleanup
+    call RemoveLocation(l)
+    call DestroyGroup(g)
 endfunction
 
-//===========================================================================
 function InitTrig_UnitsInitializationWay3 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay3=CreateTrigger()
     call TriggerAddAction(gg_trg_UnitsInitializationWay3, function Trig_UnitsInitializationWay3_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: DebugUnitsIniWay3
 //===========================================================================
@@ -7589,6 +7583,11 @@ endfunction
 // Trigger: WaveTimer
 //
 // Wave Timing Setting
+// 6
+// 14
+// 20
+// 27
+// 34
 //===========================================================================
 function Trig_WaveTimer_Actions takes nothing returns nothing
     set udg_TimerMinWave[1]=( 6.00 * 60.00 )
@@ -7967,12 +7966,16 @@ endfunction
 // Trigger: EnemyTimer
 //
 // Wave Timing Setting
+// 10
+// 17
+// 23
+// 30
 //===========================================================================
 function Trig_EnemyTimer_Actions takes nothing returns nothing
     set udg_TimerMinEnemyWave[1]=( 10.00 * 60.00 )
     set udg_TimerMinEnemyWave[2]=( 17.00 * 60.00 )
     set udg_TimerMinEnemyWave[3]=( 23.00 * 60.00 )
-    set udg_TimerMinEnemyWave[4]=( 30.00 * 60.00 )
+    set udg_TimerMinEnemyWave[4]=( 1.00 * 60.00 )
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=4
     loop
