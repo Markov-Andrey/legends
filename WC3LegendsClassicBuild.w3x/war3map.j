@@ -175,6 +175,7 @@ trigger gg_trg_WrynnTaunt= null
 trigger gg_trg_WrynnExp= null
 trigger gg_trg_WrynnAddUpg= null
 trigger gg_trg_WrynnUpgradeVeterans= null
+trigger gg_trg_WrynnRiflemanCheetah= null
 trigger gg_trg_WrynnRent= null
 trigger gg_trg_WrynnDeposit= null
 trigger gg_trg_WrynnDepositTimer= null
@@ -249,7 +250,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnRiflemanCheetah= null
 
     // Random Groups
 integer array gg_rg_000
@@ -821,9 +821,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 475.8, - 144.5, 199.785, 'h019')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 473.6, - 346.6, 180.344, 'h019')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 333.0, - 214.5, 190.743, 'h019')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 473.6, - 346.6, 182.903, 'h019')
+    set u=BlzCreateUnitWithSkin(p, 'h018', - 602.4, - 367.0, 181.549, 'h018')
 endfunction
 
 //===========================================================================
@@ -1400,9 +1399,11 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nspb', - 2337.7, - 347.9, 194.442, 'nspb')
-    set u=BlzCreateUnitWithSkin(p, 'nspb', - 2352.1, - 520.8, 171.293, 'nspb')
-    set u=BlzCreateUnitWithSkin(p, 'nspb', - 2509.2, - 456.0, 46.452, 'nspb')
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2693.9, - 438.0, 104.527, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2660.8, - 621.1, 177.819, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2853.0, - 427.2, 33.553, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2831.1, - 677.9, 144.497, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2754.6, - 533.7, 191.454, 'nenf')
 endfunction
 
 //===========================================================================
@@ -4387,16 +4388,31 @@ endfunction
 //===========================================================================
 // Trigger: WrynnAddUpg
 //===========================================================================
-function Trig_WrynnAddUpg_Func001C takes nothing returns boolean
+function Trig_WrynnAddUpg_Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(udg_WrynnUnit) == 'h018' ) ) then
         return false
     endif
     return true
 endfunction
 
+function Trig_WrynnAddUpg_Func004C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(udg_WrynnUnit) == 'h019' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_WrynnAddUpg_Actions takes nothing returns nothing
-    if ( Trig_WrynnAddUpg_Func001C() ) then
+    // Footman
+    if ( Trig_WrynnAddUpg_Func002C() ) then
         call UnitAddAbilityBJ('A03Z', udg_WrynnUnit)
+        call UnitAddAbilityBJ('A045', udg_WrynnUnit)
+        set udg_WrynnUnit=null
+    else
+    endif
+    // Rifleman
+    if ( Trig_WrynnAddUpg_Func004C() ) then
+        call UnitAddAbilityBJ('A044', udg_WrynnUnit)
         call UnitAddAbilityBJ('A041', udg_WrynnUnit)
         set udg_WrynnUnit=null
     else
@@ -4414,50 +4430,85 @@ endfunction
 //
 // improved 1, disabled both
 //===========================================================================
-function Trig_WrynnUpgradeVeterans_Func003C takes nothing returns boolean
+function Trig_WrynnUpgradeVeterans_Func008C takes nothing returns boolean
     if ( ( GetSpellAbilityId() == 'A03Z' ) ) then
         return true
     endif
+    if ( ( GetSpellAbilityId() == 'A045' ) ) then
+        return true
+    endif
     if ( ( GetSpellAbilityId() == 'A041' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A044' ) ) then
         return true
     endif
     return false
 endfunction
 
 function Trig_WrynnUpgradeVeterans_Conditions takes nothing returns boolean
-    if ( not Trig_WrynnUpgradeVeterans_Func003C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnUpgradeVeterans_Func001C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A03Z' ) ) then
+    if ( not Trig_WrynnUpgradeVeterans_Func008C() ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_WrynnUpgradeVeterans_Func002C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A03Z' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnUpgradeVeterans_Func003C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A045' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnUpgradeVeterans_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A041' ) ) then
         return false
     endif
     return true
 endfunction
 
+function Trig_WrynnUpgradeVeterans_Func006C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A044' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
-    if ( Trig_WrynnUpgradeVeterans_Func001C() ) then
-        call UnitAddAbilityBJ('A03Y', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
-    else
-    endif
+    // Footman
     if ( Trig_WrynnUpgradeVeterans_Func002C() ) then
-        call UnitAddAbilityBJ('A040', GetSpellAbilityUnit())
         call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A045', GetSpellAbilityUnit())
+        call UnitAddAbilityBJ('A03Y', GetSpellAbilityUnit())
     else
     endif
+    if ( Trig_WrynnUpgradeVeterans_Func003C() ) then
+        call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A045', GetSpellAbilityUnit())
+        call UnitAddAbilityBJ('A040', GetSpellAbilityUnit())
+    else
+    endif
+    // Rifleman
+    if ( Trig_WrynnUpgradeVeterans_Func005C() ) then
+        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A044', GetSpellAbilityUnit())
+        call UnitAddAbilityBJ('A043', GetSpellAbilityUnit())
+    else
+    endif
+    if ( Trig_WrynnUpgradeVeterans_Func006C() ) then
+        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A044', GetSpellAbilityUnit())
+        call UnitAddAbilityBJ('A042', GetSpellAbilityUnit())
+    else
+    endif
+    // NEXT!!!
 endfunction
 
 //===========================================================================
@@ -4472,7 +4523,7 @@ endfunction
 // Trigger: WrynnRiflemanCheetah
 //===========================================================================
 function Trig_WrynnRiflemanCheetah_Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A041', GetEnumUnit()) == 1 ) ) then
         return false
     endif
     if ( not ( GetUnitCurrentOrder(GetEnumUnit()) == String2OrderIdBJ("smart") ) ) then

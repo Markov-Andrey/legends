@@ -4623,12 +4623,6 @@ STRING 2230
 [Wrynn] First Aid
 }
 
-STRING 2231
-// Units: h018 ([Wrynn] Footman), Name (Name)
-{
-[Wrynn] Footman
-}
-
 STRING 2232
 // Units: h019 ([Wrynn] Rifleman), Name (Name)
 {
@@ -4645,12 +4639,6 @@ STRING 2235
 // Units: h01A ([Wrynn] Cavalry), Name (Name)
 {
 [Wrynn] Cavalry
-}
-
-STRING 2236
-// Units: h01B ([Wrynn] Mortar Team), Name (Name)
-{
-[Wrynn] Mortar Team
 }
 
 STRING 2237
@@ -7987,13 +7975,13 @@ Gives <A040,DataA1,.> additional armor to nearby friendly units.
 }
 
 STRING 3151
-// Abilities: A041 ([Wrynn] Defensive Stance), Name (Name)
+// Abilities: A045 ([Wrynn] Defensive Stance), Name (Name)
 {
 [Wrynn] Defensive Stance
 }
 
 STRING 3152
-// Abilities: A041 ([Wrynn] Defensive Stance), EditorSuffix (Editor Suffix)
+// Abilities: A041 ([Wrynn] Aspect of the Cheetah), EditorSuffix (Editor Suffix)
 {
 (Upg)
 }
@@ -8035,7 +8023,7 @@ Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an atta
 }
 
 STRING 3161
-// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Name (Name)
+// Abilities: A041 ([Wrynn] Aspect of the Cheetah), Name (Name)
 {
 [Wrynn] Aspect of the Cheetah
 }
@@ -8050,5 +8038,53 @@ STRING 3163
 // Abilities: A043 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
 {
 Adds <A043,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
+}
+
+STRING 3165
+// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Name (Name)
+{
+[Wrynn] Aspect of the Cheetah
+}
+
+STRING 3166
+// Abilities: A044 ([Wrynn] Aspect of the Hawk), Name (Name)
+{
+[Wrynn] Aspect of the Hawk
+}
+
+STRING 3167
+// Abilities: A044 ([Wrynn] Aspect of the Hawk), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3168
+// Abilities: A045 ([Wrynn] Defensive Stance), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3169
+// Units: h018 ([Wrynn] Soldier), Name (Name)
+{
+[Wrynn] Soldier
+}
+
+STRING 3170
+// Units: h018 ([Wrynn] Soldier), Tip (Tooltip - Basic)
+{
+Train Soldier
+}
+
+STRING 3171
+// Units: h01B ([Wrynn] Cannoneer), Name (Name)
+{
+[Wrynn] Cannoneer
+}
+
+STRING 3172
+// Units: h01B ([Wrynn] Cannoneer), Tip (Tooltip - Basic)
+{
+Train Cannoneer
 }
 
