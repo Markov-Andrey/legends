@@ -8016,3 +8016,39 @@ STRING 3155
 This unit is under the effects of Defensive Stance; it has increased armor.
 }
 
+STRING 3157
+// Abilities: A042 ([Wrynn] Aspect of the Hawk), Name (Name)
+{
+[Wrynn] Aspect of the Hawk
+}
+
+STRING 3158
+// Abilities: A042 ([Wrynn] Aspect of the Hawk), Tip (Tooltip - Normal)
+{
+Aspect of the Hawk
+}
+
+STRING 3160
+// Abilities: A042 ([Wrynn] Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
+}
+
+STRING 3161
+// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Name (Name)
+{
+[Wrynn] Aspect of the Cheetah
+}
+
+STRING 3162
+// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Tip (Tooltip - Normal)
+{
+Aspect of the Cheetah
+}
+
+STRING 3163
+// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <A043,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
+}
+

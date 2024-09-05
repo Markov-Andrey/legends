@@ -173,6 +173,8 @@ trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
 trigger gg_trg_WrynnTaunt= null
 trigger gg_trg_WrynnExp= null
+trigger gg_trg_WrynnAddUpg= null
+trigger gg_trg_WrynnUpgradeVeterans= null
 trigger gg_trg_WrynnRent= null
 trigger gg_trg_WrynnDeposit= null
 trigger gg_trg_WrynnDepositTimer= null
@@ -247,8 +249,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnUpgradeVeterans= null
-trigger gg_trg_WrynnAddUpg= null
+trigger gg_trg_WrynnRiflemanCheetah= null
 
     // Random Groups
 integer array gg_rg_000
@@ -820,6 +821,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 475.8, - 144.5, 199.785, 'h019')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 473.6, - 346.6, 180.344, 'h019')
+    set u=BlzCreateUnitWithSkin(p, 'h019', - 333.0, - 214.5, 190.743, 'h019')
 endfunction
 
 //===========================================================================
@@ -1396,6 +1400,9 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspb', - 2337.7, - 347.9, 194.442, 'nspb')
+    set u=BlzCreateUnitWithSkin(p, 'nspb', - 2352.1, - 520.8, 171.293, 'nspb')
+    set u=BlzCreateUnitWithSkin(p, 'nspb', - 2509.2, - 456.0, 46.452, 'nspb')
 endfunction
 
 //===========================================================================
@@ -4459,6 +4466,37 @@ function InitTrig_WrynnUpgradeVeterans takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnUpgradeVeterans, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_WrynnUpgradeVeterans, Condition(function Trig_WrynnUpgradeVeterans_Conditions))
     call TriggerAddAction(gg_trg_WrynnUpgradeVeterans, function Trig_WrynnUpgradeVeterans_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnRiflemanCheetah
+//===========================================================================
+function Trig_WrynnRiflemanCheetah_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitCurrentOrder(GetEnumUnit()) == String2OrderIdBJ("smart") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnRiflemanCheetah_Func001A takes nothing returns nothing
+    if ( Trig_WrynnRiflemanCheetah_Func001Func001C() ) then
+        call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 0.25 ))
+    else
+    endif
+endfunction
+
+function Trig_WrynnRiflemanCheetah_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h019'), function Trig_WrynnRiflemanCheetah_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnRiflemanCheetah takes nothing returns nothing
+    set gg_trg_WrynnRiflemanCheetah=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnRiflemanCheetah, 1.00)
+    call TriggerAddAction(gg_trg_WrynnRiflemanCheetah, function Trig_WrynnRiflemanCheetah_Actions)
 endfunction
 
 //===========================================================================
@@ -8663,6 +8701,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnExp()
     call InitTrig_WrynnAddUpg()
     call InitTrig_WrynnUpgradeVeterans()
+    call InitTrig_WrynnRiflemanCheetah()
     call InitTrig_WrynnRent()
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
