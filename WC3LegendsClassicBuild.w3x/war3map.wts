@@ -4659,12 +4659,6 @@ STRING 2239
 [Wrynn] Sorceress
 }
 
-STRING 2240
-// Units: h01F ([Wrynn] Siege Engine), Name (Name)
-{
-[Wrynn] Siege Engine
-}
-
 STRING 2241
 // Units: h01G ([Wrynn] Skyfire Gunship), Name (Name)
 {
@@ -7908,18 +7902,6 @@ STRING 3138
 [Wrynn] Flying Machine Bombs
 }
 
-STRING 3139
-// Abilities: A03X ([Wrynn] Auxiliary Gun), Name (Name)
-{
-[Wrynn] Auxiliary Gun
-}
-
-STRING 3140
-// Abilities: A03X ([Wrynn] Auxiliary Gun), Tip (Tooltip - Normal)
-{
-Auxiliary Gun
-}
-
 STRING 3142
 // Abilities: A03Y ([Wrynn] Battle Stance), Name (Name)
 {
@@ -8134,5 +8116,319 @@ STRING 3185
 // Abilities: A045 ([Wrynn] Defensive Stance), Tip (Tooltip - Normal)
 {
 Learn Defensive Stance
+}
+
+STRING 3187
+// Abilities: A046 ([Wrynn] Galloping Movement), Name (Name)
+{
+[Wrynn] Galloping Movement
+}
+
+STRING 3188
+// Abilities: A046 ([Wrynn] Galloping Movement), Ubertip (Tooltip - Normal - Extended)
+{
+Unit speed increased by <A046,DataA1,%>%.
+}
+
+STRING 3189
+// Abilities: A046 ([Wrynn] Galloping Movement), Tip (Tooltip - Normal)
+{
+Galloping Movement
+}
+
+STRING 3190
+// Abilities: A048 ([Wrynn] Galloping Movement), Name (Name)
+{
+[Wrynn] Galloping Movement
+}
+
+STRING 3191
+// Abilities: A048 ([Wrynn] Galloping Movement), Ubertip (Tooltip - Normal - Extended)
+{
+Unit speed increased by <A046,DataA1,%>%.
+}
+
+STRING 3193
+// Abilities: A047 ([Wrynn] Rear Attack), Name (Name)
+{
+[Wrynn] Rear Attack
+}
+
+STRING 3194
+// Abilities: A047 ([Wrynn] Rear Attack), Tip (Tooltip - Normal)
+{
+Rear Attack
+}
+
+STRING 3195
+// Abilities: A047 ([Wrynn] Rear Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Attack from behind deals an additional 5 damage.
+}
+
+STRING 3196
+// Abilities: A048 ([Wrynn] Galloping Movement), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3199
+// Abilities: A049 ([Wrynn] Rear Attack), Name (Name)
+{
+[Wrynn] Rear Attack
+}
+
+STRING 3200
+// Abilities: A049 ([Wrynn] Rear Attack), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3201
+// Abilities: A049 ([Wrynn] Rear Attack), Ubertip (Tooltip - Normal - Extended)
+{
+Attack from behind deals an additional 5 damage.
+}
+
+STRING 3202
+// Abilities: A049 ([Wrynn] Rear Attack), Tip (Tooltip - Normal)
+{
+Learn Rear Attack
+}
+
+STRING 3203
+// Buffs/Effects: B00Q (), Bufftip (Tooltip)
+{
+[Wrynn] Galloping Movement
+}
+
+STRING 3204
+// Buffs/Effects: B00Q (), Buffubertip (Tooltip - Extended)
+{
+Unit speed increased.
+}
+
+STRING 3205
+// Abilities: A048 ([Wrynn] Galloping Movement), Tip (Tooltip - Normal)
+{
+Learn Galloping Movement
+}
+
+STRING 3206
+// Abilities: A04A ([Wrynn] Load), EditorSuffix (Editor Suffix)
+{
+ (Air Transports)
+}
+
+STRING 3207
+// Abilities: A04B ([Wrynn] Unload), Name (Name)
+{
+[Wrynn] Unload
+}
+
+STRING 3208
+// Upgrades: R01P (Storm Hammers), Name (Name)
+{
+[Wrynn] Passenger Сabins
+}
+
+STRING 3209
+// Upgrades: R01P (Storm Hammers), Tip (Tooltip)
+{
+Research Passenger Сabins
+}
+
+STRING 3211
+// Abilities: A04A ([Wrynn] Load), Name (Name)
+{
+[Wrynn] Load
+}
+
+STRING 3213
+// Abilities: A03X ([Wrynn] Gunship Cannon Fire), Name (Name)
+{
+[Wrynn] Gunship Cannon Fire
+}
+
+STRING 3214
+// Abilities: A03X ([Wrynn] Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+Gunship Cannon Fire
+}
+
+STRING 3215
+// Abilities: A04C ([Wrynn] Throw Passenger), Name (Name)
+{
+[Wrynn] Throw Passenger
+}
+
+STRING 3216
+// Abilities: A04C ([Wrynn] Throw Passenger), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3217
+// Abilities: A04C ([Wrynn] Throw Passenger), Ubertip (Tooltip - Normal - Extended)
+{
+When a ship is destroyed, units will not receive a debuff.
+}
+
+STRING 3218
+// Abilities: A04C ([Wrynn] Throw Passenger), Tip (Tooltip - Normal)
+{
+Learn Throw Passenger
+}
+
+STRING 3219
+// Abilities: A04D ([Wrynn] Gunship Cannon Fire), Name (Name)
+{
+[Wrynn] Gunship Cannon Fire
+}
+
+STRING 3220
+// Abilities: A04D ([Wrynn] Gunship Cannon Fire), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3222
+// Abilities: A04D ([Wrynn] Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+Learn Gunship Cannon Fire
+}
+
+STRING 3223
+// Upgrades: R01P (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"I'm on a Boat!"|r
+
+You can plant up to 8 units. If the ship is destroyed, the entire crew will receive a strong debuff
+}
+
+STRING 3224
+// Abilities: A04D ([Wrynn] Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
+}
+
+STRING 3225
+// Abilities: A04E ([Wrynn] Gunship Cannon Fire), Name (Name)
+{
+[Wrynn] Gunship Cannon Fire
+}
+
+STRING 3226
+// Abilities: A04E ([Wrynn] Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+Gunship Cannon Fire
+}
+
+STRING 3227
+// Abilities: A04E ([Wrynn] Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
+}
+
+STRING 3228
+// Abilities: A04F ([Wrynn] Throw Passenger), Name (Name)
+{
+[Wrynn] Throw Passenger
+}
+
+STRING 3229
+// Abilities: A04F ([Wrynn] Throw Passenger), Tip (Tooltip - Normal)
+{
+Throw Passenger
+}
+
+STRING 3230
+// Abilities: A04F ([Wrynn] Throw Passenger), Ubertip (Tooltip - Normal - Extended)
+{
+If destroyed, passengers will not be stunned.
+}
+
+STRING 3232
+// Abilities: A04G ([Wrynn] Explosive Mixture), Name (Name)
+{
+[Wrynn] Explosive Mixture
+}
+
+STRING 3235
+// Abilities: A04G ([Wrynn] Explosive Mixture), Tip (Tooltip - Normal)
+{
+Explosive Mixture
+}
+
+STRING 3236
+// Abilities: A04I ([Wrynn] Multi-barreled Gun), Name (Name)
+{
+[Wrynn] Multi-barreled Gun
+}
+
+STRING 3237
+// Abilities: A04I ([Wrynn] Multi-barreled Gun), Tip (Tooltip - Normal)
+{
+Multi-barreled Gun
+}
+
+STRING 3239
+// Abilities: A04H ([Wrynn] Multi-barreled Gun), Name (Name)
+{
+[Wrynn] Multi-barreled Gun
+}
+
+STRING 3240
+// Abilities: A04H ([Wrynn] Multi-barreled Gun), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3242
+// Abilities: A04H ([Wrynn] Multi-barreled Gun), Tip (Tooltip - Normal)
+{
+Learn Multi-barreled Gun
+}
+
+STRING 3243
+// Abilities: A04J ([Wrynn] Explosive Mixture), Name (Name)
+{
+[Wrynn] Explosive Mixture
+}
+
+STRING 3244
+// Abilities: A04J ([Wrynn] Explosive Mixture), EditorSuffix (Editor Suffix)
+{
+(Upg)
+}
+
+STRING 3246
+// Abilities: A04J ([Wrynn] Explosive Mixture), Tip (Tooltip - Normal)
+{
+Learn Explosive Mixture
+}
+
+STRING 3247
+// Abilities: A04G ([Wrynn] Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
+{
+Causes attacks to deal <A04G,DataB1> times normal damage to buildings with a <A04G,DataA1>% chance.
+}
+
+STRING 3248
+// Abilities: A04I ([Wrynn] Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
+{
+Causes attacks to do <A04I,DataC1> times normal damage to air units.
+}
+
+STRING 3249
+// Abilities: A04H ([Wrynn] Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
+{
+Causes attacks to do <A04I,DataC1> times normal damage to air units.
+}
+
+STRING 3250
+// Abilities: A04J ([Wrynn] Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
+{
+Causes attacks to deal <A04G,DataB1> times normal damage to buildings with a <A04G,DataA1>% chance.
 }
 

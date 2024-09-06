@@ -248,6 +248,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_WrynnKnightRearAttack= null
 
     // Random Groups
 integer array gg_rg_000
@@ -819,8 +820,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h019', - 473.6, - 346.6, 182.903, 'h019')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 602.4, - 367.0, 181.549, 'h018')
 endfunction
 
 //===========================================================================
@@ -1397,11 +1396,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2693.9, - 438.0, 104.527, 'nenf')
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2660.8, - 621.1, 177.819, 'nenf')
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2853.0, - 427.2, 33.553, 'nenf')
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2831.1, - 677.9, 144.497, 'nenf')
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2754.6, - 533.7, 191.454, 'nenf')
 endfunction
 
 //===========================================================================
@@ -4021,6 +4015,7 @@ function Trig_WrynnIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_WrynnDeposit)
     call EnableTrigger(gg_trg_WrynnDepositTimer)
     call EnableTrigger(gg_trg_WrynnUpgradeVeterans)
+    call EnableTrigger(gg_trg_WrynnRiflemanCheetah)
 endfunction
 
 //===========================================================================
@@ -4084,7 +4079,7 @@ function Trig_WrynnExp_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func004Func001Func003C takes nothing returns boolean
+function Trig_WrynnExp_Func004Func001Func004C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
         return true
     endif
@@ -4109,14 +4104,14 @@ function Trig_WrynnExp_Func004Func001Func003C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01E' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01F' ) ) then
-        return true
-    endif
     return false
 endfunction
 
 function Trig_WrynnExp_Func004Func001C takes nothing returns boolean
-    if ( not Trig_WrynnExp_Func004Func001Func003C() ) then
+    if ( not ( IsUnitAliveBJ(GetEnumUnit()) == true ) ) then
+        return false
+    endif
+    if ( not Trig_WrynnExp_Func004Func001Func004C() ) then
         return false
     endif
     return true
@@ -4241,6 +4236,27 @@ function Trig_WrynnExp_Func009Func001Func005Func016C takes nothing returns boole
     return true
 endfunction
 
+function Trig_WrynnExp_Func009Func001Func005Func018C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01A' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func020C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01G' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func022C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01C' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_WrynnExp_Func009Func001Func005C takes nothing returns boolean
     if ( not ( GetUnitAbilityLevelSwapped('A03A', GetEnumUnit()) == 1 ) ) then
         return false
@@ -4251,7 +4267,7 @@ function Trig_WrynnExp_Func009Func001Func005C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func006C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func007C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
         return true
     endif
@@ -4276,14 +4292,14 @@ function Trig_WrynnExp_Func009Func001Func006C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01E' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'h01F' ) ) then
-        return true
-    endif
     return false
 endfunction
 
 function Trig_WrynnExp_Func009Func001C takes nothing returns boolean
-    if ( not Trig_WrynnExp_Func009Func001Func006C() ) then
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetDyingUnit()), GetOwningPlayer(GetEnumUnit())) == true ) ) then
+        return false
+    endif
+    if ( not Trig_WrynnExp_Func009Func001Func007C() ) then
         return false
     endif
     return true
@@ -4378,6 +4394,24 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
                 call UnitAddAbilityBJ('A041', GetEnumUnit())
             else
             endif
+            // Cavalry
+            if ( Trig_WrynnExp_Func009Func001Func005Func018C() ) then
+                call UnitAddAbilityBJ('A048', GetEnumUnit())
+                call UnitAddAbilityBJ('A049', GetEnumUnit())
+            else
+            endif
+            // Skyfire Gunship
+            if ( Trig_WrynnExp_Func009Func001Func005Func020C() ) then
+                call UnitAddAbilityBJ('A04C', GetEnumUnit())
+                call UnitAddAbilityBJ('A04D', GetEnumUnit())
+            else
+            endif
+            // Fly Machine
+            if ( Trig_WrynnExp_Func009Func001Func005Func022C() ) then
+                call UnitAddAbilityBJ('A04H', GetEnumUnit())
+                call UnitAddAbilityBJ('A04J', GetEnumUnit())
+            else
+            endif
         else
             call DoNothing()
         endif
@@ -4436,10 +4470,37 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
     set setTrained1[2]='A043'
     set setTrained1[3]='A042'
     
+    // cavalry
+    set setAbil[4]='A049'
+    set setAbil[5]='A048'
+    set setTrained1[4]='A047'
+    set setTrained1[5]='A046'
+    
+    // skyfire gunship
+    set setAbil[6]='A04C'
+    set setAbil[7]='A04D'
+    set setTrained1[6]='Achd'
+    set setTrained1[7]='A03F'
+    
+    // fly machine
+    set setAbil[8]='A04J'
+    set setAbil[9]='A04H'
+    set setTrained1[8]='A04G'
+    set setTrained1[9]='A04I'
+    
     loop
-        exitwhen i > 3
+        exitwhen i > 9
         if getSpell == setAbil[i] then
-            call UnitAddAbility(unitSpell, setTrained1[i])
+            if ( i == 6 ) then // exception for Skyfire Gunship
+                call UnitRemoveAbility(unitSpell, setTrained1[i])
+                call UnitAddAbility(unitSpell, 'A04F')
+            elseif ( i == 7 ) then
+                call UnitAddAbility(unitSpell, setTrained1[i])
+                call UnitAddAbility(unitSpell, 'A04E')
+            else
+                call UnitAddAbility(unitSpell, setTrained1[i])
+            endif
+            
             call UnitRemoveAbility(unitSpell, setAbil[i])
             call UnitRemoveAbility(unitSpell, setAbil[i + 1])
             call UnitRemoveAbility(unitSpell, setAbil[i - 1])
@@ -4473,6 +4534,7 @@ function Trig_WrynnRiflemanCheetah_Func001A takes nothing returns nothing
     if ( Trig_WrynnRiflemanCheetah_Func001Func001C() ) then
         call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 0.25 ))
     else
+        call DoNothing()
     endif
 endfunction
 
@@ -4483,8 +4545,55 @@ endfunction
 //===========================================================================
 function InitTrig_WrynnRiflemanCheetah takes nothing returns nothing
     set gg_trg_WrynnRiflemanCheetah=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnRiflemanCheetah)
     call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnRiflemanCheetah, 1.00)
     call TriggerAddAction(gg_trg_WrynnRiflemanCheetah, function Trig_WrynnRiflemanCheetah_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnKnightRearAttack
+//
+// backstab attack
+//===========================================================================
+function Trig_WrynnKnightRearAttack_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetAttacker()) == 'h01A' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A047', GetAttacker()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnKnightRearAttack_Conditions takes nothing returns boolean
+    if ( not Trig_WrynnKnightRearAttack_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnKnightRearAttack_Func001C takes nothing returns boolean
+    if ( not ( CosBJ(( AngleBetweenPoints(GetUnitLoc(GetAttackedUnitBJ()), GetUnitLoc(GetAttacker())) - GetUnitFacing(GetAttackedUnitBJ()) )) < 0.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnKnightRearAttack_Actions takes nothing returns nothing
+    if ( Trig_WrynnKnightRearAttack_Func001C() ) then
+        call SetUnitLifeBJ(GetAttackedUnitBJ(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ()) - 500.00 ))
+    else
+        call DoNothing()
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnKnightRearAttack takes nothing returns nothing
+    set gg_trg_WrynnKnightRearAttack=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnKnightRearAttack)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnKnightRearAttack, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_WrynnKnightRearAttack, Condition(function Trig_WrynnKnightRearAttack_Conditions))
+    call TriggerAddAction(gg_trg_WrynnKnightRearAttack, function Trig_WrynnKnightRearAttack_Actions)
 endfunction
 
 //===========================================================================
@@ -8689,6 +8798,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnExp()
     call InitTrig_WrynnUpgradeVeterans()
     call InitTrig_WrynnRiflemanCheetah()
+    call InitTrig_WrynnKnightRearAttack()
     call InitTrig_WrynnRent()
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
