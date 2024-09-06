@@ -73,7 +73,6 @@ integer udg_WrynnExp= 0
 integer udg_WrynnExpUnitCount= 0
 integer array udg_WrynnExpTable
 integer array udg_WrynnDeposit
-unit udg_WrynnUnit= null
 
     // Generated
 rect gg_rct_StartRegion= null
@@ -173,7 +172,6 @@ trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
 trigger gg_trg_WrynnTaunt= null
 trigger gg_trg_WrynnExp= null
-trigger gg_trg_WrynnAddUpg= null
 trigger gg_trg_WrynnUpgradeVeterans= null
 trigger gg_trg_WrynnRiflemanCheetah= null
 trigger gg_trg_WrynnRent= null
@@ -4022,6 +4020,7 @@ function Trig_WrynnIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_WrynnRent)
     call EnableTrigger(gg_trg_WrynnDeposit)
     call EnableTrigger(gg_trg_WrynnDepositTimer)
+    call EnableTrigger(gg_trg_WrynnUpgradeVeterans)
 endfunction
 
 //===========================================================================
@@ -4188,7 +4187,7 @@ function Trig_WrynnExp_Func009Func001Func002C takes nothing returns boolean
 endfunction
 
 function Trig_WrynnExp_Func009Func001Func003Func006C takes nothing returns boolean
-    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 100.00 ) ) then
         return false
     endif
     return true
@@ -4205,7 +4204,7 @@ function Trig_WrynnExp_Func009Func001Func003C takes nothing returns boolean
 endfunction
 
 function Trig_WrynnExp_Func009Func001Func004Func007C takes nothing returns boolean
-    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 100.00 ) ) then
         return false
     endif
     return true
@@ -4221,8 +4220,22 @@ function Trig_WrynnExp_Func009Func001Func004C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func011C takes nothing returns boolean
-    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 0.00 ) ) then
+function Trig_WrynnExp_Func009Func001Func005Func009C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 100.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func014C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func016C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h019' ) ) then
         return false
     endif
     return true
@@ -4320,7 +4333,7 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 25 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
             if ( Trig_WrynnExp_Func009Func001Func003Func006C() ) then
-                call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+                call BlzSetUnitMaxMana(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
             else
             endif
         else
@@ -4333,14 +4346,12 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 50 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
             if ( Trig_WrynnExp_Func009Func001Func004Func007C() ) then
-                call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+                call BlzSetUnitMaxMana(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
             else
             endif
         else
         endif
         if ( Trig_WrynnExp_Func009Func001Func005C() ) then
-            set udg_WrynnUnit=GetEnumUnit()
-            call ConditionalTriggerExecute(gg_trg_WrynnAddUpg)
             call UnitRemoveAbilityBJ('A03C', GetEnumUnit())
             call UnitRemoveAbilityBJ('A03A', GetEnumUnit())
             call UnitRemoveAbilityBJ('A02Q', GetEnumUnit())
@@ -4348,8 +4359,23 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             call UnitAddAbilityBJ('A02Z', GetEnumUnit())
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 75 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
-            if ( Trig_WrynnExp_Func009Func001Func005Func011C() ) then
-                call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+            if ( Trig_WrynnExp_Func009Func001Func005Func009C() ) then
+                call BlzSetUnitMaxMana(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+            else
+            endif
+            // ------------------------------------
+            // ADD UPGRADE
+            // ------------------------------------
+            // Footman
+            if ( Trig_WrynnExp_Func009Func001Func005Func014C() ) then
+                call UnitAddAbilityBJ('A03Z', GetEnumUnit())
+                call UnitAddAbilityBJ('A045', GetEnumUnit())
+            else
+            endif
+            // Rifleman
+            if ( Trig_WrynnExp_Func009Func001Func005Func016C() ) then
+                call UnitAddAbilityBJ('A044', GetEnumUnit())
+                call UnitAddAbilityBJ('A041', GetEnumUnit())
             else
             endif
         else
@@ -4386,139 +4412,50 @@ function InitTrig_WrynnExp takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: WrynnAddUpg
-//===========================================================================
-function Trig_WrynnAddUpg_Func002C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(udg_WrynnUnit) == 'h018' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnAddUpg_Func004C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(udg_WrynnUnit) == 'h019' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnAddUpg_Actions takes nothing returns nothing
-    // Footman
-    if ( Trig_WrynnAddUpg_Func002C() ) then
-        call UnitAddAbilityBJ('A03Z', udg_WrynnUnit)
-        call UnitAddAbilityBJ('A045', udg_WrynnUnit)
-        set udg_WrynnUnit=null
-    else
-    endif
-    // Rifleman
-    if ( Trig_WrynnAddUpg_Func004C() ) then
-        call UnitAddAbilityBJ('A044', udg_WrynnUnit)
-        call UnitAddAbilityBJ('A041', udg_WrynnUnit)
-        set udg_WrynnUnit=null
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_WrynnAddUpg takes nothing returns nothing
-    set gg_trg_WrynnAddUpg=CreateTrigger()
-    call TriggerAddAction(gg_trg_WrynnAddUpg, function Trig_WrynnAddUpg_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: WrynnUpgradeVeterans
 //
 // improved 1, disabled both
 //===========================================================================
-function Trig_WrynnUpgradeVeterans_Func008C takes nothing returns boolean
-    if ( ( GetSpellAbilityId() == 'A03Z' ) ) then
-        return true
-    endif
-    if ( ( GetSpellAbilityId() == 'A045' ) ) then
-        return true
-    endif
-    if ( ( GetSpellAbilityId() == 'A041' ) ) then
-        return true
-    endif
-    if ( ( GetSpellAbilityId() == 'A044' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_WrynnUpgradeVeterans_Conditions takes nothing returns boolean
-    if ( not Trig_WrynnUpgradeVeterans_Func008C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnUpgradeVeterans_Func002C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A03Z' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnUpgradeVeterans_Func003C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A045' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnUpgradeVeterans_Func005C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A041' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WrynnUpgradeVeterans_Func006C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A044' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
-    // Footman
-    if ( Trig_WrynnUpgradeVeterans_Func002C() ) then
-        call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A045', GetSpellAbilityUnit())
-        call UnitAddAbilityBJ('A03Y', GetSpellAbilityUnit())
-    else
-    endif
-    if ( Trig_WrynnUpgradeVeterans_Func003C() ) then
-        call UnitRemoveAbilityBJ('A03Z', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A045', GetSpellAbilityUnit())
-        call UnitAddAbilityBJ('A040', GetSpellAbilityUnit())
-    else
-    endif
-    // Rifleman
-    if ( Trig_WrynnUpgradeVeterans_Func005C() ) then
-        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A044', GetSpellAbilityUnit())
-        call UnitAddAbilityBJ('A043', GetSpellAbilityUnit())
-    else
-    endif
-    if ( Trig_WrynnUpgradeVeterans_Func006C() ) then
-        call UnitRemoveAbilityBJ('A041', GetSpellAbilityUnit())
-        call UnitRemoveAbilityBJ('A044', GetSpellAbilityUnit())
-        call UnitAddAbilityBJ('A042', GetSpellAbilityUnit())
-    else
-    endif
-    // NEXT!!!
+    local integer getSpell= GetSpellAbilityId()
+    local unit unitSpell= GetSpellAbilityUnit()
+    local integer array setAbil
+    local integer array setTrained1
+    local integer array setTrained2
+    local integer i= 0
+    
+    // footman
+    set setAbil[0]='A03Z'
+    set setAbil[1]='A045'
+    set setTrained1[0]='A03Y'
+    set setTrained1[1]='A040'
+    
+    // rifleman
+    set setAbil[2]='A041'
+    set setAbil[3]='A044'
+    set setTrained1[2]='A043'
+    set setTrained1[3]='A042'
+    
+    loop
+        exitwhen i > 3
+        if getSpell == setAbil[i] then
+            call UnitAddAbility(unitSpell, setTrained1[i])
+            call UnitRemoveAbility(unitSpell, setAbil[i])
+            call UnitRemoveAbility(unitSpell, setAbil[i + 1])
+            call UnitRemoveAbility(unitSpell, setAbil[i - 1])
+        endif
+        set i=i + 1
+    endloop
+    
+    set unitSpell=null
 endfunction
 
-//===========================================================================
 function InitTrig_WrynnUpgradeVeterans takes nothing returns nothing
     set gg_trg_WrynnUpgradeVeterans=CreateTrigger()
+    call DisableTrigger(gg_trg_WrynnUpgradeVeterans)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnUpgradeVeterans, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_WrynnUpgradeVeterans, Condition(function Trig_WrynnUpgradeVeterans_Conditions))
     call TriggerAddAction(gg_trg_WrynnUpgradeVeterans, function Trig_WrynnUpgradeVeterans_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: WrynnRiflemanCheetah
 //===========================================================================
@@ -8750,7 +8687,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnIni()
     call InitTrig_WrynnTaunt()
     call InitTrig_WrynnExp()
-    call InitTrig_WrynnAddUpg()
     call InitTrig_WrynnUpgradeVeterans()
     call InitTrig_WrynnRiflemanCheetah()
     call InitTrig_WrynnRent()

@@ -7932,12 +7932,6 @@ STRING 3143
 Battle Stance
 }
 
-STRING 3144
-// Abilities: A03Y ([Wrynn] Battle Stance), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' attack rate by <A03Y,DataB1,%>%.
-}
-
 STRING 3145
 // Abilities: A03Z ([Wrynn] Battle Stance), Name (Name)
 {
@@ -7966,12 +7960,6 @@ STRING 3149
 // Abilities: A040 ([Wrynn] Defensive Stance), Tip (Tooltip - Normal)
 {
 Defensive Stance
-}
-
-STRING 3150
-// Abilities: A040 ([Wrynn] Defensive Stance), Ubertip (Tooltip - Normal - Extended)
-{
-Gives <A040,DataA1,.> additional armor to nearby friendly units.
 }
 
 STRING 3151
@@ -8034,12 +8022,6 @@ STRING 3162
 Aspect of the Cheetah
 }
 
-STRING 3163
-// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
-{
-Adds <A043,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
-}
-
 STRING 3165
 // Abilities: A043 ([Wrynn] Aspect of the Cheetah), Name (Name)
 {
@@ -8086,5 +8068,71 @@ STRING 3172
 // Units: h01B ([Wrynn] Cannoneer), Tip (Tooltip - Basic)
 {
 Train Cannoneer
+}
+
+STRING 3173
+// Abilities: A03Y ([Wrynn] Battle Stance), Ubertip (Tooltip - Normal - Extended)
+{
+Increases self attack rate by <A03Y,DataB1,%>%.
+}
+
+STRING 3174
+// Abilities: A03Z ([Wrynn] Battle Stance), Ubertip (Tooltip - Normal - Extended)
+{
+Increases self attack rate by <A03Y,DataB1,%>%.
+}
+
+STRING 3176
+// Abilities: A040 ([Wrynn] Defensive Stance), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A040,DataA1,.> additional self armor.
+}
+
+STRING 3177
+// Abilities: A045 ([Wrynn] Defensive Stance), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A040,DataA1,.> additional self armor.
+}
+
+STRING 3179
+// Abilities: A03Z ([Wrynn] Battle Stance), Tip (Tooltip - Normal)
+{
+Learn Battle Stance
+}
+
+STRING 3180
+// Abilities: A041 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
+{
+While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
+}
+
+STRING 3181
+// Abilities: A041 ([Wrynn] Aspect of the Cheetah), Tip (Tooltip - Normal)
+{
+Learn Aspect of the Cheetah
+}
+
+STRING 3182
+// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
+{
+While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
+}
+
+STRING 3183
+// Abilities: A044 ([Wrynn] Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
+}
+
+STRING 3184
+// Abilities: A044 ([Wrynn] Aspect of the Hawk), Tip (Tooltip - Normal)
+{
+Learn Aspect of the Hawk
+}
+
+STRING 3185
+// Abilities: A045 ([Wrynn] Defensive Stance), Tip (Tooltip - Normal)
+{
+Learn Defensive Stance
 }
 
