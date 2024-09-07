@@ -820,6 +820,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h01E', - 13.5, - 166.4, 85.999, 'h01E')
+    set u=BlzCreateUnitWithSkin(p, 'h01B', 133.8, - 166.7, 267.838, 'h01B')
 endfunction
 
 //===========================================================================
@@ -1396,6 +1398,10 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2810.3, - 328.3, 349.892, 'nitw')
+    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2815.8, - 530.4, 189.586, 'nitw')
+    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2711.9, - 462.4, 121.963, 'nitw')
+    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2957.8, - 398.8, 121.963, 'nitw')
 endfunction
 
 //===========================================================================
@@ -4257,6 +4263,13 @@ function Trig_WrynnExp_Func009Func001Func005Func022C takes nothing returns boole
     return true
 endfunction
 
+function Trig_WrynnExp_Func009Func001Func005Func024C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01D' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_WrynnExp_Func009Func001Func005C takes nothing returns boolean
     if ( not ( GetUnitAbilityLevelSwapped('A03A', GetEnumUnit()) == 1 ) ) then
         return false
@@ -4412,6 +4425,12 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
                 call UnitAddAbilityBJ('A04J', GetEnumUnit())
             else
             endif
+            // Priest
+            if ( Trig_WrynnExp_Func009Func001Func005Func024C() ) then
+                call UnitAddAbilityBJ('A04N', GetEnumUnit())
+                call UnitAddAbilityBJ('A04O', GetEnumUnit())
+            else
+            endif
         else
             call DoNothing()
         endif
@@ -4488,15 +4507,25 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
     set setTrained1[8]='A04G'
     set setTrained1[9]='A04I'
     
+    // priest
+    set setAbil[10]='A04O'
+    set setAbil[11]='A04N'
+    set setTrained1[10]='A04M'
+    set setTrained1[11]='A04L'
+    
     loop
-        exitwhen i > 9
+        exitwhen i > 11
         if getSpell == setAbil[i] then
-            if ( i == 6 ) then // exception for Skyfire Gunship
+            // exceptions
+            if ( i == 6 ) then
                 call UnitRemoveAbility(unitSpell, setTrained1[i])
                 call UnitAddAbility(unitSpell, 'A04F')
             elseif ( i == 7 ) then
                 call UnitAddAbility(unitSpell, setTrained1[i])
                 call UnitAddAbility(unitSpell, 'A04E')
+            elseif ( i == 11 ) then
+                call UnitRemoveAbility(unitSpell, 'A04K')
+                call UnitAddAbility(unitSpell, setTrained1[i])
             else
                 call UnitAddAbility(unitSpell, setTrained1[i])
             endif

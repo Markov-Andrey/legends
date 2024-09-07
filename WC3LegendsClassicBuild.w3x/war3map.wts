@@ -3012,22 +3012,6 @@ STRING 1779
 Summons Heroes. Revives slain Heroes.
 }
 
-STRING 1782
-// Units: h02L ([Uther] Abbey), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrade
-|R
-Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
-}
-
-STRING 1783
-// Units: h02N ([Uther] Aviary), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack
-|R
-Trains Gryphon Riders, and Dragonhawk Riders. |nAlso contains the Storm Hammers and Cloud upgrades.
-}
-
 STRING 1784
 // Units: h02O ([Uther] Scout Tower), Ubertip (Tooltip - Extended)
 {
@@ -3053,27 +3037,11 @@ Heavy defensive structure. Particularly effective against clusters of troops. Ca
 }
 
 STRING 1787
-// Units: h00C ([Uther] Light Tower), Ubertip (Tooltip - Extended)
+// Units: h016 ([Wrynn] Arcane Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
 Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
-}
-
-STRING 1790
-// Units: h00D ([Uther] Brotherhood Armory), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#upgrade
-|R
-Contains upgrades for improved armor, weaponry and gunpowder.
-}
-
-STRING 1791
-// Units: h00E ([Uther] Workshop), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack
-|R
-Produces Siege Engines, Flying Machines, and Mortar Teams. |nAlso contains the Flare, Fragmentation Shards, Barrage, Flying Machine Bombs, and Flak Cannons upgrades.
 }
 
 STRING 1792
@@ -7816,12 +7784,6 @@ STRING 3124
 [Wrynn] Heal
 }
 
-STRING 3125
-// Abilities: A03O ([Wrynn] Inner Fire), Name (Name)
-{
-[Wrynn] Inner Fire
-}
-
 STRING 3126
 // Abilities: A03P ([Wrynn] Invisibility), Name (Name)
 {
@@ -7844,14 +7806,6 @@ STRING 3129
 // Abilities: A03S ([Wrynn] Dispel Magic), Name (Name)
 {
 [Wrynn] Dispel Magic
-}
-
-STRING 3130
-// Units: h01D ([Wrynn] Priest), Ubertip (Tooltip - Extended)
-{
-|cFF24BBFF"Arrived straight from Northshire Abbey."|r
-
-Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 3131
@@ -7902,130 +7856,22 @@ STRING 3138
 [Wrynn] Flying Machine Bombs
 }
 
-STRING 3142
-// Abilities: A03Y ([Wrynn] Battle Stance), Name (Name)
-{
-[Wrynn] Battle Stance
-}
-
-STRING 3143
-// Abilities: A03Y ([Wrynn] Battle Stance), Tip (Tooltip - Normal)
-{
-Battle Stance
-}
-
-STRING 3145
-// Abilities: A03Z ([Wrynn] Battle Stance), Name (Name)
-{
-[Wrynn] Battle Stance
-}
-
-STRING 3146
-// Abilities: A03Z ([Wrynn] Battle Stance), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
-STRING 3147
-// Buffs/Effects: B00O (), Bufftip (Tooltip)
-{
-[Wrynn] Battle Stance
-}
-
-STRING 3148
-// Abilities: A040 ([Wrynn] Defensive Stance), Name (Name)
-{
-[Wrynn] Defensive Stance
-}
-
-STRING 3149
-// Abilities: A040 ([Wrynn] Defensive Stance), Tip (Tooltip - Normal)
-{
-Defensive Stance
-}
-
-STRING 3151
-// Abilities: A045 ([Wrynn] Defensive Stance), Name (Name)
-{
-[Wrynn] Defensive Stance
-}
-
-STRING 3152
-// Abilities: A041 ([Wrynn] Aspect of the Cheetah), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
 STRING 3153
-// Buffs/Effects: B00O (), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B00O ([Wrynn] Veteran: Battle Stance), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Battle Stance; it has an increased attack rate.
 }
 
-STRING 3154
-// Buffs/Effects: B00P (), Bufftip (Tooltip)
-{
-[Wrynn] Defensive Stance
-}
-
 STRING 3155
-// Buffs/Effects: B00P (), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Defensive Stance; it has increased armor.
 }
 
-STRING 3157
-// Abilities: A042 ([Wrynn] Aspect of the Hawk), Name (Name)
-{
-[Wrynn] Aspect of the Hawk
-}
-
-STRING 3158
-// Abilities: A042 ([Wrynn] Aspect of the Hawk), Tip (Tooltip - Normal)
-{
-Aspect of the Hawk
-}
-
 STRING 3160
-// Abilities: A042 ([Wrynn] Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
 {
 Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
-}
-
-STRING 3161
-// Abilities: A041 ([Wrynn] Aspect of the Cheetah), Name (Name)
-{
-[Wrynn] Aspect of the Cheetah
-}
-
-STRING 3162
-// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Tip (Tooltip - Normal)
-{
-Aspect of the Cheetah
-}
-
-STRING 3165
-// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Name (Name)
-{
-[Wrynn] Aspect of the Cheetah
-}
-
-STRING 3166
-// Abilities: A044 ([Wrynn] Aspect of the Hawk), Name (Name)
-{
-[Wrynn] Aspect of the Hawk
-}
-
-STRING 3167
-// Abilities: A044 ([Wrynn] Aspect of the Hawk), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
-STRING 3168
-// Abilities: A045 ([Wrynn] Defensive Stance), EditorSuffix (Editor Suffix)
-{
-(Upg)
 }
 
 STRING 3169
@@ -8053,165 +7899,75 @@ Train Cannoneer
 }
 
 STRING 3173
-// Abilities: A03Y ([Wrynn] Battle Stance), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03Y ([Wrynn] Veteran: Battle Stance), Ubertip (Tooltip - Normal - Extended)
 {
 Increases self attack rate by <A03Y,DataB1,%>%.
 }
 
 STRING 3174
-// Abilities: A03Z ([Wrynn] Battle Stance), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Ubertip (Tooltip - Normal - Extended)
 {
 Increases self attack rate by <A03Y,DataB1,%>%.
 }
 
 STRING 3176
-// Abilities: A040 ([Wrynn] Defensive Stance), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Ubertip (Tooltip - Normal - Extended)
 {
 Gives <A040,DataA1,.> additional self armor.
 }
 
 STRING 3177
-// Abilities: A045 ([Wrynn] Defensive Stance), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Ubertip (Tooltip - Normal - Extended)
 {
 Gives <A040,DataA1,.> additional self armor.
 }
 
-STRING 3179
-// Abilities: A03Z ([Wrynn] Battle Stance), Tip (Tooltip - Normal)
-{
-Learn Battle Stance
-}
-
 STRING 3180
-// Abilities: A041 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
 {
 While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
 }
 
-STRING 3181
-// Abilities: A041 ([Wrynn] Aspect of the Cheetah), Tip (Tooltip - Normal)
-{
-Learn Aspect of the Cheetah
-}
-
 STRING 3182
-// Abilities: A043 ([Wrynn] Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
 {
 While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
 }
 
 STRING 3183
-// Abilities: A044 ([Wrynn] Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
 {
 Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
 }
 
-STRING 3184
-// Abilities: A044 ([Wrynn] Aspect of the Hawk), Tip (Tooltip - Normal)
-{
-Learn Aspect of the Hawk
-}
-
-STRING 3185
-// Abilities: A045 ([Wrynn] Defensive Stance), Tip (Tooltip - Normal)
-{
-Learn Defensive Stance
-}
-
-STRING 3187
-// Abilities: A046 ([Wrynn] Galloping Movement), Name (Name)
-{
-[Wrynn] Galloping Movement
-}
-
 STRING 3188
-// Abilities: A046 ([Wrynn] Galloping Movement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A046 ([Wrynn] Veteran: Galloping Movement), Ubertip (Tooltip - Normal - Extended)
 {
 Unit speed increased by <A046,DataA1,%>%.
-}
-
-STRING 3189
-// Abilities: A046 ([Wrynn] Galloping Movement), Tip (Tooltip - Normal)
-{
-Galloping Movement
-}
-
-STRING 3190
-// Abilities: A048 ([Wrynn] Galloping Movement), Name (Name)
-{
-[Wrynn] Galloping Movement
 }
 
 STRING 3191
-// Abilities: A048 ([Wrynn] Galloping Movement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Ubertip (Tooltip - Normal - Extended)
 {
 Unit speed increased by <A046,DataA1,%>%.
 }
 
-STRING 3193
-// Abilities: A047 ([Wrynn] Rear Attack), Name (Name)
-{
-[Wrynn] Rear Attack
-}
-
-STRING 3194
-// Abilities: A047 ([Wrynn] Rear Attack), Tip (Tooltip - Normal)
-{
-Rear Attack
-}
-
 STRING 3195
-// Abilities: A047 ([Wrynn] Rear Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A047 ([Wrynn] Veteran: Rear Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Attack from behind deals an additional 5 damage.
-}
-
-STRING 3196
-// Abilities: A048 ([Wrynn] Galloping Movement), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
-STRING 3199
-// Abilities: A049 ([Wrynn] Rear Attack), Name (Name)
-{
-[Wrynn] Rear Attack
-}
-
-STRING 3200
-// Abilities: A049 ([Wrynn] Rear Attack), EditorSuffix (Editor Suffix)
-{
-(Upg)
 }
 
 STRING 3201
-// Abilities: A049 ([Wrynn] Rear Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Attack from behind deals an additional 5 damage.
 }
 
-STRING 3202
-// Abilities: A049 ([Wrynn] Rear Attack), Tip (Tooltip - Normal)
-{
-Learn Rear Attack
-}
-
-STRING 3203
-// Buffs/Effects: B00Q (), Bufftip (Tooltip)
-{
-[Wrynn] Galloping Movement
-}
-
 STRING 3204
-// Buffs/Effects: B00Q (), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B00Q ([Wrynn] Veteran: Galloping Movement), Buffubertip (Tooltip - Extended)
 {
 Unit speed increased.
-}
-
-STRING 3205
-// Abilities: A048 ([Wrynn] Galloping Movement), Tip (Tooltip - Normal)
-{
-Learn Galloping Movement
 }
 
 STRING 3206
@@ -8256,46 +8012,10 @@ STRING 3214
 Gunship Cannon Fire
 }
 
-STRING 3215
-// Abilities: A04C ([Wrynn] Throw Passenger), Name (Name)
-{
-[Wrynn] Throw Passenger
-}
-
-STRING 3216
-// Abilities: A04C ([Wrynn] Throw Passenger), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
 STRING 3217
-// Abilities: A04C ([Wrynn] Throw Passenger), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Ubertip (Tooltip - Normal - Extended)
 {
 When a ship is destroyed, units will not receive a debuff.
-}
-
-STRING 3218
-// Abilities: A04C ([Wrynn] Throw Passenger), Tip (Tooltip - Normal)
-{
-Learn Throw Passenger
-}
-
-STRING 3219
-// Abilities: A04D ([Wrynn] Gunship Cannon Fire), Name (Name)
-{
-[Wrynn] Gunship Cannon Fire
-}
-
-STRING 3220
-// Abilities: A04D ([Wrynn] Gunship Cannon Fire), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
-STRING 3222
-// Abilities: A04D ([Wrynn] Gunship Cannon Fire), Tip (Tooltip - Normal)
-{
-Learn Gunship Cannon Fire
 }
 
 STRING 3223
@@ -8307,128 +8027,824 @@ You can plant up to 8 units. If the ship is destroyed, the entire crew will rece
 }
 
 STRING 3224
-// Abilities: A04D ([Wrynn] Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
 {
 An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
-}
-
-STRING 3225
-// Abilities: A04E ([Wrynn] Gunship Cannon Fire), Name (Name)
-{
-[Wrynn] Gunship Cannon Fire
-}
-
-STRING 3226
-// Abilities: A04E ([Wrynn] Gunship Cannon Fire), Tip (Tooltip - Normal)
-{
-Gunship Cannon Fire
 }
 
 STRING 3227
-// Abilities: A04E ([Wrynn] Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
 {
 An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
 }
 
-STRING 3228
-// Abilities: A04F ([Wrynn] Throw Passenger), Name (Name)
-{
-[Wrynn] Throw Passenger
-}
-
-STRING 3229
-// Abilities: A04F ([Wrynn] Throw Passenger), Tip (Tooltip - Normal)
-{
-Throw Passenger
-}
-
 STRING 3230
-// Abilities: A04F ([Wrynn] Throw Passenger), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04F ([Wrynn] Veteran: Throw Passenger), Ubertip (Tooltip - Normal - Extended)
 {
 If destroyed, passengers will not be stunned.
 }
 
-STRING 3232
-// Abilities: A04G ([Wrynn] Explosive Mixture), Name (Name)
-{
-[Wrynn] Explosive Mixture
-}
-
-STRING 3235
-// Abilities: A04G ([Wrynn] Explosive Mixture), Tip (Tooltip - Normal)
-{
-Explosive Mixture
-}
-
-STRING 3236
-// Abilities: A04I ([Wrynn] Multi-barreled Gun), Name (Name)
-{
-[Wrynn] Multi-barreled Gun
-}
-
-STRING 3237
-// Abilities: A04I ([Wrynn] Multi-barreled Gun), Tip (Tooltip - Normal)
-{
-Multi-barreled Gun
-}
-
-STRING 3239
-// Abilities: A04H ([Wrynn] Multi-barreled Gun), Name (Name)
-{
-[Wrynn] Multi-barreled Gun
-}
-
-STRING 3240
-// Abilities: A04H ([Wrynn] Multi-barreled Gun), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
-STRING 3242
-// Abilities: A04H ([Wrynn] Multi-barreled Gun), Tip (Tooltip - Normal)
-{
-Learn Multi-barreled Gun
-}
-
-STRING 3243
-// Abilities: A04J ([Wrynn] Explosive Mixture), Name (Name)
-{
-[Wrynn] Explosive Mixture
-}
-
-STRING 3244
-// Abilities: A04J ([Wrynn] Explosive Mixture), EditorSuffix (Editor Suffix)
-{
-(Upg)
-}
-
-STRING 3246
-// Abilities: A04J ([Wrynn] Explosive Mixture), Tip (Tooltip - Normal)
-{
-Learn Explosive Mixture
-}
-
 STRING 3247
-// Abilities: A04G ([Wrynn] Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
 {
 Causes attacks to deal <A04G,DataB1> times normal damage to buildings with a <A04G,DataA1>% chance.
 }
 
 STRING 3248
-// Abilities: A04I ([Wrynn] Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
 {
 Causes attacks to do <A04I,DataC1> times normal damage to air units.
 }
 
 STRING 3249
-// Abilities: A04H ([Wrynn] Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
 {
 Causes attacks to do <A04I,DataC1> times normal damage to air units.
 }
 
 STRING 3250
-// Abilities: A04J ([Wrynn] Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
 {
 Causes attacks to deal <A04G,DataB1> times normal damage to buildings with a <A04G,DataA1>% chance.
+}
+
+STRING 3251
+// Abilities: A04K ([Wrynn] Portal to Stormwind), Name (Name)
+{
+[Wrynn] Portal to Stormwind
+}
+
+STRING 3252
+// Abilities: A04K ([Wrynn] Portal to Stormwind), Tip (Tooltip - Normal)
+{
+Portal to Stormwind
+}
+
+STRING 3258
+// Buffs/Effects: B00R ([Uther] Portal to Stormwind), EditorName (Name (Editor Only))
+{
+[Uther] Portal to Stormwind
+}
+
+STRING 3259
+// Abilities: A04L ([Wrynn] Portal to Stormwind), Tip (Tooltip - Normal)
+{
+Portal to Stormwind
+}
+
+STRING 3260
+// Buffs/Effects: B00R ([Uther] Portal to Stormwind), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of a Portal to Stormwind; its hit points will regenerate over time, but it cannot move, attack or cast spells.
+}
+
+STRING 3261
+// Units: h01D ([Wrynn] Priest), Casterupgradetip (Caster Upgrade Tips)
+{
+- Heal,- Heal|n- Dispel Magic,- Heal|n- Dispel Magic|n- Portal to Stormwind
+}
+
+STRING 3263
+// Units: h00D ([Uther] Brotherhood Armory), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrades
+|R
+Contains upgrades for improved armor, weaponry and gunpowder.
+}
+
+STRING 3265
+// Units: h00F ([Wrynn] City Hall), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Citizen and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
+}
+
+STRING 3266
+// Units: h00G ([Wrynn] Keep), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Keep to enable the production of additional types of structures and units.
+}
+
+STRING 3267
+// Units: h00H ([Wrynn] Castle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Castle to enable the production of additional types of structures and units.
+}
+
+STRING 3268
+// Units: h00M ([Wrynn] Barracks), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Primary troop production building. Trains Footmen, Riflemen and Knights. |nAlso contains the Defend, Long Rifles, and Animal War Training upgrades.
+}
+
+STRING 3269
+// Units: h00V ([Wrynn] House), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food #income
+|R
+Provides food, which increases the maximum number of units that can be trained.
+}
+
+STRING 3270
+// Units: h00X ([Wrynn] Altar of Kings), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 3271
+// Units: h00Y ([Wrynn] Lumber Mill), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for Lumber Harvesting and Masonry.
+}
+
+STRING 3272
+// Units: h00Z ([Wrynn] Blacksmith), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrades
+|R
+Contains upgrades for improved armor, weaponry and gunpowder.
+}
+
+STRING 3273
+// Units: h017 ([Wrynn] Сitizen), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 3274
+// Units: h018 ([Wrynn] Soldier), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3275
+// Units: h019 ([Wrynn] Rifleman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3276
+// Units: h01A ([Wrynn] Cavalry), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3277
+// Units: h01B ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 3278
+// Units: h01C ([Wrynn] Flying Machine), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #siege
+|R
+Fast moving flying machine. Excellent at scouting, and effective against air units. Can learn the Flying Machine Bombs and Flak Cannons upgrades. |nCan see invisible units. |n|n|cffffcc00Attacks air units.|r
+}
+
+STRING 3279
+// Units: h01D ([Wrynn] Priest), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+|cFF24BBFF"Arrived straight from Northshire Abbey."|r
+
+Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Portal to Stormwind. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3280
+// Units: h01E ([Wrynn] Sorceress), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3281
+// Units: h01G ([Wrynn] Skyfire Gunship), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #siege
+|R
+Fast moving flying machine. Excellent at scouting, and effective against air units. Can learn the Flying Machine Bombs and Flak Cannons upgrades. |nCan see invisible units. |n|n|cffffcc00Attacks air units.|r
+}
+
+STRING 3282
+// Units: h02L ([Uther] Abbey), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
+}
+
+STRING 3283
+// Units: h02N ([Uther] Aviary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Gryphon Riders, and Dragonhawk Riders. |nAlso contains the Storm Hammers and Cloud upgrades.
+}
+
+STRING 3284
+// Units: h00C ([Uther] Light Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard #support
+|R
+Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
+}
+
+STRING 3285
+// Units: h00E ([Uther] Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Siege Engines, Flying Machines, and Mortar Teams. |nAlso contains the Flare, Fragmentation Shards, Barrage, Flying Machine Bombs, and Flak Cannons upgrades.
+}
+
+STRING 3286
+// Units: h010 ([Wrynn] Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Siege Engines, Flying Machines, and Mortar Teams. |nAlso contains the Flare, Fragmentation Shards, Barrage, Flying Machine Bombs, and Flak Cannons upgrades.
+}
+
+STRING 3287
+// Units: h011 ([Wrynn] Mage Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
+}
+
+STRING 3288
+// Units: h013 ([Wrynn] Scout Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, an Arcane Tower, or a Cannon Tower. Can learn the Magic Sentry ability.
+}
+
+STRING 3289
+// Units: h014 ([Wrynn] Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3290
+// Units: h015 ([Wrynn] Cannon Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 3291
+// Units: h01I ([Wrynn] Bank of Stormwind), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#income
+|R
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Hall has (Town Hall, Keep, or Castle) and which buildings you have.
+}
+
+STRING 3298
+// Buffs/Effects: B00S ([Wrynn] Veteran: Doctor of Sciences), Buffubertip (Tooltip - Extended)
+{
+Gains additional mana regeneration.
+}
+
+STRING 3300
+// Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), Ubertip (Tooltip - Normal - Extended)
+{
+Gains additional mana regeneration of +<A04M,DataA1,.>.
+}
+
+STRING 3301
+// Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), Tip (Tooltip - Normal)
+{
+Veteran: Doctor of Sciences
+}
+
+STRING 3302
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Tip (Tooltip - Normal)
+{
+Veteran: Doctor of Sciences
+}
+
+STRING 3303
+// Abilities: A03Y ([Wrynn] Veteran: Battle Stance), Name (Name)
+{
+[Wrynn] Veteran: Battle Stance
+}
+
+STRING 3304
+// Abilities: A03Y ([Wrynn] Veteran: Battle Stance), Tip (Tooltip - Normal)
+{
+Veteran: Battle Stance
+}
+
+STRING 3305
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Name (Name)
+{
+[Wrynn] Veteran: Battle Stance
+}
+
+STRING 3306
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Tip (Tooltip - Normal)
+{
+Veteran: Learn Battle Stance
+}
+
+STRING 3307
+// Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Name (Name)
+{
+[Wrynn] Veteran: Defensive Stance
+}
+
+STRING 3308
+// Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Tip (Tooltip - Normal)
+{
+Veteran: Defensive Stance
+}
+
+STRING 3309
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Name (Name)
+{
+[Wrynn] Veteran: Aspect of the Cheetah
+}
+
+STRING 3310
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Tip (Tooltip - Normal)
+{
+Veteran: Learn Aspect of the Cheetah
+}
+
+STRING 3311
+// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Name (Name)
+{
+[Wrynn] Veteran: Aspect of the Hawk
+}
+
+STRING 3312
+// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Tip (Tooltip - Normal)
+{
+Veteran: Aspect of the Hawk
+}
+
+STRING 3313
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Name (Name)
+{
+[Wrynn] Veteran: Aspect of the Cheetah
+}
+
+STRING 3314
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Tip (Tooltip - Normal)
+{
+Veteran: Aspect of the Cheetah
+}
+
+STRING 3315
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Name (Name)
+{
+[Wrynn] Veteran: Aspect of the Hawk
+}
+
+STRING 3316
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Tip (Tooltip - Normal)
+{
+Veteran: Learn Aspect of the Hawk
+}
+
+STRING 3317
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Name (Name)
+{
+[Wrynn] Veteran: Defensive Stance
+}
+
+STRING 3318
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Tip (Tooltip - Normal)
+{
+Veteran: Learn Defensive Stance
+}
+
+STRING 3319
+// Abilities: A046 ([Wrynn] Veteran: Galloping Movement), Name (Name)
+{
+[Wrynn] Veteran: Galloping Movement
+}
+
+STRING 3320
+// Abilities: A046 ([Wrynn] Veteran: Galloping Movement), Tip (Tooltip - Normal)
+{
+Veteran: Galloping Movement
+}
+
+STRING 3321
+// Abilities: A047 ([Wrynn] Veteran: Rear Attack), Name (Name)
+{
+[Wrynn] Veteran: Rear Attack
+}
+
+STRING 3322
+// Abilities: A047 ([Wrynn] Veteran: Rear Attack), Tip (Tooltip - Normal)
+{
+Veteran: Rear Attack
+}
+
+STRING 3323
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Name (Name)
+{
+[Wrynn] Veteran: Galloping Movement
+}
+
+STRING 3324
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Tip (Tooltip - Normal)
+{
+Veteran: Learn Galloping Movement
+}
+
+STRING 3325
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Name (Name)
+{
+[Wrynn] Veteran: Rear Attack
+}
+
+STRING 3326
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Tip (Tooltip - Normal)
+{
+Veteran: Learn Rear Attack
+}
+
+STRING 3327
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Name (Name)
+{
+[Wrynn] Veteran: Throw Passenger
+}
+
+STRING 3328
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Tip (Tooltip - Normal)
+{
+Veteran: Learn Throw Passenger
+}
+
+STRING 3329
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Name (Name)
+{
+[Wrynn] Veteran: Gunship Cannon Fire
+}
+
+STRING 3330
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+Veteran: Learn Gunship Cannon Fire
+}
+
+STRING 3331
+// Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Name (Name)
+{
+[Wrynn] Veteran: Gunship Cannon Fire
+}
+
+STRING 3332
+// Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+Veteran: Gunship Cannon Fire
+}
+
+STRING 3333
+// Abilities: A04F ([Wrynn] Veteran: Throw Passenger), Name (Name)
+{
+[Wrynn] Veteran: Throw Passenger
+}
+
+STRING 3334
+// Abilities: A04F ([Wrynn] Veteran: Throw Passenger), Tip (Tooltip - Normal)
+{
+Veteran: Throw Passenger
+}
+
+STRING 3335
+// Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), Name (Name)
+{
+[Wrynn] Veteran: Explosive Mixture
+}
+
+STRING 3336
+// Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), Tip (Tooltip - Normal)
+{
+Veteran: Explosive Mixture
+}
+
+STRING 3337
+// Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), Name (Name)
+{
+[Wrynn] Veteran: Multi-barreled Gun
+}
+
+STRING 3338
+// Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), Tip (Tooltip - Normal)
+{
+Veteran: Multi-barreled Gun
+}
+
+STRING 3339
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Name (Name)
+{
+[Wrynn] Veteran: Multi-barreled Gun
+}
+
+STRING 3340
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Tip (Tooltip - Normal)
+{
+Veteran: Learn Multi-barreled Gun
+}
+
+STRING 3341
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Name (Name)
+{
+[Wrynn] Veteran: Explosive Mixture
+}
+
+STRING 3342
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Tip (Tooltip - Normal)
+{
+Veteran: Learn Explosive Mixture
+}
+
+STRING 3343
+// Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), Name (Name)
+{
+[Wrynn] Veteran: Doctor of Sciences
+}
+
+STRING 3344
+// Buffs/Effects: B00O ([Wrynn] Veteran: Battle Stance), Bufftip (Tooltip)
+{
+Veteran: Battle Stance
+}
+
+STRING 3345
+// Buffs/Effects: B00O ([Wrynn] Veteran: Battle Stance), EditorName (Name (Editor Only))
+{
+[Wrynn] Veteran: Battle Stance
+}
+
+STRING 3346
+// Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), Bufftip (Tooltip)
+{
+Veteran: Defensive Stance
+}
+
+STRING 3347
+// Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), EditorName (Name (Editor Only))
+{
+[Wrynn] Veteran: Defensive Stance
+}
+
+STRING 3348
+// Buffs/Effects: B00Q ([Wrynn] Veteran: Galloping Movement), Bufftip (Tooltip)
+{
+Veteran: Galloping Movement
+}
+
+STRING 3349
+// Buffs/Effects: B00Q ([Wrynn] Veteran: Galloping Movement), EditorName (Name (Editor Only))
+{
+[Wrynn] Veteran: Galloping Movement
+}
+
+STRING 3350
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Name (Name)
+{
+[Wrynn] Veteran: Doctor of Sciences
+}
+
+STRING 3351
+// Abilities: A04L ([Wrynn] Portal to Stormwind), Name (Name)
+{
+[Wrynn] Portal to Stormwind
+}
+
+STRING 3354
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Name (Name)
+{
+[Wrynn] Veteran: Revitalized Spirit
+}
+
+STRING 3357
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
+{
+Veteran: Revitalized Spirit
+}
+
+STRING 3359
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Ubertip (Tooltip - Normal - Extended)
+{
+Gains additional mana regeneration of +<A04M,DataA1,.>.
+}
+
+STRING 3360
+// Buffs/Effects: B00R ([Uther] Portal to Stormwind), Bufftip (Tooltip)
+{
+Portal to Stormwind
+}
+
+STRING 3361
+// Buffs/Effects: B00S ([Wrynn] Veteran: Doctor of Sciences), EditorName (Name (Editor Only))
+{
+[Wrynn] Veteran: Doctor of Sciences
+}
+
+STRING 3362
+// Buffs/Effects: B00S ([Wrynn] Veteran: Doctor of Sciences), Bufftip (Tooltip)
+{
+Veteran: Doctor of Sciences
+}
+
+STRING 3363
+// Abilities: A04K ([Wrynn] Portal to Stormwind), Ubertip (Tooltip - Normal - Extended)
+{
+Teleports a target unit to your highest level town hall, stunning the unit. The stun is removed only once the unit is fully healed.
+}
+
+STRING 3364
+// Abilities: A04L ([Wrynn] Portal to Stormwind), Ubertip (Tooltip - Normal - Extended)
+{
+Teleports a target unit to your highest level town hall, stunning the unit. The stun is removed only once the unit is fully healed.
+
+|cff649bffVeteran: Revitalized Spirit|r
+}
+
+STRING 3365
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
+}
+
+STRING 3366
+// Abilities: A03M ([Wrynn] Rent), EditorSuffix (Editor Suffix)
+{
+ (House)
+}
+
+STRING 3367
+// Abilities: A03Y ([Wrynn] Veteran: Battle Stance), EditorSuffix (Editor Suffix)
+{
+(Soldier)
+}
+
+STRING 3368
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), EditorSuffix (Editor Suffix)
+{
+(Soldier Upg)
+}
+
+STRING 3369
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), EditorSuffix (Editor Suffix)
+{
+(Rifleman Upg)
+}
+
+STRING 3370
+// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), EditorSuffix (Editor Suffix)
+{
+(Rifleman)
+}
+
+STRING 3371
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), EditorSuffix (Editor Suffix)
+{
+(Rifleman)
+}
+
+STRING 3372
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), EditorSuffix (Editor Suffix)
+{
+(Rifleman Upg)
+}
+
+STRING 3373
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), EditorSuffix (Editor Suffix)
+{
+(Soldier Upg)
+}
+
+STRING 3374
+// Abilities: A046 ([Wrynn] Veteran: Galloping Movement), EditorSuffix (Editor Suffix)
+{
+(Cavalry)
+}
+
+STRING 3375
+// Abilities: A047 ([Wrynn] Veteran: Rear Attack), EditorSuffix (Editor Suffix)
+{
+(Cavalry)
+}
+
+STRING 3376
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), EditorSuffix (Editor Suffix)
+{
+(Cavalry Upg)
+}
+
+STRING 3377
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), EditorSuffix (Editor Suffix)
+{
+(Cavalry Upg)
+}
+
+STRING 3378
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), EditorSuffix (Editor Suffix)
+{
+(Skyfire Upg)
+}
+
+STRING 3379
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), EditorSuffix (Editor Suffix)
+{
+(Skyfire Upg)
+}
+
+STRING 3380
+// Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), EditorSuffix (Editor Suffix)
+{
+(Skyfire)
+}
+
+STRING 3381
+// Abilities: A04F ([Wrynn] Veteran: Throw Passenger), EditorSuffix (Editor Suffix)
+{
+(Skyfire)
+}
+
+STRING 3382
+// Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), EditorSuffix (Editor Suffix)
+{
+(Fly Machine)
+}
+
+STRING 3383
+// Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), EditorSuffix (Editor Suffix)
+{
+(Fly Machine)
+}
+
+STRING 3384
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), EditorSuffix (Editor Suffix)
+{
+(Fly Machine Upg)
+}
+
+STRING 3385
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), EditorSuffix (Editor Suffix)
+{
+(Fly Machine Upg)
+}
+
+STRING 3386
+// Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), EditorSuffix (Editor Suffix)
+{
+(Priest)
+}
+
+STRING 3387
+// Abilities: A04L ([Wrynn] Portal to Stormwind), EditorSuffix (Editor Suffix)
+{
+ (Priest veteran)
+}
+
+STRING 3388
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), EditorSuffix (Editor Suffix)
+{
+(Priest Upg)
+}
+
+STRING 3389
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), EditorSuffix (Editor Suffix)
+{
+(Priest Upg)
 }
 
