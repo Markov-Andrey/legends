@@ -174,6 +174,7 @@ trigger gg_trg_WrynnTaunt= null
 trigger gg_trg_WrynnExp= null
 trigger gg_trg_WrynnUpgradeVeterans= null
 trigger gg_trg_WrynnRiflemanCheetah= null
+trigger gg_trg_WrynnKnightRearAttack= null
 trigger gg_trg_WrynnRent= null
 trigger gg_trg_WrynnDeposit= null
 trigger gg_trg_WrynnDepositTimer= null
@@ -248,7 +249,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_WrynnKnightRearAttack= null
 
     // Random Groups
 integer array gg_rg_000
