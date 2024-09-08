@@ -7892,40 +7892,16 @@ STRING 3173
 Increases self attack rate by <A03Y,DataB1,%>%.
 }
 
-STRING 3174
-// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Ubertip (Tooltip - Normal - Extended)
-{
-Increases self attack rate by <A03Y,DataB1,%>%.
-}
-
 STRING 3176
 // Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Ubertip (Tooltip - Normal - Extended)
 {
 Gives <A040,DataA1,.> additional self armor.
 }
 
-STRING 3177
-// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Ubertip (Tooltip - Normal - Extended)
-{
-Gives <A040,DataA1,.> additional self armor.
-}
-
 STRING 3180
-// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
-{
-While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
-}
-
-STRING 3182
 // Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
 {
 While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
-}
-
-STRING 3183
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
 }
 
 STRING 3188
@@ -7934,20 +7910,8 @@ STRING 3188
 Unit speed increased by <A046,DataA1,%>%.
 }
 
-STRING 3191
-// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Ubertip (Tooltip - Normal - Extended)
-{
-Unit speed increased by <A046,DataA1,%>%.
-}
-
 STRING 3195
 // Abilities: A047 ([Wrynn] Veteran: Rear Attack), Ubertip (Tooltip - Normal - Extended)
-{
-Attack from behind deals an additional 5 damage.
-}
-
-STRING 3201
-// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Attack from behind deals an additional 5 damage.
 }
@@ -8000,12 +7964,6 @@ STRING 3214
 Gunship Cannon Fire
 }
 
-STRING 3217
-// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Ubertip (Tooltip - Normal - Extended)
-{
-When a ship is destroyed, units will not receive a debuff.
-}
-
 STRING 3223
 // Upgrades: R01P (Storm Hammers), Ubertip (Tooltip - Extended)
 {
@@ -8015,12 +7973,6 @@ You can plant up to 8 units. If the ship is destroyed, the entire crew will rece
 }
 
 STRING 3224
-// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
-{
-An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
-}
-
-STRING 3227
 // Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
 {
 An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
@@ -8042,18 +7994,6 @@ STRING 3248
 // Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
 {
 Causes attacks to do <A04I,DataC1> times normal damage to air units.
-}
-
-STRING 3249
-// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
-{
-Causes attacks to do <A04I,DataC1> times normal damage to air units.
-}
-
-STRING 3250
-// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
-{
-Causes attacks to deal <A04G,DataB1> times normal damage to buildings with a <A04G,DataA1>% chance.
 }
 
 STRING 3251
@@ -8331,13 +8271,7 @@ Gains additional mana regeneration of +<A04M,DataA1,.>.
 }
 
 STRING 3301
-// Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), Tip (Tooltip - Normal)
-{
-Veteran: Doctor of Sciences
-}
-
-STRING 3302
-// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Tip (Tooltip - Normal)
+// Buffs/Effects: B00S ([Wrynn] Veteran: Doctor of Sciences), Bufftip (Tooltip)
 {
 Veteran: Doctor of Sciences
 }
@@ -8349,7 +8283,7 @@ STRING 3303
 }
 
 STRING 3304
-// Abilities: A03Y ([Wrynn] Veteran: Battle Stance), Tip (Tooltip - Normal)
+// Buffs/Effects: B00O ([Wrynn] Veteran: Battle Stance), Bufftip (Tooltip)
 {
 Veteran: Battle Stance
 }
@@ -8360,12 +8294,6 @@ STRING 3305
 [Wrynn] Veteran: Battle Stance
 }
 
-STRING 3306
-// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Tip (Tooltip - Normal)
-{
-Veteran: Learn Battle Stance
-}
-
 STRING 3307
 // Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Name (Name)
 {
@@ -8373,7 +8301,7 @@ STRING 3307
 }
 
 STRING 3308
-// Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Tip (Tooltip - Normal)
+// Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), Bufftip (Tooltip)
 {
 Veteran: Defensive Stance
 }
@@ -8384,22 +8312,10 @@ STRING 3309
 [Wrynn] Veteran: Aspect of the Cheetah
 }
 
-STRING 3310
-// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Tip (Tooltip - Normal)
-{
-Veteran: Learn Aspect of the Cheetah
-}
-
 STRING 3311
 // Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Name (Name)
 {
 [Wrynn] Veteran: Aspect of the Hawk
-}
-
-STRING 3312
-// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Tip (Tooltip - Normal)
-{
-Veteran: Aspect of the Hawk
 }
 
 STRING 3313
@@ -8408,34 +8324,16 @@ STRING 3313
 [Wrynn] Veteran: Aspect of the Cheetah
 }
 
-STRING 3314
-// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Tip (Tooltip - Normal)
-{
-Veteran: Aspect of the Cheetah
-}
-
 STRING 3315
 // Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Name (Name)
 {
 [Wrynn] Veteran: Aspect of the Hawk
 }
 
-STRING 3316
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Tip (Tooltip - Normal)
-{
-Veteran: Learn Aspect of the Hawk
-}
-
 STRING 3317
 // Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Name (Name)
 {
 [Wrynn] Veteran: Defensive Stance
-}
-
-STRING 3318
-// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Tip (Tooltip - Normal)
-{
-Veteran: Learn Defensive Stance
 }
 
 STRING 3319
@@ -8445,7 +8343,7 @@ STRING 3319
 }
 
 STRING 3320
-// Abilities: A046 ([Wrynn] Veteran: Galloping Movement), Tip (Tooltip - Normal)
+// Buffs/Effects: B00Q ([Wrynn] Veteran: Galloping Movement), Bufftip (Tooltip)
 {
 Veteran: Galloping Movement
 }
@@ -8456,22 +8354,10 @@ STRING 3321
 [Wrynn] Veteran: Rear Attack
 }
 
-STRING 3322
-// Abilities: A047 ([Wrynn] Veteran: Rear Attack), Tip (Tooltip - Normal)
-{
-Veteran: Rear Attack
-}
-
 STRING 3323
 // Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Name (Name)
 {
 [Wrynn] Veteran: Galloping Movement
-}
-
-STRING 3324
-// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Tip (Tooltip - Normal)
-{
-Veteran: Learn Galloping Movement
 }
 
 STRING 3325
@@ -8480,22 +8366,10 @@ STRING 3325
 [Wrynn] Veteran: Rear Attack
 }
 
-STRING 3326
-// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Tip (Tooltip - Normal)
-{
-Veteran: Learn Rear Attack
-}
-
 STRING 3327
 // Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Name (Name)
 {
 [Wrynn] Veteran: Throw Passenger
-}
-
-STRING 3328
-// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Tip (Tooltip - Normal)
-{
-Veteran: Learn Throw Passenger
 }
 
 STRING 3329
@@ -8504,22 +8378,10 @@ STRING 3329
 [Wrynn] Veteran: Gunship Cannon Fire
 }
 
-STRING 3330
-// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Tip (Tooltip - Normal)
-{
-Veteran: Learn Gunship Cannon Fire
-}
-
 STRING 3331
 // Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Name (Name)
 {
 [Wrynn] Veteran: Gunship Cannon Fire
-}
-
-STRING 3332
-// Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Tip (Tooltip - Normal)
-{
-Veteran: Gunship Cannon Fire
 }
 
 STRING 3333
@@ -8528,22 +8390,10 @@ STRING 3333
 [Wrynn] Veteran: Throw Passenger
 }
 
-STRING 3334
-// Abilities: A04F ([Wrynn] Veteran: Throw Passenger), Tip (Tooltip - Normal)
-{
-Veteran: Throw Passenger
-}
-
 STRING 3335
 // Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), Name (Name)
 {
 [Wrynn] Veteran: Explosive Mixture
-}
-
-STRING 3336
-// Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), Tip (Tooltip - Normal)
-{
-Veteran: Explosive Mixture
 }
 
 STRING 3337
@@ -8552,22 +8402,10 @@ STRING 3337
 [Wrynn] Veteran: Multi-barreled Gun
 }
 
-STRING 3338
-// Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), Tip (Tooltip - Normal)
-{
-Veteran: Multi-barreled Gun
-}
-
 STRING 3339
 // Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Name (Name)
 {
 [Wrynn] Veteran: Multi-barreled Gun
-}
-
-STRING 3340
-// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Tip (Tooltip - Normal)
-{
-Veteran: Learn Multi-barreled Gun
 }
 
 STRING 3341
@@ -8576,22 +8414,10 @@ STRING 3341
 [Wrynn] Veteran: Explosive Mixture
 }
 
-STRING 3342
-// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Tip (Tooltip - Normal)
-{
-Veteran: Learn Explosive Mixture
-}
-
 STRING 3343
 // Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), Name (Name)
 {
 [Wrynn] Veteran: Doctor of Sciences
-}
-
-STRING 3344
-// Buffs/Effects: B00O ([Wrynn] Veteran: Battle Stance), Bufftip (Tooltip)
-{
-Veteran: Battle Stance
 }
 
 STRING 3345
@@ -8600,22 +8426,10 @@ STRING 3345
 [Wrynn] Veteran: Battle Stance
 }
 
-STRING 3346
-// Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), Bufftip (Tooltip)
-{
-Veteran: Defensive Stance
-}
-
 STRING 3347
 // Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), EditorName (Name (Editor Only))
 {
 [Wrynn] Veteran: Defensive Stance
-}
-
-STRING 3348
-// Buffs/Effects: B00Q ([Wrynn] Veteran: Galloping Movement), Bufftip (Tooltip)
-{
-Veteran: Galloping Movement
 }
 
 STRING 3349
@@ -8642,18 +8456,6 @@ STRING 3354
 [Wrynn] Veteran: Revitalized Spirit
 }
 
-STRING 3357
-// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
-{
-Veteran: Revitalized Spirit
-}
-
-STRING 3359
-// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Ubertip (Tooltip - Normal - Extended)
-{
-Gains additional mana regeneration of +<A04M,DataA1,.>.
-}
-
 STRING 3360
 // Buffs/Effects: B00R ([Uther] Portal to Stormwind), Bufftip (Tooltip)
 {
@@ -8664,12 +8466,6 @@ STRING 3361
 // Buffs/Effects: B00S ([Wrynn] Veteran: Doctor of Sciences), EditorName (Name (Editor Only))
 {
 [Wrynn] Veteran: Doctor of Sciences
-}
-
-STRING 3362
-// Buffs/Effects: B00S ([Wrynn] Veteran: Doctor of Sciences), Bufftip (Tooltip)
-{
-Veteran: Doctor of Sciences
 }
 
 STRING 3363
@@ -8687,7 +8483,7 @@ Teleports a target unit to your highest level town hall, stunning the unit. The 
 }
 
 STRING 3365
-// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
 {
 Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
 }
@@ -8854,18 +8650,6 @@ STRING 3393
 (Priest)
 }
 
-STRING 3394
-// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Ubertip (Tooltip - Normal - Extended)
-{
-Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
-}
-
-STRING 3395
-// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
-{
-Veteran: Revitalized Spirit
-}
-
 STRING 3396
 // Abilities: A03R ([Wrynn] Slow), Ubertip (Tooltip - Normal - Extended)
 {
@@ -8885,15 +8669,9 @@ STRING 3399
 }
 
 STRING 3400
-// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Ubertip (Tooltip - Normal - Extended)
 {
 Slow costs mana reduced
-}
-
-STRING 3401
-// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
-{
-Veteran: Adept of Chronomancy
 }
 
 STRING 3402
@@ -8941,21 +8719,9 @@ STRING 3408
 }
 
 STRING 3409
-// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), EditorSuffix (Editor Suffix)
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), EditorSuffix (Editor Suffix)
 {
 (Sorceress)
-}
-
-STRING 3410
-// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
-{
-Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
-}
-
-STRING 3411
-// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
-{
-Veteran: Adept of Chronomancy
 }
 
 STRING 3412
@@ -9011,39 +8777,15 @@ STRING 3419
 }
 
 STRING 3420
-// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Ubertip (Tooltip - Normal - Extended)
 {
 Polymorph and Invisibility uses less mana
-}
-
-STRING 3421
-// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Tip (Tooltip - Normal)
-{
-Veteran: Learn Tricks and Traps
 }
 
 STRING 3422
 // Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Name (Name)
 {
 [Wrynn] Veteran: Tricks and Traps
-}
-
-STRING 3423
-// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Tip (Tooltip - Normal)
-{
-Veteran: Tricks and Traps
-}
-
-STRING 3424
-// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Ubertip (Tooltip - Normal - Extended)
-{
-Polymorph and Invisibility uses less mana
-}
-
-STRING 3425
-// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), EditorSuffix (Editor Suffix)
-{
-(Sorceress)
 }
 
 STRING 3427
@@ -9070,22 +8812,10 @@ STRING 3437
 [Wrynn] Veteran: Brave's Spyglass
 }
 
-STRING 3440
-// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Tip (Tooltip - Normal)
-{
-Veteran: Learn Brave's Spyglass
-}
-
 STRING 3442
 // Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Name (Name)
 {
 [Wrynn] Veteran: Brave's Spyglass
-}
-
-STRING 3445
-// Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Tip (Tooltip - Normal)
-{
-Veteran: Brave's Spyglass
 }
 
 STRING 3446
@@ -9170,12 +8900,6 @@ STRING 3467
 [Wrynn] Veteran: Tactical Strike
 }
 
-STRING 3468
-// Abilities: A03U ([Wrynn] Veteran: Tactical Strike), Tip (Tooltip - Normal)
-{
-Veteran: Tactical Strike
-}
-
 STRING 3469
 // Abilities: A03U ([Wrynn] Veteran: Tactical Strike), Ubertip (Tooltip - Normal - Extended)
 {
@@ -9186,18 +8910,6 @@ STRING 3470
 // Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Name (Name)
 {
 [Wrynn] Veteran: Tactical Strike
-}
-
-STRING 3472
-// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Shots no longer deal area damage, shoot instantly and always hit the target
-}
-
-STRING 3473
-// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Tip (Tooltip - Normal)
-{
-Veteran: Learn Tactical Strike
 }
 
 STRING 3474
@@ -9225,12 +8937,6 @@ STRING 3477
 }
 
 STRING 3478
-// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Ubertip (Tooltip - Normal - Extended)
-{
-Increased attack range +350.
-}
-
-STRING 3479
 // Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Ubertip (Tooltip - Normal - Extended)
 {
 Increased attack range +350.
@@ -9327,14 +9033,346 @@ V
 }
 
 STRING 3495
-// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Hotkey (Hotkey - Normal)
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Hotkey (Hotkey - Normal)
 {
 V
 }
 
 STRING 3497
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3499
+// Abilities: A03Y ([Wrynn] Veteran: Battle Stance), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Battle Stance
+}
+
+STRING 3500
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Battle Stance
+}
+
+STRING 3503
+// Abilities: A040 ([Wrynn] Veteran: Defensive Stance), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Defensive Stance
+}
+
+STRING 3504
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Aspect of the Cheetah
+}
+
+STRING 3505
+// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Aspect of the Hawk
+}
+
+STRING 3506
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Aspect of the Cheetah
+}
+
+STRING 3507
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Aspect of the Hawk
+}
+
+STRING 3508
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Defensive Stance
+}
+
+STRING 3509
+// Abilities: A046 ([Wrynn] Veteran: Galloping Movement), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Galloping Movement
+}
+
+STRING 3510
+// Abilities: A047 ([Wrynn] Veteran: Rear Attack), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Rear Attack
+}
+
+STRING 3511
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Galloping Movement
+}
+
+STRING 3512
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Rear Attack
+}
+
+STRING 3513
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Throw Passenger
+}
+
+STRING 3514
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Gunship Cannon Fire
+}
+
+STRING 3515
+// Abilities: A04E ([Wrynn] Veteran: Gunship Cannon Fire), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Gunship Cannon Fire
+}
+
+STRING 3516
+// Abilities: A04F ([Wrynn] Veteran: Throw Passenger), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Throw Passenger
+}
+
+STRING 3517
+// Abilities: A04G ([Wrynn] Veteran: Explosive Mixture), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Explosive Mixture
+}
+
+STRING 3518
+// Abilities: A04I ([Wrynn] Veteran: Multi-barreled Gun), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Multi-barreled Gun
+}
+
+STRING 3519
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Multi-barreled Gun
+}
+
+STRING 3520
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Explosive Mixture
+}
+
+STRING 3521
+// Abilities: A04M ([Wrynn] Veteran: Doctor of Sciences), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Doctor of Sciences
+}
+
+STRING 3522
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Doctor of Sciences
+}
+
+STRING 3523
+// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Revitalized Spirit
+}
+
+STRING 3524
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Adept of Chronomancy
+}
+
+STRING 3525
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Tricks and Traps
+}
+
+STRING 3526
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Tricks and Traps
+}
+
+STRING 3527
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Brave's Spyglass
+}
+
+STRING 3528
+// Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Brave's Spyglass
+}
+
+STRING 3529
+// Abilities: A03U ([Wrynn] Veteran: Tactical Strike), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Tactical Strike
+}
+
+STRING 3530
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Learn Tactical Strike
+}
+
+STRING 3531
 // Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Hotkey (Hotkey - Normal)
 {
 V
+}
+
+STRING 3532
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Revitalized Spirit
+}
+
+STRING 3533
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
+{
+|cFFFFB700Veteran|R: Adept of Chronomancy
+}
+
+STRING 3535
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), EditorSuffix (Editor Suffix)
+{
+(Skyfire)
+}
+
+STRING 3536
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Increases self attack rate by <A03Y,DataB1,%>%.
+}
+
+STRING 3537
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
+}
+
+STRING 3538
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
+}
+
+STRING 3539
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Gives <A040,DataA1,.> additional self armor.
+}
+
+STRING 3540
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Unit speed increased by <A046,DataA1,%>%.
+}
+
+STRING 3541
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Attack from behind deals an additional 5 damage.
+}
+
+STRING 3542
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+When a ship is destroyed, units will not receive a debuff.
+}
+
+STRING 3543
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+An additional attack that causes damage equal to <A03X,DataA1>, and fires while moving.
+}
+
+STRING 3544
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Causes attacks to do <A04I,DataC1> times normal damage to air units.
+}
+
+STRING 3545
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Causes attacks to deal <A04G,DataB1> times normal damage to buildings with a <A04G,DataA1>% chance.
+}
+
+STRING 3546
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Gains additional mana regeneration of +<A04M,DataA1,.>.
+}
+
+STRING 3547
+// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
+}
+
+STRING 3548
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Slow costs mana reduced
+}
+
+STRING 3549
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Polymorph and Invisibility uses less mana
+}
+
+STRING 3550
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Increased attack range +350.
+}
+
+STRING 3551
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Shots no longer deal area damage, shoot instantly and always hit the target
 }
 
