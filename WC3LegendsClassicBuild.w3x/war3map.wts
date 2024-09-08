@@ -222,31 +222,31 @@ Dead Wyrm
 }
 
 STRING 572
-// Units: h00S ([AI] Choose of Legends), Tip (Tooltip - Basic)
+// Units: h00S ([UI] Choose of Legends), Tip (Tooltip - Basic)
 {
 Choose of Legends
 }
 
 STRING 575
-// Units: h00T ([AI] Arthas), Tip (Tooltip - Basic)
+// Units: h00T ([UI] Arthas), Tip (Tooltip - Basic)
 {
 Arthas
 }
 
 STRING 576
-// Abilities: A01C ([UI] Legends: Arthas), Tip (Tooltip - Normal)
+// Upgrades: R00E (Magic Sentry), Tip (Tooltip)
 {
 Arthas
 }
 
 STRING 578
-// Units: h00U ([AI] Uther), Tip (Tooltip - Basic)
+// Units: h00U ([UI] Uther), Tip (Tooltip - Basic)
 {
 Uther
 }
 
 STRING 579
-// Abilities: A01J ([UI] Legends: Uther), Tip (Tooltip - Normal)
+// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
 {
 Uther
 }
@@ -377,46 +377,10 @@ STRING 641
 Stone Form Corrupted Gargoyle
 }
 
-STRING 667
-// Upgrades: R00E (Magic Sentry), Tip (Tooltip)
-{
-Arthas
-}
-
 STRING 668
 // Abilities: A01C ([UI] Legends: Arthas), Ubertip (Tooltip - Normal - Extended)
 {
 Preview Army
-}
-
-STRING 673
-// Abilities: A01D ([UI] Race: Arthas), Tip (Tooltip - Normal)
-{
-|cFF00B0FFRace
-}
-
-STRING 674
-// Abilities: A01D ([UI] Race: Arthas), Ubertip (Tooltip - Normal - Extended)
-{
-Race:|R Undead|R|NSubrace: Army of the Scourge
-}
-
-STRING 677
-// Abilities: A01E ([UI] History: Arthas), Tip (Tooltip - Normal)
-{
-|cFF00B0FFHistory
-}
-
-STRING 678
-// Abilities: A01E ([UI] History: Arthas), Ubertip (Tooltip - Normal - Extended)
-{
-Once the crown prince of Lordaeron, and protégé of Uther the Lightbringer, Arthas was corrupted by the cursed blade Frostmourne in a bid to save his people. Now he rules over the damned as the Lich King and all shall know his wrath.
-}
-
-STRING 679
-// Abilities: A01F ([UI] Select), Tip (Tooltip - Normal)
-{
-|cFF00C800Select
 }
 
 STRING 680
@@ -425,22 +389,10 @@ STRING 680
 Confirm Legend selection
 }
 
-STRING 683
-// Abilities: A01G ([UI] Unselect), Tip (Tooltip - Normal)
-{
-|cFFFF2E00Unselect
-}
-
 STRING 684
-// Abilities: A01G ([UI] Unselect), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01G ([UI] Cancel), Ubertip (Tooltip - Normal - Extended)
 {
 Choose another Legend
-}
-
-STRING 689
-// Abilities: A01H ([UI] Mechanics: Arthas), Tip (Tooltip - Normal)
-{
-|cFF00B0FFMechanics
 }
 
 STRING 690
@@ -456,64 +408,16 @@ STRING 693
 |cFF00B0FFFeatures
 }
 
-STRING 694
-// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
-{
-- Easy to master
-- No mages
-- Adaptive army
-- Expensive upgrades
-}
-
-STRING 695
-// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
-{
-Uther
-}
-
 STRING 696
 // Abilities: A01J ([UI] Legends: Uther), Ubertip (Tooltip - Normal - Extended)
 {
 Preview Army
 }
 
-STRING 701
-// Abilities: A01K ([UI] Race: Uther), Tip (Tooltip - Normal)
-{
-|cFF00B0FFRace
-}
-
-STRING 702
-// Abilities: A01K ([UI] Race: Uther), Ubertip (Tooltip - Normal - Extended)
-{
-Race:|R Human|R|NSubrace: Paladins of the Silver Hand
-}
-
-STRING 705
-// Abilities: A01L ([UI] Mechanics: Uther), Tip (Tooltip - Normal)
-{
-|cFF00B0FFMechanics
-}
-
-STRING 709
-// Abilities: A01M ([UI] History: Uther), Tip (Tooltip - Normal)
-{
-|cFF00B0FFHistory
-}
-
 STRING 713
 // Abilities: A01N ([UI] Features: Uther), Tip (Tooltip - Normal)
 {
 |cFF00B0FFFeatures
-}
-
-STRING 714
-// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
-{
-- Easy to master
-- Low army health
-- High DPS
-- Low army attack speed
 }
 
 STRING 716
@@ -852,48 +756,6 @@ STRING 961
 Divine Intervention [|cFF00B0FFMechanics|R]
 }
 
-STRING 963
-// Abilities: A00K ([UI] RaceTest: Human), Ubertip (Tooltip - Normal - Extended)
-{
-Classic Army
-}
-
-STRING 969
-// Abilities: A00L ([UI] RaceTest: Horde), Tip (Tooltip - Normal)
-{
-Horde
-}
-
-STRING 970
-// Abilities: A00L ([UI] RaceTest: Horde), Ubertip (Tooltip - Normal - Extended)
-{
-Classic Army
-}
-
-STRING 973
-// Abilities: A00M ([UI] RaceTest: Night Elf), Tip (Tooltip - Normal)
-{
-Night Elf
-}
-
-STRING 974
-// Abilities: A00M ([UI] RaceTest: Night Elf), Ubertip (Tooltip - Normal - Extended)
-{
-Classic Army
-}
-
-STRING 977
-// Abilities: A00N ([UI] RaceTest: Undead), Tip (Tooltip - Normal)
-{
-Undead
-}
-
-STRING 978
-// Abilities: A00N ([UI] RaceTest: Undead), Ubertip (Tooltip - Normal - Extended)
-{
-Classic Army
-}
-
 STRING 981
 // Abilities: A01C ([UI] Legends: Arthas), Name (Name)
 {
@@ -916,12 +778,6 @@ STRING 984
 // Abilities: A01F ([UI] Select), Name (Name)
 {
 [UI] Select
-}
-
-STRING 985
-// Abilities: A01G ([UI] Unselect), Name (Name)
-{
-[UI] Unselect
 }
 
 STRING 986
@@ -966,24 +822,6 @@ STRING 992
 [UI] Features: Uther
 }
 
-STRING 994
-// Abilities: A00L ([UI] RaceTest: Horde), Name (Name)
-{
-[UI] RaceTest: Horde
-}
-
-STRING 995
-// Abilities: A00M ([UI] RaceTest: Night Elf), Name (Name)
-{
-[UI] RaceTest: Night Elf
-}
-
-STRING 996
-// Abilities: A00N ([UI] RaceTest: Undead), Name (Name)
-{
-[UI] RaceTest: Undead
-}
-
 STRING 999
 // Abilities: A00O ([Alterac] Sniper Shot), Name (Name)
 {
@@ -997,21 +835,9 @@ Sniper Shot
 }
 
 STRING 1010
-// Units: h006 ([AI] Add Unit), Tip (Tooltip - Basic)
+// Units: h006 ([UI] Add Unit), Tip (Tooltip - Basic)
 {
 Add Unit
-}
-
-STRING 1017
-// Abilities: A00K ([UI] RaceTest: Human), Tip (Tooltip - Normal)
-{
-Human
-}
-
-STRING 1018
-// Abilities: A00K ([UI] RaceTest: Human), Name (Name)
-{
-[UI] RaceTest: Human
 }
 
 STRING 1026
@@ -1093,7 +919,7 @@ Add Building
 }
 
 STRING 1043
-// Units: h008 ([AI] Add Hero), Tip (Tooltip - Basic)
+// Units: h008 ([UI] Add Hero), Tip (Tooltip - Basic)
 {
 Add Hero
 }
@@ -1228,18 +1054,6 @@ STRING 1116
 This unit is under the effects of Holy Aura; it has an increased movement speed and hit point regeneration.
 }
 
-STRING 1124
-// Abilities: A01L ([UI] Mechanics: Uther), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Divine Intervention|R - Protects a unit with Divine Shield when health is low, but no more than 1 time per X min|n|cFF00C850- Champions |R - Temporarily summoned units on the battlefield to assist troops with powerful auras
-}
-
-STRING 1125
-// Abilities: A01M ([UI] History: Uther), Ubertip (Tooltip - Normal - Extended)
-{
-Lord Uther the Lightbringer was the first paladin of the Knights of the Silver Hand who led his Order in battle against the Horde during the Second war.
-}
-
 STRING 1127
 // Units: h01P ([Uther] Garrison), Tip (Tooltip - Basic)
 {
@@ -1317,7 +1131,7 @@ Defeat! Caravans lost.
 }
 
 STRING 1159
-// Units: h001 ([AI] Choose of Difficulty), Tip (Tooltip - Basic)
+// Units: h001 ([UI] Choose of Difficulty), Tip (Tooltip - Basic)
 {
 Choose of Difficulty
 }
@@ -4640,13 +4454,7 @@ Train Skyfire Gunship
 }
 
 STRING 2244
-// Units: h012 ([AI] Varian Wrynn), Tip (Tooltip - Basic)
-{
-Varian Wrynn
-}
-
-STRING 2245
-// Abilities: A031 ([UI] Legends: Varian Wrynn), Tip (Tooltip - Normal)
+// Units: h012 ([UI] Varian Wrynn), Tip (Tooltip - Basic)
 {
 Varian Wrynn
 }
@@ -4867,52 +4675,10 @@ STRING 2305
 [Alterac] Stonebeard
 }
 
-STRING 2306
-// Units: h00S ([AI] Choose of Legends), Name (Name)
-{
-[AI] Choose of Legends
-}
-
-STRING 2307
-// Units: h00T ([AI] Arthas), Name (Name)
-{
-[AI] Arthas
-}
-
-STRING 2308
-// Units: h00U ([AI] Uther), Name (Name)
-{
-[AI] Uther
-}
-
-STRING 2309
-// Units: h006 ([AI] Add Unit), Name (Name)
-{
-[AI] Add Unit
-}
-
 STRING 2310
 // Units: h007 ([AI] Add Building), Name (Name)
 {
 [AI] Add Building
-}
-
-STRING 2311
-// Units: h008 ([AI] Add Hero), Name (Name)
-{
-[AI] Add Hero
-}
-
-STRING 2312
-// Units: h001 ([AI] Choose of Difficulty), Name (Name)
-{
-[AI] Choose of Difficulty
-}
-
-STRING 2313
-// Units: h012 ([AI] Varian Wrynn), Name (Name)
-{
-[AI] Varian Wrynn
 }
 
 STRING 2314
@@ -8064,22 +7830,6 @@ STRING 3267
 Upgrade to Castle to enable the production of additional types of structures and units.
 }
 
-STRING 3268
-// Units: h00M ([Wrynn] Barracks), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack
-|R
-Primary troop production building. Trains Footmen, Riflemen and Knights. |nAlso contains the Defend, Long Rifles, and Animal War Training upgrades.
-}
-
-STRING 3269
-// Units: h00V ([Wrynn] House), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#food #income
-|R
-Provides food, which increases the maximum number of units that can be trained.
-}
-
 STRING 3270
 // Units: h00X ([Wrynn] Altar of Kings), Ubertip (Tooltip - Extended)
 {
@@ -9374,5 +9124,304 @@ STRING 3551
 |cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
 
 Shots no longer deal area damage, shoot instantly and always hit the target
+}
+
+STRING 3552
+// Units: h00S ([UI] Choose of Legends), Name (Name)
+{
+[UI] Choose of Legends
+}
+
+STRING 3553
+// Units: h00T ([UI] Arthas), Name (Name)
+{
+[UI] Arthas
+}
+
+STRING 3554
+// Units: h00U ([UI] Uther), Name (Name)
+{
+[UI] Uther
+}
+
+STRING 3555
+// Units: h006 ([UI] Add Unit), Name (Name)
+{
+[UI] Add Unit
+}
+
+STRING 3556
+// Units: h008 ([UI] Add Hero), Name (Name)
+{
+[UI] Add Hero
+}
+
+STRING 3557
+// Units: h001 ([UI] Choose of Difficulty), Name (Name)
+{
+[UI] Choose of Difficulty
+}
+
+STRING 3558
+// Units: h012 ([UI] Varian Wrynn), Name (Name)
+{
+[UI] Varian Wrynn
+}
+
+STRING 3562
+// Abilities: A01D ([UI] Race: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Undead
+|cFF48BFFFSubrace:|R Army of Scourge
+}
+
+STRING 3563
+// Abilities: A01K ([UI] Race: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Human
+|cFF48BFFFSubrace:|R Paladins of the Silver Hand
+}
+
+STRING 3566
+// Abilities: A01L ([UI] Mechanics: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Divine Intervention|R - Protects a unit with Divine Shield when health is low, but no more than 1 time per X min
+|cFF00C850- Champions |R - Temporarily summoned units on the battlefield to assist troops with powerful auras
+}
+
+STRING 3569
+// Abilities: A00K ([UI] Race: Wrynn), Name (Name)
+{
+[UI] Race: Wrynn
+}
+
+STRING 3571
+// Abilities: A00K ([UI] Race: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Human
+|cFF48BFFFSubrace:|R Stormwind Kingdom
+}
+
+STRING 3572
+// Abilities: A00L ([UI] History: Wrynn), Name (Name)
+{
+[UI] History: Wrynn
+}
+
+STRING 3575
+// Abilities: A00M ([UI] Mechanics: Wrynn), Name (Name)
+{
+[UI] Mechanics: Wrynn
+}
+
+STRING 3577
+// Abilities: A00M ([UI] Mechanics: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Experience & Rank|R - Units gain experience in battle, increasing their rank and enhancing their core stats, becoming stronger and more resilient.
+
+|cFF00C850- Veteran Specialization|R - Upon reaching rank 3, units can learn a valuable ability that makes them even more effective in combat.
+}
+
+STRING 3578
+// Abilities: A00N ([UI] Features: Wrynn), Name (Name)
+{
+[UI] Features: Wrynn
+}
+
+STRING 3579
+// Abilities: A00N ([UI] Features: Wrynn), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 3581
+// Abilities: A01C ([UI] Legends: Arthas), Tip (Tooltip - Normal)
+{
+|cFFA068FFArthas|R
+}
+
+STRING 3582
+// Abilities: A01D ([UI] Race: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 3583
+// Abilities: A01E ([UI] History: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 3584
+// Abilities: A01E ([UI] History: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+Arthas Menethil
+
+Once a noble prince of Lordaeron, sworn to protect his people.
+
+Driven by a desire to stop the undead Scourge, Arthas’s path became twisted when he claimed the cursed sword Frostmourne.
+
+Corrupted by the blade, he was transformed into a death knight and ultimately became the Lich King.
+
+From a beacon of hope to a ruler of the dead, Arthas forsook his humanity in a tragic quest for power.
+}
+
+STRING 3585
+// Abilities: A01F ([UI] Select), Tip (Tooltip - Normal)
+{
+|cFF00C800Select|R
+}
+
+STRING 3586
+// Abilities: A01F ([UI] Select), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 3587
+// Abilities: A01G ([UI] Cancel), Tip (Tooltip - Normal)
+{
+|cFFFF2E00Cancel|R
+}
+
+STRING 3588
+// Abilities: A01G ([UI] Cancel), Name (Name)
+{
+[UI] Cancel
+}
+
+STRING 3589
+// Abilities: A01G ([UI] Cancel), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 3590
+// Abilities: A01H ([UI] Mechanics: Arthas), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 3592
+// Abilities: A01J ([UI] Legends: Uther), Tip (Tooltip - Normal)
+{
+|cFF81DFFFUther|R
+}
+
+STRING 3593
+// Abilities: A01K ([UI] Race: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 3594
+// Abilities: A01L ([UI] Mechanics: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 3595
+// Abilities: A01M ([UI] History: Uther), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 3596
+// Abilities: A01M ([UI] History: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+Uther the Lightbringer
+
+The first paladin of the Silver Hand, embodying justice and honor.
+
+With unwavering faith in the Light, Uther led armies into battle, guided by both strength and compassion.
+
+He believed true power came from protecting the innocent and leading others toward righteousness.
+
+A beacon of hope, Uther inspired countless warriors and priests with his leadership and wisdom. Even in the darkest times, his heart and blade remained steadfast, always guided by the principles of justice, mercy, and the Light.
+}
+
+STRING 3597
+// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to master
+- High armor
+- High healing potential|R
+|cFFFF5A4B- Low movement speed
+- Low army attack speed
+}
+
+STRING 3598
+// Abilities: A031 ([UI] Legends: Varian Wrynn), Tip (Tooltip - Normal)
+{
+|cFF009EFFVarian Wrynn|R
+}
+
+STRING 3599
+// Abilities: A00K ([UI] Race: Wrynn), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 3600
+// Abilities: A00L ([UI] History: Wrynn), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 3601
+// Abilities: A00L ([UI] History: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+Varian Wrynn
+
+The mighty King of Stormwind, a warrior of strength and determination.
+
+Born into royalty, Varian’s life was shaped by trials that tested his courage—from the fall of Stormwind to his betrayal and capture.
+
+Despite these challenges, Varian emerged as a fierce and just leader, earning the name "Lo'Gosh" or "Ghost Wolf" for his battle prowess.
+
+His reign was characterized by profound love for his people and unwavering commitment to the Alliance. Varian’s legacy of resilience, bravery, and leadership is forever etched in history.
+}
+
+STRING 3602
+// Abilities: A00M ([UI] Mechanics: Wrynn), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 3603
+// Abilities: A00N ([UI] Features: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to master
+- Balanced army
+- Strong gold economy|R
+|cFFFF5A4B- High price of food
+- High cost of losing units
+- Few healing abilities
+}
+
+STRING 3604
+// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to master
+- Adaptive army|R
+|cFFFF5A4B- No mages
+- Addiction to murder
+- Low team interaction
+}
+
+STRING 3605
+// Units: h00M ([Wrynn] Barracks), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
+}
+
+STRING 3606
+// Units: h00V ([Wrynn] House), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food #income
+|R
+Provides food, which increases the maximum number of units that can be trained. Generates extra gold when a bank is nearby.
 }
 

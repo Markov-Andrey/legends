@@ -100,8 +100,6 @@ camerasetup gg_cam_Camera_001= null
 trigger gg_trg_CurrentBuild= null
 trigger gg_trg_ConsoleLog= null
 trigger gg_trg_ExampleConsole= null
-trigger gg_trg_ChooseClassicRace= null
-trigger gg_trg_HeroesClassicTest= null
 trigger gg_trg_TimerMinus= null
 trigger gg_trg_TestWaveTimer1= null
 trigger gg_trg_TestWaveTimer2= null
@@ -1519,7 +1517,7 @@ endfunction
 //===========================================================================
 function InitTrig_CurrentBuild takes nothing returns nothing
     set gg_trg_CurrentBuild=CreateTrigger()
-    set udg_isTestVersion=true
+    set udg_isTestVersion=false
 endfunction
 //===========================================================================
 // Trigger: ConsoleLog
@@ -1545,108 +1543,6 @@ function InitTrig_ConsoleLog takes nothing returns nothing
         set udg_ConsoleMessage=null
         set udg_ConsoleTrigger=null
     endif
-endfunction
-
-//===========================================================================
-// Trigger: ChooseClassicRace
-//===========================================================================
-function Trig_ChooseClassicRace_Func002C takes nothing returns boolean
-    local integer array types
-    local integer i= 0
-    local boolean bool= false
-    
-    set types[0]='A00K'
-    set types[1]='A00L'
-    set types[2]='A00M'
-    set types[3]='A00N'
-    
-    loop
-        exitwhen i > 3
-        if ( GetSpellAbilityId() == types[i] ) then
-            set bool=true
-            exitwhen i > 3
-        endif
-        set i=i + 1
-    endloop
-    
-    return bool
-endfunction
-
-function Trig_ChooseClassicRace_Actions takes nothing returns nothing
-    local integer abilityId= GetSpellAbilityId()
-    
-    if ( abilityId == 'A00K' ) then
-        call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-    elseif ( abilityId == 'A00L' ) then
-        call MeleeStartingUnitsForPlayer(RACE_ORC, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-    elseif ( abilityId == 'A00M' ) then
-        call MeleeStartingUnitsForPlayer(RACE_NIGHTELF, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-    elseif ( abilityId == 'A00N' ) then
-        call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), false)
-    endif
-    
-    call RemoveUnit(GetSpellAbilityUnit())
-    call TriggerExecute(gg_trg_StartCameraReset)
-endfunction
-
-function InitTrig_ChooseClassicRace takes nothing returns nothing
-    set gg_trg_ChooseClassicRace=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseClassicRace, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_ChooseClassicRace, Condition(function Trig_ChooseClassicRace_Func002C))
-    call TriggerAddAction(gg_trg_ChooseClassicRace, function Trig_ChooseClassicRace_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HeroesClassicTest
-//===========================================================================
-function Trig_HeroesClassicTest takes nothing returns nothing
-    local integer array types
-    local integer i= 0
-    local boolean bool= false
-
-    set types[0]='Hpal'
-    set types[1]='Hamg'
-    set types[2]='Hmkg'
-    set types[3]='Hblm'
-    set types[4]='Obla'
-    set types[5]='Ofar'
-    set types[6]='Otch'
-    set types[7]='Oshd'
-    set types[8]='Udea'
-    set types[9]='Ulic'
-    set types[10]='Udre'
-    set types[11]='Ucrl'
-    set types[12]='Ekee'
-    set types[13]='Emoo'
-    set types[14]='Edem'
-    set types[15]='Ewar'
-    
-    loop
-        exitwhen i >= 16
-        if ( GetUnitTypeId(GetTrainedUnit()) == types[i] ) then
-            set bool=true
-            exitwhen i >= 16
-        endif
-        set i=i + 1
-    endloop
-    
-    if bool then
-        set i=0
-        loop
-            exitwhen i >= 16
-            call SetPlayerTechMaxAllowedSwap(types[i], 0, GetOwningPlayer(GetTrainedUnit()))
-        
-            set i=i + 1
-            set types[i]=0
-        endloop
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_HeroesClassicTest takes nothing returns nothing
-    set gg_trg_HeroesClassicTest=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HeroesClassicTest, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerAddAction(gg_trg_HeroesClassicTest, function Trig_HeroesClassicTest)
 endfunction
 
 //===========================================================================
@@ -2503,7 +2399,7 @@ function Trig_ChooseWrynn_Actions takes nothing returns nothing
     call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func009A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
-    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_BLUE, true)
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_NAVY, true)
     // Run-ALL-triggers-Uther
     call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_WrynnIni)
@@ -8799,8 +8695,6 @@ endfunction
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_CurrentBuild()
     call InitTrig_ConsoleLog()
-    call InitTrig_ChooseClassicRace()
-    call InitTrig_HeroesClassicTest()
     call InitTrig_TimerMinus()
     call InitTrig_TestWaveTimer1()
     call InitTrig_TestWaveTimer2()
