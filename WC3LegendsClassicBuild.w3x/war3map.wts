@@ -9340,16 +9340,6 @@ He believed true power came from protecting the innocent and leading others towa
 A beacon of hope, Uther inspired countless warriors and priests with his leadership and wisdom. Even in the darkest times, his heart and blade remained steadfast, always guided by the principles of justice, mercy, and the Light.
 }
 
-STRING 3597
-// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to master
-- High armor
-- High healing potential|R
-|cFFFF5A4B- Low movement speed
-- Low army attack speed
-}
-
 STRING 3598
 // Abilities: A031 ([UI] Legends: Varian Wrynn), Tip (Tooltip - Normal)
 {
@@ -9388,27 +9378,6 @@ STRING 3602
 |cFF00B0FFMechanics|R
 }
 
-STRING 3603
-// Abilities: A00N ([UI] Features: Wrynn), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to master
-- Balanced army
-- Strong gold economy|R
-|cFFFF5A4B- High price of food
-- High cost of losing units
-- Few healing abilities
-}
-
-STRING 3604
-// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to master
-- Adaptive army|R
-|cFFFF5A4B- No mages
-- Addiction to murder
-- Low team interaction
-}
-
 STRING 3605
 // Units: h00M ([Wrynn] Barracks), Ubertip (Tooltip - Extended)
 {
@@ -9423,5 +9392,217 @@ STRING 3606
 |cffffcc00#food #income
 |R
 Provides food, which increases the maximum number of units that can be trained. Generates extra gold when a bank is nearby.
+}
+
+STRING 3607
+// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to master
+- Adaptive army|R
+|cFFFF5A4B- No mages
+- Addiction to murder
+- Low team interaction|R
+}
+
+STRING 3608
+// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to master
+- High armor
+- High healing potential|R
+|cFFFF5A4B- Low movement speed
+- Low army attack speed|R
+}
+
+STRING 3609
+// Abilities: A00N ([UI] Features: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to master
+- Balanced army
+- Strong gold economy|R
+|cFFFF5A4B- High price of food
+- High cost of losing units
+- Few healing abilities|R
+}
+
+STRING 3610
+// Abilities: A04X ([Tyrande] Scout), Name (Name)
+{
+[Tyrande] Scout
+}
+
+STRING 3611
+// Abilities: A050 ([Tyrande] Searing Arrows), Name (Name)
+{
+[Tyrande] Searing Arrows
+}
+
+STRING 3612
+// Abilities: A051 ([Tyrande] Starfall), Name (Name)
+{
+[Tyrande] Starfall
+}
+
+STRING 3613
+// Abilities: A052 ([Tyrande] Trueshot Aura), Name (Name)
+{
+[Tyrande] Trueshot Aura
+}
+
+STRING 3614
+// Units: E003 (High Priestess of Elune), Propernames (Proper Names)
+{
+Tyrande Whisperwind
+}
+
+STRING 3615
+// Units: E003 (High Priestess of Elune), Tip (Tooltip - Basic)
+{
+Summon Tyrande Whisperwind
+}
+
+STRING 3616
+// Units: E003 (High Priestess of Elune), Awakentip (Tooltip - Awaken)
+{
+Revive Tyrande Whisperwind
+}
+
+STRING 3617
+// Units: E003 (High Priestess of Elune), Revivetip (Tooltip - Revive)
+{
+Revive Tyrande Whisperwind
+}
+
+STRING 3618
+// Units: E003 (High Priestess of Elune), Name (Name)
+{
+High Priestess of Elune
+}
+
+STRING 3619
+// Abilities: A04X ([Tyrande] Scout), Tip (Tooltip - Normal)
+{
+Dori'thur - [|cffffcc00Level 1|r]
+}
+
+STRING 3620
+// Abilities: A04X ([Tyrande] Scout), Tip (Tooltip - Normal)
+{
+Dori'thur - [|cffffcc00Level 2|r]
+}
+
+STRING 3621
+// Abilities: A04X ([Tyrande] Scout), Tip (Tooltip - Normal)
+{
+Dori'thur - [|cffffcc00Level 3|r]
+}
+
+STRING 3622
+// Units: h01L ([UI] Tyrande Whisperwind), Name (Name)
+{
+[UI] Tyrande Whisperwind
+}
+
+STRING 3623
+// Units: h01L ([UI] Tyrande Whisperwind), Tip (Tooltip - Basic)
+{
+Tyrande Whisperwind
+}
+
+STRING 3624
+// Abilities: A053 ([UI] Race: Tyrande), Name (Name)
+{
+[UI] Race: Tyrande
+}
+
+STRING 3625
+// Abilities: A053 ([UI] Race: Tyrande), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 3626
+// Abilities: A053 ([UI] Race: Tyrande), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Night Elf
+|cFF48BFFFSubrace:|R Sisterhood of Elune
+}
+
+STRING 3627
+// Abilities: A054 ([UI] Legends: Tyrande), Tip (Tooltip - Normal)
+{
+|cFF00CDA9Tyrande Whisperwind|R
+}
+
+STRING 3628
+// Abilities: A054 ([UI] Legends: Tyrande), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 3629
+// Abilities: A054 ([UI] Legends: Tyrande), Name (Name)
+{
+[UI] Legends: Tyrande
+}
+
+STRING 3630
+// Units: e000 ([Tyrande] Tree of Life), Name (Name)
+{
+[Tyrande] Tree of Life
+}
+
+STRING 3631
+// Units: e001 ([Tyrande] Wisp), Name (Name)
+{
+[Tyrande] Wisp
+}
+
+STRING 3632
+// Upgrades: R01M (Magic Sentry), Name (Name)
+{
+[Special] Tyrande
+}
+
+STRING 3633
+// Upgrades: R01M (Magic Sentry), Tip (Tooltip)
+{
+Tyrande
+}
+
+STRING 3634
+// Upgrades: R01M (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 3635
+// Abilities: S004 ([Tyrande] Replace), EditorSuffix (Editor Suffix)
+{
+ (Tree of Life)
+}
+
+STRING 3636
+// Abilities: S004 ([Tyrande] Replace), Name (Name)
+{
+[Tyrande] Replace
+}
+
+STRING 3637
+// Units: e002 ([Tyrande] Entangled Gold Mine), Name (Name)
+{
+[Tyrande] Entangled Gold Mine
+}
+
+STRING 3638
+// Abilities: S005 ([Tyrande] Load Wisp), Name (Name)
+{
+[Tyrande] Load Wisp
+}
+
+STRING 3639
+// Abilities: A055 ([Tyrande] Entangle Gold Mine), Name (Name)
+{
+[Tyrande] Entangle Gold Mine
 }
 

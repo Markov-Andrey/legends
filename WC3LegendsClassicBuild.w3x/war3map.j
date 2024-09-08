@@ -247,6 +247,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_TyrandeIni= null
+trigger gg_trg_ChooseTyrande= null
 
     // Random Groups
 integer array gg_rg_000
@@ -2162,6 +2164,17 @@ function Trig_UnSelect_Func007C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_UnSelect_Func008Func002A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(true, 'A054', GetEnumPlayer())
+endfunction
+
+function Trig_UnSelect_Func008C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01L' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_UnSelect_Actions takes nothing returns nothing
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
@@ -2177,6 +2190,10 @@ function Trig_UnSelect_Actions takes nothing returns nothing
     endif
     if ( Trig_UnSelect_Func007C() ) then
         call ForForce(GetPlayersAll(), function Trig_UnSelect_Func007Func002A)
+    else
+    endif
+    if ( Trig_UnSelect_Func008C() ) then
+        call ForForce(GetPlayersAll(), function Trig_UnSelect_Func008Func002A)
     else
     endif
 endfunction
@@ -2201,13 +2218,15 @@ function Trig_PreviewLegend takes nothing returns nothing
     local force allPlayers= bj_FORCE_ALL_PLAYERS
     local player p
 
-    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' then
+    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' then
         if abilityId == 'A01C' then
             set unitType='h00T'
         elseif abilityId == 'A01J' then
             set unitType='h00U'
         elseif abilityId == 'A031' then
             set unitType='h012'
+        elseif abilityId == 'A054' then
+            set unitType='h01L'
         else
             return
         endif
@@ -2227,6 +2246,8 @@ function Trig_PreviewLegend takes nothing returns nothing
                     call SetPlayerAbilityAvailable(p, 'A01J', false)
                 elseif abilityId == 'A01C' then
                     call SetPlayerAbilityAvailable(p, 'A01C', false)
+                elseif abilityId == 'A054' then
+                    call SetPlayerAbilityAvailable(p, 'A054', false)
                 endif
             endif
             set p=Player(23)
@@ -2285,7 +2306,7 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func011A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
-    // Run-ALL-triggers-Arthas
+    // Run-ALL-triggers
     set udg_PlayerArthas=GetOwningPlayer(GetSpellAbilityUnit())
     call SetPlayerTechResearchedSwap('R00E', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_ArthasIni)
@@ -2346,7 +2367,7 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_LIGHT_BLUE, true)
-    // Run-ALL-triggers-Uther
+    // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_UtherIni)
     call TriggerExecute(gg_trg_StartCameraReset)
@@ -2400,7 +2421,7 @@ function Trig_ChooseWrynn_Actions takes nothing returns nothing
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_NAVY, true)
-    // Run-ALL-triggers-Uther
+    // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_WrynnIni)
     call TriggerExecute(gg_trg_StartCameraReset)
@@ -2412,6 +2433,70 @@ function InitTrig_ChooseWrynn takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseWrynn, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ChooseWrynn, Condition(function Trig_ChooseWrynn_Conditions))
     call TriggerAddAction(gg_trg_ChooseWrynn, function Trig_ChooseWrynn_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ChooseTyrande
+//===========================================================================
+function Trig_ChooseTyrande_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01L' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseTyrande_Conditions takes nothing returns boolean
+    if ( not Trig_ChooseTyrande_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseTyrande_Func006003001003 takes nothing returns boolean
+    return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
+endfunction
+
+function Trig_ChooseTyrande_Func016Func001003001003 takes nothing returns boolean
+    return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
+endfunction
+
+function Trig_ChooseTyrande_Func016A takes nothing returns nothing
+    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func016Func001003001003))))
+endfunction
+
+function Trig_ChooseTyrande_Actions takes nothing returns nothing
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'e000', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func006003001003))))
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=5
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call CreateNUnitsAtLoc(1, 'e001', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    // ----------------------
+    call RemoveUnit(GetSpellAbilityUnit())
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_TURQUOISE, true)
+    // Run-ALL-triggers
+    call SetPlayerTechResearchedSwap('R01M', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    call ConditionalTriggerExecute(gg_trg_TyrandeIni)
+    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerSleepAction(1.00)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func016A)
+endfunction
+
+//===========================================================================
+function InitTrig_ChooseTyrande takes nothing returns nothing
+    set gg_trg_ChooseTyrande=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseTyrande, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseTyrande, Condition(function Trig_ChooseTyrande_Conditions))
+    call TriggerAddAction(gg_trg_ChooseTyrande, function Trig_ChooseTyrande_Actions)
 endfunction
 
 //===========================================================================
@@ -4705,6 +4790,18 @@ function InitTrig_WrynnDepositTimer takes nothing returns nothing
     call DisableTrigger(gg_trg_WrynnDepositTimer)
     call TriggerRegisterTimerEventPeriodic(gg_trg_WrynnDepositTimer, 120.00)
     call TriggerAddAction(gg_trg_WrynnDepositTimer, function Trig_WrynnDepositTimer_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeIni
+//===========================================================================
+function Trig_TyrandeIni_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeIni takes nothing returns nothing
+    set gg_trg_TyrandeIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_TyrandeIni, function Trig_TyrandeIni_Actions)
 endfunction
 
 //===========================================================================
@@ -8726,6 +8823,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ChooseArthas()
     call InitTrig_ChooseUther()
     call InitTrig_ChooseWrynn()
+    call InitTrig_ChooseTyrande()
     call InitTrig_ArthasIni()
     call InitTrig_ArthasFrostmourne()
     call InitTrig_ArthasNewRuneSecond()
@@ -8768,6 +8866,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnRent()
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
+    call InitTrig_TyrandeIni()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()
