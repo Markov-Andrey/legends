@@ -7814,22 +7814,10 @@ STRING 3131
 [Wrynn] Flare
 }
 
-STRING 3132
-// Abilities: A03U ([Wrynn] Fragmentation Shards), Name (Name)
-{
-[Wrynn] Fragmentation Shards
-}
-
 STRING 3133
 // Upgrades: R01L (Flare), Name (Name)
 {
 [Wrynn] Flare
-}
-
-STRING 3134
-// Upgrades: R01M (Fragmentation Shards), Name (Name)
-{
-[Wrynn] Fragmentation Shards
 }
 
 STRING 3135
@@ -8649,13 +8637,13 @@ STRING 3351
 }
 
 STRING 3354
-// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Name (Name)
+// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Name (Name)
 {
 [Wrynn] Veteran: Revitalized Spirit
 }
 
 STRING 3357
-// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
+// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
 {
 Veteran: Revitalized Spirit
 }
@@ -8699,7 +8687,7 @@ Teleports a target unit to your highest level town hall, stunning the unit. The 
 }
 
 STRING 3365
-// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
 {
 Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
 }
@@ -8837,14 +8825,516 @@ STRING 3387
 }
 
 STRING 3388
-// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), EditorSuffix (Editor Suffix)
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), EditorSuffix (Editor Suffix)
 {
 (Priest Upg)
 }
 
 STRING 3389
-// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), EditorSuffix (Editor Suffix)
+// Abilities: A04P ([Wrynn] Veteran: Revitalized Spirit), EditorSuffix (Editor Suffix)
 {
 (Priest Upg)
+}
+
+STRING 3390
+// Abilities: A03O ([Wrynn] Slow), Name (Name)
+{
+[Wrynn] Slow
+}
+
+STRING 3392
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Name (Name)
+{
+[Wrynn] Veteran: Revitalized Spirit
+}
+
+STRING 3393
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), EditorSuffix (Editor Suffix)
+{
+(Priest)
+}
+
+STRING 3394
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Ubertip (Tooltip - Normal - Extended)
+{
+Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
+}
+
+STRING 3395
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Tip (Tooltip - Normal)
+{
+Veteran: Revitalized Spirit
+}
+
+STRING 3396
+// Abilities: A03R ([Wrynn] Slow), Ubertip (Tooltip - Normal - Extended)
+{
+Slows a target enemy unit's attack rate by <A03R,DataB1,%>% and movement speed by <A03R,DataA1,%>%. |nLasts <A03R,Dur1> seconds.
+}
+
+STRING 3398
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Name (Name)
+{
+[Wrynn] Veteran: Adept of Chronomancy
+}
+
+STRING 3399
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), EditorSuffix (Editor Suffix)
+{
+(Sorceress Upg)
+}
+
+STRING 3400
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Ubertip (Tooltip - Normal - Extended)
+{
+Slow costs mana reduced
+}
+
+STRING 3401
+// Abilities: A04Q ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
+{
+Veteran: Adept of Chronomancy
+}
+
+STRING 3402
+// Abilities: A03P ([Wrynn] Invisibility), EditorSuffix (Editor Suffix)
+{
+(Sorceress)
+}
+
+STRING 3403
+// Abilities: A03P ([Wrynn] Invisibility), Ubertip (Tooltip - Normal - Extended)
+{
+Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <A03P,Dur1> seconds.
+}
+
+STRING 3404
+// Abilities: A03Q ([Wrynn] Polymorph), EditorSuffix (Editor Suffix)
+{
+(Sorceress)
+}
+
+STRING 3405
+// Abilities: A03R ([Wrynn] Slow), EditorSuffix (Editor Suffix)
+{
+(Sorceress)
+}
+
+STRING 3406
+// Abilities: A03O ([Wrynn] Slow), EditorSuffix (Editor Suffix)
+{
+(Sorceress Veteran)
+}
+
+STRING 3407
+// Abilities: A03O ([Wrynn] Slow), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFC850Veteran: Adept of Chronomancy|r
+
+Slows a target enemy unit's attack rate by <A03O,DataB1,%>% and movement speed by <A03O,DataA1,%>%. |nLasts <A03O,Dur1> seconds.
+}
+
+STRING 3408
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Name (Name)
+{
+[Wrynn] Veteran: Adept of Chronomancy
+}
+
+STRING 3409
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), EditorSuffix (Editor Suffix)
+{
+(Sorceress)
+}
+
+STRING 3410
+// Abilities: A04N ([Wrynn] Veteran: Revitalized Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+Improves the Portal to Stormwind spell: no cooldown, lower mana requirement.
+}
+
+STRING 3411
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
+{
+Veteran: Adept of Chronomancy
+}
+
+STRING 3412
+// Abilities: A04S ([Wrynn] Invisibility), Name (Name)
+{
+[Wrynn] Invisibility
+}
+
+STRING 3413
+// Abilities: A04S ([Wrynn] Invisibility), EditorSuffix (Editor Suffix)
+{
+(Sorceress Veteran)
+}
+
+STRING 3414
+// Abilities: A04S ([Wrynn] Invisibility), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFC850Veteran: Tricks and Traps|r
+
+Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <A04S,Dur1> seconds.
+}
+
+STRING 3415
+// Abilities: A04T ([Wrynn] Polymorph), Name (Name)
+{
+[Wrynn] Polymorph
+}
+
+STRING 3416
+// Abilities: A04T ([Wrynn] Polymorph), EditorSuffix (Editor Suffix)
+{
+(Sorceress Veteran)
+}
+
+STRING 3417
+// Abilities: A04T ([Wrynn] Polymorph), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFC850Veteran: Tricks and Traps|r
+
+Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes. |nLasts <Aply,Dur1> seconds.
+}
+
+STRING 3418
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Name (Name)
+{
+[Wrynn] Veteran: Tricks and Traps
+}
+
+STRING 3419
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), EditorSuffix (Editor Suffix)
+{
+(Sorceress Upg)
+}
+
+STRING 3420
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Ubertip (Tooltip - Normal - Extended)
+{
+Polymorph and Invisibility uses less mana
+}
+
+STRING 3421
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Tip (Tooltip - Normal)
+{
+Veteran: Learn Tricks and Traps
+}
+
+STRING 3422
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Name (Name)
+{
+[Wrynn] Veteran: Tricks and Traps
+}
+
+STRING 3423
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Tip (Tooltip - Normal)
+{
+Veteran: Tricks and Traps
+}
+
+STRING 3424
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), Ubertip (Tooltip - Normal - Extended)
+{
+Polymorph and Invisibility uses less mana
+}
+
+STRING 3425
+// Abilities: A04V ([Wrynn] Veteran: Tricks and Traps), EditorSuffix (Editor Suffix)
+{
+(Sorceress)
+}
+
+STRING 3427
+// Buffs/Effects: B00T ([Wrynn] Fire Oil), Bufftip (Tooltip)
+{
+Fire Oil
+}
+
+STRING 3428
+// Buffs/Effects: B00T ([Wrynn] Fire Oil), EditorName (Name (Editor Only))
+{
+[Wrynn] Fire Oil
+}
+
+STRING 3429
+// Abilities: A03U ([Wrynn] Veteran: Tactical Strike), EditorSuffix (Editor Suffix)
+{
+(Mortar Team)
+}
+
+STRING 3437
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Name (Name)
+{
+[Wrynn] Veteran: Brave's Spyglass
+}
+
+STRING 3440
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Tip (Tooltip - Normal)
+{
+Veteran: Learn Brave's Spyglass
+}
+
+STRING 3442
+// Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Name (Name)
+{
+[Wrynn] Veteran: Brave's Spyglass
+}
+
+STRING 3445
+// Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Tip (Tooltip - Normal)
+{
+Veteran: Brave's Spyglass
+}
+
+STRING 3446
+// Buffs/Effects: B00T ([Wrynn] Fire Oil), Buffubertip (Tooltip - Extended)
+{
+Attack speed is reduced and deals damage over time.
+}
+
+STRING 3449
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), EditorSuffix (Editor Suffix)
+{
+(Mortar Team Upg)
+}
+
+STRING 3450
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), EditorSuffix (Editor Suffix)
+{
+(Mortar Team Upg)
+}
+
+STRING 3453
+// Units: h01F ([Wrynn] Cannoneer), Name (Name)
+{
+[Wrynn] Cannoneer
+}
+
+STRING 3454
+// Units: h01F ([Wrynn] Cannoneer), Tip (Tooltip - Basic)
+{
+Train Cannoneer
+}
+
+STRING 3455
+// Units: h01F ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 3456
+// Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), EditorSuffix (Editor Suffix)
+{
+ (Mortar Team)
+}
+
+STRING 3460
+// Units: h01F ([Wrynn] Cannoneer), EditorSuffix (Name - Editor Suffix)
+{
+(Spy)
+}
+
+STRING 3461
+// Units: h01K ([Wrynn] Cannoneer), Name (Name)
+{
+[Wrynn] Cannoneer
+}
+
+STRING 3462
+// Units: h01K ([Wrynn] Cannoneer), Tip (Tooltip - Basic)
+{
+Train Cannoneer
+}
+
+STRING 3463
+// Units: h01K ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 3466
+// Units: h01K ([Wrynn] Cannoneer), EditorSuffix (Name - Editor Suffix)
+{
+(Tactical)
+}
+
+STRING 3467
+// Abilities: A03U ([Wrynn] Veteran: Tactical Strike), Name (Name)
+{
+[Wrynn] Veteran: Tactical Strike
+}
+
+STRING 3468
+// Abilities: A03U ([Wrynn] Veteran: Tactical Strike), Tip (Tooltip - Normal)
+{
+Veteran: Tactical Strike
+}
+
+STRING 3469
+// Abilities: A03U ([Wrynn] Veteran: Tactical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Shots no longer deal area damage, shoot instantly and always hit the target
+}
+
+STRING 3470
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Name (Name)
+{
+[Wrynn] Veteran: Tactical Strike
+}
+
+STRING 3472
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Shots no longer deal area damage, shoot instantly and always hit the target
+}
+
+STRING 3473
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Tip (Tooltip - Normal)
+{
+Veteran: Learn Tactical Strike
+}
+
+STRING 3474
+// Abilities: S002 ([Wrynn] Replace), EditorSuffix (Editor Suffix)
+{
+ (Mortar Team Spy)
+}
+
+STRING 3475
+// Abilities: S002 ([Wrynn] Replace), Name (Name)
+{
+[Wrynn] Replace
+}
+
+STRING 3476
+// Abilities: S003 ([Wrynn] Replace), EditorSuffix (Editor Suffix)
+{
+ (Mortar Team Tactical)
+}
+
+STRING 3477
+// Abilities: S003 ([Wrynn] Replace), Name (Name)
+{
+[Wrynn] Replace
+}
+
+STRING 3478
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Ubertip (Tooltip - Normal - Extended)
+{
+Increased attack range +350.
+}
+
+STRING 3479
+// Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Ubertip (Tooltip - Normal - Extended)
+{
+Increased attack range +350.
+}
+
+STRING 3480
+// Abilities: A03Z ([Wrynn] Veteran: Battle Stance), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3481
+// Abilities: A041 ([Wrynn] Veteran: Aspect of the Cheetah), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3482
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3483
+// Abilities: A043 ([Wrynn] Veteran: Aspect of the Cheetah), Unhotkey (Hotkey - Turn Off)
+{
+V
+}
+
+STRING 3484
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 3485
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Unhotkey (Hotkey - Turn Off)
+{
+B
+}
+
+STRING 3486
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 3487
+// Abilities: A048 ([Wrynn] Veteran: Galloping Movement), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3488
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 3489
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 3490
+// Abilities: A04D ([Wrynn] Veteran: Gunship Cannon Fire), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3491
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 3492
+// Abilities: A04J ([Wrynn] Veteran: Explosive Mixture), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3493
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 3494
+// Abilities: A04O ([Wrynn] Veteran: Doctor of Sciences), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3495
+// Abilities: A04U ([Wrynn] Veteran: Tricks and Traps), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 3497
+// Abilities: A04W ([Wrynn] Veteran: Tactical Strike), Hotkey (Hotkey - Normal)
+{
+V
 }
 

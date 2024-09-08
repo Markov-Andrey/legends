@@ -820,8 +820,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h01E', - 13.5, - 166.4, 85.999, 'h01E')
-    set u=BlzCreateUnitWithSkin(p, 'h01B', 133.8, - 166.7, 267.838, 'h01B')
 endfunction
 
 //===========================================================================
@@ -1398,10 +1396,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2810.3, - 328.3, 349.892, 'nitw')
-    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2815.8, - 530.4, 189.586, 'nitw')
-    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2711.9, - 462.4, 121.963, 'nitw')
-    set u=BlzCreateUnitWithSkin(p, 'nitw', - 2957.8, - 398.8, 121.963, 'nitw')
 endfunction
 
 //===========================================================================
@@ -4044,7 +4038,7 @@ function Trig_WrynnTaunt_Actions takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
     call UnitAddAbilityBJ('A03K', GetLastCreatedUnit())
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "innerfire", GetSpellAbilityUnit())
-    call UnitApplyTimedLifeBJ(5.00, 'BTLF', GetLastCreatedUnit())
+    call UnitApplyTimedLifeBJ(1.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
@@ -4187,7 +4181,7 @@ function Trig_WrynnExp_Func009Func001Func002C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func003Func006C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func003Func007C takes nothing returns boolean
     if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 100.00 ) ) then
         return false
     endif
@@ -4204,7 +4198,7 @@ function Trig_WrynnExp_Func009Func001Func003C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func004Func007C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func004Func008C takes nothing returns boolean
     if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 100.00 ) ) then
         return false
     endif
@@ -4221,50 +4215,64 @@ function Trig_WrynnExp_Func009Func001Func004C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func009C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func010C takes nothing returns boolean
     if ( not ( GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) > 100.00 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func014C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func015C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func016C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func017C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h019' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func018C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func019C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01A' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func020C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func021C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01G' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func022C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func023C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01C' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func024C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func025C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01D' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func027C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01E' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnExp_Func009Func001Func005Func029C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01B' ) ) then
         return false
     endif
     return true
@@ -4361,8 +4369,10 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             call UnitAddAbilityBJ('A030', GetEnumUnit())
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 25 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
-            if ( Trig_WrynnExp_Func009Func001Func003Func006C() ) then
+            call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + 30.00 ))
+            if ( Trig_WrynnExp_Func009Func001Func003Func007C() ) then
                 call BlzSetUnitMaxMana(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+                call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 25.00 ))
             else
             endif
         else
@@ -4374,8 +4384,10 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             call UnitAddAbilityBJ('A02Q', GetEnumUnit())
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 50 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
-            if ( Trig_WrynnExp_Func009Func001Func004Func007C() ) then
+            call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + 30.00 ))
+            if ( Trig_WrynnExp_Func009Func001Func004Func008C() ) then
                 call BlzSetUnitMaxMana(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+                call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 25.00 ))
             else
             endif
         else
@@ -4388,47 +4400,61 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             call UnitAddAbilityBJ('A02Z', GetEnumUnit())
             call SetUnitAbilityLevelSwapped('A03C', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A03C', GetEnumUnit()) - 75 ))
             call BlzSetUnitMaxHP(GetEnumUnit(), ( BlzGetUnitMaxHP(GetEnumUnit()) + 30 ))
-            if ( Trig_WrynnExp_Func009Func001Func005Func009C() ) then
+            call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) + 30.00 ))
+            if ( Trig_WrynnExp_Func009Func001Func005Func010C() ) then
                 call BlzSetUnitMaxMana(GetEnumUnit(), ( BlzGetUnitMaxMana(GetEnumUnit()) + 25 ))
+                call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + 25.00 ))
             else
             endif
             // ------------------------------------
             // ADD UPGRADE
             // ------------------------------------
             // Footman
-            if ( Trig_WrynnExp_Func009Func001Func005Func014C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func015C() ) then
                 call UnitAddAbilityBJ('A03Z', GetEnumUnit())
                 call UnitAddAbilityBJ('A045', GetEnumUnit())
             else
             endif
             // Rifleman
-            if ( Trig_WrynnExp_Func009Func001Func005Func016C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func017C() ) then
                 call UnitAddAbilityBJ('A044', GetEnumUnit())
                 call UnitAddAbilityBJ('A041', GetEnumUnit())
             else
             endif
             // Cavalry
-            if ( Trig_WrynnExp_Func009Func001Func005Func018C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func019C() ) then
                 call UnitAddAbilityBJ('A048', GetEnumUnit())
                 call UnitAddAbilityBJ('A049', GetEnumUnit())
             else
             endif
             // Skyfire Gunship
-            if ( Trig_WrynnExp_Func009Func001Func005Func020C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func021C() ) then
                 call UnitAddAbilityBJ('A04C', GetEnumUnit())
                 call UnitAddAbilityBJ('A04D', GetEnumUnit())
             else
             endif
             // Fly Machine
-            if ( Trig_WrynnExp_Func009Func001Func005Func022C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func023C() ) then
                 call UnitAddAbilityBJ('A04H', GetEnumUnit())
                 call UnitAddAbilityBJ('A04J', GetEnumUnit())
             else
             endif
             // Priest
-            if ( Trig_WrynnExp_Func009Func001Func005Func024C() ) then
-                call UnitAddAbilityBJ('A04N', GetEnumUnit())
+            if ( Trig_WrynnExp_Func009Func001Func005Func025C() ) then
+                call UnitAddAbilityBJ('A04P', GetEnumUnit())
                 call UnitAddAbilityBJ('A04O', GetEnumUnit())
+            else
+            endif
+            // Sorceress
+            if ( Trig_WrynnExp_Func009Func001Func005Func027C() ) then
+                call UnitAddAbilityBJ('A04Q', GetEnumUnit())
+                call UnitAddAbilityBJ('A04U', GetEnumUnit())
+            else
+            endif
+            // Mortar Team
+            if ( Trig_WrynnExp_Func009Func001Func005Func029C() ) then
+                call UnitAddAbilityBJ('A04Y', GetEnumUnit())
+                call UnitAddAbilityBJ('A04W', GetEnumUnit())
             else
             endif
         else
@@ -4498,7 +4524,7 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
     // skyfire gunship
     set setAbil[6]='A04C'
     set setAbil[7]='A04D'
-    set setTrained1[6]='Achd'
+    set setTrained1[6]='A04F'
     set setTrained1[7]='A03F'
     
     // fly machine
@@ -4509,27 +4535,44 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
     
     // priest
     set setAbil[10]='A04O'
-    set setAbil[11]='A04N'
+    set setAbil[11]='A04P'
     set setTrained1[10]='A04M'
-    set setTrained1[11]='A04L'
+    set setTrained1[11]='A04N'
+    
+    // sorceress
+    set setAbil[12]='A04Q'
+    set setAbil[13]='A04U'
+    set setTrained1[12]='A04R'
+    set setTrained1[13]='A04V'
+    
+    // mortar team
+    set setAbil[14]='A04Y'
+    set setAbil[15]='A04W'
+    set setTrained1[14]='S002'
+    set setTrained1[15]='S003'
     
     loop
-        exitwhen i > 11
+        exitwhen i > 15
         if getSpell == setAbil[i] then
             // exceptions
             if ( i == 6 ) then
-                call UnitRemoveAbility(unitSpell, setTrained1[i])
-                call UnitAddAbility(unitSpell, 'A04F')
+                call UnitRemoveAbility(unitSpell, 'Achd')
             elseif ( i == 7 ) then
-                call UnitAddAbility(unitSpell, setTrained1[i])
                 call UnitAddAbility(unitSpell, 'A04E')
             elseif ( i == 11 ) then
                 call UnitRemoveAbility(unitSpell, 'A04K')
-                call UnitAddAbility(unitSpell, setTrained1[i])
-            else
-                call UnitAddAbility(unitSpell, setTrained1[i])
+                call UnitAddAbility(unitSpell, 'A04L')
+            elseif ( i == 12 ) then
+                call UnitRemoveAbility(unitSpell, 'A03R')
+                call UnitAddAbility(unitSpell, 'A03O')
+            elseif ( i == 13 ) then
+                call UnitRemoveAbility(unitSpell, 'A03Q')
+                call UnitRemoveAbility(unitSpell, 'A03P')
+                call UnitAddAbility(unitSpell, 'A04T')
+                call UnitAddAbility(unitSpell, 'A04S')
             endif
             
+            call UnitAddAbility(unitSpell, setTrained1[i])
             call UnitRemoveAbility(unitSpell, setAbil[i])
             call UnitRemoveAbility(unitSpell, setAbil[i + 1])
             call UnitRemoveAbility(unitSpell, setAbil[i - 1])
