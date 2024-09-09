@@ -395,13 +395,6 @@ STRING 684
 Choose another Legend
 }
 
-STRING 690
-// Abilities: A01H ([UI] Mechanics: Arthas), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Soul Harvest|R - Destroying enemy units leaves souls that Arthas can harvest. It is an additional resource.
-|cFF00C850- Soul Reforging|R - allows you to upgrade Arthas's unit with souls, giving him 1 of 3 specializations: Blood, Frost, Unholy
-}
-
 STRING 693
 // Abilities: A01I ([UI] Features: Arthas), Tip (Tooltip - Normal)
 {
@@ -9214,14 +9207,6 @@ STRING 3575
 [UI] Mechanics: Wrynn
 }
 
-STRING 3577
-// Abilities: A00M ([UI] Mechanics: Wrynn), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Experience & Rank|R - Units gain experience in battle, increasing their rank and enhancing their core stats, becoming stronger and more resilient.
-
-|cFF00C850- Veteran Specialization|R - Upon reaching rank 3, units can learn a valuable ability that makes them even more effective in combat.
-}
-
 STRING 3578
 // Abilities: A00N ([UI] Features: Wrynn), Name (Name)
 {
@@ -9392,37 +9377,6 @@ STRING 3606
 |cffffcc00#food #income
 |R
 Provides food, which increases the maximum number of units that can be trained. Generates extra gold when a bank is nearby.
-}
-
-STRING 3607
-// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to master
-- Adaptive army|R
-|cFFFF5A4B- No mages
-- Addiction to murder
-- Low team interaction|R
-}
-
-STRING 3608
-// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to master
-- High armor
-- High healing potential|R
-|cFFFF5A4B- Low movement speed
-- Low army attack speed|R
-}
-
-STRING 3609
-// Abilities: A00N ([UI] Features: Wrynn), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to master
-- Balanced army
-- Strong gold economy|R
-|cFFFF5A4B- High price of food
-- High cost of losing units
-- Few healing abilities|R
 }
 
 STRING 3610
@@ -9604,5 +9558,57 @@ STRING 3639
 // Abilities: A055 ([Tyrande] Entangle Gold Mine), Name (Name)
 {
 [Tyrande] Entangle Gold Mine
+}
+
+STRING 3640
+// Abilities: A01H ([UI] Mechanics: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Soul Harvest|R - Destroying enemy units leaves souls that Arthas can harvest. It is an additional resource.
+|cFF00C850- Runes|R - There are three types of runes: Blood, Frost, and Unholy, each with 3 levels. You can allocate only 3 points in any combination.
+|cFF00C850- Soul Reforging|R - Allows you to upgrade party with souls, granting him a specialization in one of the runes.
+}
+
+STRING 3641
+// Abilities: A01I ([UI] Features: Arthas), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to learn
+- Adaptive army|R
+|cFFFF5A4B- No mages
+- Addiction to murder
+- Low team interaction|R
+}
+
+STRING 3642
+// Abilities: A01N ([UI] Features: Uther), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to learn
+- High armor
+- High healing potential|R
+|cFFFF5A4B- Low movement speed
+- Low army attack speed|R
+}
+
+STRING 3643
+// Abilities: A00M ([UI] Mechanics: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Experience & Rank|R - Units gain experience in battle, increasing their rank and enhancing their core stats, becoming stronger and more resilient.
+|cFF00C850- Veteran Specialization|R - Upon reaching rank 3, units can learn a valuable ability that makes them even more effective in combat.
+}
+
+STRING 3644
+// Abilities: A00N ([UI] Features: Wrynn), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to learn
+- Balanced army
+- Strong gold economy|R
+|cFFFF5A4B- High price of food
+- High cost of losing units
+- Few healing abilities|R
+}
+
+STRING 3645
+// Abilities: A056 (TEST WRYNN VISUAL), Name (Name)
+{
+TEST WRYNN VISUAL
 }
 
