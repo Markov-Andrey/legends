@@ -249,6 +249,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_TyrandeTest= null
 
     // Random Groups
 integer array gg_rg_000
@@ -820,7 +821,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'earc', 182.3, - 695.7, 75.478, 'earc')
+    set u=BlzCreateUnitWithSkin(p, 'e004', 81.9, - 693.7, 83.126, 'e004')
 endfunction
 
 //===========================================================================
@@ -4204,56 +4205,56 @@ function Trig_WrynnExp_Func009Func001Func005Func010C takes nothing returns boole
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func015C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func016C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h018' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func017C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func018C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h019' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func019C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func020C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01A' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func021C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func022C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01G' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func023C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func024C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01C' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func025C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func026C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01D' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func027C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func028C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01E' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WrynnExp_Func009Func001Func005Func029C takes nothing returns boolean
+function Trig_WrynnExp_Func009Func001Func005Func030C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetEnumUnit()) == 'h01B' ) ) then
         return false
     endif
@@ -4391,50 +4392,51 @@ function Trig_WrynnExp_Func009A takes nothing returns nothing
             // ------------------------------------
             // ADD UPGRADE
             // ------------------------------------
+            call UnitAddAbilityBJ('A056', GetEnumUnit())
             // Footman
-            if ( Trig_WrynnExp_Func009Func001Func005Func015C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func016C() ) then
                 call UnitAddAbilityBJ('A03Z', GetEnumUnit())
                 call UnitAddAbilityBJ('A045', GetEnumUnit())
             else
             endif
             // Rifleman
-            if ( Trig_WrynnExp_Func009Func001Func005Func017C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func018C() ) then
                 call UnitAddAbilityBJ('A044', GetEnumUnit())
                 call UnitAddAbilityBJ('A041', GetEnumUnit())
             else
             endif
             // Cavalry
-            if ( Trig_WrynnExp_Func009Func001Func005Func019C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func020C() ) then
                 call UnitAddAbilityBJ('A048', GetEnumUnit())
                 call UnitAddAbilityBJ('A049', GetEnumUnit())
             else
             endif
             // Skyfire Gunship
-            if ( Trig_WrynnExp_Func009Func001Func005Func021C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func022C() ) then
                 call UnitAddAbilityBJ('A04C', GetEnumUnit())
                 call UnitAddAbilityBJ('A04D', GetEnumUnit())
             else
             endif
             // Fly Machine
-            if ( Trig_WrynnExp_Func009Func001Func005Func023C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func024C() ) then
                 call UnitAddAbilityBJ('A04H', GetEnumUnit())
                 call UnitAddAbilityBJ('A04J', GetEnumUnit())
             else
             endif
             // Priest
-            if ( Trig_WrynnExp_Func009Func001Func005Func025C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func026C() ) then
                 call UnitAddAbilityBJ('A04P', GetEnumUnit())
                 call UnitAddAbilityBJ('A04O', GetEnumUnit())
             else
             endif
             // Sorceress
-            if ( Trig_WrynnExp_Func009Func001Func005Func027C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func028C() ) then
                 call UnitAddAbilityBJ('A04Q', GetEnumUnit())
                 call UnitAddAbilityBJ('A04U', GetEnumUnit())
             else
             endif
             // Mortar Team
-            if ( Trig_WrynnExp_Func009Func001Func005Func029C() ) then
+            if ( Trig_WrynnExp_Func009Func001Func005Func030C() ) then
                 call UnitAddAbilityBJ('A04Y', GetEnumUnit())
                 call UnitAddAbilityBJ('A04W', GetEnumUnit())
             else
@@ -4507,7 +4509,7 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
     set setAbil[6]='A04C'
     set setAbil[7]='A04D'
     set setTrained1[6]='A04F'
-    set setTrained1[7]='A03F'
+    set setTrained1[7]='A04E'
     
     // fly machine
     set setAbil[8]='A04J'
@@ -4540,7 +4542,7 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
             if ( i == 6 ) then
                 call UnitRemoveAbility(unitSpell, 'Achd')
             elseif ( i == 7 ) then
-                call UnitAddAbility(unitSpell, 'A04E')
+                call UnitAddAbility(unitSpell, 'A03X')
             elseif ( i == 11 ) then
                 call UnitRemoveAbility(unitSpell, 'A04K')
                 call UnitAddAbility(unitSpell, 'A04L')
@@ -4555,6 +4557,7 @@ function Trig_WrynnUpgradeVeterans_Actions takes nothing returns nothing
             endif
             
             call UnitAddAbility(unitSpell, setTrained1[i])
+            call UnitRemoveAbility(unitSpell, 'A056')
             call UnitRemoveAbility(unitSpell, setAbil[i])
             call UnitRemoveAbility(unitSpell, setAbil[i + 1])
             call UnitRemoveAbility(unitSpell, setAbil[i - 1])
@@ -4803,6 +4806,18 @@ endfunction
 function InitTrig_TyrandeIni takes nothing returns nothing
     set gg_trg_TyrandeIni=CreateTrigger()
     call TriggerAddAction(gg_trg_TyrandeIni, function Trig_TyrandeIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeTest
+//===========================================================================
+function Trig_TyrandeTest_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeTest takes nothing returns nothing
+    set gg_trg_TyrandeTest=CreateTrigger()
+    call TriggerAddAction(gg_trg_TyrandeTest, function Trig_TyrandeTest_Actions)
 endfunction
 
 //===========================================================================
@@ -8868,6 +8883,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
     call InitTrig_TyrandeIni()
+    call InitTrig_TyrandeTest()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

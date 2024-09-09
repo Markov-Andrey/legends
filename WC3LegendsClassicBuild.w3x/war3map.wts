@@ -9606,9 +9606,27 @@ STRING 3644
 - Few healing abilities|R
 }
 
-STRING 3645
-// Abilities: A056 (TEST WRYNN VISUAL), Name (Name)
+STRING 3646
+// Units: e004 ([Tyrande] Archer), Name (Name)
 {
-TEST WRYNN VISUAL
+[Tyrande] Archer
+}
+
+STRING 3647
+// Abilities: A056 ([Wrynn] Veteran: New Ability), Name (Name)
+{
+[Wrynn] Veteran: New Ability
+}
+
+STRING 3648
+// Abilities: A056 ([Wrynn] Veteran: New Ability), Tip (Tooltip - Normal)
+{
+Veteran: New Ability
+}
+
+STRING 3649
+// Abilities: A056 ([Wrynn] Veteran: New Ability), EditorSuffix (Editor Suffix)
+{
+(icon)
 }
 
