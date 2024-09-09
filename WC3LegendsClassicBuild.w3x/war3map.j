@@ -249,7 +249,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
-trigger gg_trg_TyrandeTest= null
 
     // Random Groups
 integer array gg_rg_000
@@ -821,7 +820,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'e004', 81.9, - 693.7, 83.126, 'e004')
 endfunction
 
 //===========================================================================
@@ -4806,18 +4804,6 @@ endfunction
 function InitTrig_TyrandeIni takes nothing returns nothing
     set gg_trg_TyrandeIni=CreateTrigger()
     call TriggerAddAction(gg_trg_TyrandeIni, function Trig_TyrandeIni_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TyrandeTest
-//===========================================================================
-function Trig_TyrandeTest_Actions takes nothing returns nothing
-endfunction
-
-//===========================================================================
-function InitTrig_TyrandeTest takes nothing returns nothing
-    set gg_trg_TyrandeTest=CreateTrigger()
-    call TriggerAddAction(gg_trg_TyrandeTest, function Trig_TyrandeTest_Actions)
 endfunction
 
 //===========================================================================
@@ -8883,7 +8869,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
     call InitTrig_TyrandeIni()
-    call InitTrig_TyrandeTest()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()
