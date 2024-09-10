@@ -67,7 +67,6 @@ string udg_Map
 
     // Generated
 camerasetup gg_cam_StartView= null
-trigger gg_trg_CurrentBuild= null
 trigger gg_trg_ConsoleLog= null
 trigger gg_trg_ExampleConsole= null
 trigger gg_trg_TimerMinus= null
@@ -264,7 +263,7 @@ function InitGlobals takes nothing returns nothing
     set udg_MaxCountDefeat=0
     set udg_ConsoleMessage=""
     set udg_ConsoleTrigger=""
-    set udg_isTestVersion=false
+    set udg_isTestVersion=true
     set i=0
     loop
         exitwhen ( i > 3 )
@@ -374,7 +373,7 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
-    set udg_Map=""
+    set udg_Map="Alterac"
 endfunction
 
 //***************************************************************************
@@ -1421,18 +1420,6 @@ endfunction
 //*
 //***************************************************************************
 
-//===========================================================================
-// Trigger: CurrentBuild
-//
-// Checking the current game build. 
-// When the isTest variable is set to True, all system messages are displayed!
-// The isTest value is set manually.
-//===========================================================================
-function InitTrig_CurrentBuild takes nothing returns nothing
-    set gg_trg_CurrentBuild=CreateTrigger()
-    set udg_isTestVersion=false
-    set udg_Map="Alterac"
-endfunction
 //===========================================================================
 // Trigger: ConsoleLog
 //
@@ -5695,6 +5682,9 @@ endfunction
 // Trigger: AlteracInitialization
 //===========================================================================
 function Trig_AlteracInitialization_Actions takes nothing returns nothing
+    // Ini
+    call EnableTrigger(gg_trg_AlliesEnemyAndNeutral)
+    // NPC
     call EnableTrigger(gg_trg_NPCInitialization)
     call EnableTrigger(gg_trg_NPCGreetings)
     call EnableTrigger(gg_trg_NPCMissCaravan)
@@ -5704,6 +5694,61 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_NPCCompleteWave)
     call EnableTrigger(gg_trg_NPCWin)
     call EnableTrigger(gg_trg_NPCDefeat)
+    // Way
+    call EnableTrigger(gg_trg_SetWayPoint)
+    call EnableTrigger(gg_trg_WayPingIni)
+    call EnableTrigger(gg_trg_Way1Ping)
+    call EnableTrigger(gg_trg_Way2Ping)
+    // Quest Start
+    call EnableTrigger(gg_trg_MainQuest)
+    // Quest Win
+    call EnableTrigger(gg_trg_WaveComplete)
+    // LastWaveComplete start in WaveComplete
+    // Quest Defeat
+    call EnableTrigger(gg_trg_DefeatCondition)
+    // UnitGroup Initialization
+    call EnableTrigger(gg_trg_SetGroupArray)
+    // Wave Army Set
+    // Way
+    call EnableTrigger(gg_trg_UnitsInitializationWay1)
+    call EnableTrigger(gg_trg_UnitsInitializationWay2)
+    call EnableTrigger(gg_trg_UnitsInitializationWay3)
+    call EnableTrigger(gg_trg_DebugUnitsIniWay3)
+    call EnableTrigger(gg_trg_DebugUnitsIniWay3)
+    call EnableTrigger(gg_trg_GroupArrayReset)
+    // CreateSquad
+    call EnableTrigger(gg_trg_CreateSquadWave1n1)
+    call EnableTrigger(gg_trg_CreateSquadWave1n2)
+    call EnableTrigger(gg_trg_CreateSquadWave2n1)
+    call EnableTrigger(gg_trg_CreateSquadWave2n2)
+    call EnableTrigger(gg_trg_CreateSquadWave3n1)
+    call EnableTrigger(gg_trg_CreateSquadWave3n2)
+    call EnableTrigger(gg_trg_CreateSquadWave4n1)
+    call EnableTrigger(gg_trg_CreateSquadWave4n2)
+    call EnableTrigger(gg_trg_CreateSquadWave5n1)
+    call EnableTrigger(gg_trg_CreateSquadWave5n2)
+    call EnableTrigger(gg_trg_CreateHero)
+    call EnableTrigger(gg_trg_CreateSquadEnemy1)
+    call EnableTrigger(gg_trg_CreateSquadEnemy2)
+    call EnableTrigger(gg_trg_CreateSquadEnemy3)
+    call EnableTrigger(gg_trg_CreateSquadEnemy4)
+    call EnableTrigger(gg_trg_DeadEnemyHero)
+    // MainQuest Wave
+    call EnableTrigger(gg_trg_Wave1)
+    call EnableTrigger(gg_trg_Wave2)
+    call EnableTrigger(gg_trg_Wave3)
+    call EnableTrigger(gg_trg_Wave4)
+    call EnableTrigger(gg_trg_Wave5)
+    call EnableTrigger(gg_trg_WaveTimer)
+    // Enemy Wave
+    call EnableTrigger(gg_trg_EnemyTimer)
+    call EnableTrigger(gg_trg_EnemyRandomSpawn)
+    call EnableTrigger(gg_trg_EnemyWave1)
+    call EnableTrigger(gg_trg_EnemyWave2)
+    call EnableTrigger(gg_trg_EnemyWave3)
+    call EnableTrigger(gg_trg_EnemyWave4)
+    call EnableTrigger(gg_trg_EnemyHero)
+    call EnableTrigger(gg_trg_EnemyHeroAddItem)
 endfunction
 
 //===========================================================================
@@ -5730,6 +5775,7 @@ endfunction
 //===========================================================================
 function InitTrig_AlliesEnemyAndNeutral takes nothing returns nothing
     set gg_trg_AlliesEnemyAndNeutral=CreateTrigger()
+    call DisableTrigger(gg_trg_AlliesEnemyAndNeutral)
     call TriggerAddAction(gg_trg_AlliesEnemyAndNeutral, function Trig_AlliesEnemyAndNeutral_Actions)
 endfunction
 
@@ -6115,6 +6161,7 @@ endfunction
 //===========================================================================
 function InitTrig_SetWayPoint takes nothing returns nothing
     set gg_trg_SetWayPoint=CreateTrigger()
+    call DisableTrigger(gg_trg_SetWayPoint)
     call TriggerRegisterTimerEvent(gg_trg_SetWayPoint, 0.01, false)
     call TriggerAddAction(gg_trg_SetWayPoint, function Trig_SetWayPoint_Actions)
 endfunction
@@ -6131,6 +6178,7 @@ endfunction
 //===========================================================================
 function InitTrig_WayPingIni takes nothing returns nothing
     set gg_trg_WayPingIni=CreateTrigger()
+    call DisableTrigger(gg_trg_WayPingIni)
     call TriggerRegisterTimerEventSingle(gg_trg_WayPingIni, 0.01)
     call TriggerAddAction(gg_trg_WayPingIni, function Trig_WayPingIni_Actions)
 endfunction
@@ -6166,6 +6214,7 @@ endfunction
 //===========================================================================
 function InitTrig_Way1Ping takes nothing returns nothing
     set gg_trg_Way1Ping=CreateTrigger()
+    call DisableTrigger(gg_trg_Way1Ping)
     call TriggerAddAction(gg_trg_Way1Ping, function Trig_Way1Ping_Actions)
 endfunction
 
@@ -6198,6 +6247,7 @@ endfunction
 //===========================================================================
 function InitTrig_Way2Ping takes nothing returns nothing
     set gg_trg_Way2Ping=CreateTrigger()
+    call DisableTrigger(gg_trg_Way2Ping)
     call TriggerAddAction(gg_trg_Way2Ping, function Trig_Way2Ping_Actions)
 endfunction
 
@@ -6349,6 +6399,7 @@ endfunction
 //===========================================================================
 function InitTrig_MainQuest takes nothing returns nothing
     set gg_trg_MainQuest=CreateTrigger()
+    call DisableTrigger(gg_trg_MainQuest)
     call TriggerRegisterTimerEventSingle(gg_trg_MainQuest, 45.00)
     call TriggerAddAction(gg_trg_MainQuest, function Trig_MainQuest_Actions)
 endfunction
@@ -6382,6 +6433,7 @@ endfunction
 //===========================================================================
 function InitTrig_WaveComplete takes nothing returns nothing
     set gg_trg_WaveComplete=CreateTrigger()
+    call DisableTrigger(gg_trg_WaveComplete)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WaveComplete, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_WaveComplete, Condition(function Trig_WaveComplete_Conditions))
     call TriggerAddAction(gg_trg_WaveComplete, function Trig_WaveComplete_Actions)
@@ -6463,6 +6515,7 @@ endfunction
 //===========================================================================
 function InitTrig_DefeatCondition takes nothing returns nothing
     set gg_trg_DefeatCondition=CreateTrigger()
+    call DisableTrigger(gg_trg_DefeatCondition)
     call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, udg_Way1[9])
     call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, udg_Way2[8])
     if ( GetOwningPlayer(GetEnteringUnit()) == Player(4) ) then
@@ -6491,8 +6544,10 @@ endfunction
 //===========================================================================
 function InitTrig_SetGroupArray takes nothing returns nothing
     set gg_trg_SetGroupArray=CreateTrigger()
+    call DisableTrigger(gg_trg_SetGroupArray)
     call TriggerAddAction(gg_trg_SetGroupArray, function Trig_SetGroupArray_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: UnitsInitializationWay1
@@ -6538,6 +6593,7 @@ endfunction
 
 function InitTrig_UnitsInitializationWay1 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay1=CreateTrigger()
+    call DisableTrigger(gg_trg_UnitsInitializationWay1)
     call TriggerAddAction(gg_trg_UnitsInitializationWay1, function Trig_UnitsInitializationWay1_Actions)
 endfunction
 
@@ -6576,6 +6632,7 @@ endfunction
 //===========================================================================
 function InitTrig_UnitsInitializationWay2 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay2=CreateTrigger()
+    call DisableTrigger(gg_trg_UnitsInitializationWay2)
     call TriggerAddAction(gg_trg_UnitsInitializationWay2, function Trig_UnitsInitializationWay2_Actions)
 endfunction
 
@@ -6636,6 +6693,7 @@ endfunction
 
 function InitTrig_UnitsInitializationWay3 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay3=CreateTrigger()
+    call DisableTrigger(gg_trg_UnitsInitializationWay3)
     call TriggerAddAction(gg_trg_UnitsInitializationWay3, function Trig_UnitsInitializationWay3_Actions)
 endfunction
 //===========================================================================
@@ -6664,6 +6722,7 @@ endfunction
 //===========================================================================
 function InitTrig_DebugUnitsIniWay3 takes nothing returns nothing
     set gg_trg_DebugUnitsIniWay3=CreateTrigger()
+    call DisableTrigger(gg_trg_DebugUnitsIniWay3)
     call TriggerRegisterTimerEventPeriodic(gg_trg_DebugUnitsIniWay3, 2.00)
     call TriggerAddAction(gg_trg_DebugUnitsIniWay3, function Trig_DebugUnitsIniWay3_Actions)
 endfunction
@@ -6691,6 +6750,7 @@ endfunction
 //===========================================================================
 function InitTrig_GroupArrayReset takes nothing returns nothing
     set gg_trg_GroupArrayReset=CreateTrigger()
+    call DisableTrigger(gg_trg_GroupArrayReset)
     call TriggerAddAction(gg_trg_GroupArrayReset, function Trig_GroupArrayReset_Actions)
 endfunction
 
@@ -6717,6 +6777,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave1n1 takes nothing returns nothing
     set gg_trg_CreateSquadWave1n1=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave1n1)
     call TriggerAddAction(gg_trg_CreateSquadWave1n1, function Trig_CreateSquadWave1n1_Actions)
 endfunction
 
@@ -6743,6 +6804,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave1n2 takes nothing returns nothing
     set gg_trg_CreateSquadWave1n2=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave1n2)
     call TriggerAddAction(gg_trg_CreateSquadWave1n2, function Trig_CreateSquadWave1n2_Actions)
 endfunction
 
@@ -6783,6 +6845,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave2n1 takes nothing returns nothing
     set gg_trg_CreateSquadWave2n1=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave2n1)
     call TriggerAddAction(gg_trg_CreateSquadWave2n1, function Trig_CreateSquadWave2n1_Actions)
 endfunction
 
@@ -6814,6 +6877,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave2n2 takes nothing returns nothing
     set gg_trg_CreateSquadWave2n2=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave2n2)
     call TriggerAddAction(gg_trg_CreateSquadWave2n2, function Trig_CreateSquadWave2n2_Actions)
 endfunction
 
@@ -6853,6 +6917,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave3n1 takes nothing returns nothing
     set gg_trg_CreateSquadWave3n1=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave3n1)
     call TriggerAddAction(gg_trg_CreateSquadWave3n1, function Trig_CreateSquadWave3n1_Actions)
 endfunction
 
@@ -6881,6 +6946,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave3n2 takes nothing returns nothing
     set gg_trg_CreateSquadWave3n2=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave3n2)
     call TriggerAddAction(gg_trg_CreateSquadWave3n2, function Trig_CreateSquadWave3n2_Actions)
 endfunction
 
@@ -6937,6 +7003,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave4n1 takes nothing returns nothing
     set gg_trg_CreateSquadWave4n1=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave4n1)
     call TriggerAddAction(gg_trg_CreateSquadWave4n1, function Trig_CreateSquadWave4n1_Actions)
 endfunction
 
@@ -6963,6 +7030,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave4n2 takes nothing returns nothing
     set gg_trg_CreateSquadWave4n2=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave4n2)
     call TriggerAddAction(gg_trg_CreateSquadWave4n2, function Trig_CreateSquadWave4n2_Actions)
 endfunction
 
@@ -7002,6 +7070,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave5n1 takes nothing returns nothing
     set gg_trg_CreateSquadWave5n1=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave5n1)
     call TriggerAddAction(gg_trg_CreateSquadWave5n1, function Trig_CreateSquadWave5n1_Actions)
 endfunction
 
@@ -7030,6 +7099,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadWave5n2 takes nothing returns nothing
     set gg_trg_CreateSquadWave5n2=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadWave5n2)
     call TriggerAddAction(gg_trg_CreateSquadWave5n2, function Trig_CreateSquadWave5n2_Actions)
 endfunction
 
@@ -7062,6 +7132,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateHero takes nothing returns nothing
     set gg_trg_CreateHero=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateHero)
     call TriggerAddAction(gg_trg_CreateHero, function Trig_CreateHero_Actions)
 endfunction
 
@@ -7094,6 +7165,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadEnemy1 takes nothing returns nothing
     set gg_trg_CreateSquadEnemy1=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadEnemy1)
     call TriggerAddAction(gg_trg_CreateSquadEnemy1, function Trig_CreateSquadEnemy1_Actions)
 endfunction
 
@@ -7161,6 +7233,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadEnemy2 takes nothing returns nothing
     set gg_trg_CreateSquadEnemy2=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadEnemy2)
     call TriggerAddAction(gg_trg_CreateSquadEnemy2, function Trig_CreateSquadEnemy2_Actions)
 endfunction
 
@@ -7240,6 +7313,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadEnemy3 takes nothing returns nothing
     set gg_trg_CreateSquadEnemy3=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadEnemy3)
     call TriggerAddAction(gg_trg_CreateSquadEnemy3, function Trig_CreateSquadEnemy3_Actions)
 endfunction
 
@@ -7334,6 +7408,7 @@ endfunction
 //===========================================================================
 function InitTrig_CreateSquadEnemy4 takes nothing returns nothing
     set gg_trg_CreateSquadEnemy4=CreateTrigger()
+    call DisableTrigger(gg_trg_CreateSquadEnemy4)
     call TriggerAddAction(gg_trg_CreateSquadEnemy4, function Trig_CreateSquadEnemy4_Actions)
 endfunction
 
@@ -7358,6 +7433,7 @@ endfunction
 
 function InitTrig_DeadEnemyHero takes nothing returns nothing
     set gg_trg_DeadEnemyHero=CreateTrigger()
+    call DisableTrigger(gg_trg_DeadEnemyHero)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_DeadEnemyHero, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_DeadEnemyHero, Condition(function Trig_DeadEnemyHero_Conditions))
 endfunction
@@ -7390,6 +7466,7 @@ endfunction
 //===========================================================================
 function InitTrig_WaveTimer takes nothing returns nothing
     set gg_trg_WaveTimer=CreateTrigger()
+    call DisableTrigger(gg_trg_WaveTimer)
     call TriggerRegisterTimerEventSingle(gg_trg_WaveTimer, 0.01)
     call TriggerAddAction(gg_trg_WaveTimer, function Trig_WaveTimer_Actions)
 endfunction
@@ -7442,6 +7519,7 @@ endfunction
 //===========================================================================
 function InitTrig_Wave1 takes nothing returns nothing
     set gg_trg_Wave1=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave1)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave1, udg_TimerWave[1])
     call TriggerAddAction(gg_trg_Wave1, function Trig_Wave1_Actions)
 endfunction
@@ -7506,6 +7584,7 @@ endfunction
 //===========================================================================
 function InitTrig_Wave2 takes nothing returns nothing
     set gg_trg_Wave2=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave2)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave2, udg_TimerWave[2])
     call TriggerAddAction(gg_trg_Wave2, function Trig_Wave2_Actions)
 endfunction
@@ -7584,6 +7663,7 @@ endfunction
 //===========================================================================
 function InitTrig_Wave3 takes nothing returns nothing
     set gg_trg_Wave3=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave3)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave3, udg_TimerWave[3])
     call TriggerAddAction(gg_trg_Wave3, function Trig_Wave3_Actions)
 endfunction
@@ -7663,6 +7743,7 @@ endfunction
 //===========================================================================
 function InitTrig_Wave4 takes nothing returns nothing
     set gg_trg_Wave4=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave4)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave4, udg_TimerWave[4])
     call TriggerAddAction(gg_trg_Wave4, function Trig_Wave4_Actions)
 endfunction
@@ -7741,6 +7822,7 @@ endfunction
 //===========================================================================
 function InitTrig_Wave5 takes nothing returns nothing
     set gg_trg_Wave5=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave5)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_Wave5, udg_TimerWave[5])
     call TriggerAddAction(gg_trg_Wave5, function Trig_Wave5_Actions)
 endfunction
@@ -7771,6 +7853,7 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyTimer takes nothing returns nothing
     set gg_trg_EnemyTimer=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyTimer)
     call TriggerRegisterTimerEventSingle(gg_trg_EnemyTimer, 0.01)
     call TriggerAddAction(gg_trg_EnemyTimer, function Trig_EnemyTimer_Actions)
 endfunction
@@ -7784,6 +7867,7 @@ function InitTrig_EnemyRandomSpawn takes nothing returns nothing
     local real EnemyRandomWay= GetRandomReal(0, 100.00)
     
     set gg_trg_EnemyRandomSpawn=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyRandomSpawn)
     
     if ( EnemyRandomWay <= 25.00 ) then
         set udg_SetZone=udg_Way2[0]
@@ -7849,6 +7933,7 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyWave1 takes nothing returns nothing
     set gg_trg_EnemyWave1=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyWave1)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave1, udg_TimerEnemyWave[1])
     call TriggerAddAction(gg_trg_EnemyWave1, function Trig_EnemyWave1_Actions)
 endfunction
@@ -7905,6 +7990,7 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyWave2 takes nothing returns nothing
     set gg_trg_EnemyWave2=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyWave2)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave2, udg_TimerEnemyWave[2])
     call TriggerAddAction(gg_trg_EnemyWave2, function Trig_EnemyWave2_Actions)
 endfunction
@@ -7961,6 +8047,7 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyWave3 takes nothing returns nothing
     set gg_trg_EnemyWave3=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyWave3)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave3, udg_TimerEnemyWave[3])
     call TriggerAddAction(gg_trg_EnemyWave3, function Trig_EnemyWave3_Actions)
 endfunction
@@ -8017,6 +8104,7 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyWave4 takes nothing returns nothing
     set gg_trg_EnemyWave4=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyWave4)
     call TriggerRegisterTimerExpireEventBJ(gg_trg_EnemyWave4, udg_TimerEnemyWave[4])
     call TriggerAddAction(gg_trg_EnemyWave4, function Trig_EnemyWave4_Actions)
 endfunction
@@ -8059,6 +8147,7 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyHero takes nothing returns nothing
     set gg_trg_EnemyHero=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyHero)
     call TriggerAddAction(gg_trg_EnemyHero, function Trig_EnemyHero_Actions)
 endfunction
 
@@ -8278,12 +8367,12 @@ endfunction
 //===========================================================================
 function InitTrig_EnemyHeroAddItem takes nothing returns nothing
     set gg_trg_EnemyHeroAddItem=CreateTrigger()
+    call DisableTrigger(gg_trg_EnemyHeroAddItem)
     call TriggerAddAction(gg_trg_EnemyHeroAddItem, function Trig_EnemyHeroAddItem_Actions)
 endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_CurrentBuild()
     call InitTrig_ConsoleLog()
     call InitTrig_TimerMinus()
     call InitTrig_TestWaveTimer1()
@@ -8430,15 +8519,12 @@ endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_CurrentBuild)
     call ConditionalTriggerExecute(gg_trg_StartResouces)
     call ConditionalTriggerExecute(gg_trg_LimitUnits)
     call ConditionalTriggerExecute(gg_trg_PlayerCount)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_AlteracInitialization)
-    call ConditionalTriggerExecute(gg_trg_AlliesEnemyAndNeutral)
     call ConditionalTriggerExecute(gg_trg_NPCInitialization)
-    call ConditionalTriggerExecute(gg_trg_SetGroupArray)
 endfunction
 
 //***************************************************************************
