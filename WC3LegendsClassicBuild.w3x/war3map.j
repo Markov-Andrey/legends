@@ -37,16 +37,6 @@ group udg_UnitGroup22= null
 group udg_UnitGroup23= null
 group udg_UnitGroup24= null
 group udg_UnitGroup25= null
-string udg_NPCName
-real udg_NPCNumberRandom= 0
-string udg_NPCText
-real udg_NPCOptions= 0
-real udg_NPCCount= 0
-string udg_NPCColorText
-real udg_NPCTextDuration= 0
-unit udg_NPCUnit= null
-string array udg_NPCText_Options
-string array udg_NPCText_MissCaravan
 timer array udg_TimerWave
 real array udg_TimerMinWave
 real array udg_TimerMinAIUpg
@@ -73,30 +63,10 @@ integer udg_WrynnExp= 0
 integer udg_WrynnExpUnitCount= 0
 integer array udg_WrynnExpTable
 integer array udg_WrynnDeposit
+string udg_Map
 
     // Generated
-rect gg_rct_StartRegion= null
-rect gg_rct_Way1_p2= null
-rect gg_rct_Way1_p1= null
-rect gg_rct_Way1_p3= null
-rect gg_rct_Way1_p4= null
-rect gg_rct_Way1_p5= null
-rect gg_rct_Way1_p6= null
-rect gg_rct_Way1_p7= null
-rect gg_rct_Way1_p0= null
-rect gg_rct_Way2_p0= null
-rect gg_rct_Way2_p1= null
-rect gg_rct_Way2_p2= null
-rect gg_rct_Way2_p3= null
-rect gg_rct_Way2_p4= null
-rect gg_rct_Way2_p5= null
-rect gg_rct_Way2_p6= null
-rect gg_rct_Way2_p7= null
-rect gg_rct_Way1_p8= null
-rect gg_rct_Way1_p9= null
-rect gg_rct_Way2_p8= null
-rect gg_rct_EnemyWayAttackPoint= null
-camerasetup gg_cam_Camera_001= null
+camerasetup gg_cam_StartView= null
 trigger gg_trg_CurrentBuild= null
 trigger gg_trg_ConsoleLog= null
 trigger gg_trg_ExampleConsole= null
@@ -116,11 +86,9 @@ trigger gg_trg_TestEnemyTimer2= null
 trigger gg_trg_TestEnemyTimer3= null
 trigger gg_trg_TestEnemyTimer4= null
 trigger gg_trg_TestEnemyTimer5= null
-trigger gg_trg_Iseedeadpeople= null
 trigger gg_trg_MultiboardStart= null
 trigger gg_trg_MultiboardPeriodicInfo= null
 trigger gg_trg_StartResouces= null
-trigger gg_trg_StartVisiblity= null
 trigger gg_trg_StartCameraP1= null
 trigger gg_trg_StartCameraP2= null
 trigger gg_trg_StartCameraReset= null
@@ -128,9 +96,6 @@ trigger gg_trg_LimitUnits= null
 trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
 trigger gg_trg_PreviewLegend= null
-trigger gg_trg_PreviewArthas= null
-trigger gg_trg_PreviewUther= null
-trigger gg_trg_PreviewWrynn= null
 trigger gg_trg_ChooseArthas= null
 trigger gg_trg_ChooseUther= null
 trigger gg_trg_ChooseWrynn= null
@@ -231,9 +196,6 @@ trigger gg_trg_CreateSquadEnemy2= null
 trigger gg_trg_CreateSquadEnemy3= null
 trigger gg_trg_CreateSquadEnemy4= null
 trigger gg_trg_DeadEnemyHero= null
-trigger gg_trg_ExampleWaveSouth= null
-trigger gg_trg_ExampleWaveNorth= null
-trigger gg_trg_ExampleWaveBoth= null
 trigger gg_trg_WaveTimer= null
 trigger gg_trg_Wave1= null
 trigger gg_trg_Wave2= null
@@ -249,6 +211,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 unit gg_unit_H004_0013= null
+trigger gg_trg_AlteracInitialization= null
 
     // Random Groups
 integer array gg_rg_000
@@ -324,27 +287,6 @@ function InitGlobals takes nothing returns nothing
     set udg_UnitGroup23=CreateGroup()
     set udg_UnitGroup24=CreateGroup()
     set udg_UnitGroup25=CreateGroup()
-    set udg_NPCName=""
-    set udg_NPCNumberRandom=0
-    set udg_NPCText=""
-    set udg_NPCOptions=0
-    set udg_NPCCount=0
-    set udg_NPCColorText=""
-    set udg_NPCTextDuration=0
-    set i=0
-    loop
-        exitwhen ( i > 1 )
-        set udg_NPCText_Options[i]=""
-        set i=i + 1
-    endloop
-
-    set i=0
-    loop
-        exitwhen ( i > 1 )
-        set udg_NPCText_MissCaravan[i]=""
-        set i=i + 1
-    endloop
-
     set i=0
     loop
         exitwhen ( i > 5 )
@@ -432,6 +374,7 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
+    set udg_Map=""
 endfunction
 
 //***************************************************************************
@@ -841,7 +784,7 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local trigger t
     local real life
 
-    set gg_unit_H004_0013=BlzCreateUnitWithSkin(p, 'H004', - 505.8, - 1304.2, 261.010, 'H004')
+    set u=BlzCreateUnitWithSkin(p, 'H004', - 505.8, - 1304.2, 261.010, 'H004')
 endfunction
 
 //===========================================================================
@@ -1450,57 +1393,25 @@ endfunction
 
 //***************************************************************************
 //*
-//*  Regions
-//*
-//***************************************************************************
-
-function CreateRegions takes nothing returns nothing
-    local weathereffect we
-
-    set gg_rct_StartRegion=Rect(5952.0, - 3776.0, 6656.0, - 3008.0)
-    set gg_rct_Way1_p2=Rect(- 3584.0, - 7648.0, - 1984.0, - 6688.0)
-    set gg_rct_Way1_p1=Rect(- 5216.0, - 7232.0, - 3200.0, - 6240.0)
-    set gg_rct_Way1_p3=Rect(- 800.0, - 5632.0, 1536.0, - 4736.0)
-    set gg_rct_Way1_p4=Rect(1536.0, - 6336.0, 3584.0, - 5472.0)
-    set gg_rct_Way1_p5=Rect(3584.0, - 5792.0, 4800.0, - 4608.0)
-    set gg_rct_Way1_p6=Rect(4608.0, - 4928.0, 5568.0, - 3648.0)
-    set gg_rct_Way1_p7=Rect(5088.0, - 3168.0, 6144.0, - 1888.0)
-    set gg_rct_Way1_p0=Rect(- 6848.0, - 9632.0, - 6176.0, - 9056.0)
-    set gg_rct_Way2_p0=Rect(- 9632.0, - 4128.0, - 8992.0, - 3552.0)
-    set gg_rct_Way2_p1=Rect(- 8096.0, - 2848.0, - 7232.0, - 1792.0)
-    set gg_rct_Way2_p2=Rect(- 8640.0, - 608.0, - 6720.0, 64.0)
-    set gg_rct_Way2_p3=Rect(- 6528.0, 160.0, - 5696.0, 1472.0)
-    set gg_rct_Way2_p4=Rect(- 6624.0, 2848.0, - 5056.0, 4032.0)
-    set gg_rct_Way2_p5=Rect(- 3520.0, 3232.0, - 2176.0, 4256.0)
-    set gg_rct_Way2_p6=Rect(- 64.0, 4608.0, 1824.0, 5632.0)
-    set gg_rct_Way2_p7=Rect(4256.0, 5536.0, 5248.0, 6368.0)
-    set gg_rct_Way1_p8=Rect(6528.0, - 864.0, 7520.0, 224.0)
-    set gg_rct_Way1_p9=Rect(9504.0, 864.0, 9856.0, 1696.0)
-    set gg_rct_Way2_p8=Rect(7360.0, 9024.0, 8032.0, 9760.0)
-    set gg_rct_EnemyWayAttackPoint=Rect(- 544.0, 416.0, - 512.0, 448.0)
-endfunction
-
-//***************************************************************************
-//*
 //*  Cameras
 //*
 //***************************************************************************
 
 function CreateCameras takes nothing returns nothing
 
-    set gg_cam_Camera_001=CreateCameraSetup()
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROTATION, 61.4, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ANGLE_OF_ATTACK, 348.3, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_TARGET_DISTANCE, 1539.5, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_ROLL, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_FARZ, 8857.8, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_NEARZ, 16.0, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_Camera_001, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
-    call CameraSetupSetDestPosition(gg_cam_Camera_001, 6518.3, - 3034.6, 0.0)
+    set gg_cam_StartView=CreateCameraSetup()
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROTATION, 61.4, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ANGLE_OF_ATTACK, 348.3, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_TARGET_DISTANCE, 1539.5, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROLL, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FARZ, 8857.8, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_NEARZ, 16.0, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
+    call CameraSetupSetDestPosition(gg_cam_StartView, 6518.3, - 3034.6, 0.0)
 
 endfunction
 
@@ -1520,6 +1431,7 @@ endfunction
 function InitTrig_CurrentBuild takes nothing returns nothing
     set gg_trg_CurrentBuild=CreateTrigger()
     set udg_isTestVersion=false
+    set udg_Map="Alterac"
 endfunction
 //===========================================================================
 // Trigger: ConsoleLog
@@ -1934,21 +1846,6 @@ function InitTrig_TestEnemyTimer5 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Iseedeadpeople
-//===========================================================================
-function InitTrig_Iseedeadpeople takes nothing returns nothing
-    set gg_trg_Iseedeadpeople=CreateTrigger()
-    
-    call TriggerRegisterTimerEventSingle(gg_trg_Iseedeadpeople, 0.01)
-    
-    if ( udg_isTestVersion == true ) then
-        call CreateFogModifierRectBJ(true, Player(0), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
-        call CreateFogModifierRectBJ(true, Player(1), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
-    endif
-endfunction
-
-
-//===========================================================================
 // Trigger: MultiboardStart
 //===========================================================================
 function Trig_MultiboardStart_Actions takes nothing returns nothing
@@ -2020,23 +1917,10 @@ function InitTrig_StartResouces takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: StartVisiblity
-//===========================================================================
-function Trig_StartVisiblity_Actions takes nothing returns nothing
-    call CreateFogModifierRectBJ(true, Player(0), FOG_OF_WAR_VISIBLE, gg_rct_StartRegion)
-endfunction
-
-//===========================================================================
-function InitTrig_StartVisiblity takes nothing returns nothing
-    set gg_trg_StartVisiblity=CreateTrigger()
-    call TriggerAddAction(gg_trg_StartVisiblity, function Trig_StartVisiblity_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: StartCameraP1
 //===========================================================================
 function Trig_StartCameraP1_Actions takes nothing returns nothing
-    call CameraSetupApplyForPlayer(true, gg_cam_Camera_001, Player(0), 0)
+    call CameraSetupApplyForPlayer(true, gg_cam_StartView, Player(0), 0)
 endfunction
 
 //===========================================================================
@@ -2050,7 +1934,7 @@ endfunction
 // Trigger: StartCameraP2
 //===========================================================================
 function Trig_StartCameraP2_Actions takes nothing returns nothing
-    call CameraSetupApplyForPlayer(true, gg_cam_Camera_001, Player(1), 0)
+    call CameraSetupApplyForPlayer(true, gg_cam_StartView, Player(1), 0)
 endfunction
 
 //===========================================================================
@@ -3048,7 +2932,7 @@ function Trig_ArthasSoulReforge_Actions takes nothing returns nothing
     elseif GetSpellAbilityId() == 'A01X' then
         // Frost
         set effectUnit="Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl"
-        set unitReplacements[0]='u00F' // Ghoul
+        set unitReplacements[0]='u01F' // Ghoul
         set unitReplacements[1]='u01J' // Crypt
         set unitReplacements[2]='u01P' // Abomination
         set unitReplacements[3]='u01S' // Wagon
@@ -5808,19 +5692,39 @@ function InitTrig_AddHeroAbility takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: AlteracInitialization
+//===========================================================================
+function Trig_AlteracInitialization_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_NPCInitialization)
+    call EnableTrigger(gg_trg_NPCGreetings)
+    call EnableTrigger(gg_trg_NPCMissCaravan)
+    call EnableTrigger(gg_trg_NPCNextWave)
+    call EnableTrigger(gg_trg_NPCEnemyWave)
+    call EnableTrigger(gg_trg_NPCLastWave)
+    call EnableTrigger(gg_trg_NPCCompleteWave)
+    call EnableTrigger(gg_trg_NPCWin)
+    call EnableTrigger(gg_trg_NPCDefeat)
+endfunction
+
+//===========================================================================
+function InitTrig_AlteracInitialization takes nothing returns nothing
+    set gg_trg_AlteracInitialization=CreateTrigger()
+    if ( udg_Map == "Alterac" ) then
+        call TriggerAddAction(gg_trg_AlteracInitialization, function Trig_AlteracInitialization_Actions)
+    endif
+endfunction
+
+
+//===========================================================================
 // Trigger: AlliesEnemyAndNeutral
 //
 // Crutch solution to force the enemy to ignore neutral-hostile troops
 //===========================================================================
 function Trig_AlliesEnemyAndNeutral_Actions takes nothing returns nothing
-    set bj_forLoopAIndex=5
-    set bj_forLoopAIndexEnd=6
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED)
-        call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED)
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
+    call SetPlayerAllianceStateBJ(Player(4), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED)
+    call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Player(4), bj_ALLIANCE_ALLIED)
+    call SetPlayerAllianceStateBJ(Player(5), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED)
+    call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Player(5), bj_ALLIANCE_ALLIED)
 endfunction
 
 //===========================================================================
@@ -5835,773 +5739,386 @@ endfunction
 // <Initialization>
 //===========================================================================
 function Trig_NPCInitialization_Actions takes nothing returns nothing
-    call SetPlayerAllianceBJ(Player(0), ALLIANCE_SHARED_CONTROL, true, Player(2))
-    call SetPlayerAllianceBJ(Player(1), ALLIANCE_SHARED_CONTROL, true, Player(2))
-    call SetPlayerAllianceBJ(Player(2), ALLIANCE_SHARED_CONTROL, true, Player(0))
-    call SetPlayerAllianceBJ(Player(2), ALLIANCE_SHARED_CONTROL, true, Player(1))
-    set udg_NPCUnit=gg_unit_H004_0013
-    set udg_NPCName="Stonebeard"
-    set udg_NPCColorText="|cFF48BBFF"
+    call SetPlayerAlliance(Player(0), Player(2), ALLIANCE_SHARED_CONTROL, true)
+    call SetPlayerAlliance(Player(1), Player(2), ALLIANCE_SHARED_CONTROL, true)
+    call SetPlayerAlliance(Player(2), Player(0), ALLIANCE_SHARED_CONTROL, true)
+    call SetPlayerAlliance(Player(2), Player(0), ALLIANCE_SHARED_CONTROL, true)
 endfunction
 
 //===========================================================================
 function InitTrig_NPCInitialization takes nothing returns nothing
     set gg_trg_NPCInitialization=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCInitialization)
     call TriggerAddAction(gg_trg_NPCInitialization, function Trig_NPCInitialization_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: NPCGreetings
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCGreetings_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCGreetings_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCGreetings_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCGreetings_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCGreetings_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCGreetings_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=15.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="Welcome, my fellow legends! I am Stonebeard, and it seems we have a common enemy to face. Are you ready to take down the Syndicate and bring justice to the region?"
-    set udg_NPCText_Options[2]="Ah, a legends! You don't look like the usual riff-raff that passes through here. I'm Stonebeard, and I've got a job that requires your skills. Care to lend me a hand against the Syndicate?"
-    set udg_NPCText_Options[3]="By the hammers of Khaz Modan, it's good to see you all! I'm Stonebeard, and I'm on a mission to take down the Syndicate. Will you join me in battle?"
-    set udg_NPCText_Options[4]="Greetings, legends! I'm Stonebeard, and it seems fate has brought us together. The Syndicate has been causing havoc in these parts for too long. Let's show them the might of our guns... or blades... or magic!"
-    set udg_NPCText_Options[5]="By the forge of Ironforge, it's an honor to meet you! I'm Stonebeard, and I'm in dire need of legends to help me take down the Syndicate. Will you fight by my side?"
-    // All options
-    if ( Trig_NPCGreetings_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 15.00
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="Welcome, my fellow legends! I am Stonebeard, and it seems we have a common enemy to face. Are you ready to take down the Syndicate and bring justice to the region?"
+    set NPCTextOptions[2]="Ah, a legends! You don't look like the usual riff-raff that passes through here. I'm Stonebeard, and I've got a job that requires your skills. Care to lend me a hand against the Syndicate?"
+    set NPCTextOptions[3]="By the hammers of Khaz Modan, it's good to see you all! I'm Stonebeard, and I'm on a mission to take down the Syndicate. Will you join me in battle?"
+    set NPCTextOptions[4]="Greetings, legends! I'm Stonebeard, and it seems fate has brought us together. The Syndicate has been causing havoc in these parts for too long. Let's show them the might of our guns... or blades... or magic!"
+    set NPCTextOptions[5]="By the forge of Ironforge, it's an honor to meet you! I'm Stonebeard, and I'm in dire need of legends to help me take down the Syndicate. Will you fight by my side?"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCGreetings_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCGreetings_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCGreetings_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCGreetings_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, true)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCGreetings takes nothing returns nothing
     set gg_trg_NPCGreetings=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCGreetings)
     call TriggerAddAction(gg_trg_NPCGreetings, function Trig_NPCGreetings_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCMissCaravan
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCMissCaravan_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCMissCaravan_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCMissCaravan_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCMissCaravan_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCMissCaravan_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCMissCaravan_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=10.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="Don't worry, my friends, we'll catch up to them. It's a game of cat and mouse, and I intend to be the cat!"
-    set udg_NPCText_Options[2]="Well, we may have missed that one, but we'll catch the next one. The Syndicate won't know what hit them!"
-    set udg_NPCText_Options[3]="We missed one, but that's just a minor setback. We'll find another way to disrupt their supplies and bring them to their knees!"
-    set udg_NPCText_Options[4]="Looks like we let one slip by us, but we'll make up for it. We'll hit them harder next time and show them that they can't outrun us!"
-    set udg_NPCText_Options[5]="Aye, we may have missed that one, but the battle is far from over. We'll keep at it until the Syndicate is defeated, mark my words!"
-    // All options
-    if ( Trig_NPCMissCaravan_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 10.00
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="Don't worry, my friends, we'll catch up to them. It's a game of cat and mouse, and I intend to be the cat!"
+    set NPCTextOptions[2]="Well, we may have missed that one, but we'll catch the next one. The Syndicate won't know what hit them!"
+    set NPCTextOptions[3]="We missed one, but that's just a minor setback. We'll find another way to disrupt their supplies and bring them to their knees!"
+    set NPCTextOptions[4]="Looks like we let one slip by us, but we'll make up for it. We'll hit them harder next time and show them that they can't outrun us!"
+    set NPCTextOptions[5]="Aye, we may have missed that one, but the battle is far from over. We'll keep at it until the Syndicate is defeated, mark my words!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCMissCaravan_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCMissCaravan_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCMissCaravan_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCMissCaravan_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCMissCaravan takes nothing returns nothing
     set gg_trg_NPCMissCaravan=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCMissCaravan)
     call TriggerAddAction(gg_trg_NPCMissCaravan, function Trig_NPCMissCaravan_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCNextWave
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCNextWave_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCNextWave_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCNextWave_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCNextWave_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCNextWave_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCNextWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=7.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="Looks like the Syndicate is on the move. We need to act fast if we're going to catch them!"
-    set udg_NPCText_Options[2]="The caravans are moving. We move forward. My rifle is at your service."
-    set udg_NPCText_Options[3]="The Syndicate is moving their contraband, but we're not going to let them get away with it. It's time to take the fight to them!"
-    set udg_NPCText_Options[4]="Those caravans won't stay on the move forever. We need to intercept them before they can reach their destination. Are you with me, legends?"
-    set udg_NPCText_Options[5]="The caravans have left their bases, but we're not going to let them get far. We'll track them down and make sure the Syndicate regrets ever crossing us!"
-    // All options
-    if ( Trig_NPCNextWave_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 7.50
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="Looks like the Syndicate is on the move. We need to act fast if we're going to catch them!"
+    set NPCTextOptions[2]="The caravans are moving. We move forward. My rifle is at your service."
+    set NPCTextOptions[3]="The Syndicate is moving their contraband, but we're not going to let them get away with it. It's time to take the fight to them!"
+    set NPCTextOptions[4]="Those caravans won't stay on the move forever. We need to intercept them before they can reach their destination. Are you with me, legends?"
+    set NPCTextOptions[5]="The caravans have left their bases, but we're not going to let them get far. We'll track them down and make sure the Syndicate regrets ever crossing us!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCNextWave_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCNextWave_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCNextWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCNextWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCNextWave takes nothing returns nothing
     set gg_trg_NPCNextWave=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCNextWave)
     call TriggerAddAction(gg_trg_NPCNextWave, function Trig_NPCNextWave_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCEnemyWave
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCEnemyWave_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCEnemyWave_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCEnemyWave_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCEnemyWave_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCEnemyWave_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCEnemyWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=7.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="The Syndicate is on the attack! We need to defend our base and drive them back. Are you ready, legends?"
-    set udg_NPCText_Options[2]="Looks like the Syndicate is feeling desperate. But that's no excuse for them to attack our base! Let's teach them a lesson they won't forget!"
-    set udg_NPCText_Options[3]="The Syndicate is throwing everything they've got at us. But they're no match for our skill and determination. Let's show them what we're made of, heroes!"
-    set udg_NPCText_Options[4]="Our base is under attack, but we're not going to back down. We'll fight tooth and nail to protect what's ours and drive the Syndicate back where they belong!"
-    set udg_NPCText_Options[5]="They want a fight? They've got it! Defend our base and send the Syndicate running with their tails between their legs!"
-    // All options
-    if ( Trig_NPCEnemyWave_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 7.50
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="The Syndicate is on the attack! We need to defend our base and drive them back. Are you ready, legends?"
+    set NPCTextOptions[2]="Looks like the Syndicate is feeling desperate. But that's no excuse for them to attack our base! Let's teach them a lesson they won't forget!"
+    set NPCTextOptions[3]="The Syndicate is throwing everything they've got at us. But they're no match for our skill and determination. Let's show them what we're made of, heroes!"
+    set NPCTextOptions[4]="Our base is under attack, but we're not going to back down. We'll fight tooth and nail to protect what's ours and drive the Syndicate back where they belong!"
+    set NPCTextOptions[5]="They want a fight? They've got it! Defend our base and send the Syndicate running with their tails between their legs!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCEnemyWave_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCEnemyWave_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCEnemyWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCEnemyWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCEnemyWave takes nothing returns nothing
     set gg_trg_NPCEnemyWave=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCEnemyWave)
     call TriggerAddAction(gg_trg_NPCEnemyWave, function Trig_NPCEnemyWave_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCLastWave
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCLastWave_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCLastWave_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCLastWave_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCLastWave_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCLastWave_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCLastWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=7.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="This is it, legends! The final wave. Let's give it everything we've got and show the Syndicate that we're not to be trifled with!"
-    set udg_NPCText_Options[2]="We've made it to the last wave. This is where the real test begins. Keep your wits about you, friends, and let's finish this once and for all!"
-    set udg_NPCText_Options[3]="This is what we've been waiting for, heroes. The final showdown. Let's make sure that the Syndicate knows they messed with the wrong crew!"
-    set udg_NPCText_Options[4]="It's all come down to this, friends. The last wave. But we've come too far to back down now. Let's show the Syndicate what true courage and determination looks like!"
-    set udg_NPCText_Options[5]="This is the moment we've been training for, friends. The last wave is here, and we're going to face it head-on. Let's do this!"
-    // All options
-    if ( Trig_NPCLastWave_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 7.50
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="This is it, legends! The final wave. Let's give it everything we've got and show the Syndicate that we're not to be trifled with!"
+    set NPCTextOptions[2]="We've made it to the last wave. This is where the real test begins. Keep your wits about you, friends, and let's finish this once and for all!"
+    set NPCTextOptions[3]="This is what we've been waiting for, heroes. The final showdown. Let's make sure that the Syndicate knows they messed with the wrong crew!"
+    set NPCTextOptions[4]="It's all come down to this, friends. The last wave. But we've come too far to back down now. Let's show the Syndicate what true courage and determination looks like!"
+    set NPCTextOptions[5]="This is the moment we've been training for, friends. The last wave is here, and we're going to face it head-on. Let's do this!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCLastWave_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCLastWave_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCLastWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCLastWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCLastWave takes nothing returns nothing
     set gg_trg_NPCLastWave=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCLastWave)
     call TriggerAddAction(gg_trg_NPCLastWave, function Trig_NPCLastWave_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCCompleteWave
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCCompleteWave_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCCompleteWave_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCCompleteWave_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCCompleteWave_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCCompleteWave_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCCompleteWave_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=10.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="Well done, legends! But don't let your guard down just yet. There's still more work to be done!"
-    set udg_NPCText_Options[2]="That was a good strike, but we need to keep the pressure on. The Syndicate won't give up that easily!"
-    set udg_NPCText_Options[3]="We may have taken out one caravan, but there are more on the way. We need to stay alert and keep disrupting their supplies!"
-    set udg_NPCText_Options[4]="That was just the beginning. We'll keep hitting them hard until they're running scared!"
-    set udg_NPCText_Options[5]="Excellent work, friends! But we can't rest on our laurels. There's still more to be done to ensure that the Syndicate is brought to justice!"
-    // All options
-    if ( Trig_NPCCompleteWave_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 10.00
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="Well done, legends! But don't let your guard down just yet. There's still more work to be done!"
+    set NPCTextOptions[2]="That was a good strike, but we need to keep the pressure on. The Syndicate won't give up that easily!"
+    set NPCTextOptions[3]="We may have taken out one caravan, but there are more on the way. We need to stay alert and keep disrupting their supplies!"
+    set NPCTextOptions[4]="That was just the beginning. We'll keep hitting them hard until they're running scared!"
+    set NPCTextOptions[5]="Excellent work, friends! But we can't rest on our laurels. There's still more to be done to ensure that the Syndicate is brought to justice!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCCompleteWave_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCCompleteWave_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCCompleteWave_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCCompleteWave_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCCompleteWave takes nothing returns nothing
     set gg_trg_NPCCompleteWave=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCCompleteWave)
     call TriggerAddAction(gg_trg_NPCCompleteWave, function Trig_NPCCompleteWave_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCWin
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCWin_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCWin_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCWin_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCWin_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCWin_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCWin_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=10.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="Ha! That'll teach 'em not to mess with us."
-    set udg_NPCText_Options[2]="We showed them what it means to be a true hero. Let's celebrate this victory!"
-    set udg_NPCText_Options[3]="The Syndicate may have thought they had us, but they didn't count on our resilience."
-    set udg_NPCText_Options[4]="It wasn't easy, but we did it. We defended our base, and we won."
-    set udg_NPCText_Options[5]="The final victory against our enemies. Let's celebrate this moment, and remember it when we face future challenges!"
-    // All options
-    if ( Trig_NPCWin_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 10.00
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="Ha! That'll teach 'em not to mess with us."
+    set NPCTextOptions[2]="We showed them what it means to be a true hero. Let's celebrate this victory!"
+    set NPCTextOptions[3]="The Syndicate may have thought they had us, but they didn't count on our resilience."
+    set NPCTextOptions[4]="It wasn't easy, but we did it. We defended our base, and we won."
+    set NPCTextOptions[5]="The final victory against our enemies. Let's celebrate this moment, and remember it when we face future challenges!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCWin_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCWin_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCWin_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCWin_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCWin takes nothing returns nothing
     set gg_trg_NPCWin=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCWin)
     call TriggerAddAction(gg_trg_NPCWin, function Trig_NPCWin_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: NPCDefeat
-//
-// <Method>
-// Random message generator
 //===========================================================================
-function Trig_NPCDefeat_Func012Func002Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCDefeat_Func012Func002Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCDefeat_Func012Func002Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCDefeat_Func012Func002C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NPCDefeat_Func012C takes nothing returns boolean
-    if ( not ( udg_NPCNumberRandom <= ( ( 100.00 * udg_NPCCount ) / udg_NPCOptions ) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_NPCDefeat_Actions takes nothing returns nothing
-    set udg_NPCNumberRandom=GetRandomReal(0, 100.00)
-    set udg_NPCText=udg_NPCColorText
-    set udg_NPCTextDuration=10.00
-    set udg_NPCOptions=5.00
-    set udg_NPCCount=1.00
-    set udg_NPCText_Options[1]="I can't believe it. This is the final defeat. We fought with all our might, but the Syndicate was just too powerful."
-    set udg_NPCText_Options[2]="I knew you *** legends had no honor, no respect, no beer!"
-    set udg_NPCText_Options[3]="This is a dark day for all of us. The final defeat."
-    set udg_NPCText_Options[4]="We've been defeated, but we're not broken. This final defeat will be a powerful motivator for us to come back even stronger."
-    set udg_NPCText_Options[5]="This is a bitter pill to swallow. The final defeat. But we can't let it break our spirits. We'll come back with renewed determination, and show the Syndicate that we're not done yet!"
-    // All options
-    if ( Trig_NPCDefeat_Func012C() ) then
-        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
+    local real NPC_NumberRandom= GetRandomReal(0, 100.00)
+    local integer NPC_Index
+    local string array NPCTextOptions
+    local real NPC_TextDuration= 10.00
+    local string NPC_TextNice= "|cFF48BBFF"
+    local string NPC_Name= "Stonebeard"
+    local unit NPC_Unit= GroupPickRandomUnit(GetUnitsOfTypeIdAll('H004'))
+    
+    set NPCTextOptions[1]="I can't believe it. This is the final defeat. We fought with all our might, but the Syndicate was just too powerful."
+    set NPCTextOptions[2]="I knew you *** legends had no honor, no respect, no beer!"
+    set NPCTextOptions[3]="This is a dark day for all of us. The final defeat."
+    set NPCTextOptions[4]="We've been defeated, but we're not broken. This final defeat will be a powerful motivator for us to come back even stronger."
+    set NPCTextOptions[5]="This is a bitter pill to swallow. The final defeat. But we can't let it break our spirits. We'll come back with renewed determination, and show the Syndicate that we're not done yet!"
+    
+    if NPC_NumberRandom <= 20.00 then
+        set NPC_Index=1
+    elseif NPC_NumberRandom <= 40.00 then
+        set NPC_Index=2
+    elseif NPC_NumberRandom <= 60.00 then
+        set NPC_Index=3
+    elseif NPC_NumberRandom <= 80.00 then
+        set NPC_Index=4
     else
-        set udg_NPCCount=( udg_NPCCount + 1 )
-        if ( Trig_NPCDefeat_Func012Func002C() ) then
-            set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-        else
-            set udg_NPCCount=( udg_NPCCount + 1 )
-            if ( Trig_NPCDefeat_Func012Func002Func002C() ) then
-                set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-            else
-                set udg_NPCCount=( udg_NPCCount + 1 )
-                if ( Trig_NPCDefeat_Func012Func002Func002Func002C() ) then
-                    set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                else
-                    set udg_NPCCount=( udg_NPCCount + 1 )
-                    if ( Trig_NPCDefeat_Func012Func002Func002Func002Func002C() ) then
-                        set udg_NPCText=( udg_NPCText + udg_NPCText_Options[R2I(udg_NPCCount)] )
-                    else
-                    endif
-                endif
-            endif
-        endif
+        set NPC_Index=5
     endif
-    set udg_NPCText=( udg_NPCText + "|R" )
-    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), udg_NPCUnit, udg_NPCName, null, udg_NPCText, bj_TIMETYPE_ADD, udg_NPCTextDuration, false)
+    
+    set NPC_TextNice=NPC_TextNice + NPCTextOptions[NPC_Index] + "|R"
+    call TransmissionFromUnitWithNameBJ(GetPlayersAll(), NPC_Unit, NPC_Name, null, NPC_TextNice, bj_TIMETYPE_ADD, NPC_TextDuration, true)
+    set NPC_Unit=null
 endfunction
 
 //===========================================================================
 function InitTrig_NPCDefeat takes nothing returns nothing
     set gg_trg_NPCDefeat=CreateTrigger()
+    call DisableTrigger(gg_trg_NPCDefeat)
     call TriggerAddAction(gg_trg_NPCDefeat, function Trig_NPCDefeat_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: SetWayPoint
-//
-// WayCount counts gets the total number of waypoints
-// WayXCount - Number of waypoints
-// WayX - Array of sequentially collected regions
 //===========================================================================
 function Trig_SetWayPoint_Actions takes nothing returns nothing
     // Way1
-    set udg_Way1Count=0
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p0
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p1
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p2
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p3
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p4
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p5
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p6
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p7
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p8
-    set udg_Way1Count=( udg_Way1Count + 1 )
-    set udg_Way1[udg_Way1Count]=gg_rct_Way1_p9
+    set udg_Way1Count=9
+    set udg_Way1[0]=RectFromCenterSizeBJ(Location(- 6500.00, - 9400.00), 600.00, 600.00)
+    set udg_Way1[1]=RectFromCenterSizeBJ(Location(- 4200.00, - 6700.00), 600.00, 600.00)
+    set udg_Way1[2]=RectFromCenterSizeBJ(Location(- 2700.00, - 7200.00), 600.00, 600.00)
+    set udg_Way1[3]=RectFromCenterSizeBJ(Location(320.00, - 5100.00), 600.00, 600.00)
+    set udg_Way1[4]=RectFromCenterSizeBJ(Location(2600.00, - 5900.00), 600.00, 600.00)
+    set udg_Way1[5]=RectFromCenterSizeBJ(Location(4100.00, - 5100.00), 600.00, 600.00)
+    set udg_Way1[6]=RectFromCenterSizeBJ(Location(5100.00, - 4300.00), 600.00, 600.00)
+    set udg_Way1[7]=RectFromCenterSizeBJ(Location(5600.00, - 2600.00), 600.00, 600.00)
+    set udg_Way1[8]=RectFromCenterSizeBJ(Location(7100.00, - 430.00), 600.00, 600.00)
+    set udg_Way1[9]=RectFromCenterSizeBJ(Location(9600.00, 1200.00), 600.00, 600.00)
     // Way2
-    set udg_Way2Count=0
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p0
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p1
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p2
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p3
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p4
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p5
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p6
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p7
-    set udg_Way2Count=( udg_Way2Count + 1 )
-    set udg_Way2[udg_Way2Count]=gg_rct_Way2_p8
+    set udg_Way2Count=8
+    set udg_Way2[0]=RectFromCenterSizeBJ(Location(- 9300.00, - 3800.00), 600.00, 600.00)
+    set udg_Way2[1]=RectFromCenterSizeBJ(Location(- 7600.00, - 2300.00), 600.00, 600.00)
+    set udg_Way2[2]=RectFromCenterSizeBJ(Location(- 7600.00, 308.00), 600.00, 600.00)
+    set udg_Way2[3]=RectFromCenterSizeBJ(Location(- 6200.00, 900.00), 600.00, 600.00)
+    set udg_Way2[4]=RectFromCenterSizeBJ(Location(- 5800.00, 3300.00), 600.00, 600.00)
+    set udg_Way2[5]=RectFromCenterSizeBJ(Location(- 2900.00, 3600.00), 600.00, 600.00)
+    set udg_Way2[6]=RectFromCenterSizeBJ(Location(800.00, 5000.00), 600.00, 600.00)
+    set udg_Way2[7]=RectFromCenterSizeBJ(Location(4800.00, 5800.00), 600.00, 600.00)
+    set udg_Way2[8]=RectFromCenterSizeBJ(Location(7600.00, 9300.00), 600.00, 600.00)
 endfunction
 
 //===========================================================================
 function InitTrig_SetWayPoint takes nothing returns nothing
     set gg_trg_SetWayPoint=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_SetWayPoint, 0.01)
+    call TriggerRegisterTimerEvent(gg_trg_SetWayPoint, 0.01, false)
     call TriggerAddAction(gg_trg_SetWayPoint, function Trig_SetWayPoint_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: WayPingIni
@@ -6914,46 +6431,18 @@ endfunction
 //===========================================================================
 // Trigger: DefeatCondition
 //===========================================================================
-function Trig_DefeatCondition_Conditions takes nothing returns boolean
-    if ( not ( GetOwningPlayer(GetEnteringUnit()) == Player(4) ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_DefeatCondition_Func004C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetEnteringUnit()) == 'h002' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_DefeatCondition_Func006C takes nothing returns boolean
-    if ( not ( udg_CurrentCountDefeat >= udg_MaxCountDefeat ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_DefeatCondition_Func008C takes nothing returns boolean
-    if ( not ( IsTriggerEnabled(gg_trg_LastWaveComplete) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_DefeatCondition_Actions takes nothing returns nothing
-    if ( Trig_DefeatCondition_Func004C() ) then
+    if ( GetUnitTypeId(GetEnteringUnit()) == 'h002' ) then
         set udg_CurrentCountDefeat=( udg_CurrentCountDefeat + 1 )
         call DisplayTextToForce(GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ))
-        call ConditionalTriggerExecute(gg_trg_NPCMissCaravan)
+        call TriggerExecute(gg_trg_NPCMissCaravan)
         call TriggerExecute(gg_trg_WaveComplete)
     else
     endif
     call RemoveUnit(GetEnteringUnit())
-    if ( Trig_DefeatCondition_Func006C() ) then
+    if ( udg_CurrentCountDefeat >= udg_MaxCountDefeat ) then
         call DisableTrigger(GetTriggeringTrigger())
-        call ConditionalTriggerExecute(gg_trg_NPCDefeat)
+        call TriggerExecute(gg_trg_NPCDefeat)
         call TriggerSleepAction(10.00)
         set bj_forLoopAIndex=1
         set bj_forLoopAIndexEnd=2
@@ -6965,7 +6454,7 @@ function Trig_DefeatCondition_Actions takes nothing returns nothing
     else
     endif
     // Checking for the last horse that successfully left
-    if ( Trig_DefeatCondition_Func008C() ) then
+    if ( IsTriggerEnabled(gg_trg_LastWaveComplete) == true ) then
         call TriggerExecute(gg_trg_LastWaveComplete)
     else
     endif
@@ -6974,11 +6463,13 @@ endfunction
 //===========================================================================
 function InitTrig_DefeatCondition takes nothing returns nothing
     set gg_trg_DefeatCondition=CreateTrigger()
-    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, gg_rct_Way1_p9)
-    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, gg_rct_Way2_p8)
-    call TriggerAddCondition(gg_trg_DefeatCondition, Condition(function Trig_DefeatCondition_Conditions))
-    call TriggerAddAction(gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions)
+    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, udg_Way1[9])
+    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, udg_Way2[8])
+    if ( GetOwningPlayer(GetEnteringUnit()) == Player(4) ) then
+        call TriggerAddAction(gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions)
+    endif
 endfunction
+
 
 //===========================================================================
 // Trigger: SetGroupArray
@@ -7023,7 +6514,7 @@ endfunction
 
 function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
     local group g= GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
-    local location l= GetRectCenter(gg_rct_Way1_p1)
+    local location l= GetRectCenter(udg_Way1[1])
     local integer i= udg_CountGroup1
 
     // Initialize unit group and wait
@@ -7073,7 +6564,7 @@ function Trig_UnitsInitializationWay2_Actions takes nothing returns nothing
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
     call PolledWait(0.01)
     call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay2_Func004A)
-    call GroupPointOrderLocBJ(udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(gg_rct_Way2_p1))
+    call GroupPointOrderLocBJ(udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(udg_Way2[1]))
     // Console Log
     set udg_ConsoleTrigger="UnitsInitializationWay2"
     set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup2) ) + ":" )
@@ -7126,7 +6617,7 @@ function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
 
     // Add units to group and order attack
     set g=GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
-    set l=GetRectCenter(gg_rct_EnemyWayAttackPoint)
+    set l=Location(- 528.00, 432.00)
     call ForGroupBJ(g, function Trig_UnitsInitializationWay3_Func005A)
     call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", l)
 
@@ -7163,7 +6654,7 @@ function Trig_DebugUnitsIniWay3_Actions takes nothing returns nothing
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
         if ( Trig_DebugUnitsIniWay3_Func001Func001C() ) then
-            call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", GetRectCenter(gg_rct_EnemyWayAttackPoint))
+            call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", Location(- 528.00, 432.00))
         else
         endif
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
@@ -7925,7 +7416,7 @@ function Trig_Wave1_Actions takes nothing returns nothing
     set udg_WaveRandomWay=GetRandomReal(0, 100.00)
     if ( Trig_Wave1_Func007C() ) then
         call ConditionalTriggerExecute(gg_trg_Way2Ping)
-        set udg_SetZone=gg_rct_Way2_p0
+        set udg_SetZone=udg_Way2[0]
         //  
         set udg_CountGroup2=1
         call TriggerExecute(gg_trg_CreateSquadWave1n1)
@@ -7936,7 +7427,7 @@ function Trig_Wave1_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
         call ConditionalTriggerExecute(gg_trg_Way1Ping)
-        set udg_SetZone=gg_rct_Way1_p0
+        set udg_SetZone=udg_Way1[0]
         //  
         set udg_CountGroup1=1
         call TriggerExecute(gg_trg_CreateSquadWave1n1)
@@ -7976,7 +7467,7 @@ function Trig_Wave2_Actions takes nothing returns nothing
     set udg_SetEnemy=Player(4)
     if ( Trig_Wave2_Func006C() ) then
         call ConditionalTriggerExecute(gg_trg_Way2Ping)
-        set udg_SetZone=gg_rct_Way2_p0
+        set udg_SetZone=udg_Way2[0]
         //  
         set udg_CountGroup2=1
         call TriggerExecute(gg_trg_CreateSquadWave2n1)
@@ -7996,7 +7487,7 @@ function Trig_Wave2_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_ConsoleLog)
         //  
         call ConditionalTriggerExecute(gg_trg_Way1Ping)
-        set udg_SetZone=gg_rct_Way1_p0
+        set udg_SetZone=udg_Way1[0]
         //  
         set udg_CountGroup1=1
         call TriggerExecute(gg_trg_CreateSquadWave2n1)
@@ -8034,42 +7525,42 @@ function Trig_Wave3_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_Way2Ping)
     set udg_SetEnemy=Player(4)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=1
     call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=1
     call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
@@ -8077,14 +7568,14 @@ function Trig_Wave3_Actions takes nothing returns nothing
     //  
     call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave3n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
@@ -8112,42 +7603,42 @@ function Trig_Wave4_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_Way2Ping)
     set udg_SetEnemy=Player(4)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=1
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=1
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
@@ -8155,14 +7646,14 @@ function Trig_Wave4_Actions takes nothing returns nothing
     //  
     call TriggerSleepAction(12.00)
     //  
-    set udg_SetZone=gg_rct_Way1_p0
+    set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=( udg_CountGroup1 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
-    set udg_SetZone=gg_rct_Way2_p0
+    set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=( udg_CountGroup2 + 1 )
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
@@ -8200,7 +7691,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
     set udg_WaveRandomWay=GetRandomReal(0, 100.00)
     if ( Trig_Wave5_Func009C() ) then
         call ConditionalTriggerExecute(gg_trg_Way2Ping)
-        set udg_SetZone=gg_rct_Way2_p0
+        set udg_SetZone=udg_Way2[0]
         //  
         set udg_CountGroup2=1
         call TriggerExecute(gg_trg_CreateSquadWave4n2)
@@ -8223,7 +7714,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
         call ConditionalTriggerExecute(gg_trg_Way1Ping)
-        set udg_SetZone=gg_rct_Way1_p0
+        set udg_SetZone=udg_Way1[0]
         //  
         set udg_CountGroup1=1
         call TriggerExecute(gg_trg_CreateSquadWave4n2)
@@ -8295,13 +7786,13 @@ function InitTrig_EnemyRandomSpawn takes nothing returns nothing
     set gg_trg_EnemyRandomSpawn=CreateTrigger()
     
     if ( EnemyRandomWay <= 25.00 ) then
-        set udg_SetZone=gg_rct_Way2_p0
+        set udg_SetZone=udg_Way2[0]
     elseif ( EnemyRandomWay <= 50.00 ) then
-        set udg_SetZone=gg_rct_Way2_p8
+        set udg_SetZone=udg_Way2[8]
     elseif ( EnemyRandomWay <= 75.00 ) then
-        set udg_SetZone=gg_rct_Way1_p9
+        set udg_SetZone=udg_Way1[0]
     else
-        set udg_SetZone=gg_rct_Way1_p0
+        set udg_SetZone=udg_Way1[9]
     endif
 endfunction
 
@@ -8810,11 +8301,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TestEnemyTimer3()
     call InitTrig_TestEnemyTimer4()
     call InitTrig_TestEnemyTimer5()
-    call InitTrig_Iseedeadpeople()
     call InitTrig_MultiboardStart()
     call InitTrig_MultiboardPeriodicInfo()
     call InitTrig_StartResouces()
-    call InitTrig_StartVisiblity()
     call InitTrig_StartCameraP1()
     call InitTrig_StartCameraP2()
     call InitTrig_StartCameraReset()
@@ -8879,6 +8368,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AddUpgradeT2()
     call InitTrig_AddUpgradeT3()
     call InitTrig_AddHeroAbility()
+    call InitTrig_AlteracInitialization()
     call InitTrig_AlliesEnemyAndNeutral()
     call InitTrig_NPCInitialization()
     call InitTrig_NPCGreetings()
@@ -8942,10 +8432,10 @@ endfunction
 function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_CurrentBuild)
     call ConditionalTriggerExecute(gg_trg_StartResouces)
-    call ConditionalTriggerExecute(gg_trg_StartVisiblity)
     call ConditionalTriggerExecute(gg_trg_LimitUnits)
     call ConditionalTriggerExecute(gg_trg_PlayerCount)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
+    call ConditionalTriggerExecute(gg_trg_AlteracInitialization)
     call ConditionalTriggerExecute(gg_trg_AlliesEnemyAndNeutral)
     call ConditionalTriggerExecute(gg_trg_NPCInitialization)
     call ConditionalTriggerExecute(gg_trg_SetGroupArray)
@@ -9090,7 +8580,6 @@ function main takes nothing returns nothing
     call SetAmbientDaySound("LordaeronWinterDay")
     call SetAmbientNightSound("LordaeronWinterNight")
     call SetMapMusic("Music", true, 0)
-    call CreateRegions()
     call CreateCameras()
     call CreateAllUnits()
     call InitBlizzard()
