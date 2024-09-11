@@ -152,6 +152,7 @@ trigger gg_trg_AddUpgradeT1= null
 trigger gg_trg_AddUpgradeT2= null
 trigger gg_trg_AddUpgradeT3= null
 trigger gg_trg_AddHeroAbility= null
+trigger gg_trg_AlteracInitialization= null
 trigger gg_trg_AlliesEnemyAndNeutral= null
 trigger gg_trg_NPCInitialization= null
 trigger gg_trg_NPCGreetings= null
@@ -172,7 +173,6 @@ trigger gg_trg_UnitGroupDead= null
 trigger gg_trg_MainQuest= null
 trigger gg_trg_WaveComplete= null
 trigger gg_trg_LastWaveComplete= null
-trigger gg_trg_DefeatCondition= null
 trigger gg_trg_SetGroupArray= null
 trigger gg_trg_UnitsInitializationWay1= null
 trigger gg_trg_UnitsInitializationWay2= null
@@ -209,8 +209,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-unit gg_unit_H004_0013= null
-trigger gg_trg_AlteracInitialization= null
+trigger gg_trg_DefeatCondition= null
 
     // Random Groups
 integer array gg_rg_000
@@ -6483,44 +6482,49 @@ endfunction
 //===========================================================================
 // Trigger: DefeatCondition
 //===========================================================================
+function Trig_DefeatCondition_Func001A takes nothing returns nothing
+    local unit enterUnit= GetEnumUnit()
+    if ( RectContainsUnit(udg_Way1[udg_Way1Count], enterUnit) == true or RectContainsUnit(udg_Way2[udg_Way2Count], enterUnit) == true ) then
+        if ( GetUnitTypeId(enterUnit) == 'h002' ) then
+            set udg_CurrentCountDefeat=( udg_CurrentCountDefeat + 1 )
+            call DisplayTextToForce(GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ))
+            call TriggerExecute(gg_trg_NPCMissCaravan)
+            call TriggerExecute(gg_trg_WaveComplete)
+        endif
+        
+        call RemoveUnit(enterUnit)
+        
+        if ( udg_CurrentCountDefeat >= udg_MaxCountDefeat ) then
+            call DisableTrigger(GetTriggeringTrigger())
+            call TriggerExecute(gg_trg_NPCDefeat)
+            call TriggerSleepAction(10.00)
+            set bj_forLoopAIndex=1
+            set bj_forLoopAIndexEnd=2
+            loop
+                exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+                call CustomDefeatBJ(ConvertedPlayer(GetForLoopIndexA()), "TRIGSTR_1156")
+                set bj_forLoopAIndex=bj_forLoopAIndex + 1
+            endloop
+        endif
+        
+        // Checking for the last horse that successfully left
+        if ( IsTriggerEnabled(gg_trg_LastWaveComplete) == true ) then
+            call TriggerExecute(gg_trg_LastWaveComplete)
+        endif
+    endif
+    set enterUnit=null
+endfunction
+
 function Trig_DefeatCondition_Actions takes nothing returns nothing
-    if ( GetUnitTypeId(GetEnteringUnit()) == 'h002' ) then
-        set udg_CurrentCountDefeat=( udg_CurrentCountDefeat + 1 )
-        call DisplayTextToForce(GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ))
-        call TriggerExecute(gg_trg_NPCMissCaravan)
-        call TriggerExecute(gg_trg_WaveComplete)
-    else
-    endif
-    call RemoveUnit(GetEnteringUnit())
-    if ( udg_CurrentCountDefeat >= udg_MaxCountDefeat ) then
-        call DisableTrigger(GetTriggeringTrigger())
-        call TriggerExecute(gg_trg_NPCDefeat)
-        call TriggerSleepAction(10.00)
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=2
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            call CustomDefeatBJ(ConvertedPlayer(GetForLoopIndexA()), "TRIGSTR_1156")
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    // Checking for the last horse that successfully left
-    if ( IsTriggerEnabled(gg_trg_LastWaveComplete) == true ) then
-        call TriggerExecute(gg_trg_LastWaveComplete)
-    else
-    endif
+    call ForGroupBJ(GetUnitsOfPlayerAll(Player(4)), function Trig_DefeatCondition_Func001A)
 endfunction
 
 //===========================================================================
 function InitTrig_DefeatCondition takes nothing returns nothing
     set gg_trg_DefeatCondition=CreateTrigger()
     call DisableTrigger(gg_trg_DefeatCondition)
-    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, udg_Way1[9])
-    call TriggerRegisterEnterRectSimple(gg_trg_DefeatCondition, udg_Way2[8])
-    if ( GetOwningPlayer(GetEnteringUnit()) == Player(4) ) then
-        call TriggerAddAction(gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions)
-    endif
+    call TriggerRegisterTimerEvent(gg_trg_DefeatCondition, 1.00, true)
+    call TriggerAddAction(gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions)
 endfunction
 
 
@@ -7452,7 +7456,7 @@ function Trig_WaveTimer_Actions takes nothing returns nothing
     set udg_TimerMinWave[1]=( 6.00 * 60.00 )
     set udg_TimerMinWave[2]=( 14.00 * 60.00 )
     set udg_TimerMinWave[3]=( 20.00 * 60.00 )
-    set udg_TimerMinWave[4]=( 27.00 * 60.00 )
+    set udg_TimerMinWave[4]=( 1.00 * 60.00 )
     set udg_TimerMinWave[5]=( 34.00 * 60.00 )
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=5
