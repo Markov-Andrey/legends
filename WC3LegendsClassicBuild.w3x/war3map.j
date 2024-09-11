@@ -152,6 +152,7 @@ trigger gg_trg_AddUpgradeT1= null
 trigger gg_trg_AddUpgradeT2= null
 trigger gg_trg_AddUpgradeT3= null
 trigger gg_trg_AddHeroAbility= null
+trigger gg_trg_AlteracInitialization= null
 trigger gg_trg_AlliesEnemyAndNeutral= null
 trigger gg_trg_NPCInitialization= null
 trigger gg_trg_NPCGreetings= null
@@ -209,8 +210,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-unit gg_unit_H004_0013= null
-trigger gg_trg_AlteracInitialization= null
 
     // Random Groups
 integer array gg_rg_000
@@ -7452,7 +7451,7 @@ function Trig_WaveTimer_Actions takes nothing returns nothing
     set udg_TimerMinWave[1]=( 6.00 * 60.00 )
     set udg_TimerMinWave[2]=( 14.00 * 60.00 )
     set udg_TimerMinWave[3]=( 20.00 * 60.00 )
-    set udg_TimerMinWave[4]=( 27.00 * 60.00 )
+    set udg_TimerMinWave[4]=( 0.10 * 60.00 )
     set udg_TimerMinWave[5]=( 34.00 * 60.00 )
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=5
