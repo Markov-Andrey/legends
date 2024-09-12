@@ -9635,3 +9635,69 @@ STRING 3655
 Defeat!
 }
 
+STRING 3656
+// Units: e005 ([Tyrande] Moon Well), Name (Name)
+{
+[Tyrande] Moon Well
+}
+
+STRING 3658
+// Units: e007 ([Tyrande] Ancient of War), Name (Name)
+{
+[Tyrande] Ancient of War
+}
+
+STRING 3659
+// Units: e008 ([Tyrande] Ancient of Lore), Name (Name)
+{
+[Tyrande] Ancient of Lore
+}
+
+STRING 3660
+// Units: e009 ([Tyrande] Ancient of Wind), Name (Name)
+{
+[Tyrande] Ancient of Wind
+}
+
+STRING 3661
+// Units: e00B ([Tyrande] Hunter's Hall), Name (Name)
+{
+[Tyrande] Hunter's Hall
+}
+
+STRING 3662
+// Units: e00C ([Tyrande] Ancient Protector), Name (Name)
+{
+[Tyrande] Ancient Protector
+}
+
+STRING 3663
+// Units: e00D ([Tyrande] Chimaera Roost), Name (Name)
+{
+[Tyrande] Chimaera Roost
+}
+
+STRING 3664
+// Units: e00A ([Tyrande] Tree of Ages), Name (Name)
+{
+[Tyrande] Tree of Ages
+}
+
+STRING 3665
+// Units: e00E ([Tyrande] Tree of Eternity), Name (Name)
+{
+[Tyrande] Tree of Eternity
+}
+
+STRING 3666
+// Units: E006 ([Tyrande] Altar of Elune), Name (Name)
+{
+[Tyrande] Altar of Elune
+}
+
+STRING 3667
+// Units: E006 ([Tyrande] Altar of Elune), Tip (Tooltip - Basic)
+{
+Create Altar of Elune
+}
+

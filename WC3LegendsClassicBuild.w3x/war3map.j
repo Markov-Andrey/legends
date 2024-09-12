@@ -173,6 +173,7 @@ trigger gg_trg_MainQuest= null
 trigger gg_trg_WaveComplete= null
 trigger gg_trg_LastWaveComplete= null
 trigger gg_trg_DefeatCondition= null
+trigger gg_trg_Defeat= null
 trigger gg_trg_SetGroupArray= null
 trigger gg_trg_UnitsInitializationWay1= null
 trigger gg_trg_UnitsInitializationWay2= null
@@ -209,7 +210,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_Defeat= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1950,6 +1950,9 @@ function Trig_LimitUnits_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
     // Wrynn
     call SetPlayerTechMaxAllowedSwap('O000', 1, GetEnumPlayer())
+    // Tyrande
+    call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('E006', 1, GetEnumPlayer())
 endfunction
 
 function Trig_LimitUnits_Actions takes nothing returns nothing
