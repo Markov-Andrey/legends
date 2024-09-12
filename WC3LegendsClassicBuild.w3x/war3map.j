@@ -753,6 +753,17 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p= Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'E006', - 480.0, - 32.0, 270.000, 'E006')
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1359,6 +1370,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -1373,7 +1385,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreateBuildingsForPlayer5() // INLINED!!
+    call CreatePlayerBuildings()
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
@@ -2094,7 +2106,7 @@ function Trig_PreviewLegend takes nothing returns nothing
         endif
 
         call ShowUnit(GetSpellAbilityUnit(), false)
-        call CreateNUnitsAtLoc(1, unitType, GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+        call CreateNUnitsAtLoc(1, unitType, GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), 275.00)
         call SelectUnitForPlayerSingle(bj_lastCreatedUnit, GetOwningPlayer(GetSpellAbilityUnit()))
         call RemoveUnit(GetSpellAbilityUnit())
 
@@ -7448,7 +7460,7 @@ function Trig_WaveTimer_Actions takes nothing returns nothing
     set udg_TimerMinWave[1]=( 6.00 * 60.00 )
     set udg_TimerMinWave[2]=( 14.00 * 60.00 )
     set udg_TimerMinWave[3]=( 20.00 * 60.00 )
-    set udg_TimerMinWave[4]=( 0.10 * 60.00 )
+    set udg_TimerMinWave[4]=( 27.00 * 60.00 )
     set udg_TimerMinWave[5]=( 34.00 * 60.00 )
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=5

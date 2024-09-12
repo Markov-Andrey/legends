@@ -9525,18 +9525,6 @@ STRING 3634
 Improvement to check the player's army
 }
 
-STRING 3635
-// Abilities: S004 ([Tyrande] Replace), EditorSuffix (Editor Suffix)
-{
- (Tree of Life)
-}
-
-STRING 3636
-// Abilities: S004 ([Tyrande] Replace), Name (Name)
-{
-[Tyrande] Replace
-}
-
 STRING 3637
 // Units: e002 ([Tyrande] Entangled Gold Mine), Name (Name)
 {
@@ -9699,5 +9687,71 @@ STRING 3667
 // Units: E006 ([Tyrande] Altar of Elune), Tip (Tooltip - Basic)
 {
 Create Altar of Elune
+}
+
+STRING 3668
+// Units: e00F ([Tyrande] Huntress), Name (Name)
+{
+[Tyrande] Huntress
+}
+
+STRING 3669
+// Units: e00G ([Tyrande] Dryad), Name (Name)
+{
+[Tyrande] Dryad
+}
+
+STRING 3670
+// Units: e00H ([Tyrande] Glaive Thrower), Name (Name)
+{
+[Tyrande] Glaive Thrower
+}
+
+STRING 3671
+// Units: e00I ([Tyrande] Hippogryph), Name (Name)
+{
+[Tyrande] Hippogryph
+}
+
+STRING 3672
+// Units: e00J ([Tyrande] Hippogryph Rider), Name (Name)
+{
+[Tyrande] Hippogryph Rider
+}
+
+STRING 3673
+// Units: e00K ([Tyrande] Chimaera), Name (Name)
+{
+[Tyrande] Chimaera
+}
+
+STRING 3674
+// Units: e00L ([Tyrande] Moonkin), Name (Name)
+{
+[Tyrande] Moonkin
+}
+
+STRING 3675
+// Units: e00M ([Tyrande] Priestess of Elune), Name (Name)
+{
+[Tyrande] Priestess of Elune
+}
+
+STRING 3676
+// Abilities: A057 ([Tyrande] Eclipse), Name (Name)
+{
+[Tyrande] Eclipse
+}
+
+STRING 3677
+// Abilities: A057 ([Tyrande] Eclipse), Tip (Tooltip - Normal)
+{
+Eclipse
+}
+
+STRING 3678
+// Abilities: A057 ([Tyrande] Eclipse), Ubertip (Tooltip - Normal - Extended)
+{
+Causes an eclipse that blocks out the sun and creates an artificial night. |nLasts <A057,Dur1> seconds.
 }
 
