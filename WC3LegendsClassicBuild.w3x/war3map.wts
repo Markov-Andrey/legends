@@ -1118,11 +1118,6 @@ STRING 1154
 Attack 4
 }
 
-STRING 1156
-{
-Defeat! Caravans lost.
-}
-
 STRING 1159
 // Units: h001 ([UI] Choose of Difficulty), Tip (Tooltip - Basic)
 {
@@ -9628,5 +9623,15 @@ STRING 3649
 // Abilities: A056 ([Wrynn] Veteran: New Ability), EditorSuffix (Editor Suffix)
 {
 (icon)
+}
+
+STRING 3654
+{
+Defeat!
+}
+
+STRING 3655
+{
+Defeat!
 }
 

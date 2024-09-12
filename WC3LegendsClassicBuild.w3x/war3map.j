@@ -174,6 +174,9 @@ trigger gg_trg_WaveComplete= null
 trigger gg_trg_LastWaveComplete= null
 trigger gg_trg_DefeatCondition= null
 trigger gg_trg_SetGroupArray= null
+trigger gg_trg_UnitsInitializationWay1= null
+trigger gg_trg_UnitsInitializationWay2= null
+trigger gg_trg_UnitsInitializationWay3= null
 trigger gg_trg_DebugUnitsIniWay3= null
 trigger gg_trg_GroupArrayReset= null
 trigger gg_trg_CreateSquadWave1n1= null
@@ -206,9 +209,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_UnitsInitializationWay3= null
-trigger gg_trg_UnitsInitializationWay2= null
-trigger gg_trg_UnitsInitializationWay1= null
+trigger gg_trg_Defeat= null
 
     // Random Groups
 integer array gg_rg_000
@@ -785,15 +786,19 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function CreateBuildingsForPlayer4 takes nothing returns nothing
-    local player p= Player(4)
+function CreateBuildingsForPlayer5 takes nothing returns nothing
+    local player p= Player(5)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
+    set u=BlzCreateUnitWithSkin(p, 'h007', 2360.8, - 8063.4, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6593.8, 8671.4, 53.920, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6815.6, - 7567.9, 270.000, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 5265.0, - 8802.8, 53.920, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6793.9, 7759.0, 53.920, 'h007')
@@ -811,72 +816,6 @@ function CreateBuildingsForPlayer4 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h007', - 5135.8, - 9072.8, 53.920, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 6207.7, - 8757.2, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5776.8, 8193.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 9510.2, 624.4, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5633.1, 7939.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8668.9, 224.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8627.2, 440.7, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5890.6, 7909.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7020.2, 7708.7, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7146.9, 8039.5, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8490.6, - 3805.2, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8765.1, - 4057.1, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8504.8, - 4062.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8704.5, - 4358.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8876.5, 445.2, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6595.9, 7748.3, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8217.7, 1030.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8187.6, 1215.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8912.1, 231.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8467.6, 1248.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 9183.5, - 2900.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8884.2, - 3243.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8899.7, - 3037.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 9208.9, - 3239.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6482.5, - 8353.3, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 4879.8, - 9072.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 9792.5, - 3462.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7168.5, - 8774.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-endfunction
-
-//===========================================================================
-function CreateBuildingsForPlayer5 takes nothing returns nothing
-    local player p= Player(5)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'h007', 2360.8, - 8063.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6815.6, - 7567.9, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7480.8, 4096.6, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 3)
@@ -908,13 +847,41 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 13)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 7098.7, - 6918.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 12)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5776.8, 8193.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 9510.2, 624.4, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5633.1, 7939.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8668.9, 224.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8627.2, 440.7, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 5890.6, 7909.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7020.2, 7708.7, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 7146.9, 8039.5, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 5818.7, - 5830.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 8)
     set u=BlzCreateUnitWithSkin(p, 'h007', 5827.4, 3368.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8490.6, - 3805.2, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8765.1, - 4057.1, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8504.8, - 4062.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8704.5, - 4358.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7656.5, 2756.7, 270.000, 'h007')
     set life=GetUnitState(u, UNIT_STATE_LIFE)
     call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8876.5, 445.2, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 6595.9, 7748.3, 53.920, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 6522.7, - 5190.7, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
@@ -952,8 +919,20 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     call SetUnitState(u, UNIT_STATE_MANA, 9)
     set u=BlzCreateUnitWithSkin(p, 'h007', 5996.1, 4008.5, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8217.7, 1030.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 2872.8, - 7871.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 4)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8187.6, 1215.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8912.1, 231.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', 8467.6, 1248.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9183.5, - 2900.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8884.2, - 3243.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 1848.8, - 7615.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 9)
     set u=BlzCreateUnitWithSkin(p, 'h007', - 4216.8, 7999.4, 90.000, 'h007')
@@ -968,6 +947,10 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     set life=GetUnitState(u, UNIT_STATE_LIFE)
     call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
     call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 8899.7, - 3037.0, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 10)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9208.9, - 3239.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6202.2, 6024.4, 270.000, 'h007')
     call SetUnitState(u, UNIT_STATE_MANA, 10)
     set u=BlzCreateUnitWithSkin(p, 'h007', 7098.2, 6472.4, 270.000, 'h007')
@@ -1016,6 +999,14 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     set life=GetUnitState(u, UNIT_STATE_LIFE)
     call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
     call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 6482.5, - 8353.3, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 4879.8, - 9072.8, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 11)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 9792.5, - 3462.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
+    set u=BlzCreateUnitWithSkin(p, 'h007', - 7168.5, - 8774.6, 53.920, 'h007')
+    call SetUnitState(u, UNIT_STATE_MANA, 6)
     set u=BlzCreateUnitWithSkin(p, 'h007', 6586.2, 2440.4, 270.000, 'h007')
     set life=GetUnitState(u, UNIT_STATE_LIFE)
     call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
@@ -1368,7 +1359,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer4()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -1383,7 +1373,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreatePlayerBuildings()
+    call CreateBuildingsForPlayer5() // INLINED!!
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
@@ -5680,6 +5670,9 @@ endfunction
 // Trigger: AlteracInitialization
 //===========================================================================
 function Trig_AlteracInitialization_Actions takes nothing returns nothing
+    // test
+    // call ConditionalTriggerExecute( gg_trg_AddHeroAbility )
+    // call TriggerExecute( gg_trg_AddHeroAbility )
     // Ini
     call EnableTrigger(gg_trg_AlliesEnemyAndNeutral)
     // NPC
@@ -5696,6 +5689,9 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_SetWayPoint)
     call EnableTrigger(gg_trg_Way1Ping)
     call EnableTrigger(gg_trg_Way2Ping)
+    call TriggerExecute(gg_trg_IniZone)
+    call EnableTrigger(gg_trg_AlternateMovement)
+    call EnableTrigger(gg_trg_UnitGroupDead)
     // Quest Start
     call EnableTrigger(gg_trg_MainQuest)
     // Quest Win
@@ -5704,7 +5700,7 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     // Quest Defeat
     call EnableTrigger(gg_trg_DefeatCondition)
     // UnitGroup Initialization
-    call EnableTrigger(gg_trg_SetGroupArray)
+    call TriggerExecute(gg_trg_SetGroupArray)
     // Wave Army Set
     // Way
     call EnableTrigger(gg_trg_UnitsInitializationWay1)
@@ -5713,6 +5709,7 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_DebugUnitsIniWay3)
     call EnableTrigger(gg_trg_DebugUnitsIniWay3)
     call EnableTrigger(gg_trg_GroupArrayReset)
+
     // CreateSquad
     call EnableTrigger(gg_trg_CreateSquadWave1n1)
     call EnableTrigger(gg_trg_CreateSquadWave1n2)
@@ -5731,14 +5728,14 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_CreateSquadEnemy4)
     call EnableTrigger(gg_trg_DeadEnemyHero)
     // MainQuest Wave
+    call TriggerExecute(gg_trg_WaveTimer)
     call EnableTrigger(gg_trg_Wave1)
     call EnableTrigger(gg_trg_Wave2)
     call EnableTrigger(gg_trg_Wave3)
     call EnableTrigger(gg_trg_Wave4)
     call EnableTrigger(gg_trg_Wave5)
-    call EnableTrigger(gg_trg_WaveTimer)
     // Enemy Wave
-    call EnableTrigger(gg_trg_EnemyTimer)
+    call TriggerExecute(gg_trg_EnemyTimer)
     call EnableTrigger(gg_trg_EnemyRandomSpawn)
     call EnableTrigger(gg_trg_EnemyWave1)
     call EnableTrigger(gg_trg_EnemyWave2)
@@ -6130,29 +6127,30 @@ endfunction
 // Trigger: SetWayPoint
 //===========================================================================
 function Trig_SetWayPoint_Actions takes nothing returns nothing
+    local integer regionSize= 1000
     // Way1
     set udg_Way1Count=9
-    set udg_Way1[0]=RectFromCenterSizeBJ(Location(- 6500.00, - 9400.00), 600.00, 600.00)
-    set udg_Way1[1]=RectFromCenterSizeBJ(Location(- 4200.00, - 6700.00), 600.00, 600.00)
-    set udg_Way1[2]=RectFromCenterSizeBJ(Location(- 2700.00, - 7200.00), 600.00, 600.00)
-    set udg_Way1[3]=RectFromCenterSizeBJ(Location(320.00, - 5100.00), 600.00, 600.00)
-    set udg_Way1[4]=RectFromCenterSizeBJ(Location(2600.00, - 5900.00), 600.00, 600.00)
-    set udg_Way1[5]=RectFromCenterSizeBJ(Location(4100.00, - 5100.00), 600.00, 600.00)
-    set udg_Way1[6]=RectFromCenterSizeBJ(Location(5100.00, - 4300.00), 600.00, 600.00)
-    set udg_Way1[7]=RectFromCenterSizeBJ(Location(5600.00, - 2600.00), 600.00, 600.00)
-    set udg_Way1[8]=RectFromCenterSizeBJ(Location(7100.00, - 430.00), 600.00, 600.00)
-    set udg_Way1[9]=RectFromCenterSizeBJ(Location(9600.00, 1200.00), 600.00, 600.00)
+    set udg_Way1[0]=RectFromCenterSizeBJ(Location(- 6500.00, - 9400.00), regionSize, regionSize)
+    set udg_Way1[1]=RectFromCenterSizeBJ(Location(- 4200.00, - 6700.00), regionSize, regionSize)
+    set udg_Way1[2]=RectFromCenterSizeBJ(Location(- 2700.00, - 7200.00), regionSize, regionSize)
+    set udg_Way1[3]=RectFromCenterSizeBJ(Location(320.00, - 5100.00), regionSize, regionSize)
+    set udg_Way1[4]=RectFromCenterSizeBJ(Location(2600.00, - 5900.00), regionSize, regionSize)
+    set udg_Way1[5]=RectFromCenterSizeBJ(Location(4100.00, - 5100.00), regionSize, regionSize)
+    set udg_Way1[6]=RectFromCenterSizeBJ(Location(5100.00, - 4300.00), regionSize, regionSize)
+    set udg_Way1[7]=RectFromCenterSizeBJ(Location(5600.00, - 2600.00), regionSize, regionSize)
+    set udg_Way1[8]=RectFromCenterSizeBJ(Location(7100.00, - 430.00), regionSize, regionSize)
+    set udg_Way1[9]=RectFromCenterSizeBJ(Location(9600.00, 1200.00), regionSize, regionSize)
     // Way2
     set udg_Way2Count=8
-    set udg_Way2[0]=RectFromCenterSizeBJ(Location(- 9300.00, - 3800.00), 600.00, 600.00)
-    set udg_Way2[1]=RectFromCenterSizeBJ(Location(- 7600.00, - 2300.00), 600.00, 600.00)
-    set udg_Way2[2]=RectFromCenterSizeBJ(Location(- 7600.00, 308.00), 600.00, 600.00)
-    set udg_Way2[3]=RectFromCenterSizeBJ(Location(- 6200.00, 900.00), 600.00, 600.00)
-    set udg_Way2[4]=RectFromCenterSizeBJ(Location(- 5800.00, 3300.00), 600.00, 600.00)
-    set udg_Way2[5]=RectFromCenterSizeBJ(Location(- 2900.00, 3600.00), 600.00, 600.00)
-    set udg_Way2[6]=RectFromCenterSizeBJ(Location(800.00, 5000.00), 600.00, 600.00)
-    set udg_Way2[7]=RectFromCenterSizeBJ(Location(4800.00, 5800.00), 600.00, 600.00)
-    set udg_Way2[8]=RectFromCenterSizeBJ(Location(7600.00, 9300.00), 600.00, 600.00)
+    set udg_Way2[0]=RectFromCenterSizeBJ(Location(- 9300.00, - 3800.00), regionSize, regionSize)
+    set udg_Way2[1]=RectFromCenterSizeBJ(Location(- 7600.00, - 2300.00), regionSize, regionSize)
+    set udg_Way2[2]=RectFromCenterSizeBJ(Location(- 7600.00, 308.00), regionSize, regionSize)
+    set udg_Way2[3]=RectFromCenterSizeBJ(Location(- 6200.00, 900.00), regionSize, regionSize)
+    set udg_Way2[4]=RectFromCenterSizeBJ(Location(- 5800.00, 3300.00), regionSize, regionSize)
+    set udg_Way2[5]=RectFromCenterSizeBJ(Location(- 2900.00, 3600.00), regionSize, regionSize)
+    set udg_Way2[6]=RectFromCenterSizeBJ(Location(800.00, 5000.00), regionSize, regionSize)
+    set udg_Way2[7]=RectFromCenterSizeBJ(Location(4800.00, 5800.00), regionSize, regionSize)
+    set udg_Way2[8]=RectFromCenterSizeBJ(Location(7600.00, 9300.00), regionSize, regionSize)
 endfunction
 
 //===========================================================================
@@ -6249,7 +6247,7 @@ endfunction
 //===========================================================================
 function InitTrig_IniZone takes nothing returns nothing
     set gg_trg_IniZone=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_IniZone, 0.10)
+    call DisableTrigger(gg_trg_IniZone)
     call TriggerAddAction(gg_trg_IniZone, function Trig_IniZone_Actions)
 endfunction
 
@@ -6322,6 +6320,7 @@ endfunction
 //===========================================================================
 function InitTrig_AlternateMovement takes nothing returns nothing
     set gg_trg_AlternateMovement=CreateTrigger()
+    call DisableTrigger(gg_trg_AlternateMovement)
     call TriggerRegisterTimerEventPeriodic(gg_trg_AlternateMovement, 1.00)
     call TriggerAddAction(gg_trg_AlternateMovement, function Trig_AlternateMovement_Actions)
 endfunction
@@ -6361,6 +6360,7 @@ endfunction
 //===========================================================================
 function InitTrig_UnitGroupDead takes nothing returns nothing
     set gg_trg_UnitGroupDead=CreateTrigger()
+    call DisableTrigger(gg_trg_UnitGroupDead)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_UnitGroupDead, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_UnitGroupDead, Condition(function Trig_UnitGroupDead_Conditions))
     call TriggerAddAction(gg_trg_UnitGroupDead, function Trig_UnitGroupDead_Actions)
@@ -6467,7 +6467,7 @@ endfunction
 function Trig_DefeatCondition_Func001A takes nothing returns nothing
     local unit enterUnit= GetEnumUnit()
     if ( RectContainsUnit(udg_Way1[udg_Way1Count], enterUnit) == true or RectContainsUnit(udg_Way2[udg_Way2Count], enterUnit) == true ) then
-        if ( GetUnitTypeId(enterUnit) == 'h002' ) then
+        if ( GetUnitTypeId(enterUnit) == 'h002' and udg_CurrentCountDefeat < udg_MaxCountDefeat ) then
             set udg_CurrentCountDefeat=( udg_CurrentCountDefeat + 1 )
             call DisplayTextToForce(GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ))
             call TriggerExecute(gg_trg_NPCMissCaravan)
@@ -6478,15 +6478,10 @@ function Trig_DefeatCondition_Func001A takes nothing returns nothing
         
         if ( udg_CurrentCountDefeat >= udg_MaxCountDefeat ) then
             call DisableTrigger(GetTriggeringTrigger())
+            call TriggerExecute(gg_trg_Defeat)
             call TriggerExecute(gg_trg_NPCDefeat)
-            call TriggerSleepAction(10.00)
-            set bj_forLoopAIndex=1
-            set bj_forLoopAIndexEnd=2
-            loop
-                exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-                call CustomDefeatBJ(ConvertedPlayer(GetForLoopIndexA()), "TRIGSTR_1156")
-                set bj_forLoopAIndex=bj_forLoopAIndex + 1
-            endloop
+            call DisableTrigger(gg_trg_NPCMissCaravan)
+            call DisableTrigger(gg_trg_WaveComplete)
         endif
         
         // Checking for the last horse that successfully left
@@ -6509,6 +6504,21 @@ function InitTrig_DefeatCondition takes nothing returns nothing
     call TriggerAddAction(gg_trg_DefeatCondition, function Trig_DefeatCondition_Actions)
 endfunction
 
+
+//===========================================================================
+// Trigger: Defeat
+//===========================================================================
+function Trig_Defeat_Actions takes nothing returns nothing
+    call TriggerSleepAction(5.00)
+    call CustomDefeatBJ(Player(0), "TRIGSTR_3654")
+    call CustomDefeatBJ(Player(1), "TRIGSTR_3655")
+endfunction
+
+//===========================================================================
+function InitTrig_Defeat takes nothing returns nothing
+    set gg_trg_Defeat=CreateTrigger()
+    call TriggerAddAction(gg_trg_Defeat, function Trig_Defeat_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: SetGroupArray
@@ -7450,7 +7460,6 @@ endfunction
 function InitTrig_WaveTimer takes nothing returns nothing
     set gg_trg_WaveTimer=CreateTrigger()
     call DisableTrigger(gg_trg_WaveTimer)
-    call TriggerRegisterTimerEventSingle(gg_trg_WaveTimer, 0.01)
     call TriggerAddAction(gg_trg_WaveTimer, function Trig_WaveTimer_Actions)
 endfunction
 
@@ -7837,7 +7846,6 @@ endfunction
 function InitTrig_EnemyTimer takes nothing returns nothing
     set gg_trg_EnemyTimer=CreateTrigger()
     call DisableTrigger(gg_trg_EnemyTimer)
-    call TriggerRegisterTimerEventSingle(gg_trg_EnemyTimer, 0.01)
     call TriggerAddAction(gg_trg_EnemyTimer, function Trig_EnemyTimer_Actions)
 endfunction
 
@@ -8461,6 +8469,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WaveComplete()
     call InitTrig_LastWaveComplete()
     call InitTrig_DefeatCondition()
+    call InitTrig_Defeat()
     call InitTrig_SetGroupArray()
     call InitTrig_UnitsInitializationWay1()
     call InitTrig_UnitsInitializationWay2()
