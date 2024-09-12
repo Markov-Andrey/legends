@@ -174,9 +174,6 @@ trigger gg_trg_WaveComplete= null
 trigger gg_trg_LastWaveComplete= null
 trigger gg_trg_DefeatCondition= null
 trigger gg_trg_SetGroupArray= null
-trigger gg_trg_UnitsInitializationWay1= null
-trigger gg_trg_UnitsInitializationWay2= null
-trigger gg_trg_UnitsInitializationWay3= null
 trigger gg_trg_DebugUnitsIniWay3= null
 trigger gg_trg_GroupArrayReset= null
 trigger gg_trg_CreateSquadWave1n1= null
@@ -209,6 +206,9 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_UnitsInitializationWay3= null
+trigger gg_trg_UnitsInitializationWay2= null
+trigger gg_trg_UnitsInitializationWay1= null
 
     // Random Groups
 integer array gg_rg_000
@@ -6546,21 +6546,42 @@ function Trig_UnitsInitializationWay1_Func004A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
-    // Units Initialization
-    call TriggerExecute(gg_trg_AddUnitBuildingHero)
-    call TriggerSleepAction(bj_POLLED_WAIT_INTERVAL)
-    // call PolledWait( 0.1 )
-    // call ForGroupBJ( GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay1_Func004A )
-    call GroupPointOrderLocBJ(udg_UnitGroupArray1[udg_CountGroup1], "attack", GetRectCenter(udg_Way1[1]))
+function Trig_UnitsInitializationWay1_Func011A takes nothing returns nothing
+    // Console Log
+    set udg_ConsoleTrigger="UnitsInitializationWay1"
+    set udg_ConsoleMessage=" - " + GetUnitName(GetEnumUnit())
+    call TriggerExecute(gg_trg_ConsoleLog)
 endfunction
 
-//===========================================================================
+function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
+    local group g= GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
+    //local location l = GetRectCenter(gg_rct_Way1_p1)
+    local integer i= udg_CountGroup1
+
+    // Initialize unit group and wait
+    call TriggerExecute(gg_trg_AddUnitBuildingHero)
+    call PolledWait(0.01)
+
+    // Add units to group and order attack
+    call ForGroupBJ(g, function Trig_UnitsInitializationWay1_Func004A)
+    //call GroupPointOrderLocBJ(udg_UnitGroupArray1[i], "attack", l)
+    
+    // Console log
+    set udg_ConsoleTrigger="UnitsInitializationWay1"
+    set udg_ConsoleMessage="Group " + I2S(i) + ":"
+    call TriggerExecute(gg_trg_ConsoleLog)
+    call ForGroupBJ(udg_UnitGroupArray1[i], function Trig_UnitsInitializationWay1_Func011A)
+
+    // Cleanup
+    //call RemoveLocation(l)
+    call DestroyGroup(g)
+endfunction
+
 function InitTrig_UnitsInitializationWay1 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay1=CreateTrigger()
-    call DisableTrigger(gg_trg_UnitsInitializationWay1)
     call TriggerAddAction(gg_trg_UnitsInitializationWay1, function Trig_UnitsInitializationWay1_Actions)
 endfunction
+
 //===========================================================================
 // Trigger: UnitsInitializationWay2
 //
@@ -6572,21 +6593,34 @@ function Trig_UnitsInitializationWay2_Func004A takes nothing returns nothing
     endif
 endfunction
 
+function Trig_UnitsInitializationWay2_Func011A takes nothing returns nothing
+    // Console Log
+    set udg_ConsoleTrigger="UnitsInitializationWay2"
+    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
+    call TriggerExecute(gg_trg_ConsoleLog)
+endfunction
+
 function Trig_UnitsInitializationWay2_Actions takes nothing returns nothing
     // Units Initialization
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
-    call TriggerSleepAction(bj_POLLED_WAIT_INTERVAL)
-    // call PolledWait( 0.1 )
-    // call ForGroupBJ( GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay2_Func004A )
-    call GroupPointOrderLocBJ(udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(udg_Way2[1]))
+    call PolledWait(0.01)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay2_Func004A)
+    //call GroupPointOrderLocBJ( udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(gg_rct_Way2_p1) )
+    // Console Log
+    set udg_ConsoleTrigger="UnitsInitializationWay2"
+    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup2) ) + ":" )
+    call TriggerExecute(gg_trg_ConsoleLog)
+    //  
+    call ForGroupBJ(udg_UnitGroupArray2[udg_CountGroup2], function Trig_UnitsInitializationWay2_Func011A)
 endfunction
 
 //===========================================================================
 function InitTrig_UnitsInitializationWay2 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay2=CreateTrigger()
-    call DisableTrigger(gg_trg_UnitsInitializationWay2)
     call TriggerAddAction(gg_trg_UnitsInitializationWay2, function Trig_UnitsInitializationWay2_Actions)
 endfunction
+
+
 //===========================================================================
 // Trigger: UnitsInitializationWay3
 //
@@ -6598,9 +6632,16 @@ function Trig_UnitsInitializationWay3_Func005A takes nothing returns nothing
     endif
 endfunction
 
+function Trig_UnitsInitializationWay3_Func012A takes nothing returns nothing
+    // Console Log
+    set udg_ConsoleTrigger="UnitsInitializationWay3"
+    set udg_ConsoleMessage=" - " + GetUnitName(GetEnumUnit())
+    call TriggerExecute(gg_trg_ConsoleLog)
+endfunction
+
 function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
     local group g
-    local location l
+    //local location l
     local integer i
 
     // Clear groups
@@ -6613,22 +6654,29 @@ function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
 
     // Units Initialization
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
-    call PolledWait(0.1)
+    call PolledWait(0.01)
 
     // Add units to group and order attack
     set g=GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
-    set l=Location(- 528.00, 432.00)
+    //set l = GetRectCenter(gg_rct_EnemyWayAttackPoint)
     call ForGroupBJ(g, function Trig_UnitsInitializationWay3_Func005A)
-    call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", l)
+    //call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", l)
+
+    // Console log
+    set udg_ConsoleTrigger="UnitsInitializationWay3"
+    set udg_ConsoleMessage="Group " + I2S(udg_CountGroup3) + ":"
+    call TriggerExecute(gg_trg_ConsoleLog)
+    
+    // Console log for units
+    call ForGroupBJ(udg_UnitGroupArray3[udg_CountGroup3], function Trig_UnitsInitializationWay3_Func012A)
 
     // Cleanup
-    call RemoveLocation(l)
+    //call RemoveLocation(l)
     call DestroyGroup(g)
 endfunction
 
 function InitTrig_UnitsInitializationWay3 takes nothing returns nothing
     set gg_trg_UnitsInitializationWay3=CreateTrigger()
-    call DisableTrigger(gg_trg_UnitsInitializationWay3)
     call TriggerAddAction(gg_trg_UnitsInitializationWay3, function Trig_UnitsInitializationWay3_Actions)
 endfunction
 //===========================================================================
@@ -7621,42 +7669,42 @@ function Trig_Wave4_Actions takes nothing returns nothing
     set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=1
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
-    call TriggerExecute(gg_trg_UnitsInitializationWay1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=1
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
-    call TriggerExecute(gg_trg_UnitsInitializationWay2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
     set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=2
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
-    call TriggerExecute(gg_trg_UnitsInitializationWay1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=2
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
-    call TriggerExecute(gg_trg_UnitsInitializationWay2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     call TriggerSleepAction(12.00)
     //  
     set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=3
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
-    call TriggerExecute(gg_trg_UnitsInitializationWay1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=3
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
-    call TriggerExecute(gg_trg_UnitsInitializationWay2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
     //  
     call TriggerSleepAction(12.00)
@@ -7664,14 +7712,14 @@ function Trig_Wave4_Actions takes nothing returns nothing
     set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=4
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
-    call TriggerExecute(gg_trg_UnitsInitializationWay1)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
     call TriggerSleepAction(0.10)
     //  
     set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=4
     call TriggerExecute(gg_trg_CreateSquadWave2n2)
-    call TriggerExecute(gg_trg_UnitsInitializationWay2)
+    call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
 endfunction
 
