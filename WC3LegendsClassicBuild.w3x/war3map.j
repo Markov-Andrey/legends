@@ -1,24 +1,24 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
         // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
+constant boolean CustomConsoleUI__workerFace= true
 //endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
@@ -232,7 +232,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_ChangeUI= null
 
     // Random Groups
 integer array gg_rg_000
@@ -250,18 +249,18 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
@@ -279,7 +278,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -290,7 +289,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -310,10 +309,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -326,18 +325,18 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -358,19 +357,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -477,11 +476,11 @@ endglobals
         set CustomConsoleUI_x[index]=0.000
         set CustomConsoleUI_y[index]=0.0
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -1697,75 +1696,6 @@ endfunction
 //*  Triggers
 //*
 //***************************************************************************
-
-//===========================================================================
-// Trigger: ChangeUI
-//===========================================================================
-function Trig_ChangeUI_Func001C takes nothing returns boolean
-    if ( not ( StringCase(GetEventPlayerChatString(), false) == "human" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChangeUI_Func002C takes nothing returns boolean
-    if ( not ( StringCase(GetEventPlayerChatString(), false) == "orc" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChangeUI_Func003C takes nothing returns boolean
-    if ( not ( StringCase(GetEventPlayerChatString(), false) == "undead" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChangeUI_Func004C takes nothing returns boolean
-    if ( not ( StringCase(GetEventPlayerChatString(), false) == "nightelf" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChangeUI_Func005C takes nothing returns boolean
-    if ( not ( StringCase(GetEventPlayerChatString(), false) == "demon" ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChangeUI_Actions takes nothing returns nothing
-    if ( Trig_ChangeUI_Func001C() ) then
-        call UseCustomConsole(GetTriggerPlayer() , 1)
-    else
-    endif
-    if ( Trig_ChangeUI_Func002C() ) then
-        call UseCustomConsole(GetTriggerPlayer() , 2)
-    else
-    endif
-    if ( Trig_ChangeUI_Func003C() ) then
-        call UseCustomConsole(GetTriggerPlayer() , 3)
-    else
-    endif
-    if ( Trig_ChangeUI_Func004C() ) then
-        call UseCustomConsole(GetTriggerPlayer() , 4)
-    else
-    endif
-    if ( Trig_ChangeUI_Func005C() ) then
-        call UseCustomConsole(GetTriggerPlayer() , 5)
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_ChangeUI takes nothing returns nothing
-    set gg_trg_ChangeUI=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_ChangeUI, Player(0), "", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_ChangeUI, Player(1), "", false)
-    call TriggerAddAction(gg_trg_ChangeUI, function Trig_ChangeUI_Actions)
-endfunction
 
 //===========================================================================
 // Trigger: ConsoleLog
@@ -5041,7 +4971,24 @@ function Trig_TyrandeShadowstalk_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_TyrandeShadowstalk_Func001Func001Func006C takes nothing returns boolean
+function Trig_TyrandeShadowstalk_Func001Func001Func005Func005C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeShadowstalk_Func001Func001Func005C takes nothing returns boolean
+    if ( not Trig_TyrandeShadowstalk_Func001Func001Func005Func005C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeShadowstalk_Func001Func001Func007C takes nothing returns boolean
     if ( ( IsPlayerAlly(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
         return true
     endif
@@ -5052,7 +4999,7 @@ function Trig_TyrandeShadowstalk_Func001Func001Func006C takes nothing returns bo
 endfunction
 
 function Trig_TyrandeShadowstalk_Func001Func001C takes nothing returns boolean
-    if ( not Trig_TyrandeShadowstalk_Func001Func001Func006C() ) then
+    if ( not Trig_TyrandeShadowstalk_Func001Func001Func007C() ) then
         return false
     endif
     return true
@@ -5064,6 +5011,13 @@ function Trig_TyrandeShadowstalk_Func001A takes nothing returns nothing
         call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
         call UnitAddAbilityBJ('A05A', GetLastCreatedUnit())
         call IssueTargetOrderBJ(GetLastCreatedUnit(), "invisibility", GetEnumUnit())
+        if ( Trig_TyrandeShadowstalk_Func001Func001Func005C() ) then
+            call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
+            call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+            call UnitAddAbilityBJ('A05C', GetLastCreatedUnit())
+            call IssueTargetOrderBJ(GetLastCreatedUnit(), "slow", GetEnumUnit())
+        else
+        endif
     else
         call DoNothing()
     endif
@@ -8780,7 +8734,6 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_ChangeUI()
     call InitTrig_ConsoleLog()
     call InitTrig_TimerMinus()
     call InitTrig_TestWaveTimer1()
@@ -9079,8 +9032,8 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()

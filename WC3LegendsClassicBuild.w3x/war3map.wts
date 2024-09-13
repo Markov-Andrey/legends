@@ -9755,12 +9755,6 @@ STRING 3684
 [Shared] Dummy
 }
 
-STRING 3685
-// Abilities: A059 ([Tyrande] Shadowstalk), Ubertip (Tooltip - Normal - Extended)
-{
-Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <A05A,Dur1> seconds.
-}
-
 STRING 3686
 // Abilities: A05A ([Tyrande] Shadowstalk), EditorSuffix (Editor Suffix)
 {
@@ -9774,8 +9768,47 @@ STRING 3687
 }
 
 STRING 3688
+// Abilities: A05C ([Tyrande] Shadowstalk), Name (Name)
+{
+[Tyrande] Shadowstalk
+}
+
+STRING 3689
+// Abilities: A059 ([Tyrande] Shadowstalk), Ubertip (Tooltip - Normal - Extended)
+{
+Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. 
+Lasts <A05A,Dur1> seconds.
+
+|cFF005DFFNight:|R Add increases the movement speed. Lasts <A05B,Dur1> seconds.
+}
+
+STRING 3690
+// Abilities: A05C ([Tyrande] Shadowstalk), EditorSuffix (Editor Suffix)
+{
+(Night Speed)
+}
+
+STRING 3691
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
 [Tyrande] Shadowstalk
+}
+
+STRING 3692
+// Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), Bufftip (Tooltip)
+{
+[Tyrande] Shadowstalk
+}
+
+STRING 3693
+// Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), Buffubertip (Tooltip - Extended)
+{
+This unit is add movement speed rate are bonus
+}
+
+STRING 3694
+// Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), EditorName (Name (Editor Only))
+{
+[Tyrande] Shadowstalk (Night Speed)
 }
 
