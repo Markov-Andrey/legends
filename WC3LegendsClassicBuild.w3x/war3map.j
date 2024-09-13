@@ -1,4 +1,25 @@
 globals
+//globals from FrameLoader:
+constant boolean LIBRARY_FrameLoader=true
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
+//endglobals from FrameLoader
+//globals from CustomConsoleUI:
+constant boolean LIBRARY_CustomConsoleUI=true
+framehandle CustomConsoleUI___idleWorkerButton
+framehandle CustomConsoleUI___idleWorkerButtonOverlay
+framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI___customInventoryCover
+framehandle CustomConsoleUI___customInventoryCoverParent
+string array CustomConsoleUI_data
+integer array CustomConsoleUI_dataCount
+integer CustomConsoleUI___dataPageSize= 11
+real array CustomConsoleUI_x
+real array CustomConsoleUI_y
+        // workerFace = true can only be used when you save the map in 1.32.6+
+constant boolean CustomConsoleUI___workerFace= true
+//endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
 rect array udg_Way1
@@ -142,6 +163,7 @@ trigger gg_trg_WrynnRent= null
 trigger gg_trg_WrynnDeposit= null
 trigger gg_trg_WrynnDepositTimer= null
 trigger gg_trg_TyrandeIni= null
+trigger gg_trg_TyrandeShadowstalk= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -210,17 +232,260 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_TyrandeShadowstalk= null
+trigger gg_trg_ChangeUI= null
 
     // Random Groups
 integer array gg_rg_000
 
+trigger l__library_init
 
 //JASSHelper struct globals:
 
 endglobals
 
 
+//library FrameLoader:
+// in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
+// This library runs all functions added to it with a 0s delay after the game was loaded.
+// function FrameLoaderAdd takes code func returns nothing
+    // func runs when the game is loaded.
+    function FrameLoaderAdd takes code func returns nothing
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
+    endfunction
+
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
+    endfunction
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    endfunction
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    endfunction
+
+//library FrameLoader ends
+//library CustomConsoleUI:
+
+// CustomConsoleUI by Tasyen
+// CustomConsoleUI allows to change the UI during the game, when setuped correctly. This excludes the mouse cursor and the UI sounds.
+// In non reforged it can also not change the Idle worker Button nor the no inventory cover.
+// How to setup this: First you have to make the default Console Textures be hidden that is done in Game Interface.
+//    Set ConsoleTexture01 to ConsoleTexture06 to UI\Widgets\EscMenu\Human\blank-background.blp
+//    The Day of Time clock has hardcoded textures therefore you need to swap it out. That also should be done in Gameinterface.
+//    TimeOfDayIndicator to the model included in this system.
+//    Now export and Import war3mapImported\CustomConsoleUI.toc & war3mapImported\CustomConsoleUI.fdf
+//    Finally you have to set the used textures into local data
+
+    function AddCustomConsole takes integer index,string texture returns nothing
+        set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
+        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+    endfunction
+
+    function UseCustomConsole takes player p,integer index returns nothing
+        local integer pageValue
+        if GetLocalPlayer() != p then
+            return
+        endif
+        if index < 1 then
+            set index=GetHandleId(GetPlayerRace(p))
+        endif
+        set pageValue=index * CustomConsoleUI___dataPageSize
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI3T", 0), CustomConsoleUI_data[pageValue + 3], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI2TL", 0), CustomConsoleUI_data[pageValue + 2], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI2TR", 0), CustomConsoleUI_data[pageValue + 2], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI1T", 0), CustomConsoleUI_data[pageValue + 1], 0, false)
+
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI1B", 0), CustomConsoleUI_data[pageValue + 1], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI2B", 0), CustomConsoleUI_data[pageValue + 2], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI3B", 0), CustomConsoleUI_data[pageValue + 3], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4B", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5B", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6B", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
+    
+        call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUIClock", 0), CustomConsoleUI_data[pageValue + 7], 0, true)
+        if GetLocalizedString("REFORGED") != "REFORGED" then
+            call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
+
+                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+
+        else
+            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+        endif
+        call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
+    endfunction
+
+    function CreateCustomConsole takes nothing returns nothing
+        call BlzLoadTOCFile("war3mapimported\\CustomConsoleUI.toc")
+        
+        call BlzCreateSimpleFrame("CustomConsoleUI", BlzGetFrameByName("ConsoleUI", 0), 0)
+        call BlzFrameSetLevel(BlzGetFrameByName("CustomConsoleUI", 0), 0)
+        if GetLocalizedString("REFORGED") != "REFORGED" then
+            // Requires a native existing only in Reforged
+
+                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
+                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
+                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+
+        else
+            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
+            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+        endif
+
+        // Preload
+        call BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)
+        call BlzGetFrameByName("InventoryCoverTexture", 0)
+        call BlzGetFrameByName("CustomConsoleUIClock", 0)
+        call BlzGetFrameByName("CustomConsoleUI5T", 0)
+        call BlzGetFrameByName("CustomConsoleUI6T", 0)
+        call BlzGetFrameByName("CustomConsoleUI4T", 0)
+        call BlzGetFrameByName("CustomConsoleUI3T", 0)
+        call BlzGetFrameByName("CustomConsoleUI2TL", 0)
+        call BlzGetFrameByName("CustomConsoleUI2TR", 0)
+        call BlzGetFrameByName("CustomConsoleUI1T", 0)
+        call BlzGetFrameByName("CustomConsoleUI1B", 0)
+        call BlzGetFrameByName("CustomConsoleUI2B", 0)
+        call BlzGetFrameByName("CustomConsoleUI3B", 0)
+        call BlzGetFrameByName("CustomConsoleUI4B", 0)
+        call BlzGetFrameByName("CustomConsoleUI5B", 0)
+        call BlzGetFrameByName("CustomConsoleUI6B", 0)
+    endfunction
+    function CustomConsoleUI___Init takes nothing returns nothing
+        call CreateCustomConsole()
+        call UseCustomConsole(GetLocalPlayer() , 0)
+    endfunction
+    function CustomConsoleUI___at0s takes nothing returns nothing
+        call CustomConsoleUI___Init()
+        call DestroyTimer(GetExpiredTimer())
+    endfunction
+    function CustomConsoleUI___update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    endfunction
+
+    function CustomConsoleUI___init_function takes nothing returns nothing
+        local integer index= 0
+        set index=GetHandleId(RACE_HUMAN)
+        call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
+        call AddCustomConsole(index , "ui\\console\\human\\humanuitile02")
+        call AddCustomConsole(index , "ui\\console\\human\\humanuitile03")
+        call AddCustomConsole(index , "ui\\console\\human\\humanuitile04")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\console\\human\\humanuitile-timeindicatorframe")
+        call AddCustomConsole(index , "ui\\console\\human\\humanuitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNPeasant")
+        // offset this mostly is used to fit to the glowing orbs showing the houers
+        set CustomConsoleUI_x[index]=0.0009
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(RACE_ORC)
+        call AddCustomConsole(index , "ui\\console\\orc\\orcuitile01")
+        call AddCustomConsole(index , "ui\\console\\orc\\orcuitile02")
+        call AddCustomConsole(index , "ui\\console\\orc\\orcuitile03")
+        call AddCustomConsole(index , "ui\\console\\orc\\orcuitile04")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\console\\orc\\orcuitile-timeindicatorframe")
+        call AddCustomConsole(index , "ui\\console\\orc\\orcuitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNPeon")
+        set CustomConsoleUI_x[index]=0.0004
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(RACE_UNDEAD)
+        call AddCustomConsole(index , "ui\\console\\undead\\undeaduitile01")
+        call AddCustomConsole(index , "ui\\console\\undead\\undeaduitile02")
+        call AddCustomConsole(index , "ui\\console\\undead\\undeaduitile03")
+        call AddCustomConsole(index , "ui\\console\\undead\\undeaduitile04")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\console\\undead\\undeaduitile-timeindicatorframe")
+        call AddCustomConsole(index , "ui\\console\\undead\\undeaduitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNAcolyte")
+        set CustomConsoleUI_x[index]=0.0009
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(RACE_NIGHTELF)
+        call AddCustomConsole(index , "ui\\console\\nightelf\\nightelfuitile01")
+        call AddCustomConsole(index , "ui\\console\\nightelf\\nightelfuitile02")
+        call AddCustomConsole(index , "ui\\console\\nightelf\\nightelfuitile03")
+        call AddCustomConsole(index , "ui\\console\\nightelf\\nightelfuitile04")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
+        call AddCustomConsole(index , "ui\\console\\nightelf\\nightelfuitile-timeindicatorframe")
+        call AddCustomConsole(index , "ui\\console\\nightelf\\nightelfuitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNWisp")
+        set CustomConsoleUI_x[index]=0.0009
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(ConvertRace(5))
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile01")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile02")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile03")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile04")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile05")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile06")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile-inventorycover")
+        call AddCustomConsole(index , "Legends\\Uther\\Pilgrim\\BTNPilgrim")
+        set CustomConsoleUI_x[index]=0.000
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(ConvertRace(6))
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile01")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile02")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile03")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile04")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile05")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile06")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Tyrande\\nightelfuitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNWisp")
+        set CustomConsoleUI_x[index]=0.000
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(ConvertRace(7))
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile01")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile02")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile03")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile04")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile05")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile06")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Wrynn\\humanuitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNPeasant")
+        set CustomConsoleUI_x[index]=0.000
+        set CustomConsoleUI_y[index]=0.0
+
+        set index=GetHandleId(ConvertRace(8))
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile01")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile02")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile03")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile04")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile05")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile06")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNAcolyte")
+        set CustomConsoleUI_x[index]=0.000
+        set CustomConsoleUI_y[index]=0.0
+        if GetLocalizedString("REFORGED") == "REFORGED" then
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+        endif
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+
+            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+
+    endfunction
+
+//library CustomConsoleUI ends
 //===========================================================================
 // 
 // Alterac's Justice
@@ -381,6 +646,12 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
+//***************************************************************************
+//*  FrameLoader vjass
+
+//***************************************************************************
+//*  CustomConsoleUI vjass
+
 
 //***************************************************************************
 //*
@@ -1428,6 +1699,75 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+// Trigger: ChangeUI
+//===========================================================================
+function Trig_ChangeUI_Func001C takes nothing returns boolean
+    if ( not ( StringCase(GetEventPlayerChatString(), false) == "human" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChangeUI_Func002C takes nothing returns boolean
+    if ( not ( StringCase(GetEventPlayerChatString(), false) == "orc" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChangeUI_Func003C takes nothing returns boolean
+    if ( not ( StringCase(GetEventPlayerChatString(), false) == "undead" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChangeUI_Func004C takes nothing returns boolean
+    if ( not ( StringCase(GetEventPlayerChatString(), false) == "nightelf" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChangeUI_Func005C takes nothing returns boolean
+    if ( not ( StringCase(GetEventPlayerChatString(), false) == "demon" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChangeUI_Actions takes nothing returns nothing
+    if ( Trig_ChangeUI_Func001C() ) then
+        call UseCustomConsole(GetTriggerPlayer() , 1)
+    else
+    endif
+    if ( Trig_ChangeUI_Func002C() ) then
+        call UseCustomConsole(GetTriggerPlayer() , 2)
+    else
+    endif
+    if ( Trig_ChangeUI_Func003C() ) then
+        call UseCustomConsole(GetTriggerPlayer() , 3)
+    else
+    endif
+    if ( Trig_ChangeUI_Func004C() ) then
+        call UseCustomConsole(GetTriggerPlayer() , 4)
+    else
+    endif
+    if ( Trig_ChangeUI_Func005C() ) then
+        call UseCustomConsole(GetTriggerPlayer() , 5)
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ChangeUI takes nothing returns nothing
+    set gg_trg_ChangeUI=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_ChangeUI, Player(0), "", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_ChangeUI, Player(1), "", false)
+    call TriggerAddAction(gg_trg_ChangeUI, function Trig_ChangeUI_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ConsoleLog
 //
 // Calling a system message with the name of the called trigger
@@ -2162,29 +2502,30 @@ function Trig_ChooseArthas_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ChooseArthas_Func007A takes nothing returns nothing
+function Trig_ChooseArthas_Func008A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u009', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func009A takes nothing returns nothing
+function Trig_ChooseArthas_Func010A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u010', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func011A takes nothing returns nothing
+function Trig_ChooseArthas_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00A', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseArthas_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 8)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func007A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func008A)
     // Ghoul
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func009A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func010A)
     // Acolyte
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func011A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func012A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers
@@ -2228,23 +2569,24 @@ function Trig_ChooseUther_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ChooseUther_Func007A takes nothing returns nothing
+function Trig_ChooseUther_Func008A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00A', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseUther_Func009A takes nothing returns nothing
+function Trig_ChooseUther_Func010A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00O', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseUther_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 5)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func007A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func008A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func009A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func010A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_LIGHT_BLUE, true)
@@ -2282,23 +2624,24 @@ function Trig_ChooseWrynn_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ChooseWrynn_Func007A takes nothing returns nothing
+function Trig_ChooseWrynn_Func008A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00F', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseWrynn_Func009A takes nothing returns nothing
+function Trig_ChooseWrynn_Func010A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h017', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseWrynn_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 7)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func007A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func008A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func009A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func010A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_NAVY, true)
@@ -2336,24 +2679,25 @@ function Trig_ChooseTyrande_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ChooseTyrande_Func006003001003 takes nothing returns boolean
+function Trig_ChooseTyrande_Func007003001003 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
 endfunction
 
-function Trig_ChooseTyrande_Func016Func001003001003 takes nothing returns boolean
+function Trig_ChooseTyrande_Func017Func001003001003 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
 endfunction
 
-function Trig_ChooseTyrande_Func016A takes nothing returns nothing
-    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func016Func001003001003))))
+function Trig_ChooseTyrande_Func017A takes nothing returns nothing
+    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func017Func001003001003))))
 endfunction
 
 function Trig_ChooseTyrande_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 6)
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'e000', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func006003001003))))
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func007003001003))))
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=5
     loop
@@ -2369,7 +2713,7 @@ function Trig_ChooseTyrande_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_TyrandeIni)
     call TriggerExecute(gg_trg_StartCameraReset)
     call TriggerSleepAction(1.00)
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func016A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func017A)
 endfunction
 
 //===========================================================================
@@ -8436,6 +8780,7 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
+    call InitTrig_ChangeUI()
     call InitTrig_ConsoleLog()
     call InitTrig_TimerMinus()
     call InitTrig_TestWaveTimer1()
@@ -8734,6 +9079,8 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
+call ExecuteFunc("FrameLoader___init_function")
+call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
