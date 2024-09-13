@@ -210,6 +210,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_TyrandeShadowstalk= null
 
     // Random Groups
 integer array gg_rg_000
@@ -772,6 +773,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'e004', - 110.8, - 357.6, 50.944, 'e004')
+    set u=BlzCreateUnitWithSkin(p, 'e004', - 19.8, - 345.9, 60.753, 'e004')
+    set u=BlzCreateUnitWithSkin(p, 'e004', 100.4, - 308.4, 77.934, 'e004')
+    set u=BlzCreateUnitWithSkin(p, 'e004', 127.6, - 403.1, 84.893, 'e004')
+    set u=BlzCreateUnitWithSkin(p, 'e004', 7.6, - 452.8, 70.328, 'e004')
+    set u=BlzCreateUnitWithSkin(p, 'e004', - 96.2, - 469.2, 60.045, 'e004')
 endfunction
 
 //===========================================================================
@@ -4681,6 +4688,56 @@ function InitTrig_TyrandeIni takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: TyrandeShadowstalk
+//===========================================================================
+function Trig_TyrandeShadowstalk_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A059' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeShadowstalk_Func001Func001Func006C takes nothing returns boolean
+    if ( ( IsPlayerAlly(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
+        return true
+    endif
+    if ( ( GetOwningPlayer(GetEnumUnit()) == GetOwningPlayer(GetSpellAbilityUnit()) ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeShadowstalk_Func001Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeShadowstalk_Func001Func001Func006C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeShadowstalk_Func001A takes nothing returns nothing
+    if ( Trig_TyrandeShadowstalk_Func001Func001C() ) then
+        call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
+        call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+        call UnitAddAbilityBJ('A05A', GetLastCreatedUnit())
+        call IssueTargetOrderBJ(GetLastCreatedUnit(), "invisibility", GetEnumUnit())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_TyrandeShadowstalk_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsInRangeOfLocAll(700.00, GetSpellTargetLoc()), function Trig_TyrandeShadowstalk_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeShadowstalk takes nothing returns nothing
+    set gg_trg_TyrandeShadowstalk=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeShadowstalk, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_TyrandeShadowstalk, Condition(function Trig_TyrandeShadowstalk_Conditions))
+    call TriggerAddAction(gg_trg_TyrandeShadowstalk, function Trig_TyrandeShadowstalk_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: PlayerCount
 //===========================================================================
 function Trig_PlayerCount_Func003Func001C takes nothing returns boolean
@@ -8453,6 +8510,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
     call InitTrig_TyrandeIni()
+    call InitTrig_TyrandeShadowstalk()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

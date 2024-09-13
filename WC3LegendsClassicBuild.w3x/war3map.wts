@@ -4207,12 +4207,6 @@ STRING 2195
 [Arthas] Zombie
 }
 
-STRING 2196
-// Units: u004 ([Arthas] Dummy), Name (Name)
-{
-[Arthas] Dummy
-}
-
 STRING 2197
 // Units: h009 ([Uther] War Wagon), Name (Name)
 {
@@ -8526,18 +8520,6 @@ STRING 3422
 [Wrynn] Veteran: Tricks and Traps
 }
 
-STRING 3427
-// Buffs/Effects: B00T ([Wrynn] Fire Oil), Bufftip (Tooltip)
-{
-Fire Oil
-}
-
-STRING 3428
-// Buffs/Effects: B00T ([Wrynn] Fire Oil), EditorName (Name (Editor Only))
-{
-[Wrynn] Fire Oil
-}
-
 STRING 3429
 // Abilities: A03U ([Wrynn] Veteran: Tactical Strike), EditorSuffix (Editor Suffix)
 {
@@ -8554,12 +8536,6 @@ STRING 3442
 // Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), Name (Name)
 {
 [Wrynn] Veteran: Brave's Spyglass
-}
-
-STRING 3446
-// Buffs/Effects: B00T ([Wrynn] Fire Oil), Buffubertip (Tooltip - Extended)
-{
-Attack speed is reduced and deals damage over time.
 }
 
 STRING 3449
@@ -9753,5 +9729,53 @@ STRING 3678
 // Abilities: A057 ([Tyrande] Eclipse), Ubertip (Tooltip - Normal - Extended)
 {
 Causes an eclipse that blocks out the sun and creates an artificial night. |nLasts <A057,Dur1> seconds.
+}
+
+STRING 3680
+// Abilities: A058 ([Test] AOE), Name (Name)
+{
+[Test] AOE
+}
+
+STRING 3682
+// Abilities: A059 ([Tyrande] Shadowstalk), Name (Name)
+{
+[Tyrande] Shadowstalk
+}
+
+STRING 3683
+// Abilities: A059 ([Tyrande] Shadowstalk), Tip (Tooltip - Normal)
+{
+Shadowstalk
+}
+
+STRING 3684
+// Units: u004 ([Shared] Dummy), Name (Name)
+{
+[Shared] Dummy
+}
+
+STRING 3685
+// Abilities: A059 ([Tyrande] Shadowstalk), Ubertip (Tooltip - Normal - Extended)
+{
+Makes a unit invisible. If the unit attacks, uses an ability or casts a spell, it will become visible. |nLasts <A05A,Dur1> seconds.
+}
+
+STRING 3686
+// Abilities: A05A ([Tyrande] Shadowstalk), EditorSuffix (Editor Suffix)
+{
+(Invisibility)
+}
+
+STRING 3687
+// Abilities: A05A ([Tyrande] Shadowstalk), Name (Name)
+{
+[Tyrande] Shadowstalk
+}
+
+STRING 3688
+// Buffs/Effects: B00U (), Bufftip (Tooltip)
+{
+[Tyrande] Shadowstalk
 }
 
