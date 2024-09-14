@@ -232,6 +232,8 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_TyrandeTearsOfElune= null
+trigger gg_trg_TyrandeLunarFlare= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1032,6 +1034,8 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'E006', - 480.0, - 32.0, 270.000, 'E006')
+    set u=BlzCreateUnitWithSkin(p, 'emow', - 864.0, - 352.0, 270.000, 'emow')
+    set u=BlzCreateUnitWithSkin(p, 'e005', - 544.0, - 480.0, 270.000, 'e005')
 endfunction
 
 //===========================================================================
@@ -1615,6 +1619,9 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2609.8, - 323.3, 213.581, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2598.4, - 529.8, 77.676, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2710.6, - 366.3, 139.816, 'ngna')
 endfunction
 
 //===========================================================================
@@ -4953,6 +4960,9 @@ endfunction
 // Trigger: TyrandeIni
 //===========================================================================
 function Trig_TyrandeIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_TyrandeShadowstalk)
+    call EnableTrigger(gg_trg_TyrandeTearsOfElune)
+    call EnableTrigger(gg_trg_TyrandeLunarFlare)
 endfunction
 
 //===========================================================================
@@ -4971,24 +4981,7 @@ function Trig_TyrandeShadowstalk_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_TyrandeShadowstalk_Func001Func001Func005Func005C takes nothing returns boolean
-    if ( ( GetTimeOfDay() >= 18.00 ) ) then
-        return true
-    endif
-    if ( ( GetTimeOfDay() < 6.00 ) ) then
-        return true
-    endif
-    return false
-endfunction
-
 function Trig_TyrandeShadowstalk_Func001Func001Func005C takes nothing returns boolean
-    if ( not Trig_TyrandeShadowstalk_Func001Func001Func005Func005C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TyrandeShadowstalk_Func001Func001Func007C takes nothing returns boolean
     if ( ( IsPlayerAlly(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
         return true
     endif
@@ -4999,7 +4992,7 @@ function Trig_TyrandeShadowstalk_Func001Func001Func007C takes nothing returns bo
 endfunction
 
 function Trig_TyrandeShadowstalk_Func001Func001C takes nothing returns boolean
-    if ( not Trig_TyrandeShadowstalk_Func001Func001Func007C() ) then
+    if ( not Trig_TyrandeShadowstalk_Func001Func001Func005C() ) then
         return false
     endif
     return true
@@ -5011,28 +5004,133 @@ function Trig_TyrandeShadowstalk_Func001A takes nothing returns nothing
         call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
         call UnitAddAbilityBJ('A05A', GetLastCreatedUnit())
         call IssueTargetOrderBJ(GetLastCreatedUnit(), "invisibility", GetEnumUnit())
-        if ( Trig_TyrandeShadowstalk_Func001Func001Func005C() ) then
-            call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
-            call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
-            call UnitAddAbilityBJ('A05C', GetLastCreatedUnit())
-            call IssueTargetOrderBJ(GetLastCreatedUnit(), "slow", GetEnumUnit())
-        else
-        endif
     else
-        call DoNothing()
     endif
+endfunction
+
+function Trig_TyrandeShadowstalk_Func002Func004C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeShadowstalk_Func002C takes nothing returns boolean
+    if ( not Trig_TyrandeShadowstalk_Func002Func004C() ) then
+        return false
+    endif
+    return true
 endfunction
 
 function Trig_TyrandeShadowstalk_Actions takes nothing returns nothing
     call ForGroupBJ(GetUnitsInRangeOfLocAll(700.00, GetSpellTargetLoc()), function Trig_TyrandeShadowstalk_Func001A)
+    if ( Trig_TyrandeShadowstalk_Func002C() ) then
+        call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
+        call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+        call UnitAddItemByIdSwapped('I007', GetLastCreatedUnit())
+    else
+    endif
 endfunction
 
 //===========================================================================
 function InitTrig_TyrandeShadowstalk takes nothing returns nothing
     set gg_trg_TyrandeShadowstalk=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeShadowstalk)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeShadowstalk, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_TyrandeShadowstalk, Condition(function Trig_TyrandeShadowstalk_Conditions))
     call TriggerAddAction(gg_trg_TyrandeShadowstalk, function Trig_TyrandeShadowstalk_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeTearsOfElune
+//===========================================================================
+function Trig_TyrandeTearsOfElune_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A05C' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeTearsOfElune_Func001Func002C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeTearsOfElune_Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeTearsOfElune_Func001Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeTearsOfElune_Actions takes nothing returns nothing
+    if ( Trig_TyrandeTearsOfElune_Func001C() ) then
+        call SetUnitManaBJ(GetSpellTargetUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetSpellTargetUnit()) + 150.00 ))
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeTearsOfElune takes nothing returns nothing
+    set gg_trg_TyrandeTearsOfElune=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeTearsOfElune)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeTearsOfElune, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_TyrandeTearsOfElune, Condition(function Trig_TyrandeTearsOfElune_Conditions))
+    call TriggerAddAction(gg_trg_TyrandeTearsOfElune, function Trig_TyrandeTearsOfElune_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeLunarFlare
+//===========================================================================
+function Trig_TyrandeLunarFlare_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A05D' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeLunarFlare_Func001Func005C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeLunarFlare_Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeLunarFlare_Func001Func005C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeLunarFlare_Actions takes nothing returns nothing
+    if ( Trig_TyrandeLunarFlare_Func001C() ) then
+        call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
+        call UnitAddAbilityBJ('A05E', GetLastCreatedUnit())
+        call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+        call IssueImmediateOrderBJ(GetLastCreatedUnit(), "stomp")
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeLunarFlare takes nothing returns nothing
+    set gg_trg_TyrandeLunarFlare=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeLunarFlare)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeLunarFlare, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_TyrandeLunarFlare, Condition(function Trig_TyrandeLunarFlare_Conditions))
+    call TriggerAddAction(gg_trg_TyrandeLunarFlare, function Trig_TyrandeLunarFlare_Actions)
 endfunction
 
 //===========================================================================
@@ -8809,6 +8907,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnDepositTimer()
     call InitTrig_TyrandeIni()
     call InitTrig_TyrandeShadowstalk()
+    call InitTrig_TyrandeTearsOfElune()
+    call InitTrig_TyrandeLunarFlare()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

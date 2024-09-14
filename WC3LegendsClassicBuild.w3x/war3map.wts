@@ -9768,7 +9768,7 @@ STRING 3687
 }
 
 STRING 3688
-// Abilities: A05C ([Tyrande] Shadowstalk), Name (Name)
+// Buffs/Effects: B00U ([Tyrande] Shadowstalk), EditorName (Name (Editor Only))
 {
 [Tyrande] Shadowstalk
 }
@@ -9782,24 +9782,6 @@ Lasts <A05A,Dur1> seconds.
 |cFF005DFFNight:|R Add increases the movement speed. Lasts <A05B,Dur1> seconds.
 }
 
-STRING 3690
-// Abilities: A05C ([Tyrande] Shadowstalk), EditorSuffix (Editor Suffix)
-{
-(Night Speed)
-}
-
-STRING 3691
-// Buffs/Effects: B00U (), Bufftip (Tooltip)
-{
-[Tyrande] Shadowstalk
-}
-
-STRING 3692
-// Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), Bufftip (Tooltip)
-{
-[Tyrande] Shadowstalk
-}
-
 STRING 3693
 // Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), Buffubertip (Tooltip - Extended)
 {
@@ -9807,8 +9789,120 @@ This unit is add movement speed rate are bonus
 }
 
 STRING 3694
+// Items: I007 ([Tyrande] Shadowstalk (Night Speed)), Name (Name)
+{
+[Tyrande] Shadowstalk (Night Speed)
+}
+
+STRING 3695
+// Abilities: A05B ([Tyrande] Shadowstalk (Night Speed)), Name (Name)
+{
+[Tyrande] Shadowstalk (Night Speed)
+}
+
+STRING 3696
 // Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), EditorName (Name (Editor Only))
 {
 [Tyrande] Shadowstalk (Night Speed)
+}
+
+STRING 3702
+// Abilities: A05C ([Tyrande] Tears of Elune), Name (Name)
+{
+[Tyrande] Tears of Elune
+}
+
+STRING 3703
+// Abilities: A05C ([Tyrande] Tears of Elune), Tip (Tooltip - Normal)
+{
+Tears of Elune
+}
+
+STRING 3704
+// Buffs/Effects: B00V ([Tyrande] Tears of Elune), EditorName (Name (Editor Only))
+{
+[Tyrande] Tears of Elune
+}
+
+STRING 3705
+// Buffs/Effects: B00V ([Tyrande] Tears of Elune), Bufftip (Tooltip)
+{
+Tears of Elune
+}
+
+STRING 3706
+// Abilities: A05C ([Tyrande] Tears of Elune), Ubertip (Tooltip - Normal - Extended)
+{
+Add <ANmr,DataA1> mana from a target enemy unit over <ANmr,Dur1> seconds.
+
+|cFF005DFFNight:|R Get 150 mana instantly.
+}
+
+STRING 3708
+// Buffs/Effects: B00U ([Tyrande] Shadowstalk), Bufftip (Tooltip)
+{
+Shadowstalk
+}
+
+STRING 3709
+// Buffs/Effects: B00T ([Tyrande] Shadowstalk (Night Speed)), Bufftip (Tooltip)
+{
+Shadowstalk
+}
+
+STRING 3710
+// Buffs/Effects: B00V ([Tyrande] Tears of Elune), Buffubertip (Tooltip - Extended)
+{
+This unit has been hit by Tears of Elune; it is add mana over time.
+}
+
+STRING 3712
+// Abilities: A05D ([Tyrande] Lunar Flare), Name (Name)
+{
+[Tyrande] Lunar Flare
+}
+
+STRING 3713
+// Abilities: A05D ([Tyrande] Lunar Flare), Tip (Tooltip - Normal)
+{
+Lunar Flare
+}
+
+STRING 3714
+// Abilities: A05E ([Tyrande] Lunar Flare), Name (Name)
+{
+[Tyrande] Lunar Flare
+}
+
+STRING 3715
+// Abilities: A05E ([Tyrande] Lunar Flare), Tip (Tooltip - Normal)
+{
+Lunar Flare
+}
+
+STRING 3716
+// Abilities: A05E ([Tyrande] Lunar Flare), EditorSuffix (Editor Suffix)
+{
+(Night Stun)
+}
+
+STRING 3717
+// Buffs/Effects: X000 ([Tyrande] Lunar Flare), EditorName (Name (Editor Only))
+{
+[Tyrande] Lunar Flare
+}
+
+STRING 3718
+// Buffs/Effects: X000 ([Tyrande] Lunar Flare), Bufftip (Tooltip)
+{
+Lunar Flare
+}
+
+STRING 3719
+// Abilities: A05D ([Tyrande] Lunar Flare), Ubertip (Tooltip - Normal - Extended)
+{
+A star falls from the sky and deals <A05D,DataB1> damage.
+
+|cFF005DFFNight:|R Increases damage by <A05E,DataA1> units and stuns for <A05E,Dur1> sec.
 }
 
