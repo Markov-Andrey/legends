@@ -234,6 +234,9 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_TyrandeEluneRetribution= null
+trigger gg_trg_TyrandeGiftOfElune= null
+trigger gg_trg_TyrandeOverflowingMoonwell= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1034,8 +1037,13 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'E006', - 480.0, - 32.0, 270.000, 'E006')
-    set u=BlzCreateUnitWithSkin(p, 'emow', - 864.0, - 352.0, 270.000, 'emow')
-    set u=BlzCreateUnitWithSkin(p, 'e005', - 544.0, - 480.0, 270.000, 'e005')
+    call SetUnitState(u, UNIT_STATE_MANA, 1)
+    set u=BlzCreateUnitWithSkin(p, 'e00C', - 1120.0, - 416.0, 270.000, 'e00C')
+    set u=BlzCreateUnitWithSkin(p, 'e00C', - 1120.0, - 608.0, 270.000, 'e00C')
+    set u=BlzCreateUnitWithSkin(p, 'e005', - 1120.0, - 32.0, 270.000, 'e005')
+    call SetUnitState(u, UNIT_STATE_MANA, 300)
+    set u=BlzCreateUnitWithSkin(p, 'e005', - 928.0, 32.0, 270.000, 'e005')
+    call SetUnitState(u, UNIT_STATE_MANA, 300)
 endfunction
 
 //===========================================================================
@@ -1619,9 +1627,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2609.8, - 323.3, 213.581, 'ngna')
-    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2598.4, - 529.8, 77.676, 'ngna')
-    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2710.6, - 366.3, 139.816, 'ngna')
 endfunction
 
 //===========================================================================
@@ -4963,6 +4968,9 @@ function Trig_TyrandeIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_TyrandeShadowstalk)
     call EnableTrigger(gg_trg_TyrandeTearsOfElune)
     call EnableTrigger(gg_trg_TyrandeLunarFlare)
+    call EnableTrigger(gg_trg_TyrandeEluneRetribution)
+    call EnableTrigger(gg_trg_TyrandeGiftOfElune)
+    call EnableTrigger(gg_trg_TyrandeOverflowingMoonwell)
 endfunction
 
 //===========================================================================
@@ -5097,7 +5105,7 @@ function Trig_TyrandeLunarFlare_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_TyrandeLunarFlare_Func001Func005C takes nothing returns boolean
+function Trig_TyrandeLunarFlare_Func001Func009C takes nothing returns boolean
     if ( ( GetTimeOfDay() >= 18.00 ) ) then
         return true
     endif
@@ -5108,7 +5116,7 @@ function Trig_TyrandeLunarFlare_Func001Func005C takes nothing returns boolean
 endfunction
 
 function Trig_TyrandeLunarFlare_Func001C takes nothing returns boolean
-    if ( not Trig_TyrandeLunarFlare_Func001Func005C() ) then
+    if ( not Trig_TyrandeLunarFlare_Func001Func009C() ) then
         return false
     endif
     return true
@@ -5118,8 +5126,12 @@ function Trig_TyrandeLunarFlare_Actions takes nothing returns nothing
     if ( Trig_TyrandeLunarFlare_Func001C() ) then
         call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
         call UnitAddAbilityBJ('A05E', GetLastCreatedUnit())
-        call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+        call UnitApplyTimedLifeBJ(1.00, 'BTLF', GetLastCreatedUnit())
         call IssueImmediateOrderBJ(GetLastCreatedUnit(), "stomp")
+        call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
+        call UnitAddAbilityBJ('A05F', GetLastCreatedUnit())
+        call UnitApplyTimedLifeBJ(1.00, 'BTLF', GetLastCreatedUnit())
+        call IssuePointOrderLocBJ(GetLastCreatedUnit(), "flamestrike", GetUnitLoc(GetLastCreatedUnit()))
     else
     endif
 endfunction
@@ -5131,6 +5143,150 @@ function InitTrig_TyrandeLunarFlare takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeLunarFlare, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_TyrandeLunarFlare, Condition(function Trig_TyrandeLunarFlare_Conditions))
     call TriggerAddAction(gg_trg_TyrandeLunarFlare, function Trig_TyrandeLunarFlare_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeEluneRetribution
+//===========================================================================
+function Trig_TyrandeEluneRetribution_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A05G', GetEnumUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneRetribution_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A05G', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneRetribution_Func001Func001Func003C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeEluneRetribution_Func001Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeEluneRetribution_Func001Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneRetribution_Func001A takes nothing returns nothing
+    if ( Trig_TyrandeEluneRetribution_Func001Func001C() ) then
+        if ( Trig_TyrandeEluneRetribution_Func001Func001Func002C() ) then
+            call SetUnitAbilityLevelSwapped('A05G', GetEnumUnit(), 2)
+        else
+        endif
+    else
+        if ( Trig_TyrandeEluneRetribution_Func001Func001Func001C() ) then
+            call SetUnitAbilityLevelSwapped('A05G', GetEnumUnit(), 1)
+        else
+        endif
+    endif
+endfunction
+
+function Trig_TyrandeEluneRetribution_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('E006'), function Trig_TyrandeEluneRetribution_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeEluneRetribution takes nothing returns nothing
+    set gg_trg_TyrandeEluneRetribution=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeEluneRetribution)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_TyrandeEluneRetribution, 1.00)
+    call TriggerAddAction(gg_trg_TyrandeEluneRetribution, function Trig_TyrandeEluneRetribution_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeGiftOfElune
+//===========================================================================
+function Trig_TyrandeGiftOfElune_Func001C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeGiftOfElune_Conditions takes nothing returns boolean
+    if ( not Trig_TyrandeGiftOfElune_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeGiftOfElune_Func002Func001A takes nothing returns nothing
+    call AdjustPlayerStateBJ(1, GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER)
+endfunction
+
+function Trig_TyrandeGiftOfElune_Func002A takes nothing returns nothing
+    call ForForce(GetPlayersAllies(GetOwningPlayer(GetEnumUnit())), function Trig_TyrandeGiftOfElune_Func002Func001A)
+endfunction
+
+function Trig_TyrandeGiftOfElune_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('E006'), function Trig_TyrandeGiftOfElune_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeGiftOfElune takes nothing returns nothing
+    set gg_trg_TyrandeGiftOfElune=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeGiftOfElune)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_TyrandeGiftOfElune, 2.00)
+    call TriggerAddCondition(gg_trg_TyrandeGiftOfElune, Condition(function Trig_TyrandeGiftOfElune_Conditions))
+    call TriggerAddAction(gg_trg_TyrandeGiftOfElune, function Trig_TyrandeGiftOfElune_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeOverflowingMoonwell
+//===========================================================================
+function Trig_TyrandeOverflowingMoonwell_Func001Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) >= GetUnitStateSwap(UNIT_STATE_MAX_MANA, GetEnumUnit()) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeOverflowingMoonwell_Func001Func001Func001A takes nothing returns nothing
+    if ( Trig_TyrandeOverflowingMoonwell_Func001Func001Func001Func001C() ) then
+        call SetUnitManaBJ(GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), 'E006')), ( GetUnitStateSwap(UNIT_STATE_MANA, GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), 'E006'))) + 0.20 ))
+    else
+    endif
+endfunction
+
+function Trig_TyrandeOverflowingMoonwell_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R01R', GetEnumPlayer()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeOverflowingMoonwell_Func001A takes nothing returns nothing
+    if ( Trig_TyrandeOverflowingMoonwell_Func001Func001C() ) then
+        call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), 'e005'), function Trig_TyrandeOverflowingMoonwell_Func001Func001Func001A)
+    else
+    endif
+endfunction
+
+function Trig_TyrandeOverflowingMoonwell_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_TyrandeOverflowingMoonwell_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeOverflowingMoonwell takes nothing returns nothing
+    set gg_trg_TyrandeOverflowingMoonwell=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeOverflowingMoonwell)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_TyrandeOverflowingMoonwell, 1.00)
+    call TriggerAddAction(gg_trg_TyrandeOverflowingMoonwell, function Trig_TyrandeOverflowingMoonwell_Actions)
 endfunction
 
 //===========================================================================
@@ -8909,6 +9065,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TyrandeShadowstalk()
     call InitTrig_TyrandeTearsOfElune()
     call InitTrig_TyrandeLunarFlare()
+    call InitTrig_TyrandeEluneRetribution()
+    call InitTrig_TyrandeGiftOfElune()
+    call InitTrig_TyrandeOverflowingMoonwell()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

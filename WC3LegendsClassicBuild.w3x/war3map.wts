@@ -9887,7 +9887,7 @@ STRING 3716
 }
 
 STRING 3717
-// Buffs/Effects: X000 ([Tyrande] Lunar Flare), EditorName (Name (Editor Only))
+// Abilities: A05F ([Tyrande] Lunar Flare), Name (Name)
 {
 [Tyrande] Lunar Flare
 }
@@ -9898,11 +9898,231 @@ STRING 3718
 Lunar Flare
 }
 
-STRING 3719
+STRING 3721
+// Abilities: A05F ([Tyrande] Lunar Flare), EditorSuffix (Editor Suffix)
+{
+(Night Stun Effect)
+}
+
+STRING 3722
+// Buffs/Effects: X000 ([Tyrande] Lunar Flare), EditorName (Name (Editor Only))
+{
+[Tyrande] Lunar Flare
+}
+
+STRING 3726
+// Abilities: A05G ([Tyrande] Hunting in the Night), Ubertip (Tooltip - Normal - Extended)
+{
+No effects during the day
+
+|cFF005DFFNight:|R An aura that gives friendly nearby units a <A05G,DataA2,%>% bonus damage to their ranged attacks.
+}
+
+STRING 3727
+// Abilities: A05G ([Tyrande] Hunting in the Night), Ubertip (Tooltip - Normal - Extended)
+{
+No effects during the day
+
+|cFF005DFFNight:|R An aura that gives friendly nearby units a <A05G,DataA2,%>% bonus damage to their ranged attacks.
+}
+
+STRING 3730
+// Buffs/Effects: B00W ([Tyrande] Hunting in the Night), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Elune's Retribution; its ranged attacks will deal more damage.
+}
+
+STRING 3731
+// Abilities: A05H ([Tyrande] Ultravision), Name (Name)
+{
+[Tyrande] Ultravision
+}
+
+STRING 3732
+// Upgrades: R01Q (Ultravision), Name (Name)
+{
+[Tyrande] Ultravision
+}
+
+STRING 3733
+// Abilities: A05I ([Tyrande] Gift Of Elune), Name (Name)
+{
+[Tyrande] Gift Of Elune
+}
+
+STRING 3734
+// Abilities: A05J ([Tyrande] Overflowing Moonwell), Name (Name)
+{
+[Tyrande] Overflowing Moonwell
+}
+
+STRING 3735
+// Upgrades: R01R (Nature's Blessing), Name (Name)
+{
+[Tyrande] Overflowing Moonwell
+}
+
+STRING 3736
+// Upgrades: R01R (Nature's Blessing), Tip (Tooltip)
+{
+Research Overflowing Moonwell
+}
+
+STRING 3738
+// Abilities: A05I ([Tyrande] Gift Of Elune), Tip (Tooltip - Normal)
+{
+Gift Of Elune
+}
+
+STRING 3740
+// Abilities: A05J ([Tyrande] Overflowing Moonwell), Ubertip (Tooltip - Normal - Extended)
+{
+A well with a maximum mana pool gives an additional +0.2 mana to the Altar of Elune
+}
+
+STRING 3741
+// Abilities: A05J ([Tyrande] Overflowing Moonwell), Tip (Tooltip - Normal)
+{
+Overflowing Moonwell
+}
+
+STRING 3742
+// Upgrades: R01R (Nature's Blessing), Ubertip (Tooltip - Extended)
+{
+A well with a maximum mana pool gives an additional +0.2 mana to the Altar of Elune
+}
+
+STRING 3746
+// Abilities: A05I ([Tyrande] Gift Of Elune), Ubertip (Tooltip - Normal - Extended)
+{
+No effects during the day
+
+|cFF005DFFNight:|R Grants 1 forest every 2 seconds to you and your ally during the night.
+}
+
+STRING 3747
+// Abilities: A05K ([Tyrande] Shadow Meld), Name (Name)
+{
+[Tyrande] Shadow Meld
+}
+
+STRING 3748
+// Abilities: A05K ([Tyrande] Shadow Meld), EditorSuffix (Editor Suffix)
+{
+(Ancient)
+}
+
+STRING 3749
+// Upgrades: R01S (Ultravision), Tip (Tooltip)
+{
+Upgrade to Treant Hide
+}
+
+STRING 3750
+// Upgrades: R01S (Ultravision), Name (Name)
+{
+[Tyrande] Treant Hide
+}
+
+STRING 3751
+// Upgrades: R01S (Ultravision), Ubertip (Tooltip - Extended)
+{
+Grants the Shadow Meld ability to all Ancients
+}
+
+STRING 3752
+// Abilities: A05G ([Tyrande] Hunting in the Night), Name (Name)
+{
+[Tyrande] Hunting in the Night
+}
+
+STRING 3753
+// Abilities: A05G ([Tyrande] Hunting in the Night), Tip (Tooltip - Normal)
+{
+Hunting in the Night
+}
+
+STRING 3754
+// Abilities: A05G ([Tyrande] Hunting in the Night), Tip (Tooltip - Normal)
+{
+Hunting in the Night
+}
+
+STRING 3755
+// Buffs/Effects: B00W ([Tyrande] Hunting in the Night), EditorName (Name (Editor Only))
+{
+[Tyrande] Hunting in the Night
+}
+
+STRING 3756
+// Buffs/Effects: B00W ([Tyrande] Hunting in the Night), Bufftip (Tooltip)
+{
+Hunting in the Night
+}
+
+STRING 3757
+// Abilities: A057 ([Tyrande] Eclipse), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 3758
+// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 3759
+// Abilities: A05C ([Tyrande] Tears of Elune), Hotkey (Hotkey - Normal)
+{
+T
+}
+
+STRING 3760
 // Abilities: A05D ([Tyrande] Lunar Flare), Ubertip (Tooltip - Normal - Extended)
 {
-A star falls from the sky and deals <A05D,DataB1> damage.
+A star falls from the sky after a brief delay, dealing <A05D,DataB1> damage.
 
-|cFF005DFFNight:|R Increases damage by <A05E,DataA1> units and stuns for <A05E,Dur1> sec.
+|cFF005DFFNight:|R Deals an additional <A05E,DataB1> damage and stuns for <A05E,DataDur1> sec.
+}
+
+STRING 3761
+// Abilities: A05L ([Tyrande] Evasion), Name (Name)
+{
+[Tyrande] Evasion
+}
+
+STRING 3762
+// Abilities: A05L ([Tyrande] Evasion), Tip (Tooltip - Normal)
+{
+Evasion
+}
+
+STRING 3763
+// Abilities: A05L ([Tyrande] Evasion), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A05L,DataA1,%>% chance to avoid an attack.
+
+|cFF005DFFNight:|R Chance increased to <A05L,DataA2,%>%
+}
+
+STRING 3764
+// Upgrades: R01T (Sentinel), Name (Name)
+{
+[Tyrande] Evasion
+}
+
+STRING 3765
+// Upgrades: R01T (Sentinel), Tip (Tooltip)
+{
+Research Evasion
+}
+
+STRING 3766
+// Upgrades: R01T (Sentinel), Ubertip (Tooltip - Extended)
+{
+Gives a <A05L,DataA1,%>% chance to avoid an attack.
+
+|cFF005DFFNight:|R Chance increased to <A05L,DataA2,%>%
 }
 
