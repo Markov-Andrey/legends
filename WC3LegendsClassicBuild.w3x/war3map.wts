@@ -9350,12 +9350,6 @@ STRING 3606
 Provides food, which increases the maximum number of units that can be trained. Generates extra gold when a bank is nearby.
 }
 
-STRING 3610
-// Abilities: A04X ([Tyrande] Scout), Name (Name)
-{
-[Tyrande] Scout
-}
-
 STRING 3611
 // Abilities: A050 ([Tyrande] Searing Arrows), Name (Name)
 {
@@ -9405,19 +9399,19 @@ High Priestess of Elune
 }
 
 STRING 3619
-// Abilities: A04X ([Tyrande] Scout), Tip (Tooltip - Normal)
+// Abilities: A04X ([Tyrande] Dori'thur), Tip (Tooltip - Normal)
 {
 Dori'thur - [|cffffcc00Level 1|r]
 }
 
 STRING 3620
-// Abilities: A04X ([Tyrande] Scout), Tip (Tooltip - Normal)
+// Abilities: A04X ([Tyrande] Dori'thur), Tip (Tooltip - Normal)
 {
 Dori'thur - [|cffffcc00Level 2|r]
 }
 
 STRING 3621
-// Abilities: A04X ([Tyrande] Scout), Tip (Tooltip - Normal)
+// Abilities: A04X ([Tyrande] Dori'thur), Tip (Tooltip - Normal)
 {
 Dori'thur - [|cffffcc00Level 3|r]
 }
@@ -10204,5 +10198,217 @@ STRING 3780
 Adds <A05M,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
 
 |cFF005DFFNight:|R Damage increased to <A05M,DataA2>.
+}
+
+STRING 3781
+// Abilities: A05N ([Tyrande] Improved Bows), Name (Name)
+{
+[Tyrande] Improved Bows
+}
+
+STRING 3782
+// Abilities: A05O ([Tyrande] Marksmanship), Name (Name)
+{
+[Tyrande] Marksmanship
+}
+
+STRING 3783
+// Upgrades: R01V (Improved Bows), Name (Name)
+{
+[Tyrande] Improved Bows
+}
+
+STRING 3784
+// Upgrades: R01W (Marksmanship), Name (Name)
+{
+[Tyrande] Marksmanship
+}
+
+STRING 3785
+// Upgrades: R01V (Improved Bows), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Elun'tara, Tyrande's legendary bow has not left her side in millennia."|r
+
+Increases the Archer's and Hippogryph Rider's attack range.
+}
+
+STRING 3786
+// Abilities: A05P ([Tyrande] Well Spring), Name (Name)
+{
+[Tyrande] Well Spring
+}
+
+STRING 3787
+// Upgrades: R01X (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Name (Name)
+{
+[Tyrande] Moon Armor
+}
+
+STRING 3788
+// Upgrades: R01Y (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Name (Name)
+{
+[Tyrande] Strength of the Moon
+}
+
+STRING 3789
+// Upgrades: R01Z (Strength of the Wild,Improved Strength of the Wild,Advanced Strength of the Wil), Name (Name)
+{
+[Tyrande] Strength of the Wild
+}
+
+STRING 3790
+// Upgrades: R020 (Reinforced Hides,Improved Reinforced Hides,Advanced Reinforced Hides), Name (Name)
+{
+[Tyrande] Reinforced Hides
+}
+
+STRING 3791
+// Upgrades: R021 (Well Spring), Name (Name)
+{
+[Tyrande] Well Spring
+}
+
+STRING 3792
+// Upgrades: R021 (Well Spring), Name (Name)
+{
+Pristine Spring
+}
+
+STRING 3793
+// Upgrades: R021 (Well Spring), Tip (Tooltip)
+{
+Research Pristine Spring
+}
+
+STRING 3794
+// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by <R021,mod1>, and their rate of mana regeneration by <R021,mod2,%>%.
+}
+
+STRING 3795
+// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by <R021,base1>, and their rate of mana regeneration by <R021,base2,%>%.
+}
+
+STRING 3796
+// Abilities: A05Q ([Tyrande] Sentinel), Name (Name)
+{
+[Tyrande] Sentinel
+}
+
+STRING 3797
+// Upgrades: R022 (Sentinel), Name (Name)
+{
+[Tyrande] Sentinel
+}
+
+STRING 3799
+// Abilities: A05R ([Tyrande] Vorpal Blades), Name (Name)
+{
+[Tyrande] Vorpal Blades
+}
+
+STRING 3800
+// Upgrades: R023 (Vorpal Blades), Name (Name)
+{
+[Tyrande] Vorpal Blades
+}
+
+STRING 3802
+// Units: n001 (Dori'thur), Name (Name)
+{
+Dori'thur
+}
+
+STRING 3803
+// Units: n003 (Dori'thur), Name (Name)
+{
+Dori'thur
+}
+
+STRING 3804
+// Units: n004 (Dori'thur), Name (Name)
+{
+Dori'thur
+}
+
+STRING 3805
+// Abilities: A04X ([Tyrande] Dori'thur), Name (Name)
+{
+[Tyrande] Dori'thur
+}
+
+STRING 3806
+// Abilities: A04X ([Tyrande] Dori'thur), Researchtip (Tooltip - Learn)
+{
+Learn Dori'thur - [|cffffcc00Level %d|r]
+}
+
+STRING 3807
+// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons an Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit. |nCan see invisible units. |nLasts <AEst,Dur1> seconds.
+}
+
+STRING 3808
+// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur2> seconds.
+}
+
+STRING 3809
+// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a very fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur3> seconds.
+}
+
+STRING 3810
+// Abilities: A05S ([Tyrande] Mark of the Owl), Name (Name)
+{
+[Tyrande] Mark of the Owl
+}
+
+STRING 3811
+// Abilities: A05S ([Tyrande] Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl
+}
+
+STRING 3812
+// Abilities: A05S ([Tyrande] Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit. |nLasts <A05S,Dur1> seconds.
+}
+
+STRING 3813
+// Buffs/Effects: B00X ([Tyrande] Mark of the Owl), Bufftip (Tooltip)
+{
+Mark of the Owl
+}
+
+STRING 3814
+// Buffs/Effects: B00X ([Tyrande] Mark of the Owl), EditorName (Name (Editor Only))
+{
+[Tyrande] Mark of the Owl
+}
+
+STRING 3815
+// Buffs/Effects: B00X ([Tyrande] Mark of the Owl), Buffubertip (Tooltip - Extended)
+{
+This unit has Mark of the Owl; it has reduced armor and can be seen by the enemy.
+}
+
+STRING 3816
+// Abilities: A05T ([Tyrande] Moon Glaive), Name (Name)
+{
+[Tyrande] Moon Glaive
+}
+
+STRING 3817
+// Upgrades: R024 (Upgrade Moon Glaive), Name (Name)
+{
+[Tyrande] Upgrade Moon Glaive
 }
 
