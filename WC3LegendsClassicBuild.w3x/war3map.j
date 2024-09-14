@@ -234,7 +234,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_TyrandeEluneRetribution= null
+trigger gg_trg_TyrandeEluneLevelNight= null
 trigger gg_trg_TyrandeGiftOfElune= null
 trigger gg_trg_TyrandeOverflowingMoonwell= null
 
@@ -1038,8 +1038,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'E006', - 480.0, - 32.0, 270.000, 'E006')
     call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'e00C', - 1120.0, - 416.0, 270.000, 'e00C')
-    set u=BlzCreateUnitWithSkin(p, 'e00C', - 1120.0, - 608.0, 270.000, 'e00C')
+    set u=BlzCreateUnitWithSkin(p, 'e00B', - 192.0, - 64.0, 270.000, 'e00B')
     set u=BlzCreateUnitWithSkin(p, 'e005', - 1120.0, - 32.0, 270.000, 'e005')
     call SetUnitState(u, UNIT_STATE_MANA, 300)
     set u=BlzCreateUnitWithSkin(p, 'e005', - 928.0, 32.0, 270.000, 'e005')
@@ -1627,6 +1626,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2793.5, - 351.7, 220.447, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2788.5, - 491.9, 290.707, 'ngna')
 endfunction
 
 //===========================================================================
@@ -4968,7 +4969,7 @@ function Trig_TyrandeIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_TyrandeShadowstalk)
     call EnableTrigger(gg_trg_TyrandeTearsOfElune)
     call EnableTrigger(gg_trg_TyrandeLunarFlare)
-    call EnableTrigger(gg_trg_TyrandeEluneRetribution)
+    call EnableTrigger(gg_trg_TyrandeEluneLevelNight)
     call EnableTrigger(gg_trg_TyrandeGiftOfElune)
     call EnableTrigger(gg_trg_TyrandeOverflowingMoonwell)
 endfunction
@@ -5146,23 +5147,23 @@ function InitTrig_TyrandeLunarFlare takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: TyrandeEluneRetribution
+// Trigger: TyrandeEluneLevelNight
 //===========================================================================
-function Trig_TyrandeEluneRetribution_Func001Func001Func001C takes nothing returns boolean
+function Trig_TyrandeEluneLevelNight_Func001Func001Func001C takes nothing returns boolean
     if ( not ( GetUnitAbilityLevelSwapped('A05G', GetEnumUnit()) == 2 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_TyrandeEluneRetribution_Func001Func001Func002C takes nothing returns boolean
+function Trig_TyrandeEluneLevelNight_Func001Func001Func002C takes nothing returns boolean
     if ( not ( GetUnitAbilityLevelSwapped('A05G', GetEnumUnit()) == 1 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_TyrandeEluneRetribution_Func001Func001Func003C takes nothing returns boolean
+function Trig_TyrandeEluneLevelNight_Func001Func001Func003C takes nothing returns boolean
     if ( ( GetTimeOfDay() >= 18.00 ) ) then
         return true
     endif
@@ -5172,37 +5173,129 @@ function Trig_TyrandeEluneRetribution_Func001Func001Func003C takes nothing retur
     return false
 endfunction
 
-function Trig_TyrandeEluneRetribution_Func001Func001C takes nothing returns boolean
-    if ( not Trig_TyrandeEluneRetribution_Func001Func001Func003C() ) then
+function Trig_TyrandeEluneLevelNight_Func001Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeEluneLevelNight_Func001Func001Func003C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_TyrandeEluneRetribution_Func001A takes nothing returns nothing
-    if ( Trig_TyrandeEluneRetribution_Func001Func001C() ) then
-        if ( Trig_TyrandeEluneRetribution_Func001Func001Func002C() ) then
+function Trig_TyrandeEluneLevelNight_Func001A takes nothing returns nothing
+    if ( Trig_TyrandeEluneLevelNight_Func001Func001C() ) then
+        if ( Trig_TyrandeEluneLevelNight_Func001Func001Func002C() ) then
             call SetUnitAbilityLevelSwapped('A05G', GetEnumUnit(), 2)
         else
         endif
     else
-        if ( Trig_TyrandeEluneRetribution_Func001Func001Func001C() ) then
+        if ( Trig_TyrandeEluneLevelNight_Func001Func001Func001C() ) then
             call SetUnitAbilityLevelSwapped('A05G', GetEnumUnit(), 1)
         else
         endif
     endif
 endfunction
 
-function Trig_TyrandeEluneRetribution_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsOfTypeIdAll('E006'), function Trig_TyrandeEluneRetribution_Func001A)
+function Trig_TyrandeEluneLevelNight_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A05M', GetEnumUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func002Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A05M', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func002Func001Func003C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func002Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeEluneLevelNight_Func002Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func002A takes nothing returns nothing
+    if ( Trig_TyrandeEluneLevelNight_Func002Func001C() ) then
+        if ( Trig_TyrandeEluneLevelNight_Func002Func001Func002C() ) then
+            call SetUnitAbilityLevelSwapped('A05M', GetEnumUnit(), 2)
+        else
+        endif
+    else
+        if ( Trig_TyrandeEluneLevelNight_Func002Func001Func001C() ) then
+            call SetUnitAbilityLevelSwapped('A05M', GetEnumUnit(), 1)
+        else
+        endif
+    endif
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func003Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A05L', GetEnumUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func003Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A05L', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func003Func001Func003C takes nothing returns boolean
+    if ( ( GetTimeOfDay() >= 18.00 ) ) then
+        return true
+    endif
+    if ( ( GetTimeOfDay() < 6.00 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func003Func001C takes nothing returns boolean
+    if ( not Trig_TyrandeEluneLevelNight_Func003Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Func003A takes nothing returns nothing
+    if ( Trig_TyrandeEluneLevelNight_Func003Func001C() ) then
+        if ( Trig_TyrandeEluneLevelNight_Func003Func001Func002C() ) then
+            call SetUnitAbilityLevelSwapped('A05L', GetEnumUnit(), 2)
+        else
+        endif
+    else
+        if ( Trig_TyrandeEluneLevelNight_Func003Func001Func001C() ) then
+            call SetUnitAbilityLevelSwapped('A05L', GetEnumUnit(), 1)
+        else
+        endif
+    endif
+endfunction
+
+function Trig_TyrandeEluneLevelNight_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('E006'), function Trig_TyrandeEluneLevelNight_Func001A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('e004'), function Trig_TyrandeEluneLevelNight_Func002A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('e00F'), function Trig_TyrandeEluneLevelNight_Func003A)
 endfunction
 
 //===========================================================================
-function InitTrig_TyrandeEluneRetribution takes nothing returns nothing
-    set gg_trg_TyrandeEluneRetribution=CreateTrigger()
-    call DisableTrigger(gg_trg_TyrandeEluneRetribution)
-    call TriggerRegisterTimerEventPeriodic(gg_trg_TyrandeEluneRetribution, 1.00)
-    call TriggerAddAction(gg_trg_TyrandeEluneRetribution, function Trig_TyrandeEluneRetribution_Actions)
+function InitTrig_TyrandeEluneLevelNight takes nothing returns nothing
+    set gg_trg_TyrandeEluneLevelNight=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeEluneLevelNight)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_TyrandeEluneLevelNight, 1.00)
+    call TriggerAddAction(gg_trg_TyrandeEluneLevelNight, function Trig_TyrandeEluneLevelNight_Actions)
 endfunction
 
 //===========================================================================
@@ -9065,7 +9158,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TyrandeShadowstalk()
     call InitTrig_TyrandeTearsOfElune()
     call InitTrig_TyrandeLunarFlare()
-    call InitTrig_TyrandeEluneRetribution()
+    call InitTrig_TyrandeEluneLevelNight()
     call InitTrig_TyrandeGiftOfElune()
     call InitTrig_TyrandeOverflowingMoonwell()
     call InitTrig_PlayerCount()
