@@ -166,6 +166,9 @@ trigger gg_trg_TyrandeIni= null
 trigger gg_trg_TyrandeShadowstalk= null
 trigger gg_trg_TyrandeTearsOfElune= null
 trigger gg_trg_TyrandeLunarFlare= null
+trigger gg_trg_TyrandeEluneLevelNight= null
+trigger gg_trg_TyrandeGiftOfElune= null
+trigger gg_trg_TyrandeOverflowingMoonwell= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -234,9 +237,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_TyrandeEluneLevelNight= null
-trigger gg_trg_TyrandeGiftOfElune= null
-trigger gg_trg_TyrandeOverflowingMoonwell= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1626,8 +1626,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2793.5, - 351.7, 220.447, 'ngna')
-    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2788.5, - 491.9, 290.707, 'ngna')
 endfunction
 
 //===========================================================================
