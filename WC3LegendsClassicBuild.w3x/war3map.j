@@ -1061,10 +1061,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'e004', - 19.8, - 345.9, 60.753, 'e004')
     set u=BlzCreateUnitWithSkin(p, 'e004', 100.4, - 308.4, 77.934, 'e004')
     set u=BlzCreateUnitWithSkin(p, 'e00L', 33.7, - 606.0, 266.507, 'e00L')
-    set u=BlzCreateUnitWithSkin(p, 'e00M', - 180.4, - 669.2, - 89.644, 'e00M')
-    set u=BlzCreateUnitWithSkin(p, 'e00K', - 688.3, - 453.2, 97.617, 'e00K')
+    set u=BlzCreateUnitWithSkin(p, 'e00M', - 180.4, - 669.2, 270.356, 'e00M')
+    set u=BlzCreateUnitWithSkin(p, 'e00K', - 688.3, - 453.2, 251.270, 'e00K')
     set u=BlzCreateUnitWithSkin(p, 'e00J', 258.0, - 384.8, 266.362, 'e00J')
-    set u=BlzCreateUnitWithSkin(p, 'e00F', 340.8, - 593.8, - 39.691, 'e00F')
+    set u=BlzCreateUnitWithSkin(p, 'e00F', 340.8, - 593.8, 320.309, 'e00F')
     set u=BlzCreateUnitWithSkin(p, 'E003', - 438.4, - 427.4, 185.094, 'E003')
     set u=BlzCreateUnitWithSkin(p, 'e00I', 448.6, - 389.0, 267.790, 'e00I')
 endfunction
@@ -1633,6 +1633,11 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2725.1, - 316.9, 346.530, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2737.2, - 422.0, 253.704, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2839.3, - 339.3, 110.669, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2847.3, - 489.8, 253.704, 'ngna')
+    set u=BlzCreateUnitWithSkin(p, 'ngna', - 2759.6, - 580.2, 253.704, 'ngna')
 endfunction
 
 //===========================================================================

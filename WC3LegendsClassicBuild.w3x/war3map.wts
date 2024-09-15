@@ -10412,3 +10412,87 @@ STRING 3817
 [Tyrande] Upgrade Moon Glaive
 }
 
+STRING 3818
+// Abilities: A05U ([Tyrande] Corrosive Breath), Name (Name)
+{
+[Tyrande] Corrosive Breath
+}
+
+STRING 3819
+// Upgrades: R025 (Corrosive Breath), Name (Name)
+{
+[Tyrande] Corrosive Breath
+}
+
+STRING 3820
+// Upgrades: R026 (Upgrade Moon Glaive), Name (Name)
+{
+[Tyrande] Upgrade Chain Lightning
+}
+
+STRING 3821
+// Upgrades: R026 (Upgrade Moon Glaive), Tip (Tooltip)
+{
+Upgrade Chain Lightning
+}
+
+STRING 3822
+// Abilities: A05V ([Tyrande] Chain Lightning), Name (Name)
+{
+[Tyrande] Chain Lightning
+}
+
+STRING 3823
+// Abilities: A05V ([Tyrande] Chain Lightning), Tip (Tooltip - Normal)
+{
+Chain Lightning
+}
+
+STRING 3824
+// Abilities: A05V ([Tyrande] Chain Lightning), Ubertip (Tooltip - Normal - Extended)
+{
+Calls forth a bolt of lightning that bounces up to <A05V,DataB1> times, dealing <A05V,DataA1> damage on the primary target. Each jump deals less damage.
+}
+
+STRING 3825
+// Upgrades: R026 (Upgrade Moon Glaive), Ubertip (Tooltip - Extended)
+{
+Calls forth a bolt of lightning that bounces up to <A05V,DataB1> times, dealing <A05V,DataA1> damage on the primary target. Each jump deals less damage.
+}
+
+STRING 3826
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Name (Name)
+{
+Moonkin Master Training
+}
+
+STRING 3827
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Tip (Tooltip)
+{
+Moonkin Adept Training
+}
+
+STRING 3828
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Tip (Tooltip)
+{
+Moonkin Master Training
+}
+
+STRING 3829
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Name (Name)
+{
+[Tyrande] Moonkin Adept Training
+}
+
+STRING 3830
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Rejuvenation.
+}
+
+STRING 3831
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Bear Form.
+}
+
