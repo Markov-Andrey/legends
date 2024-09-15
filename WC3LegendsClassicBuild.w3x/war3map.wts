@@ -10496,3 +10496,492 @@ STRING 3831
 Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Bear Form.
 }
 
+STRING 3838
+// Abilities: A05W ([Tyrande] Bladed Feathers), Name (Name)
+{
+[Tyrande] Bladed Feathers
+}
+
+STRING 3839
+// Abilities: A05W ([Tyrande] Bladed Feathers), Tip (Tooltip - Normal)
+{
+Bladed Feathers
+}
+
+STRING 3840
+// Abilities: A05X ([Tyrande] Bladed Feathers), Name (Name)
+{
+[Tyrande] Bladed Feathers
+}
+
+STRING 3841
+// Buffs/Effects: B00Y ([Tyrande] Bladed Feathers), Bufftip (Tooltip)
+{
+Bladed Feathers
+}
+
+STRING 3842
+// Buffs/Effects: B00Y ([Tyrande] Bladed Feathers), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Bladed Feathers; melee units that attack it will take damage.
+}
+
+STRING 3843
+// Units: e00L ([Tyrande] Moonkin), Tip (Tooltip - Basic)
+{
+Moonkin
+}
+
+STRING 3845
+// Abilities: A05X ([Tyrande] Bladed Feathers), EditorSuffix (Editor Suffix)
+{
+(Night)
+}
+
+STRING 3846
+// Buffs/Effects: B00Y ([Tyrande] Bladed Feathers), EditorName (Name (Editor Only))
+{
+[Tyrande] Bladed Feathers
+}
+
+STRING 3847
+// Abilities: A05W ([Tyrande] Bladed Feathers), Ubertip (Tooltip - Normal - Extended)
+{
+An aura that gives friendly nearby units a damage shield, which deals <A05W,DataA1> of an enemy unit's melee attack damage back to it.
+
+|cFF005DFFNight:|R Restores health equal to  <A05X,DataA2,%>% of damage dealt.
+}
+
+STRING 3848
+// Abilities: A05Y ([Tyrande] Roar), Name (Name)
+{
+[Tyrande] Roar
+}
+
+STRING 3849
+// Abilities: A05Y ([Tyrande] Roar), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A05Y,DataA1,%>% bonus to damage. |nLasts <A05Y,Dur1> seconds.
+}
+
+STRING 3850
+// Abilities: A05Z ([Tyrande] Pick up Archer), Name (Name)
+{
+[Tyrande] Pick up Archer
+}
+
+STRING 3851
+// Abilities: A060 ([Tyrande] Dismount), Name (Name)
+{
+[Tyrande] Dismount
+}
+
+STRING 3852
+// Abilities: A061 ([Tyrande] Mount Hippogryph), Name (Name)
+{
+[Tyrande] Mount Hippogryph
+}
+
+STRING 3853
+// Abilities: A062 ([Tyrande] Elune's Grace), Name (Name)
+{
+[Tyrande] Elune's Grace
+}
+
+STRING 3854
+// Abilities: A062 ([Tyrande] Elune's Grace), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces the damage taken from Piercing attacks to <A062,DataA1,%>%, and spells and Magic attacks to <A062,DataE1,%>%.
+}
+
+STRING 3855
+// Upgrades: R028 (Hippogryph Taming), Name (Name)
+{
+[Tyrande] Hippogryph Taming
+}
+
+STRING 3856
+// Abilities: A063 ([Tyrande] Abolish Magic), Name (Name)
+{
+[Tyrande] Abolish Magic
+}
+
+STRING 3857
+// Upgrades: R029 (Abolish Magic), Name (Name)
+{
+[Tyrande] Abolish Magic
+}
+
+STRING 3858
+// Abilities: A064 ([Tyrande] Sleep), Name (Name)
+{
+[Tyrande] Sleep
+}
+
+STRING 3859
+// Abilities: A064 ([Tyrande] Sleep), Tip (Tooltip - Normal)
+{
+Sleep
+}
+
+STRING 3860
+// Abilities: A064 ([Tyrande] Sleep), Ubertip (Tooltip - Normal - Extended)
+{
+Puts a target enemy unit to sleep for <A064,Dur1> seconds. A sleeping unit can be awoken by attacking it.
+}
+
+STRING 3862
+// Abilities: A065 ([Tyrande] Moonfire), Name (Name)
+{
+[Tyrande] Moonfire
+}
+
+STRING 3863
+// Abilities: A065 ([Tyrande] Moonfire), Tip (Tooltip - Normal)
+{
+Moonfire
+}
+
+STRING 3865
+// Buffs/Effects: B00Z ([Tyrande] Moonfire), Buffubertip (Tooltip - Extended)
+{
+This unit has Moonfire; damage over time
+}
+
+STRING 3866
+// Buffs/Effects: B00Z ([Tyrande] Moonfire), Bufftip (Tooltip)
+{
+Moonfire
+}
+
+STRING 3867
+// Buffs/Effects: B00Z ([Tyrande] Moonfire), EditorName (Name (Editor Only))
+{
+[Tyrande] Moonfire
+}
+
+STRING 3869
+// Units: e00M ([Tyrande] Priestess of Elune), Tip (Tooltip - Basic)
+{
+Priestess of Elune
+}
+
+STRING 3870
+// Upgrades: R02A (Druid of the Talon Adept Training,Druid of the Talon Master Training), Name (Name)
+{
+[Tyrande] Priestess of Elune Adept Training
+}
+
+STRING 3871
+// Upgrades: R02A (Druid of the Talon Adept Training,Druid of the Talon Master Training), Tip (Tooltip)
+{
+Priestess of Elune Adept Training
+}
+
+STRING 3872
+// Units: e000 ([Tyrande] Tree of Life), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Wisps and entangle gold mines. Can be upgraded to Tree of Ages and then Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3873
+// Units: e001 ([Tyrande] Wisp), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, create Night Elf buildings and Renew. |nCan Detonate to dispel magic, hurt summoned creatures and drain mana in an area.
+}
+
+STRING 3874
+// Units: e004 ([Tyrande] Archer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Basic long-ranged attacker. Has the Elune's Grace ability and Hippogryph Taming. Can learn the Marksmanship and Improved Bows upgrades.|n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3875
+// Units: e005 ([Tyrande] Moon Well), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food #support
+|R
+Provides food, which increases the maximum number of units that can be trained. Has the Replenish Mana and Life ability. Can gain the Well Spring upgrade. Regenerates mana at night.
+}
+
+STRING 3876
+// Units: E006 ([Tyrande] Altar of Elune), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes #mechanics
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 3877
+// Units: e007 ([Tyrande] Ancient of War), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Keeper of primary assault troops. Trains Archers, Huntresses, and Glaive Throwers. |nAlso contains Archer, Huntress, and Glaive Thrower upgrades. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3878
+// Units: e008 ([Tyrande] Ancient of Lore), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Keeper of ground based spellcasters. Trains Druids of the Claw, Dryads, and Mountain Giants. |nAlso contains the upgrades for Druids of the Claw, Mark of the Claw, Abolish Magic, Hardened Skin, and Resistant Skin. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3879
+// Units: e009 ([Tyrande] Ancient of Wind), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Keeper of aerial assault units and spellcasters. Trains Hippogryphs, Druids of the Talon, and Faerie Dragons. |nAlso contains the upgrades for Druids of the Talon and Mark of the Talon. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3880
+// Units: e00B ([Tyrande] Hunter's Hall), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrades
+|R
+Contains the attack and armor upgrades for all units, the Ultravision and Well Spring upgrades.
+}
+
+STRING 3881
+// Units: e00C ([Tyrande] Ancient Protector), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Defensive Ancient. When rooted in the ground, can hurl enormous rocks at nearby enemy units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3882
+// Units: e00D ([Tyrande] Chimaera Roost), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Trains Chimaeras. |nAlso contains the Corrosive Breath upgrade.
+}
+
+STRING 3883
+// Units: e00A ([Tyrande] Tree of Ages), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Tree of Ages to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3884
+// Units: e00E ([Tyrande] Tree of Eternity), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3885
+// Units: e00F ([Tyrande] Huntress), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Agile short-ranged warrior. Can learn the Sentinel ability and the Moon Glaive attack. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3886
+// Units: e00G ([Tyrande] Dryad), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Anti-spellcaster that has a poison attack which slows and damages enemy units. Also has Spell Immunity which renders her invulnerable to magical effects and damage. Can learn Abolish Magic. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3887
+// Units: e00H ([Tyrande] Glaive Thrower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings. Can gain the Vorpal Blades upgrade to attack trees. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3888
+// Units: e00I ([Tyrande] Hippogryph), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #fly
+|R
+Flying melee attack beast. Has the Hippogryph Taming ability. |n|n|cffffcc00Attacks air units.|r
+}
+
+STRING 3889
+// Units: e00J ([Tyrande] Hippogryph Rider), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Archer mounted Hippogryph. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3890
+// Units: e00K ([Tyrande] Chimaera), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Flying two headed Dragon. Can learn Corrosive Breath. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3891
+// Units: e00L ([Tyrande] Moonkin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Melee spellcaster. Can initially cast Roar, which increases attack damage. Can also learn Rejuvenation, Bear Form and Mark of the Claw. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 3893
+// Units: e00M ([Tyrande] Priestess of Elune), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Maneuverable spellcaster. Can initially cast Faerie Fire, which reduces armor and gives vision of an enemy unit. Can also learn Storm Crow Form, Cyclone and Mark of the Talon. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 3894
+// Abilities: A066 ([Tyrande] Cyclone), Name (Name)
+{
+[Tyrande] Cyclone
+}
+
+STRING 3895
+// Upgrades: R02A (Druid of the Talon Adept Training,Druid of the Talon Master Training), Ubertip (Tooltip - Extended)
+{
+Increases their Priestess of Elune mana capacity, mana regeneration rate, hit points, and gives them the ability Sleep.
+}
+
+STRING 3896
+// Upgrades: R02A (Druid of the Talon Adept Training,Druid of the Talon Master Training), Ubertip (Tooltip - Extended)
+{
+Increases their Priestess of Elune mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Cyclone.
+}
+
+STRING 3897
+// Upgrades: R02A (Druid of the Talon Adept Training,Druid of the Talon Master Training), Name (Name)
+{
+Priestess of Elune Master Training
+}
+
+STRING 3898
+// Upgrades: R02A (Druid of the Talon Adept Training,Druid of the Talon Master Training), Tip (Tooltip)
+{
+Priestess of Elune Master Training
+}
+
+STRING 3899
+// Abilities: A067 ([Tyrande] Prayer of the Moon Goddess), Name (Name)
+{
+[Tyrande] Prayer of the Moon Goddess
+}
+
+STRING 3900
+// Abilities: A067 ([Tyrande] Prayer of the Moon Goddess), Tip (Tooltip - Normal)
+{
+Prayer of the Moon Goddess
+}
+
+STRING 3901
+// Abilities: A067 ([Tyrande] Prayer of the Moon Goddess), Ubertip (Tooltip - Normal - Extended)
+{
+Regenerates unit mana by <A067,DataB1> over <A067,Dur1> seconds when used.
+}
+
+STRING 3902
+// Buffs/Effects: B010 ([Tyrande] Prayer of the Moon Goddess), EditorName (Name (Editor Only))
+{
+[Tyrande] Prayer of the Moon Goddess
+}
+
+STRING 3903
+// Buffs/Effects: B010 ([Tyrande] Prayer of the Moon Goddess), Bufftip (Tooltip)
+{
+Prayer of the Moon Goddess
+}
+
+STRING 3904
+// Buffs/Effects: B010 ([Tyrande] Prayer of the Moon Goddess), Buffubertip (Tooltip - Extended)
+{
+Its mana will regenerate over time.
+}
+
+STRING 3905
+// Units: e00M ([Tyrande] Priestess of Elune), Casterupgradetip (Caster Upgrade Tips)
+{
+- Moonfire,- Moonfire|n- Prayer of the Moon Goddess,- Moonfire|n- Prayer of the Moon Goddess|n- Cyclone
+}
+
+STRING 3906
+// Abilities: A068 ([UI] History: Tyrande), Name (Name)
+{
+[UI] History: Tyrande
+}
+
+STRING 3907
+// Abilities: A068 ([UI] History: Tyrande), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 3908
+// Abilities: A068 ([UI] History: Tyrande), Ubertip (Tooltip - Normal - Extended)
+{
+Tyrande Whisperwind
+
+High Priestess of Elune, protector of the night elves, and a beacon of wisdom and strength.
+For millennia, Tyrande has led her people with grace and determination, balancing the serenity of her goddess with the ferocity of a warrior.
+
+In times of war and peace, she remains steadfast, guiding her people through the darkest of times with unyielding resolve.
+
+Her devotion to Elune and her love for Malfurion have defined her long life, as she continues to stand as a symbol of hope, wisdom, and unshakable faith.
+}
+
+STRING 3909
+// Abilities: A069 ([UI] Features: Tyrande), Name (Name)
+{
+[UI] Features: Tyrande
+}
+
+STRING 3910
+// Abilities: A069 ([UI] Features: Tyrande), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 3911
+// Abilities: A069 ([UI] Features: Tyrande), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to learn
+High damage
+Night advantages|R
+|cFFFF5A4B- Mana-dependent
+Fragile troops
+Few control and support spells|R
+}
+
+STRING 3912
+// Abilities: A06A ([UI] Mechanics: Tyrande), Name (Name)
+{
+[UI] Mechanics: Tyrande
+}
+
+STRING 3913
+// Abilities: A06A ([UI] Mechanics: Tyrande), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 3914
+// Abilities: A06A ([UI] Mechanics: Tyrande), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Elune's Blessing|R - Tyrande draws power from the Goddess, allowing her to call forth powerful spells on the battlefield.
+|cFF00C850- Under Night's Veil|R - At night, the effectiveness of certain abilities is further increased.
+}
+
