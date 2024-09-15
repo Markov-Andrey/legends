@@ -532,7 +532,7 @@ function InitGlobals takes nothing returns nothing
     set udg_MaxCountDefeat=0
     set udg_ConsoleMessage=""
     set udg_ConsoleTrigger=""
-    set udg_isTestVersion=true
+    set udg_isTestVersion=false
     set i=0
     loop
         exitwhen ( i > 3 )
