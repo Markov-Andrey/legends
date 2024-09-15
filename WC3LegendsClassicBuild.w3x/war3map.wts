@@ -10997,12 +10997,6 @@ STRING 3917
 Thrall
 }
 
-STRING 3918
-// Abilities: A06B ([UI] Legends: Thrall), Tip (Tooltip - Normal)
-{
-|cFF81DFFFThrall|R
-}
-
 STRING 3919
 // Abilities: A06B ([UI] Legends: Thrall), Ubertip (Tooltip - Normal - Extended)
 {
@@ -11031,5 +11025,30 @@ STRING 3923
 // Upgrades: R02B (Magic Sentry), Ubertip (Tooltip - Extended)
 {
 Improvement to check the player's army
+}
+
+STRING 3924
+// Abilities: A06B ([UI] Legends: Thrall), Tip (Tooltip - Normal)
+{
+|cFFFF4F4FThrall|R
+}
+
+STRING 3925
+// Abilities: A06C ([UI] Race: Thrall), Name (Name)
+{
+[UI] Race: Thrall
+}
+
+STRING 3926
+// Abilities: A06C ([UI] Race: Thrall), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 3927
+// Abilities: A06C ([UI] Race: Thrall), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Orc
+|cFF48BFFFSubrace:|R New Horde
 }
 
