@@ -163,10 +163,10 @@ trigger gg_trg_WrynnRent= null
 trigger gg_trg_WrynnDeposit= null
 trigger gg_trg_WrynnDepositTimer= null
 trigger gg_trg_TyrandeIni= null
+trigger gg_trg_TyrandeEluneLevelNight= null
 trigger gg_trg_TyrandeShadowstalk= null
 trigger gg_trg_TyrandeTearsOfElune= null
 trigger gg_trg_TyrandeLunarFlare= null
-trigger gg_trg_TyrandeEluneLevelNight= null
 trigger gg_trg_TyrandeGiftOfElune= null
 trigger gg_trg_TyrandeOverflowingMoonwell= null
 trigger gg_trg_PlayerCount= null
@@ -1029,17 +1029,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'e000', - 768.0, 64.0, 270.000, 'e000')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1646,7 +1635,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -1661,7 +1649,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreatePlayerBuildings()
+    call CreateBuildingsForPlayer5() // INLINED!!
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
