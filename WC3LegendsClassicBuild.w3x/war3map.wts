@@ -10955,17 +10955,6 @@ STRING 3910
 |cFF00B0FFFeatures
 }
 
-STRING 3911
-// Abilities: A069 ([UI] Features: Tyrande), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF00C850- Easy to learn
-High damage
-Night advantages|R
-|cFFFF5A4B- Mana-dependent
-Fragile troops
-Few control and support spells|R
-}
-
 STRING 3912
 // Abilities: A06A ([UI] Mechanics: Tyrande), Name (Name)
 {
@@ -10983,5 +10972,64 @@ STRING 3914
 {
 |cFF00C850- Elune's Blessing|R - Tyrande draws power from the Goddess, allowing her to call forth powerful spells on the battlefield.
 |cFF00C850- Under Night's Veil|R - At night, the effectiveness of certain abilities is further increased.
+}
+
+STRING 3915
+// Abilities: A069 ([UI] Features: Tyrande), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Easy to learn
+- High damage
+- Night advantages|R
+|cFFFF5A4B- Mana-dependent
+- Fragile troops
+- Few control and support spells|R
+}
+
+STRING 3916
+// Units: h01M ([UI] Thrall), Name (Name)
+{
+[UI] Thrall
+}
+
+STRING 3917
+// Units: h01M ([UI] Thrall), Tip (Tooltip - Basic)
+{
+Thrall
+}
+
+STRING 3918
+// Abilities: A06B ([UI] Legends: Thrall), Tip (Tooltip - Normal)
+{
+|cFF81DFFFThrall|R
+}
+
+STRING 3919
+// Abilities: A06B ([UI] Legends: Thrall), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 3920
+// Abilities: A06B ([UI] Legends: Thrall), Name (Name)
+{
+[UI] Legends: Thrall
+}
+
+STRING 3921
+// Upgrades: R02B (Magic Sentry), Name (Name)
+{
+[Special] Thrall
+}
+
+STRING 3922
+// Upgrades: R02B (Magic Sentry), Tip (Tooltip)
+{
+Thrall
+}
+
+STRING 3923
+// Upgrades: R02B (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
 }
 
