@@ -242,6 +242,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_ThrallPlaceTotem= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1122,6 +1123,19 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p= Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'o00K', 32.0, 352.0, 270.000, 'o00K')
+    set u=BlzCreateUnitWithSkin(p, 'o00K', - 160.0, 352.0, 270.000, 'o00K')
+    set u=BlzCreateUnitWithSkin(p, 'O00O', - 32.0, 608.0, 270.000, 'O00O')
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1732,6 +1746,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -1746,7 +1761,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreateBuildingsForPlayer5() // INLINED!!
+    call CreatePlayerBuildings()
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
@@ -2326,6 +2341,9 @@ function Trig_LimitUnits_Func001A takes nothing returns nothing
     // Tyrande
     call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E006', 1, GetEnumPlayer())
+    // Thrall
+    call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
 endfunction
 
 function Trig_LimitUnits_Actions takes nothing returns nothing
@@ -5600,6 +5618,55 @@ endfunction
 function InitTrig_ThrallIni takes nothing returns nothing
     set gg_trg_ThrallIni=CreateTrigger()
     call TriggerAddAction(gg_trg_ThrallIni, function Trig_ThrallIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ThrallPlaceTotem
+//===========================================================================
+function Trig_ThrallPlaceTotem_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A06D' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallPlaceTotem_Func001Func002C takes nothing returns boolean
+    if ( not ( GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD) >= 15 ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER) >= 35 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallPlaceTotem_Func001C takes nothing returns boolean
+    if ( not ( IsLocationVisibleToPlayer(GetSpellTargetLoc(), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallPlaceTotem_Actions takes nothing returns nothing
+    if ( Trig_ThrallPlaceTotem_Func001C() ) then
+        if ( Trig_ThrallPlaceTotem_Func001Func002C() ) then
+            call AdjustPlayerStateBJ(- 15, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(- 35, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+            call CreateNUnitsAtLoc(1, 'o00N', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
+        else
+            call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_3963")
+        endif
+    else
+        call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_3962")
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ThrallPlaceTotem takes nothing returns nothing
+    set gg_trg_ThrallPlaceTotem=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallPlaceTotem, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ThrallPlaceTotem, Condition(function Trig_ThrallPlaceTotem_Conditions))
+    call TriggerAddAction(gg_trg_ThrallPlaceTotem, function Trig_ThrallPlaceTotem_Actions)
 endfunction
 
 //===========================================================================
@@ -9383,6 +9450,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TyrandeGiftOfElune()
     call InitTrig_TyrandeOverflowingMoonwell()
     call InitTrig_ThrallIni()
+    call InitTrig_ThrallPlaceTotem()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
     call InitTrig_SetAIRace()

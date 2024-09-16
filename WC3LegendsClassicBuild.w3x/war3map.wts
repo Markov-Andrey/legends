@@ -71,126 +71,6 @@ STRING 477
 Upgrade to Plague Black Citadel
 }
 
-STRING 478
-// Units: o001 (Peon), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 479
-// Units: o002 (Grunt), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 480
-// Units: o003 (Headhunter), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 481
-// Units: o004 (Demolisher), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 482
-// Units: o005 (Shaman), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 483
-// Units: o006 (Witch Doctor), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 484
-// Units: o007 (Raider), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 485
-// Units: o008 (Wind Rider), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 486
-// Units: o009 (Tauren), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 487
-// Units: o00A (Great Hall), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 488
-// Units: o00B (Stronghold), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 489
-// Units: o00D (Fortress), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 490
-// Units: o00E (Altar of Storms), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 491
-// Units: o00F (Barracks), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 492
-// Units: o00G (War Mill), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 493
-// Units: o00H (Tauren Totem), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 494
-// Units: o00I (Spirit Lodge), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 495
-// Units: o00J (Beastiary), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 496
-// Units: o00K (Burrow), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
-STRING 497
-// Units: o00L (Watch Tower), EditorSuffix (Name - Editor Suffix)
-{
-[Thrall]
-}
-
 STRING 498
 // Upgrades: R00V (Animal War Training), EditorSuffix (Editor Suffix)
 {
@@ -11050,5 +10930,183 @@ STRING 3927
 {
 |cFF48BFFFRace:|R Orc
 |cFF48BFFFSubrace:|R New Horde
+}
+
+STRING 3930
+// Units: o001 ([Thrall] Peon), Name (Name)
+{
+[Thrall] Peon
+}
+
+STRING 3931
+// Units: o002 ([Thrall] Grunt), Name (Name)
+{
+[Thrall] Grunt
+}
+
+STRING 3932
+// Units: o003 ([Thrall] Headhunter), Name (Name)
+{
+[Thrall] Headhunter
+}
+
+STRING 3933
+// Units: o004 ([Thrall] Demolisher), Name (Name)
+{
+[Thrall] Demolisher
+}
+
+STRING 3934
+// Units: o005 ([Thrall] Shaman), Name (Name)
+{
+[Thrall] Shaman
+}
+
+STRING 3935
+// Units: o007 ([Thrall] Raider), Name (Name)
+{
+[Thrall] Raider
+}
+
+STRING 3936
+// Units: o008 ([Thrall] Wind Rider), Name (Name)
+{
+[Thrall] Wind Rider
+}
+
+STRING 3937
+// Units: o009 ([Thrall] Tauren), Name (Name)
+{
+[Thrall] Tauren
+}
+
+STRING 3938
+// Units: o00A ([Thrall] Great Hall), Name (Name)
+{
+[Thrall] Great Hall
+}
+
+STRING 3939
+// Units: o00B ([Thrall] Stronghold), Name (Name)
+{
+[Thrall] Stronghold
+}
+
+STRING 3940
+// Units: o00D ([Thrall] Fortress), Name (Name)
+{
+[Thrall] Fortress
+}
+
+STRING 3941
+// Units: O00O ([Thrall] Altar of Storms), Name (Name)
+{
+[Thrall] Altar of Storms
+}
+
+STRING 3942
+// Units: o00F ([Thrall] Barracks), Name (Name)
+{
+[Thrall] Barracks
+}
+
+STRING 3943
+// Units: o00G ([Thrall] War Mill), Name (Name)
+{
+[Thrall] War Mill
+}
+
+STRING 3944
+// Units: o00H ([Thrall] Tauren Totem), Name (Name)
+{
+[Thrall] Tauren Totem
+}
+
+STRING 3945
+// Units: o00I ([Thrall] Spirit Lodge), Name (Name)
+{
+[Thrall] Spirit Lodge
+}
+
+STRING 3946
+// Units: o00J ([Thrall] Beastiary), Name (Name)
+{
+[Thrall] Beastiary
+}
+
+STRING 3948
+// Units: o00L ([Thrall] Watch Tower), Name (Name)
+{
+[Thrall] Watch Tower
+}
+
+STRING 3949
+// Units: o00M ([Thrall] Healing Ward), Name (Name)
+{
+[Thrall] Healing Ward
+}
+
+STRING 3950
+// Units: o00N ([Thrall] Healing Ward), Name (Name)
+{
+[Thrall] Healing Ward
+}
+
+STRING 3951
+// Units: o00P ([Thrall] Healing Ward), Name (Name)
+{
+[Thrall] Healing Ward
+}
+
+STRING 3952
+// Units: o00Q ([Thrall] Healing Ward), Name (Name)
+{
+[Thrall] Healing Ward
+}
+
+STRING 3953
+// Units: o006 ([Thrall] Voodoo Lounge), Name (Name)
+{
+[Thrall] Voodoo Lounge
+}
+
+STRING 3954
+// Units: o00K ([Thrall] Elemental Burrow), Name (Name)
+{
+[Thrall] Elemental Burrow
+}
+
+STRING 3955
+// Units: o00K ([Thrall] Elemental Burrow), Tip (Tooltip - Basic)
+{
+Build Elemental Burrow
+}
+
+STRING 3957
+// Abilities: A06D ([Thrall] Place a Totem), Name (Name)
+{
+[Thrall] Place a Totem
+}
+
+STRING 3958
+// Abilities: A06D ([Thrall] Place a Totem), Tip (Tooltip - Normal)
+{
+Place a Totem
+}
+
+STRING 3962
+{
+The summoning point must be within line of sight!
+}
+
+STRING 3963
+{
+Requires 15 gold and 35 wood to summon a totem!
+}
+
+STRING 3964
+// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
+{
+15 gold, 35 gold
 }
 
