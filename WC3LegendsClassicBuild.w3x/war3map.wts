@@ -11025,30 +11025,6 @@ STRING 3948
 [Thrall] Watch Tower
 }
 
-STRING 3949
-// Units: o00M ([Thrall] Healing Ward), Name (Name)
-{
-[Thrall] Healing Ward
-}
-
-STRING 3950
-// Units: o00N ([Thrall] Healing Ward), Name (Name)
-{
-[Thrall] Healing Ward
-}
-
-STRING 3951
-// Units: o00P ([Thrall] Healing Ward), Name (Name)
-{
-[Thrall] Healing Ward
-}
-
-STRING 3952
-// Units: o00Q ([Thrall] Healing Ward), Name (Name)
-{
-[Thrall] Healing Ward
-}
-
 STRING 3953
 // Units: o006 ([Thrall] Voodoo Lounge), Name (Name)
 {
@@ -11093,5 +11069,95 @@ STRING 3964
 // Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
 {
 15 gold, 35 gold
+}
+
+STRING 3965
+// Abilities: A06E ([Thrall] Hand-Carved Totems), Name (Name)
+{
+[Thrall] Hand-Carved Totems
+}
+
+STRING 3966
+// Abilities: A06E ([Thrall] Hand-Carved Totems), Tip (Tooltip - Normal)
+{
+Hand-Carved Totems
+}
+
+STRING 3967
+// Abilities: A06E ([Thrall] Hand-Carved Totems), Ubertip (Tooltip - Normal - Extended)
+{
+Totems gain an additional 5 health for each Elemental Burrow.
+}
+
+STRING 3968
+// Units: o00M ([Thrall] Wind Totem), Name (Name)
+{
+[Thrall] Wind Totem
+}
+
+STRING 3969
+// Units: o00N ([Thrall] Fire Totem), Name (Name)
+{
+[Thrall] Fire Totem
+}
+
+STRING 3970
+// Units: o00P ([Thrall] Water Totem), Name (Name)
+{
+[Thrall] Water Totem
+}
+
+STRING 3971
+// Units: o00Q ([Thrall] Earth Totem), Name (Name)
+{
+[Thrall] Earth Totem
+}
+
+STRING 3972
+// Abilities: A06F ([Thrall] Fire Mode), Name (Name)
+{
+[Thrall] Fire Mode
+}
+
+STRING 3973
+// Abilities: A06F ([Thrall] Fire Mode), Tip (Tooltip - Normal)
+{
+Fire Mode
+}
+
+STRING 3974
+// Abilities: A06G ([Thrall] Water Mode), Name (Name)
+{
+[Thrall] Water Mode
+}
+
+STRING 3975
+// Abilities: A06G ([Thrall] Water Mode), Tip (Tooltip - Normal)
+{
+Water Mode
+}
+
+STRING 3976
+// Abilities: A06H ([Thrall] Earth Mode), Name (Name)
+{
+[Thrall] Earth Mode
+}
+
+STRING 3977
+// Abilities: A06H ([Thrall] Earth Mode), Tip (Tooltip - Normal)
+{
+Water Mode
+}
+
+STRING 3978
+// Abilities: A06I ([Thrall] Wind Mode), Name (Name)
+{
+[Thrall] Wind Mode
+}
+
+STRING 3979
+// Abilities: A06I ([Thrall] Wind Mode), Tip (Tooltip - Normal)
+{
+Wind Mode
 }
 
