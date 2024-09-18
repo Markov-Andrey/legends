@@ -1044,24 +1044,6 @@ The level of difficulty that will require the maximum of your skills and the mos
 
 }
 
-STRING 1173
-// Abilities: A010 ([UI] Difficulty: Chaos), Tip (Tooltip - Normal)
-{
-Chaos
-}
-
-STRING 1174
-// Abilities: A010 ([UI] Difficulty: Chaos), Ubertip (Tooltip - Normal - Extended)
-{
-Difficulty level with random difficulty modifications.
-}
-
-STRING 1175
-// Abilities: A010 ([UI] Difficulty: Chaos), Name (Name)
-{
-[UI] Difficulty: Chaos
-}
-
 STRING 1176
 // Upgrades: R00A (Magic Sentry), Tip (Tooltip)
 {
@@ -9920,7 +9902,7 @@ Hunting in the Night
 }
 
 STRING 3757
-// Abilities: A057 ([Tyrande] Eclipse), Hotkey (Hotkey - Normal)
+// Abilities: A00Z ([UI] Difficulty: Hard), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -11062,31 +11044,7 @@ The summoning point must be within line of sight!
 
 STRING 3963
 {
-Requires 15 gold and 35 wood to summon a totem!
-}
-
-STRING 3964
-// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
-{
-15 gold, 35 gold
-}
-
-STRING 3965
-// Abilities: A06E ([Thrall] Hand-Carved Totems), Name (Name)
-{
-[Thrall] Hand-Carved Totems
-}
-
-STRING 3966
-// Abilities: A06E ([Thrall] Hand-Carved Totems), Tip (Tooltip - Normal)
-{
-Hand-Carved Totems
-}
-
-STRING 3967
-// Abilities: A06E ([Thrall] Hand-Carved Totems), Ubertip (Tooltip - Normal - Extended)
-{
-Totems gain an additional 5 health for each Elemental Burrow.
+Requires 5 gold and 25 wood to summon a totem!
 }
 
 STRING 3968
@@ -11113,51 +11071,293 @@ STRING 3971
 [Thrall] Earth Totem
 }
 
-STRING 3972
-// Abilities: A06F ([Thrall] Fire Mode), Name (Name)
+STRING 3980
+// Abilities: A06F ([Thrall] Switch to Flame Fury), Name (Name)
 {
-[Thrall] Fire Mode
+[Thrall] Switch to Flame Fury
 }
 
-STRING 3973
-// Abilities: A06F ([Thrall] Fire Mode), Tip (Tooltip - Normal)
+STRING 3981
+// Abilities: A06F ([Thrall] Switch to Flame Fury), Tip (Tooltip - Normal)
 {
-Fire Mode
+Switch to Flame Fury
 }
 
-STRING 3974
-// Abilities: A06G ([Thrall] Water Mode), Name (Name)
+STRING 3982
+// Abilities: A06G ([Thrall] Switch to Tide's Wisdom), Name (Name)
 {
-[Thrall] Water Mode
+[Thrall] Switch to Tide's Wisdom
 }
 
-STRING 3975
-// Abilities: A06G ([Thrall] Water Mode), Tip (Tooltip - Normal)
+STRING 3983
+// Abilities: A06G ([Thrall] Switch to Tide's Wisdom), Tip (Tooltip - Normal)
 {
-Water Mode
+Switch to Tide's Wisdom
 }
 
-STRING 3976
-// Abilities: A06H ([Thrall] Earth Mode), Name (Name)
+STRING 3984
+// Abilities: A06H ([Thrall] Switch to Earth's Might), Name (Name)
 {
-[Thrall] Earth Mode
+[Thrall] Switch to Earth's Might
 }
 
-STRING 3977
-// Abilities: A06H ([Thrall] Earth Mode), Tip (Tooltip - Normal)
+STRING 3985
+// Abilities: A06H ([Thrall] Switch to Earth's Might), Tip (Tooltip - Normal)
 {
-Water Mode
+Switch to Earth's Might
 }
 
-STRING 3978
-// Abilities: A06I ([Thrall] Wind Mode), Name (Name)
+STRING 3986
+// Abilities: A06I ([Thrall] Switch to Wind's Grace), Name (Name)
 {
-[Thrall] Wind Mode
+[Thrall] Switch to Wind's Grace
 }
 
-STRING 3979
-// Abilities: A06I ([Thrall] Wind Mode), Tip (Tooltip - Normal)
+STRING 3987
+// Abilities: A06I ([Thrall] Switch to Wind's Grace), Tip (Tooltip - Normal)
 {
-Wind Mode
+Switch to Wind's Grace
+}
+
+STRING 3988
+// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Cost - 5 gold, 25 lumber
+}
+
+STRING 3989
+// Abilities: S004 ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 3990
+// Abilities: S004 ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Air)
+}
+
+STRING 3991
+// Abilities: S006 ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 3992
+// Abilities: S006 ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Earth)
+}
+
+STRING 3993
+// Abilities: S007 ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 3994
+// Abilities: S007 ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Fire)
+}
+
+STRING 3995
+// Abilities: S008 ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 3996
+// Abilities: S008 ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Water)
+}
+
+STRING 3997
+// Abilities: A003 ([UI] Difficulty: Easy), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 3998
+// Abilities: A010 ([UI] Difficulty: Chaos (+1)), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 3999
+// Abilities: A06G ([Thrall] Switch to Tide's Wisdom), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 4000
+// Abilities: A06H ([Thrall] Switch to Earth's Might), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 4001
+// Abilities: A06I ([Thrall] Switch to Wind's Grace), Hotkey (Hotkey - Normal)
+{
+Z
+}
+
+STRING 4002
+// Units: O00C (Horde Warchief), Name (Name)
+{
+Horde Warchief
+}
+
+STRING 4003
+// Units: O00C (Horde Warchief), Awakentip (Tooltip - Awaken)
+{
+Revive Thrall
+}
+
+STRING 4004
+// Units: O00C (Horde Warchief), Tip (Tooltip - Basic)
+{
+Summon Thrall
+}
+
+STRING 4005
+// Units: O00C (Horde Warchief), Revivetip (Tooltip - Revive)
+{
+Revive Thrall
+}
+
+STRING 4006
+// Abilities: A00Y ([UI] Difficulty: Normal), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 4007
+// Abilities: A010 ([UI] Difficulty: Chaos (+1)), Tip (Tooltip - Normal)
+{
+Chaos (+1)
+}
+
+STRING 4009
+// Abilities: A010 ([UI] Difficulty: Chaos (+1)), Name (Name)
+{
+[UI] Difficulty: Chaos (+1)
+}
+
+STRING 4010
+// Abilities: A057 ([Tyrande] Eclipse), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 4011
+// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 4012
+// Abilities: A06E ([UI] Difficulty: Chaos (+2)), Tip (Tooltip - Normal)
+{
+Chaos (+2)
+}
+
+STRING 4014
+// Abilities: A06E ([UI] Difficulty: Chaos (+2)), Name (Name)
+{
+[UI] Difficulty: Chaos (+2)
+}
+
+STRING 4015
+// Abilities: A06E ([UI] Difficulty: Chaos (+2)), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 4016
+// Abilities: A06J ([UI] Difficulty: Chaos (+3)), Tip (Tooltip - Normal)
+{
+Chaos (+3)
+}
+
+STRING 4018
+// Abilities: A06J ([UI] Difficulty: Chaos (+3)), Name (Name)
+{
+[UI] Difficulty: Chaos (+3)
+}
+
+STRING 4019
+// Abilities: A06J ([UI] Difficulty: Chaos (+3)), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 4020
+// Abilities: A06K ([UI] Difficulty: Chaos (+4)), Tip (Tooltip - Normal)
+{
+Chaos (+4)
+}
+
+STRING 4022
+// Abilities: A06K ([UI] Difficulty: Chaos (+4)), Name (Name)
+{
+[UI] Difficulty: Chaos (+4)
+}
+
+STRING 4023
+// Abilities: A06K ([UI] Difficulty: Chaos (+4)), Hotkey (Hotkey - Normal)
+{
+F
+}
+
+STRING 4024
+// Abilities: A010 ([UI] Difficulty: Chaos (+1)), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF5800Recommended for experienced players!|r
+
+Difficulty level with random difficulty modifications +1.
+}
+
+STRING 4025
+// Abilities: A06E ([UI] Difficulty: Chaos (+2)), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF5800Recommended for experienced players!|r
+
+Difficulty level with random difficulty modifications +2.
+}
+
+STRING 4026
+// Abilities: A06J ([UI] Difficulty: Chaos (+3)), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF5800Recommended for experienced players!|r
+
+Difficulty level with random difficulty modifications +3.
+}
+
+STRING 4027
+// Abilities: A06K ([UI] Difficulty: Chaos (+4)), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF5800You are not Prepared!!|r
+
+Difficulty level with random difficulty modifications +4.
+}
+
+STRING 4028
+// Abilities: A06L ([Thrall] Walk), Name (Name)
+{
+[Thrall] Walk
+}
+
+STRING 4029
+// Abilities: A06L ([Thrall] Walk), Tip (Tooltip - Normal)
+{
+Walk
+}
+
+STRING 4030
+// Abilities: A06L ([Thrall] Walk), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
 }
 
