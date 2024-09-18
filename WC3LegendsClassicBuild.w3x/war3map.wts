@@ -11343,21 +11343,39 @@ STRING 4027
 Difficulty level with random difficulty modifications +4.
 }
 
-STRING 4028
-// Abilities: A06L ([Thrall] Walk), Name (Name)
-{
-[Thrall] Walk
-}
-
-STRING 4029
-// Abilities: A06L ([Thrall] Walk), Tip (Tooltip - Normal)
-{
-Walk
-}
-
 STRING 4030
-// Abilities: A06L ([Thrall] Walk), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06L ([Thrall] Wind Acceleration), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
+}
+
+STRING 4031
+// Abilities: A06L ([Thrall] Wind Acceleration), Name (Name)
+{
+[Thrall] Wind Acceleration
+}
+
+STRING 4032
+// Abilities: A06L ([Thrall] Wind Acceleration), Tip (Tooltip - Normal)
+{
+Wind Acceleration
+}
+
+STRING 4033
+// Buffs/Effects: B011 ([Thrall] Wind Acceleration), EditorName (Name (Editor Only))
+{
+[Thrall] Wind Acceleration
+}
+
+STRING 4034
+// Buffs/Effects: B011 ([Thrall] Wind Acceleration), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Wind Acceleration; it has an increased movement.
+}
+
+STRING 4035
+// Buffs/Effects: B011 ([Thrall] Wind Acceleration), Bufftip (Tooltip)
+{
+Wind Acceleration
 }
 
