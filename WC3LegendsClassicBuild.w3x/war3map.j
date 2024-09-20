@@ -1,9 +1,9 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader__eventTrigger= CreateTrigger()
-trigger FrameLoader__actionTrigger= CreateTrigger()
-timer FrameLoader__t= CreateTimer()
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -13,18 +13,18 @@ constant boolean LIBRARY_THRALLUI=true
 //endglobals from THRALLUI
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
-framehandle CustomConsoleUI__idleWorkerButton
-framehandle CustomConsoleUI__idleWorkerButtonOverlay
-framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI__customInventoryCover
-framehandle CustomConsoleUI__customInventoryCoverParent
+framehandle CustomConsoleUI___idleWorkerButton
+framehandle CustomConsoleUI___idleWorkerButtonOverlay
+framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI___customInventoryCover
+framehandle CustomConsoleUI___customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI__dataPageSize= 11
+integer CustomConsoleUI___dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
         // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI__workerFace= true
+constant boolean CustomConsoleUI___workerFace= true
 //endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
@@ -180,6 +180,7 @@ trigger gg_trg_TyrandeOverflowingMoonwell= null
 trigger gg_trg_ThrallIni= null
 trigger gg_trg_ThrallPlaceTotem= null
 trigger gg_trg_ThrallChangeMode= null
+trigger gg_trg_ThrallElementalBurrow= null
 trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
@@ -248,7 +249,8 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_ThrallElementalBurrow= null
+trigger gg_trg_ThrallOverload= null
+trigger gg_trg_ThrallDeadOverloadTotem= null
 
     // Random Groups
 integer array gg_rg_000
@@ -271,24 +273,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader__actionTrigger, func)
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
     endfunction
 
-    function FrameLoader__timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader__actionTrigger)
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
     endfunction
-    function FrameLoader__eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
     endfunction
-    function FrameLoader__init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -348,15 +350,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER__init takes nothing returns nothing
-        call REFORGEDUIMAKER__CreateIcons()
+    function REFORGEDUIMAKER___init takes nothing returns nothing
+        call REFORGEDUIMAKER___CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library THRALLUI:
 
-    function THRALLUI__CreateIcon takes nothing returns nothing
+    function THRALLUI___CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -389,8 +391,8 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI__init takes nothing returns nothing
-        call THRALLUI__CreateIcon()
+    function THRALLUI___init takes nothing returns nothing
+        call THRALLUI___CreateIcon()
     endfunction
 
 
@@ -409,7 +411,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -420,7 +422,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI__dataPageSize
+        set pageValue=index * CustomConsoleUI___dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -440,10 +442,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -456,18 +458,18 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
-                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
-                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
+                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
+                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
 
         else
-            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
-            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
+            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -488,19 +490,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI__Init takes nothing returns nothing
+    function CustomConsoleUI___Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI__at0s takes nothing returns nothing
-        call CustomConsoleUI__Init()
+    function CustomConsoleUI___at0s takes nothing returns nothing
+        call CustomConsoleUI___Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI__update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI___update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI__init_function takes nothing returns nothing
+    function CustomConsoleUI___init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -620,11 +622,11 @@ endglobals
         set CustomConsoleUI_x[index]=0.0004
         set CustomConsoleUI_y[index]=0.0
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
 
-            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
 
     endfunction
 
@@ -1184,6 +1186,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'O00O', - 544.0, - 352.0, 270.000, 'O00O')
+    set u=BlzCreateUnitWithSkin(p, 'o00K', - 736.0, - 96.0, 270.000, 'o00K')
 endfunction
 
 //===========================================================================
@@ -1195,6 +1198,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'o002', - 988.5, - 343.8, 182.297, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'o002', - 977.0, - 494.3, 161.809, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'O00C', - 875.7, - 387.3, 176.920, 'O00C')
+    call SetHeroLevel(u, 10, false)
 endfunction
 
 //===========================================================================
@@ -1761,6 +1768,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2882.1, - 307.5, 319.448, 'ngno')
+    set u=BlzCreateUnitWithSkin(p, 'ngno', - 2846.9, - 482.6, 28.609, 'ngno')
 endfunction
 
 //===========================================================================
@@ -5669,6 +5678,76 @@ function InitTrig_ThrallIni takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: ThrallOverload
+//===========================================================================
+function Trig_ThrallOverload_Conditions takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetSpellAbilityUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) ) then
+        return false
+    endif
+    if ( not ( GetSpellAbilityId() == 'A06V' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallOverload_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00N' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallOverload_Actions takes nothing returns nothing
+    if ( Trig_ThrallOverload_Func002C() ) then
+        call ReplaceUnitBJ(GetSpellTargetUnit(), 'o00E', bj_UNIT_STATE_METHOD_RELATIVE)
+        call UnitApplyTimedLifeBJ(( 5.00 + ( 10.00 * I2R(GetUnitAbilityLevelSwapped('A06V', GetSpellAbilityUnit())) ) ), 'BTLF', GetLastReplacedUnitBJ())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ThrallOverload takes nothing returns nothing
+    set gg_trg_ThrallOverload=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallOverload, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ThrallOverload, Condition(function Trig_ThrallOverload_Conditions))
+    call TriggerAddAction(gg_trg_ThrallOverload, function Trig_ThrallOverload_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ThrallDeadOverloadTotem
+//===========================================================================
+function Trig_ThrallDeadOverloadTotem_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00E' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallDeadOverloadTotem_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00E' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallDeadOverloadTotem_Actions takes nothing returns nothing
+    call ShowUnitHide(GetDyingUnit())
+    if ( Trig_ThrallDeadOverloadTotem_Func002C() ) then
+        call CreateNUnitsAtLoc(1, 'o00N', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), GetUnitFacing(GetDyingUnit()))
+        call RemoveUnit(GetDyingUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ThrallDeadOverloadTotem takes nothing returns nothing
+    set gg_trg_ThrallDeadOverloadTotem=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallDeadOverloadTotem, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ThrallDeadOverloadTotem, Condition(function Trig_ThrallDeadOverloadTotem_Conditions))
+    call TriggerAddAction(gg_trg_ThrallDeadOverloadTotem, function Trig_ThrallDeadOverloadTotem_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ThrallPlaceTotem
 //===========================================================================
 function Trig_ThrallPlaceTotem_Conditions takes nothing returns boolean
@@ -5678,21 +5757,21 @@ function Trig_ThrallPlaceTotem_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ThrallPlaceTotem_Func001Func002Func003Func002Func001Func001C takes nothing returns boolean
+function Trig_ThrallPlaceTotem_Func001Func002Func003Func001Func001Func001C takes nothing returns boolean
     if ( not ( udg_ThrallMode == "water" ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallPlaceTotem_Func001Func002Func003Func002Func001C takes nothing returns boolean
+function Trig_ThrallPlaceTotem_Func001Func002Func003Func001Func001C takes nothing returns boolean
     if ( not ( udg_ThrallMode == "earth" ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallPlaceTotem_Func001Func002Func003Func002C takes nothing returns boolean
+function Trig_ThrallPlaceTotem_Func001Func002Func003Func001C takes nothing returns boolean
     if ( not ( udg_ThrallMode == "fire" ) ) then
         return false
     endif
@@ -5730,20 +5809,20 @@ function Trig_ThrallPlaceTotem_Actions takes nothing returns nothing
             call AdjustPlayerStateBJ(- 25, GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
             if ( Trig_ThrallPlaceTotem_Func001Func002Func003C() ) then
                 call CreateNUnitsAtLoc(1, 'o00M', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
-                if ( Trig_ThrallPlaceTotem_Func001Func002Func003Func002C() ) then
+            else
+                if ( Trig_ThrallPlaceTotem_Func001Func002Func003Func001C() ) then
                     call CreateNUnitsAtLoc(1, 'o00N', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
                 else
-                    if ( Trig_ThrallPlaceTotem_Func001Func002Func003Func002Func001C() ) then
+                    if ( Trig_ThrallPlaceTotem_Func001Func002Func003Func001Func001C() ) then
                         call CreateNUnitsAtLoc(1, 'o00Q', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
                     else
-                        if ( Trig_ThrallPlaceTotem_Func001Func002Func003Func002Func001Func001C() ) then
+                        if ( Trig_ThrallPlaceTotem_Func001Func002Func003Func001Func001Func001C() ) then
                             call CreateNUnitsAtLoc(1, 'o00P', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
                         else
                             call DoNothing()
                         endif
                     endif
                 endif
-            else
             endif
         else
             call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_3963")
@@ -5787,7 +5866,7 @@ function Trig_ThrallChangeMode_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func001Func001Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func002Func001Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
         return true
     endif
@@ -5800,21 +5879,21 @@ function Trig_ThrallChangeMode_Func001Func001Func001Func002C takes nothing retur
     return false
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func001Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func001Func001Func002C() ) then
+function Trig_ThrallChangeMode_Func001Func002Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func001Func002Func001Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func001A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func001Func001C() ) then
+function Trig_ThrallChangeMode_Func001Func002A takes nothing returns nothing
+    if ( Trig_ThrallChangeMode_Func001Func002Func001C() ) then
         call UnitAddAbilityBJ('S004', GetEnumUnit())
     else
     endif
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func001Func001Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func003Func002Func001Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
         return true
     endif
@@ -5827,21 +5906,21 @@ function Trig_ThrallChangeMode_Func001Func002Func001Func001Func002C takes nothin
     return false
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func001Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func002Func001Func001Func002C() ) then
+function Trig_ThrallChangeMode_Func001Func003Func002Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func001Func003Func002Func001Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func001A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func002Func001Func001C() ) then
+function Trig_ThrallChangeMode_Func001Func003Func002A takes nothing returns nothing
+    if ( Trig_ThrallChangeMode_Func001Func003Func002Func001C() ) then
         call UnitAddAbilityBJ('S007', GetEnumUnit())
     else
     endif
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func001Func001Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func003Func003Func002Func001Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
         return true
     endif
@@ -5854,21 +5933,21 @@ function Trig_ThrallChangeMode_Func001Func002Func002Func001Func001Func002C takes
     return false
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func001Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func002Func002Func001Func001Func002C() ) then
+function Trig_ThrallChangeMode_Func001Func003Func003Func002Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func001Func003Func003Func002Func001Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func001A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func002Func002Func001Func001C() ) then
+function Trig_ThrallChangeMode_Func001Func003Func003Func002A takes nothing returns nothing
+    if ( Trig_ThrallChangeMode_Func001Func003Func003Func002Func001C() ) then
         call UnitAddAbilityBJ('S008', GetEnumUnit())
     else
     endif
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func002Func001Func001Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
         return true
     endif
@@ -5881,35 +5960,35 @@ function Trig_ThrallChangeMode_Func001Func002Func002Func002Func001Func001Func002
     return false
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func002Func001Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func002Func002Func002Func001Func001Func002C() ) then
+function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func002Func001A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func002Func002Func002Func001Func001C() ) then
+function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002A takes nothing returns nothing
+    if ( Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001C() ) then
         call UnitAddAbilityBJ('S006', GetEnumUnit())
     else
     endif
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func003Func003Func003C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A06H' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func003Func003C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A06G' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func003C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A06F' ) ) then
         return false
     endif
@@ -5925,19 +6004,23 @@ endfunction
 
 function Trig_ThrallChangeMode_Actions takes nothing returns nothing
     if ( Trig_ThrallChangeMode_Func001C() ) then
-        call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func001A)
+        set udg_ThrallMode="air"
+        call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func002A)
         call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "air")
     else
-        if ( Trig_ThrallChangeMode_Func001Func002C() ) then
-            call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func002Func001A)
+        if ( Trig_ThrallChangeMode_Func001Func003C() ) then
+            set udg_ThrallMode="fire"
+            call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func003Func002A)
             call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "fire")
         else
-            if ( Trig_ThrallChangeMode_Func001Func002Func002C() ) then
-                call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func002Func002Func001A)
+            if ( Trig_ThrallChangeMode_Func001Func003Func003C() ) then
+                set udg_ThrallMode="water"
+                call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func003Func003Func002A)
                 call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "water")
             else
-                if ( Trig_ThrallChangeMode_Func001Func002Func002Func002C() ) then
-                    call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func002Func002Func002Func001A)
+                if ( Trig_ThrallChangeMode_Func001Func003Func003Func003C() ) then
+                    set udg_ThrallMode="earth"
+                    call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002A)
                     call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "earth")
                 else
                     call DoNothing()
@@ -9754,6 +9837,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TyrandeGiftOfElune()
     call InitTrig_TyrandeOverflowingMoonwell()
     call InitTrig_ThrallIni()
+    call InitTrig_ThrallOverload()
+    call InitTrig_ThrallDeadOverloadTotem()
     call InitTrig_ThrallPlaceTotem()
     call InitTrig_ThrallChangeMode()
     call InitTrig_ThrallElementalBurrow()
@@ -9980,10 +10065,10 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("FrameLoader__init_function")
-call ExecuteFunc("REFORGEDUIMAKER__init")
-call ExecuteFunc("THRALLUI__init")
-call ExecuteFunc("CustomConsoleUI__init_function")
+call ExecuteFunc("FrameLoader___init_function")
+call ExecuteFunc("REFORGEDUIMAKER___init")
+call ExecuteFunc("THRALLUI___init")
+call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
     call InitCustomTriggers()

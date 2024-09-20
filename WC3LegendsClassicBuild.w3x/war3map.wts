@@ -11047,78 +11047,6 @@ STRING 3963
 Requires 5 gold and 25 wood to summon a totem!
 }
 
-STRING 3968
-// Units: o00M ([Thrall] Wind Totem), Name (Name)
-{
-[Thrall] Wind Totem
-}
-
-STRING 3969
-// Units: o00N ([Thrall] Fire Totem), Name (Name)
-{
-[Thrall] Fire Totem
-}
-
-STRING 3970
-// Units: o00P ([Thrall] Water Totem), Name (Name)
-{
-[Thrall] Water Totem
-}
-
-STRING 3971
-// Units: o00Q ([Thrall] Earth Totem), Name (Name)
-{
-[Thrall] Earth Totem
-}
-
-STRING 3980
-// Abilities: A06F ([Thrall] Switch to Flame Fury), Name (Name)
-{
-[Thrall] Switch to Flame Fury
-}
-
-STRING 3981
-// Abilities: A06F ([Thrall] Switch to Flame Fury), Tip (Tooltip - Normal)
-{
-Switch to Flame Fury
-}
-
-STRING 3982
-// Abilities: A06G ([Thrall] Switch to Tide's Wisdom), Name (Name)
-{
-[Thrall] Switch to Tide's Wisdom
-}
-
-STRING 3983
-// Abilities: A06G ([Thrall] Switch to Tide's Wisdom), Tip (Tooltip - Normal)
-{
-Switch to Tide's Wisdom
-}
-
-STRING 3984
-// Abilities: A06H ([Thrall] Switch to Earth's Might), Name (Name)
-{
-[Thrall] Switch to Earth's Might
-}
-
-STRING 3985
-// Abilities: A06H ([Thrall] Switch to Earth's Might), Tip (Tooltip - Normal)
-{
-Switch to Earth's Might
-}
-
-STRING 3986
-// Abilities: A06I ([Thrall] Switch to Wind's Grace), Name (Name)
-{
-[Thrall] Switch to Wind's Grace
-}
-
-STRING 3987
-// Abilities: A06I ([Thrall] Switch to Wind's Grace), Tip (Tooltip - Normal)
-{
-Switch to Wind's Grace
-}
-
 STRING 3988
 // Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
 {
@@ -11186,19 +11114,19 @@ A
 }
 
 STRING 3999
-// Abilities: A06G ([Thrall] Switch to Tide's Wisdom), Hotkey (Hotkey - Normal)
+// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Hotkey (Hotkey - Normal)
 {
 V
 }
 
 STRING 4000
-// Abilities: A06H ([Thrall] Switch to Earth's Might), Hotkey (Hotkey - Normal)
+// Abilities: A06H ([Thrall] Switch to Earthbind Totem), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 4001
-// Abilities: A06I ([Thrall] Switch to Wind's Grace), Hotkey (Hotkey - Normal)
+// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -11344,38 +11272,392 @@ Difficulty level with random difficulty modifications +4.
 }
 
 STRING 4030
-// Abilities: A06L ([Thrall] Wind Acceleration), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A06L ([Thrall] Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
 }
 
-STRING 4031
-// Abilities: A06L ([Thrall] Wind Acceleration), Name (Name)
+STRING 4042
+// Abilities: A06N ([Thrall] Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
 {
-[Thrall] Wind Acceleration
+Restores <A06N,DataA1> hit points to nearby friendly units.
 }
 
-STRING 4032
-// Abilities: A06L ([Thrall] Wind Acceleration), Tip (Tooltip - Normal)
+STRING 4048
+// Abilities: A06O ([Thrall] Master of the Elements), Name (Name)
 {
-Wind Acceleration
+[Thrall] Master of the Elements
 }
 
-STRING 4033
-// Buffs/Effects: B011 ([Thrall] Wind Acceleration), EditorName (Name (Editor Only))
+STRING 4049
+// Abilities: A06O ([Thrall] Master of the Elements), Tip (Tooltip - Normal)
 {
-[Thrall] Wind Acceleration
+Master of the Elements
 }
 
-STRING 4034
-// Buffs/Effects: B011 ([Thrall] Wind Acceleration), Buffubertip (Tooltip - Extended)
+STRING 4050
+// Abilities: A06O ([Thrall] Master of the Elements), Ubertip (Tooltip - Normal - Extended)
 {
-This unit is under the effects of Wind Acceleration; it has an increased movement.
+Increases the mana regeneration of Altar of Storms by 0.1.
 }
 
-STRING 4035
-// Buffs/Effects: B011 ([Thrall] Wind Acceleration), Bufftip (Tooltip)
+STRING 4053
+// Abilities: A06P ([Thrall] Earthbind Totem), Ubertip (Tooltip - Normal - Extended)
 {
-Wind Acceleration
+Reduced nearby enemy units' movement speed by <A06P,DataA1,%>%.
+}
+
+STRING 4057
+// Units: o00M ([Thrall] Wind Rush Totem), Name (Name)
+{
+[Thrall] Wind Rush Totem
+}
+
+STRING 4058
+// Units: o00N ([Thrall] Totem of Wrath), Name (Name)
+{
+[Thrall] Totem of Wrath
+}
+
+STRING 4059
+// Units: o00P ([Thrall] Healing Tide Totem), Name (Name)
+{
+[Thrall] Healing Tide Totem
+}
+
+STRING 4060
+// Units: o00Q ([Thrall] Earthbind Totem), Name (Name)
+{
+[Thrall] Earthbind Totem
+}
+
+STRING 4061
+// Abilities: A06F ([Thrall] Switch to Totem of Wrath), Name (Name)
+{
+[Thrall] Switch to Totem of Wrath
+}
+
+STRING 4062
+// Abilities: A06F ([Thrall] Switch to Totem of Wrath), Tip (Tooltip - Normal)
+{
+Switch to Totem of Wrath
+}
+
+STRING 4063
+// Abilities: A06F ([Thrall] Switch to Totem of Wrath), Ubertip (Tooltip - Normal - Extended)
+{
+Replaces all totems on the map and grants the ability:
+An aura that gives friendly nearby units a <A06M,DataA1,%>% bonus damage to attacks.
+}
+
+STRING 4064
+// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Name (Name)
+{
+[Thrall] Switch to Healing Tide Totem
+}
+
+STRING 4065
+// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Tip (Tooltip - Normal)
+{
+Switch to Healing Tide Totem
+}
+
+STRING 4066
+// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Replaces all totems on the map and grants the ability:
+Restores <A06N,DataA1> hit points to nearby friendly units.
+}
+
+STRING 4067
+// Abilities: A06H ([Thrall] Switch to Earthbind Totem), Name (Name)
+{
+[Thrall] Switch to Earthbind Totem
+}
+
+STRING 4068
+// Abilities: A06H ([Thrall] Switch to Earthbind Totem), Tip (Tooltip - Normal)
+{
+Switch to Earthbind Totem
+}
+
+STRING 4069
+// Abilities: A06H ([Thrall] Switch to Earthbind Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Replaces all totems on the map and grants the ability:
+Reduced nearby enemy units' movement speed by <A06P,DataA1,%>%.
+}
+
+STRING 4070
+// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Name (Name)
+{
+[Thrall] Switch to Wind Rush Totem
+}
+
+STRING 4071
+// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Tip (Tooltip - Normal)
+{
+Switch to Wind Rush Totem
+}
+
+STRING 4072
+// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Maybe Zerg Rush?"|r
+
+Replaces all totems on the map and grants the ability:
+Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
+}
+
+STRING 4073
+// Abilities: A06L ([Thrall] Wind Rush Totem), Name (Name)
+{
+[Thrall] Wind Rush Totem
+}
+
+STRING 4074
+// Abilities: A06L ([Thrall] Wind Rush Totem), Tip (Tooltip - Normal)
+{
+Wind Rush Totem
+}
+
+STRING 4075
+// Abilities: A06N ([Thrall] Healing Tide Totem), Name (Name)
+{
+[Thrall] Healing Tide Totem
+}
+
+STRING 4076
+// Abilities: A06N ([Thrall] Healing Tide Totem), Tip (Tooltip - Normal)
+{
+Healing Tide Totem
+}
+
+STRING 4077
+// Units: o00E ([Thrall] Totem of Wrath), Name (Name)
+{
+[Thrall] Totem of Wrath
+}
+
+STRING 4078
+// Abilities: A06M ([Thrall] Totem of Wrath), Tip (Tooltip - Normal)
+{
+Totem of Wrath
+}
+
+STRING 4079
+// Abilities: A06M ([Thrall] Totem of Wrath), Ubertip (Tooltip - Normal - Extended)
+{
+An aura that gives friendly nearby units a <A06M,DataA1,%>% bonus damage to attacks.
+}
+
+STRING 4080
+// Abilities: A06P ([Thrall] Earthbind Totem), Name (Name)
+{
+[Thrall] Earthbind Totem
+}
+
+STRING 4081
+// Abilities: A06P ([Thrall] Earthbind Totem), Tip (Tooltip - Normal)
+{
+Earthbind Totem
+}
+
+STRING 4082
+// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Healing Tide Totem
+}
+
+STRING 4083
+// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), Bufftip (Tooltip)
+{
+Healing Tide Totem
+}
+
+STRING 4084
+// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), Buffubertip (Tooltip - Extended)
+{
+This unit has been hit by Healing Tide Totem; some of its hit points have been restored.
+}
+
+STRING 4085
+// Abilities: A06M ([Thrall] Totem of Wrath), Name (Name)
+{
+[Thrall] Totem of Wrath
+}
+
+STRING 4086
+// Buffs/Effects: B012 ([Thrall] Totem of Wrath), Bufftip (Tooltip)
+{
+Totem of Wrath
+}
+
+STRING 4087
+// Buffs/Effects: B012 ([Thrall] Totem of Wrath), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Totem of Wrath; its attacks will deal more damage.
+}
+
+STRING 4088
+// Buffs/Effects: B011 ([Thrall] Wind Rush Totem), Bufftip (Tooltip)
+{
+Wind Rush Totem
+}
+
+STRING 4090
+// Buffs/Effects: B011 ([Thrall] Wind Rush Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Wind Rush Totem
+}
+
+STRING 4091
+// Buffs/Effects: B011 ([Thrall] Wind Rush Totem), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Wind Rush Totem; it has an increased movement.
+}
+
+STRING 4092
+// Buffs/Effects: B014 ([Thrall] Earthbind Totem), Bufftip (Tooltip)
+{
+Earthbind Totem
+}
+
+STRING 4093
+// Buffs/Effects: B014 ([Thrall] Earthbind Totem), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Earthbind Totem; it has an reduced movement.
+}
+
+STRING 4094
+// Buffs/Effects: B014 ([Thrall] Earthbind Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Earthbind Totem
+}
+
+STRING 4096
+// Abilities: A06Q ([Thrall] Overload), Name (Name)
+{
+[Thrall] Overload
+}
+
+STRING 4097
+// Abilities: A06Q ([Thrall] Overload), EditorSuffix (Editor Suffix)
+{
+(Totem of Wrath)
+}
+
+STRING 4098
+// Abilities: A06Q ([Thrall] Overload), Tip (Tooltip - Normal)
+{
+Overload
+}
+
+STRING 4103
+// Abilities: A06S ([Thrall] Far Sight), Name (Name)
+{
+[Thrall] Far Sight
+}
+
+STRING 4104
+// Abilities: A06T ([Thrall] Earthquake), Name (Name)
+{
+[Thrall] Earthquake
+}
+
+STRING 4105
+// Abilities: A06U ([Thrall] Chain Lightning), Name (Name)
+{
+[Thrall] Chain Lightning
+}
+
+STRING 4107
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+{
+Overload
+}
+
+STRING 4108
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+{
+Overload
+}
+
+STRING 4115
+// Abilities: A06W ([Thrall] Overload Fire), Name (Name)
+{
+[Thrall] Overload Fire
+}
+
+STRING 4116
+// Abilities: A06W ([Thrall] Overload Fire), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 4117
+// Units: o00E ([Thrall] Totem of Wrath), EditorSuffix (Name - Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4120
+// Buffs/Effects: B012 ([Thrall] Totem of Wrath), EditorName (Name (Editor Only))
+{
+[Thrall] Totem of Wrath
+}
+
+STRING 4123
+// Abilities: A06V ([Thrall] Whirling Elements), Name (Name)
+{
+[Thrall] Whirling Elements
+}
+
+STRING 4124
+// Abilities: A06V ([Thrall] Whirling Elements), Researchtip (Tooltip - Learn)
+{
+Learn Whirling Elements - [|cffffcc00Level %d|r]
+}
+
+STRING 4125
+// Abilities: A06V ([Thrall] Whirling Elements), Researchubertip (Tooltip - Learn - Extended)
+{
+Reveals the area of the map that it is cast upon. Also reveals invisible units. |n|n|cffffcc00Level 1|r - Reveals a small area. |n|cffffcc00Level 2|r - Reveals a large area. |n|cffffcc00Level 3|r - Reveals a huge area.
+}
+
+STRING 4126
+// Abilities: A06V ([Thrall] Whirling Elements), Tip (Tooltip - Normal)
+{
+Whirling Elements - [|cffffcc00Level 1|r]
+}
+
+STRING 4127
+// Abilities: A06V ([Thrall] Whirling Elements), Tip (Tooltip - Normal)
+{
+Whirling Elements - [|cffffcc00Level 2|r]
+}
+
+STRING 4128
+// Abilities: A06V ([Thrall] Whirling Elements), Tip (Tooltip - Normal)
+{
+Whirling Elements - [|cffffcc00Level 3|r]
+}
+
+STRING 4129
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+{
+Reveals the area of the map that it is cast upon for <AOfs,Dur1> seconds. Also reveals invisible units.
+}
+
+STRING 4138
+// Buffs/Effects: B015 ([Thrall] Whirling Elements), EditorName (Name (Editor Only))
+{
+[Thrall] Whirling Elements
+}
+
+STRING 4139
+// Buffs/Effects: B015 ([Thrall] Whirling Elements), Bufftip (Tooltip)
+{
+Whirling Elements
 }
 
