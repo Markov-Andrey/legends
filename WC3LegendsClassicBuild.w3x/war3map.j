@@ -178,6 +178,8 @@ trigger gg_trg_TyrandeLunarFlare= null
 trigger gg_trg_TyrandeGiftOfElune= null
 trigger gg_trg_TyrandeOverflowingMoonwell= null
 trigger gg_trg_ThrallIni= null
+trigger gg_trg_ThrallOverload= null
+trigger gg_trg_ThrallDeadOverloadTotem= null
 trigger gg_trg_ThrallPlaceTotem= null
 trigger gg_trg_ThrallChangeMode= null
 trigger gg_trg_ThrallElementalBurrow= null
@@ -249,8 +251,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_ThrallOverload= null
-trigger gg_trg_ThrallDeadOverloadTotem= null
 
     // Random Groups
 integer array gg_rg_000
@@ -370,13 +370,13 @@ endglobals
         local real yPos= 0.118
 
         if iconCode == "air" then
-            set texturePath="Legends\\Thrall\\Mechanics\\air"
+            set texturePath="UI\\Console\\Thrall\\air"
         elseif iconCode == "fire" then
-            set texturePath="Legends\\Thrall\\Mechanics\\fire"
+            set texturePath="UI\\Console\\Thrall\\fire"
         elseif iconCode == "water" then
-            set texturePath="Legends\\Thrall\\Mechanics\\water"
+            set texturePath="UI\\Console\\Thrall\\water"
         elseif iconCode == "earth" then
-            set texturePath="Legends\\Thrall\\Mechanics\\earth"
+            set texturePath="UI\\Console\\Thrall\\earth"
         else
             return
         endif
@@ -1200,8 +1200,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
     set u=BlzCreateUnitWithSkin(p, 'o002', - 988.5, - 343.8, 182.297, 'o002')
     set u=BlzCreateUnitWithSkin(p, 'o002', - 977.0, - 494.3, 161.809, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'o00Q', - 1222.2, - 633.7, 263.839, 'o00Q')
     set u=BlzCreateUnitWithSkin(p, 'O00C', - 875.7, - 387.3, 176.920, 'O00C')
     call SetHeroLevel(u, 10, false)
+    set u=BlzCreateUnitWithSkin(p, 'o00P', - 1243.4, - 458.4, - 88.671, 'o00P')
+    set u=BlzCreateUnitWithSkin(p, 'o00N', - 1268.7, - 247.8, - 86.419, 'o00N')
+    set u=BlzCreateUnitWithSkin(p, 'o00M', - 1244.6, - 105.3, - 89.279, 'o00M')
 endfunction
 
 //===========================================================================
@@ -5680,11 +5684,58 @@ endfunction
 //===========================================================================
 // Trigger: ThrallOverload
 //===========================================================================
-function Trig_ThrallOverload_Conditions takes nothing returns boolean
+function Trig_ThrallOverload_Func001Func003C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00P' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00M' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ThrallOverload_Func001C takes nothing returns boolean
     if ( not ( GetOwningPlayer(GetSpellAbilityUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) ) then
         return false
     endif
     if ( not ( GetSpellAbilityId() == 'A06V' ) ) then
+        return false
+    endif
+    if ( not Trig_ThrallOverload_Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallOverload_Conditions takes nothing returns boolean
+    if ( not Trig_ThrallOverload_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallOverload_Func002Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00M' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallOverload_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00P' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallOverload_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'o00Q' ) ) then
         return false
     endif
     return true
@@ -5700,9 +5751,22 @@ endfunction
 function Trig_ThrallOverload_Actions takes nothing returns nothing
     if ( Trig_ThrallOverload_Func002C() ) then
         call ReplaceUnitBJ(GetSpellTargetUnit(), 'o00E', bj_UNIT_STATE_METHOD_RELATIVE)
-        call UnitApplyTimedLifeBJ(( 5.00 + ( 10.00 * I2R(GetUnitAbilityLevelSwapped('A06V', GetSpellAbilityUnit())) ) ), 'BTLF', GetLastReplacedUnitBJ())
     else
+        if ( Trig_ThrallOverload_Func002Func001C() ) then
+            call ReplaceUnitBJ(GetSpellTargetUnit(), 'o00R', bj_UNIT_STATE_METHOD_RELATIVE)
+        else
+            if ( Trig_ThrallOverload_Func002Func001Func001C() ) then
+                call ReplaceUnitBJ(GetSpellTargetUnit(), 'o00S', bj_UNIT_STATE_METHOD_RELATIVE)
+            else
+                if ( Trig_ThrallOverload_Func002Func001Func001Func001C() ) then
+                    call ReplaceUnitBJ(GetSpellTargetUnit(), 'o00T', bj_UNIT_STATE_METHOD_RELATIVE)
+                else
+                    call DoNothing()
+                endif
+            endif
+        endif
     endif
+    call UnitApplyTimedLifeBJ(( 5.00 + ( 10.00 * I2R(GetUnitAbilityLevelSwapped('A06V', GetSpellAbilityUnit())) ) ), 'BTLF', GetLastReplacedUnitBJ())
 endfunction
 
 //===========================================================================
@@ -5716,14 +5780,51 @@ endfunction
 //===========================================================================
 // Trigger: ThrallDeadOverloadTotem
 //===========================================================================
+function Trig_ThrallDeadOverloadTotem_Func001C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'o00E' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'o00R' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'o00S' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'o00T' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
 function Trig_ThrallDeadOverloadTotem_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00E' ) ) then
+    if ( not Trig_ThrallDeadOverloadTotem_Func001C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallDeadOverloadTotem_Func002C takes nothing returns boolean
+function Trig_ThrallDeadOverloadTotem_Func003Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00T' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallDeadOverloadTotem_Func003Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00S' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallDeadOverloadTotem_Func003Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00R' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallDeadOverloadTotem_Func003C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetDyingUnit()) == 'o00E' ) ) then
         return false
     endif
@@ -5732,11 +5833,23 @@ endfunction
 
 function Trig_ThrallDeadOverloadTotem_Actions takes nothing returns nothing
     call ShowUnitHide(GetDyingUnit())
-    if ( Trig_ThrallDeadOverloadTotem_Func002C() ) then
+    if ( Trig_ThrallDeadOverloadTotem_Func003C() ) then
         call CreateNUnitsAtLoc(1, 'o00N', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), GetUnitFacing(GetDyingUnit()))
-        call RemoveUnit(GetDyingUnit())
     else
+        if ( Trig_ThrallDeadOverloadTotem_Func003Func001C() ) then
+            call CreateNUnitsAtLoc(1, 'o00Q', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), GetUnitFacing(GetDyingUnit()))
+        else
+            if ( Trig_ThrallDeadOverloadTotem_Func003Func001Func001C() ) then
+                call CreateNUnitsAtLoc(1, 'o00P', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), GetUnitFacing(GetDyingUnit()))
+            else
+                if ( Trig_ThrallDeadOverloadTotem_Func003Func001Func001Func001C() ) then
+                    call CreateNUnitsAtLoc(1, 'o00M', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), GetUnitFacing(GetDyingUnit()))
+                else
+                endif
+            endif
+        endif
     endif
+    call RemoveUnit(GetDyingUnit())
 endfunction
 
 //===========================================================================

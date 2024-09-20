@@ -11410,7 +11410,7 @@ Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
 }
 
 STRING 4073
-// Abilities: A06L ([Thrall] Wind Rush Totem), Name (Name)
+// Units: o00T ([Thrall] Wind Rush Totem), Name (Name)
 {
 [Thrall] Wind Rush Totem
 }
@@ -11422,7 +11422,7 @@ Wind Rush Totem
 }
 
 STRING 4075
-// Abilities: A06N ([Thrall] Healing Tide Totem), Name (Name)
+// Units: o00S ([Thrall] Healing Tide Totem), Name (Name)
 {
 [Thrall] Healing Tide Totem
 }
@@ -11452,7 +11452,7 @@ An aura that gives friendly nearby units a <A06M,DataA1,%>% bonus damage to atta
 }
 
 STRING 4080
-// Abilities: A06P ([Thrall] Earthbind Totem), Name (Name)
+// Units: o00R ([Thrall] Earthbind Totem), Name (Name)
 {
 [Thrall] Earthbind Totem
 }
@@ -11464,13 +11464,13 @@ Earthbind Totem
 }
 
 STRING 4082
-// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), EditorName (Name (Editor Only))
+// Abilities: A06N ([Thrall] Healing Tide Totem), Name (Name)
 {
 [Thrall] Healing Tide Totem
 }
 
 STRING 4083
-// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), Bufftip (Tooltip)
+// Abilities: A06X ([Thrall] Healing Tide Totem), Tip (Tooltip - Normal)
 {
 Healing Tide Totem
 }
@@ -11488,7 +11488,7 @@ STRING 4085
 }
 
 STRING 4086
-// Buffs/Effects: B012 ([Thrall] Totem of Wrath), Bufftip (Tooltip)
+// Abilities: A06Q ([Thrall] Totem of Wrath), Tip (Tooltip - Normal)
 {
 Totem of Wrath
 }
@@ -11506,7 +11506,7 @@ Wind Rush Totem
 }
 
 STRING 4090
-// Buffs/Effects: B011 ([Thrall] Wind Rush Totem), EditorName (Name (Editor Only))
+// Abilities: A06L ([Thrall] Wind Rush Totem), Name (Name)
 {
 [Thrall] Wind Rush Totem
 }
@@ -11518,7 +11518,7 @@ This unit is under the effects of Wind Rush Totem; it has an increased movement.
 }
 
 STRING 4092
-// Buffs/Effects: B014 ([Thrall] Earthbind Totem), Bufftip (Tooltip)
+// Abilities: A06R ([Thrall] Earthbind Totem), Tip (Tooltip - Normal)
 {
 Earthbind Totem
 }
@@ -11530,25 +11530,13 @@ This unit is under the effects of Earthbind Totem; it has an reduced movement.
 }
 
 STRING 4094
-// Buffs/Effects: B014 ([Thrall] Earthbind Totem), EditorName (Name (Editor Only))
+// Abilities: A06P ([Thrall] Earthbind Totem), Name (Name)
 {
 [Thrall] Earthbind Totem
 }
 
-STRING 4096
-// Abilities: A06Q ([Thrall] Overload), Name (Name)
-{
-[Thrall] Overload
-}
-
-STRING 4097
-// Abilities: A06Q ([Thrall] Overload), EditorSuffix (Editor Suffix)
-{
-(Totem of Wrath)
-}
-
 STRING 4098
-// Abilities: A06Q ([Thrall] Overload), Tip (Tooltip - Normal)
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
 {
 Overload
 }
@@ -11577,20 +11565,8 @@ STRING 4107
 Overload
 }
 
-STRING 4108
-// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
-{
-Overload
-}
-
-STRING 4115
-// Abilities: A06W ([Thrall] Overload Fire), Name (Name)
-{
-[Thrall] Overload Fire
-}
-
 STRING 4116
-// Abilities: A06W ([Thrall] Overload Fire), EditorSuffix (Editor Suffix)
+// Abilities: A06W ([Thrall] Totem of Wrath), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -11602,7 +11578,7 @@ STRING 4117
 }
 
 STRING 4120
-// Buffs/Effects: B012 ([Thrall] Totem of Wrath), EditorName (Name (Editor Only))
+// Abilities: A06Q ([Thrall] Totem of Wrath), Name (Name)
 {
 [Thrall] Totem of Wrath
 }
@@ -11659,5 +11635,209 @@ STRING 4139
 // Buffs/Effects: B015 ([Thrall] Whirling Elements), Bufftip (Tooltip)
 {
 Whirling Elements
+}
+
+STRING 4140
+// Units: o00R ([Thrall] Earthbind Totem), EditorSuffix (Name - Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4141
+// Units: o00S ([Thrall] Healing Tide Totem), EditorSuffix (Name - Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4142
+// Abilities: A06R ([Thrall] Earthbind Totem), Name (Name)
+{
+[Thrall] Earthbind Totem
+}
+
+STRING 4143
+// Abilities: A06R ([Thrall] Earthbind Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Reduced nearby enemy units' attack speed by <A06P,DataB1,%>%.
+}
+
+STRING 4144
+// Units: o00T ([Thrall] Wind Rush Totem), EditorSuffix (Name - Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4145
+// Abilities: A06W ([Thrall] Totem of Wrath), Name (Name)
+{
+[Thrall] Totem of Wrath
+}
+
+STRING 4146
+// Buffs/Effects: B012 ([Thrall] Totem of Wrath), Bufftip (Tooltip)
+{
+Totem of Wrath
+}
+
+STRING 4147
+// Buffs/Effects: B014 ([Thrall] Earthbind Totem), Bufftip (Tooltip)
+{
+Earthbind Totem
+}
+
+STRING 4148
+// Buffs/Effects: B014 ([Thrall] Earthbind Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Earthbind Totem
+}
+
+STRING 4149
+// Buffs/Effects: B016 ([Thrall] Earthbind Totem), Bufftip (Tooltip)
+{
+Earthbind Totem
+}
+
+STRING 4151
+// Buffs/Effects: B016 ([Thrall] Earthbind Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Earthbind Totem
+}
+
+STRING 4152
+// Abilities: A06Q ([Thrall] Totem of Wrath), EditorSuffix (Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4153
+// Buffs/Effects: B016 ([Thrall] Earthbind Totem), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Earthbind Totem (Whirling Elements); it has an reduced movement and ataack speed.
+}
+
+STRING 4154
+// Abilities: A06X ([Thrall] Healing Tide Totem), Name (Name)
+{
+[Thrall] Healing Tide Totem
+}
+
+STRING 4155
+// Abilities: A06X ([Thrall] Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Restores <A06N,DataA1> hit points to nearby friendly units.
+}
+
+STRING 4156
+// Abilities: A06R ([Thrall] Earthbind Totem), EditorSuffix (Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4157
+// Abilities: A070 ([Thrall] Healing Tide Totem), Name (Name)
+{
+[Thrall] Healing Tide Totem
+}
+
+STRING 4158
+// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), Bufftip (Tooltip)
+{
+Healing Tide Totem
+}
+
+STRING 4159
+// Abilities: A06X ([Thrall] Healing Tide Totem), EditorSuffix (Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4160
+// Buffs/Effects: B013 ([Thrall] Healing Tide Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Healing Tide Totem
+}
+
+STRING 4161
+// Buffs/Effects: B017 ([Thrall] Healing Tide Totem), Bufftip (Tooltip)
+{
+Healing Tide Totem
+}
+
+STRING 4162
+// Buffs/Effects: B017 ([Thrall] Healing Tide Totem), Buffubertip (Tooltip - Extended)
+{
+This unit has been hit by Healing Tide Totem (Whirling Elements); some of its hit points have been restored.
+}
+
+STRING 4163
+// Abilities: A06Y ([Thrall] Grounding), EditorSuffix (Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4164
+// Abilities: A06Y ([Thrall] Grounding), Name (Name)
+{
+[Thrall] Grounding
+}
+
+STRING 4165
+// Abilities: A06Y ([Thrall] Grounding), Tip (Tooltip - Normal)
+{
+Grounding
+}
+
+STRING 4166
+// Abilities: A06Z ([Thrall] Wind Rush Totem), Name (Name)
+{
+[Thrall] Wind Rush Totem
+}
+
+STRING 4167
+// Buffs/Effects: B016 ([Thrall] Earthbind Totem), EditorSuffix (Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4168
+// Buffs/Effects: B017 ([Thrall] Healing Tide Totem), EditorSuffix (Editor Suffix)
+{
+(Overload)
+}
+
+STRING 4169
+// Abilities: A06Y ([Thrall] Grounding), Ubertip (Tooltip - Normal - Extended)
+{
+Dispels positive buffs from enemy units, and negative buffs from friendly units.
+}
+
+STRING 4170
+// Abilities: A06Z ([Thrall] Wind Rush Totem), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 4171
+// Buffs/Effects: B011 ([Thrall] Wind Rush Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Wind Rush Totem
+}
+
+STRING 4172
+// Abilities: A070 ([Thrall] Healing Tide Totem), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 4173
+// Buffs/Effects: B012 ([Thrall] Totem of Wrath), EditorName (Name (Editor Only))
+{
+[Thrall] Totem of Wrath
+}
+
+STRING 4174
+// Buffs/Effects: B017 ([Thrall] Healing Tide Totem), EditorName (Name (Editor Only))
+{
+[Thrall] Healing Tide Totem
 }
 
