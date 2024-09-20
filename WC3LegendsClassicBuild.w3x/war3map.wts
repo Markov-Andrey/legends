@@ -11271,12 +11271,6 @@ STRING 4027
 Difficulty level with random difficulty modifications +4.
 }
 
-STRING 4030
-// Abilities: A06L ([Thrall] Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
-}
-
 STRING 4042
 // Abilities: A06N ([Thrall] Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
 {
@@ -11398,15 +11392,6 @@ STRING 4071
 // Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Tip (Tooltip - Normal)
 {
 Switch to Wind Rush Totem
-}
-
-STRING 4072
-// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
-{
-|cFF24BBFF"Maybe Zerg Rush?"|r
-
-Replaces all totems on the map and grants the ability:
-Increases nearby friendly units' movement speed by <A0L6,DataA1,%>%.
 }
 
 STRING 4073
@@ -11839,5 +11824,104 @@ STRING 4174
 // Buffs/Effects: B017 ([Thrall] Healing Tide Totem), EditorName (Name (Editor Only))
 {
 [Thrall] Healing Tide Totem
+}
+
+STRING 4175
+// Abilities: A06L ([Thrall] Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' movement speed by <A06L,DataA1,%>%.
+}
+
+STRING 4176
+// Upgrades: R02C (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of all totems with a <R02C,base1> hit point increase.
+}
+
+STRING 4177
+// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Maybe Zerg Rush?"|r
+
+Replaces all totems on the map and grants the ability:
+Increases nearby friendly units' movement speed by <A06L,DataA1,%>%.
+}
+
+STRING 4182
+// Upgrades: R02C (Brute Strength), Name (Name)
+{
+[Thrall] Artisan-crafted Totem
+}
+
+STRING 4183
+// Upgrades: R02C (Brute Strength), Tip (Tooltip)
+{
+Research Artisan-crafted Totem
+}
+
+STRING 4185
+// Abilities: A073 ([Thrall] Reinforced Defenses), Name (Name)
+{
+[Thrall] Reinforced Defenses
+}
+
+STRING 4186
+// Abilities: A071 ([Thrall] Elemental Resistance), Name (Name)
+{
+[Thrall] Elemental Resistance
+}
+
+STRING 4187
+// Abilities: A071 ([Thrall] Elemental Resistance), Tip (Tooltip - Normal)
+{
+Elemental Resistance
+}
+
+STRING 4188
+// Upgrades: R02D (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+[Thrall] Elemental Resistance
+}
+
+STRING 4189
+// Upgrades: R02D (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Elemental Resistance
+}
+
+STRING 4190
+// Abilities: A072 ([Thrall] Reinforced Burrows Upgrade), Name (Name)
+{
+[Thrall] Reinforced Burrows Upgrade
+}
+
+STRING 4191
+// Upgrades: R02E (Reinforced Defenses), Name (Name)
+{
+[Thrall] Reinforced Defenses
+}
+
+STRING 4192
+// Upgrades: R02F (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
+{
+[Thrall] Steel Armor
+}
+
+STRING 4193
+// Upgrades: R02G (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
+{
+[Thrall] Steel Melee Weapons
+}
+
+STRING 4194
+// Upgrades: R02H (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
+{
+[Thrall] Steel Ranged Weapons
+}
+
+STRING 4195
+// Upgrades: R02I (Shaman Adept Training,Shaman Master Training), Name (Name)
+{
+[Thrall] Shaman Adept Training
 }
 
