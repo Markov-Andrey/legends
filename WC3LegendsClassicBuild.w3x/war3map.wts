@@ -1692,31 +1692,31 @@ Ice of Northrend
 }
 
 STRING 1482
-// Destructibles: B000 (Winter Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B000 ([Alterac] Winter Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Winter
 }
 
 STRING 1483
-// Destructibles: B001 (Fall Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B001 ([Alterac] Fall Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Fall
 }
 
 STRING 1484
-// Destructibles: B002 (Village Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B002 ([Alterac] Village Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) VIll
 }
 
 STRING 1485
-// Destructibles: B003 (Snowy Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B003 ([Alterac] Snowy Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Snow
 }
 
 STRING 1486
-// Destructibles: B004 (Summer Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B004 ([Alterac] Summer Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Summ
 }
@@ -12836,5 +12836,104 @@ STRING 4384
 Gives a <A07O,DataA1,%>% chance to avoid an attack.
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Wind Rider
+}
+
+STRING 4388
+// Destructibles: B000 ([Alterac] Winter Tree Wall), Name (Name)
+{
+[Alterac] Winter Tree Wall
+}
+
+STRING 4389
+// Destructibles: B001 ([Alterac] Fall Tree Wall), Name (Name)
+{
+[Alterac] Fall Tree Wall
+}
+
+STRING 4390
+// Destructibles: B002 ([Alterac] Village Tree Wall), Name (Name)
+{
+[Alterac] Village Tree Wall
+}
+
+STRING 4391
+// Destructibles: B003 ([Alterac] Snowy Tree Wall), Name (Name)
+{
+[Alterac] Snowy Tree Wall
+}
+
+STRING 4392
+// Destructibles: B004 ([Alterac] Summer Tree Wall), Name (Name)
+{
+[Alterac] Summer Tree Wall
+}
+
+STRING 4411
+// Abilities: A07P ([UI] History: Thrall), Name (Name)
+{
+[UI] History: Thrall
+}
+
+STRING 4412
+// Abilities: A07P ([UI] History: Thrall), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 4413
+// Abilities: A07P ([UI] History: Thrall), Ubertip (Tooltip - Normal - Extended)
+{
+Thrall
+
+Born into slavery, Thrall rose from the chains of captivity to become a legendary leader of the orcish Horde.
+
+Guided by honor and the teachings of shamanism, he sought to unite his people and lead them to a future free from the corruption that once plagued them.
+
+Under his leadership, the Horde found new purpose, strength, and a home in the land of Durotar.
+
+A champion of peace and balance, Thrall’s journey is one of redemption, wisdom, and unbreakable resolve in the face of overwhelming odds.
+}
+
+STRING 4414
+// Abilities: A07Q ([UI] Mechanics: Thrall), Name (Name)
+{
+[UI] Mechanics: Thrall
+}
+
+STRING 4415
+// Abilities: A07Q ([UI] Mechanics: Thrall), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 4416
+// Abilities: A07Q ([UI] Mechanics: Thrall), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Totems|R - Place totems across the battlefield within your line of sight and draw upon their ancient power.
+|cFF00C850- Four Totem Modes|R - Fire, Air, Water, and Earth — shift seamlessly between these elements, adapting to the tides of war by empowering all active totems at once.
+|cFF00C850- Amulets|R - Your forces possess adaptive enhancements, though each unit type can only be upgraded with one specialized amulet, forging a unique advantage in combat.
+}
+
+STRING 4417
+// Abilities: A07R ([UI] Features: Thrall), Name (Name)
+{
+[UI] Features: Thrall
+}
+
+STRING 4418
+// Abilities: A07R ([UI] Features: Thrall), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 4419
+// Abilities: A07R ([UI] Features: Thrall), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Adaptability
+- Broad Support Options
+- Powerful Enhancements|R
+|cFFFF5A4B- Limited Unit Selection
+- Reliance on Totems
+- Increasing Totem Costs|R
 }
 
