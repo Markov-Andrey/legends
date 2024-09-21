@@ -11025,12 +11025,6 @@ STRING 3958
 Place a Totem
 }
 
-STRING 3988
-// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
-{
-Cost - 5 gold, 25 lumber
-}
-
 STRING 3989
 // Abilities: S004 ([Thrall] Switch), Name (Name)
 {
@@ -12326,5 +12320,381 @@ Add +10 damage
 STRING 4285
 {
 The summoning point must be within line of sight!
+}
+
+STRING 4287
+// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Cost - 5 gold, 15 lumber per each placed totems
+}
+
+STRING 4288
+// Abilities: A07F ([Thrall] Water Ring), Name (Name)
+{
+[Thrall] Water Ring
+}
+
+STRING 4289
+// Abilities: A07F ([Thrall] Water Ring), Tip (Tooltip - Normal)
+{
+Water Ring
+}
+
+STRING 4290
+// Abilities: A07F ([Thrall] Water Ring), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4291
+// Buffs/Effects: B018 ([Thrall] Water Ring), EditorName (Name (Editor Only))
+{
+[Thrall] Water Ring
+}
+
+STRING 4292
+// Upgrades: R02P (Brute Strength), Tip (Tooltip)
+{
+Research Water Ring
+}
+
+STRING 4294
+// Upgrades: R02P (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +0.5 mana per second
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Shaman
+}
+
+STRING 4295
+// Buffs/Effects: B018 ([Thrall] Water Ring), Bufftip (Tooltip)
+{
+Water Ring
+}
+
+STRING 4296
+// Buffs/Effects: B018 ([Thrall] Water Ring), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Water Ring; it has an increased mana regeneration.
+}
+
+STRING 4297
+// Upgrades: R02P (Brute Strength), Name (Name)
+{
+[Thrall] Water Ring
+}
+
+STRING 4298
+// Abilities: A07G ([Thrall] Fire Eye Ring), Name (Name)
+{
+[Thrall] Fire Eye Ring
+}
+
+STRING 4299
+// Upgrades: R02Q (Brute Strength), Tip (Tooltip)
+{
+Research Fire Eye Ring
+}
+
+STRING 4300
+// Abilities: A07G ([Thrall] Fire Eye Ring), Ubertip (Tooltip - Normal - Extended)
+{
+Add +7 damage
+}
+
+STRING 4301
+// Abilities: A07G ([Thrall] Fire Eye Ring), Tip (Tooltip - Normal)
+{
+Fire Eye Ring
+}
+
+STRING 4302
+// Abilities: A07G ([Thrall] Fire Eye Ring), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4303
+// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 4304
+// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 4305
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 4306
+// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 4307
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 4308
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 4309
+// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 4310
+// Upgrades: R02Q (Brute Strength), Name (Name)
+{
+[Thrall] Fire Eye Ring
+}
+
+STRING 4312
+// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 4313
+// Units: o00U ([Thrall] Amulet Crafter), Name (Name)
+{
+[Thrall] Amulet Crafter
+}
+
+STRING 4314
+// Units: o00U ([Thrall] Amulet Crafter), Tip (Tooltip - Basic)
+{
+Amulet Crafter
+}
+
+STRING 4315
+// Units: o00U ([Thrall] Amulet Crafter), EditorSuffix (Name - Editor Suffix)
+{
+(page 2)
+}
+
+STRING 4316
+// Abilities: A07H ([Thrall] Next Page), Name (Name)
+{
+[Thrall] Next Page
+}
+
+STRING 4317
+// Abilities: A07H ([Thrall] Next Page), Tip (Tooltip - Normal)
+{
+Next Page
+}
+
+STRING 4318
+// Upgrades: R02Q (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +7 damage
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Shaman
+}
+
+STRING 4319
+// Abilities: A07H ([Thrall] Next Page), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 4320
+// Abilities: S009 ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 4321
+// Abilities: S009 ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Amulet Crafter Page 2)
+}
+
+STRING 4322
+// Abilities: S00A ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 4323
+// Abilities: S00A ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Amulet Crafter Page 1)
+}
+
+STRING 4324
+// Abilities: A07J ([Thrall] Earth Amulet), Name (Name)
+{
+[Thrall] Earth Amulet
+}
+
+STRING 4325
+// Upgrades: R02R (Brute Strength), Tip (Tooltip)
+{
+Research Earth Amulet
+}
+
+STRING 4326
+// Upgrades: R02R (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add defense bonus
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 4327
+// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 4328
+// Upgrades: R02R (Brute Strength), effect1 (Effect 1)
+{
+rarm
+}
+
+STRING 4329
+// Abilities: A07I ([Thrall] Windfury Weapon), Name (Name)
+{
+[Thrall] Windfury Weapon
+}
+
+STRING 4330
+// Abilities: A07I ([Thrall] Windfury Weapon), Tip (Tooltip - Normal)
+{
+Windfury Weapon
+}
+
+STRING 4331
+// Abilities: A07I ([Thrall] Windfury Weapon), Ubertip (Tooltip - Normal - Extended)
+{
+Add +10% speed attack
+}
+
+STRING 4332
+// Abilities: A07I ([Thrall] Windfury Weapon), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4333
+// Abilities: A07J ([Thrall] Earth Amulet), Tip (Tooltip - Normal)
+{
+Earth Amulet
+}
+
+STRING 4334
+// Abilities: A07J ([Thrall] Earth Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Add defense bonus
+}
+
+STRING 4335
+// Abilities: A07J ([Thrall] Earth Amulet), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4336
+// Upgrades: R02R (Brute Strength), Name (Name)
+{
+[Thrall] Earth Amulet
+}
+
+STRING 4337
+// Upgrades: R02S (Brute Strength), Name (Name)
+{
+[Thrall] Windfury Weapon
+}
+
+STRING 4338
+// Upgrades: R02S (Brute Strength), Tip (Tooltip)
+{
+Research Windfury Weapon
+}
+
+STRING 4339
+// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +10% speed attack
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 4340
+// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 4341
+// Upgrades: R02S (Brute Strength), effect1 (Effect 1)
+{
+rats
+}
+
+STRING 4342
+// Abilities: A07K ([Thrall] Quaking Totem), Name (Name)
+{
+[Thrall] Quaking Totem
+}
+
+STRING 4343
+// Upgrades: R02T (Brute Strength), Tip (Tooltip)
+{
+Research Quaking Totem
+}
+
+STRING 4345
+// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 4346
+// Abilities: A07K ([Thrall] Quaking Totem), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4347
+// Abilities: A07K ([Thrall] Quaking Totem), Tip (Tooltip - Normal)
+{
+Quaking Totem
+}
+
+STRING 4348
+// Abilities: A07K ([Thrall] Quaking Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A07K,DataA1>% chance that an attack will do <A07K,DataC1> bonus damage and stun the target for <A07K,Dur1> seconds.
+}
+
+STRING 4349
+// Upgrades: R02T (Brute Strength), Name (Name)
+{
+[Thrall] Quaking Totem
+}
+
+STRING 4350
+// Upgrades: R02T (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Gives a <A07K,DataA1>% chance that an attack will do <A07K,DataC1> bonus damage and stun the target for <A07K,Dur1> seconds.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Tauren
 }
 

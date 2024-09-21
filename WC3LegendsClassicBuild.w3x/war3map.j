@@ -183,6 +183,7 @@ trigger gg_trg_TyrandeOverflowingMoonwell= null
 trigger gg_trg_ThrallIni= null
 trigger gg_trg_ThrallOverload= null
 trigger gg_trg_ThrallDeadOverloadTotem= null
+trigger gg_trg_ThrallCountTotems= null
 trigger gg_trg_ThrallPlaceTotem= null
 trigger gg_trg_ThrallChangeMode= null
 trigger gg_trg_ThrallElementalBurrow= null
@@ -257,7 +258,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_ThrallCountTotems= null
+trigger gg_trg_ThrallNextPage= null
 
     // Random Groups
 integer array gg_rg_000
@@ -391,7 +392,6 @@ endglobals
         if GetLocalPlayer() == p then
             call BlzFrameSetTexture(ThrallIcon, texturePath, 0, true)
             call BlzFrameSetVisible(ThrallIcon, true)
-
 
             call BlzFrameSetAbsPoint(ThrallIcon, FRAMEPOINT_TOPLEFT, xPos, yPos + 0.065)
             call BlzFrameSetAbsPoint(ThrallIcon, FRAMEPOINT_BOTTOMRIGHT, xPos + 0.115, yPos)
@@ -1196,7 +1196,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'O00O', - 544.0, - 352.0, 270.000, 'O00O')
     set u=BlzCreateUnitWithSkin(p, 'o00K', - 736.0, - 96.0, 270.000, 'o00K')
     set u=BlzCreateUnitWithSkin(p, 'o006', - 1024.0, - 320.0, 270.000, 'o006')
-    set u=BlzCreateUnitWithSkin(p, 'o00B', - 1088.0, 128.0, 270.000, 'o00B')
+    set u=BlzCreateUnitWithSkin(p, 'o00D', - 1088.0, 128.0, 270.000, 'o00D')
     set u=BlzCreateUnitWithSkin(p, 'o00G', - 608.0, 160.0, 270.000, 'o00G')
 endfunction
 
@@ -1209,12 +1209,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'o004', - 1280.2, - 604.5, 187.807, 'o004')
-    set u=BlzCreateUnitWithSkin(p, 'o004', - 1269.0, - 764.9, 179.758, 'o004')
-    set u=BlzCreateUnitWithSkin(p, 'o003', - 1466.6, - 449.8, 180.604, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', - 1495.0, - 244.7, 164.319, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o002', - 1591.6, - 446.7, 179.683, 'o002')
-    set u=BlzCreateUnitWithSkin(p, 'o002', - 1592.7, - 267.5, 186.480, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'o008', - 1600.0, - 641.9, 189.953, 'o008')
+    set u=BlzCreateUnitWithSkin(p, 'o009', - 1346.0, - 510.5, 183.254, 'o009')
+    set u=BlzCreateUnitWithSkin(p, 'o009', - 1349.5, - 677.0, 185.494, 'o009')
+    set u=BlzCreateUnitWithSkin(p, 'o008', - 1681.1, - 456.6, 182.269, 'o008')
 endfunction
 
 //===========================================================================
@@ -1781,6 +1779,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nban', - 3252.1, - 416.2, - 22.442, 'nban')
+    set u=BlzCreateUnitWithSkin(p, 'nban', - 3227.6, - 560.5, 3.266, 'nban')
 endfunction
 
 //===========================================================================
@@ -5718,6 +5718,20 @@ function Trig_ThrallIni_Actions takes nothing returns nothing
     call SetPlayerAbilityAvailableBJ(false, 'A07C', udg_PlayerThrall)
     call SetPlayerAbilityAvailableBJ(false, 'A07D', udg_PlayerThrall)
     call SetPlayerAbilityAvailableBJ(false, 'A07E', udg_PlayerThrall)
+    call SetPlayerAbilityAvailableBJ(false, 'A07F', udg_PlayerThrall)
+    call SetPlayerAbilityAvailableBJ(false, 'A07G', udg_PlayerThrall)
+    call SetPlayerAbilityAvailableBJ(false, 'A07I', udg_PlayerThrall)
+    call SetPlayerAbilityAvailableBJ(false, 'A07J', udg_PlayerThrall)
+    call EnableTrigger(gg_trg_ThrallOverload)
+    call EnableTrigger(gg_trg_ThrallDeadOverloadTotem)
+    call EnableTrigger(gg_trg_ThrallCountTotems)
+    call EnableTrigger(gg_trg_ThrallPlaceTotem)
+    call EnableTrigger(gg_trg_ThrallChangeMode)
+    call EnableTrigger(gg_trg_ThrallElementalBurrow)
+    call EnableTrigger(gg_trg_ThrallFireStickCrutch)
+    call EnableTrigger(gg_trg_ThrallElementalDestruction)
+    call EnableTrigger(gg_trg_ThrallNextPage)
+    call EnableTrigger(gg_trg_ThrallElementalUpg)
 endfunction
 
 //===========================================================================
@@ -5817,6 +5831,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallOverload takes nothing returns nothing
     set gg_trg_ThrallOverload=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallOverload)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallOverload, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ThrallOverload, Condition(function Trig_ThrallOverload_Conditions))
     call TriggerAddAction(gg_trg_ThrallOverload, function Trig_ThrallOverload_Actions)
@@ -5900,6 +5915,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallDeadOverloadTotem takes nothing returns nothing
     set gg_trg_ThrallDeadOverloadTotem=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallDeadOverloadTotem)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallDeadOverloadTotem, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_ThrallDeadOverloadTotem, Condition(function Trig_ThrallDeadOverloadTotem_Conditions))
     call TriggerAddAction(gg_trg_ThrallDeadOverloadTotem, function Trig_ThrallDeadOverloadTotem_Actions)
@@ -5923,6 +5939,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallCountTotems takes nothing returns nothing
     set gg_trg_ThrallCountTotems=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallCountTotems)
     call TriggerRegisterTimerEventPeriodic(gg_trg_ThrallCountTotems, 1.00)
     call TriggerAddAction(gg_trg_ThrallCountTotems, function Trig_ThrallCountTotems_Actions)
 endfunction
@@ -5969,7 +5986,7 @@ function Trig_ThrallPlaceTotem_Func001Func002C takes nothing returns boolean
     if ( not ( GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD) >= ( 5 * udg_ThrallTotems ) ) ) then
         return false
     endif
-    if ( not ( GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER) >= ( 25 * udg_ThrallTotems ) ) ) then
+    if ( not ( GetPlayerState(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER) >= ( 15 * udg_ThrallTotems ) ) ) then
         return false
     endif
     return true
@@ -5986,7 +6003,7 @@ function Trig_ThrallPlaceTotem_Actions takes nothing returns nothing
     if ( Trig_ThrallPlaceTotem_Func001C() ) then
         if ( Trig_ThrallPlaceTotem_Func001Func002C() ) then
             call AdjustPlayerStateBJ(( - 5 * udg_ThrallTotems ), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_GOLD)
-            call AdjustPlayerStateBJ(( - 25 * udg_ThrallTotems ), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+            call AdjustPlayerStateBJ(( - 15 * udg_ThrallTotems ), GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_STATE_RESOURCE_LUMBER)
             if ( Trig_ThrallPlaceTotem_Func001Func002Func003C() ) then
                 call CreateNUnitsAtLoc(1, 'o00M', GetOwningPlayer(GetSpellAbilityUnit()), GetSpellTargetLoc(), bj_UNIT_FACING)
             else
@@ -6005,7 +6022,7 @@ function Trig_ThrallPlaceTotem_Actions takes nothing returns nothing
                 endif
             endif
         else
-            call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), ( "Requires " + ( I2S(( 5 * udg_ThrallTotems )) + ( " gold and " + ( I2S(( 25 * udg_ThrallTotems )) + " wood to summon a totem!" ) ) ) ))
+            call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), ( "Requires " + ( I2S(( 5 * udg_ThrallTotems )) + ( " gold and " + ( I2S(( 15 * udg_ThrallTotems )) + " wood to summon a totem!" ) ) ) ))
         endif
     else
         call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_4285")
@@ -6015,6 +6032,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallPlaceTotem takes nothing returns nothing
     set gg_trg_ThrallPlaceTotem=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallPlaceTotem)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallPlaceTotem, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ThrallPlaceTotem, Condition(function Trig_ThrallPlaceTotem_Conditions))
     call TriggerAddAction(gg_trg_ThrallPlaceTotem, function Trig_ThrallPlaceTotem_Actions)
@@ -6213,6 +6231,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallChangeMode takes nothing returns nothing
     set gg_trg_ThrallChangeMode=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallChangeMode)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallChangeMode, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ThrallChangeMode, Condition(function Trig_ThrallChangeMode_Conditions))
     call TriggerAddAction(gg_trg_ThrallChangeMode, function Trig_ThrallChangeMode_Actions)
@@ -6232,6 +6251,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallElementalBurrow takes nothing returns nothing
     set gg_trg_ThrallElementalBurrow=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallElementalBurrow)
     call TriggerRegisterTimerEventPeriodic(gg_trg_ThrallElementalBurrow, 1.00)
     call TriggerAddAction(gg_trg_ThrallElementalBurrow, function Trig_ThrallElementalBurrow_Actions)
 endfunction
@@ -6253,6 +6273,7 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallFireStickCrutch takes nothing returns nothing
     set gg_trg_ThrallFireStickCrutch=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallFireStickCrutch)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallFireStickCrutch, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(gg_trg_ThrallFireStickCrutch, Condition(function Trig_ThrallFireStickCrutch_Conditions))
     call TriggerAddAction(gg_trg_ThrallFireStickCrutch, function Trig_ThrallFireStickCrutch_Actions)
@@ -6429,15 +6450,60 @@ endfunction
 //===========================================================================
 function InitTrig_ThrallElementalDestruction takes nothing returns nothing
     set gg_trg_ThrallElementalDestruction=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallElementalDestruction)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallElementalDestruction, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ThrallElementalDestruction, Condition(function Trig_ThrallElementalDestruction_Conditions))
     call TriggerAddAction(gg_trg_ThrallElementalDestruction, function Trig_ThrallElementalDestruction_Actions)
 endfunction
 
 //===========================================================================
+// Trigger: ThrallNextPage
+//===========================================================================
+function Trig_ThrallNextPage_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A07H' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallNextPage_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'o00U' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallNextPage_Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'o006' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallNextPage_Actions takes nothing returns nothing
+    if ( Trig_ThrallNextPage_Func001C() ) then
+        call UnitAddAbilityBJ('S009', GetSpellAbilityUnit())
+    else
+        if ( Trig_ThrallNextPage_Func001Func001C() ) then
+            call UnitAddAbilityBJ('S00A', GetSpellAbilityUnit())
+        else
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ThrallNextPage takes nothing returns nothing
+    set gg_trg_ThrallNextPage=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallNextPage)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallNextPage, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ThrallNextPage, Condition(function Trig_ThrallNextPage_Conditions))
+    call TriggerAddAction(gg_trg_ThrallNextPage, function Trig_ThrallNextPage_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ThrallElementalUpg
 //===========================================================================
-function Trig_ThrallElementalUpg_Func007C takes nothing returns boolean
+function Trig_ThrallElementalUpg_Func011C takes nothing returns boolean
     if ( ( GetResearched() == 'R02J' ) ) then
         return true
     endif
@@ -6454,7 +6520,7 @@ function Trig_ThrallElementalUpg_Func007C takes nothing returns boolean
 endfunction
 
 function Trig_ThrallElementalUpg_Conditions takes nothing returns boolean
-    if ( not Trig_ThrallElementalUpg_Func007C() ) then
+    if ( not Trig_ThrallElementalUpg_Func011C() ) then
         return false
     endif
     return true
@@ -6506,6 +6572,34 @@ function Trig_ThrallElementalUpg_Func006C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_ThrallElementalUpg_Func008Func001C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R02Q' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallElementalUpg_Func008C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R02P' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallElementalUpg_Func010Func001C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R02S' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallElementalUpg_Func010C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R02R' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_ThrallElementalUpg_Actions takes nothing returns nothing
     // Grunt
     if ( Trig_ThrallElementalUpg_Func002C() ) then
@@ -6541,11 +6635,34 @@ function Trig_ThrallElementalUpg_Actions takes nothing returns nothing
         else
         endif
     endif
+    // Shaman
+    if ( Trig_ThrallElementalUpg_Func008C() ) then
+        call SetPlayerTechMaxAllowedSwap('R02Q', 0, udg_PlayerThrall)
+        call SetPlayerAbilityAvailableBJ(true, 'A07F', udg_PlayerThrall)
+    else
+        if ( Trig_ThrallElementalUpg_Func008Func001C() ) then
+            call SetPlayerTechMaxAllowedSwap('R02P', 0, udg_PlayerThrall)
+            call SetPlayerAbilityAvailableBJ(true, 'A07G', udg_PlayerThrall)
+        else
+        endif
+    endif
+    // Rider
+    if ( Trig_ThrallElementalUpg_Func010C() ) then
+        call SetPlayerTechMaxAllowedSwap('R02S', 0, udg_PlayerThrall)
+        call SetPlayerAbilityAvailableBJ(true, 'A07J', udg_PlayerThrall)
+    else
+        if ( Trig_ThrallElementalUpg_Func010Func001C() ) then
+            call SetPlayerTechMaxAllowedSwap('R02R', 0, udg_PlayerThrall)
+            call SetPlayerAbilityAvailableBJ(true, 'A07I', udg_PlayerThrall)
+        else
+        endif
+    endif
 endfunction
 
 //===========================================================================
 function InitTrig_ThrallElementalUpg takes nothing returns nothing
     set gg_trg_ThrallElementalUpg=CreateTrigger()
+    call DisableTrigger(gg_trg_ThrallElementalUpg)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallElementalUpg, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_ThrallElementalUpg, Condition(function Trig_ThrallElementalUpg_Conditions))
     call TriggerAddAction(gg_trg_ThrallElementalUpg, function Trig_ThrallElementalUpg_Actions)
@@ -10341,6 +10458,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallElementalBurrow()
     call InitTrig_ThrallFireStickCrutch()
     call InitTrig_ThrallElementalDestruction()
+    call InitTrig_ThrallNextPage()
     call InitTrig_ThrallElementalUpg()
     call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
