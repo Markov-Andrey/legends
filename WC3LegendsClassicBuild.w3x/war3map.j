@@ -1187,21 +1187,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'O00O', - 544.0, - 352.0, 270.000, 'O00O')
-    set u=BlzCreateUnitWithSkin(p, 'o00K', - 736.0, - 96.0, 270.000, 'o00K')
-    set u=BlzCreateUnitWithSkin(p, 'o006', - 1024.0, - 320.0, 270.000, 'o006')
-    set u=BlzCreateUnitWithSkin(p, 'o00D', - 1088.0, 128.0, 270.000, 'o00D')
-    set u=BlzCreateUnitWithSkin(p, 'o00G', - 608.0, 160.0, 270.000, 'o00G')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1210,10 +1195,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'o008', - 1600.0, - 641.9, 189.953, 'o008')
-    set u=BlzCreateUnitWithSkin(p, 'o009', - 1346.0, - 510.5, 183.254, 'o009')
-    set u=BlzCreateUnitWithSkin(p, 'o009', - 1349.5, - 677.0, 185.494, 'o009')
-    set u=BlzCreateUnitWithSkin(p, 'o008', - 1681.1, - 456.6, 182.269, 'o008')
 endfunction
 
 //===========================================================================
@@ -1814,7 +1795,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -1829,7 +1809,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreatePlayerBuildings()
+    call CreateBuildingsForPlayer5() // INLINED!!
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
@@ -5723,6 +5703,8 @@ function Trig_ThrallIni_Actions takes nothing returns nothing
     call SetPlayerAbilityAvailableBJ(false, 'A07G', udg_PlayerThrall)
     call SetPlayerAbilityAvailableBJ(false, 'A07I', udg_PlayerThrall)
     call SetPlayerAbilityAvailableBJ(false, 'A07J', udg_PlayerThrall)
+    call SetPlayerAbilityAvailableBJ(false, 'A07N', udg_PlayerThrall)
+    call SetPlayerAbilityAvailableBJ(false, 'A07O', udg_PlayerThrall)
     call EnableTrigger(gg_trg_ThrallOverload)
     call EnableTrigger(gg_trg_ThrallDeadOverloadTotem)
     call EnableTrigger(gg_trg_ThrallCountTotems)
@@ -6526,7 +6508,7 @@ endfunction
 //===========================================================================
 // Trigger: ThrallElementalUpg
 //===========================================================================
-function Trig_ThrallElementalUpg_Func013C takes nothing returns boolean
+function Trig_ThrallElementalUpg_Func015C takes nothing returns boolean
     if ( ( GetResearched() == 'R02J' ) ) then
         return true
     endif
@@ -6543,7 +6525,7 @@ function Trig_ThrallElementalUpg_Func013C takes nothing returns boolean
 endfunction
 
 function Trig_ThrallElementalUpg_Conditions takes nothing returns boolean
-    if ( not Trig_ThrallElementalUpg_Func013C() ) then
+    if ( not Trig_ThrallElementalUpg_Func015C() ) then
         return false
     endif
     return true
@@ -6623,6 +6605,10 @@ function Trig_ThrallElementalUpg_Func010C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_ThrallElementalUpg_Func012Func001Func002A takes nothing returns nothing
+    call UnitAddAbilityBJ('A07L', GetEnumUnit())
+endfunction
+
 function Trig_ThrallElementalUpg_Func012Func001C takes nothing returns boolean
     if ( not ( GetResearched() == 'R02U' ) ) then
         return false
@@ -6632,6 +6618,20 @@ endfunction
 
 function Trig_ThrallElementalUpg_Func012C takes nothing returns boolean
     if ( not ( GetResearched() == 'R02T' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallElementalUpg_Func014Func001C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R02W' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallElementalUpg_Func014C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R02V' ) ) then
         return false
     endif
     return true
@@ -6701,8 +6701,21 @@ function Trig_ThrallElementalUpg_Actions takes nothing returns nothing
         call SetPlayerAbilityAvailableBJ(true, 'A07K', udg_PlayerThrall)
     else
         if ( Trig_ThrallElementalUpg_Func012Func001C() ) then
+            call EnableTrigger(gg_trg_ThrallCounterstrikeTotemCrutch)
+            call ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_PlayerThrall, 'o003'), function Trig_ThrallElementalUpg_Func012Func001Func002A)
             call SetPlayerTechMaxAllowedSwap('R02T', 0, udg_PlayerThrall)
             call SetPlayerAbilityAvailableBJ(true, 'A07L', udg_PlayerThrall)
+        else
+        endif
+    endif
+    // Wind Rider
+    if ( Trig_ThrallElementalUpg_Func014C() ) then
+        call SetPlayerTechMaxAllowedSwap('R02W', 0, udg_PlayerThrall)
+        call SetPlayerAbilityAvailableBJ(true, 'A07N', udg_PlayerThrall)
+    else
+        if ( Trig_ThrallElementalUpg_Func014Func001C() ) then
+            call SetPlayerTechMaxAllowedSwap('R02V', 0, udg_PlayerThrall)
+            call SetPlayerAbilityAvailableBJ(true, 'A07O', udg_PlayerThrall)
         else
         endif
     endif

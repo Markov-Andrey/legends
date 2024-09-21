@@ -12768,3 +12768,73 @@ STRING 4372
 Add magical invulnerability to the totem
 }
 
+STRING 4373
+// Abilities: A07N ([Thrall] Envenomed Spears), Name (Name)
+{
+[Thrall] Envenomed Spears
+}
+
+STRING 4374
+// Abilities: A07N ([Thrall] Envenomed Spears), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4375
+// Upgrades: R02V (Envenomed Spears), Name (Name)
+{
+[Thrall] Envenomed Spears
+}
+
+STRING 4376
+// Abilities: A07O ([Thrall] Wind Dancer's Pendant), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4377
+// Abilities: A07O ([Thrall] Wind Dancer's Pendant), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a <A07O,DataA1,%>% chance to avoid an attack.
+}
+
+STRING 4378
+// Abilities: A07O ([Thrall] Wind Dancer's Pendant), Tip (Tooltip - Normal)
+{
+Wind Dancer's Pendant
+}
+
+STRING 4379
+// Abilities: A07O ([Thrall] Wind Dancer's Pendant), Name (Name)
+{
+[Thrall] Wind Dancer's Pendant
+}
+
+STRING 4380
+// Upgrades: R02W (Envenomed Spears), Name (Name)
+{
+[Thrall] Wind Dancer's Pendant
+}
+
+STRING 4381
+// Upgrades: R02W (Envenomed Spears), Tip (Tooltip)
+{
+Research Wind Dancer's Pendant
+}
+
+STRING 4383
+// Upgrades: R02V (Envenomed Spears), Ubertip (Tooltip - Extended)
+{
+Adds an additional poison effect attacks. A unit poisoned by Envenomed Spears takes damage over time.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Wind Rider
+}
+
+STRING 4384
+// Upgrades: R02W (Envenomed Spears), Ubertip (Tooltip - Extended)
+{
+Gives a <A07O,DataA1,%>% chance to avoid an attack.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Wind Rider
+}
+
