@@ -12698,15 +12698,73 @@ STRING 4358
 [UI] Difficulty: Mythic (+4)
 }
 
-STRING 4360
-// Abilities: A07L ([Thrall] Electric Totem), Name (Name)
-{
-[Thrall] Electric Totem
-}
-
 STRING 4361
-// Abilities: A07L ([Thrall] Electric Totem), EditorSuffix (Editor Suffix)
+// Abilities: A07L ([Thrall] Counterstrike Totem), EditorSuffix (Editor Suffix)
 {
 (Chance)
+}
+
+STRING 4362
+// Abilities: A07L ([Thrall] Counterstrike Totem), Name (Name)
+{
+[Thrall] Counterstrike Totem
+}
+
+STRING 4363
+// Abilities: A07M ([Thrall] Counterstrike Totem), Tip (Tooltip - Normal)
+{
+Counterstrike Totem
+}
+
+STRING 4365
+// Abilities: A07M ([Thrall] Counterstrike Totem), Name (Name)
+{
+[Thrall] Counterstrike Totem
+}
+
+STRING 4366
+// Abilities: A07M ([Thrall] Counterstrike Totem), Ubertip (Tooltip - Normal - Extended)
+{
+15% chance to cleanse the target of useful spells and also deal additional damage to summoned troops in the amount of 15
+}
+
+STRING 4367
+// Upgrades: R02U (Brute Strength), Name (Name)
+{
+[Thrall] Counterstrike Totem
+}
+
+STRING 4368
+// Upgrades: R02U (Brute Strength), Tip (Tooltip)
+{
+Research Counterstrike Totem
+}
+
+STRING 4369
+// Upgrades: R02U (Brute Strength), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Time to defuse the situation."|r
+
+15% chance to cleanse the target of useful spells and also deal additional damage to summoned troops in the amount of 15
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Tauren
+}
+
+STRING 4370
+// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 4371
+// Abilities: A07M ([Thrall] Counterstrike Totem), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4372
+// Upgrades: R02D (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Add magical invulnerability to the totem
 }
 
