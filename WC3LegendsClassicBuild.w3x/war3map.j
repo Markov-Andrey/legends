@@ -188,6 +188,7 @@ trigger gg_trg_ThrallPlaceTotem= null
 trigger gg_trg_ThrallChangeMode= null
 trigger gg_trg_ThrallElementalBurrow= null
 trigger gg_trg_ThrallFireStickCrutch= null
+trigger gg_trg_ThrallCounterstrikeTotemCrutch= null
 trigger gg_trg_ThrallElementalDestruction= null
 trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
@@ -259,7 +260,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_ThrallCounterstrikeTotemCrutch= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1761,8 +1761,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nban', - 3252.1, - 416.2, 337.558, 'nban')
-    set u=BlzCreateUnitWithSkin(p, 'nban', - 3227.6, - 560.5, 3.266, 'nban')
 endfunction
 
 //===========================================================================
