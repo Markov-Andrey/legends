@@ -10917,12 +10917,6 @@ STRING 3932
 [Thrall] Headhunter
 }
 
-STRING 3933
-// Units: o004 ([Thrall] Demolisher), Name (Name)
-{
-[Thrall] Demolisher
-}
-
 STRING 3934
 // Units: o005 ([Thrall] Shaman), Name (Name)
 {
@@ -11007,12 +11001,6 @@ STRING 3948
 [Thrall] Watch Tower
 }
 
-STRING 3953
-// Units: o006 ([Thrall] Voodoo Lounge), Name (Name)
-{
-[Thrall] Voodoo Lounge
-}
-
 STRING 3954
 // Units: o00K ([Thrall] Elemental Burrow), Name (Name)
 {
@@ -11035,16 +11023,6 @@ STRING 3958
 // Abilities: A06D ([Thrall] Place a Totem), Tip (Tooltip - Normal)
 {
 Place a Totem
-}
-
-STRING 3962
-{
-The summoning point must be within line of sight!
-}
-
-STRING 3963
-{
-Requires 5 gold and 25 wood to summon a totem!
 }
 
 STRING 3988
@@ -11550,6 +11528,12 @@ STRING 4107
 Overload
 }
 
+STRING 4108
+// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Overload
+}
+
 STRING 4116
 // Abilities: A06W ([Thrall] Totem of Wrath), EditorSuffix (Editor Suffix)
 {
@@ -11923,5 +11907,424 @@ STRING 4195
 // Upgrades: R02I (Shaman Adept Training,Shaman Master Training), Name (Name)
 {
 [Thrall] Shaman Adept Training
+}
+
+STRING 4196
+// Units: n005 ([Thrall] Fire Elemental), Name (Name)
+{
+[Thrall] Fire Elemental
+}
+
+STRING 4197
+// Units: n006 ([Thrall] Earth Elemental), Name (Name)
+{
+[Thrall] Earth Elemental
+}
+
+STRING 4198
+// Units: h01N ([Thrall] Sea Elemental), Name (Name)
+{
+[Thrall] Sea Elemental
+}
+
+STRING 4199
+// Units: h01O ([Thrall] Wind Elemental), Name (Name)
+{
+[Thrall] Wind Elemental
+}
+
+STRING 4200
+// Abilities: A074 ([Thrall] Heal), EditorSuffix (Editor Suffix)
+{
+ (Water Elemental)
+}
+
+STRING 4201
+// Abilities: A074 ([Thrall] Heal), Name (Name)
+{
+[Thrall] Heal
+}
+
+STRING 4202
+// Abilities: A075 ([Thrall] Elemental Destruction), Name (Name)
+{
+[Thrall] Elemental Destruction
+}
+
+STRING 4203
+// Abilities: A075 ([Thrall] Elemental Destruction), Researchtip (Tooltip - Learn)
+{
+Learn Whirling Elements - [|cffffcc00Level %d|r]
+}
+
+STRING 4204
+// Abilities: A075 ([Thrall] Elemental Destruction), Researchubertip (Tooltip - Learn - Extended)
+{
+Reveals the area of the map that it is cast upon. Also reveals invisible units. |n|n|cffffcc00Level 1|r - Reveals a small area. |n|cffffcc00Level 2|r - Reveals a large area. |n|cffffcc00Level 3|r - Reveals a huge area.
+}
+
+STRING 4205
+// Abilities: A075 ([Thrall] Elemental Destruction), Tip (Tooltip - Normal)
+{
+Elemental Destruction
+}
+
+STRING 4206
+// Abilities: A075 ([Thrall] Elemental Destruction), Tip (Tooltip - Normal)
+{
+Whirling Elements - [|cffffcc00Level 2|r]
+}
+
+STRING 4207
+// Abilities: A075 ([Thrall] Elemental Destruction), Tip (Tooltip - Normal)
+{
+Whirling Elements - [|cffffcc00Level 3|r]
+}
+
+STRING 4209
+// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Overload
+}
+
+STRING 4210
+// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Shatter the totem to summon an elemental corresponding to its specialization:
+
+Fire Elemental: Focuses on damage, attacking from a distance.
+Water Elemental: Specializes in healing, providing support from range.
+Earth Elemental: Excels in siege and damage absorption, engaging in melee combat.
+Wind Elemental: Adds extra attacks against air units, striking from afar.
+
+
+If summoned under the effect of Whirling Elements, the elemental will remain active for a longer duration.
+}
+
+STRING 4211
+// Units: o006 ([Thrall] Amulet Crafter), Name (Name)
+{
+[Thrall] Amulet Crafter
+}
+
+STRING 4212
+// Abilities: A076 ([Thrall] Purge), Name (Name)
+{
+[Thrall] Purge
+}
+
+STRING 4213
+// Abilities: A077 ([Thrall] Lightning Shield), Name (Name)
+{
+[Thrall] Lightning Shield
+}
+
+STRING 4214
+// Abilities: A078 ([Thrall] Bracers of Earth Binding), Name (Name)
+{
+[Thrall] Bracers of Earth Binding
+}
+
+STRING 4215
+// Upgrades: R02J (Brute Strength), Tip (Tooltip)
+{
+Research Bracers of Earth Binding
+}
+
+STRING 4217
+// Abilities: A078 ([Thrall] Bracers of Earth Binding), Tip (Tooltip - Normal)
+{
+Bracers of Earth Binding
+}
+
+STRING 4219
+// Upgrades: R02J (Brute Strength), Name (Name)
+{
+[Thrall] Bracers of Earth Binding
+}
+
+STRING 4220
+// Abilities: A07A ([Thrall] Firestick), Name (Name)
+{
+[Thrall] Firestick
+}
+
+STRING 4221
+// Upgrades: R02K (Brute Strength), Tip (Tooltip)
+{
+Research Firestick
+}
+
+STRING 4224
+// Abilities: A07B ([Thrall] Firestick), Tip (Tooltip - Normal)
+{
+Firestick
+}
+
+STRING 4226
+// Abilities: A07B ([Thrall] Firestick), Name (Name)
+{
+[Thrall] Firestick
+}
+
+STRING 4227
+// Units: o006 ([Thrall] Amulet Crafter), Tip (Tooltip - Basic)
+{
+Amulet Crafter
+}
+
+STRING 4229
+// Abilities: A079 ([Thrall] Fire Ring), Name (Name)
+{
+[Thrall] Fire Ring
+}
+
+STRING 4230
+// Abilities: A079 ([Thrall] Fire Ring), Tip (Tooltip - Normal)
+{
+Fire Ring
+}
+
+STRING 4234
+// Upgrades: R02L (Brute Strength), Name (Name)
+{
+[Thrall] Fire Ring
+}
+
+STRING 4235
+// Upgrades: R02L (Brute Strength), Tip (Tooltip)
+{
+Research Fire Ring
+}
+
+STRING 4237
+// Upgrades: R02K (Brute Strength), Name (Name)
+{
+[Thrall] Firestick
+}
+
+STRING 4239
+// Abilities: A07C ([Thrall] Airburst Amulet), Name (Name)
+{
+[Thrall] Airburst Amulet
+}
+
+STRING 4240
+// Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Causes attacks to do <A07C,DataC1> times normal damage to air units.
+}
+
+STRING 4241
+// Abilities: A07C ([Thrall] Airburst Amulet), Tip (Tooltip - Normal)
+{
+Airburst Amulet
+}
+
+STRING 4242
+// Upgrades: R02M (Brute Strength), Name (Name)
+{
+[Thrall] Airburst Amulet
+}
+
+STRING 4243
+// Upgrades: R02M (Brute Strength), Tip (Tooltip)
+{
+Research Airburst Amulet
+}
+
+STRING 4245
+// Abilities: A078 ([Thrall] Bracers of Earth Binding), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4246
+// Abilities: A079 ([Thrall] Fire Ring), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4247
+// Abilities: A07B ([Thrall] Firestick), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4248
+// Abilities: A07C ([Thrall] Airburst Amulet), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4252
+// Abilities: A079 ([Thrall] Fire Ring), Ubertip (Tooltip - Normal - Extended)
+{
+Improves the fighting capabilities of Grunts with a 4 bonus attack damage.
+}
+
+STRING 4253
+// Abilities: A07B ([Thrall] Firestick), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Warning: Known to spontaneously combust."|r
+
+Transforms part of the damage 5 into magic and deals area damage.
+}
+
+STRING 4256
+// Abilities: A078 ([Thrall] Bracers of Earth Binding), Ubertip (Tooltip - Normal - Extended)
+{
+Improves the fighting capabilities of Grunts with a 175 hit point increase.
+}
+
+STRING 4258
+// Upgrades: R02J (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of Grunts with a 175 hit point increase.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Grunt
+}
+
+STRING 4259
+// Upgrades: R02K (Brute Strength), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Warning: Known to spontaneously combust."|r
+
+Transforms part of the damage 5 into magic and deals area damage.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
+}
+
+STRING 4260
+// Upgrades: R02L (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of Grunts with a 4 bonus attack damage.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Grunt
+}
+
+STRING 4261
+// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of Grunts with a <R02K,base2> bonus attack damage.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
+}
+
+STRING 4262
+// Units: o004 ([Thrall] Catapult), Name (Name)
+{
+[Thrall] Catapult
+}
+
+STRING 4263
+// Units: o004 ([Thrall] Catapult), Tip (Tooltip - Basic)
+{
+Train Catapult
+}
+
+STRING 4267
+// Abilities: A07D ([Thrall] Perfect Windfeather), Name (Name)
+{
+[Thrall] Perfect Windfeather
+}
+
+STRING 4268
+// Upgrades: R02N (Brute Strength), Tip (Tooltip)
+{
+Research Perfect Windfeather
+}
+
+STRING 4270
+// Abilities: A07D ([Thrall] Perfect Windfeather), Tip (Tooltip - Normal)
+{
+Perfect Windfeather
+}
+
+STRING 4271
+// Abilities: A07D ([Thrall] Perfect Windfeather), Ubertip (Tooltip - Normal - Extended)
+{
+Add range bonus - 300.
+}
+
+STRING 4272
+// Abilities: A07D ([Thrall] Perfect Windfeather), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4273
+// Upgrades: R02N (Brute Strength), effect1 (Effect 1)
+{
+ratr
+}
+
+STRING 4274
+// Upgrades: R02N (Brute Strength), Name (Name)
+{
+[Thrall] Perfect Windfeather
+}
+
+STRING 4275
+// Upgrades: R02N (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add range bonus - 300
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Catapult
+}
+
+STRING 4276
+// Abilities: A07E ([Thrall] Fire Runic Stone), Name (Name)
+{
+[Thrall] Fire Runic Stone
+}
+
+STRING 4277
+// Upgrades: R02O (Brute Strength), Tip (Tooltip)
+{
+Research Fire Runic Stone
+}
+
+STRING 4279
+// Abilities: A07E ([Thrall] Fire Runic Stone), Tip (Tooltip - Normal)
+{
+Fire Runic Stone
+}
+
+STRING 4280
+// Abilities: A07E ([Thrall] Fire Runic Stone), Ubertip (Tooltip - Normal - Extended)
+{
+Add +10 damage.
+}
+
+STRING 4281
+// Abilities: A07E ([Thrall] Fire Runic Stone), EditorSuffix (Editor Suffix)
+{
+(Amulet Upg)
+}
+
+STRING 4282
+// Upgrades: R02O (Brute Strength), effect1 (Effect 1)
+{
+ratx
+}
+
+STRING 4283
+// Upgrades: R02O (Brute Strength), Name (Name)
+{
+[Thrall] Fire Runic Stone
+}
+
+STRING 4284
+// Upgrades: R02O (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +10 damage
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Catapult
+}
+
+STRING 4285
+{
+The summoning point must be within line of sight!
 }
 
