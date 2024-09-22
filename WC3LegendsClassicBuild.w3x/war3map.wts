@@ -12973,3 +12973,116 @@ STRING 4428
 Mythic effect; it has an increased movement speed.
 }
 
+STRING 4429
+{
+Mythic: Boots of Speed
+}
+
+STRING 4437
+{
+Mythic: Vampiric
+}
+
+STRING 4438
+// Abilities: A07T ([Mythic] Vampiric Aura), Name (Name)
+{
+[Mythic] Vampiric Aura
+}
+
+STRING 4439
+// Buffs/Effects: B01A ([Mythic] Vampiric Aura), EditorName (Name (Editor Only))
+{
+[Mythic] Vampiric Aura
+}
+
+STRING 4440
+// Abilities: A07U ([Mythic] Fortified), Name (Name)
+{
+[Mythic] Fortified
+}
+
+STRING 4441
+// Buffs/Effects: B01A ([Mythic] Vampiric Aura), Buffubertip (Tooltip - Extended)
+{
+Mythic effect; damage it deals to enemy units will restore hit points.
+}
+
+STRING 4442
+// Buffs/Effects: B01B ([Mythic] Fortified), EditorName (Name (Editor Only))
+{
+[Mythic] Fortified
+}
+
+STRING 4443
+// Buffs/Effects: B01B ([Mythic] Fortified), Bufftip (Tooltip)
+{
+Fortified
+}
+
+STRING 4444
+// Buffs/Effects: B01B ([Mythic] Fortified), Buffubertip (Tooltip - Extended)
+{
+Mythic effect; it has increased armor.
+}
+
+STRING 4445
+// Abilities: A07V ([Mythic] Thorns Aura), Name (Name)
+{
+[Mythic] Thorns Aura
+}
+
+STRING 4446
+// Abilities: A07W ([Mythic] Brilliance Aura), Name (Name)
+{
+[Mythic] Brilliance Aura
+}
+
+STRING 4447
+// Buffs/Effects: B01C ([Mythic] Thorns Aura), EditorName (Name (Editor Only))
+{
+[Mythic] Thorns Aura
+}
+
+STRING 4448
+// Buffs/Effects: B01C ([Mythic] Thorns Aura), Buffubertip (Tooltip - Extended)
+{
+Mythic effect; melee units that attack it will take damage.
+}
+
+STRING 4449
+// Buffs/Effects: B01D ([Mythic] Brilliance Aura), Buffubertip (Tooltip - Extended)
+{
+Mythic effect; it has an increased mana regeneration.
+}
+
+STRING 4450
+// Buffs/Effects: B01D ([Mythic] Brilliance Aura), EditorName (Name (Editor Only))
+{
+[Mythic] Brilliance Aura
+}
+
+STRING 4451
+{
+Mythic: Tiranic
+}
+
+STRING 4452
+{
+Mythic: Fortified
+}
+
+STRING 4453
+{
+Mythic: Thorns
+}
+
+STRING 4454
+{
+Mythic: Brilliance
+}
+
+STRING 4455
+{
+Mythic: Cloak of Shadows
+}
+

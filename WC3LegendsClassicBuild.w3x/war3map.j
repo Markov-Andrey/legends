@@ -1,9 +1,9 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader__eventTrigger= CreateTrigger()
-trigger FrameLoader__actionTrigger= CreateTrigger()
-timer FrameLoader__t= CreateTimer()
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -13,18 +13,18 @@ constant boolean LIBRARY_THRALLUI=true
 //endglobals from THRALLUI
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
-framehandle CustomConsoleUI__idleWorkerButton
-framehandle CustomConsoleUI__idleWorkerButtonOverlay
-framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI__customInventoryCover
-framehandle CustomConsoleUI__customInventoryCoverParent
+framehandle CustomConsoleUI___idleWorkerButton
+framehandle CustomConsoleUI___idleWorkerButtonOverlay
+framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI___customInventoryCover
+framehandle CustomConsoleUI___customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI__dataPageSize= 11
+integer CustomConsoleUI___dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
         // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI__workerFace= true
+constant boolean CustomConsoleUI___workerFace= true
 //endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
@@ -92,6 +92,9 @@ string udg_Map
 string udg_ThrallMode
 player udg_PlayerThrall= null
 integer udg_ThrallTotems= 0
+trigger array udg_MythicList
+player udg_MythicEnemy= null
+real udg_MythicRandom= 0
 
     // Generated
 camerasetup gg_cam_StartView= null
@@ -191,6 +194,8 @@ trigger gg_trg_ThrallElementalDestruction= null
 trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_SetDifficulty= null
+trigger gg_trg_SetDifficultyGame= null
+trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_SetAIRace= null
 trigger gg_trg_AddUnitBuildingHero= null
 trigger gg_trg_SetUpgradeList= null
@@ -257,8 +262,14 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_SetDifficultyGame= null
-trigger gg_trg_AddRandomMutations= null
+trigger gg_trg_Mythic1Boots= null
+trigger gg_trg_Mythic2Vampiric= null
+trigger gg_trg_Mythic3Tiranic= null
+trigger gg_trg_Mythic4Fortified= null
+trigger gg_trg_Mythic5Thorns= null
+trigger gg_trg_Mythic6Brilliance= null
+trigger gg_trg_Mythic7Shadow= null
+trigger gg_trg_Mythic7ShadowAdd= null
 
     // Random Groups
 integer array gg_rg_000
@@ -281,24 +292,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader__actionTrigger, func)
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
     endfunction
 
-    function FrameLoader__timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader__actionTrigger)
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
     endfunction
-    function FrameLoader__eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
     endfunction
-    function FrameLoader__init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -358,15 +369,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER__init takes nothing returns nothing
-        call REFORGEDUIMAKER__CreateIcons()
+    function REFORGEDUIMAKER___init takes nothing returns nothing
+        call REFORGEDUIMAKER___CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library THRALLUI:
 
-    function THRALLUI__CreateIcon takes nothing returns nothing
+    function THRALLUI___CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -398,8 +409,8 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI__init takes nothing returns nothing
-        call THRALLUI__CreateIcon()
+    function THRALLUI___init takes nothing returns nothing
+        call THRALLUI___CreateIcon()
     endfunction
 
 
@@ -418,7 +429,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -429,7 +440,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI__dataPageSize
+        set pageValue=index * CustomConsoleUI___dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -449,10 +460,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -465,18 +476,18 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
-                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
-                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
+                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
+                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
 
         else
-            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
-            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
+            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -497,19 +508,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI__Init takes nothing returns nothing
+    function CustomConsoleUI___Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI__at0s takes nothing returns nothing
-        call CustomConsoleUI__Init()
+    function CustomConsoleUI___at0s takes nothing returns nothing
+        call CustomConsoleUI___Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI__update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI___update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI__init_function takes nothing returns nothing
+    function CustomConsoleUI___init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -629,11 +640,11 @@ endglobals
         set CustomConsoleUI_x[index]=0.0004
         set CustomConsoleUI_y[index]=0.0
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
 
-            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
 
     endfunction
 
@@ -791,6 +802,8 @@ function InitGlobals takes nothing returns nothing
     set udg_Map="Alterac"
     set udg_ThrallMode="air"
     set udg_ThrallTotems=0
+    set udg_MythicEnemy=Player(5)
+    set udg_MythicRandom=0
 endfunction
 
 //***************************************************************************
@@ -6726,6 +6739,221 @@ function InitTrig_ThrallElementalUpg takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: MythicAddRandom
+//===========================================================================
+function MythicAddRandom takes nothing returns nothing
+    local trigger array mutationTriggers
+    local integer availableMutations= 7
+    local integer mutationCount
+    local integer chosenMutation
+
+    set mutationTriggers[1]=gg_trg_Mythic1Boots
+    set mutationTriggers[2]=gg_trg_Mythic2Vampiric
+    set mutationTriggers[3]=gg_trg_Mythic3Tiranic
+    set mutationTriggers[4]=gg_trg_Mythic4Fortified
+    set mutationTriggers[5]=gg_trg_Mythic5Thorns
+    set mutationTriggers[6]=gg_trg_Mythic6Brilliance
+    set mutationTriggers[7]=gg_trg_Mythic7Shadow
+
+    if ( udg_SetDifficulty == 4 ) then
+        set mutationCount=1
+    elseif ( udg_SetDifficulty == 5 ) then
+        set mutationCount=2
+    elseif ( udg_SetDifficulty == 6 ) then
+        set mutationCount=3
+    elseif ( udg_SetDifficulty == 7 ) then
+        set mutationCount=4
+    else
+        set mutationCount=0
+    endif
+
+    loop
+        exitwhen mutationCount == 0
+        
+        set chosenMutation=GetRandomInt(1, availableMutations)
+        call TriggerExecute(mutationTriggers[chosenMutation])
+
+        set mutationTriggers[chosenMutation]=mutationTriggers[availableMutations]
+        set availableMutations=availableMutations - 1
+
+        set mutationCount=mutationCount - 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_MythicAddRandom takes nothing returns nothing
+    set gg_trg_MythicAddRandom=CreateTrigger()
+    call TriggerAddAction(gg_trg_MythicAddRandom, function MythicAddRandom)
+endfunction
+//===========================================================================
+// Trigger: Mythic1Boots
+//===========================================================================
+function Trig_Mythic1Boots_Func002A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A07S', GetLastCreatedUnit())
+endfunction
+
+function Trig_Mythic1Boots_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4429")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic1Boots_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic1Boots takes nothing returns nothing
+    set gg_trg_Mythic1Boots=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic1Boots)
+    call TriggerAddAction(gg_trg_Mythic1Boots, function Trig_Mythic1Boots_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic2Vampiric
+//===========================================================================
+function Trig_Mythic2Vampiric_Func002A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A07T', GetLastCreatedUnit())
+endfunction
+
+function Trig_Mythic2Vampiric_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4437")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic2Vampiric_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic2Vampiric takes nothing returns nothing
+    set gg_trg_Mythic2Vampiric=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic2Vampiric)
+    call TriggerAddAction(gg_trg_Mythic2Vampiric, function Trig_Mythic2Vampiric_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic3Tiranic
+//===========================================================================
+function Trig_Mythic3Tiranic_Func002A takes nothing returns nothing
+    call SetPlayerHandicapBJ(GetEnumPlayer(), 130.00)
+endfunction
+
+function Trig_Mythic3Tiranic_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4451")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic3Tiranic_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic3Tiranic takes nothing returns nothing
+    set gg_trg_Mythic3Tiranic=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic3Tiranic)
+    call TriggerAddAction(gg_trg_Mythic3Tiranic, function Trig_Mythic3Tiranic_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic4Fortified
+//===========================================================================
+function Trig_Mythic4Fortified_Func002A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A07U', GetLastCreatedUnit())
+endfunction
+
+function Trig_Mythic4Fortified_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4452")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic4Fortified_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic4Fortified takes nothing returns nothing
+    set gg_trg_Mythic4Fortified=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic4Fortified)
+    call TriggerAddAction(gg_trg_Mythic4Fortified, function Trig_Mythic4Fortified_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic5Thorns
+//===========================================================================
+function Trig_Mythic5Thorns_Func002A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A07V', GetLastCreatedUnit())
+endfunction
+
+function Trig_Mythic5Thorns_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4453")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic5Thorns_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic5Thorns takes nothing returns nothing
+    set gg_trg_Mythic5Thorns=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic5Thorns)
+    call TriggerAddAction(gg_trg_Mythic5Thorns, function Trig_Mythic5Thorns_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic6Brilliance
+//===========================================================================
+function Trig_Mythic6Brilliance_Func002A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A07W', GetLastCreatedUnit())
+endfunction
+
+function Trig_Mythic6Brilliance_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4454")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic6Brilliance_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic6Brilliance takes nothing returns nothing
+    set gg_trg_Mythic6Brilliance=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic6Brilliance)
+    call TriggerAddAction(gg_trg_Mythic6Brilliance, function Trig_Mythic6Brilliance_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic7Shadow
+//===========================================================================
+function Trig_Mythic7Shadow_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4455")
+    call EnableTrigger(gg_trg_Mythic7ShadowAdd)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic7Shadow takes nothing returns nothing
+    set gg_trg_Mythic7Shadow=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic7Shadow)
+    call TriggerAddAction(gg_trg_Mythic7Shadow, function Trig_Mythic7Shadow_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Mythic7ShadowAdd
+//===========================================================================
+function Trig_Mythic7ShadowAdd_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('Apiv', GetEnumUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Mythic7ShadowAdd_Func002Func001A takes nothing returns nothing
+    if ( Trig_Mythic7ShadowAdd_Func002Func001Func001C() ) then
+        call UnitAddAbilityBJ('Apiv', GetEnumUnit())
+    else
+        call DoNothing()
+    endif
+endfunction
+
+function Trig_Mythic7ShadowAdd_Func002A takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_Mythic7ShadowAdd_Func002Func001A)
+endfunction
+
+function Trig_Mythic7ShadowAdd_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic7ShadowAdd_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_Mythic7ShadowAdd takes nothing returns nothing
+    set gg_trg_Mythic7ShadowAdd=CreateTrigger()
+    call DisableTrigger(gg_trg_Mythic7ShadowAdd)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_Mythic7ShadowAdd, 1.00)
+    call TriggerAddAction(gg_trg_Mythic7ShadowAdd, function Trig_Mythic7ShadowAdd_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: SetDifficulty
 //
 // Difficulty selection system from the arithmetic average selection of all players (24)
@@ -6890,6 +7118,8 @@ function Trig_SetDifficultyGame_Actions takes nothing returns nothing
     
     call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, ( "Difficulty level selected: " + nameMode[udg_SetDifficulty] + "!" ))
     
+    // mythic mode execute
+    call TriggerExecute(gg_trg_MythicAddRandom)
     // IniUnitsBuilding
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
     call TriggerExecute(gg_trg_SetUpgradeList)
@@ -6901,32 +7131,6 @@ function InitTrig_SetDifficultyGame takes nothing returns nothing
     call TriggerRegisterTimerEvent(gg_trg_SetDifficultyGame, 40.00, false)
     call TriggerAddAction(gg_trg_SetDifficultyGame, function Trig_SetDifficultyGame_Actions)
 endfunction
-//===========================================================================
-// Trigger: AddRandomMutations
-//===========================================================================
-function Trig_AddRandomMutations_Func001C takes nothing returns boolean
-    if ( not ( udg_SetDifficulty >= 4 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_AddRandomMutations_Actions takes nothing returns nothing
-    if ( Trig_AddRandomMutations_Func001C() ) then
-        call CreateNUnitsAtLoc(1, 'u004', Player(4), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
-        call UnitAddAbilityBJ('A07S', GetLastCreatedUnit())
-        call CreateNUnitsAtLoc(1, 'u004', Player(5), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
-        call UnitAddAbilityBJ('A07S', GetLastCreatedUnit())
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_AddRandomMutations takes nothing returns nothing
-    set gg_trg_AddRandomMutations=CreateTrigger()
-    call TriggerAddAction(gg_trg_AddRandomMutations, function Trig_AddRandomMutations_Actions)
-endfunction
-
 //===========================================================================
 // Trigger: SetAIRace
 //
@@ -10549,9 +10753,17 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallElementalDestruction()
     call InitTrig_ThrallNextPage()
     call InitTrig_ThrallElementalUpg()
+    call InitTrig_MythicAddRandom()
+    call InitTrig_Mythic1Boots()
+    call InitTrig_Mythic2Vampiric()
+    call InitTrig_Mythic3Tiranic()
+    call InitTrig_Mythic4Fortified()
+    call InitTrig_Mythic5Thorns()
+    call InitTrig_Mythic6Brilliance()
+    call InitTrig_Mythic7Shadow()
+    call InitTrig_Mythic7ShadowAdd()
     call InitTrig_SetDifficulty()
     call InitTrig_SetDifficultyGame()
-    call InitTrig_AddRandomMutations()
     call InitTrig_SetAIRace()
     call InitTrig_AddUnitBuildingHero()
     call InitTrig_SetUpgradeList()
@@ -10772,10 +10984,10 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("FrameLoader__init_function")
-call ExecuteFunc("REFORGEDUIMAKER__init")
-call ExecuteFunc("THRALLUI__init")
-call ExecuteFunc("CustomConsoleUI__init_function")
+call ExecuteFunc("FrameLoader___init_function")
+call ExecuteFunc("REFORGEDUIMAKER___init")
+call ExecuteFunc("THRALLUI___init")
+call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
