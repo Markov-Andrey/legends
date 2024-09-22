@@ -1,9 +1,9 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -13,18 +13,18 @@ constant boolean LIBRARY_THRALLUI=true
 //endglobals from THRALLUI
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
         // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
+constant boolean CustomConsoleUI__workerFace= true
 //endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
@@ -78,8 +78,6 @@ integer udg_CountGroup3= 0
 group array udg_UnitGroupArray3
 integer udg_WaveComplete= 0
 integer array udg_SetPlayerDifficulty
-integer udg_PlayerCount= 0
-integer udg_PlayerChoise= 0
 integer udg_SetDifficulty= 0
 integer udg_EnemyHeroLevel= 0
 integer array udg_CurrentZone1
@@ -192,7 +190,6 @@ trigger gg_trg_ThrallCounterstrikeTotemCrutch= null
 trigger gg_trg_ThrallElementalDestruction= null
 trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
-trigger gg_trg_PlayerCount= null
 trigger gg_trg_SetDifficulty= null
 trigger gg_trg_SetAIRace= null
 trigger gg_trg_AddUnitBuildingHero= null
@@ -260,6 +257,8 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_SetDifficultyGame= null
+trigger gg_trg_AddRandomMutations= null
 
     // Random Groups
 integer array gg_rg_000
@@ -282,24 +281,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -359,15 +358,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -399,8 +398,8 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
@@ -419,7 +418,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -430,7 +429,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -450,10 +449,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -466,18 +465,18 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -498,19 +497,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -630,11 +629,11 @@ endglobals
         set CustomConsoleUI_x[index]=0.0004
         set CustomConsoleUI_y[index]=0.0
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -757,8 +756,6 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
-    set udg_PlayerCount=0
-    set udg_PlayerChoise=0
     set udg_SetDifficulty=0
     set udg_EnemyHeroLevel=0
     set i=0
@@ -6729,45 +6726,11 @@ function InitTrig_ThrallElementalUpg takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: PlayerCount
-//===========================================================================
-function Trig_PlayerCount_Func003Func001C takes nothing returns boolean
-    if ( not ( GetPlayerController(ConvertedPlayer(GetForLoopIndexA())) == MAP_CONTROL_USER ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerSlotState(ConvertedPlayer(GetForLoopIndexA())) == PLAYER_SLOT_STATE_PLAYING ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PlayerCount_Actions takes nothing returns nothing
-    set udg_PlayerChoise=0
-    set udg_PlayerCount=0
-    set bj_forLoopAIndex=1
-    set bj_forLoopAIndexEnd=24
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        if ( Trig_PlayerCount_Func003Func001C() ) then
-            set udg_PlayerCount=( udg_PlayerCount + 1 )
-        else
-        endif
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
-endfunction
-
-//===========================================================================
-function InitTrig_PlayerCount takes nothing returns nothing
-    set gg_trg_PlayerCount=CreateTrigger()
-    call TriggerAddAction(gg_trg_PlayerCount, function Trig_PlayerCount_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: SetDifficulty
 //
 // Difficulty selection system from the arithmetic average selection of all players (24)
 //===========================================================================
-function Trig_SetDifficulty_Func023C takes nothing returns boolean
+function Trig_SetDifficulty_Func014C takes nothing returns boolean
     if ( ( GetSpellAbilityId() == 'A003' ) ) then
         return true
     endif
@@ -6780,11 +6743,20 @@ function Trig_SetDifficulty_Func023C takes nothing returns boolean
     if ( ( GetSpellAbilityId() == 'A010' ) ) then
         return true
     endif
+    if ( ( GetSpellAbilityId() == 'A06E' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A06J' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A06K' ) ) then
+        return true
+    endif
     return false
 endfunction
 
 function Trig_SetDifficulty_Conditions takes nothing returns boolean
-    if ( not Trig_SetDifficulty_Func023C() ) then
+    if ( not Trig_SetDifficulty_Func014C() ) then
         return false
     endif
     return true
@@ -6818,25 +6790,22 @@ function Trig_SetDifficulty_Func005C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_SetDifficulty_Func014Func001Func001Func001C takes nothing returns boolean
-    if ( not ( GetPlayerController(ConvertedPlayer(GetForLoopIndexA())) == MAP_CONTROL_USER ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerSlotState(ConvertedPlayer(GetForLoopIndexA())) == PLAYER_SLOT_STATE_PLAYING ) ) then
+function Trig_SetDifficulty_Func006C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A06E' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_SetDifficulty_Func014Func001Func001C takes nothing returns boolean
-    if ( not Trig_SetDifficulty_Func014Func001Func001Func001C() ) then
+function Trig_SetDifficulty_Func007C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A06J' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_SetDifficulty_Func014C takes nothing returns boolean
-    if ( not ( udg_PlayerChoise == udg_PlayerCount ) ) then
+function Trig_SetDifficulty_Func008C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A06K' ) ) then
         return false
     endif
     return true
@@ -6860,35 +6829,23 @@ function Trig_SetDifficulty_Actions takes nothing returns nothing
         set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=4
     else
     endif
+    if ( Trig_SetDifficulty_Func006C() ) then
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=5
+    else
+    endif
+    if ( Trig_SetDifficulty_Func007C() ) then
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=6
+    else
+    endif
+    if ( Trig_SetDifficulty_Func008C() ) then
+        set udg_SetPlayerDifficulty[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=7
+    else
+    endif
     // Made a choice
-    set udg_SetDifficulty=( udg_SetDifficulty / udg_PlayerCount )
-    set udg_PlayerChoise=( udg_PlayerChoise + 1 )
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), 225.00)
     call RemoveUnit(GetSpellAbilityUnit())
     call SelectUnitForPlayerSingle(GetLastCreatedUnit(), GetOwningPlayer(GetSpellAbilityUnit()))
-    // Everyone player made a choice
-    if ( Trig_SetDifficulty_Func014C() ) then
-        set bj_forLoopAIndex=1
-        set bj_forLoopAIndexEnd=24
-        loop
-            exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-            if ( Trig_SetDifficulty_Func014Func001Func001C() ) then
-                set udg_SetDifficulty=( udg_SetDifficulty + udg_SetPlayerDifficulty[GetForLoopIndexA()] )
-            else
-            endif
-            set bj_forLoopAIndex=bj_forLoopAIndex + 1
-        endloop
-    else
-    endif
-    set udg_SetDifficulty=( udg_SetDifficulty / udg_PlayerCount )
-    // Console Log
-    set udg_ConsoleTrigger="SetDifficulty"
-    set udg_ConsoleMessage=I2S(udg_SetDifficulty)
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    // Инициазация создания юнитов
-    call ConditionalTriggerExecute(gg_trg_AddUnitBuildingHero)
-    call ConditionalTriggerExecute(gg_trg_SetUpgradeList)
 endfunction
 
 //===========================================================================
@@ -6897,6 +6854,77 @@ function InitTrig_SetDifficulty takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_SetDifficulty, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_SetDifficulty, Condition(function Trig_SetDifficulty_Conditions))
     call TriggerAddAction(gg_trg_SetDifficulty, function Trig_SetDifficulty_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: SetDifficultyGame
+//===========================================================================
+function Trig_SetDifficultyGame_Actions takes nothing returns nothing
+    local string array nameMode
+    // Easy
+    set nameMode[1]="Easy"
+    set nameMode[2]="Normal"
+    set nameMode[3]="Hard"
+    set nameMode[4]="|cFF00C850Mythic+|R"
+    set nameMode[5]="|cFF007AE6Mythic+2|R"
+    set nameMode[6]="|cFF9364FFMythic+3|R"
+    set nameMode[7]="|cFFFFA200Mythic+4|R"
+    
+    // Set the initial value to impossible (for comparison)
+    set udg_SetDifficulty=999
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=24
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        if ( udg_SetPlayerDifficulty[bj_forLoopAIndex] > 0 ) then
+            if ( udg_SetPlayerDifficulty[bj_forLoopAIndex] < udg_SetDifficulty ) then
+                set udg_SetDifficulty=udg_SetPlayerDifficulty[bj_forLoopAIndex]
+            endif
+        endif
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    
+    if ( udg_SetDifficulty == 999 ) then
+        set udg_SetDifficulty=1
+    endif
+    
+    call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, ( "Difficulty level selected: " + nameMode[udg_SetDifficulty] + "!" ))
+    
+    // IniUnitsBuilding
+    call TriggerExecute(gg_trg_AddUnitBuildingHero)
+    call TriggerExecute(gg_trg_SetUpgradeList)
+endfunction
+
+//===========================================================================
+function InitTrig_SetDifficultyGame takes nothing returns nothing
+    set gg_trg_SetDifficultyGame=CreateTrigger()
+    call TriggerRegisterTimerEvent(gg_trg_SetDifficultyGame, 40.00, false)
+    call TriggerAddAction(gg_trg_SetDifficultyGame, function Trig_SetDifficultyGame_Actions)
+endfunction
+//===========================================================================
+// Trigger: AddRandomMutations
+//===========================================================================
+function Trig_AddRandomMutations_Func001C takes nothing returns boolean
+    if ( not ( udg_SetDifficulty >= 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_AddRandomMutations_Actions takes nothing returns nothing
+    if ( Trig_AddRandomMutations_Func001C() ) then
+        call CreateNUnitsAtLoc(1, 'u004', Player(4), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+        call UnitAddAbilityBJ('A07S', GetLastCreatedUnit())
+        call CreateNUnitsAtLoc(1, 'u004', Player(5), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+        call UnitAddAbilityBJ('A07S', GetLastCreatedUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_AddRandomMutations takes nothing returns nothing
+    set gg_trg_AddRandomMutations=CreateTrigger()
+    call TriggerAddAction(gg_trg_AddRandomMutations, function Trig_AddRandomMutations_Actions)
 endfunction
 
 //===========================================================================
@@ -10521,8 +10549,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallElementalDestruction()
     call InitTrig_ThrallNextPage()
     call InitTrig_ThrallElementalUpg()
-    call InitTrig_PlayerCount()
     call InitTrig_SetDifficulty()
+    call InitTrig_SetDifficultyGame()
+    call InitTrig_AddRandomMutations()
     call InitTrig_SetAIRace()
     call InitTrig_AddUnitBuildingHero()
     call InitTrig_SetUpgradeList()
@@ -10595,7 +10624,6 @@ endfunction
 function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_StartResouces)
     call ConditionalTriggerExecute(gg_trg_LimitUnits)
-    call ConditionalTriggerExecute(gg_trg_PlayerCount)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_AlteracInitialization)
     call ConditionalTriggerExecute(gg_trg_NPCInitialization)
@@ -10744,10 +10772,10 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()

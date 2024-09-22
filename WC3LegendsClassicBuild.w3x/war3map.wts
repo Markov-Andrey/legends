@@ -11187,14 +11187,6 @@ STRING 4026
 Difficulty level with random difficulty modifications +3.
 }
 
-STRING 4027
-// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Ubertip (Tooltip - Normal - Extended)
-{
-|cFFFF5800You are not Prepared!!|r
-
-Difficulty level with random difficulty modifications +4.
-}
-
 STRING 4042
 // Abilities: A06N ([Thrall] Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
 {
@@ -12935,5 +12927,49 @@ STRING 4420
 |cFF00C850- Totems|R - Place totems across the battlefield within your line of sight and draw upon their ancient power.
 |cFF00C850- Four Totem Modes|R - Only one active mode at a time! Switching modes changes all totems to the selected element (Fire, Air, Water, or Earth), adapting to the battlefield.
 |cFF00C850- Amulets|R - Your forces possess adaptive enhancements, though each unit type can only be upgraded with one specialized amulet, forging a unique advantage in combat.
+}
+
+STRING 4422
+// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF5800You are not Prepared!!!|r
+
+Difficulty level with random difficulty modifications +4.
+}
+
+STRING 4423
+// Abilities: A07S ([Mythic] Boots of Speed), Name (Name)
+{
+[Mythic] Boots of Speed
+}
+
+STRING 4424
+// Abilities: A07S ([Mythic] Boots of Speed), Tip (Tooltip - Normal)
+{
+Boots of Speed
+}
+
+STRING 4425
+// Abilities: A07S ([Mythic] Boots of Speed), Ubertip (Tooltip - Normal - Extended)
+{
++50% speed
+}
+
+STRING 4426
+// Buffs/Effects: B019 ([Mythic] Boots of Speed), EditorName (Name (Editor Only))
+{
+[Mythic] Boots of Speed
+}
+
+STRING 4427
+// Buffs/Effects: B019 ([Mythic] Boots of Speed), Bufftip (Tooltip)
+{
+Boots of Speed
+}
+
+STRING 4428
+// Buffs/Effects: B019 ([Mythic] Boots of Speed), Buffubertip (Tooltip - Extended)
+{
+Mythic effect; it has an increased movement speed.
 }
 
