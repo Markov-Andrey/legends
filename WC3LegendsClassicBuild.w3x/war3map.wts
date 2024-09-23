@@ -2838,19 +2838,19 @@ Build Brotherhood Armory
 }
 
 STRING 1912
-// Abilities: A009 ([Uther] Rapid Fire), Name (Name)
+// Abilities: A07Y ([Uther] Rapid Fire), Name (Name)
 {
 [Uther] Rapid Fire
 }
 
 STRING 1913
-// Buffs/Effects: B005 ([Uther] Rapid Fire), Bufftip (Tooltip)
+// Abilities: A07Z ([Uther] Rapid Fire), Tip (Tooltip - Normal)
 {
 Rapid Fire
 }
 
 STRING 1925
-// Buffs/Effects: B005 ([Uther] Rapid Fire), EditorName (Name (Editor Only))
+// Abilities: A07Z ([Uther] Rapid Fire), Name (Name)
 {
 [Uther] Rapid Fire
 }
@@ -2868,7 +2868,7 @@ No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
 
 STRING 1928
-// Units: h00K ([Uther] Rifleman), Casterupgradename (Caster Upgrade Names)
+// Units: h00K ([Uther] Shotgunman), Casterupgradename (Caster Upgrade Names)
 {
 No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
 }
@@ -3391,12 +3391,6 @@ STRING 2045
 Research Exorcism
 }
 
-STRING 2048
-// Abilities: A02V ([Uther] Exorcism), Ubertip (Tooltip - Normal - Extended)
-{
-This tower's attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
-}
-
 STRING 2050
 // Units: h00N ([Uther] Gryphon Knight), Tip (Tooltip - Basic)
 {
@@ -3542,22 +3536,6 @@ STRING 2081
 - Repentance,- Repentance|n- Dispel Magic,- Repentance|n- Dispel Magic|n- Trail of Light
 }
 
-STRING 2082
-// Units: h005 ([Uther] Protector), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee
-|R
-Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 2083
-// Units: h00W ([Uther] Knight-Paladin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee
-|R
-Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 2084
 // Units: h00J ([Uther] Cleric), Ubertip (Tooltip - Extended)
 {
@@ -3573,19 +3551,11 @@ Train Cleric
 }
 
 STRING 2086
-// Units: h00K ([Uther] Rifleman), Ubertip (Tooltip - Extended)
+// Units: h019 ([Wrynn] Rifleman), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged
 |R
 Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 2087
-// Units: h00O ([Uther] Pilgrim), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#worker #builder
-|R
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
 }
 
 STRING 2088
@@ -3908,12 +3878,6 @@ STRING 2171
 // Units: h00J ([Uther] Cleric), Name (Name)
 {
 [Uther] Cleric
-}
-
-STRING 2172
-// Units: h00K ([Uther] Rifleman), Name (Name)
-{
-[Uther] Rifleman
 }
 
 STRING 2173
@@ -6876,7 +6840,7 @@ STRING 3020
 }
 
 STRING 3021
-// Upgrades: R000 (Long Rifles), Name (Name)
+// Abilities: A009 ([Uther] Rapid Fire), Name (Name)
 {
 [Uther] Rapid Fire
 }
@@ -7681,38 +7645,6 @@ STRING 3272
 |cffffcc00#upgrades
 |R
 Contains upgrades for improved armor, weaponry and gunpowder.
-}
-
-STRING 3273
-// Units: h017 ([Wrynn] Сitizen), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#worker #builder
-|R
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 3274
-// Units: h018 ([Wrynn] Soldier), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee
-|R
-Versatile foot soldier. Can learn the Defend ability. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 3275
-// Units: h019 ([Wrynn] Rifleman), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged
-|R
-Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 3276
-// Units: h01A ([Wrynn] Cavalry), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee
-|R
-Powerful mounted warrior. Can learn Animal War Training. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 3277
@@ -13084,5 +13016,253 @@ Mythic: Brilliance
 STRING 4455
 {
 Mythic: Cloak of Shadows
+}
+
+STRING 4456
+// Abilities: A02V ([Uther] Exorcism), Ubertip (Tooltip - Normal - Extended)
+{
+Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 4457
+// Upgrades: R012 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 4458
+// Abilities: A07X ([Uther] Fortified Shield), Name (Name)
+{
+[Uther] Fortified Shield
+}
+
+STRING 4459
+// Abilities: A07X ([Uther] Fortified Shield), Tip (Tooltip - Normal)
+{
+Fortified Shield
+}
+
+STRING 4460
+// Abilities: A07X ([Uther] Fortified Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A07X,DataA1,.> additional armor to nearby friendly structures.
+}
+
+STRING 4461
+// Buffs/Effects: B01E ([Uther] Fortified Shield), Bufftip (Tooltip)
+{
+Fortified Shield
+}
+
+STRING 4462
+// Buffs/Effects: B01E ([Uther] Fortified Shield), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Fortified Shield; it has increased armor.
+}
+
+STRING 4463
+// Buffs/Effects: B01E ([Uther] Fortified Shield), EditorName (Name (Editor Only))
+{
+[Uther] Fortified Shield
+}
+
+STRING 4466
+// Units: h005 ([Uther] Protector), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Protector of the weak and defender of justice. Can learn the Mastery Defend ability.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4467
+// Units: h00W ([Uther] Knight-Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+The pride of the Silver Hand army, the light of hope! Wields the Hammer of Justice. Can learn Initiate into Paladins.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4468
+// Units: h00K ([Uther] Shotgunman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Short-range marksman with high damage output. Can gain the Rapid Fire upgrade.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4469
+// Units: h00K ([Uther] Shotgunman), Name (Name)
+{
+[Uther] Shotgunman
+}
+
+STRING 4470
+// Units: h00K ([Uther] Shotgunman), Tip (Tooltip - Basic)
+{
+Train Shotgunman
+}
+
+STRING 4471
+// Units: h00O ([Uther] Pilgrim), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Owns Fortified Shield.
+
+|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4472
+// Units: h00P ([Uther] Champion of Holy), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Powerful support paladin. Possesses the mighty Holy Aura. 
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4473
+// Units: h00Q ([Uther] Champion of Protection), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Powerful support paladin. Possesses the mighty Devotion Aura. 
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4474
+// Units: h00R ([Uther] Champion of Retribution), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Powerful support paladin. Possesses the mighty Retribution Aura.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4475
+// Units: h017 ([Wrynn] Сitizen), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Has First Aid ability.
+
+|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4476
+// Units: h018 ([Wrynn] Soldier), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Rank-and-file soldier of Stormwind. Can learn the Defend ability.
+
+|cffffcc00Attacks land units.|r
+
+|cFFFFB700Veteran|R: Battle Stance
+|cFFFFB700Veteran|R: Defensive Stance
+}
+
+STRING 4477
+// Units: h01A ([Wrynn] Cavalry), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Proud, swift cavalry of Stormwind.
+
+|cffffcc00Attacks land units.|r
+
+|cFFFFB700Veteran|R: Rear Attack
+|cFFFFB700Veteran|R: Galloping Movement
+}
+
+STRING 4478
+// Units: h01Q ([Uther] Shotgunman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Short-range marksman with high damage output. Can gain the Rapid Fire upgrade.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 4479
+// Units: h01Q ([Uther] Shotgunman), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 4480
+// Units: h01Q ([Uther] Shotgunman), Name (Name)
+{
+[Uther] Shotgunman
+}
+
+STRING 4481
+// Units: h01Q ([Uther] Shotgunman), Tip (Tooltip - Basic)
+{
+Train Shotgunman
+}
+
+STRING 4482
+// Units: h01Q ([Uther] Shotgunman), EditorSuffix (Name - Editor Suffix)
+{
+(Rapid Fire)
+}
+
+STRING 4484
+// Buffs/Effects: B005 ([Uther] Rapid Fire), EditorName (Name (Editor Only))
+{
+[Uther] Rapid Fire
+}
+
+STRING 4486
+// Abilities: A07Z ([Uther] Rapid Fire), Untip (Tooltip - Turn Off)
+{
+Rapid Fire Off
+}
+
+STRING 4487
+// Buffs/Effects: B005 ([Uther] Rapid Fire), Bufftip (Tooltip)
+{
+Rapid Fire
+}
+
+STRING 4488
+// Abilities: A07Y ([Uther] Rapid Fire), EditorSuffix (Editor Suffix)
+{
+(Ability)
+}
+
+STRING 4489
+// Abilities: A009 ([Uther] Rapid Fire), EditorSuffix (Editor Suffix)
+{
+(effect)
+}
+
+STRING 4490
+// Upgrades: R000 (Long Rifles), Name (Name)
+{
+[Uther] Rapid Fire
+}
+
+STRING 4492
+// Abilities: A07Z ([Uther] Rapid Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Shotgunman enters Rapid Fire mode, significantly increasing his attack speed. However, his movement speed is reduced, and he gains a <A07Y,DataA1>% chance to miss.
+}
+
+STRING 4493
+// Abilities: A07Z ([Uther] Rapid Fire), Unubertip (Tooltip - Turn Off - Extended)
+{
+Shotgunman exits Rapid Fire mode, restoring his movement speed, reducing attack speed to normal, and eliminating the chance to miss.
 }
 
