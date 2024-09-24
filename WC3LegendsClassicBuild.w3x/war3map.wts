@@ -2561,60 +2561,6 @@ STRING 1754
 Uther the Lightbringer
 }
 
-STRING 1755
-// Abilities: A00Q ([Uther] Divine Supervision), Name (Name)
-{
-[Uther] Divine Supervision
-}
-
-STRING 1756
-// Abilities: A00Q ([Uther] Divine Supervision), Tip (Tooltip - Normal)
-{
-Divine Supervision - [|cffffcc00Level 1|r]
-}
-
-STRING 1757
-// Abilities: A00Q ([Uther] Divine Supervision), Researchtip (Tooltip - Learn)
-{
-Learn Divine Supervision - [|cffffcc00Level %d|r]
-}
-
-STRING 1758
-// Abilities: A00Q ([Uther] Divine Supervision), Researchubertip (Tooltip - Learn - Extended)
-{
-When Divine Intervention is activated, the unit is healed. |n|n|cffffcc00Level 1|r - Heals for 30% hit points. |n|cffffcc00Level 2|r - Heals for 40% hit points. |n|cffffcc00Level 3|r - Heals for 50% hit points. 
-}
-
-STRING 1759
-// Abilities: A00Q ([Uther] Divine Supervision), Tip (Tooltip - Normal)
-{
-Divine Supervision - [|cffffcc00Level 2|r]
-}
-
-STRING 1760
-// Abilities: A00Q ([Uther] Divine Supervision), Tip (Tooltip - Normal)
-{
-Divine Supervision - [|cffffcc00Level 3|r]
-}
-
-STRING 1761
-// Abilities: A00Q ([Uther] Divine Supervision), Ubertip (Tooltip - Normal - Extended)
-{
-When Divine Intervention is activated, the unit is healed 30% hit points
-}
-
-STRING 1762
-// Abilities: A00Q ([Uther] Divine Supervision), Ubertip (Tooltip - Normal - Extended)
-{
-When Divine Intervention is activated, the unit is healed 40% hit points
-}
-
-STRING 1763
-// Abilities: A00Q ([Uther] Divine Supervision), Ubertip (Tooltip - Normal - Extended)
-{
-When Divine Intervention is activated, the unit is healed 50% hit points
-}
-
 STRING 1764
 // Units: H02D (Paladin), Revivetip (Tooltip - Revive)
 {
@@ -12298,22 +12244,10 @@ Gives a <A07K,DataA1>% chance that an attack will do <A07K,DataC1> bonus damage 
 |cFFFF5800Only 1 upgrade for the unit type|R - Tauren
 }
 
-STRING 4351
-// Abilities: A010 ([UI] Difficulty: Mythic (+1)), Tip (Tooltip - Normal)
-{
-Mythic (+1)
-}
-
 STRING 4352
 // Abilities: A010 ([UI] Difficulty: Mythic (+1)), Name (Name)
 {
 [UI] Difficulty: Mythic (+1)
-}
-
-STRING 4353
-// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Tip (Tooltip - Normal)
-{
-Mythic (+2)
 }
 
 STRING 4354
@@ -12322,22 +12256,10 @@ STRING 4354
 [UI] Difficulty: Mythic (+2)
 }
 
-STRING 4355
-// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Tip (Tooltip - Normal)
-{
-Mythic (+3)
-}
-
 STRING 4356
 // Abilities: A06J ([UI] Difficulty: Mythic (+3)), Name (Name)
 {
 [UI] Difficulty: Mythic (+3)
-}
-
-STRING 4357
-// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Tip (Tooltip - Normal)
-{
-Mythic (+4)
 }
 
 STRING 4358
@@ -13380,5 +13302,34 @@ STRING 4545
 // Units: u00D ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 red
+}
+
+STRING 4546
+// Abilities: A010 ([UI] Difficulty: Mythic (+1)), Tip (Tooltip - Normal)
+{
+|cFF00C976Mythic (+1)|R
+}
+
+STRING 4547
+// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Tip (Tooltip - Normal)
+{
+|cFF00A5F5Mythic (+2)|R
+}
+
+STRING 4548
+// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Tip (Tooltip - Normal)
+{
+|cFF9B73E6Mythic (+3)|R
+}
+
+STRING 4549
+// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Tip (Tooltip - Normal)
+{
+|cFFFFA539Mythic (+4)|R
+}
+
+STRING 4550
+{
++
 }
 

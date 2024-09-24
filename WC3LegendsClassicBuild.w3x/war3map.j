@@ -95,6 +95,11 @@ integer udg_ThrallTotems= 0
 trigger array udg_MythicList
 player udg_MythicEnemy= null
 real udg_MythicRandom= 0
+integer udg_CountHorse1= 0
+integer udg_CountHorse2= 0
+integer udg_CountHorse3= 0
+integer udg_CountHorse4= 0
+integer udg_CountHorse5= 0
 
     // Generated
 camerasetup gg_cam_StartView= null
@@ -231,7 +236,6 @@ trigger gg_trg_IniZone= null
 trigger gg_trg_AlternateMovement= null
 trigger gg_trg_UnitGroupDead= null
 trigger gg_trg_MainQuest= null
-trigger gg_trg_WaveComplete= null
 trigger gg_trg_LastWaveComplete= null
 trigger gg_trg_DefeatCondition= null
 trigger gg_trg_Defeat= null
@@ -271,6 +275,10 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_Wave2Complete= null
+trigger gg_trg_Wave3Complete= null
+trigger gg_trg_Wave4Complete= null
+trigger gg_trg_Wave1Complete= null
 
     // Random Groups
 integer array gg_rg_000
@@ -805,6 +813,11 @@ function InitGlobals takes nothing returns nothing
     set udg_ThrallTotems=0
     set udg_MythicEnemy=Player(5)
     set udg_MythicRandom=0
+    set udg_CountHorse1=2
+    set udg_CountHorse2=3
+    set udg_CountHorse3=8
+    set udg_CountHorse4=8
+    set udg_CountHorse5=5
 endfunction
 
 //***************************************************************************
@@ -7999,7 +8012,7 @@ function Trig_WinFireworks_Actions takes nothing returns nothing
     local real delay
     local integer i
 
-    set unitCount=5 + ( udg_SetDifficulty * 5 )
+    set unitCount=5 + ( udg_SetDifficulty * 3 )
 
     set i=0
     loop
@@ -8044,7 +8057,7 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     // Quest Start
     call EnableTrigger(gg_trg_MainQuest)
     // Quest Win
-    call EnableTrigger(gg_trg_WaveComplete)
+    call EnableTrigger(gg_trg_Wave1Complete)
     // LastWaveComplete start in WaveComplete
     // Quest Defeat
     call EnableTrigger(gg_trg_DefeatCondition)
@@ -8735,38 +8748,156 @@ function InitTrig_MainQuest takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: WaveComplete
+// Trigger: Wave1Complete
 //===========================================================================
-function Trig_WaveComplete_Conditions takes nothing returns boolean
+function Trig_Wave1Complete_Conditions takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h002' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WaveComplete_Func001C takes nothing returns boolean
-    if ( not ( CountLivingPlayerUnitsOfTypeId('h002', Player(4)) == 0 ) ) then
+function Trig_Wave1Complete_Func002C takes nothing returns boolean
+    if ( not ( udg_CountHorse1 > 0 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WaveComplete_Actions takes nothing returns nothing
-    if ( Trig_WaveComplete_Func001C() ) then
+function Trig_Wave1Complete_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4550")
+    if ( Trig_Wave1Complete_Func002C() ) then
+        set udg_CountHorse1=( udg_CountHorse1 - 1 )
+    else
         set udg_WaveComplete=( udg_WaveComplete + 1 )
         call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
         call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
-    else
+        call EnableTrigger(gg_trg_Wave2Complete)
+        call DisableTrigger(GetTriggeringTrigger())
     endif
 endfunction
 
 //===========================================================================
-function InitTrig_WaveComplete takes nothing returns nothing
-    set gg_trg_WaveComplete=CreateTrigger()
-    call DisableTrigger(gg_trg_WaveComplete)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_WaveComplete, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_WaveComplete, Condition(function Trig_WaveComplete_Conditions))
-    call TriggerAddAction(gg_trg_WaveComplete, function Trig_WaveComplete_Actions)
+function InitTrig_Wave1Complete takes nothing returns nothing
+    set gg_trg_Wave1Complete=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave1Complete)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Wave1Complete, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Wave1Complete, Condition(function Trig_Wave1Complete_Conditions))
+    call TriggerAddAction(gg_trg_Wave1Complete, function Trig_Wave1Complete_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Wave2Complete
+//===========================================================================
+function Trig_Wave2Complete_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h002' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Wave2Complete_Func001C takes nothing returns boolean
+    if ( not ( udg_CountHorse2 > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Wave2Complete_Actions takes nothing returns nothing
+    if ( Trig_Wave2Complete_Func001C() ) then
+        set udg_CountHorse2=( udg_CountHorse2 - 1 )
+    else
+        set udg_WaveComplete=( udg_WaveComplete + 1 )
+        call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
+        call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call EnableTrigger(gg_trg_Wave3Complete)
+        call DisableTrigger(GetTriggeringTrigger())
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Wave2Complete takes nothing returns nothing
+    set gg_trg_Wave2Complete=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave2Complete)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Wave2Complete, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Wave2Complete, Condition(function Trig_Wave2Complete_Conditions))
+    call TriggerAddAction(gg_trg_Wave2Complete, function Trig_Wave2Complete_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Wave3Complete
+//===========================================================================
+function Trig_Wave3Complete_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h002' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Wave3Complete_Func001C takes nothing returns boolean
+    if ( not ( udg_CountHorse3 > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Wave3Complete_Actions takes nothing returns nothing
+    if ( Trig_Wave3Complete_Func001C() ) then
+        set udg_CountHorse3=( udg_CountHorse3 - 1 )
+    else
+        set udg_WaveComplete=( udg_WaveComplete + 1 )
+        call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
+        call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call EnableTrigger(gg_trg_Wave4Complete)
+        call DisableTrigger(GetTriggeringTrigger())
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Wave3Complete takes nothing returns nothing
+    set gg_trg_Wave3Complete=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave3Complete)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Wave3Complete, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Wave3Complete, Condition(function Trig_Wave3Complete_Conditions))
+    call TriggerAddAction(gg_trg_Wave3Complete, function Trig_Wave3Complete_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Wave4Complete
+//===========================================================================
+function Trig_Wave4Complete_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h002' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Wave4Complete_Func001C takes nothing returns boolean
+    if ( not ( udg_CountHorse4 > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Wave4Complete_Actions takes nothing returns nothing
+    if ( Trig_Wave4Complete_Func001C() ) then
+        set udg_CountHorse4=( udg_CountHorse4 - 1 )
+    else
+        set udg_WaveComplete=( udg_WaveComplete + 1 )
+        call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
+        call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call EnableTrigger(gg_trg_LastWaveComplete)
+        call DisableTrigger(GetTriggeringTrigger())
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Wave4Complete takes nothing returns nothing
+    set gg_trg_Wave4Complete=CreateTrigger()
+    call DisableTrigger(gg_trg_Wave4Complete)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Wave4Complete, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Wave4Complete, Condition(function Trig_Wave4Complete_Conditions))
+    call TriggerAddAction(gg_trg_Wave4Complete, function Trig_Wave4Complete_Actions)
 endfunction
 
 //===========================================================================
@@ -8779,17 +8910,26 @@ function Trig_LastWaveComplete_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_LastWaveComplete_Func002C takes nothing returns boolean
-    if ( not ( CountLivingPlayerUnitsOfTypeId('h002', Player(4)) == 0 ) ) then
+function Trig_LastWaveComplete_Func001C takes nothing returns boolean
+    if ( not ( udg_CountHorse5 > 0 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_LastWaveComplete_Actions takes nothing returns nothing
-    if ( Trig_LastWaveComplete_Func002C() ) then
+    if ( Trig_LastWaveComplete_Func001C() ) then
+        set udg_CountHorse5=( udg_CountHorse5 - 1 )
+    else
+        call TriggerSleepAction(1.00)
         call ConditionalTriggerExecute(gg_trg_NPCWin)
-        call TriggerSleepAction(10.00)
+        call TriggerSleepAction(1.50)
+        call Trig_WinFireworks_Actions()
+        call TriggerSleepAction(2.00)
+        call Trig_WinFireworks_Actions()
+        call TriggerSleepAction(2.50)
+        call Trig_WinFireworks_Actions()
+        call TriggerSleepAction(3.00)
         set bj_forLoopAIndex=1
         set bj_forLoopAIndexEnd=2
         loop
@@ -8797,7 +8937,6 @@ function Trig_LastWaveComplete_Actions takes nothing returns nothing
             call CustomVictoryBJ(ConvertedPlayer(GetForLoopIndexA()), true, true)
             set bj_forLoopAIndex=bj_forLoopAIndex + 1
         endloop
-    else
     endif
 endfunction
 
@@ -8820,9 +8959,10 @@ function Trig_DefeatCondition_Func001A takes nothing returns nothing
             set udg_CurrentCountDefeat=( udg_CurrentCountDefeat + 1 )
             call DisplayTextToForce(GetPlayersAll(), ( "Missed " + ( I2S(udg_CurrentCountDefeat) + ( "/" + ( I2S(udg_MaxCountDefeat) + " caravan!" ) ) ) ))
             call TriggerExecute(gg_trg_NPCMissCaravan)
-            call TriggerExecute(gg_trg_WaveComplete)
+            call TriggerExecute(gg_trg_Wave1Complete)
         endif
         
+        call KillUnit(enterUnit)
         call RemoveUnit(enterUnit)
         
         if ( udg_CurrentCountDefeat >= udg_MaxCountDefeat ) then
@@ -8830,7 +8970,7 @@ function Trig_DefeatCondition_Func001A takes nothing returns nothing
             call TriggerExecute(gg_trg_Defeat)
             call TriggerExecute(gg_trg_NPCDefeat)
             call DisableTrigger(gg_trg_NPCMissCaravan)
-            call DisableTrigger(gg_trg_WaveComplete)
+            call DisableTrigger(gg_trg_Wave1Complete)
         endif
         
         // Checking for the last horse that successfully left
@@ -10095,7 +10235,7 @@ endfunction
 // Random Way
 // 5 caravans
 //===========================================================================
-function Trig_Wave5_Func009C takes nothing returns boolean
+function Trig_Wave5_Func007C takes nothing returns boolean
     if ( not ( udg_WaveRandomWay >= 50.00 ) ) then
         return false
     endif
@@ -10106,12 +10246,10 @@ function Trig_Wave5_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_GroupArrayReset)
     call ConditionalTriggerExecute(gg_trg_IniZone)
     call ConditionalTriggerExecute(gg_trg_NPCLastWave)
-    call EnableTrigger(gg_trg_LastWaveComplete)
-    call DisableTrigger(gg_trg_WaveComplete)
     call TriggerSleepAction(15.00)
     set udg_SetEnemy=Player(4)
     set udg_WaveRandomWay=GetRandomReal(0, 100.00)
-    if ( Trig_Wave5_Func009C() ) then
+    if ( Trig_Wave5_Func007C() ) then
         call ConditionalTriggerExecute(gg_trg_Way2Ping)
         set udg_SetZone=udg_Way2[0]
         //  
@@ -10845,7 +10983,10 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AlternateMovement()
     call InitTrig_UnitGroupDead()
     call InitTrig_MainQuest()
-    call InitTrig_WaveComplete()
+    call InitTrig_Wave1Complete()
+    call InitTrig_Wave2Complete()
+    call InitTrig_Wave3Complete()
+    call InitTrig_Wave4Complete()
     call InitTrig_LastWaveComplete()
     call InitTrig_DefeatCondition()
     call InitTrig_Defeat()
