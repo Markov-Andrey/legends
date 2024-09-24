@@ -13334,3 +13334,51 @@ STRING 4536
 Restores 3.0% mana when attacking
 }
 
+STRING 4538
+// Units: u000 ([Shared] Fireworks), Name (Name)
+{
+[Shared] Fireworks
+}
+
+STRING 4539
+// Units: u000 ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+{
+blue
+}
+
+STRING 4540
+// Units: u007 ([Shared] Fireworks), Name (Name)
+{
+[Shared] Fireworks
+}
+
+STRING 4541
+// Units: u007 ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+{
+green
+}
+
+STRING 4542
+// Units: u008 ([Shared] Fireworks), Name (Name)
+{
+[Shared] Fireworks
+}
+
+STRING 4543
+// Units: u008 ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+{
+purple
+}
+
+STRING 4544
+// Units: u00D ([Shared] Fireworks), Name (Name)
+{
+[Shared] Fireworks
+}
+
+STRING 4545
+// Units: u00D ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+{
+red
+}
+
