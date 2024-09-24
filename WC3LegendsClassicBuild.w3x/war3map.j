@@ -4057,7 +4057,7 @@ function Trig_UtherSealOfWisdom_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherSealOfWisdom_Actions takes nothing returns nothing
-    call SetUnitManaPercentBJ(GetAttacker(), ( GetUnitManaPercent(GetAttacker()) + ( I2R(GetUnitAbilityLevelSwapped('A013', GetAttacker())) + 0.50 ) ))
+    call SetUnitManaPercentBJ(GetAttacker(), ( GetUnitManaPercent(GetAttacker()) + ( I2R(GetUnitAbilityLevelSwapped('A013', GetAttacker())) + 0.00 ) ))
 endfunction
 
 //===========================================================================

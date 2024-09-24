@@ -2621,30 +2621,6 @@ STRING 1764
 Revive Uther
 }
 
-STRING 1769
-// Units: h01P ([Uther] Garrison), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack
-|R
-Primary troop production building. Trains Footmen, Riflemen and Knights. |nAlso contains the Defend, Long Rifles, and Animal War Training upgrades.
-}
-
-STRING 1770
-// Units: h02F ([Uther] Monument of Light), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#food
-|R
-Provides food, which increases the maximum number of units that can be trained.
-}
-
-STRING 1774
-// Units: h00N ([Uther] Gryphon Knight), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly
-|R
-Powerful flying creature, mounted by a Dwarven hammer-thrower. Can learn Animal War Training, and the Storm Hammers ability. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 1778
 // Units: h003 ([Uther] Lumber Mill), Ubertip (Tooltip - Extended)
 {
@@ -2654,7 +2630,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades fo
 }
 
 STRING 1779
-// Units: H00B ([Uther] Light's Hope Chapel), Ubertip (Tooltip - Extended)
+// Units: E006 ([Tyrande] Altar of Elune), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#heroes #mechanics
 |R
@@ -2662,7 +2638,7 @@ Summons Heroes. Revives slain Heroes.
 }
 
 STRING 1784
-// Units: h02O ([Uther] Scout Tower), Ubertip (Tooltip - Extended)
+// Units: h013 ([Wrynn] Scout Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -2727,12 +2703,6 @@ STRING 1797
 // Abilities: A000 ([Uther] Far Sight), Tip (Tooltip - Normal)
 {
 Far Sight
-}
-
-STRING 1798
-// Abilities: A000 ([Uther] Far Sight), Ubertip (Tooltip - Normal - Extended)
-{
-Reveals the area of the map that it is cast upon for <A000,Dur1> seconds. Also reveals invisible units.
 }
 
 STRING 1811
@@ -3053,24 +3023,6 @@ STRING 1977
 // Abilities: A013 ([Uther] Seal Of Wisdom), Tip (Tooltip - Normal)
 {
 Seal Of Wisdom - [|cffffcc00Level 3|r]
-}
-
-STRING 1978
-// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 1.5% mana when attacking
-}
-
-STRING 1979
-// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 2.5% mana when attacking
-}
-
-STRING 1980
-// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 3.5% mana when attacking
 }
 
 STRING 1981
@@ -3445,18 +3397,6 @@ STRING 2065
 [Uther] Trail of Light
 }
 
-STRING 2066
-// Abilities: A006 ([Uther] Trail of Light), Tip (Tooltip - Normal)
-{
-[Uther] Dispel Magic
-}
-
-STRING 2067
-// Abilities: A006 ([Uther] Trail of Light), Ubertip (Tooltip - Normal - Extended)
-{
-Add speed army <A006,DataA1,%>%
-}
-
 STRING 2068
 // Abilities: A002 ([Uther] Divine Shield), Tip (Tooltip - Normal)
 {
@@ -3484,7 +3424,7 @@ STRING 2071
 }
 
 STRING 2072
-// Buffs/Effects: B002 ([Uther] Trail of Light), Bufftip (Tooltip)
+// Abilities: A006 ([Uther] Trail of Light), Tip (Tooltip - Normal)
 {
 Trail of Light
 }
@@ -3536,56 +3476,16 @@ STRING 2081
 - Repentance,- Repentance|n- Dispel Magic,- Repentance|n- Dispel Magic|n- Trail of Light
 }
 
-STRING 2084
-// Units: h00J ([Uther] Cleric), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 2085
 // Units: h00J ([Uther] Cleric), Tip (Tooltip - Basic)
 {
 Train Cleric
 }
 
-STRING 2086
-// Units: h019 ([Wrynn] Rifleman), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged
-|R
-Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 2088
-// Units: h00L ([Uther] Mortar Team), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #siege
-|R
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 2089
-// Units: h000 ([Uther] Templar), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 2090
 // Units: h000 ([Uther] Templar), Tip (Tooltip - Basic)
 {
 Train Templar
-}
-
-STRING 2091
-// Units: h009 ([Uther] War Wagon), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee #siege
-|R
-Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
 }
 
 STRING 2092
@@ -3624,16 +3524,8 @@ STRING 2097
 L
 }
 
-STRING 2098
-// Units: h00A ([Uther] Cathedral), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Peasants and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
-}
-
 STRING 2099
-// Units: h00I ([Uther] Diocese), Ubertip (Tooltip - Extended)
+// Units: h00G ([Wrynn] Keep), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T2 #food #storage
 |R
@@ -3641,7 +3533,7 @@ Upgrade to Keep to enable the production of additional types of structures and u
 }
 
 STRING 2100
-// Units: h01H ([Uther] Parish), Ubertip (Tooltip - Extended)
+// Units: h00H ([Wrynn] Castle), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T3 #food #storage
 |R
@@ -7592,7 +7484,7 @@ STRING 3261
 }
 
 STRING 3263
-// Units: h00D ([Uther] Brotherhood Armory), Ubertip (Tooltip - Extended)
+// Units: h00Z ([Wrynn] Blacksmith), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#upgrades
 |R
@@ -7607,22 +7499,6 @@ STRING 3265
 Primary structure, used to train Citizen and receive gathered resources. Can be upgraded to Keep and then Castle to enable the production of additional types of structures and units.
 }
 
-STRING 3266
-// Units: h00G ([Wrynn] Keep), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T2 #food #storage
-|R
-Upgrade to Keep to enable the production of additional types of structures and units.
-}
-
-STRING 3267
-// Units: h00H ([Wrynn] Castle), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T3 #food #storage
-|R
-Upgrade to Castle to enable the production of additional types of structures and units.
-}
-
 STRING 3270
 // Units: h00X ([Wrynn] Altar of Kings), Ubertip (Tooltip - Extended)
 {
@@ -7631,118 +7507,12 @@ STRING 3270
 Summons Heroes. Revives slain Heroes.
 }
 
-STRING 3271
-// Units: h00Y ([Wrynn] Lumber Mill), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#upgrade #storage
-|R
-Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for Lumber Harvesting and Masonry.
-}
-
-STRING 3272
-// Units: h00Z ([Wrynn] Blacksmith), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#upgrades
-|R
-Contains upgrades for improved armor, weaponry and gunpowder.
-}
-
-STRING 3277
-// Units: h01B ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #siege
-|R
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 3278
-// Units: h01C ([Wrynn] Flying Machine), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly #siege
-|R
-Fast moving flying machine. Excellent at scouting, and effective against air units. Can learn the Flying Machine Bombs and Flak Cannons upgrades. |nCan see invisible units. |n|n|cffffcc00Attacks air units.|r
-}
-
-STRING 3279
-// Units: h01D ([Wrynn] Priest), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-|cFF24BBFF"Arrived straight from Northshire Abbey."|r
-
-Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Portal to Stormwind. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 3280
-// Units: h01E ([Wrynn] Sorceress), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 3281
-// Units: h01G ([Wrynn] Skyfire Gunship), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly #siege
-|R
-Fast moving flying machine. Excellent at scouting, and effective against air units. Can learn the Flying Machine Bombs and Flak Cannons upgrades. |nCan see invisible units. |n|n|cffffcc00Attacks air units.|r
-}
-
-STRING 3282
-// Units: h02L ([Uther] Abbey), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
-}
-
-STRING 3283
-// Units: h02N ([Uther] Aviary), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Trains Gryphon Riders, and Dragonhawk Riders. |nAlso contains the Storm Hammers and Cloud upgrades.
-}
-
 STRING 3284
 // Units: h00C ([Uther] Light Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard #support
 |R
 Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
-}
-
-STRING 3285
-// Units: h00E ([Uther] Workshop), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Produces Siege Engines, Flying Machines, and Mortar Teams. |nAlso contains the Flare, Fragmentation Shards, Barrage, Flying Machine Bombs, and Flak Cannons upgrades.
-}
-
-STRING 3286
-// Units: h010 ([Wrynn] Workshop), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Produces Siege Engines, Flying Machines, and Mortar Teams. |nAlso contains the Flare, Fragmentation Shards, Barrage, Flying Machine Bombs, and Flak Cannons upgrades.
-}
-
-STRING 3287
-// Units: h011 ([Wrynn] Mage Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Trains Priests, Sorceresses, and Spellbreakers. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
-}
-
-STRING 3288
-// Units: h013 ([Wrynn] Scout Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, an Arcane Tower, or a Cannon Tower. Can learn the Magic Sentry ability.
 }
 
 STRING 3289
@@ -7759,14 +7529,6 @@ STRING 3290
 |cffffcc00#guard
 |R
 Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 3291
-// Units: h01I ([Wrynn] Bank of Stormwind), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#income
-|R
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Hall has (Town Hall, Keep, or Castle) and which buildings you have.
 }
 
 STRING 3298
@@ -8341,14 +8103,6 @@ STRING 3454
 Train Cannoneer
 }
 
-STRING 3455
-// Units: h01F ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #siege
-|R
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
 STRING 3456
 // Abilities: A04Z ([Wrynn] Veteran: Brave's Spyglass), EditorSuffix (Editor Suffix)
 {
@@ -8371,14 +8125,6 @@ STRING 3462
 // Units: h01K ([Wrynn] Cannoneer), Tip (Tooltip - Basic)
 {
 Train Cannoneer
-}
-
-STRING 3463
-// Units: h01K ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #siege
-|R
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Flare abilities. |n|n|cffffcc00Attacks land units and trees.|r
 }
 
 STRING 3466
@@ -8733,12 +8479,6 @@ STRING 3533
 // Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), Tip (Tooltip - Normal)
 {
 |cFFFFB700Veteran|R: Adept of Chronomancy
-}
-
-STRING 3535
-// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), EditorSuffix (Editor Suffix)
-{
-(Skyfire)
 }
 
 STRING 3536
@@ -9111,14 +8851,6 @@ STRING 3602
 // Abilities: A00M ([UI] Mechanics: Wrynn), Tip (Tooltip - Normal)
 {
 |cFF00B0FFMechanics|R
-}
-
-STRING 3605
-// Units: h00M ([Wrynn] Barracks), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack
-|R
-Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
 }
 
 STRING 3606
@@ -10487,14 +10219,6 @@ STRING 3875
 |cffffcc00#food #support
 |R
 Provides food, which increases the maximum number of units that can be trained. Has the Replenish Mana and Life ability. Can gain the Well Spring upgrade. Regenerates mana at night.
-}
-
-STRING 3876
-// Units: E006 ([Tyrande] Altar of Elune), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#heroes #mechanics
-|R
-Summons Heroes. Revives slain Heroes.
 }
 
 STRING 3877
@@ -13264,5 +12988,349 @@ STRING 4493
 // Abilities: A07Z ([Uther] Rapid Fire), Unubertip (Tooltip - Turn Off - Extended)
 {
 Shotgunman exits Rapid Fire mode, restoring his movement speed, reducing attack speed to normal, and eliminating the chance to miss.
+}
+
+STRING 4494
+// Units: h00L ([Uther] Mortar Team), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weapon. Deals exceptional damage to buildings but is slow and vulnerable. Can learn the Holy Bomb ability. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4495
+// Units: h019 ([Wrynn] Rifleman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Highly skilled sharpshooter, effective against air units. Can gain the Long Rifles upgrade. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFFFFB700Veteran|R: Aspect of the Cheetah
+|cFFFFB700Veteran|R: Aspect of the Hawk
+}
+
+STRING 4496
+// Units: h01B ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. |n|n|cffffcc00Attacks land units and trees.|r
+
+|cFFFFB700Veteran|R: Tactical Strike
+|cFFFFB700Veteran|R: Brave's Spyglass
+}
+
+STRING 4497
+// Units: h01C ([Wrynn] Flying Machine), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #siege
+|R
+Fast moving flying machine. Excellent at scouting, and effective against air units. Can learn the Flying Machine Bombs and Flak Cannons upgrades. |nCan see invisible units. |n|n|cffffcc00Attacks air units.|r
+
+|cFFFFB700Veteran|R: Multi-barreled Gun
+|cFFFFB700Veteran|R: Explosive Mixture
+}
+
+STRING 4498
+// Units: h00A ([Uther] Cathedral), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
+}
+
+STRING 4499
+// Units: h00I ([Uther] Diocese), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Diocese to enable the production of additional types of structures and units.
+}
+
+STRING 4500
+// Units: h01H ([Uther] Parish), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Parish to enable the production of additional types of structures and units.
+}
+
+STRING 4501
+// Units: h00J ([Uther] Cleric), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Far Sight to reveal distant areas of the map. Can also learn Liturgy to heal nearby allies over time and Inner Fire to enhance friendly units' combat abilities. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4502
+// Units: h00N ([Uther] Gryphon Knight), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+A majestic gryphon, ridden by a fearless knight of the Silver Hand. Wields sacred power and can learn the Exorcism ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4503
+// Units: h000 ([Uther] Templar), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Versatile spellcaster. Can initially cast Repentance, reducing the combat effectiveness of enemy units. Can also learn Dispel Magic to remove buffs and debuffs, and Trail of Light to heal allies as they move. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4504
+// Units: h009 ([Uther] War Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Heavily armored vehicle designed for laying waste to enemy structures. Can be upgraded with the Shake ability. |n|n|cffffcc00Attacks buildings.|r
+}
+
+STRING 4505
+// Units: h01D ([Wrynn] Priest), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+|cFF24BBFF"Arrived straight from Northshire Abbey."|r
+
+Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Dispel Magic and Portal to Stormwind. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFFFFB700Veteran|R: Doctor of Sciences
+|cFFFFB700Veteran|R: Revitalized Spirit
+}
+
+STRING 4506
+// Units: h01E ([Wrynn] Sorceress), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Versatile spellcaster. Can initially cast Slow, which decreases movement and attack speed on enemy units. Can also learn Invisibility and Polymorph. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFFFFB700Veteran|R: Tricks and Traps
+|cFFFFB700Veteran|R: Adept of Chronomancy
+}
+
+STRING 4507
+// Units: h01G ([Wrynn] Skyfire Gunship), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #siege
+|R
+The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFFFFB700Veteran|R: Throw Passenger
+|cFFFFB700Veteran|R: Gunship Cannon Fire
+}
+
+STRING 4508
+// Abilities: A000 ([Uther] Far Sight), Ubertip (Tooltip - Normal - Extended)
+{
+Reveals an area within a 1000 radius for <A000,Dur1> seconds. Also reveals invisible units.
+
+
+}
+
+STRING 4509
+// Abilities: A04R ([Wrynn] Veteran: Adept of Chronomancy), EditorSuffix (Editor Suffix)
+{
+(Sorceress)
+}
+
+STRING 4510
+// Units: h02F ([Uther] Monument of Light), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food
+|R
+Provides food, which increases the maximum number of units that can be trained. Upgrade to Mercy of the People.
+}
+
+STRING 4511
+// Units: H00B ([Uther] Light's Hope Chapel), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes #mechanics
+|R
+Summons Heroes. Revives slain Heroes. Summons Champions
+}
+
+STRING 4512
+// Units: h01P ([Uther] Garrison), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Primary troop production building. Trains Protectors, Shotgunmen, and Knight-Paladins. |nAlso contains the Mastery Defend, Rapid Fire, and Hammer of Justice upgrades.
+}
+
+STRING 4513
+// Units: h02L ([Uther] Abbey), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Cleric, Templar. |nAlso contains spell upgrades for Cleric and Templar and Champions
+}
+
+STRING 4514
+// Units: h02N ([Uther] Aviary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Gryphon Knights. |nAlso contains the Exorism upgrade.
+}
+
+STRING 4515
+// Units: h02O ([Uther] Scout Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, an Light Tower, or a Cannon Tower. Can learn the Magic Sentry ability.
+}
+
+STRING 4516
+// Units: h00D ([Uther] Brotherhood Armory), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrades
+|R
+Contains upgrades for improved armor, weaponry, gunpowder and libram.
+}
+
+STRING 4517
+// Units: h00E ([Uther] Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces War Wagon, and Mortar Teams. |nAlso contains the Shake and Holy Bomb upgrades.
+}
+
+STRING 4518
+// Units: h00M ([Wrynn] Barracks), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
+}
+
+STRING 4519
+// Units: h00Y ([Wrynn] Lumber Mill), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for Lumber Harvesting, Masonry and Bastion Reiforcement.
+}
+
+STRING 4520
+// Units: h010 ([Wrynn] Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Cannoeers, Flying Machines, and Skyfire Gunship. |nAlso contains the Flare, Flying Machine Bombs, Flak Cannons and Passenger Cabins upgrades.
+}
+
+STRING 4521
+// Units: h011 ([Wrynn] Mage Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Priests and Sorceresses. |nAlso contains spell upgrades for Priests and Sorceresses, Control Magic, and Magic Sentry.
+}
+
+STRING 4522
+// Units: h01I ([Wrynn] Bank of Stormwind), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#income
+|R
+Allows for a long-term monetary investment that generates periodic profits. Gathers income from all adjacent houses. You can monitor the account balance and withdraw the full amount at any time.
+}
+
+STRING 4523
+// Units: h01F ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. |n|n|cffffcc00Attacks land units and trees.|r
+
+|cFFFFB700Veteran|R: Tactical Strike
+|cFFFFB700Veteran|R: Brave's Spyglass
+}
+
+STRING 4524
+// Units: h01K ([Wrynn] Cannoneer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. |n|n|cffffcc00Attacks land units and trees.|r
+
+|cFFFFB700Veteran|R: Tactical Strike
+|cFFFFB700Veteran|R: Brave's Spyglass
+}
+
+STRING 4525
+// Units: H02D (Paladin), Ubertip (Tooltip - Extended)
+{
+Can learn Holy Light, Divine Shield, Seal Of Wisdom and Mass Resurrection. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4526
+// Units: O000 (King of Stormwind), Ubertip (Tooltip - Extended)
+{
+Can learn Lion's Fang, Heroic Strike, Stormwind Battlecry and Taunt. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4527
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Upgrades your Champions by enhancing their aura to level 2
+}
+
+STRING 4528
+// Upgrades: R011 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Upgrades your Champions by enhancing their aura to level 3
+}
+
+STRING 4529
+// Abilities: A00R ([Uther] Holy Flash), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a target friendly non-mechanical wounded unit for <A00R,DataA1> hit points.
+}
+
+STRING 4530
+// Upgrades: R00V (Animal War Training), Ubertip (Tooltip - Extended)
+{
+Knight-Paladins gain mana and unlock Holy Flash
+}
+
+STRING 4531
+// Abilities: A02S ([Uther] Shake), Ubertip (Tooltip - Normal - Extended)
+{
+When used on a building, temporarily stops all building activities. |nLasts <A02S,Dur1> seconds.
+}
+
+STRING 4532
+// Abilities: A006 ([Uther] Trail of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Add speed to the army <A006,DataA1,%> for <A006,Dur1> seconds.
+}
+
+STRING 4533
+// Buffs/Effects: B002 ([Uther] Trail of Light), Bufftip (Tooltip)
+{
+Trail of Light
+}
+
+STRING 4534
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 1.0% mana when attacking
+}
+
+STRING 4535
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 2.0% mana when attacking
+}
+
+STRING 4536
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 3.0% mana when attacking
 }
 
