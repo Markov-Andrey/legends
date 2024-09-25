@@ -450,12 +450,6 @@ STRING 847
 [Uther] Reload Divine Shield
 }
 
-STRING 852
-// Buffs/Effects: B00L ([Uther] Mercy of the People), Bufftip (Tooltip)
-{
-Grace of the Ancestors
-}
-
 STRING 895
 // Abilities: A014 ([Uther] Hammer of Justice), Name (Name)
 {
@@ -2507,12 +2501,6 @@ STRING 1738
 Build Aviary
 }
 
-STRING 1741
-// Buffs/Effects: B00L ([Uther] Mercy of the People), Buffubertip (Tooltip - Extended)
-{
-This unit is under the effects of Grace of the Ancestors; it has an increased hit point regeneration.
-}
-
 STRING 1747
 // Abilities: A008 ([Uther] Mass Resurrection), Name (Name)
 {
@@ -2942,7 +2930,7 @@ Income is generated once every 30 seconds during the day, amounting to 10 times 
 }
 
 STRING 1972
-// Buffs/Effects: B00L ([Uther] Mercy of the People), EditorName (Name (Editor Only))
+// Upgrades: R002 (Control Magic), Name (Name)
 {
 [Uther] Mercy of the People
 }
@@ -6621,12 +6609,6 @@ STRING 3011
 // Abilities: A03D ([Wrynn] Long Rifles), Name (Name)
 {
 [Wrynn] Long Rifles
-}
-
-STRING 3012
-// Upgrades: R002 (Control Magic), Name (Name)
-{
-[Uther] Mercy of the People
 }
 
 STRING 3013
@@ -13326,10 +13308,5 @@ STRING 4549
 // Abilities: A06K ([UI] Difficulty: Mythic (+4)), Tip (Tooltip - Normal)
 {
 |cFFFFA539Mythic (+4)|R
-}
-
-STRING 4550
-{
-+
 }
 
