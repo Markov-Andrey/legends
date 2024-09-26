@@ -5024,7 +5024,7 @@ endfunction
 // Trigger: WrynnRiflemanCheetah
 //===========================================================================
 function Trig_WrynnRiflemanCheetah_Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A041', GetEnumUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A043', GetEnumUnit()) == 1 ) ) then
         return false
     endif
     if ( not ( GetUnitCurrentOrder(GetEnumUnit()) == String2OrderIdBJ("smart") ) ) then
@@ -8768,6 +8768,7 @@ function Trig_Wave1Complete_Actions takes nothing returns nothing
         set udg_WaveComplete=( udg_WaveComplete + 1 )
         call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
         call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call TriggerSleepAction(1.00)
         call EnableTrigger(gg_trg_Wave2Complete)
         call DisableTrigger(GetTriggeringTrigger())
     endif
@@ -8806,6 +8807,7 @@ function Trig_Wave2Complete_Actions takes nothing returns nothing
         set udg_WaveComplete=( udg_WaveComplete + 1 )
         call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
         call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call TriggerSleepAction(1.00)
         call EnableTrigger(gg_trg_Wave3Complete)
         call DisableTrigger(GetTriggeringTrigger())
     endif
@@ -8844,6 +8846,7 @@ function Trig_Wave3Complete_Actions takes nothing returns nothing
         set udg_WaveComplete=( udg_WaveComplete + 1 )
         call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
         call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call TriggerSleepAction(1.00)
         call EnableTrigger(gg_trg_Wave4Complete)
         call DisableTrigger(GetTriggeringTrigger())
     endif
@@ -8882,6 +8885,7 @@ function Trig_Wave4Complete_Actions takes nothing returns nothing
         set udg_WaveComplete=( udg_WaveComplete + 1 )
         call DisplayTextToForce(GetPlayersAll(), ( "Wave " + ( I2S(udg_WaveComplete) + ( "/" + ( I2S(5) + " complete!" ) ) ) ))
         call ConditionalTriggerExecute(gg_trg_NPCCompleteWave)
+        call TriggerSleepAction(1.00)
         call EnableTrigger(gg_trg_LastWaveComplete)
         call DisableTrigger(GetTriggeringTrigger())
     endif
