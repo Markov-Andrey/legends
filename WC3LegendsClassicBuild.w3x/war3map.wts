@@ -590,18 +590,6 @@ STRING 952
 [Uther] Divine Intervention
 }
 
-STRING 958
-// Abilities: A00F (Neutral Non-combat mana), Name (Name)
-{
-Neutral Non-combat mana
-}
-
-STRING 959
-// Abilities: A00I (Neutral Non-combat health), Name (Name)
-{
-Neutral Non-combat health
-}
-
 STRING 961
 // Abilities: A00J ([Uther] Divine Intervention), Tip (Tooltip - Normal)
 {
@@ -1508,98 +1496,6 @@ STRING 1421
 
 }
 
-STRING 1434
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Higher health
-|cff6f6f6f- Higher attack speed
-- Personal vampirism|r
-}
-
-STRING 1435
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Higher health
-- Higher attack speed
-|cff6f6f6f- Personal vampirism|r
-}
-
-STRING 1436
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Higher health
-- Higher attack speed
-- Personal vampirism
-}
-
-STRING 1438
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Increased Damage
-|cff6f6f6f- Increased mana
-- Chance to freeze the target|r
-}
-
-STRING 1439
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Increased Damage
-- Increased mana
-|cff6f6f6f- Chance to freeze the target|r
-}
-
-STRING 1440
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Increased Damage
-- Increased mana
-- Chance to freeze the target
-}
-
-STRING 1442
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Spreading the plague
-|cff6f6f6f- Death brings back some of the souls
-- Death breeds plague zombies
-|r
-}
-
-STRING 1443
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Spreading the plague
-- Death brings back some of the souls
-|cff6f6f6f- Death breeds plague zombies
-|r
-}
-
-STRING 1444
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
-{
-Reforging costs - 20 souls|n
-Current rune level:
-- Spreading the plague
-- Death brings back some of the souls
-- Death breeds plague zombies
-}
-
 STRING 1455
 // Buffs/Effects: B00C ([Arthas] Blood Rage), EditorName (Name (Editor Only))
 {
@@ -2061,30 +1957,6 @@ STRING 1600
 // Upgrades: R008 (Stone Form), Name (Name)
 {
 [Arthas] Stone Form
-}
-
-STRING 1605
-// Units: u00Z ([Arthas] Ziggurat), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Food #Defense |R
-
-Provides food, which increases the maximum number of units that can be trained. Can be upgraded to a defensive structure that attacks land and air units.
-}
-
-STRING 1607
-// Units: u018 ([Arthas] Frost Tower), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Food #Defense |R
-
-Upgrade to create a defensive structure that deals cold damage and slows enemy units. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 1608
-// Units: U005 ([Arthas] Altar of Darkness), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Altar|R
-
-Summons Heroes. Revives slain Heroes.
 }
 
 STRING 1617
@@ -3350,18 +3222,6 @@ STRING 2090
 Train Templar
 }
 
-STRING 2092
-// Items: I004 (Bottled Alterac Spring Water), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|r|nRegenerates the Hero's mana by <A00F,DataB1> over <A00F,Dur1> seconds when used.
-}
-
-STRING 2093
-// Items: I005 (Alterac Manna Biscuit), Ubertip (Tooltip - Extended)
-{
-|cff87ceebNon-Combat Consumable|r|nRegenerates the Hero's mana by <A00I,DataB1> over <A00I,Dur1> seconds when used.
-}
-
 STRING 2094
 // Abilities: A00X ([Uther] Heal), Name (Name)
 {
@@ -3700,12 +3560,6 @@ STRING 2192
 // Units: u001 ([Arthas] Soul), Name (Name)
 {
 [Arthas] Soul
-}
-
-STRING 2193
-// Units: u002 ([Arthas] New tech level), Name (Name)
-{
-[Arthas] New tech level
 }
 
 STRING 2194
@@ -9344,7 +9198,7 @@ E
 }
 
 STRING 3758
-// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -10508,7 +10362,7 @@ Q
 }
 
 STRING 3998
-// Abilities: A010 ([UI] Difficulty: Mythic (+1)), Hotkey (Hotkey - Normal)
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -10568,19 +10422,19 @@ E
 }
 
 STRING 4011
-// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
+// Abilities: A010 ([UI] Difficulty: Mythic (+1)), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 4015
-// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Hotkey (Hotkey - Normal)
+// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4019
-// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -11811,19 +11665,19 @@ E
 }
 
 STRING 4307
-// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 4308
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4309
-// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13274,21 +13128,6 @@ STRING 4571
 (Ziggurat)
 }
 
-STRING 4572
-// Units: u00A ([Arthas] Acolyte), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#worker #builder
-|R
-Basic worker. Can summon structures, harvest gold, and Restore. Acolytes offer their souls to Frostmourne, and you do not receive a Shade. |n|n|cffffcc00Attacks land units.|r
-
-
-
-
-
-
-
-}
-
 STRING 4574
 // Units: u014 ([Arthas] Abomination), Ubertip (Tooltip - Extended)
 {
@@ -13381,30 +13220,6 @@ STRING 4584
 Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Pandemic Horde ability. |n|n|cffffcc00Attacks land units and trees.|r
 }
 
-STRING 4585
-// Units: u009 ([Arthas] Plague Necropolis), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Town Hall |R
-
-Primary structure, used to train Acolytes and receive lumber gathered by Ghouls. Can be upgraded to Plague Halls of the Dead and then Plague Black Citadel to enable the production of additional types of structures and units.
-}
-
-STRING 4586
-// Units: u00B ([Arthas] Plague Halls of the Dead), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Town Hall |R
-
-Upgrade to Plague Halls of the Dead to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 4587
-// Units: u00C ([Arthas] Plague Black Citadel), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Town Hall |R
-
-Upgrade to Plague Black Citadel to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 4588
 // Units: u011 ([Arthas] Crypt Fiend), Ubertip (Tooltip - Extended)
 {
@@ -13433,21 +13248,6 @@ STRING 4590
 |cFFA0FF00Reforge: 60 souls|r
 
 Flying heavy assault creature. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 4591
-// Units: u017 ([Arthas] Blood Tower), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Food #Defense |R
-
-Upgrade to create a defensive structure. Restores health when attacking. |n|n|cffffcc00Attacks land and air units.|r
-
-
-
-
-
-
-
 }
 
 STRING 4592
@@ -13522,14 +13322,6 @@ STRING 4600
 Flying heavy assault creature. Can learn the Noxious Breath ability. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 4601
-// Units: u00E ([Arthas] Unholy Tower), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Food #Defense |R
-
-Upgrade to create a defensive structure. Strongly poisons enemies when attacking. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 4602
 // Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
 {
@@ -13546,14 +13338,6 @@ STRING 4603
 |cffffcc00#barrack #upgrades
 |R
 Primary troop production building. Trains Ghouls, Crypt Fiends, and Gargoyles.
-}
-
-STRING 4604
-// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#unique #mechanics |R
-
-Provides attack and armor upgrades for units. Also produces corpses and serves as a drop-off point for harvested lumber.
 }
 
 STRING 4605
@@ -13622,5 +13406,244 @@ STRING 4613
 // Units: h00X ([Wrynn] Lion's Rest), Tip (Tooltip - Basic)
 {
 Build Lion's Rest
+}
+
+STRING 4614
+// Units: u009 ([Arthas] Plague Necropolis), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Acolytes and receive lumber gathered by Ghouls. Can be upgraded to Plague Halls of the Dead and then Plague Black Citadel to enable the production of additional types of structures and units.
+}
+
+STRING 4615
+// Units: u00A ([Arthas] Acolyte), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker. Can summon structures, harvest gold, and Restore. Acolytes offer their souls to Frostmourne, and you do not receive a Shade. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4616
+// Units: u00B ([Arthas] Plague Halls of the Dead), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Plague Halls of the Dead to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4617
+// Units: u00C ([Arthas] Plague Black Citadel), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Plague Black Citadel to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4618
+// Units: u00Z ([Arthas] Ziggurat), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #food
+|R
+Provides food, which increases the maximum number of units that can be trained. Can be upgraded to a defensive structure that attacks land and air units.
+}
+
+STRING 4619
+// Units: u017 ([Arthas] Blood Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #food #guard
+|R
+Upgrade to create a defensive structure. Restores health when attacking. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4620
+// Units: u018 ([Arthas] Frost Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #food #guard
+|R
+Upgrade to create a defensive structure that deals cold damage and slows enemy units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4621
+// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#unique #mechanics
+|R
+Provides attack and armor upgrades for units. Also produces corpses and serves as a drop-off point for harvested lumber.
+}
+
+STRING 4623
+// Units: u00E ([Arthas] Unholy Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #food #guard
+|R
+Upgrade to create a defensive structure. Strongly poisons enemies when attacking. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4624
+// Upgrades: R00G (Cannibalize), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 4625
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+{
+X
+}
+
+STRING 4626
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 4627
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 4628
+// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 4629
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Higher health
+|cff6f6f6f- Higher attack speed
+- Personal vampirism|r
+}
+
+STRING 4630
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Higher health
+- Higher attack speed
+|cff6f6f6f- Personal vampirism|r
+}
+
+STRING 4631
+// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Higher health
+- Higher attack speed
+- Personal vampirism
+}
+
+STRING 4632
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Increased Damage
+|cff6f6f6f- Increased mana
+- Chance to freeze the target|r
+}
+
+STRING 4633
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Increased Damage
+- Increased mana
+|cff6f6f6f- Chance to freeze the target|r
+}
+
+STRING 4634
+// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Increased Damage
+- Increased mana
+- Chance to freeze the target
+}
+
+STRING 4635
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Spreading the plague
+|cff6f6f6f- Death brings back some of the souls
+- Death breeds plague zombies
+|r
+}
+
+STRING 4636
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+|cff6f6f6f- Death breeds plague zombies
+|r
+}
+
+STRING 4637
+// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+{
+Current rune level:
+- Spreading the plague
+- Death brings back some of the souls
+- Death breeds plague zombies
+}
+
+STRING 4638
+// Units: u002 ([Arthas] New Rune), Name (Name)
+{
+[Arthas] New Rune
+}
+
+STRING 4639
+// Abilities: A084 ([Test] No Target Ability), Name (Name)
+{
+[Test] No Target Ability
+}
+
+STRING 4640
+// Abilities: A085 ([Arthas] Select New Rune), Name (Name)
+{
+[Arthas] Select New Rune
+}
+
+STRING 4641
+// Abilities: A085 ([Arthas] Select New Rune), Tip (Tooltip - Normal)
+{
+Select New Rune
+}
+
+STRING 4642
+// Abilities: A085 ([Arthas] Select New Rune), Ubertip (Tooltip - Normal - Extended)
+{
+New Rune Level
+}
+
+STRING 4643
+// Abilities: A00O ([Alterac] Sniper Shot), Ubertip (Tooltip - Normal - Extended)
+{
+Precise shot across the entire map that deals <A00O,DataA1> damage to a target.
+}
+
+STRING 4644
+// Items: I002 (Heartstone), Ubertip (Tooltip - Extended)
+{
+Teleports the Hero and any of its nearby troops to a target friendly town hall. Has 2 charges.
+}
+
+STRING 4645
+// Items: I004 (Bottled Alterac Spring Water), Ubertip (Tooltip - Extended)
+{
+Restores <AIm2,DataA1> mana when used.
+}
+
+STRING 4646
+// Items: I005 (Alterac Manna Biscuit), Ubertip (Tooltip - Extended)
+{
+Heals <AIh2,DataA1> hit points when used.
 }
 

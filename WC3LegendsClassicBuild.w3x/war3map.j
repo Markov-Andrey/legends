@@ -142,7 +142,6 @@ trigger gg_trg_ArthasFrostmourne= null
 trigger gg_trg_ArthasNewRuneSecond= null
 trigger gg_trg_ArthasNewRuneThree= null
 trigger gg_trg_ArthasRuneResearch= null
-trigger gg_trg_ArthasRuneCancel= null
 trigger gg_trg_ArthasAutoUpgrades= null
 trigger gg_trg_ArthasDeadUnholyLvl3= null
 trigger gg_trg_ArthasSouls= null
@@ -280,6 +279,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_CreateSpecUnitWave= null
+trigger gg_trg_ArthasSelectRune= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1646,7 +1646,7 @@ function CreateNeutralHostile takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 8937.4, 2961.2, 305.778, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1058.7, 7712.7, 305.519, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 969.7, 7629.8, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2296.3, 2511.8, 42.836, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2228.7, 2855.6, 294.263, 'nbrg')
@@ -1671,30 +1671,25 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 832.4, 7752.1, 302.558, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 739.5, 7782.9, 302.558, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 5415.2, - 369.9, 83.310, 'nwlg')
     call SetUnitAcquireRange(u, 200.0)
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1864.3, - 8710.1, 139.002, 'nmrr')
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2374.0, - 8972.9, 135.530, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1191.4, - 9011.2, 45.939, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2008.2, - 8774.1, 135.530, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 5581.6, - 218.9, 112.050, 'nwlt')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsqt', 6803.5, - 8277.3, 74.292, 'nsqt')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7595.5, 8367.0, 290.114, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nsqe', 6771.5, - 8514.3, 93.081, 'nsqe')
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 7454.5, 8802.4, 301.975, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2043.5, - 8702.0, 161.564, 'nmrr')
-    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 2236.3, - 8923.2, 122.740, 'nmrm')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1314.2, - 8843.8, 63.236, 'nmrm')
+    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1940.9, - 8916.4, 149.415, 'nmrm')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7380.1, 8607.2, 291.675, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 2005.6, - 8853.7, 122.738, 'nmrm')
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2370.2, - 8787.6, 63.661, 'nmrr')
+    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1337.6, - 8639.1, 63.661, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 9181.2, 2779.4, 305.500, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 9180.9, 3060.8, 299.400, 'nomg')
     set t=CreateTrigger()
@@ -1763,14 +1758,14 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 9015.9, - 3039.2, 210.367, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 8713.1, - 3403.7, 90.662, 'ngrk')
-    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 2161.2, - 8783.7, 103.606, 'nmrm')
+    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1831.2, - 8684.7, 135.407, 'nmrm')
     set u=BlzCreateUnitWithSkin(p, 'nsqo', 7230.8, - 8315.2, 142.265, 'nsqo')
     set u=BlzCreateUnitWithSkin(p, 'nsqa', 7051.3, - 8476.4, 115.188, 'nsqa')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000008_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1180.8, 7892.0, 305.519, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1186.6, 7723.3, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nsqt', 7047.7, - 8136.9, 143.456, 'nsqt')
     set u=BlzCreateUnitWithSkin(p, 'ngnv', 1340.3, 2953.5, 143.426, 'ngnv')
     call SetUnitAcquireRange(u, 200.0)
@@ -1786,6 +1781,12 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1164.6, 8020.7, 305.519, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nmmu', - 1599.6, - 8713.6, 72.885, 'nmmu')
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function ItemTable000009_DropItems)
 endfunction
 
 //===========================================================================
@@ -2929,7 +2930,6 @@ function Trig_ArthasIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_ArthasNewRuneSecond)
     call EnableTrigger(gg_trg_ArthasNewRuneThree)
     call EnableTrigger(gg_trg_ArthasDebugSoul)
-    call EnableTrigger(gg_trg_ArthasRuneCancel)
     call EnableTrigger(gg_trg_ArthasAutoUpgrades)
     call EnableTrigger(gg_trg_ArthasPlagueDeadCorpse)
     call EnableTrigger(gg_trg_ArthasGhoulEffect)
@@ -2968,6 +2968,28 @@ function InitTrig_ArthasFrostmourne takes nothing returns nothing
     endif
 endfunction
 
+
+//===========================================================================
+// Trigger: ArthasSelectRune
+//===========================================================================
+function Trig_ArthasSelectRune_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A085' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasSelectRune_Actions takes nothing returns nothing
+    call SelectUnitForPlayerSingle(GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'u002')), GetOwningPlayer(GetSpellAbilityUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasSelectRune takes nothing returns nothing
+    set gg_trg_ArthasSelectRune=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasSelectRune, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_ArthasSelectRune, Condition(function Trig_ArthasSelectRune_Conditions))
+    call TriggerAddAction(gg_trg_ArthasSelectRune, function Trig_ArthasSelectRune_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: ArthasNewRuneSecond
@@ -3091,45 +3113,9 @@ endfunction
 function InitTrig_ArthasRuneResearch takes nothing returns nothing
     set gg_trg_ArthasRuneResearch=CreateTrigger()
     call DisableTrigger(gg_trg_ArthasRuneResearch)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRuneResearch, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRuneResearch, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_ArthasRuneResearch, Condition(function Trig_ArthasRuneResearch_Conditions))
     call TriggerAddAction(gg_trg_ArthasRuneResearch, function Trig_ArthasRuneResearch_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: ArthasRuneCancel
-//===========================================================================
-function Trig_ArthasRuneCancel_Func002C takes nothing returns boolean
-    if ( ( GetResearched() == 'R00G' ) ) then
-        return true
-    endif
-    if ( ( GetResearched() == 'R00H' ) ) then
-        return true
-    endif
-    if ( ( GetResearched() == 'R00I' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ArthasRuneCancel_Conditions takes nothing returns boolean
-    if ( not Trig_ArthasRuneCancel_Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ArthasRuneCancel_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ArthasRuneCancel takes nothing returns nothing
-    set gg_trg_ArthasRuneCancel=CreateTrigger()
-    call DisableTrigger(gg_trg_ArthasRuneCancel)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasRuneCancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerAddCondition(gg_trg_ArthasRuneCancel, Condition(function Trig_ArthasRuneCancel_Conditions))
-    call TriggerAddAction(gg_trg_ArthasRuneCancel, function Trig_ArthasRuneCancel_Actions)
 endfunction
 
 //===========================================================================
@@ -9995,6 +9981,7 @@ function Trig_Wave1_Actions takes nothing returns nothing
         set udg_SetZone=udg_Way2[0]
         //  
         set udg_CountGroup2=1
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave1n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
@@ -10006,6 +9993,7 @@ function Trig_Wave1_Actions takes nothing returns nothing
         set udg_SetZone=udg_Way1[0]
         //  
         set udg_CountGroup1=1
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave1n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
@@ -10047,6 +10035,7 @@ function Trig_Wave2_Actions takes nothing returns nothing
         set udg_SetZone=udg_Way2[0]
         //  
         set udg_CountGroup2=1
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
@@ -10067,6 +10056,7 @@ function Trig_Wave2_Actions takes nothing returns nothing
         set udg_SetZone=udg_Way1[0]
         //  
         set udg_CountGroup1=1
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
@@ -10105,6 +10095,7 @@ function Trig_Wave3_Actions takes nothing returns nothing
     //  
     set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=1
+    call TriggerExecute(gg_trg_CreateSpecUnitWave)
     call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
@@ -10112,6 +10103,7 @@ function Trig_Wave3_Actions takes nothing returns nothing
     //  
     set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=1
+    call TriggerExecute(gg_trg_CreateSpecUnitWave)
     call TriggerExecute(gg_trg_CreateSquadWave3n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
@@ -10184,6 +10176,7 @@ function Trig_Wave4_Actions takes nothing returns nothing
     //  
     set udg_SetZone=udg_Way1[0]
     set udg_CountGroup1=1
+    call TriggerExecute(gg_trg_CreateSpecUnitWave)
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     //  
@@ -10191,6 +10184,7 @@ function Trig_Wave4_Actions takes nothing returns nothing
     //  
     set udg_SetZone=udg_Way2[0]
     set udg_CountGroup2=1
+    call TriggerExecute(gg_trg_CreateSpecUnitWave)
     call TriggerExecute(gg_trg_CreateSquadWave2n1)
     call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     //  
@@ -10272,6 +10266,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         set udg_SetZone=udg_Way2[0]
         //  
         set udg_CountGroup2=1
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
@@ -10280,6 +10275,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave5n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
@@ -10288,6 +10284,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
         call TriggerSleepAction(12.00)
         set udg_CountGroup2=( udg_CountGroup2 + 1 )
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
@@ -10295,6 +10292,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         set udg_SetZone=udg_Way1[0]
         //  
         set udg_CountGroup1=1
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
@@ -10303,6 +10301,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave5n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
@@ -10311,6 +10310,7 @@ function Trig_Wave5_Actions takes nothing returns nothing
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
         call TriggerSleepAction(12.00)
         set udg_CountGroup1=( udg_CountGroup1 + 1 )
+        call TriggerExecute(gg_trg_CreateSpecUnitWave)
         call TriggerExecute(gg_trg_CreateSquadWave4n2)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay1)
     endif
@@ -10904,10 +10904,10 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UpgradesCondition()
     call InitTrig_ArthasIni()
     call InitTrig_ArthasFrostmourne()
+    call InitTrig_ArthasSelectRune()
     call InitTrig_ArthasNewRuneSecond()
     call InitTrig_ArthasNewRuneThree()
     call InitTrig_ArthasRuneResearch()
-    call InitTrig_ArthasRuneCancel()
     call InitTrig_ArthasAutoUpgrades()
     call InitTrig_ArthasDeadUnholyLvl3()
     call InitTrig_ArthasSouls()
