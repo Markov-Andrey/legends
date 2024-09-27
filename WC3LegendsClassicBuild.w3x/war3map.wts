@@ -2063,44 +2063,12 @@ STRING 1600
 [Arthas] Stone Form
 }
 
-STRING 1602
-// Units: u009 ([Arthas] Plague Necropolis), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Town Hall |R
-
-Primary structure, used to train Acolytes and receive lumber gathered by Ghouls. Can be upgraded to Halls of the Dead and then Black Citadel to enable the production of additional types of structures and units.
-}
-
-STRING 1603
-// Units: u00B ([Arthas] Plague Halls of the Dead), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Town Hall |R
-
-Upgrade to Halls of the Dead to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 1604
-// Units: u00C ([Arthas] Plague Black Citadel), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Town Hall |R
-
-Upgrade to Black Citadel to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 1605
 // Units: u00Z ([Arthas] Ziggurat), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Food #Defense |R
 
 Provides food, which increases the maximum number of units that can be trained. Can be upgraded to a defensive structure that attacks land and air units.
-}
-
-STRING 1606
-// Units: u017 ([Arthas] Blood Tower), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Food #Defense |R
-
-Upgrade to create a defensive structure. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 1607
@@ -2117,38 +2085,6 @@ STRING 1608
 |cFFFFDC00#Altar|R
 
 Summons Heroes. Revives slain Heroes.
-}
-
-STRING 1609
-// Units: u01A ([Arthas] Crypt), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Barrack |R
-
-Primary troop production building. Trains Ghouls, Crypt Fiends, and Gargoyles. Also contains the upgrades Ghoul Frenzy, Cannibalize, Stone Form, Web and Burrow.
-}
-
-STRING 1610
-// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Unique #Mechanics |R
-
-Provides attack and armor upgrades for Undead units. Also produces corpses and serves as a drop-off point for harvested lumber.
-}
-
-STRING 1611
-// Units: u01D ([Arthas] Slaughterhouse), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Barrack |R
-
-Produces Abominations, Obsidian Statues, and Meat Wagons. Also contains the Disease Cloud, and Destroyer Form upgrades.
-}
-
-STRING 1612
-// Units: u01E ([Arthas] Boneyard), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Barrack |R
-
-Produces Frost Wyrms. Also contains the Freezing Breath upgrade.
 }
 
 STRING 1617
@@ -2203,14 +2139,6 @@ STRING 1628
 // Upgrades: R00Q (Burrow), Tip (Tooltip)
 {
 Research Gargoyle Upgrade
-}
-
-STRING 1630
-// Units: u003 ([Arthas] Graveyard), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Upgrade #Storage |R
-
-Provides attack and armor upgrades for Undead units. Also produces corpses and serves as a drop-off point for harvested lumber.
 }
 
 STRING 1631
@@ -3492,38 +3420,6 @@ STRING 2103
 A powerful champion who supports the army with his aura
 }
 
-STRING 2106
-// Units: u011 ([Arthas] Crypt Fiend), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 30 souls|r
-
-Ranged combat support creature. Can learn the Web, and Burrow abilities. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 2107
-// Units: u012 ([Arthas] Gargoyle), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 20 souls|r
-
-Flying attack creature. Can learn the Stone Form ability. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 2109
-// Units: u015 ([Arthas] Wagon), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 40 souls|r
-
-Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Disease Cloud ability. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 2110
-// Units: u016 ([Arthas] Dead Wyrm), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 60 souls|r
-
-Flying heavy assault creature. Can learn the Freezing Breath ability. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 2111
 // Buffs/Effects: B001 ([Arthas] Stun no effect), EditorName (Name (Editor Only))
 {
@@ -3924,12 +3820,6 @@ STRING 2213
 // Units: h00V ([Wrynn] House), Tip (Tooltip - Basic)
 {
 Build House
-}
-
-STRING 2214
-// Units: h00X ([Wrynn] Altar of Kings), Name (Name)
-{
-[Wrynn] Altar of Kings
 }
 
 STRING 2215
@@ -7382,7 +7272,7 @@ Primary structure, used to train Citizen and receive gathered resources. Can be 
 }
 
 STRING 3270
-// Units: h00X ([Wrynn] Altar of Kings), Ubertip (Tooltip - Extended)
+// Units: h00X ([Wrynn] Lion's Rest), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#heroes
 |R
@@ -13306,14 +13196,6 @@ STRING 4557
 Upgrade to Frost Tower
 }
 
-STRING 4558
-// Units: u00E ([Arthas] Unholy Tower), Ubertip (Tooltip - Extended)
-{
-|cFFFFDC00#Food #Defense |R
-
-Upgrade to create a defensive structure. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 4559
 // Units: u00E ([Arthas] Unholy Tower), Name (Name)
 {
@@ -13407,16 +13289,6 @@ Basic worker. Can summon structures, harvest gold, and Restore. Acolytes offer t
 
 }
 
-STRING 4573
-// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee
-|R
-|cFFA0FF00Reforge: 20 souls|r
-
-Basic attack unit and lumber harvester. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
 STRING 4574
 // Units: u014 ([Arthas] Abomination), Ubertip (Tooltip - Extended)
 {
@@ -13473,5 +13345,282 @@ STRING 4580
 |cffffcc00#melee
 |R
 Heavy melee unit. Can learn the Disease Cloud ability and Cannibalize. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4581
+// Units: u015 ([Arthas] Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+|cFFA0FF00Reforge: 40 souls|r
+
+Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4582
+// Units: u01R ([Arthas] Blood Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Meat Grinder ability. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4583
+// Units: u01S ([Arthas] Ice Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Deathfrost Shards. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4584
+// Units: u01T ([Arthas] Plague Horde Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Corpse storage machine. Also serves as long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Pandemic Horde ability. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4585
+// Units: u009 ([Arthas] Plague Necropolis), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Town Hall |R
+
+Primary structure, used to train Acolytes and receive lumber gathered by Ghouls. Can be upgraded to Plague Halls of the Dead and then Plague Black Citadel to enable the production of additional types of structures and units.
+}
+
+STRING 4586
+// Units: u00B ([Arthas] Plague Halls of the Dead), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Town Hall |R
+
+Upgrade to Plague Halls of the Dead to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4587
+// Units: u00C ([Arthas] Plague Black Citadel), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Town Hall |R
+
+Upgrade to Plague Black Citadel to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4588
+// Units: u011 ([Arthas] Crypt Fiend), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+|cFFA0FF00Reforge: 30 souls|r
+
+Ranged combat support creature. Can learn the Web, and Burrow abilities. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4589
+// Units: u012 ([Arthas] Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #support
+|R
+|cFFA0FF00Reforge: 20 souls|r
+
+Flying attack creature. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4590
+// Units: u016 ([Arthas] Dead Wyrm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+|cFFA0FF00Reforge: 60 souls|r
+
+Flying heavy assault creature. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4591
+// Units: u017 ([Arthas] Blood Tower), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Food #Defense |R
+
+Upgrade to create a defensive structure. Restores health when attacking. |n|n|cffffcc00Attacks land and air units.|r
+
+
+
+
+
+
+
+}
+
+STRING 4592
+// Units: u01I ([Arthas] Ravenous Crypt Fiend), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Ranged combat support creature. Can learn the Rapacity ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4593
+// Units: u01J ([Arthas] Frost Crypt Fiend), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Ranged combat support creature. Can learn the Frost Beetles ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4594
+// Units: u01K ([Arthas] Toxic Crypt Fiend), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Ranged combat support creature. Can learn the Corrosion ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4595
+// Units: u01L ([Arthas] Bloody Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #support
+|R
+Flying attack creature. Can learn the Stone Form and Blood Mark abilities. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4596
+// Units: u01M ([Arthas] Northrend Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #support
+|R
+Flying attack creature. Can learn the Stone Form and Overwhelming Sadness ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4597
+// Units: u01N ([Arthas] Corrupted Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #support
+|R
+Flying attack creature. Can learn the Stone Form and Necrotic Breath abilities. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4598
+// Units: u01U ([Arthas] Hungry Wyrm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Flying heavy assault creature. Can learn the Swallow ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4599
+// Units: u01V ([Arthas] Frost Wyrm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Flying heavy assault creature. Can learn the Ice of Northrend ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4600
+// Units: u01W ([Arthas] Poison Wyrm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Flying heavy assault creature. Can learn the Noxious Breath ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4601
+// Units: u00E ([Arthas] Unholy Tower), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Food #Defense |R
+
+Upgrade to create a defensive structure. Strongly poisons enemies when attacking. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4602
+// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #melee
+|R
+|cFFA0FF00Reforge: 20 souls|r
+
+Basic attack unit and lumber harvester. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4603
+// Units: u01A ([Arthas] Crypt), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Primary troop production building. Trains Ghouls, Crypt Fiends, and Gargoyles.
+}
+
+STRING 4604
+// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#unique #mechanics |R
+
+Provides attack and armor upgrades for units. Also produces corpses and serves as a drop-off point for harvested lumber.
+}
+
+STRING 4605
+// Units: u01D ([Arthas] Slaughterhouse), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Abominations and Wagons.
+}
+
+STRING 4606
+// Units: u01E ([Arthas] Boneyard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Frost Wyrms.
+}
+
+STRING 4607
+// Units: u01X ([Arthas] Stone Form Bloody Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#support
+|R
+Flying attack creature. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4608
+// Units: u01Y ([Arthas] Stone Form Northrend Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#support
+|R
+Flying attack creature. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4609
+// Units: u01Z ([Arthas] Stone Form Corrupted Gargoyle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#support
+|R
+Flying attack creature. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4610
+// Units: u003 ([Arthas] Graveyard), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Provides attack and armor upgrades for units. Also produces corpses and serves as a drop-off point for harvested lumber.
+}
+
+STRING 4611
+// Units: n002 ([Arthas] Zombie), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Light melee unit. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4612
+// Units: h00X ([Wrynn] Lion's Rest), Name (Name)
+{
+[Wrynn] Lion's Rest
+}
+
+STRING 4613
+// Units: h00X ([Wrynn] Lion's Rest), Tip (Tooltip - Basic)
+{
+Build Lion's Rest
 }
 

@@ -2337,6 +2337,40 @@ function InitTrig_MultiboardPeriodicInfo takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: LimitUnits
+//
+// Construction Limit for Unique Units
+//===========================================================================
+function Trig_LimitUnits_Func001A takes nothing returns nothing
+    // Arthas
+    call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('u01C', 1, GetEnumPlayer())
+    // Uther
+    call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
+    // Wrynn
+    call SetPlayerTechMaxAllowedSwap('h00X', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('O000', 1, GetEnumPlayer())
+    // Tyrande
+    call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('E006', 1, GetEnumPlayer())
+    // Thrall
+    call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
+endfunction
+
+function Trig_LimitUnits_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnits_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_LimitUnits takes nothing returns nothing
+    set gg_trg_LimitUnits=CreateTrigger()
+    call TriggerAddAction(gg_trg_LimitUnits, function Trig_LimitUnits_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: StartResouces
 //===========================================================================
 function Trig_StartResouces_Actions takes nothing returns nothing
@@ -2391,39 +2425,6 @@ endfunction
 function InitTrig_StartCameraReset takes nothing returns nothing
     set gg_trg_StartCameraReset=CreateTrigger()
     call TriggerAddAction(gg_trg_StartCameraReset, function Trig_StartCameraReset_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: LimitUnits
-//
-// Construction Limit for Unique Units
-//===========================================================================
-function Trig_LimitUnits_Func001A takes nothing returns nothing
-    // Arthas
-    call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('u01C', 1, GetEnumPlayer())
-    // Uther
-    call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
-    // Wrynn
-    call SetPlayerTechMaxAllowedSwap('O000', 1, GetEnumPlayer())
-    // Tyrande
-    call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('E006', 1, GetEnumPlayer())
-    // Thrall
-    call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
-endfunction
-
-function Trig_LimitUnits_Actions takes nothing returns nothing
-    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnits_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_LimitUnits takes nothing returns nothing
-    set gg_trg_LimitUnits=CreateTrigger()
-    call TriggerAddAction(gg_trg_LimitUnits, function Trig_LimitUnits_Actions)
 endfunction
 
 //===========================================================================
@@ -10863,11 +10864,11 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TestEnemyTimer5()
     call InitTrig_MultiboardStart()
     call InitTrig_MultiboardPeriodicInfo()
+    call InitTrig_LimitUnits()
     call InitTrig_StartResouces()
     call InitTrig_StartCameraP1()
     call InitTrig_StartCameraP2()
     call InitTrig_StartCameraReset()
-    call InitTrig_LimitUnits()
     call InitTrig_ChooseFirst()
     call InitTrig_UnSelect()
     call InitTrig_PreviewLegend()
@@ -11023,8 +11024,8 @@ endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_StartResouces)
     call ConditionalTriggerExecute(gg_trg_LimitUnits)
+    call ConditionalTriggerExecute(gg_trg_StartResouces)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_AlteracInitialization)
     call ConditionalTriggerExecute(gg_trg_NPCInitialization)
