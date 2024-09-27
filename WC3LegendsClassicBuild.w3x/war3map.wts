@@ -2096,7 +2096,7 @@ Provides food, which increases the maximum number of units that can be trained. 
 }
 
 STRING 1606
-// Units: u017 ([Arthas] Spirit Tower), Ubertip (Tooltip - Extended)
+// Units: u017 ([Arthas] Blood Tower), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Food #Defense |R
 
@@ -2104,7 +2104,7 @@ Upgrade to create a defensive structure. |n|n|cffffcc00Attacks land and air unit
 }
 
 STRING 1607
-// Units: u018 ([Arthas] Nerubian Tower), Ubertip (Tooltip - Extended)
+// Units: u018 ([Arthas] Frost Tower), Ubertip (Tooltip - Extended)
 {
 |cFFFFDC00#Food #Defense |R
 
@@ -3508,14 +3508,6 @@ STRING 2107
 Flying attack creature. Can learn the Stone Form ability. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 2108
-// Units: u014 ([Arthas] Abomination), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 40 souls|r
-
-Heavy melee unit. Can learn the Disease Cloud ability and Cannibalize. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 2109
 // Units: u015 ([Arthas] Wagon), Ubertip (Tooltip - Extended)
 {
@@ -3740,18 +3732,6 @@ STRING 2178
 // Units: u00Z ([Arthas] Ziggurat), Name (Name)
 {
 [Arthas] Ziggurat
-}
-
-STRING 2179
-// Units: u017 ([Arthas] Spirit Tower), Name (Name)
-{
-[Arthas] Spirit Tower
-}
-
-STRING 2180
-// Units: u018 ([Arthas] Nerubian Tower), Name (Name)
-{
-[Arthas] Nerubian Tower
 }
 
 STRING 2181
@@ -4454,32 +4434,6 @@ STRING 2339
 // Abilities: A02E ([Arthas_StoneForm_Unholy] Effect Aura Unholy), Name (Name)
 {
 [Arthas_StoneForm_Unholy] Effect Aura Unholy
-}
-
-STRING 2355
-// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
-{
-|cFFA0FF00Reforge: 20 souls|r
-
-Basic attack unit and lumber harvester. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 2356
-// Units: u00Y ([Arthas] Wild Ghoul), Ubertip (Tooltip - Extended)
-{
-Basic attack unit and lumber harvester. Can learn Blood Rage. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 2357
-// Units: u01F ([Arthas] Frozen Ghoul), Ubertip (Tooltip - Extended)
-{
-Basic attack unit and lumber harvester. Can learn Ice Shard.|n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 2358
-// Units: u01H ([Arthas] Decaying Ghoul), Ubertip (Tooltip - Extended)
-{
-Basic attack unit and lumber harvester. Can learn Rotten teeth.|n|n|cffffcc00Attacks land units and trees.|r
 }
 
 STRING 2359
@@ -13326,5 +13280,198 @@ STRING 4552
 // Units: n009 ([Alterac] Syndicate Wizard), Name (Name)
 {
 [Alterac] Syndicate Wizard
+}
+
+STRING 4554
+// Units: u017 ([Arthas] Blood Tower), Name (Name)
+{
+[Arthas] Blood Tower
+}
+
+STRING 4555
+// Units: u017 ([Arthas] Blood Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Blood Tower
+}
+
+STRING 4556
+// Units: u018 ([Arthas] Frost Tower), Name (Name)
+{
+[Arthas] Frost Tower
+}
+
+STRING 4557
+// Units: u018 ([Arthas] Frost Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Frost Tower
+}
+
+STRING 4558
+// Units: u00E ([Arthas] Unholy Tower), Ubertip (Tooltip - Extended)
+{
+|cFFFFDC00#Food #Defense |R
+
+Upgrade to create a defensive structure. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4559
+// Units: u00E ([Arthas] Unholy Tower), Name (Name)
+{
+[Arthas] Unholy Tower
+}
+
+STRING 4560
+// Units: u00E ([Arthas] Unholy Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Unholy Tower
+}
+
+STRING 4561
+// Abilities: A00Q ([Arthas] Blood), Name (Name)
+{
+[Arthas] Blood
+}
+
+STRING 4562
+// Abilities: A00Q ([Arthas] Blood), EditorSuffix (Editor Suffix)
+{
+(Ziggurat Effect)
+}
+
+STRING 4563
+// Abilities: A080 ([Arthas] Frost), Name (Name)
+{
+[Arthas] Frost
+}
+
+STRING 4564
+// Abilities: A080 ([Arthas] Frost), EditorSuffix (Editor Suffix)
+{
+(Ziggurat Effect)
+}
+
+STRING 4565
+// Abilities: A081 ([Arthas] Unholy), Name (Name)
+{
+[Arthas] Unholy
+}
+
+STRING 4566
+// Abilities: A081 ([Arthas] Unholy), EditorSuffix (Editor Suffix)
+{
+(Ziggurat Effect)
+}
+
+STRING 4567
+// Abilities: A082 ([Arthas] Toxic), Name (Name)
+{
+[Arthas] Toxic
+}
+
+STRING 4568
+// Abilities: A082 ([Arthas] Toxic), Tip (Tooltip - Normal)
+{
+Toxic
+}
+
+STRING 4569
+// Abilities: A082 ([Arthas] Toxic), EditorSuffix (Editor Suffix)
+{
+(Ziggurat)
+}
+
+STRING 4570
+// Abilities: A083 ([Arthas] Life Steal), Name (Name)
+{
+[Arthas] Life Steal
+}
+
+STRING 4571
+// Abilities: A083 ([Arthas] Life Steal), EditorSuffix (Editor Suffix)
+{
+(Ziggurat)
+}
+
+STRING 4572
+// Units: u00A ([Arthas] Acolyte), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker. Can summon structures, harvest gold, and Restore. Acolytes offer their souls to Frostmourne, and you do not receive a Shade. |n|n|cffffcc00Attacks land units.|r
+
+
+
+
+
+
+
+}
+
+STRING 4573
+// Units: u010 ([Arthas] Ghoul), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+|cFFA0FF00Reforge: 20 souls|r
+
+Basic attack unit and lumber harvester. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4574
+// Units: u014 ([Arthas] Abomination), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+|cFFA0FF00Reforge: 40 souls|r
+
+Heavy melee unit. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4575
+// Units: u00Y ([Arthas] Wild Ghoul), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Basic attack unit and lumber harvester. Can learn Blood Rage. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4576
+// Units: u01F ([Arthas] Frozen Ghoul), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Basic attack unit and lumber harvester. Can learn Ice Shard.|n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4577
+// Units: u01H ([Arthas] Decaying Ghoul), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Basic attack unit and lumber harvester. Can learn Rotten teeth.|n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4578
+// Units: u01O ([Arthas] Fat Abomination), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Heavy melee unit. Can learn the Surfeit. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4579
+// Units: u01P ([Arthas] Cold Abomination), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Heavy melee unit. Can learn the Glacial Gusto. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4580
+// Units: u01Q ([Arthas] Glutton Abomination), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Heavy melee unit. Can learn the Disease Cloud ability and Cannibalize. |n|n|cffffcc00Attacks land units.|r
 }
 
