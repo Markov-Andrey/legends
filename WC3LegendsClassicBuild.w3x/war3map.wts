@@ -13310,3 +13310,21 @@ STRING 4549
 |cFFFFA539Mythic (+4)|R
 }
 
+STRING 4550
+// Units: n007 ([Alterac] Syndicate Assassin), Name (Name)
+{
+[Alterac] Syndicate Assassin
+}
+
+STRING 4551
+// Units: n008 ([Alterac] Syndicate Ambal), Name (Name)
+{
+[Alterac] Syndicate Ambal
+}
+
+STRING 4552
+// Units: n009 ([Alterac] Syndicate Wizard), Name (Name)
+{
+[Alterac] Syndicate Wizard
+}
+
