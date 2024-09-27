@@ -123,11 +123,11 @@ trigger gg_trg_TestEnemyTimer4= null
 trigger gg_trg_TestEnemyTimer5= null
 trigger gg_trg_MultiboardStart= null
 trigger gg_trg_MultiboardPeriodicInfo= null
+trigger gg_trg_LimitUnits= null
 trigger gg_trg_StartResouces= null
 trigger gg_trg_StartCameraP1= null
 trigger gg_trg_StartCameraP2= null
 trigger gg_trg_StartCameraReset= null
-trigger gg_trg_LimitUnits= null
 trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
 trigger gg_trg_PreviewLegend= null
@@ -139,6 +139,7 @@ trigger gg_trg_ChooseThrall= null
 trigger gg_trg_UpgradesCondition= null
 trigger gg_trg_ArthasIni= null
 trigger gg_trg_ArthasFrostmourne= null
+trigger gg_trg_ArthasSelectRune= null
 trigger gg_trg_ArthasNewRuneSecond= null
 trigger gg_trg_ArthasNewRuneThree= null
 trigger gg_trg_ArthasRuneResearch= null
@@ -248,6 +249,7 @@ trigger gg_trg_UnitsInitializationWay2= null
 trigger gg_trg_UnitsInitializationWay3= null
 trigger gg_trg_DebugUnitsIniWay3= null
 trigger gg_trg_GroupArrayReset= null
+trigger gg_trg_CreateSpecUnitWave= null
 trigger gg_trg_CreateSquadWave1n1= null
 trigger gg_trg_CreateSquadWave1n2= null
 trigger gg_trg_CreateSquadWave2n1= null
@@ -278,8 +280,6 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
-trigger gg_trg_CreateSpecUnitWave= null
-trigger gg_trg_ArthasSelectRune= null
 
     // Random Groups
 integer array gg_rg_000
