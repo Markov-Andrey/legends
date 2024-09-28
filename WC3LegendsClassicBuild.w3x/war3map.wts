@@ -12231,16 +12231,6 @@ STRING 4428
 Mythic effect; it has an increased movement speed.
 }
 
-STRING 4429
-{
-Mythic: Boots of Speed
-}
-
-STRING 4437
-{
-Mythic: Vampiric
-}
-
 STRING 4438
 // Abilities: A07T ([Mythic] Vampiric Aura), Name (Name)
 {
@@ -12317,31 +12307,6 @@ STRING 4450
 // Buffs/Effects: B01D ([Mythic] Brilliance Aura), EditorName (Name (Editor Only))
 {
 [Mythic] Brilliance Aura
-}
-
-STRING 4451
-{
-Mythic: Tiranic
-}
-
-STRING 4452
-{
-Mythic: Fortified
-}
-
-STRING 4453
-{
-Mythic: Thorns
-}
-
-STRING 4454
-{
-Mythic: Brilliance
-}
-
-STRING 4455
-{
-Mythic: Cloak of Shadows
 }
 
 STRING 4456

@@ -283,6 +283,7 @@ trigger gg_trg_EnemyHeroAddItem= null
 
     // Random Groups
 integer array gg_rg_000
+integer MYTHIC_INDEX= 0
 framehandle Icon01= null
 framehandle Icon02= null
 framehandle Icon03= null
@@ -826,6 +827,53 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
+//***************************************************************************
+//*  FrameMythic
+
+function FrameMythic takes string iconPath,string titleText,string descriptionText returns nothing
+    local framehandle buttonMyth
+    local framehandle new_Frame
+    local framehandle sprite
+    local framehandle tooltip
+    local real size= 0.025
+    local real offsetX= - 0.057
+    local real offsetY= - 0.057
+    local real scale= 0.5
+    local real pointx= 0.79
+    local real array yPositions
+
+    set yPositions[0]=0.56
+    set yPositions[1]=yPositions[0] - 0.031
+    set yPositions[2]=yPositions[1] - 0.031
+    set yPositions[3]=yPositions[2] - 0.031
+
+    set buttonMyth=BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(buttonMyth, FRAMEPOINT_CENTER, pointx, yPositions[MYTHIC_INDEX])
+    call BlzFrameSetSize(buttonMyth, size, size)
+
+    set new_Frame=BlzCreateFrameByType("BACKDROP", "PORTRAIT", buttonMyth, "", 0)
+    call BlzFrameClearAllPoints(new_Frame)
+    call BlzFrameSetPoint(new_Frame, FRAMEPOINT_CENTER, buttonMyth, FRAMEPOINT_CENTER, 0, 0)
+    call BlzFrameSetSize(new_Frame, size, size)
+    call BlzFrameSetTexture(new_Frame, iconPath, 0, true)
+
+    set sprite=BlzCreateFrameByType("SPRITE", "justAName", new_Frame, "WarCraftIIILogo", 0)
+    call BlzFrameClearAllPoints(sprite)
+    call BlzFrameSetPoint(sprite, FRAMEPOINT_TOPRIGHT, new_Frame, FRAMEPOINT_TOPRIGHT, offsetX, offsetY)
+    call BlzFrameSetSize(sprite, 0.000025, 0.000025)
+    call BlzFrameSetScale(sprite, scale)
+    call BlzFrameSetModel(sprite, "UI\\Mythic\\Border\\damned_sprite.mdx", 0)
+
+    set tooltip=BlzCreateFrameByType("TEXT", "TooltipFrame", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetText(tooltip, "|cFFA293FF" + titleText + "|r|n" + descriptionText)
+    call BlzFrameSetAbsPoint(tooltip, FRAMEPOINT_CENTER, pointx - 0.1, yPositions[MYTHIC_INDEX])
+    call BlzFrameSetVisible(tooltip, false)
+
+    call BlzFrameSetTooltip(buttonMyth, tooltip)
+    call BlzFrameSetVisible(buttonMyth, true)
+
+    set MYTHIC_INDEX=MYTHIC_INDEX + 1
+endfunction
 //***************************************************************************
 //*  FrameLoader vjass
 
@@ -6796,7 +6844,7 @@ function Trig_Mythic1Boots_Func002A takes nothing returns nothing
 endfunction
 
 function Trig_Mythic1Boots_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4429")
+    call FrameMythic("UI\\Mythic\\BootsofSpeed.blp" , "Boots of Speed" , "Increased enemy movement speed +50%")
     call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic1Boots_Func002A)
 endfunction
 
@@ -6807,17 +6855,18 @@ function InitTrig_Mythic1Boots takes nothing returns nothing
     call TriggerAddAction(gg_trg_Mythic1Boots, function Trig_Mythic1Boots_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Mythic2Vampiric
 //===========================================================================
-function Trig_Mythic2Vampiric_Func002A takes nothing returns nothing
+function Trig_Mythic2Vampiric_Func001A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
     call UnitAddAbilityBJ('A07T', GetLastCreatedUnit())
 endfunction
 
 function Trig_Mythic2Vampiric_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4437")
-    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic2Vampiric_Func002A)
+    call FrameMythic("UI\\Mythic\\VampiricAura.blp" , "Vampiric Aura" , "Attack converts 50% of damage into health")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic2Vampiric_Func001A)
 endfunction
 
 //===========================================================================
@@ -6827,16 +6876,17 @@ function InitTrig_Mythic2Vampiric takes nothing returns nothing
     call TriggerAddAction(gg_trg_Mythic2Vampiric, function Trig_Mythic2Vampiric_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Mythic3Tiranic
 //===========================================================================
-function Trig_Mythic3Tiranic_Func002A takes nothing returns nothing
+function Trig_Mythic3Tiranic_Func001A takes nothing returns nothing
     call SetPlayerHandicapBJ(GetEnumPlayer(), 130.00)
 endfunction
 
 function Trig_Mythic3Tiranic_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4451")
-    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic3Tiranic_Func002A)
+    call FrameMythic("UI\\Mythic\\Tyrannical.blp" , "Tyrannical" , "Additional enemy health +30%")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic3Tiranic_Func001A)
 endfunction
 
 //===========================================================================
@@ -6846,17 +6896,18 @@ function InitTrig_Mythic3Tiranic takes nothing returns nothing
     call TriggerAddAction(gg_trg_Mythic3Tiranic, function Trig_Mythic3Tiranic_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Mythic4Fortified
 //===========================================================================
-function Trig_Mythic4Fortified_Func002A takes nothing returns nothing
+function Trig_Mythic4Fortified_Func001A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
     call UnitAddAbilityBJ('A07U', GetLastCreatedUnit())
 endfunction
 
 function Trig_Mythic4Fortified_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4452")
-    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic4Fortified_Func002A)
+    call FrameMythic("UI\\Mythic\\Fortified.blp" , "Fortified" , "Additional enemy protection +5")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic4Fortified_Func001A)
 endfunction
 
 //===========================================================================
@@ -6866,17 +6917,18 @@ function InitTrig_Mythic4Fortified takes nothing returns nothing
     call TriggerAddAction(gg_trg_Mythic4Fortified, function Trig_Mythic4Fortified_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Mythic5Thorns
 //===========================================================================
-function Trig_Mythic5Thorns_Func002A takes nothing returns nothing
+function Trig_Mythic5Thorns_Func001A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
     call UnitAddAbilityBJ('A07V', GetLastCreatedUnit())
 endfunction
 
 function Trig_Mythic5Thorns_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4453")
-    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic5Thorns_Func002A)
+    call FrameMythic("UI\\Mythic\\Thorns.blp" , "Thorns" , "Aura returns 30% of damage to attackers")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic5Thorns_Func001A)
 endfunction
 
 //===========================================================================
@@ -6886,17 +6938,18 @@ function InitTrig_Mythic5Thorns takes nothing returns nothing
     call TriggerAddAction(gg_trg_Mythic5Thorns, function Trig_Mythic5Thorns_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Mythic6Brilliance
 //===========================================================================
-function Trig_Mythic6Brilliance_Func002A takes nothing returns nothing
+function Trig_Mythic6Brilliance_Func001A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'u004', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
     call UnitAddAbilityBJ('A07W', GetLastCreatedUnit())
 endfunction
 
 function Trig_Mythic6Brilliance_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4454")
-    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic6Brilliance_Func002A)
+    call FrameMythic("UI\\Mythic\\Brilliance.blp" , "Brilliance" , "Enemy mana regeneration aura 200%")
+    call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic6Brilliance_Func001A)
 endfunction
 
 //===========================================================================
@@ -6906,12 +6959,13 @@ function InitTrig_Mythic6Brilliance takes nothing returns nothing
     call TriggerAddAction(gg_trg_Mythic6Brilliance, function Trig_Mythic6Brilliance_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Mythic7Shadow
 //===========================================================================
 function Trig_Mythic7Shadow_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4455")
     call EnableTrigger(gg_trg_Mythic7ShadowAdd)
+    call FrameMythic("UI\\Mythic\\CloakofShadows.blp" , "Cloak of Shadows" , "Enemies receive constant invisibility")
 endfunction
 
 //===========================================================================
@@ -6920,6 +6974,7 @@ function InitTrig_Mythic7Shadow takes nothing returns nothing
     call DisableTrigger(gg_trg_Mythic7Shadow)
     call TriggerAddAction(gg_trg_Mythic7Shadow, function Trig_Mythic7Shadow_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: Mythic7ShadowAdd
