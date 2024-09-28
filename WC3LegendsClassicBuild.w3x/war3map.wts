@@ -10241,12 +10241,6 @@ STRING 3940
 [Thrall] Fortress
 }
 
-STRING 3941
-// Units: O00O ([Thrall] Altar of Storms), Name (Name)
-{
-[Thrall] Altar of Storms
-}
-
 STRING 3942
 // Units: o00F ([Thrall] Barracks), Name (Name)
 {
@@ -11403,16 +11397,6 @@ STRING 4258
 Improves the fighting capabilities of Grunts with a 175 hit point increase.
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Grunt
-}
-
-STRING 4259
-// Upgrades: R02K (Brute Strength), Ubertip (Tooltip - Extended)
-{
-|cFF24BBFF"Warning: Known to spontaneously combust."|r
-
-Transforms part of the damage 5 into magic and deals area damage.
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
 }
 
 STRING 4260
@@ -13610,5 +13594,326 @@ STRING 4646
 // Items: I005 (Alterac Manna Biscuit), Ubertip (Tooltip - Extended)
 {
 Heals <AIh2,DataA1> hit points when used.
+}
+
+STRING 4649
+// Units: O00C (Horde Warchief), Ubertip (Tooltip - Extended)
+{
+Can learn Chain Lightning, Far Sight, Whirling Elements and Earthquake. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4650
+// Units: o001 ([Thrall] Peon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4651
+// Units: o002 ([Thrall] Grunt), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Brutish Orc warrior. |n|n|cffffcc00Attacks land units.|r
+
+|cFF64FF93Amulets|R: Bracers of Earth Binding
+|cFF64FF93Amulets|R: Fire Ring
+}
+
+STRING 4652
+// Units: o003 ([Thrall] Headhunter), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Versatile spear-thrower, effective against air units. |n|n|cffffcc00Attacks land and air units.|r 
+
+|cFF64FF93Amulets|R: Airburst Amulet
+|cFF64FF93Amulets|R: Firestick
+}
+
+STRING 4653
+// Units: o004 ([Thrall] Catapult), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #siege
+|R
+Long-range siege weaponry. Effective against buildings but slow and vulnerable. |n|n|cffffcc00Attacks land units and trees.|r
+
+|cFF64FF93Amulets|R: Perfect Windfeather
+|cFF64FF93Amulets|R: Fire Runic Stone
+}
+
+STRING 4654
+// Units: o005 ([Thrall] Shaman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Primary spellcaster. Can initially cast Purge, which dispels magical buffs and can immobilize enemies. Can also learn Lightning Shield and Bloodlust. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFF64FF93Amulets|R: Water Ring
+|cFF64FF93Amulets|R: Fire Eye Ring
+}
+
+STRING 4655
+// Units: o007 ([Thrall] Raider), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Highly mobile wolf rider. Effective against buildings. |n|n|cffffcc00Attacks land units.|r
+
+|cFF64FF93Amulets|R: Earth Amulet
+|cFF64FF93Amulets|R: Windfury Weapon
+}
+
+STRING 4656
+// Units: o008 ([Thrall] Wind Rider), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Highly mobile flying creature. Excellent at scouting. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFF64FF93Amulets|R: Envenomed Spears
+|cFF64FF93Amulets|R: Wind Dancer's Pendant
+}
+
+STRING 4657
+// Units: o009 ([Thrall] Tauren), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Mighty warrior. |n|n|cffffcc00Attacks land units.|r
+
+|cFF64FF93Amulets|R: Quaking Totem
+|cFF64FF93Amulets|R: Counterstrike Totem
+}
+
+STRING 4658
+// Units: o00A ([Thrall] Great Hall), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Peons and receive gathered resources. Can be upgraded to Stronghold and then Fortress to enable the production of additional types of structures and units.
+}
+
+STRING 4659
+// Units: o00B ([Thrall] Stronghold), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Stronghold to enable the production of additional types of structures and units.
+}
+
+STRING 4660
+// Units: o00D ([Thrall] Fortress), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Fortress to enable the production of additional types of structures and units.
+}
+
+STRING 4661
+// Units: o00F ([Thrall] Barracks), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Primary troop production building. Trains Grunts, Headhunters and Catapult.
+}
+
+STRING 4662
+// Units: o00G ([Thrall] War Mill), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for improved armor, melee weapons, ranged weapons, Reinforced Defenses, Artisan-crafted Totem and Elemental Resistance.
+}
+
+STRING 4663
+// Units: o00H ([Thrall] Tauren Totem), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Trains Tauren.
+}
+
+STRING 4664
+// Units: o00I ([Thrall] Spirit Lodge), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Spellcaster production building. Trains Shaman. |nAlso contains spell upgrades for Shaman.
+}
+
+STRING 4665
+// Units: o00J ([Thrall] Beastiary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Trains Raiders and Wind Riders.
+}
+
+STRING 4666
+// Units: o00K ([Thrall] Elemental Burrow), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food
+|R
+Accelerates the cooldown of the Altar of Elements with the Master of the Elements ability. Increases maximum unit capacity.
+}
+
+STRING 4667
+// Units: o00L ([Thrall] Watch Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Defensive structure. Can learn the Reinforced Defenses upgrade. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4668
+// Units: o006 ([Thrall] Amulet Crafter), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrades
+|R
+Provides access to Elemental Amulets, offering one of several powerful upgrades for each unit type. Customize your army by selecting a unique enhancement for every kind of troop, shaping their elemental strengths in battle!
+}
+
+STRING 4669
+// Units: O00O ([Thrall] Altar of Elements), Name (Name)
+{
+[Thrall] Altar of Elements
+}
+
+STRING 4670
+// Units: O00O ([Thrall] Altar of Elements), Tip (Tooltip - Basic)
+{
+Build Altar of Elements
+}
+
+STRING 4671
+// Units: n005 ([Thrall] Fire Elemental), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Flame elemental with ranged attacks. |n|n|cffffcc00Attacks both land and air units.|r
+}
+
+STRING 4672
+// Units: n005 ([Thrall] Fire Elemental), Tip (Tooltip - Basic)
+{
+Sumon Fire Elemental
+}
+
+STRING 4673
+// Units: n006 ([Thrall] Earth Elemental), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Heavy melee unit that hurls boulders at opponents. Immune to spells. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 4674
+// Units: n006 ([Thrall] Earth Elemental), Tip (Tooltip - Basic)
+{
+Summon Earth Elemental
+}
+
+STRING 4675
+// Units: o00U ([Thrall] Amulet Crafter), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrades
+|R
+Provides access to Elemental Amulets, offering one of several powerful upgrades for each unit type. Customize your army by selecting a unique enhancement for every kind of troop, shaping their elemental strengths in battle!
+}
+
+STRING 4676
+// Upgrades: R02J (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Grunt)
+}
+
+STRING 4677
+// Upgrades: R02K (Brute Strength), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Watch out! They're as unpredictable as a road warrior!"|r
+
+Transforms part of the damage 5 into magic and deals area damage.
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
+}
+
+STRING 4678
+// Upgrades: R02K (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Headhunter)
+}
+
+STRING 4679
+// Upgrades: R02L (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Grunt)
+}
+
+STRING 4680
+// Upgrades: R02M (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Headhunter)
+}
+
+STRING 4681
+// Upgrades: R02N (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Catapult)
+}
+
+STRING 4682
+// Upgrades: R02O (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Catapult)
+}
+
+STRING 4683
+// Upgrades: R02P (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Shaman)
+}
+
+STRING 4684
+// Upgrades: R02Q (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Shaman)
+}
+
+STRING 4685
+// Upgrades: R02R (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Raider)
+}
+
+STRING 4686
+// Upgrades: R02S (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Raider)
+}
+
+STRING 4687
+// Upgrades: R02T (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Tauren)
+}
+
+STRING 4688
+// Upgrades: R02U (Brute Strength), EditorSuffix (Editor Suffix)
+{
+(Tauren)
+}
+
+STRING 4689
+// Upgrades: R02V (Envenomed Spears), EditorSuffix (Editor Suffix)
+{
+(Wind Rider)
+}
+
+STRING 4690
+// Upgrades: R02W (Envenomed Spears), EditorSuffix (Editor Suffix)
+{
+(Wind Rider)
 }
 
