@@ -283,12 +283,12 @@ trigger gg_trg_EnemyHeroAddItem= null
 
     // Random Groups
 integer array gg_rg_000
+framehandle ThrallIcon= null
 integer MYTHIC_INDEX= 0
 framehandle Icon01= null
 framehandle Icon02= null
 framehandle Icon03= null
 integer currentIconIndex= 0
-framehandle ThrallIcon= null
 
 trigger l__library_init
 
@@ -828,6 +828,10 @@ endfunction
 //*
 //***************************************************************************
 //***************************************************************************
+//*  ThrallCurrentMode
+
+
+//***************************************************************************
 //*  FrameMythic
 
 function FrameMythic takes string iconPath,string titleText,string descriptionText returns nothing
@@ -882,10 +886,6 @@ endfunction
 
 //***************************************************************************
 //*  ArthasFrameRunes
-
-//***************************************************************************
-//*  ThrallCurrentMode
-
 
 
 //***************************************************************************
@@ -6081,7 +6081,7 @@ endfunction
 //===========================================================================
 // Trigger: ThrallChangeMode
 //===========================================================================
-function Trig_ThrallChangeMode_Func002C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func004C takes nothing returns boolean
     if ( ( GetSpellAbilityId() == 'A06H' ) ) then
         return true
     endif
@@ -6098,135 +6098,27 @@ function Trig_ThrallChangeMode_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_ThrallChangeMode_Conditions takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func002C() ) then
+    if ( not Trig_ThrallChangeMode_Func004C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func002Func001Func002C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func002Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func002Func001Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func002A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func002Func001C() ) then
-        call UnitAddAbilityBJ('S004', GetEnumUnit())
-    else
-    endif
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func002Func001Func002C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func002Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func003Func002Func001Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func002A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func003Func002Func001C() ) then
-        call UnitAddAbilityBJ('S007', GetEnumUnit())
-    else
-    endif
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func002Func001Func002C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func002Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func003Func003Func002Func001Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func002A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func003Func003Func002Func001C() ) then
-        call UnitAddAbilityBJ('S008', GetEnumUnit())
-    else
-    endif
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001Func002C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001C takes nothing returns boolean
-    if ( not Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002A takes nothing returns nothing
-    if ( Trig_ThrallChangeMode_Func001Func003Func003Func003Func002Func001C() ) then
-        call UnitAddAbilityBJ('S006', GetEnumUnit())
-    else
-    endif
-endfunction
-
-function Trig_ThrallChangeMode_Func001Func003Func003Func003C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func001Func001Func001C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A06H' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func003Func003C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func001Func001C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A06G' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ThrallChangeMode_Func001Func003C takes nothing returns boolean
+function Trig_ThrallChangeMode_Func001Func001C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A06F' ) ) then
         return false
     endif
@@ -6240,32 +6132,219 @@ function Trig_ThrallChangeMode_Func001C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_ThrallChangeMode_Func003Func001Func002Func001Func001C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func002Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func003Func001Func002Func001Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func002C takes nothing returns boolean
+    if ( not ( udg_ThrallMode == "air" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func003Func001Func001C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func003Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func003Func001Func003Func001Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func003C takes nothing returns boolean
+    if ( not ( udg_ThrallMode == "earth" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func004Func001Func001C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func004Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func003Func001Func004Func001Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func004C takes nothing returns boolean
+    if ( not ( udg_ThrallMode == "fire" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func005Func001Func001C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func005Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func003Func001Func005Func001Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func005C takes nothing returns boolean
+    if ( not ( udg_ThrallMode == "water" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001Func006C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00N' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00E' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00P' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00S' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00T' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00Q' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetEnumUnit()) == 'o00R' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ThrallChangeMode_Func003Func001C takes nothing returns boolean
+    if ( not Trig_ThrallChangeMode_Func003Func001Func006C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ThrallChangeMode_Func003A takes nothing returns nothing
+    if ( Trig_ThrallChangeMode_Func003Func001C() ) then
+        if ( Trig_ThrallChangeMode_Func003Func001Func002C() ) then
+            if ( Trig_ThrallChangeMode_Func003Func001Func002Func001C() ) then
+                call UnitAddAbilityBJ('S004', GetEnumUnit())
+            else
+                call UnitAddAbilityBJ('S00D', GetEnumUnit())
+            endif
+        else
+        endif
+        if ( Trig_ThrallChangeMode_Func003Func001Func003C() ) then
+            if ( Trig_ThrallChangeMode_Func003Func001Func003Func001C() ) then
+                call UnitAddAbilityBJ('S006', GetEnumUnit())
+            else
+                call UnitAddAbilityBJ('S00C', GetEnumUnit())
+            endif
+        else
+        endif
+        if ( Trig_ThrallChangeMode_Func003Func001Func004C() ) then
+            if ( Trig_ThrallChangeMode_Func003Func001Func004Func001C() ) then
+                call UnitAddAbilityBJ('S007', GetEnumUnit())
+            else
+                call UnitAddAbilityBJ('S00E', GetEnumUnit())
+            endif
+        else
+        endif
+        if ( Trig_ThrallChangeMode_Func003Func001Func005C() ) then
+            if ( Trig_ThrallChangeMode_Func003Func001Func005Func001C() ) then
+                call UnitAddAbilityBJ('S008', GetEnumUnit())
+            else
+                call UnitAddAbilityBJ('S00F', GetEnumUnit())
+            endif
+        else
+        endif
+    else
+        call DoNothing()
+    endif
+endfunction
+
 function Trig_ThrallChangeMode_Actions takes nothing returns nothing
     if ( Trig_ThrallChangeMode_Func001C() ) then
         set udg_ThrallMode="air"
-        call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func002A)
-        call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "air")
     else
-        if ( Trig_ThrallChangeMode_Func001Func003C() ) then
+        if ( Trig_ThrallChangeMode_Func001Func001C() ) then
             set udg_ThrallMode="fire"
-            call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func003Func002A)
-            call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "fire")
         else
-            if ( Trig_ThrallChangeMode_Func001Func003Func003C() ) then
+            if ( Trig_ThrallChangeMode_Func001Func001Func001C() ) then
                 set udg_ThrallMode="water"
-                call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func003Func003Func002A)
-                call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "water")
             else
-                if ( Trig_ThrallChangeMode_Func001Func003Func003Func003C() ) then
+                if ( Trig_ThrallChangeMode_Func001Func001Func001Func001C() ) then
                     set udg_ThrallMode="earth"
-                    call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func001Func003Func003Func003Func002A)
-                    call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "earth")
                 else
-                    call DoNothing()
                 endif
             endif
         endif
     endif
+    call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , udg_ThrallMode)
+    call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetSpellAbilityUnit())), function Trig_ThrallChangeMode_Func003A)
 endfunction
 
 //===========================================================================
@@ -6506,7 +6585,7 @@ function Trig_ThrallElementalDestruction_Actions takes nothing returns nothing
     if ( Trig_ThrallElementalDestruction_Func003C() ) then
         call UnitApplyTimedLifeBJ(35.00, 'BTLF', GetLastCreatedUnit())
     else
-        call UnitApplyTimedLifeBJ(50.00, 'BTLF', GetLastCreatedUnit())
+        call UnitApplyTimedLifeBJ(60.00, 'BTLF', GetLastCreatedUnit())
     endif
 endfunction
 
@@ -6577,6 +6656,36 @@ function Trig_ThrallElementalUpg_Func015C takes nothing returns boolean
         return true
     endif
     if ( ( GetResearched() == 'R02M' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02N' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02O' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02P' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02Q' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02R' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02S' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02T' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02U' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02V' ) ) then
+        return true
+    endif
+    if ( ( GetResearched() == 'R02W' ) ) then
         return true
     endif
     return false

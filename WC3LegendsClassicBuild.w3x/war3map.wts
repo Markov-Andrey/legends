@@ -9919,14 +9919,6 @@ STRING 3885
 Agile short-ranged warrior. Can learn the Sentinel ability and the Moon Glaive attack. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 3886
-// Units: e00G ([Tyrande] Dryad), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged
-|R
-Anti-spellcaster that has a poison attack which slows and damages enemy units. Also has Spell Immunity which renders her invulnerable to magical effects and damage. Can learn Abolish Magic. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 3887
 // Units: e00H ([Tyrande] Glaive Thrower), Ubertip (Tooltip - Extended)
 {
@@ -10548,13 +10540,6 @@ STRING 4065
 Switch to Healing Tide Totem
 }
 
-STRING 4066
-// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
-{
-Replaces all totems on the map and grants the ability:
-Restores <A06N,DataA1> hit points to nearby friendly units.
-}
-
 STRING 4067
 // Abilities: A06H ([Thrall] Switch to Earthbind Totem), Name (Name)
 {
@@ -10713,7 +10698,7 @@ STRING 4094
 }
 
 STRING 4098
-// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
 {
 Overload
 }
@@ -10737,12 +10722,6 @@ STRING 4105
 }
 
 STRING 4107
-// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
-{
-Overload
-}
-
-STRING 4108
 // Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
 {
 Overload
@@ -10779,7 +10758,7 @@ Learn Whirling Elements - [|cffffcc00Level %d|r]
 }
 
 STRING 4125
-// Abilities: A06V ([Thrall] Whirling Elements), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A075 ([Thrall] Elemental Destruction), Researchubertip (Tooltip - Learn - Extended)
 {
 Reveals the area of the map that it is cast upon. Also reveals invisible units. |n|n|cffffcc00Level 1|r - Reveals a small area. |n|cffffcc00Level 2|r - Reveals a large area. |n|cffffcc00Level 3|r - Reveals a huge area.
 }
@@ -10800,12 +10779,6 @@ STRING 4128
 // Abilities: A06V ([Thrall] Whirling Elements), Tip (Tooltip - Normal)
 {
 Whirling Elements - [|cffffcc00Level 3|r]
-}
-
-STRING 4129
-// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
-{
-Reveals the area of the map that it is cast upon for <AOfs,Dur1> seconds. Also reveals invisible units.
 }
 
 STRING 4138
@@ -11063,30 +11036,6 @@ STRING 4185
 [Thrall] Reinforced Defenses
 }
 
-STRING 4186
-// Abilities: A071 ([Thrall] Elemental Resistance), Name (Name)
-{
-[Thrall] Elemental Resistance
-}
-
-STRING 4187
-// Abilities: A071 ([Thrall] Elemental Resistance), Tip (Tooltip - Normal)
-{
-Elemental Resistance
-}
-
-STRING 4188
-// Upgrades: R02D (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
-{
-[Thrall] Elemental Resistance
-}
-
-STRING 4189
-// Upgrades: R02D (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
-{
-Upgrade to Elemental Resistance
-}
-
 STRING 4190
 // Abilities: A072 ([Thrall] Reinforced Burrows Upgrade), Name (Name)
 {
@@ -11171,12 +11120,6 @@ STRING 4203
 Learn Whirling Elements - [|cffffcc00Level %d|r]
 }
 
-STRING 4204
-// Abilities: A075 ([Thrall] Elemental Destruction), Researchubertip (Tooltip - Learn - Extended)
-{
-Reveals the area of the map that it is cast upon. Also reveals invisible units. |n|n|cffffcc00Level 1|r - Reveals a small area. |n|cffffcc00Level 2|r - Reveals a large area. |n|cffffcc00Level 3|r - Reveals a huge area.
-}
-
 STRING 4205
 // Abilities: A075 ([Thrall] Elemental Destruction), Tip (Tooltip - Normal)
 {
@@ -11193,26 +11136,6 @@ STRING 4207
 // Abilities: A075 ([Thrall] Elemental Destruction), Tip (Tooltip - Normal)
 {
 Whirling Elements - [|cffffcc00Level 3|r]
-}
-
-STRING 4209
-// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Overload
-}
-
-STRING 4210
-// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
-{
-Shatter the totem to summon an elemental corresponding to its specialization:
-
-Fire Elemental: Focuses on damage, attacking from a distance.
-Water Elemental: Specializes in healing, providing support from range.
-Earth Elemental: Excels in siege and damage absorption, engaging in melee combat.
-Wind Elemental: Adds extra attacks against air units, striking from afar.
-
-
-If summoned under the effect of Whirling Elements, the elemental will remain active for a longer duration.
 }
 
 STRING 4211
@@ -11532,12 +11455,6 @@ STRING 4285
 The summoning point must be within line of sight!
 }
 
-STRING 4287
-// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
-{
-Cost - 5 gold, 15 lumber per each placed totems
-}
-
 STRING 4288
 // Abilities: A07F ([Thrall] Water Ring), Name (Name)
 {
@@ -11717,7 +11634,7 @@ Add +7 damage
 }
 
 STRING 4319
-// Abilities: A07H ([Thrall] Next Page), Hotkey (Hotkey - Normal)
+// Abilities: A06V ([Thrall] Whirling Elements), Researchhotkey (Hotkey - Learn)
 {
 V
 }
@@ -11836,14 +11753,6 @@ STRING 4338
 // Upgrades: R02S (Brute Strength), Tip (Tooltip)
 {
 Research Windfury Weapon
-}
-
-STRING 4339
-// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add +10% speed attack
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Raider
 }
 
 STRING 4340
@@ -11994,12 +11903,6 @@ STRING 4371
 // Abilities: A07M ([Thrall] Counterstrike Totem), EditorSuffix (Editor Suffix)
 {
 (Amulet Upg)
-}
-
-STRING 4372
-// Upgrades: R02D (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
-{
-Add magical invulnerability to the totem
 }
 
 STRING 4373
@@ -13915,5 +13818,169 @@ STRING 4690
 // Upgrades: R02W (Envenomed Spears), EditorSuffix (Editor Suffix)
 {
 (Wind Rider)
+}
+
+STRING 4697
+// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +20% speed attack
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 4698
+// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Replaces all totems on the map and grants the ability:
+Restores 1% per second hit points to nearby friendly units.
+}
+
+STRING 4700
+// Abilities: A06V ([Thrall] Whirling Elements), Researchubertip (Tooltip - Learn - Extended)
+{
+Overcharges the totem with spiritual energy, enhancing its abilities.
+
+|cffffcc00Level 1|r – Short duration (15 seconds)
+|cffffcc00Level 2|r – Medium duration (25 seconds)
+|cffffcc00Level 3|r – Long duration (35 seconds)
+
+Totems:
+|cFFFF8940Totem of Wrath|r: Gains the ability to attack enemies within range.
+|cFF0099FFHealing Tide Totem|r: Soothes the spirits, enhancing the totem's healing capabilities.
+|cFFA98548Earthbind Totem|r: Grounds the totem, additionally reducing enemy attack speed.
+|cFFCDDBFFWind Rush Totem|r: Begins grounding negative spells and effects.
+}
+
+STRING 4701
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the totem with elemental forces, unlocking new abilities and enhancing its effects for 15 seconds.
+
+Totems:
+|cFFFF8940Totem of Wrath|r: Gains the ability to attack enemies within range.
+|cFF0099FFHealing Tide Totem|r: Soothes the spirits, enhancing the totem's healing capabilities.
+|cFFA98548Earthbind Totem|r: Grounds the totem, additionally reducing enemy attack speed.
+|cFFCDDBFFWind Rush Totem|r: Begins grounding negative spells and effects.
+}
+
+STRING 4702
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the totem with elemental forces, unlocking new abilities and enhancing its effects for 25 seconds.
+
+Totems:
+|cFFFF8940Totem of Wrath|r: Gains the ability to attack enemies within range.
+|cFF0099FFHealing Tide Totem|r: Soothes the spirits, enhancing the totem's healing capabilities.
+|cFFA98548Earthbind Totem|r: Grounds the totem, additionally reducing enemy attack speed.
+|cFFCDDBFFWind Rush Totem|r: Begins grounding negative spells and effects.
+}
+
+STRING 4703
+// Abilities: A06V ([Thrall] Whirling Elements), Ubertip (Tooltip - Normal - Extended)
+{
+Overcharges the totem with elemental forces, unlocking new abilities and enhancing its effects for 35 seconds.
+
+Totems:
+|cFFFF8940Totem of Wrath|r: Gains the ability to attack enemies within range.
+|cFF0099FFHealing Tide Totem|r: Soothes the spirits, enhancing the totem's healing capabilities.
+|cFFA98548Earthbind Totem|r: Grounds the totem, additionally reducing enemy attack speed.
+|cFFCDDBFFWind Rush Totem|r: Begins grounding negative spells and effects.
+}
+
+STRING 4705
+// Abilities: S00C ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 4706
+// Abilities: S00C ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Earth Overload)
+}
+
+STRING 4707
+// Abilities: S00D ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 4708
+// Abilities: S00D ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Air Overload)
+}
+
+STRING 4709
+// Abilities: S00E ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 4710
+// Abilities: S00E ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Fire Overload)
+}
+
+STRING 4711
+// Abilities: S00F ([Thrall] Switch), Name (Name)
+{
+[Thrall] Switch
+}
+
+STRING 4712
+// Abilities: S00F ([Thrall] Switch), EditorSuffix (Editor Suffix)
+{
+(Water Overload)
+}
+
+STRING 4714
+// Abilities: A06D ([Thrall] Place a Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Place a totem in any visible area of the map.
+
+Cost: The first totem is free. Each subsequent totem increases the cost by 5 gold and 15 lumber.
+}
+
+STRING 4715
+// Abilities: A06V ([Thrall] Whirling Elements), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 4716
+// Abilities: A07H ([Thrall] Next Page), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 4717
+// Abilities: A075 ([Thrall] Elemental Destruction), Ubertip (Tooltip - Normal - Extended)
+{
+Shatter the totem to summon an elemental corresponding to its specialization:
+
+|cFFFF8940Fire Elemental|r: Focuses on damage, attacking from a distance.
+|cFF0099FFWater Elemental|r: Specializes in healing, providing support from range.
+|cFFA98548Earth Elemental|r: Excels in siege and damage absorption, engaging in melee combat.
+|cFFCDDBFFWind Elemental|r: Adds extra attacks against air units, striking from afar.
+
+The elemental will remain active for 35 seconds by default. If summoned under the effect of Whirling Elements, the elemental will remain active for 60 seconds and the totem will return to its previous form instead of being destroyed.
+}
+
+STRING 4718
+// Units: e002 ([Tyrande] Entangled Gold Mine), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#gold
+|R
+A cluster of roots that allows wisps to mine gold from goldmines.
+}
+
+STRING 4719
+// Units: e00G ([Tyrande] Dryad), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Anti-spellcaster that has a poison attack which slows and damages enemy units. Can learn Abolish Magic. |n|n|cffffcc00Attacks land and air units.|r
 }
 
