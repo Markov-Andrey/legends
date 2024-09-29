@@ -10,7 +10,10 @@ Coop Mode (2)
 
 STRING 3
 {
-Syndicate occupies remote settlements and relies on smuggling to survive. Stonebeard needs heroes to disrupt their supplies and restore order. The heroes must work quickly to dismantle the Syndicate's operations before they cause more harm to the region.
+The Syndicate is smuggling supplies through remote settlements. Stonebeard calls on heroes to disrupt their operations and restore order.
+
+Objective: Stop 5 waves of caravans
+Defeat: Let 5 caravan horses pass
 }
 
 STRING 4
