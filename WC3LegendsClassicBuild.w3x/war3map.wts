@@ -10417,7 +10417,7 @@ A
 }
 
 STRING 4015
-// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
+// Abilities: A04K ([Wrynn] Portal to Stormwind), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -11575,7 +11575,7 @@ A
 }
 
 STRING 4308
-// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Hotkey (Hotkey - Normal)
+// Abilities: A04L ([Wrynn] Portal to Stormwind), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -13354,7 +13354,7 @@ A
 }
 
 STRING 4627
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -13985,5 +13985,43 @@ STRING 4719
 |cffffcc00#ranged
 |R
 Anti-spellcaster that has a poison attack which slows and damages enemy units. Can learn Abolish Magic. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 4720
+// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 4721
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 4722
+// Abilities: A03E ([Wrynn] Bastion Reinforcement), Ubertip (Tooltip - Normal - Extended)
+{
+This structure can ignore any damage exceeding 30 from a single attack, protecting itself from excessive force.
+}
+
+STRING 4723
+// Upgrades: R01D (Reinforced Defenses), Ubertip (Tooltip - Extended)
+{
+Upgrades all Towers. This structure ignores any damage over 30 per attack, shielding itself from excessive force.
+
+
+}
+
+STRING 4725
+// Items: I00B ([Wrynn] Gold +5), Name (Name)
+{
+[Wrynn] Gold +5
+}
+
+STRING 4726
+// Abilities: A00F ([Wrynn] Gold +5), Name (Name)
+{
+[Wrynn] Gold +5
 }
 
