@@ -9102,14 +9102,6 @@ STRING 3742
 A well with a maximum mana pool gives an additional +0.2 mana to the Altar of Elune
 }
 
-STRING 3746
-// Abilities: A05I ([Tyrande] Gift Of Elune), Ubertip (Tooltip - Normal - Extended)
-{
-No effects during the day
-
-|cFF005DFFNight:|R Grants 1 forest every 2 seconds to you and your ally during the night.
-}
-
 STRING 3747
 // Abilities: A05K ([Tyrande] Shadow Meld), Name (Name)
 {
@@ -14101,5 +14093,25 @@ STRING 4743
 // Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
 Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Trail of Light.
+}
+
+STRING 4744
+// Items: I00C ([Tyrande] Lumber +1), Name (Name)
+{
+[Tyrande] Lumber +1
+}
+
+STRING 4745
+// Abilities: A00I ([Tyrande] Lumber +1), Name (Name)
+{
+[Tyrande] Lumber +1
+}
+
+STRING 4746
+// Abilities: A05I ([Tyrande] Gift Of Elune), Ubertip (Tooltip - Normal - Extended)
+{
+No effects during the day
+
+|cFF005DFFNight:|R Grants 1 forest every 2 seconds to you and your ally during the night in Town Hall.
 }
 
