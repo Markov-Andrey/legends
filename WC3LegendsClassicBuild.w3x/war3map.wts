@@ -2520,12 +2520,6 @@ STRING 1902
 Upgrade to Blessed Armor
 }
 
-STRING 1903
-// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
-{
-Further increases the armor of Militia, Footmen, Spellbreakers, Knights, Flying Machines and Siege Engines.
-}
-
 STRING 1904
 // Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
@@ -2670,18 +2664,6 @@ STRING 1953
 Templar Master Training
 }
 
-STRING 1954
-// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
-}
-
-STRING 1955
-// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Polymorph.
-}
-
 STRING 1956
 // Abilities: A00W ([Uther] Magic Sentry), Name (Name)
 {
@@ -2692,12 +2674,6 @@ STRING 1959
 // Upgrades: R00Z (Flying Machine Bombs), Tip (Tooltip)
 {
 Research Hammer of Justice
-}
-
-STRING 1962
-// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
-{
-Increases the amount of lumber that Peasants can carry by <R00B,mod1>.
 }
 
 STRING 1963
@@ -14023,5 +13999,107 @@ STRING 4726
 // Abilities: A00F ([Wrynn] Gold +5), Name (Name)
 {
 [Wrynn] Gold +5
+}
+
+STRING 4727
+// Upgrades: R00B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of lumber that Peasants can carry by 10.
+}
+
+STRING 4728
+// Upgrades: R00D (Defend), Ubertip (Tooltip - Extended)
+{
+Allows Protector to use the Mastery Defend ability, which increases their defensive capabilities against Piercing attacks.
+}
+
+STRING 4729
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Protector, Knight-Paladin, War Wagon and Gryphon Knights.
+}
+
+STRING 4730
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Protector, Knight-Paladin, War Wagon and Gryphon Knights.
+}
+
+STRING 4731
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Protector, Knight-Paladin, War Wagon and Gryphon Knights.
+}
+
+STRING 4732
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Protector, Knight-Paladin, War Wagon and Gryphon Knights.
+}
+
+STRING 4733
+// Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Protector, Knight-Paladin, War Wagon and Gryphon Knights.
+}
+
+STRING 4734
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Shotgunmen and Mortar Teams.
+}
+
+STRING 4735
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Shotgunmen and Mortar Teams.
+}
+
+STRING 4736
+// Upgrades: R00T (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Shotgunmen and Mortar Teams.
+}
+
+STRING 4737
+// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Increases the ranged attack damage of Shotgunmen and Mortar Teams.
+}
+
+STRING 4738
+// Upgrades: R00U (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Shotgunmen and Mortar Teams.
+}
+
+STRING 4739
+// Upgrades: R000 (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Shotgunman enters Rapid Fire mode, significantly increasing his attack speed. However, his movement speed is reduced, and he gains a <A07Y,DataA1>% chance to miss.
+}
+
+STRING 4740
+// Upgrades: R01B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of lumber that Peasants can carry by 10.
+}
+
+STRING 4741
+// Upgrades: R01B (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Further increases the amount of lumber that Peasants can carry by 10.
+}
+
+STRING 4742
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+}
+
+STRING 4743
+// Upgrades: R00X (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Templars' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Trail of Light.
 }
 
