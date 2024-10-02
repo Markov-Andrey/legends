@@ -11401,8 +11401,8 @@ function config takes nothing returns nothing
     call SetTeams(5)
     call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
-    call DefineStartLocation(0, 512.0, 448.0)
-    call DefineStartLocation(1, - 1472.0, 448.0)
+    call DefineStartLocation(0, 704.0, 448.0)
+    call DefineStartLocation(1, - 1728.0, 384.0)
     call DefineStartLocation(2, - 512.0, - 1216.0)
     call DefineStartLocation(3, - 5824.0, - 8704.0)
     call DefineStartLocation(4, - 7680.0, - 6208.0)
