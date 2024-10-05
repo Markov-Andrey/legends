@@ -33,8 +33,6 @@ rect array udg_Way2
 integer udg_Way1Count= 0
 integer udg_Way2Count= 0
 real udg_RacesRandom= 0
-integer udg_Time_Min= 0
-integer udg_Time_Sec= 0
 integer udg_CountGroup1= 0
 integer udg_SetRaces_Unit= 0
 integer udg_SetRaces_Building= 0
@@ -49,9 +47,6 @@ integer udg_CurrentCountDefeat= 0
 integer array udg_SetRaces_Upgrade
 integer udg_MaxCountDefeat= 0
 race udg_SetRaces= null
-string udg_ConsoleMessage
-string udg_ConsoleTrigger
-boolean udg_isTestVersion= false
 timer array udg_TimerAIUpgrade
 real udg_PingWaitTime= 0
 real udg_PingTimer= 0
@@ -67,12 +62,9 @@ group udg_UnitGroup25= null
 timer array udg_TimerWave
 real array udg_TimerMinWave
 real array udg_TimerMinAIUpg
-timerdialog udg_TimerWaveInterface= null
-timerdialog udg_TimerUpgInterface= null
 real udg_WaveRandomWay= 0
 timer array udg_TimerEnemyWave
 real array udg_TimerMinEnemyWave
-timerdialog udg_TimerEnemyInterface= null
 group udg_UnitGroup31= null
 integer udg_CountGroup3= 0
 group array udg_UnitGroupArray3
@@ -104,26 +96,6 @@ unit udg_LocalUnit= null
 
     // Generated
 camerasetup gg_cam_StartView= null
-trigger gg_trg_ConsoleLog= null
-trigger gg_trg_ExampleConsole= null
-trigger gg_trg_TimerMinus= null
-trigger gg_trg_TestWaveTimer1= null
-trigger gg_trg_TestWaveTimer2= null
-trigger gg_trg_TestWaveTimer3= null
-trigger gg_trg_TestWaveTimer4= null
-trigger gg_trg_TestWaveTimer5= null
-trigger gg_trg_TestWaveTimer6= null
-trigger gg_trg_TestUpgTimer1= null
-trigger gg_trg_TestUpgTimer2= null
-trigger gg_trg_TestUpgTimer3= null
-trigger gg_trg_TestUpgTimer4= null
-trigger gg_trg_TestEnemyTimer1= null
-trigger gg_trg_TestEnemyTimer2= null
-trigger gg_trg_TestEnemyTimer3= null
-trigger gg_trg_TestEnemyTimer4= null
-trigger gg_trg_TestEnemyTimer5= null
-trigger gg_trg_MultiboardStart= null
-trigger gg_trg_MultiboardPeriodicInfo= null
 trigger gg_trg_LimitUnits= null
 trigger gg_trg_StartResouces= null
 trigger gg_trg_StartCameraP1= null
@@ -282,9 +254,13 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_UiTimeIni= null
 
     // Random Groups
 integer array gg_rg_000
+framehandle g_TextFrame
+integer g_GameTimeSeconds= 0
+integer g_GameTimeMinutes= 0
 framehandle ThrallIcon= null
 integer MYTHIC_INDEX= 0
 framehandle Icon01= null
@@ -685,8 +661,6 @@ function InitGlobals takes nothing returns nothing
     set udg_Way1Count=0
     set udg_Way2Count=0
     set udg_RacesRandom=0
-    set udg_Time_Min=0
-    set udg_Time_Sec=0
     set udg_CountGroup1=0
     set udg_UnitGroup11=CreateGroup()
     set udg_UnitGroup12=CreateGroup()
@@ -702,9 +676,6 @@ function InitGlobals takes nothing returns nothing
     set udg_UnitGroup15=CreateGroup()
     set udg_CurrentCountDefeat=0
     set udg_MaxCountDefeat=0
-    set udg_ConsoleMessage=""
-    set udg_ConsoleTrigger=""
-    set udg_isTestVersion=false
     set i=0
     loop
         exitwhen ( i > 3 )
@@ -829,6 +800,44 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
+//***************************************************************************
+//*  UiTimer
+
+function UpdateCurrentTime takes nothing returns nothing
+    local string gameTimeText
+    set g_GameTimeSeconds=g_GameTimeSeconds + 1
+    
+    if g_GameTimeSeconds >= 60 then
+        set g_GameTimeSeconds=0
+        set g_GameTimeMinutes=g_GameTimeMinutes + 1
+    endif
+    
+    if ( g_GameTimeSeconds < 10 ) then
+        set gameTimeText=I2S(g_GameTimeMinutes) + ":0" + I2S(g_GameTimeSeconds)
+    else
+        set gameTimeText=I2S(g_GameTimeMinutes) + ":" + I2S(g_GameTimeSeconds)
+    endif
+    
+    call BlzFrameSetText(g_TextFrame, "Time: " + gameTimeText)
+endfunction
+
+function CreateCurrentTimeFrame takes nothing returns nothing
+    local framehandle parentFrame= BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
+    local trigger updateTimeTrigger= CreateTrigger()
+    
+    set g_TextFrame=BlzCreateFrameByType("TEXT", "MyTextFrame", parentFrame, "", 0)
+    call BlzFrameSetText(g_TextFrame, "")
+    call BlzFrameSetAbsPoint(g_TextFrame, FRAMEPOINT_CENTER, 0.465, 0.565)
+    call BlzFrameSetEnable(g_TextFrame, false)
+    call BlzFrameSetScale(g_TextFrame, 1.0)
+    
+    call TriggerRegisterTimerEvent(updateTimeTrigger, 1.00, true)
+    call TriggerAddAction(updateTimeTrigger, function UpdateCurrentTime)
+endfunction
+
+function UITimeIni takes nothing returns nothing
+    call CreateCurrentTimeFrame()
+endfunction
 //***************************************************************************
 //*  ThrallCurrentMode
 
@@ -1887,473 +1896,17 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-// Trigger: ConsoleLog
-//
-// Calling a system message with the name of the called trigger
-// Checks the passed parameters, if they are not present - gives default values
+// Trigger: UiTimeIni
 //===========================================================================
-function InitTrig_ConsoleLog takes nothing returns nothing
-    set gg_trg_ConsoleLog=CreateTrigger()
-    
-    if ( udg_isTestVersion == true ) then
-    
-        if ( udg_ConsoleTrigger == "" ) then
-            set udg_ConsoleTrigger="ConsoleLog"
-        endif
-    
-        if ( udg_ConsoleMessage == "" ) then
-            set udg_ConsoleMessage="[Run]"
-        endif
-
-        call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, "|cFF00C850<" + udg_ConsoleTrigger + ">|R " + udg_ConsoleMessage)
-    
-        set udg_ConsoleMessage=null
-        set udg_ConsoleTrigger=null
-    endif
+function Trig_UiTimeIni_Actions takes nothing returns nothing
+    call CreateCurrentTimeFrame() // INLINED!!
 endfunction
 
 //===========================================================================
-// Trigger: TimerMinus
-//===========================================================================
-function Trig_TimerMinus_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TimerMinus_Actions takes nothing returns nothing
-    set bj_forLoopAIndex=1
-    set bj_forLoopAIndexEnd=3
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_TimerMinAIUpg[GetForLoopIndexA()]=( udg_TimerMinAIUpg[GetForLoopIndexA()] - 1.00 )
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
-    set bj_forLoopAIndex=1
-    set bj_forLoopAIndexEnd=5
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_TimerMinWave[GetForLoopIndexA()]=( udg_TimerMinWave[GetForLoopIndexA()] - 1.00 )
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
-endfunction
-
-//===========================================================================
-function InitTrig_TimerMinus takes nothing returns nothing
-    set gg_trg_TimerMinus=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_TimerMinus, 1.00)
-    call TriggerAddCondition(gg_trg_TimerMinus, Condition(function Trig_TimerMinus_Conditions))
-    call TriggerAddAction(gg_trg_TimerMinus, function Trig_TimerMinus_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestWaveTimer1
-//===========================================================================
-function Trig_TestWaveTimer1_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestWaveTimer1_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ(udg_TimerWave[1], "TRIGSTR_1139")
-    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestWaveTimer1 takes nothing returns nothing
-    set gg_trg_TestWaveTimer1=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_TestWaveTimer1, 1.00)
-    call TriggerAddCondition(gg_trg_TestWaveTimer1, Condition(function Trig_TestWaveTimer1_Conditions))
-    call TriggerAddAction(gg_trg_TestWaveTimer1, function Trig_TestWaveTimer1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestWaveTimer2
-//===========================================================================
-function Trig_TestWaveTimer2_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestWaveTimer2_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
-    call CreateTimerDialogBJ(udg_TimerWave[2], "TRIGSTR_1140")
-    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestWaveTimer2 takes nothing returns nothing
-    set gg_trg_TestWaveTimer2=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer2, udg_TimerWave[1])
-    call TriggerAddCondition(gg_trg_TestWaveTimer2, Condition(function Trig_TestWaveTimer2_Conditions))
-    call TriggerAddAction(gg_trg_TestWaveTimer2, function Trig_TestWaveTimer2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestWaveTimer3
-//===========================================================================
-function Trig_TestWaveTimer3_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestWaveTimer3_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
-    call CreateTimerDialogBJ(udg_TimerWave[3], "TRIGSTR_1142")
-    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestWaveTimer3 takes nothing returns nothing
-    set gg_trg_TestWaveTimer3=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer3, udg_TimerWave[2])
-    call TriggerAddCondition(gg_trg_TestWaveTimer3, Condition(function Trig_TestWaveTimer3_Conditions))
-    call TriggerAddAction(gg_trg_TestWaveTimer3, function Trig_TestWaveTimer3_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestWaveTimer4
-//===========================================================================
-function Trig_TestWaveTimer4_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestWaveTimer4_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
-    call CreateTimerDialogBJ(udg_TimerWave[4], "TRIGSTR_1143")
-    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestWaveTimer4 takes nothing returns nothing
-    set gg_trg_TestWaveTimer4=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer4, udg_TimerWave[3])
-    call TriggerAddCondition(gg_trg_TestWaveTimer4, Condition(function Trig_TestWaveTimer4_Conditions))
-    call TriggerAddAction(gg_trg_TestWaveTimer4, function Trig_TestWaveTimer4_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestWaveTimer5
-//===========================================================================
-function Trig_TestWaveTimer5_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestWaveTimer5_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
-    call CreateTimerDialogBJ(udg_TimerWave[5], "TRIGSTR_1144")
-    set udg_TimerWaveInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestWaveTimer5 takes nothing returns nothing
-    set gg_trg_TestWaveTimer5=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer5, udg_TimerWave[4])
-    call TriggerAddCondition(gg_trg_TestWaveTimer5, Condition(function Trig_TestWaveTimer5_Conditions))
-    call TriggerAddAction(gg_trg_TestWaveTimer5, function Trig_TestWaveTimer5_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestWaveTimer6
-//===========================================================================
-function Trig_TestWaveTimer6_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestWaveTimer6_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerWaveInterface)
-endfunction
-
-//===========================================================================
-function InitTrig_TestWaveTimer6 takes nothing returns nothing
-    set gg_trg_TestWaveTimer6=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestWaveTimer6, udg_TimerWave[5])
-    call TriggerAddCondition(gg_trg_TestWaveTimer6, Condition(function Trig_TestWaveTimer6_Conditions))
-    call TriggerAddAction(gg_trg_TestWaveTimer6, function Trig_TestWaveTimer6_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestUpgTimer1
-//===========================================================================
-function Trig_TestUpgTimer1_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestUpgTimer1_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ(udg_TimerAIUpgrade[1], "TRIGSTR_1146")
-    set udg_TimerUpgInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestUpgTimer1 takes nothing returns nothing
-    set gg_trg_TestUpgTimer1=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_TestUpgTimer1, 1.00)
-    call TriggerAddCondition(gg_trg_TestUpgTimer1, Condition(function Trig_TestUpgTimer1_Conditions))
-    call TriggerAddAction(gg_trg_TestUpgTimer1, function Trig_TestUpgTimer1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestUpgTimer2
-//===========================================================================
-function Trig_TestUpgTimer2_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestUpgTimer2_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerUpgInterface)
-    call CreateTimerDialogBJ(udg_TimerAIUpgrade[2], "TRIGSTR_1147")
-    set udg_TimerUpgInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestUpgTimer2 takes nothing returns nothing
-    set gg_trg_TestUpgTimer2=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestUpgTimer2, udg_TimerAIUpgrade[1])
-    call TriggerAddCondition(gg_trg_TestUpgTimer2, Condition(function Trig_TestUpgTimer2_Conditions))
-    call TriggerAddAction(gg_trg_TestUpgTimer2, function Trig_TestUpgTimer2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestUpgTimer3
-//===========================================================================
-function Trig_TestUpgTimer3_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestUpgTimer3_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerUpgInterface)
-    call CreateTimerDialogBJ(udg_TimerAIUpgrade[3], "TRIGSTR_1148")
-    set udg_TimerUpgInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestUpgTimer3 takes nothing returns nothing
-    set gg_trg_TestUpgTimer3=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestUpgTimer3, udg_TimerAIUpgrade[2])
-    call TriggerAddCondition(gg_trg_TestUpgTimer3, Condition(function Trig_TestUpgTimer3_Conditions))
-    call TriggerAddAction(gg_trg_TestUpgTimer3, function Trig_TestUpgTimer3_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestUpgTimer4
-//===========================================================================
-function Trig_TestUpgTimer4_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestUpgTimer4_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerUpgInterface)
-endfunction
-
-//===========================================================================
-function InitTrig_TestUpgTimer4 takes nothing returns nothing
-    set gg_trg_TestUpgTimer4=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestUpgTimer4, udg_TimerAIUpgrade[3])
-    call TriggerAddCondition(gg_trg_TestUpgTimer4, Condition(function Trig_TestUpgTimer4_Conditions))
-    call TriggerAddAction(gg_trg_TestUpgTimer4, function Trig_TestUpgTimer4_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestEnemyTimer1
-//===========================================================================
-function Trig_TestEnemyTimer1_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestEnemyTimer1_Actions takes nothing returns nothing
-    call CreateTimerDialogBJ(udg_TimerEnemyWave[1], "TRIGSTR_1151")
-    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestEnemyTimer1 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer1=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_TestEnemyTimer1, 1.00)
-    call TriggerAddCondition(gg_trg_TestEnemyTimer1, Condition(function Trig_TestEnemyTimer1_Conditions))
-    call TriggerAddAction(gg_trg_TestEnemyTimer1, function Trig_TestEnemyTimer1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestEnemyTimer2
-//===========================================================================
-function Trig_TestEnemyTimer2_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestEnemyTimer2_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
-    call CreateTimerDialogBJ(udg_TimerEnemyWave[2], "TRIGSTR_1152")
-    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestEnemyTimer2 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer2=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer2, udg_TimerEnemyWave[1])
-    call TriggerAddCondition(gg_trg_TestEnemyTimer2, Condition(function Trig_TestEnemyTimer2_Conditions))
-    call TriggerAddAction(gg_trg_TestEnemyTimer2, function Trig_TestEnemyTimer2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestEnemyTimer3
-//===========================================================================
-function Trig_TestEnemyTimer3_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestEnemyTimer3_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
-    call CreateTimerDialogBJ(udg_TimerEnemyWave[3], "TRIGSTR_1153")
-    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestEnemyTimer3 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer3=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer3, udg_TimerEnemyWave[2])
-    call TriggerAddCondition(gg_trg_TestEnemyTimer3, Condition(function Trig_TestEnemyTimer3_Conditions))
-    call TriggerAddAction(gg_trg_TestEnemyTimer3, function Trig_TestEnemyTimer3_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestEnemyTimer4
-//===========================================================================
-function Trig_TestEnemyTimer4_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestEnemyTimer4_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
-    call CreateTimerDialogBJ(udg_TimerEnemyWave[4], "TRIGSTR_1154")
-    set udg_TimerEnemyInterface=GetLastCreatedTimerDialogBJ()
-endfunction
-
-//===========================================================================
-function InitTrig_TestEnemyTimer4 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer4=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer4, udg_TimerEnemyWave[3])
-    call TriggerAddCondition(gg_trg_TestEnemyTimer4, Condition(function Trig_TestEnemyTimer4_Conditions))
-    call TriggerAddAction(gg_trg_TestEnemyTimer4, function Trig_TestEnemyTimer4_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: TestEnemyTimer5
-//===========================================================================
-function Trig_TestEnemyTimer5_Conditions takes nothing returns boolean
-    if ( not ( udg_isTestVersion == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_TestEnemyTimer5_Actions takes nothing returns nothing
-    call DestroyTimerDialogBJ(udg_TimerEnemyInterface)
-endfunction
-
-//===========================================================================
-function InitTrig_TestEnemyTimer5 takes nothing returns nothing
-    set gg_trg_TestEnemyTimer5=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_TestEnemyTimer5, udg_TimerEnemyWave[4])
-    call TriggerAddCondition(gg_trg_TestEnemyTimer5, Condition(function Trig_TestEnemyTimer5_Conditions))
-    call TriggerAddAction(gg_trg_TestEnemyTimer5, function Trig_TestEnemyTimer5_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: MultiboardStart
-//===========================================================================
-function Trig_MultiboardStart_Actions takes nothing returns nothing
-    call CreateMultiboardBJ(2, 1, "TRIGSTR_1046")
-    call MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 1, 1, true, false)
-    call MultiboardSetItemStyleBJ(GetLastCreatedMultiboard(), 2, 1, true, false)
-    call MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 1, 1, 5.00)
-    call MultiboardSetItemWidthBJ(GetLastCreatedMultiboard(), 2, 1, 5.00)
-    call MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 1, 1, "TRIGSTR_1052")
-    call MultiboardDisplayBJ(true, GetLastCreatedMultiboard())
-endfunction
-
-//===========================================================================
-function InitTrig_MultiboardStart takes nothing returns nothing
-    set gg_trg_MultiboardStart=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_MultiboardStart, 0.01)
-    call TriggerAddAction(gg_trg_MultiboardStart, function Trig_MultiboardStart_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: MultiboardPeriodicInfo
-//===========================================================================
-function Trig_MultiboardPeriodicInfo_Func001C takes nothing returns boolean
-    if ( not ( udg_Time_Sec < 60 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_MultiboardPeriodicInfo_Func002C takes nothing returns boolean
-    if ( not ( udg_Time_Sec < 10 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_MultiboardPeriodicInfo_Actions takes nothing returns nothing
-    if ( Trig_MultiboardPeriodicInfo_Func001C() ) then
-        set udg_Time_Sec=( udg_Time_Sec + 1 )
-    else
-        set udg_Time_Min=( udg_Time_Min + 1 )
-        set udg_Time_Sec=0
-    endif
-    if ( Trig_MultiboardPeriodicInfo_Func002C() ) then
-        call MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 1, ( I2S(udg_Time_Min) + ( ":0" + I2S(udg_Time_Sec) ) ))
-    else
-        call MultiboardSetItemValueBJ(GetLastCreatedMultiboard(), 2, 1, ( I2S(udg_Time_Min) + ( ":" + I2S(udg_Time_Sec) ) ))
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_MultiboardPeriodicInfo takes nothing returns nothing
-    set gg_trg_MultiboardPeriodicInfo=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_MultiboardPeriodicInfo, 1.00)
-    call TriggerAddAction(gg_trg_MultiboardPeriodicInfo, function Trig_MultiboardPeriodicInfo_Actions)
+function InitTrig_UiTimeIni takes nothing returns nothing
+    set gg_trg_UiTimeIni=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_UiTimeIni, 0.01)
+    call TriggerAddAction(gg_trg_UiTimeIni, function Trig_UiTimeIni_Actions)
 endfunction
 
 //===========================================================================
@@ -2519,6 +2072,17 @@ function Trig_UnSelect_Func008C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_UnSelect_Func009Func002A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(true, 'A06B', GetEnumPlayer())
+endfunction
+
+function Trig_UnSelect_Func009C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01M' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_UnSelect_Actions takes nothing returns nothing
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
@@ -2538,6 +2102,10 @@ function Trig_UnSelect_Actions takes nothing returns nothing
     endif
     if ( Trig_UnSelect_Func008C() ) then
         call ForForce(GetPlayersAll(), function Trig_UnSelect_Func008Func002A)
+    else
+    endif
+    if ( Trig_UnSelect_Func009C() ) then
+        call ForForce(GetPlayersAll(), function Trig_UnSelect_Func009Func002A)
     else
     endif
 endfunction
@@ -3020,11 +2588,6 @@ function Trig_ArthasNewRuneSecond_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasNewRuneSecond_Actions takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="ArthasNewRuneSecond"
-    set udg_ConsoleMessage="New Rune"
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
     call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
     call DisableTrigger(GetTriggeringTrigger())
 endfunction
@@ -3049,11 +2612,6 @@ function Trig_ArthasNewRuneThree_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ArthasNewRuneThree_Actions takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="ArthasNewRuneThree"
-    set udg_ConsoleMessage="New Rune"
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
     call CreateNUnitsAtLoc(1, 'u002', udg_PlayerArthas, GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
     call DisableTrigger(GetTriggeringTrigger())
 endfunction
@@ -7286,21 +6844,21 @@ endfunction
 // 3 - Undead (51-75)
 // 4 - Night Elf (76-100)
 //===========================================================================
-function Trig_SetAIRace_Func003Func005Func004Func008C takes nothing returns boolean
+function Trig_SetAIRace_Func003Func002Func001Func005C takes nothing returns boolean
     if ( not ( udg_RacesRandom <= 100.00 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_SetAIRace_Func003Func005Func004C takes nothing returns boolean
+function Trig_SetAIRace_Func003Func002Func001C takes nothing returns boolean
     if ( not ( udg_RacesRandom <= 75.00 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_SetAIRace_Func003Func005C takes nothing returns boolean
+function Trig_SetAIRace_Func003Func002C takes nothing returns boolean
     if ( not ( udg_RacesRandom <= 50.00 ) ) then
         return false
     endif
@@ -7317,36 +6875,24 @@ endfunction
 function Trig_SetAIRace_Actions takes nothing returns nothing
     set udg_RacesRandom=GetRandomReal(0, 100.00)
     if ( Trig_SetAIRace_Func003C() ) then
-        // Console Log
-        set udg_ConsoleMessage="Human"
-        //  
         set udg_SetRaces=RACE_HUMAN
         set udg_SetRaces_Building='S00P'
         set udg_SetRaces_Hero='S00T'
         set udg_SetRaces_Unit='S001'
     else
-        if ( Trig_SetAIRace_Func003Func005C() ) then
-            // Console Log
-            set udg_ConsoleMessage="Orc"
-            //  
+        if ( Trig_SetAIRace_Func003Func002C() ) then
             set udg_SetRaces=RACE_ORC
             set udg_SetRaces_Building='S00Q'
             set udg_SetRaces_Hero='S00U'
             set udg_SetRaces_Unit='S000'
         else
-            if ( Trig_SetAIRace_Func003Func005Func004C() ) then
-                // Console Log
-                set udg_ConsoleMessage="Undead"
-                //  
+            if ( Trig_SetAIRace_Func003Func002Func001C() ) then
                 set udg_SetRaces=RACE_UNDEAD
                 set udg_SetRaces_Building='S00R'
                 set udg_SetRaces_Hero='S00W'
                 set udg_SetRaces_Unit='S00N'
             else
-                if ( Trig_SetAIRace_Func003Func005Func004Func008C() ) then
-                    // Console Log
-                    set udg_ConsoleMessage="Night Elf"
-                    //  
+                if ( Trig_SetAIRace_Func003Func002Func001Func005C() ) then
                     set udg_SetRaces=RACE_NIGHTELF
                     set udg_SetRaces_Building='S00S'
                     set udg_SetRaces_Hero='S00V'
@@ -7356,9 +6902,6 @@ function Trig_SetAIRace_Actions takes nothing returns nothing
             endif
         endif
     endif
-    // Console Log
-    set udg_ConsoleTrigger="SetAIRace"
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
 endfunction
 
 //===========================================================================
@@ -7612,11 +7155,6 @@ endfunction
 // Trigger: AddUpgradeT1
 //===========================================================================
 function Trig_AddUpgradeT1_Actions takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="AddUpgradeT1"
-    set udg_ConsoleMessage="Enemy upgrade"
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
     set bj_forLoopAIndex=0
     set bj_forLoopAIndexEnd=5
     loop
@@ -7640,11 +7178,6 @@ endfunction
 // Multi-level improvements are also taken into account
 //===========================================================================
 function Trig_AddUpgradeT2_Actions takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="AddUpgradeT2"
-    set udg_ConsoleMessage="Enemy upgrade"
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
     set bj_forLoopAIndex=6
     set bj_forLoopAIndexEnd=13
     loop
@@ -7684,11 +7217,6 @@ endfunction
 // Multi-level improvements are also taken into account
 //===========================================================================
 function Trig_AddUpgradeT3_Actions takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="AddUpgradeT3"
-    set udg_ConsoleMessage="Enemy upgrade"
-    call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-    //  
     set bj_forLoopAIndex=14
     set bj_forLoopAIndexEnd=21
     loop
@@ -9204,13 +8732,6 @@ function Trig_UnitsInitializationWay1_Func004A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_UnitsInitializationWay1_Func011A takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="UnitsInitializationWay1"
-    set udg_ConsoleMessage=" - " + GetUnitName(GetEnumUnit())
-    call TriggerExecute(gg_trg_ConsoleLog)
-endfunction
-
 function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
     local group g= GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy)
     //local location l = GetRectCenter(gg_rct_Way1_p1)
@@ -9222,13 +8743,6 @@ function Trig_UnitsInitializationWay1_Actions takes nothing returns nothing
 
     // Add units to group and order attack
     call ForGroupBJ(g, function Trig_UnitsInitializationWay1_Func004A)
-    //call GroupPointOrderLocBJ(udg_UnitGroupArray1[i], "attack", l)
-    
-    // Console log
-    set udg_ConsoleTrigger="UnitsInitializationWay1"
-    set udg_ConsoleMessage="Group " + I2S(i) + ":"
-    call TriggerExecute(gg_trg_ConsoleLog)
-    call ForGroupBJ(udg_UnitGroupArray1[i], function Trig_UnitsInitializationWay1_Func011A)
 
     // Cleanup
     //call RemoveLocation(l)
@@ -9251,25 +8765,11 @@ function Trig_UnitsInitializationWay2_Func004A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_UnitsInitializationWay2_Func011A takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="UnitsInitializationWay2"
-    set udg_ConsoleMessage=( " - " + GetUnitName(GetEnumUnit()) )
-    call TriggerExecute(gg_trg_ConsoleLog)
-endfunction
-
 function Trig_UnitsInitializationWay2_Actions takes nothing returns nothing
     // Units Initialization
     call TriggerExecute(gg_trg_AddUnitBuildingHero)
     call PolledWait(0.01)
     call ForGroupBJ(GetUnitsInRectOfPlayer(udg_SetZone, udg_SetEnemy), function Trig_UnitsInitializationWay2_Func004A)
-    //call GroupPointOrderLocBJ( udg_UnitGroupArray2[udg_CountGroup2], "attack", GetRectCenter(gg_rct_Way2_p1) )
-    // Console Log
-    set udg_ConsoleTrigger="UnitsInitializationWay2"
-    set udg_ConsoleMessage=( ( "Group " + I2S(udg_CountGroup2) ) + ":" )
-    call TriggerExecute(gg_trg_ConsoleLog)
-    //  
-    call ForGroupBJ(udg_UnitGroupArray2[udg_CountGroup2], function Trig_UnitsInitializationWay2_Func011A)
 endfunction
 
 //===========================================================================
@@ -9288,13 +8788,6 @@ function Trig_UnitsInitializationWay3_Func005A takes nothing returns nothing
     if GetOwningPlayer(GetEnumUnit()) == udg_SetEnemy then
         call GroupAddUnit(udg_UnitGroupArray3[udg_CountGroup3], GetEnumUnit())
     endif
-endfunction
-
-function Trig_UnitsInitializationWay3_Func012A takes nothing returns nothing
-    // Console Log
-    set udg_ConsoleTrigger="UnitsInitializationWay3"
-    set udg_ConsoleMessage=" - " + GetUnitName(GetEnumUnit())
-    call TriggerExecute(gg_trg_ConsoleLog)
 endfunction
 
 function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
@@ -9319,14 +8812,6 @@ function Trig_UnitsInitializationWay3_Actions takes nothing returns nothing
     //set l = GetRectCenter(gg_rct_EnemyWayAttackPoint)
     call ForGroupBJ(g, function Trig_UnitsInitializationWay3_Func005A)
     //call GroupPointOrderLocBJ(udg_UnitGroupArray3[udg_CountGroup3], "attack", l)
-
-    // Console log
-    set udg_ConsoleTrigger="UnitsInitializationWay3"
-    set udg_ConsoleMessage="Group " + I2S(udg_CountGroup3) + ":"
-    call TriggerExecute(gg_trg_ConsoleLog)
-    
-    // Console log for units
-    call ForGroupBJ(udg_UnitGroupArray3[udg_CountGroup3], function Trig_UnitsInitializationWay3_Func012A)
 
     // Cleanup
     //call RemoveLocation(l)
@@ -10224,11 +9709,6 @@ function Trig_Wave2_Actions takes nothing returns nothing
         call TriggerExecute(gg_trg_CreateSquadWave2n1)
         call ConditionalTriggerExecute(gg_trg_UnitsInitializationWay2)
     else
-        // Console Log
-        set udg_ConsoleTrigger="Wave2"
-        set udg_ConsoleMessage="Way1"
-        call ConditionalTriggerExecute(gg_trg_ConsoleLog)
-        //  
         call ConditionalTriggerExecute(gg_trg_Way1Ping)
         set udg_SetZone=udg_Way1[0]
         //  
@@ -11046,25 +10526,7 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_ConsoleLog()
-    call InitTrig_TimerMinus()
-    call InitTrig_TestWaveTimer1()
-    call InitTrig_TestWaveTimer2()
-    call InitTrig_TestWaveTimer3()
-    call InitTrig_TestWaveTimer4()
-    call InitTrig_TestWaveTimer5()
-    call InitTrig_TestWaveTimer6()
-    call InitTrig_TestUpgTimer1()
-    call InitTrig_TestUpgTimer2()
-    call InitTrig_TestUpgTimer3()
-    call InitTrig_TestUpgTimer4()
-    call InitTrig_TestEnemyTimer1()
-    call InitTrig_TestEnemyTimer2()
-    call InitTrig_TestEnemyTimer3()
-    call InitTrig_TestEnemyTimer4()
-    call InitTrig_TestEnemyTimer5()
-    call InitTrig_MultiboardStart()
-    call InitTrig_MultiboardPeriodicInfo()
+    call InitTrig_UiTimeIni()
     call InitTrig_LimitUnits()
     call InitTrig_StartResouces()
     call InitTrig_StartCameraP1()

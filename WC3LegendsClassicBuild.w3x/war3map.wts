@@ -767,16 +767,6 @@ STRING 1043
 Add Hero
 }
 
-STRING 1046
-{
-Time
-}
-
-STRING 1052
-{
-Time:
-}
-
 STRING 1065
 // Units: h00P ([Uther] Champion of Holy), Tip (Tooltip - Basic)
 {
@@ -906,66 +896,6 @@ Build Garrison
 STRING 1131
 {
 Stonebeard
-}
-
-STRING 1139
-{
-MainQuest Wave 1
-}
-
-STRING 1140
-{
-MainQuest Wave 2
-}
-
-STRING 1142
-{
-MainQuest Wave 3
-}
-
-STRING 1143
-{
-MainQuest Wave 4
-}
-
-STRING 1144
-{
-MainQuest Wave 5
-}
-
-STRING 1146
-{
-Upg lvl 1
-}
-
-STRING 1147
-{
-Upg lvl 2
-}
-
-STRING 1148
-{
-Upg lvl 3
-}
-
-STRING 1151
-{
-Attack 1
-}
-
-STRING 1152
-{
-Attack 2
-}
-
-STRING 1153
-{
-Attack 3
-}
-
-STRING 1154
-{
-Attack 4
 }
 
 STRING 1159
