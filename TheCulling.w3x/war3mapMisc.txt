@@ -1,7 +1,0 @@
-[Misc]
-ItemStackingEnabled=1
-MaxBldgSpeed=522
-MaxUnitSpeed=522
-MinBldgSpeed=1
-MinUnitSpeed=1
-
