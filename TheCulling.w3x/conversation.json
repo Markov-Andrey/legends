@@ -1,0 +1,219 @@
+{
+    "stringTablePath": "war3map.wts",
+    "conversation": {
+        "Intro Cinematic.Start Dialoge": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\human\\Arthas\\Arthas.mdl",
+                "speakerNameId": 475,
+                "speakerUnitID": "Hart",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06Arthas06.flac",
+                "dialogueId": 1281,
+                "animationLabel": "H06Arthas06",
+                "animationGroupLabel": "Map-Arthas",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/Arthas.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Mid Cinematic - Malganis Intro.Mid Cinematic Malganis Intro": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\undead\\HeroDreadLord\\HeroDreadLord.mdl",
+                "speakerNameId": 982,
+                "speakerUnitID": "Umal",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06MalGanis31.flac",
+                "dialogueId": 983,
+                "animationLabel": "H06MalGanis31",
+                "animationGroupLabel": "Map-MalGanis",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/MalGanis.animset",
+                "animationSetFilepathMapRelative": false
+            },
+            {
+                "conversationOrder": 1,
+                "speakerModel": "units\\undead\\HeroDreadLord\\HeroDreadLord.mdl",
+                "speakerNameId": 984,
+                "speakerUnitID": "Umal",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06MalGanis32.flac",
+                "dialogueId": 985,
+                "animationLabel": "H06MalGanis32",
+                "animationGroupLabel": "Map-MalGanis",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/MalGanis.animset",
+                "animationSetFilepathMapRelative": false
+            },
+            {
+                "conversationOrder": 2,
+                "speakerModel": "units\\human\\Arthas\\Arthas.mdl",
+                "speakerNameId": 1305,
+                "speakerUnitID": "H004",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06Arthas33.flac",
+                "dialogueId": 1294,
+                "animationLabel": "H06Arthas33",
+                "animationGroupLabel": "Map-Arthas",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/Arthas.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "End Victory Cinematic.Victory Cinematic": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\human\\Arthas\\Arthas.mdl",
+                "speakerNameId": 993,
+                "speakerUnitID": "Hart",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06Arthas43.flac",
+                "dialogueId": 994,
+                "animationLabel": "H06Arthas43",
+                "animationGroupLabel": "Map-Arthas",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/Arthas.animset",
+                "animationSetFilepathMapRelative": false
+            },
+            {
+                "conversationOrder": 1,
+                "speakerModel": "units\\undead\\HeroDreadLord\\HeroDreadLord.mdl",
+                "speakerNameId": 995,
+                "speakerUnitID": "Umal",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06MalGanis44.flac",
+                "dialogueId": 996,
+                "animationLabel": "H06MalGanis44",
+                "animationGroupLabel": "Map-MalGanis",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/MalGanis.animset",
+                "animationSetFilepathMapRelative": false
+            },
+            {
+                "conversationOrder": 2,
+                "speakerModel": "units\\undead\\HeroDreadLord\\HeroDreadLord.mdl",
+                "speakerNameId": 997,
+                "speakerUnitID": "Umal",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06MalGanis45.flac",
+                "dialogueId": 998,
+                "animationLabel": "H06MalGanis45",
+                "animationGroupLabel": "Map-MalGanis",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/MalGanis.animset",
+                "animationSetFilepathMapRelative": false
+            },
+            {
+                "conversationOrder": 3,
+                "speakerModel": "units\\human\\Arthas\\Arthas.mdl",
+                "speakerNameId": 999,
+                "speakerUnitID": "Hart",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06Arthas46.flac",
+                "dialogueId": 1000,
+                "animationLabel": "H06Arthas46",
+                "animationGroupLabel": "Map-Arthas",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/Arthas.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Failure Cinematic.Die Fool": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\undead\\HeroDreadLord\\HeroDreadLord.mdl",
+                "speakerNameId": 458,
+                "speakerUnitID": "Umal",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06MalGanis42.flac",
+                "dialogueId": 459,
+                "animationLabel": "H06MalGanis42",
+                "animationGroupLabel": "Map-MalGanis",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/MalGanis.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Arthas Forgive Me.Arthas Says Forgive Me Que": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\human\\Arthas\\Arthas.mdl",
+                "speakerNameId": 475,
+                "speakerUnitID": "Hart",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06Arthas30.flac",
+                "dialogueId": 476,
+                "animationLabel": "H06Arthas30",
+                "animationGroupLabel": "Map-Arthas",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/Arthas.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Militia .Militia Run Q": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\critters\\VillagerMan\\VillagerMan.mdl",
+                "speakerNameId": 927,
+                "speakerUnitID": "nC00",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06VillagerM28.flac",
+                "dialogueId": 928,
+                "animationLabel": "H06VillagerM28",
+                "animationGroupLabel": "Map-VillagerMan",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/VillagerMan.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Salramm the Fleshcrafter.Salramm Sound": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\undead\\Necromancer\\Necromancer.mdl",
+                "speakerNameId": 1344,
+                "speakerUnitID": "u002",
+                "soundFile": "sound/dialogue/humancampaign/human06/H06Necromancer20.flac",
+                "dialogueId": 1343,
+                "animationLabel": "H06Necromancer20",
+                "animationGroupLabel": "Map-Necromancer",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/Necromancer.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Citizens - Running.Citizen Discoverd01 Q": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\critters\\VillagerMan1\\VillagerMan1.mdl",
+                "speakerNameId": 1202,
+                "speakerUnitID": "nvl2",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06VillagerM23.flac",
+                "dialogueId": 1203,
+                "animationLabel": "H06VillagerM23",
+                "animationGroupLabel": "Map-VillagerMan1",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/VillagerMan1.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Citizens - Running.Citizen Discoverd02 Q": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\critters\\VillagerMan1\\VillagerMan1.mdl",
+                "speakerNameId": 1202,
+                "speakerUnitID": "nvl2",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06VillagerM23.flac",
+                "dialogueId": 1203,
+                "animationLabel": "H06VillagerM23",
+                "animationGroupLabel": "Map-VillagerMan1",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/VillagerMan1.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Citizens - Running.Citizen Discoverd03 Q": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\critters\\VillagerMan1\\VillagerMan1.mdl",
+                "speakerNameId": 1202,
+                "speakerUnitID": "nvl2",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06VillagerM23.flac",
+                "dialogueId": 1203,
+                "animationLabel": "H06VillagerM23",
+                "animationGroupLabel": "Map-VillagerMan1",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/VillagerMan1.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ],
+        "Malganis - Timer.Malganis Countdown Timer Hits 0": [
+            {
+                "conversationOrder": 0,
+                "speakerModel": "units\\undead\\HeroDreadLord\\HeroDreadLord.mdl",
+                "speakerNameId": 473,
+                "speakerUnitID": "Umal",
+                "soundFile": "Sound\\Dialogue\\HumanCampaign\\Human06\\H06MalGanis41.flac",
+                "dialogueId": 474,
+                "animationLabel": "H06MalGanis41",
+                "animationGroupLabel": "Map-MalGanis",
+                "animationSetFilepath": "Sound/Dialogue/FaceAnimation/Human06/FacialAnimation/MalGanis.animset",
+                "animationSetFilepathMapRelative": false
+            }
+        ]
+    }
+}
