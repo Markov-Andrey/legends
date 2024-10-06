@@ -1,13 +1,30 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader__eventTrigger= CreateTrigger()
-trigger FrameLoader__actionTrigger= CreateTrigger()
-timer FrameLoader__t= CreateTimer()
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
 //endglobals from REFORGEDUIMAKER
+//globals from RaceUnits:
+constant boolean LIBRARY_RaceUnits=true
+integer array Units_Human
+integer array Units_Orc
+integer array Units_Undead
+integer array Units_Nightelf
+
+integer array Buildings_Human
+integer array Buildings_Orc
+integer array Buildings_Undead
+integer array Buildings_Nightelf
+
+integer array Heroes_Human
+integer array Heroes_Orc
+integer array Heroes_Undead
+integer array Heroes_Nightelf
+//endglobals from RaceUnits
 //globals from THRALLUI:
 constant boolean LIBRARY_THRALLUI=true
 //endglobals from THRALLUI
@@ -16,18 +33,18 @@ constant boolean LIBRARY_TIMEUI=true
 //endglobals from TIMEUI
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
-framehandle CustomConsoleUI__idleWorkerButton
-framehandle CustomConsoleUI__idleWorkerButtonOverlay
-framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI__customInventoryCover
-framehandle CustomConsoleUI__customInventoryCoverParent
+framehandle CustomConsoleUI___idleWorkerButton
+framehandle CustomConsoleUI___idleWorkerButtonOverlay
+framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI___customInventoryCover
+framehandle CustomConsoleUI___customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI__dataPageSize= 11
+integer CustomConsoleUI___dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
         // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI__workerFace= true
+constant boolean CustomConsoleUI___workerFace= true
 //endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
@@ -96,6 +113,8 @@ integer udg_CountHorse3= 0
 integer udg_CountHorse4= 0
 integer udg_CountHorse5= 0
 unit udg_LocalUnit= null
+race udg_RACE_RANDOM= null
+integer udg_GAME_DIFFICULTY= 0
 
     // Generated
 camerasetup gg_cam_StartView= null
@@ -257,6 +276,7 @@ trigger gg_trg_EnemyWave3= null
 trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
+trigger gg_trg_ApiEnemyCreate= null
 
     // Random Groups
 integer array gg_rg_000
@@ -283,24 +303,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader__actionTrigger, func)
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
     endfunction
 
-    function FrameLoader__timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader__actionTrigger)
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
     endfunction
-    function FrameLoader__eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
     endfunction
-    function FrameLoader__init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -360,15 +380,150 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER__init takes nothing returns nothing
-        call REFORGEDUIMAKER__CreateIcons()
+    function REFORGEDUIMAKER___init takes nothing returns nothing
+        call REFORGEDUIMAKER___CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
+//library RaceUnits:
+
+    function RaceUnits___InitRaceUnits takes nothing returns nothing
+        set Units_Human[1]='hpea' // Peasant
+        set Units_Human[2]='hfoo' // Footman
+        set Units_Human[3]='hrif' // Rifleman
+        set Units_Human[4]='hmtm' // Mortar Team
+        set Units_Human[5]='hmpr' // Priest
+        set Units_Human[6]='hsor' // Sorceress
+        set Units_Human[7]='hspt' // Spellbreaker
+        set Units_Human[8]='hkni' // Knight
+        set Units_Human[9]='hgry' // Gryphon Knight
+        set Units_Human[10]='hdhw' // Dragonhawk Rider
+        set Units_Human[11]='hgyr' // Flying Machine
+        set Units_Human[12]='hmtt' // Siege Engine
+        
+        set Units_Orc[1]='opeo' // Peon
+        set Units_Orc[2]='ogru' // Grunt
+        set Units_Orc[3]='ohun' // Headhunter
+        set Units_Orc[4]='ocat' // Demolisher
+        set Units_Orc[5]='oshm' // Shaman
+        set Units_Orc[6]='odoc' // Witch Doctor
+        set Units_Orc[7]='ospw' // Spirit Walker
+        set Units_Orc[8]='orai' // Raider
+        set Units_Orc[9]='oyau' // Tauren
+        set Units_Orc[10]='owyv' // Wind Rider
+        set Units_Orc[11]='otbr' // Batrider
+        set Units_Orc[12]='okod' // Kodo Beast
+        
+        set Units_Undead[1]='uaco' // Acolyte
+        set Units_Undead[2]='ugho' // Ghoul
+        set Units_Undead[3]='ucry' // Crypt Fiend
+        set Units_Undead[4]='umtw' // Meat Wagon
+        set Units_Undead[5]='unec' // Necromancer
+        set Units_Undead[6]='uban' // Banshee
+        set Units_Undead[7]='uobs' // Obsidian Statue
+        set Units_Undead[8]='uabo' // Abomination
+        set Units_Undead[9]='ufro' // Frost Wyrm
+        set Units_Undead[10]='ubsp' // Destroyer
+        set Units_Undead[11]='ugar' // Gargoyle
+        
+        set Units_Nightelf[1]='ewsp' // Wisp
+        set Units_Nightelf[2]='earc' // Archer
+        set Units_Nightelf[3]='esen' // Huntress
+        set Units_Nightelf[4]='ebal' // Glaive Thrower
+        set Units_Nightelf[5]='edry' // Dryad
+        set Units_Nightelf[6]='edot' // Druid of the Talon
+        set Units_Nightelf[7]='edoc' // Druid of the Claw
+        set Units_Nightelf[8]='emtg' // Mountain Giant
+        set Units_Nightelf[9]='echm' // Chimaera
+        set Units_Nightelf[10]='ehpr' // Hippogryph Rider
+        set Units_Nightelf[11]='efdr' // Faerie Dragon
+        
+        set Buildings_Human[1]='htow' // Town Hall
+        set Buildings_Human[2]='hkee' // Keep
+        set Buildings_Human[3]='hcas' // Castle
+        set Buildings_Human[4]='hhou' // Farm
+        set Buildings_Human[5]='halt' // Altar of Kings
+        set Buildings_Human[6]='hbar' // Barracks
+        set Buildings_Human[7]='hars' // Arcane Sanctum
+        set Buildings_Human[8]='harm' // Workshop
+        set Buildings_Human[9]='hatw' // Arcane Tower
+        set Buildings_Human[10]='hgtw' // Guard Tower
+        set Buildings_Human[11]='hctw' // Cannon Tower
+        set Buildings_Human[12]='hlum' // Lumber Mill
+        set Buildings_Human[13]='hbla' // Blacksmith
+        set Buildings_Human[14]='hgra' // Gryphon Aviary
+        
+        set Buildings_Orc[1]='ogre' // Great Hall
+        set Buildings_Orc[2]='ostr' // Stronghold
+        set Buildings_Orc[3]='ofrt' // Fortress
+        set Buildings_Orc[4]='otrb' // Burrow
+        set Buildings_Orc[5]='oalt' // Altar of Storms
+        set Buildings_Orc[6]='obar' // Barracks
+        set Buildings_Orc[7]='osld' // Spirit Lodge
+        set Buildings_Orc[8]='obea' // Beastiary
+        set Buildings_Orc[9]='owtw' // Watch Tower
+        set Buildings_Orc[10]='owtw' // Watch Tower
+        set Buildings_Orc[11]='owtw' // Watch Tower
+        set Buildings_Orc[12]='ofor' // War Mill
+        set Buildings_Orc[13]='ofor' // War Mill
+        set Buildings_Orc[14]='otto' // Tauren Totem
+        
+        set Buildings_Undead[1]='unpl' // Necropolis
+        set Buildings_Undead[2]='unp1' // Halls of the Dead
+        set Buildings_Undead[3]='unp2' // Black Citadel
+        set Buildings_Undead[4]='uzig' // Ziggurat
+        set Buildings_Undead[5]='uaod' // Altar of Darkness
+        set Buildings_Undead[6]='usep' // Crypt
+        set Buildings_Undead[7]='utod' // Temple of the Damned
+        set Buildings_Undead[8]='uslh' // Slaughterhouse
+        set Buildings_Undead[9]='uzg2' // Nerubian Tower
+        set Buildings_Undead[10]='uzg1' // Spirit Tower
+        set Buildings_Undead[11]='uzg1' // Spirit Tower
+        set Buildings_Undead[12]='ugrv' // Graveyard
+        set Buildings_Undead[13]='ugrv' // Graveyard
+        set Buildings_Undead[14]='ubon' // Boneyard
+        
+        set Buildings_Nightelf[1]='etol' // Tree of Life
+        set Buildings_Nightelf[2]='etoa' // Tree of Ages
+        set Buildings_Nightelf[3]='etoe' // Tree of Eternity
+        set Buildings_Nightelf[4]='emow' // Moon Well
+        set Buildings_Nightelf[5]='eate' // Altar of Elders
+        set Buildings_Nightelf[6]='eaow' // Ancient of War
+        set Buildings_Nightelf[7]='eaoe' // Ancient of Lore
+        set Buildings_Nightelf[8]='eaom' // Ancient of Wind
+        set Buildings_Nightelf[9]='etrp' // Ancient Protector
+        set Buildings_Nightelf[10]='etrp' // Ancient Protector
+        set Buildings_Nightelf[11]='etrp' // Ancient Protector
+        set Buildings_Nightelf[12]='edob' // Hunter’s Hall
+        set Buildings_Nightelf[13]='edob' // Hunter’s Hall
+        set Buildings_Nightelf[14]='edos' // Chimaera Roost
+
+        set Heroes_Human[1]='Hpal' // Paladin
+        set Heroes_Human[2]='Hamg' // Archmage
+        set Heroes_Human[3]='Hmkg' // Mountain King
+        set Heroes_Human[5]='Hblm' // Blood Mage
+
+        set Heroes_Orc[1]='Obla' // Blademaster
+        set Heroes_Orc[2]='Ofar' // Far Seer
+        set Heroes_Orc[3]='Otch' // Tauren Chieftain
+        set Heroes_Orc[4]='Oshd' // Shadow Hunter
+
+        set Heroes_Undead[1]='Udea' // Death Knight
+        set Heroes_Undead[2]='Ulic' // Lich
+        set Heroes_Undead[3]='Udre' // Dreadlord
+        set Heroes_Undead[4]='Ucrl' // Crypt Lord
+
+        set Heroes_Nightelf[1]='Ekee' // Keeper of the Grove
+        set Heroes_Nightelf[2]='Emoo' // Priestess of the Moon
+        set Heroes_Nightelf[3]='Edem' // Demon Hunter
+        set Heroes_Nightelf[4]='Ewar' // Warden
+    endfunction
+
+//library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI__CreateIcon takes nothing returns nothing
+    function THRALLUI___CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -400,15 +555,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI__init takes nothing returns nothing
-        call THRALLUI__CreateIcon()
+    function THRALLUI___init takes nothing returns nothing
+        call THRALLUI___CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library TIMEUI:
 
-    function TIMEUI__UpdateCurrentTime takes nothing returns nothing
+    function TIMEUI___UpdateCurrentTime takes nothing returns nothing
         local string gameTimeText
         set g_GameTimeSeconds=g_GameTimeSeconds + 1
         
@@ -426,7 +581,7 @@ endglobals
         call BlzFrameSetText(g_TextFrame, "|cFFC0C030Time: " + gameTimeText + "|R")
     endfunction
 
-    function TIMEUI__CreateCurrentTimeFrame takes nothing returns nothing
+    function TIMEUI___CreateCurrentTimeFrame takes nothing returns nothing
         local framehandle parentFrame= BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
         local trigger updateTimeTrigger= CreateTrigger()
         
@@ -437,11 +592,11 @@ endglobals
         call BlzFrameSetScale(g_TextFrame, 1.1)
         
         call TriggerRegisterTimerEvent(updateTimeTrigger, 1.00, true)
-        call TriggerAddAction(updateTimeTrigger, function TIMEUI__UpdateCurrentTime)
+        call TriggerAddAction(updateTimeTrigger, function TIMEUI___UpdateCurrentTime)
     endfunction
 
-    function TIMEUI__init takes nothing returns nothing
-        call TIMEUI__CreateCurrentTimeFrame()
+    function TIMEUI___init takes nothing returns nothing
+        call TIMEUI___CreateCurrentTimeFrame()
     endfunction
 
 
@@ -460,7 +615,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -471,7 +626,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI__dataPageSize
+        set pageValue=index * CustomConsoleUI___dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -491,10 +646,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -507,18 +662,18 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
-                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
-                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
+                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
+                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
 
         else
-            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
-            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
+            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -539,19 +694,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI__Init takes nothing returns nothing
+    function CustomConsoleUI___Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI__at0s takes nothing returns nothing
-        call CustomConsoleUI__Init()
+    function CustomConsoleUI___at0s takes nothing returns nothing
+        call CustomConsoleUI___Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI__update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI___update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI__init_function takes nothing returns nothing
+    function CustomConsoleUI___init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -671,11 +826,11 @@ endglobals
         set CustomConsoleUI_x[index]=0.0004
         set CustomConsoleUI_y[index]=0.0
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
 
-            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
 
     endfunction
 
@@ -835,6 +990,7 @@ function InitGlobals takes nothing returns nothing
     set udg_CountHorse3=8
     set udg_CountHorse4=8
     set udg_CountHorse5=5
+    set udg_GAME_DIFFICULTY=0
 endfunction
 
 //***************************************************************************
@@ -905,6 +1061,60 @@ endfunction
 //***************************************************************************
 //*  ArthasFrameRunes
 
+//***************************************************************************
+//*  ApiEnemyGlobalUnits
+
+//***************************************************************************
+//*  ApiEnemyGet
+function ApiEnemyGet takes race race1,string type1,integer index returns integer
+    if ( type1 == "unit" ) then
+        if ( race1 == RACE_HUMAN ) then
+            return Units_Human[index]
+        elseif ( race1 == RACE_ORC ) then
+            return Units_Orc[index]
+        elseif ( race1 == RACE_UNDEAD ) then
+            return Units_Undead[index]
+        elseif ( race1 == RACE_NIGHTELF ) then
+            return Units_Nightelf[index]
+        endif
+        
+    elseif ( type1 == "building" ) then
+        if ( race1 == RACE_HUMAN ) then
+            return Buildings_Human[index]
+        elseif ( race1 == RACE_ORC ) then
+            return Buildings_Orc[index]
+        elseif ( race1 == RACE_UNDEAD ) then
+            return Buildings_Undead[index]
+        elseif ( race1 == RACE_NIGHTELF ) then
+            return Buildings_Nightelf[index]
+        endif
+        
+    elseif ( type1 == "hero" ) then
+        if ( race1 == RACE_HUMAN ) then
+            return Heroes_Human[index]
+        elseif ( race1 == RACE_ORC ) then
+            return Heroes_Orc[index]
+        elseif ( race1 == RACE_UNDEAD ) then
+            return Heroes_Undead[index]
+        elseif ( race1 == RACE_NIGHTELF ) then
+            return Heroes_Nightelf[index]
+        endif
+    endif
+    
+    return 0
+endfunction
+//***************************************************************************
+//*  ApiEnemyGetDif
+function ApiEnemyGetDif takes race race1,string unitType,integer index,integer difficulty returns integer
+    local integer unitId
+
+    if ( difficulty == udg_GAME_DIFFICULTY ) then
+        set unitId=ApiEnemyGet(race1 , unitType , index)
+        return unitId
+    else
+        return 0
+    endif
+endfunction
 
 //***************************************************************************
 //*
@@ -6786,7 +6996,7 @@ endfunction
 //===========================================================================
 function Trig_SetDifficultyGame_Actions takes nothing returns nothing
     local string array nameMode
-    // Easy
+
     set nameMode[1]="Easy"
     set nameMode[2]="Normal"
     set nameMode[3]="Hard"
@@ -6804,6 +7014,7 @@ function Trig_SetDifficultyGame_Actions takes nothing returns nothing
         if ( udg_SetPlayerDifficulty[bj_forLoopAIndex] > 0 ) then
             if ( udg_SetPlayerDifficulty[bj_forLoopAIndex] < udg_SetDifficulty ) then
                 set udg_SetDifficulty=udg_SetPlayerDifficulty[bj_forLoopAIndex]
+                set udg_GAME_DIFFICULTY=udg_SetPlayerDifficulty[bj_forLoopAIndex]
             endif
         endif
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
@@ -6811,6 +7022,7 @@ function Trig_SetDifficultyGame_Actions takes nothing returns nothing
     
     if ( udg_SetDifficulty == 999 ) then
         set udg_SetDifficulty=1
+        set udg_GAME_DIFFICULTY=1
     endif
     
     call DisplayTextToForce(bj_FORCE_ALL_PLAYERS, ( "Difficulty level selected: " + nameMode[udg_SetDifficulty] + "!" ))
@@ -6837,21 +7049,21 @@ endfunction
 // 3 - Undead (51-75)
 // 4 - Night Elf (76-100)
 //===========================================================================
-function Trig_SetAIRace_Func003Func002Func001Func005C takes nothing returns boolean
+function Trig_SetAIRace_Func003Func003Func002Func006C takes nothing returns boolean
     if ( not ( udg_RacesRandom <= 100.00 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_SetAIRace_Func003Func002Func001C takes nothing returns boolean
+function Trig_SetAIRace_Func003Func003Func002C takes nothing returns boolean
     if ( not ( udg_RacesRandom <= 75.00 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_SetAIRace_Func003Func002C takes nothing returns boolean
+function Trig_SetAIRace_Func003Func003C takes nothing returns boolean
     if ( not ( udg_RacesRandom <= 50.00 ) ) then
         return false
     endif
@@ -6868,24 +7080,28 @@ endfunction
 function Trig_SetAIRace_Actions takes nothing returns nothing
     set udg_RacesRandom=GetRandomReal(0, 100.00)
     if ( Trig_SetAIRace_Func003C() ) then
+        set udg_RACE_RANDOM=RACE_HUMAN
         set udg_SetRaces=RACE_HUMAN
         set udg_SetRaces_Building='S00P'
         set udg_SetRaces_Hero='S00T'
         set udg_SetRaces_Unit='S001'
     else
-        if ( Trig_SetAIRace_Func003Func002C() ) then
+        if ( Trig_SetAIRace_Func003Func003C() ) then
+            set udg_RACE_RANDOM=RACE_ORC
             set udg_SetRaces=RACE_ORC
             set udg_SetRaces_Building='S00Q'
             set udg_SetRaces_Hero='S00U'
             set udg_SetRaces_Unit='S000'
         else
-            if ( Trig_SetAIRace_Func003Func002Func001C() ) then
+            if ( Trig_SetAIRace_Func003Func003Func002C() ) then
+                set udg_RACE_RANDOM=RACE_UNDEAD
                 set udg_SetRaces=RACE_UNDEAD
                 set udg_SetRaces_Building='S00R'
                 set udg_SetRaces_Hero='S00W'
                 set udg_SetRaces_Unit='S00N'
             else
-                if ( Trig_SetAIRace_Func003Func002Func001Func005C() ) then
+                if ( Trig_SetAIRace_Func003Func003Func002Func006C() ) then
+                    set udg_RACE_RANDOM=RACE_NIGHTELF
                     set udg_SetRaces=RACE_NIGHTELF
                     set udg_SetRaces_Building='S00S'
                     set udg_SetRaces_Hero='S00V'
@@ -10518,6 +10734,20 @@ function InitTrig_EnemyHeroAddItem takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: ApiEnemyCreate
+//===========================================================================
+function Trig_ApiEnemyCreate_Actions takes nothing returns nothing
+    local integer createUnit= ApiEnemyGet(udg_RACE_RANDOM , "unit" , 3)
+    call CreateUnitAtLoc(Player(0), createUnit, GetRectCenter(bj_mapInitialPlayableArea), bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ApiEnemyCreate takes nothing returns nothing
+    set gg_trg_ApiEnemyCreate=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_ApiEnemyCreate, 5)
+    call TriggerAddAction(gg_trg_ApiEnemyCreate, function Trig_ApiEnemyCreate_Actions)
+endfunction
+//===========================================================================
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LimitUnits()
     call InitTrig_StartResouces()
@@ -10677,6 +10907,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EnemyWave4()
     call InitTrig_EnemyHero()
     call InitTrig_EnemyHeroAddItem()
+    call InitTrig_ApiEnemyCreate()
 endfunction
 
 //===========================================================================
@@ -10831,11 +11062,12 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("FrameLoader__init_function")
-call ExecuteFunc("REFORGEDUIMAKER__init")
-call ExecuteFunc("THRALLUI__init")
-call ExecuteFunc("TIMEUI__init")
-call ExecuteFunc("CustomConsoleUI__init_function")
+call ExecuteFunc("FrameLoader___init_function")
+call ExecuteFunc("REFORGEDUIMAKER___init")
+call ExecuteFunc("RaceUnits___InitRaceUnits")
+call ExecuteFunc("THRALLUI___init")
+call ExecuteFunc("TIMEUI___init")
+call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
