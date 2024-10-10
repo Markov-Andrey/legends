@@ -1517,9 +1517,9 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'ngol', 1344.0, - 384.0, 270.000, 'ngol')
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 2048.0, - 384.0, 270.000, 'ngol')
     call SetResourceAmount(u, 12500)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', - 2688.0, - 512.0, 270.000, 'ngol')
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 3648.0, - 640.0, 270.000, 'ngol')
     call SetResourceAmount(u, 12500)
     set u=BlzCreateUnitWithSkin(p, 'n00A', - 768.0, 1216.0, 270.000, 'n00A')
 endfunction
@@ -10507,10 +10507,10 @@ function config takes nothing returns nothing
     call SetTeams(4)
     call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
-    call DefineStartLocation(0, - 1920.0, - 448.0)
-    call DefineStartLocation(1, 704.0, - 320.0)
-    call DefineStartLocation(2, - 576.0, - 1216.0)
-    call DefineStartLocation(3, - 5120.0, - 3648.0)
+    call DefineStartLocation(0, - 2944.0, - 384.0)
+    call DefineStartLocation(1, 1344.0, - 128.0)
+    call DefineStartLocation(2, - 256.0, 1344.0)
+    call DefineStartLocation(3, - 1216.0, 1344.0)
 
     // Player setup
     call InitCustomPlayerSlots()
