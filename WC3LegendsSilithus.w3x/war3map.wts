@@ -14050,3 +14050,21 @@ STRING 4751
 [Silithus] Rock Archway
 }
 
+STRING 4752
+// Doodads: D00I ([Silithus] Silithid Spike 01), Name (Name)
+{
+[Silithus] Silithid Spike 01
+}
+
+STRING 4753
+// Doodads: D00J ([Silithus] Silithid Spike 02), Name (Name)
+{
+[Silithus] Silithid Spike 02
+}
+
+STRING 4754
+// Doodads: D00K ([Silithus] Silithid Spike 03), Name (Name)
+{
+[Silithus] Silithid Spike 03
+}
+
