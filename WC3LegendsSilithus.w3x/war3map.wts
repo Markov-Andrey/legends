@@ -18,19 +18,9 @@ STRING 5
 Player 1
 }
 
-STRING 6
-{
-Force 1
-}
-
 STRING 463
 {
 Player 2
-}
-
-STRING 467
-{
-Синдикат
 }
 
 STRING 470
@@ -14066,5 +14056,32 @@ STRING 4754
 // Doodads: D00K ([Silithus] Silithid Spike 03), Name (Name)
 {
 [Silithus] Silithid Spike 03
+}
+
+STRING 4755
+// Units: n00B ([Silithus] Eggs), Name (Name)
+{
+[Silithus] Eggs
+}
+
+STRING 4756
+// Units: n00C ([Silithus] Defend Roots), Name (Name)
+{
+[Silithus] Defend Roots
+}
+
+STRING 4757
+{
+Cenarius Circle
+}
+
+STRING 4758
+{
+Players
+}
+
+STRING 4759
+{
+Enemy
 }
 
