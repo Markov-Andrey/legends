@@ -28,9 +28,6 @@ integer array Heroes_Nightelf
 //globals from THRALLUI:
 constant boolean LIBRARY_THRALLUI=true
 //endglobals from THRALLUI
-//globals from TIMEUI:
-constant boolean LIBRARY_TIMEUI=true
-//endglobals from TIMEUI
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
 framehandle CustomConsoleUI___idleWorkerButton
@@ -280,9 +277,6 @@ trigger gg_trg_ApiEnemyCreate= null
 
     // Random Groups
 integer array gg_rg_000
-framehandle g_TextFrame= null
-integer g_GameTimeSeconds= 0
-integer g_GameTimeMinutes= 0
 framehandle ThrallIcon= null
 integer MYTHIC_INDEX= 0
 framehandle Icon01= null
@@ -561,46 +555,6 @@ endglobals
 
 
 //library THRALLUI ends
-//library TIMEUI:
-
-    function TIMEUI___UpdateCurrentTime takes nothing returns nothing
-        local string gameTimeText
-        set g_GameTimeSeconds=g_GameTimeSeconds + 1
-        
-        if g_GameTimeSeconds >= 60 then
-            set g_GameTimeSeconds=0
-            set g_GameTimeMinutes=g_GameTimeMinutes + 1
-        endif
-        
-        if ( g_GameTimeSeconds < 10 ) then
-            set gameTimeText=I2S(g_GameTimeMinutes) + ":0" + I2S(g_GameTimeSeconds)
-        else
-            set gameTimeText=I2S(g_GameTimeMinutes) + ":" + I2S(g_GameTimeSeconds)
-        endif
-        
-        call BlzFrameSetText(g_TextFrame, "|cFFC0C030Time: " + gameTimeText + "|R")
-    endfunction
-
-    function TIMEUI___CreateCurrentTimeFrame takes nothing returns nothing
-        local framehandle parentFrame= BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
-        local trigger updateTimeTrigger= CreateTrigger()
-        
-        set g_TextFrame=BlzCreateFrameByType("TEXT", "MyTextFrame", parentFrame, "", 0)
-        call BlzFrameSetText(g_TextFrame, "")
-        call BlzFrameSetAbsPoint(g_TextFrame, FRAMEPOINT_CENTER, 0.465, 0.562)
-        call BlzFrameSetEnable(g_TextFrame, false)
-        call BlzFrameSetScale(g_TextFrame, 1.1)
-        
-        call TriggerRegisterTimerEvent(updateTimeTrigger, 1.00, true)
-        call TriggerAddAction(updateTimeTrigger, function TIMEUI___UpdateCurrentTime)
-    endfunction
-
-    function TIMEUI___init takes nothing returns nothing
-        call TIMEUI___CreateCurrentTimeFrame()
-    endfunction
-
-
-//library TIMEUI ends
 //library CustomConsoleUI:
 
 // CustomConsoleUI by Tasyen
@@ -998,9 +952,6 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
-//***************************************************************************
-//*  UiTimer
-
 //***************************************************************************
 //*  ThrallCurrentMode
 
@@ -10628,7 +10579,6 @@ call ExecuteFunc("FrameLoader___init_function")
 call ExecuteFunc("REFORGEDUIMAKER___init")
 call ExecuteFunc("RaceUnits___InitRaceUnits")
 call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("TIMEUI___init")
 call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
