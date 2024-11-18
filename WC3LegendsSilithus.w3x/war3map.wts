@@ -14097,3 +14097,9 @@ STRING 4761
 [Silithus] Silithid Warrior
 }
 
+STRING 4762
+// Units: n00F ([Silithus] Silithid Tank), Name (Name)
+{
+[Silithus] Silithid Tank
+}
+
