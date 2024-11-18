@@ -14103,3 +14103,9 @@ STRING 4762
 [Silithus] Silithid Tank
 }
 
+STRING 4763
+// Units: o00V ([Silithus] Silithid Wasp), Name (Name)
+{
+[Silithus] Silithid Wasp
+}
+
