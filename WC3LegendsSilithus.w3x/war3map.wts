@@ -14109,3 +14109,33 @@ STRING 4763
 [Silithus] Silithid Wasp
 }
 
+STRING 4764
+// Units: H01R (High Inquisitor), Name (Name)
+{
+High Inquisitor
+}
+
+STRING 4765
+// Units: H01R (High Inquisitor), Propernames (Proper Names)
+{
+Sally Whitemane
+}
+
+STRING 4766
+// Units: H01R (High Inquisitor), Awakentip (Tooltip - Awaken)
+{
+Revive Sally Whitemane
+}
+
+STRING 4767
+// Units: H01R (High Inquisitor), Tip (Tooltip - Basic)
+{
+Summon Sally Whitemane
+}
+
+STRING 4768
+// Units: H01R (High Inquisitor), Revivetip (Tooltip - Revive)
+{
+Revive Sally Whitemane
+}
+
