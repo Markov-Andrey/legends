@@ -762,14 +762,14 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
 
         set index=GetHandleId(ConvertRace(5))
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile01")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile02")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile03")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile04")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile05")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile06")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile-timeindicatorframe")
-        call AddCustomConsole(index , "UI\\Console\\Uther\\humanuitile-inventorycover")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile01")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile02")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile03")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile04")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile05")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile06")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile-inventorycover")
         call AddCustomConsole(index , "Legends\\Uther\\Pilgrim\\BTNPilgrim")
         set CustomConsoleUI_x[index]=0.000
         set CustomConsoleUI_y[index]=0.0
