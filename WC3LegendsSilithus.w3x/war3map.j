@@ -1583,6 +1583,12 @@ function CreateBuildingsForPlayer2 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n00B', - 2016.0, 5472.0, 270.000, 'n00B')
     set u=BlzCreateUnitWithSkin(p, 'n00B', - 1952.0, 5536.0, 270.000, 'n00B')
     set u=BlzCreateUnitWithSkin(p, 'n00B', - 1760.0, 5600.0, 270.000, 'n00B')
+    set u=BlzCreateUnitWithSkin(p, 'n00B', - 1568.0, 2208.0, 270.000, 'n00B')
+    set u=BlzCreateUnitWithSkin(p, 'n00B', - 1632.0, 2272.0, 270.000, 'n00B')
+    set u=BlzCreateUnitWithSkin(p, 'n00B', - 1760.0, 2208.0, 270.000, 'n00B')
+    set u=BlzCreateUnitWithSkin(p, 'n00B', 32.0, 2080.0, 270.000, 'n00B')
+    set u=BlzCreateUnitWithSkin(p, 'n00B', 224.0, 2080.0, 270.000, 'n00B')
+    set u=BlzCreateUnitWithSkin(p, 'n00B', 96.0, 2144.0, 270.000, 'n00B')
 endfunction
 
 //===========================================================================
@@ -1598,6 +1604,12 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n00E', - 499.7, - 4835.0, 259.888, 'n00E')
     set u=BlzCreateUnitWithSkin(p, 'n00D', - 365.0, - 5090.7, 200.505, 'n00D')
     set u=BlzCreateUnitWithSkin(p, 'n00D', - 838.4, - 4982.0, - 49.934, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00E', - 1935.8, 2213.9, 248.958, 'n00E')
+    set u=BlzCreateUnitWithSkin(p, 'n00E', 477.2, 2023.6, - 52.424, 'n00E')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', - 2201.2, 2042.0, 260.222, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', - 1935.2, 1931.2, 243.609, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', 420.9, 1738.3, - 21.060, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', 758.1, 1971.9, 256.581, 'n00D')
 endfunction
 
 //===========================================================================
@@ -1671,6 +1683,10 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ngol', - 1536.0, 192.0, 270.000, 'ngol')
     call SetResourceAmount(u, 12500)
     set u=BlzCreateUnitWithSkin(p, 'n00A', - 768.0, 1216.0, 270.000, 'n00A')
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 1664.0, 1920.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 192.0, 1792.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 12500)
 endfunction
 
 //===========================================================================
