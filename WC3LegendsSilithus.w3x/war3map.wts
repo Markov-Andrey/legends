@@ -14247,3 +14247,17 @@ STRING 4788
 Improvement to check the player's army
 }
 
+STRING 4789
+// Units: h01W ([Whitemane] Barracks), Name (Name)
+{
+[Whitemane] Barracks
+}
+
+STRING 4790
+// Units: h01W ([Whitemane] Barracks), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
+}
+
