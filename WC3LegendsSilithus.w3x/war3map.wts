@@ -2172,19 +2172,19 @@ Train War Wagon
 }
 
 STRING 1726
-// Units: h00A ([Uther] Cathedral), Tip (Tooltip - Basic)
+// Units: h01S ([Whitemane] Cathedral), Tip (Tooltip - Basic)
 {
 Build Cathedral
 }
 
 STRING 1728
-// Units: h00I ([Uther] Diocese), Tip (Tooltip - Basic)
+// Units: h01T ([Whitemane] Diocese), Tip (Tooltip - Basic)
 {
 Upgrade to Diocese
 }
 
 STRING 1730
-// Units: h01H ([Uther] Parish), Tip (Tooltip - Basic)
+// Units: h01U ([Whitemane] Parish), Tip (Tooltip - Basic)
 {
 Upgrade to Parish
 }
@@ -3256,24 +3256,6 @@ STRING 2159
 // Units: h005 ([Uther] Protector), Name (Name)
 {
 [Uther] Protector
-}
-
-STRING 2160
-// Units: h00A ([Uther] Cathedral), Name (Name)
-{
-[Uther] Cathedral
-}
-
-STRING 2161
-// Units: h00I ([Uther] Diocese), Name (Name)
-{
-[Uther] Diocese
-}
-
-STRING 2162
-// Units: h01H ([Uther] Parish), Name (Name)
-{
-[Uther] Parish
 }
 
 STRING 2163
@@ -12354,7 +12336,7 @@ Fast moving flying machine. Excellent at scouting, and effective against air uni
 }
 
 STRING 4498
-// Units: h00A ([Uther] Cathedral), Ubertip (Tooltip - Extended)
+// Units: h00A ([Uther] Town Center), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T1 #food #storage
 |R
@@ -12362,7 +12344,7 @@ Primary structure, used to train Piligrims and receive gathered resources. Can b
 }
 
 STRING 4499
-// Units: h00I ([Uther] Diocese), Ubertip (Tooltip - Extended)
+// Units: h00I ([Uther] Citadel), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T2 #food #storage
 |R
@@ -12370,7 +12352,7 @@ Upgrade to Diocese to enable the production of additional types of structures an
 }
 
 STRING 4500
-// Units: h01H ([Uther] Parish), Ubertip (Tooltip - Extended)
+// Units: h01H ([Uther] Palace), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T3 #food #storage
 |R
@@ -14137,5 +14119,83 @@ STRING 4768
 // Units: H01R (High Inquisitor), Revivetip (Tooltip - Revive)
 {
 Revive Sally Whitemane
+}
+
+STRING 4769
+// Units: h00A ([Uther] Town Center), Name (Name)
+{
+[Uther] Town Center
+}
+
+STRING 4770
+// Units: h00A ([Uther] Town Center), Tip (Tooltip - Basic)
+{
+Build Town Center
+}
+
+STRING 4771
+// Units: h00I ([Uther] Citadel), Name (Name)
+{
+[Uther] Citadel
+}
+
+STRING 4772
+// Units: h00I ([Uther] Citadel), Tip (Tooltip - Basic)
+{
+Upgrade to Citadel
+}
+
+STRING 4773
+// Units: h01H ([Uther] Palace), Name (Name)
+{
+[Uther] Palace
+}
+
+STRING 4774
+// Units: h01H ([Uther] Palace), Tip (Tooltip - Basic)
+{
+Upgrade to Palace
+}
+
+STRING 4775
+// Units: h01S ([Whitemane] Cathedral), Name (Name)
+{
+[Whitemane] Cathedral
+}
+
+STRING 4776
+// Units: h01S ([Whitemane] Cathedral), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
+}
+
+STRING 4777
+// Units: h01T ([Whitemane] Diocese), Name (Name)
+{
+[Whitemane] Diocese
+}
+
+STRING 4778
+// Units: h01T ([Whitemane] Diocese), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Diocese to enable the production of additional types of structures and units.
+}
+
+STRING 4779
+// Units: h01U ([Whitemane] Parish), Name (Name)
+{
+[Whitemane] Parish
+}
+
+STRING 4780
+// Units: h01U ([Whitemane] Parish), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Parish to enable the production of additional types of structures and units.
 }
 
