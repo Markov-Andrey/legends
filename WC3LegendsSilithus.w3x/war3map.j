@@ -275,6 +275,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_ChooseWhitemane= null
+trigger gg_trg_WhitemaneIni= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1466,7 +1468,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', - 905.4, 1027.9, 298.320, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'H01R', - 1486.5, - 546.1, 291.234, 'H01R')
 endfunction
 
 //===========================================================================
@@ -1703,7 +1704,7 @@ function CreateCameras takes nothing returns nothing
     set gg_cam_StartView=CreateCameraSetup()
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROTATION, 93.4, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ANGLE_OF_ATTACK, 351.2, 0.0)
+    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ANGLE_OF_ATTACK, 353.9, 0.0)
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_TARGET_DISTANCE, 2049.0, 0.0)
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROLL, 0.0, 0.0)
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
@@ -1712,7 +1713,7 @@ function CreateCameras takes nothing returns nothing
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
     call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
-    call CameraSetupSetDestPosition(gg_cam_StartView, - 785.3, 2251.0, 0.0)
+    call CameraSetupSetDestPosition(gg_cam_StartView, - 756.8, 1980.1, 0.0)
 
 endfunction
 
@@ -1744,6 +1745,8 @@ function Trig_LimitUnits_Func001A takes nothing returns nothing
     // Thrall
     call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
+    // Whitemane
+    call SetPlayerTechMaxAllowedSwap('H01R', 1, GetEnumPlayer())
 endfunction
 
 function Trig_LimitUnits_Actions takes nothing returns nothing
@@ -1896,6 +1899,17 @@ function Trig_UnSelect_Func009C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_UnSelect_Func010Func002A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(true, 'A071', GetEnumPlayer())
+endfunction
+
+function Trig_UnSelect_Func010C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01V' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_UnSelect_Actions takes nothing returns nothing
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
@@ -1921,6 +1935,10 @@ function Trig_UnSelect_Actions takes nothing returns nothing
         call ForForce(GetPlayersAll(), function Trig_UnSelect_Func009Func002A)
     else
     endif
+    if ( Trig_UnSelect_Func010C() ) then
+        call ForForce(GetPlayersAll(), function Trig_UnSelect_Func010Func002A)
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -1944,7 +1962,7 @@ function Trig_PreviewLegend takes nothing returns nothing
     local player p
     local unit unitU= GetSpellAbilityUnit()
 
-    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' or abilityId == 'A06B' then
+    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' or abilityId == 'A06B' or abilityId == 'A071' then
         if abilityId == 'A01C' then
             set unitType='h00T'
         elseif abilityId == 'A01J' then
@@ -1955,6 +1973,8 @@ function Trig_PreviewLegend takes nothing returns nothing
             set unitType='h01L'
         elseif abilityId == 'A06B' then
             set unitType='h01M'
+        elseif abilityId == 'A071' then
+            set unitType='h01V'
         else
             return
         endif
@@ -1978,6 +1998,8 @@ function Trig_PreviewLegend takes nothing returns nothing
                     call SetPlayerAbilityAvailable(p, 'A054', false)
                 elseif abilityId == 'A06B' then
                     call SetPlayerAbilityAvailable(p, 'A06B', false)
+                elseif abilityId == 'A071' then
+                    call SetPlayerAbilityAvailable(p, 'A071', false)
                 endif
             endif
             set p=Player(23)
@@ -2166,6 +2188,61 @@ function InitTrig_ChooseWrynn takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseWrynn, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ChooseWrynn, Condition(function Trig_ChooseWrynn_Conditions))
     call TriggerAddAction(gg_trg_ChooseWrynn, function Trig_ChooseWrynn_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ChooseWhitemane
+//===========================================================================
+function Trig_ChooseWhitemane_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01V' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseWhitemane_Conditions takes nothing returns boolean
+    if ( not Trig_ChooseWhitemane_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseWhitemane_Func008A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h01S', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseWhitemane_Func010A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h00O', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseWhitemane_Actions takes nothing returns nothing
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 10)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
+    // Town Hall
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWhitemane_Func008A)
+    // WorkerX5
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWhitemane_Func010A)
+    // ----------------------
+    call RemoveUnit(GetSpellAbilityUnit())
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_MAROON, true)
+    // Run-ALL-triggers
+    call SetPlayerTechResearchedSwap('R02D', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    call ConditionalTriggerExecute(gg_trg_WhitemaneIni)
+    call TriggerExecute(gg_trg_StartCameraReset)
+endfunction
+
+//===========================================================================
+function InitTrig_ChooseWhitemane takes nothing returns nothing
+    set gg_trg_ChooseWhitemane=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseWhitemane, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseWhitemane, Condition(function Trig_ChooseWhitemane_Conditions))
+    call TriggerAddAction(gg_trg_ChooseWhitemane, function Trig_ChooseWhitemane_Actions)
 endfunction
 
 //===========================================================================
@@ -6246,6 +6323,18 @@ function InitTrig_ThrallElementalUpg takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallElementalUpg, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_ThrallElementalUpg, Condition(function Trig_ThrallElementalUpg_Conditions))
     call TriggerAddAction(gg_trg_ThrallElementalUpg, function Trig_ThrallElementalUpg_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneIni
+//===========================================================================
+function Trig_WhitemaneIni_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneIni takes nothing returns nothing
+    set gg_trg_WhitemaneIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_WhitemaneIni, function Trig_WhitemaneIni_Actions)
 endfunction
 
 //===========================================================================
@@ -10369,6 +10458,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ChooseArthas()
     call InitTrig_ChooseUther()
     call InitTrig_ChooseWrynn()
+    call InitTrig_ChooseWhitemane()
     call InitTrig_ChooseTyrande()
     call InitTrig_ChooseThrall()
     call InitTrig_UpgradesCondition()
@@ -10433,6 +10523,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallElementalDestruction()
     call InitTrig_ThrallNextPage()
     call InitTrig_ThrallElementalUpg()
+    call InitTrig_WhitemaneIni()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
     call InitTrig_Mythic2Vampiric()

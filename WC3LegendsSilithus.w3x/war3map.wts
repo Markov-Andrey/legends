@@ -14199,3 +14199,51 @@ STRING 4780
 Upgrade to Parish to enable the production of additional types of structures and units.
 }
 
+STRING 4781
+// Units: h01V ([UI] Whitemane), Name (Name)
+{
+[UI] Whitemane
+}
+
+STRING 4782
+// Units: h01V ([UI] Whitemane), Tip (Tooltip - Basic)
+{
+Whitemane
+}
+
+STRING 4783
+// Abilities: A071 ([UI] Legends: Whitemane), Tip (Tooltip - Normal)
+{
+|cFFFF4B3DWhitemane|R
+}
+
+STRING 4784
+// Abilities: A071 ([UI] Legends: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 4785
+// Abilities: A071 ([UI] Legends: Whitemane), Name (Name)
+{
+[UI] Legends: Whitemane
+}
+
+STRING 4786
+// Upgrades: R02D (Magic Sentry), Name (Name)
+{
+[Special] Whitemane
+}
+
+STRING 4787
+// Upgrades: R02D (Magic Sentry), Tip (Tooltip)
+{
+Whitemane
+}
+
+STRING 4788
+// Upgrades: R02D (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
