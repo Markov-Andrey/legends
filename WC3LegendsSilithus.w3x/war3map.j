@@ -1585,6 +1585,21 @@ function CreateBuildingsForPlayer2 takes nothing returns nothing
 endfunction
 
 //===========================================================================
+function CreateUnitsForPlayer2 takes nothing returns nothing
+    local player p= Player(2)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'n00D', - 924.3, - 3530.6, 38.579, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', - 1191.7, - 3418.9, 124.463, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00E', - 499.7, - 4835.0, 259.888, 'n00E')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', - 365.0, - 5090.7, 200.505, 'n00D')
+    set u=BlzCreateUnitWithSkin(p, 'n00D', - 838.4, - 4982.0, - 49.934, 'n00D')
+endfunction
+
+//===========================================================================
 function CreateBuildingsForPlayer5 takes nothing returns nothing
     local player p= Player(5)
     local unit u
@@ -1667,6 +1682,7 @@ endfunction
 function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
     call CreateUnitsForPlayer1()
+    call CreateUnitsForPlayer2()
 endfunction
 
 //===========================================================================
