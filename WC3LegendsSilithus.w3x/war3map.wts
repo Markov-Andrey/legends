@@ -1,6 +1,6 @@
 ﻿STRING 1
 {
-[WarCraft Legends] Silithus
+[WarCraft Legends] Voices of Sands
 }
 
 STRING 2
@@ -14259,5 +14259,41 @@ STRING 4790
 |cffffcc00#barrack #upgrades
 |R
 Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
+}
+
+STRING 4791
+// Units: h01X ([Whitemane] Beastmistress), Name (Name)
+{
+[Whitemane] Beastmistress
+}
+
+STRING 4792
+// Units: h01X ([Whitemane] Beastmistress), Tip (Tooltip - Basic)
+{
+Train Beastmistress
+}
+
+STRING 4793
+// Units: o00W ([Whitemane] Hound), Name (Name)
+{
+[Whitemane] Hound
+}
+
+STRING 4794
+// Abilities: A086 ([Whitemane] Hound), Name (Name)
+{
+[Whitemane] Hound
+}
+
+STRING 4795
+// Abilities: A086 ([Whitemane] Hound), Tip (Tooltip - Normal)
+{
+Hound
+}
+
+STRING 4796
+// Abilities: A086 ([Whitemane] Hound), Ubertip (Tooltip - Normal - Extended)
+{
+Summons 1 Hound companions. Each wolf has <osw1,realHP> hit points and deals <osw1,mindmg1> - <osw1,maxdmg1> damage. |nLasts <AOsf,Dur1> seconds. |n|n|cffffcc00Attacks land units.|r
 }
 
