@@ -14309,3 +14309,21 @@ STRING 4798
 Build Scarlet Monastery
 }
 
+STRING 4799
+// Units: h01Z ([Whitemane] Barracks), Name (Name)
+{
+[Whitemane] Barracks
+}
+
+STRING 4800
+// Units: h020 ([Whitemane] Fanatic), Name (Name)
+{
+[Whitemane] Fanatic
+}
+
+STRING 4801
+// Units: h020 ([Whitemane] Fanatic), Tip (Tooltip - Basic)
+{
+Train Fanatic
+}
+
