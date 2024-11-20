@@ -14297,3 +14297,15 @@ STRING 4796
 Summons 1 Hound companions. Each wolf has <osw1,realHP> hit points and deals <osw1,mindmg1> - <osw1,maxdmg1> damage. |nLasts <AOsf,Dur1> seconds. |n|n|cffffcc00Attacks land units.|r
 }
 
+STRING 4797
+// Units: h01Y ([Whitemane] Scarlet Monastery), Name (Name)
+{
+[Whitemane] Scarlet Monastery
+}
+
+STRING 4798
+// Units: h01Y ([Whitemane] Scarlet Monastery), Tip (Tooltip - Basic)
+{
+Build Scarlet Monastery
+}
+
