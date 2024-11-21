@@ -14067,28 +14067,10 @@ STRING 4759
 Enemy
 }
 
-STRING 4760
-// Units: n00D ([Silithus] Silithid Scout), Name (Name)
-{
-[Silithus] Silithid Scout
-}
-
-STRING 4761
-// Units: n00E ([Silithus] Silithid Warrior), Name (Name)
-{
-[Silithus] Silithid Warrior
-}
-
 STRING 4762
 // Units: n00F ([Silithus] Silithid Tank), Name (Name)
 {
 [Silithus] Silithid Tank
-}
-
-STRING 4763
-// Units: o00V ([Silithus] Silithid Wasp), Name (Name)
-{
-[Silithus] Silithid Wasp
 }
 
 STRING 4764
@@ -14337,5 +14319,59 @@ STRING 4805
 // Units: h020 ([Whitemane] Vindicator), Tip (Tooltip - Basic)
 {
 Train Vindicator
+}
+
+STRING 4806
+// Units: n00E ([Silithus] Warrior Zora), Name (Name)
+{
+[Silithus] Warrior Zora
+}
+
+STRING 4807
+// Units: n00G ([Silithus] Warrior Regal), Name (Name)
+{
+[Silithus] Warrior Regal
+}
+
+STRING 4808
+// Units: n00H ([Silithus] Warrior Ashi), Name (Name)
+{
+[Silithus] Warrior Ashi
+}
+
+STRING 4810
+// Units: n00D ([Silithus] Scout Zora), Name (Name)
+{
+[Silithus] Scout Zora
+}
+
+STRING 4811
+// Units: o00V ([Silithus] Wasp Zora), Name (Name)
+{
+[Silithus] Wasp Zora
+}
+
+STRING 4812
+// Units: o00Y ([Silithus] Wasp Ashi), Name (Name)
+{
+[Silithus] Wasp Ashi
+}
+
+STRING 4813
+// Units: o00Z ([Silithus] Wasp Regal), Name (Name)
+{
+[Silithus] Wasp Regal
+}
+
+STRING 4814
+// Units: n00I ([Silithus] Scout Ashi), Name (Name)
+{
+[Silithus] Scout Ashi
+}
+
+STRING 4815
+// Units: n00J ([Silithus] Scout Regal), Name (Name)
+{
+[Silithus] Scout Regal
 }
 
