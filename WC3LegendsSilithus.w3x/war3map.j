@@ -1474,6 +1474,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h020', - 1364.3, - 581.1, 305.281, 'h020')
     set u=BlzCreateUnitWithSkin(p, 'o00X', - 1516.7, - 575.4, 314.905, 'o00X')
     set u=BlzCreateUnitWithSkin(p, 'h020', - 1449.1, - 664.6, 305.281, 'h020')
+    set u=BlzCreateUnitWithSkin(p, 'h021', - 1604.2, - 622.8, - 52.422, 'h021')
+    set u=BlzCreateUnitWithSkin(p, 'h022', - 1203.2, - 373.4, 296.904, 'h022')
+    set u=BlzCreateUnitWithSkin(p, 'h023', - 1614.7, - 431.4, - 61.220, 'h023')
+    set u=BlzCreateUnitWithSkin(p, 'h023', - 1402.9, - 301.7, - 58.077, 'h023')
 endfunction
 
 //===========================================================================
@@ -1625,12 +1629,12 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n00H', - 3671.5, 7409.9, 250.731, 'n00H')
     set u=BlzCreateUnitWithSkin(p, 'n00E', - 3192.2, 7416.7, 265.313, 'n00E')
     set u=BlzCreateUnitWithSkin(p, 'n00G', - 3446.9, 7384.9, 260.977, 'n00G')
-    set u=BlzCreateUnitWithSkin(p, 'o00Y', - 3670.3, 7674.2, - 85.280, 'o00Y')
-    set u=BlzCreateUnitWithSkin(p, 'o00Z', - 3460.6, 7713.2, - 78.354, 'o00Z')
+    set u=BlzCreateUnitWithSkin(p, 'o00Y', - 3670.3, 7674.2, 274.720, 'o00Y')
+    set u=BlzCreateUnitWithSkin(p, 'o00Z', - 3460.6, 7713.2, 281.646, 'o00Z')
     set u=BlzCreateUnitWithSkin(p, 'n00D', - 3182.1, 7179.2, 264.158, 'n00D')
-    set u=BlzCreateUnitWithSkin(p, 'n00J', - 3443.3, 7178.6, - 89.196, 'n00J')
-    set u=BlzCreateUnitWithSkin(p, 'n00I', - 3666.5, 7168.9, - 88.993, 'n00I')
-    set u=BlzCreateUnitWithSkin(p, 'n00F', - 3943.1, 7385.3, - 83.823, 'n00F')
+    set u=BlzCreateUnitWithSkin(p, 'n00J', - 3443.3, 7178.6, 270.804, 'n00J')
+    set u=BlzCreateUnitWithSkin(p, 'n00I', - 3666.5, 7168.9, 271.007, 'n00I')
+    set u=BlzCreateUnitWithSkin(p, 'n00F', - 3943.1, 7385.3, 276.177, 'n00F')
 endfunction
 
 //===========================================================================

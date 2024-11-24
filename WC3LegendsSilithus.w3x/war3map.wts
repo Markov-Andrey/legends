@@ -14375,3 +14375,33 @@ STRING 4815
 [Silithus] Scout Regal
 }
 
+STRING 4816
+// Units: h021 ([Whitemane] Conjuror), Name (Name)
+{
+[Whitemane] Conjuror
+}
+
+STRING 4817
+// Units: h021 ([Whitemane] Conjuror), Tip (Tooltip - Basic)
+{
+Train Conjuror
+}
+
+STRING 4818
+// Units: h022 ([Whitemane] Sorceress), Name (Name)
+{
+[Whitemane] Sorceress
+}
+
+STRING 4819
+// Units: h023 ([Whitemane] Gryphon Lancer), Name (Name)
+{
+[Whitemane] Gryphon Lancer
+}
+
+STRING 4820
+// Units: h023 ([Whitemane] Gryphon Lancer), Tip (Tooltip - Basic)
+{
+Train Gryphon Lancer
+}
+
