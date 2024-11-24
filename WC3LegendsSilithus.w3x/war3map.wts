@@ -14405,3 +14405,69 @@ STRING 4820
 Train Gryphon Lancer
 }
 
+STRING 4821
+// Abilities: A087 ([Whitemane] Healing Wave), Name (Name)
+{
+[Whitemane] Healing Wave
+}
+
+STRING 4822
+// Units: h024 ([Whitemane] Grave Wagon), Name (Name)
+{
+[Whitemane] Grave Wagon
+}
+
+STRING 4823
+// Units: h024 ([Whitemane] Grave Wagon), Tip (Tooltip - Basic)
+{
+Train Grave Wagon
+}
+
+STRING 4824
+// Abilities: S00B ([Whitemane] Cargo Hold), Name (Name)
+{
+[Whitemane] Cargo Hold
+}
+
+STRING 4825
+// Abilities: A088 ([Whitemane] Get Corpse), Name (Name)
+{
+[Whitemane] Get Corpse
+}
+
+STRING 4826
+// Abilities: A089 ([Whitemane] Drop Corpse), Name (Name)
+{
+[Whitemane] Drop Corpse
+}
+
+STRING 4827
+// Units: h025 ([Whitemane] Graveyard), Name (Name)
+{
+[Whitemane] Graveyard
+}
+
+STRING 4828
+// Units: h025 ([Whitemane] Graveyard), Tip (Tooltip - Basic)
+{
+Build Graveyard
+}
+
+STRING 4829
+// Units: h026 ([Whitemane] Lodge), Name (Name)
+{
+[Whitemane] Lodge
+}
+
+STRING 4830
+// Units: h026 ([Whitemane] Lodge), Tip (Tooltip - Basic)
+{
+Build Lodge
+}
+
+STRING 4831
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
+{
+[Whitemane] Iron Plating
+}
+
