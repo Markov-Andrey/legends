@@ -14453,21 +14453,45 @@ STRING 4828
 Build Graveyard
 }
 
-STRING 4829
-// Units: h026 ([Whitemane] Lodge), Name (Name)
-{
-[Whitemane] Lodge
-}
-
-STRING 4830
-// Units: h026 ([Whitemane] Lodge), Tip (Tooltip - Basic)
-{
-Build Lodge
-}
-
 STRING 4831
 // Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
 [Whitemane] Iron Plating
+}
+
+STRING 4832
+// Units: h027 ([Whitemane] Blacksmith), Name (Name)
+{
+[Whitemane] Blacksmith
+}
+
+STRING 4834
+// Abilities: A08A ([Whitemane] Bury), Tip (Tooltip - Normal)
+{
+Bury or Return
+}
+
+STRING 4836
+// Units: h026 ([Whitemane] Grave), Name (Name)
+{
+[Whitemane] Grave
+}
+
+STRING 4837
+// Units: h026 ([Whitemane] Grave), Tip (Tooltip - Basic)
+{
+Build Grave
+}
+
+STRING 4838
+// Abilities: A08A ([Whitemane] Bury), Name (Name)
+{
+[Whitemane] Bury
+}
+
+STRING 4839
+// Abilities: A08A ([Whitemane] Bury), Ubertip (Tooltip - Normal - Extended)
+{
+Bury the corpse of a unit and receive profit for a certain time.
 }
 
