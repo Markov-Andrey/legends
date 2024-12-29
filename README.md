@@ -1,9 +1,13 @@
 WarCraft Legends - map to WarCraft 3
 
-Alterac's Justice - PvE 2 player mission, intercept 5 waves of caravans
+PvE (2):
+Alterac's Justice -  intercept 5 waves of caravans
+Voices of Sands - destroy all silithid nests
 
 4 Legends: 
-- Uther (Alliance)
-- Arthas (Undead)
-- Tiranda (Night Elf)
+- Uther Lightbringer (Alliance)
+- Varian Wrynn (Alliance)
+- Sally Whitemane (Alliance)
+- Arthas Lich King (Undead)
+- Tyrande Whisperwind (Night Elf)
 - Thrall (Horde)

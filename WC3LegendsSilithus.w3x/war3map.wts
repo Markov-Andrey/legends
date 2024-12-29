@@ -1,6 +1,6 @@
 ﻿STRING 1
 {
-[WarCraft Legends] Voices of Sands
+[WarCraft Legends] Voices of Sands2
 }
 
 STRING 2
@@ -14443,5 +14443,35 @@ STRING 4839
 // Abilities: A08A ([Whitemane] Bury), Ubertip (Tooltip - Normal - Extended)
 {
 Bury the corpse of a unit and receive profit for a certain time.
+}
+
+STRING 4840
+// Destructibles: B005 (Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL) Silitus
+}
+
+STRING 4841
+// Destructibles: B005 (Tree Wall), Name (Name)
+{
+Tree Wall
+}
+
+STRING 4842
+// Destructibles: B006 (Tree Wall), EditorSuffix (Editor Suffix)
+{
+Silitus
+}
+
+STRING 4843
+// Destructibles: B006 (Tree Wall), Name (Name)
+{
+Tree Wall
+}
+
+STRING 4844
+// Doodads: D00L (Silitus Glacier), Name (Name)
+{
+Silitus Glacier
 }
 
