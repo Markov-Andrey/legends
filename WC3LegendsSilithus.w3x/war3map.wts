@@ -389,16 +389,6 @@ STRING 798
 Further increases the attack damage of Ghouls, Meat Wagons, Abominations, and Arthas.
 }
 
-STRING 800
-{
-Arthas
-}
-
-STRING 801
-{
-Souls
-}
-
 STRING 806
 // Units: H004 ([Alterac] Stonebeard), Tip (Tooltip - Basic)
 {

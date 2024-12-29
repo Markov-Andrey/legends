@@ -1,4 +1,7 @@
 globals
+//globals from ARTHASUI:
+constant boolean LIBRARY_ARTHASUI=true
+//endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
 trigger FrameLoader__eventTrigger= CreateTrigger()
@@ -197,6 +200,7 @@ trigger gg_trg_ThrallElementalDestruction= null
 trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
+trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
 trigger gg_trg_Mythic2Vampiric= null
@@ -281,13 +285,14 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneGraveyardBurn= null
 
     // Random Groups
 integer array gg_rg_000
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
+framehandle ArthasIcon= null
+framehandle ArthasText= null
 integer MYTHIC_INDEX= 0
 framehandle Icon01= null
 framehandle Icon02= null
@@ -301,6 +306,50 @@ trigger l__library_init
 endglobals
 
 
+//library ARTHASUI:
+
+    function ARTHASUI__CreateIcon takes nothing returns nothing
+        // Создание иконки
+        set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+        call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
+        call BlzFrameSetVisible(ArthasIcon, false)
+
+        // Создание текстового фрейма
+        set ArthasText=BlzCreateFrameByType("TEXT", "ArthasDynamicText", ArthasIcon, "", 0)
+        call BlzFrameSetPoint(ArthasText, FRAMEPOINT_CENTER, ArthasIcon, FRAMEPOINT_CENTER, 0, - 0.001)
+        call BlzFrameSetSize(ArthasText, 0.06, 0.025)
+        call BlzFrameSetScale(ArthasText, 1.3)
+        call BlzFrameSetTextAlignment(ArthasText, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_MIDDLE)
+        call BlzFrameSetText(ArthasText, "")
+        call BlzFrameSetVisible(ArthasText, false)
+    endfunction
+
+    function ShowArthasUiForPlayer takes player p returns nothing
+        local real xPos= 0.168
+        local real yPos= 0.125
+
+        if GetLocalPlayer() == p then
+            call BlzFrameSetTexture(ArthasIcon, "UI\\Console\\Arthas\\arthas_souls", 0, true)
+            call BlzFrameSetVisible(ArthasIcon, true)
+            call BlzFrameSetVisible(ArthasText, true)
+
+            call BlzFrameSetAbsPoint(ArthasIcon, FRAMEPOINT_TOPLEFT, xPos, yPos + 0.065)
+            call BlzFrameSetAbsPoint(ArthasIcon, FRAMEPOINT_BOTTOMRIGHT, xPos + 0.065, yPos)
+        endif
+    endfunction
+
+    function UpdateArthasText takes player p,string text returns nothing
+        if GetLocalPlayer() == p then
+            call BlzFrameSetText(ArthasText, text)
+        endif
+    endfunction
+
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
+    endfunction
+
+
+//library ARTHASUI ends
 //library FrameLoader:
 // in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
 // This library runs all functions added to it with a 0s delay after the game was loaded.
@@ -1042,6 +1091,9 @@ endfunction
 //*  WhitemaneCurrentMode
 
 //***************************************************************************
+//*  ArthasSouls
+
+//***************************************************************************
 //*  FrameMythic
 
 function FrameMythic takes string iconPath,string titleText,string descriptionText returns nothing
@@ -1708,6 +1760,20 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n00I', - 1849.7, 6189.0, 245.336, 'n00I')
     set u=BlzCreateUnitWithSkin(p, 'n00I', - 1665.3, 5871.5, 239.249, 'n00I')
     set u=BlzCreateUnitWithSkin(p, 'o00Y', - 1928.5, 5968.2, 249.989, 'o00Y')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1289.8, 295.8, 98.671, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1295.4, 67.3, 318.668, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1278.7, - 111.9, 250.474, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1264.4, - 185.9, 36.992, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1192.1, - 35.0, 330.567, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1152.4, 111.0, 98.528, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1152.8, 201.2, 311.615, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1162.4, 273.7, 173.611, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1125.8, - 139.2, 162.954, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1104.0, - 45.0, 89.629, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1193.5, - 178.6, 335.214, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1090.7, 130.8, 210.219, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1270.0, 177.3, 175.336, 'nmrl')
+    set u=BlzCreateUnitWithSkin(p, 'nmrl', 1260.5, 3.7, 274.853, 'nmrl')
     set u=BlzCreateUnitWithSkin(p, 'n00F', 7476.7, - 896.4, 189.709, 'n00F')
     set u=BlzCreateUnitWithSkin(p, 'n00I', 1585.7, 6766.7, 307.795, 'n00I')
     set u=BlzCreateUnitWithSkin(p, 'n00I', 1575.8, 7003.7, 328.642, 'n00I')
@@ -2162,8 +2228,8 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     call DisableTrigger(gg_trg_StartCameraP1)
     // SoulsScore
     set udg_ArthasSouls=0
-    call CreateLeaderboardBJ(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_800")
-    call LeaderboardAddItemBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_801", 0)
+    call ShowArthasUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
+    call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_PURPLE, true)
     call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
@@ -2948,7 +3014,7 @@ endfunction
 function Trig_ArthasHarvestSoul_Actions takes nothing returns nothing
     call SetUnitVertexColorBJ(GetSpellAbilityUnit(), 100, 100, 100, 100.00)
     set udg_ArthasSouls=( udg_ArthasSouls + R2I(GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit())) )
-    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellTargetUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellTargetUnit())), udg_ArthasSouls)
+    call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
 endfunction
 
 //===========================================================================
@@ -3072,7 +3138,7 @@ function Trig_ArthasSoulReforge_Actions takes nothing returns nothing
         call ReplaceUnitBJ(GetSpellTargetUnit(), unitReplacements[index], bj_UNIT_STATE_METHOD_RELATIVE)
         call AddSpecialEffectLoc(effectUnit, GetUnitLoc(bj_lastReplacedUnit))
         set udg_ArthasSouls=udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 )
-        call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboard(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
+        call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     else
         call DisplayTextToPlayer(GetOwningPlayer(GetSpellAbilityUnit()), 0, 0, "TRIGSTR_2372")
     endif
@@ -10889,6 +10955,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
+call ExecuteFunc("ARTHASUI__init")
 call ExecuteFunc("FrameLoader__init_function")
 call ExecuteFunc("REFORGEDUIMAKER__init")
 call ExecuteFunc("RaceUnits__InitRaceUnits")
