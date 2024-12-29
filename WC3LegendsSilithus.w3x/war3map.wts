@@ -14547,3 +14547,57 @@ STRING 4858
 [Whitemane] Gold +7
 }
 
+STRING 4859
+// Units: h026 ([Whitemane] Scout Tower), Name (Name)
+{
+[Whitemane] Scout Tower
+}
+
+STRING 4860
+// Units: h028 ([Whitemane] Gun Tower), Name (Name)
+{
+[Whitemane] Gun Tower
+}
+
+STRING 4861
+// Units: h028 ([Whitemane] Gun Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Gun Tower
+}
+
+STRING 4862
+// Units: h029 ([Whitemane] Inquisition Tower), Name (Name)
+{
+[Whitemane] Inquisition Tower
+}
+
+STRING 4863
+// Units: h029 ([Whitemane] Inquisition Tower), Tip (Tooltip - Basic)
+{
+Upgrade to Inquisition Tower
+}
+
+STRING 4864
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), effect2 (Effect 2)
+{
+rhpr
+}
+
+STRING 4867
+// Abilities: A08C ([Whitemane] Minimum Range), Name (Name)
+{
+[Whitemane] Minimum Range
+}
+
+STRING 4868
+// Abilities: A08C ([Whitemane] Minimum Range), Tip (Tooltip - Normal)
+{
+Minimum Range
+}
+
+STRING 4869
+// Abilities: A08C ([Whitemane] Minimum Range), Ubertip (Tooltip - Normal - Extended)
+{
+The crossbowman cannot fire at targets within 200 range.
+}
+

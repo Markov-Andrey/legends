@@ -1462,17 +1462,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'h025', - 1312.0, - 480.0, 270.000, 'h025')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1481,55 +1470,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', - 1851.4, 1166.9, 298.320, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 922.8, 761.4, 251.847, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 860.9, 608.9, 326.414, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 736.0, 542.0, 229.314, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h024', - 1223.8, 402.4, 272.195, 'h024')
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 692.9, 520.8, 334.412, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 739.0, 498.6, 271.656, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 871.6, 511.2, 356.495, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 988.2, 593.6, 313.230, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 1033.9, 701.4, 130.247, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 1012.8, 836.9, 71.666, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 921.4, 843.9, 16.030, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 785.7, 743.6, 205.934, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 776.6, 589.1, 148.639, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 833.3, 483.4, 96.573, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 912.0, 486.7, 279.578, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 1019.5, 546.5, 30.268, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
-    set u=BlzCreateUnitWithSkin(p, 'h00O', - 1071.0, 620.4, 0.923, 'h00O')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.01 * life)
 endfunction
 
 //===========================================================================
@@ -1752,7 +1692,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer2()
     call CreateBuildingsForPlayer5()
     call CreateBuildingsForPlayer23()
