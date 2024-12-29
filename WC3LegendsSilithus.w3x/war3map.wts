@@ -1,6 +1,6 @@
 ﻿STRING 1
 {
-[WarCraft Legends] Voices of Sands2
+[WarCraft Legends] Voices of Sands
 }
 
 STRING 2
@@ -389,6 +389,16 @@ STRING 798
 Further increases the attack damage of Ghouls, Meat Wagons, Abominations, and Arthas.
 }
 
+STRING 800
+{
+Arthas
+}
+
+STRING 801
+{
+Souls
+}
+
 STRING 806
 // Units: H004 ([Alterac] Stonebeard), Tip (Tooltip - Basic)
 {
@@ -441,6 +451,21 @@ STRING 897
 // Abilities: A001 ([Uther] Divine Shield), Tip (Tooltip - Normal)
 {
 Divine Shield
+}
+
+STRING 903
+{
+Alterac's Justice
+}
+
+STRING 904
+{
+In the mountains of Alterac, the Syndicate has set up smuggling supplies. This needs to be stopped urgently.
+}
+
+STRING 906
+{
+|cff32de00Victory:|r Destroy 5 waves of caravans
 }
 
 STRING 908
@@ -3044,6 +3069,11 @@ STRING 2077
 Liturgy
 }
 
+STRING 2079
+{
++
+}
+
 STRING 2080
 // Units: h00J ([Uther] Cleric), Casterupgradetip (Caster Upgrade Tips)
 {
@@ -4093,6 +4123,11 @@ Overwhelming Sadness - Sends a bolt of negative energy that burns up to <A02I,Da
 
 |cff00ff00Unholy:|r
 Necrotic Breath - Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
+}
+
+STRING 2372
+{
+|cffff0000Not enough souls to reforge!|r
 }
 
 STRING 2377
@@ -8543,6 +8578,16 @@ STRING 3649
 (icon)
 }
 
+STRING 3654
+{
+Defeat!
+}
+
+STRING 3655
+{
+Defeat!
+}
+
 STRING 3656
 // Units: e005 ([Tyrande] Moon Well), Name (Name)
 {
@@ -11253,6 +11298,11 @@ STRING 4284
 Add +10 damage
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Catapult
+}
+
+STRING 4285
+{
+The summoning point must be within line of sight!
 }
 
 STRING 4288
