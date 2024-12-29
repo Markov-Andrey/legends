@@ -1,3 +1,5 @@
+![WarCraft Legends logo](Readme/logo.png)
+
 WarCraft Legends - map to WarCraft 3
 
 PvE (2):
