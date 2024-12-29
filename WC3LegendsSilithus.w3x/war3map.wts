@@ -14459,42 +14459,6 @@ STRING 4831
 [Whitemane] Iron Plating
 }
 
-STRING 4832
-// Units: h027 ([Whitemane] Blacksmith), Name (Name)
-{
-[Whitemane] Blacksmith
-}
-
-STRING 4834
-// Abilities: A08A ([Whitemane] Bury), Tip (Tooltip - Normal)
-{
-Bury or Return
-}
-
-STRING 4836
-// Units: h026 ([Whitemane] Grave), Name (Name)
-{
-[Whitemane] Grave
-}
-
-STRING 4837
-// Units: h026 ([Whitemane] Grave), Tip (Tooltip - Basic)
-{
-Build Grave
-}
-
-STRING 4838
-// Abilities: A08A ([Whitemane] Bury), Name (Name)
-{
-[Whitemane] Bury
-}
-
-STRING 4839
-// Abilities: A08A ([Whitemane] Bury), Ubertip (Tooltip - Normal - Extended)
-{
-Bury the corpse of a unit and receive profit for a certain time.
-}
-
 STRING 4840
 // Destructibles: B005 (Tree Wall), EditorSuffix (Editor Suffix)
 {
@@ -14523,5 +14487,63 @@ STRING 4844
 // Doodads: D00L (Silitus Glacier), Name (Name)
 {
 Silitus Glacier
+}
+
+STRING 4845
+// Units: h027 ([Whitemane] Chamber of Torment), Name (Name)
+{
+[Whitemane] Chamber of Torment
+}
+
+STRING 4846
+// Units: h027 ([Whitemane] Chamber of Torment), Tip (Tooltip - Basic)
+{
+Build Chamber of Torment
+}
+
+STRING 4847
+// Units: h01X ([Whitemane] Beastmistress), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 4848
+// Units: h024 ([Whitemane] Grave Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food #support
+|R
+Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
+}
+
+STRING 4851
+// Abilities: A08A ([Whitemane] Burn), Name (Name)
+{
+[Whitemane] Burn
+}
+
+STRING 4852
+// Abilities: A08A ([Whitemane] Burn), Tip (Tooltip - Normal)
+{
+Burn or Return
+}
+
+STRING 4853
+// Abilities: A08A ([Whitemane] Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Burn the corpse of a unit.
+}
+
+STRING 4857
+// Items: I00D ([Whitemane] Gold +7), Name (Name)
+{
+[Whitemane] Gold +7
+}
+
+STRING 4858
+// Abilities: A08B ([Whitemane] Gold +7), Name (Name)
+{
+[Whitemane] Gold +7
 }
 
