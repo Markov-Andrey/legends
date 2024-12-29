@@ -14220,13 +14220,13 @@ Improvement to check the player's army
 }
 
 STRING 4789
-// Units: h01W ([Whitemane] Barracks), Name (Name)
+// Units: h01Z ([Whitemane] Barracks), Name (Name)
 {
 [Whitemane] Barracks
 }
 
 STRING 4790
-// Units: h01W ([Whitemane] Barracks), Ubertip (Tooltip - Extended)
+// Units: h01W ([Whitemane] Garrison), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack #upgrades
 |R
@@ -14279,12 +14279,6 @@ STRING 4798
 // Units: h01Y ([Whitemane] Scarlet Monastery), Tip (Tooltip - Basic)
 {
 Build Scarlet Monastery
-}
-
-STRING 4799
-// Units: h01Z ([Whitemane] Barracks), Name (Name)
-{
-[Whitemane] Barracks
 }
 
 STRING 4802
@@ -14667,5 +14661,23 @@ STRING 4882
 // Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA6,%>% and attack rate by <A08D,DataB6,%>%.
+}
+
+STRING 4885
+// Units: h02A ([Whitemane] Crusader), Name (Name)
+{
+[Whitemane] Crusader
+}
+
+STRING 4886
+// Units: h02A ([Whitemane] Crusader), Tip (Tooltip - Basic)
+{
+Train Crusader
+}
+
+STRING 4887
+// Units: h01W ([Whitemane] Garrison), Name (Name)
+{
+[Whitemane] Garrison
 }
 
