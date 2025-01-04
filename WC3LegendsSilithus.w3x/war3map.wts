@@ -14270,13 +14270,13 @@ Summons 1 Hound companions. Each wolf has <osw1,realHP> hit points and deals <os
 }
 
 STRING 4797
-// Units: h01Y ([Whitemane] Scarlet Monastery), Name (Name)
+// Units: H02B ([Whitemane] Scarlet Monastery), Name (Name)
 {
 [Whitemane] Scarlet Monastery
 }
 
 STRING 4798
-// Units: h01Y ([Whitemane] Scarlet Monastery), Tip (Tooltip - Basic)
+// Units: H02B ([Whitemane] Scarlet Monastery), Tip (Tooltip - Basic)
 {
 Build Scarlet Monastery
 }
@@ -14291,18 +14291,6 @@ STRING 4803
 // Units: o00X ([Whitemane] Crossbowman), Tip (Tooltip - Basic)
 {
 Train Crossbowman
-}
-
-STRING 4804
-// Units: h020 ([Whitemane] Vindicator), Name (Name)
-{
-[Whitemane] Vindicator
-}
-
-STRING 4805
-// Units: h020 ([Whitemane] Vindicator), Tip (Tooltip - Basic)
-{
-Train Vindicator
 }
 
 STRING 4806
@@ -14371,12 +14359,6 @@ STRING 4817
 Train Conjuror
 }
 
-STRING 4818
-// Units: h022 ([Whitemane] Sorceress), Name (Name)
-{
-[Whitemane] Sorceress
-}
-
 STRING 4819
 // Units: h023 ([Whitemane] Gryphon Lancer), Name (Name)
 {
@@ -14387,12 +14369,6 @@ STRING 4820
 // Units: h023 ([Whitemane] Gryphon Lancer), Tip (Tooltip - Basic)
 {
 Train Gryphon Lancer
-}
-
-STRING 4821
-// Abilities: A087 ([Whitemane] Healing Wave), Name (Name)
-{
-[Whitemane] Healing Wave
 }
 
 STRING 4822
@@ -14423,18 +14399,6 @@ STRING 4826
 // Abilities: A089 ([Whitemane] Drop Corpse), Name (Name)
 {
 [Whitemane] Drop Corpse
-}
-
-STRING 4827
-// Units: h025 ([Whitemane] Graveyard), Name (Name)
-{
-[Whitemane] Graveyard
-}
-
-STRING 4828
-// Units: h025 ([Whitemane] Graveyard), Tip (Tooltip - Basic)
-{
-Build Graveyard
 }
 
 STRING 4831
@@ -14559,12 +14523,6 @@ STRING 4863
 // Units: h029 ([Whitemane] Inquisition Tower), Tip (Tooltip - Basic)
 {
 Upgrade to Inquisition Tower
-}
-
-STRING 4864
-// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), effect2 (Effect 2)
-{
-rhpr
 }
 
 STRING 4867
@@ -14721,5 +14679,102 @@ STRING 4906
 // Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Scarlet Crusade; it has an increased movement speed and attack rate.
+}
+
+STRING 4907
+// Abilities: A087 ([Whitemane] Desperate Plea), Name (Name)
+{
+[Whitemane] Desperate Plea
+}
+
+STRING 4908
+// Abilities: A087 ([Whitemane] Desperate Plea), Researchtip (Tooltip - Learn)
+{
+Learn Desperate Plea - [|cffffcc00Level %d|r]
+}
+
+STRING 4909
+// Abilities: A087 ([Whitemane] Desperate Plea), Tip (Tooltip - Normal)
+{
+Desperate Plea - [|cffffcc00Level 1|r]
+}
+
+STRING 4910
+// Abilities: A087 ([Whitemane] Desperate Plea), Tip (Tooltip - Normal)
+{
+Desperate Plea - [|cffffcc00Level 2|r]
+}
+
+STRING 4911
+// Abilities: A087 ([Whitemane] Desperate Plea), Tip (Tooltip - Normal)
+{
+Desperate Plea - [|cffffcc00Level 3|r]
+}
+
+STRING 4912
+// Abilities: A08G ([UI] Race: Whitemane), Name (Name)
+{
+[UI] Race: Whitemane
+}
+
+STRING 4913
+// Abilities: A08G ([UI] Race: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 4914
+// Abilities: A08G ([UI] Race: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Human
+|cFF48BFFFSubrace:|R Scarlet Crusade
+}
+
+STRING 4921
+// Units: h025 ([Whitemane] Honor's Tomb), Name (Name)
+{
+[Whitemane] Honor's Tomb
+}
+
+STRING 4922
+// Units: h025 ([Whitemane] Honor's Tomb), Tip (Tooltip - Basic)
+{
+Build Honor's Tomb
+}
+
+STRING 4923
+// Units: h020 ([Whitemane] Zealot), Name (Name)
+{
+[Whitemane] Zealot
+}
+
+STRING 4924
+// Units: h020 ([Whitemane] Zealot), Tip (Tooltip - Basic)
+{
+Train Zealot
+}
+
+STRING 4925
+// Units: h022 ([Whitemane] Oracle), Name (Name)
+{
+[Whitemane] Oracle
+}
+
+STRING 4926
+// Units: h022 ([Whitemane] Oracle), Tip (Tooltip - Basic)
+{
+Train Oracle
+}
+
+STRING 4927
+// Units: h01Y ([Whitemane] Inquisitor), Name (Name)
+{
+[Whitemane] Inquisitor
+}
+
+STRING 4928
+// Units: h01Y ([Whitemane] Inquisitor), Tip (Tooltip - Basic)
+{
+Train Inquisitor
 }
 
