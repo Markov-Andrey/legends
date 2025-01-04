@@ -14585,80 +14585,38 @@ STRING 4869
 The crossbowman cannot fire at targets within 200 range.
 }
 
-STRING 4870
-// Abilities: A08D ([Whitemane] Endurance Aura), Tip (Tooltip - Normal)
-{
-Endurance Aura - [|cffffcc00Level 4|r]
-}
-
-STRING 4871
-// Abilities: A08D ([Whitemane] Endurance Aura), Tip (Tooltip - Normal)
-{
-Endurance Aura - [|cffffcc00Level 5|r]
-}
-
 STRING 4872
-// Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA4,%>% and attack rate by <A08D,DataB4,%>%.
 }
 
 STRING 4873
-// Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA5,%>% and attack rate by <A08D,DataB5,%>%.
 }
 
 STRING 4874
-// Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA1,%>% and attack rate by <A08D,DataB1,%>%.
 }
 
 STRING 4875
-// Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA2,%>% and attack rate by <A08D,DataB2,%>%.
 }
 
 STRING 4876
-// Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA3,%>% and attack rate by <A08D,DataB3,%>%.
 }
 
-STRING 4877
-// Abilities: A08D ([Whitemane] Endurance Aura), Name (Name)
-{
-[Whitemane] Endurance Aura
-}
-
-STRING 4878
-// Abilities: A08D ([Whitemane] Endurance Aura), Tip (Tooltip - Normal)
-{
-Endurance Aura - [|cffffcc00Level 3|r]
-}
-
-STRING 4879
-// Abilities: A08D ([Whitemane] Endurance Aura), Tip (Tooltip - Normal)
-{
-Endurance Aura - [|cffffcc00Level 2|r]
-}
-
-STRING 4880
-// Abilities: A08D ([Whitemane] Endurance Aura), Tip (Tooltip - Normal)
-{
-Endurance Aura - [|cffffcc00Level 1|r]
-}
-
-STRING 4881
-// Abilities: A08D ([Whitemane] Endurance Aura), Tip (Tooltip - Normal)
-{
-Endurance Aura - [|cffffcc00Level 0|r]
-}
-
 STRING 4882
-// Abilities: A08D ([Whitemane] Endurance Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA6,%>% and attack rate by <A08D,DataB6,%>%.
 }
@@ -14703,5 +14661,65 @@ STRING 4893
 // Abilities: A08F ([Whitemane] Scarlet Crusade (Off)), Tip (Tooltip - Normal)
 {
 Scarlet Crusade (Off)
+}
+
+STRING 4894
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
+{
+Scarlet Crusade - [|cffffcc00Level 3|r]
+}
+
+STRING 4895
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
+{
+Scarlet Crusade - [|cffffcc00Level 4|r]
+}
+
+STRING 4896
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Name (Name)
+{
+[Whitemane] Scarlet Crusade
+}
+
+STRING 4897
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
+{
+Scarlet Crusade - [|cffffcc00Level 5|r]
+}
+
+STRING 4898
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
+{
+Scarlet Crusade - [|cffffcc00Level 2|r]
+}
+
+STRING 4899
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
+{
+Scarlet Crusade - [|cffffcc00Level 1|r]
+}
+
+STRING 4903
+// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
+{
+Scarlet Crusade - [|cffffcc00Level 6|r]
+}
+
+STRING 4904
+// Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), Bufftip (Tooltip)
+{
+Scarlet Crusade
+}
+
+STRING 4905
+// Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), EditorName (Name (Editor Only))
+{
+[Whitemane] Scarlet Crusade
+}
+
+STRING 4906
+// Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Scarlet Crusade; it has an increased movement speed and attack rate.
 }
 
