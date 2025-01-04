@@ -204,6 +204,8 @@ trigger gg_trg_ThrallElementalDestruction= null
 trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
+trigger gg_trg_WhitemaneCrusadeOnOff= null
+trigger gg_trg_WhitemaneCrusade= null
 trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
@@ -289,8 +291,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneCrusade= null
-trigger gg_trg_WhitemaneCrusadeOnOff= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1592,6 +1592,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', - 1851.4, 1166.9, 298.320, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'H01R', - 880.6, 278.4, 317.031, 'H01R')
 endfunction
 
 //===========================================================================
