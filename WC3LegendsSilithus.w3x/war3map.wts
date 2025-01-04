@@ -2186,7 +2186,7 @@ Abbey
 }
 
 STRING 1738
-// Units: h02N ([Uther] Aviary), Tip (Tooltip - Basic)
+// Units: h02N ([Uther] Gryphon Aviary), Tip (Tooltip - Basic)
 {
 Build Aviary
 }
@@ -3264,12 +3264,6 @@ STRING 2165
 // Units: h02L ([Uther] Abbey), Name (Name)
 {
 [Uther] Abbey
-}
-
-STRING 2166
-// Units: h02N ([Uther] Aviary), Name (Name)
-{
-[Uther] Aviary
 }
 
 STRING 2167
@@ -12463,7 +12457,7 @@ Trains Cleric, Templar. |nAlso contains spell upgrades for Cleric and Templar an
 }
 
 STRING 4514
-// Units: h02N ([Uther] Aviary), Ubertip (Tooltip - Extended)
+// Units: h02N ([Uther] Gryphon Aviary), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack #upgrades
 |R
@@ -14437,18 +14431,6 @@ STRING 4844
 Silitus Glacier
 }
 
-STRING 4845
-// Units: h027 ([Whitemane] Chamber of Torment), Name (Name)
-{
-[Whitemane] Chamber of Torment
-}
-
-STRING 4846
-// Units: h027 ([Whitemane] Chamber of Torment), Tip (Tooltip - Basic)
-{
-Build Chamber of Torment
-}
-
 STRING 4847
 // Units: h01X ([Whitemane] Beastmistress), Ubertip (Tooltip - Extended)
 {
@@ -14776,5 +14758,89 @@ STRING 4928
 // Units: h01Y ([Whitemane] Inquisitor), Tip (Tooltip - Basic)
 {
 Train Inquisitor
+}
+
+STRING 4929
+// Units: h02C ([Whitemane] Scout Airship), Name (Name)
+{
+[Whitemane] Scout Airship
+}
+
+STRING 4930
+// Units: h02C ([Whitemane] Scout Airship), Tip (Tooltip - Basic)
+{
+Train Scout Airship
+}
+
+STRING 4931
+// Units: h02N ([Uther] Gryphon Aviary), Name (Name)
+{
+[Uther] Gryphon Aviary
+}
+
+STRING 4932
+// Units: h02E ([Whitemane] Aviary), Name (Name)
+{
+[Whitemane] Aviary
+}
+
+STRING 4933
+// Units: h02E ([Whitemane] Aviary), Tip (Tooltip - Basic)
+{
+Build Aviary
+}
+
+STRING 4934
+// Units: h027 ([Whitemane] Armory), Name (Name)
+{
+[Whitemane] Armory
+}
+
+STRING 4935
+// Units: h027 ([Whitemane] Armory), Tip (Tooltip - Basic)
+{
+Build Armory
+}
+
+STRING 4936
+// Units: h02G ([Whitemane] Cathedral of Light), Name (Name)
+{
+[Whitemane] Cathedral of Light
+}
+
+STRING 4937
+// Units: h02G ([Whitemane] Cathedral of Light), Tip (Tooltip - Basic)
+{
+Build Cathedral of Light
+}
+
+STRING 4938
+// Abilities: A08H ([Whitemane] Inquisition), Name (Name)
+{
+[Whitemane] Inquisition
+}
+
+STRING 4939
+// Abilities: A08H ([Whitemane] Inquisition), Researchtip (Tooltip - Learn)
+{
+Learn Inquisition - [|cffffcc00Level %d|r]
+}
+
+STRING 4940
+// Abilities: A08H ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+{
+Inquisition - [|cffffcc00Level 1|r]
+}
+
+STRING 4941
+// Abilities: A08H ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+{
+Inquisition - [|cffffcc00Level 2|r]
+}
+
+STRING 4942
+// Abilities: A08H ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+{
+Inquisition - [|cffffcc00Level 3|r]
 }
 
