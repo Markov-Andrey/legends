@@ -379,7 +379,7 @@ endglobals
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -439,15 +439,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -647,6 +647,16 @@ endglobals
             set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_off"
         elseif iconCode == "on" then
             set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on"
+        elseif iconCode == "on1" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on1"
+        elseif iconCode == "on2" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on2"
+        elseif iconCode == "on3" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on3"
+        elseif iconCode == "on4" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on4"
+        elseif iconCode == "on5" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on5"
         else
             return
         endif
@@ -1592,7 +1602,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', - 1851.4, 1166.9, 298.320, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'H01R', - 880.6, 278.4, 317.031, 'H01R')
 endfunction
 
 //===========================================================================
@@ -6531,7 +6540,6 @@ function Trig_WhitemaneCrusadeOnOff_Actions takes nothing returns nothing
     if ( Trig_WhitemaneCrusadeOnOff_Func001C() ) then
         call UnitAddAbilityBJ('A08F', GetSpellAbilityUnit())
         call EnableTrigger(gg_trg_WhitemaneCrusade)
-        call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "on")
         call UnitRemoveAbilityBJ('A08E', GetSpellAbilityUnit())
     else
         call UnitAddAbilityBJ('A08E', GetSpellAbilityUnit())
@@ -6587,10 +6595,12 @@ function Trig_WhitemaneCrusade_Func003A takes nothing returns nothing
 endfunction
 
 function Trig_WhitemaneCrusade_Func004Func001Func001Func001Func001A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on5")
     call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 6)
 endfunction
 
 function Trig_WhitemaneCrusade_Func004Func001Func001Func001Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on4")
     call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 5)
 endfunction
 
@@ -6602,6 +6612,7 @@ function Trig_WhitemaneCrusade_Func004Func001Func001Func001C takes nothing retur
 endfunction
 
 function Trig_WhitemaneCrusade_Func004Func001Func001Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on3")
     call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 4)
 endfunction
 
@@ -6613,6 +6624,7 @@ function Trig_WhitemaneCrusade_Func004Func001Func001C takes nothing returns bool
 endfunction
 
 function Trig_WhitemaneCrusade_Func004Func001Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on2")
     call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 3)
 endfunction
 
@@ -6624,6 +6636,7 @@ function Trig_WhitemaneCrusade_Func004Func001C takes nothing returns boolean
 endfunction
 
 function Trig_WhitemaneCrusade_Func004Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on1")
     call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 2)
 endfunction
 
@@ -11115,8 +11128,8 @@ function main takes nothing returns nothing
 
 call ExecuteFunc("ARTHASUI__init")
 call ExecuteFunc("FrameLoader__init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
 call ExecuteFunc("THRALLUI__init")
 call ExecuteFunc("WHITEMANEUI__init")
 call ExecuteFunc("CustomConsoleUI__init_function")
