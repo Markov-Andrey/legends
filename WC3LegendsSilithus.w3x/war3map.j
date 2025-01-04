@@ -119,6 +119,10 @@ integer udg_CountHorse5= 0
 unit udg_LocalUnit= null
 race udg_RACE_RANDOM= null
 integer udg_GAME_DIFFICULTY= 0
+real udg_Whitemane_crusade_current= 0
+real udg_Whitemane_crusade_default= 0
+integer udg_Whitemane_crusade_level= 0
+boolean udg_Whitemane_crusade_mode= false
 
     // Generated
 rect gg_rct_Region_000_Copy_2= null
@@ -285,6 +289,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneCrusadeOnOff= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1076,6 +1082,10 @@ function InitGlobals takes nothing returns nothing
     set udg_CountHorse4=8
     set udg_CountHorse5=5
     set udg_GAME_DIFFICULTY=0
+    set udg_Whitemane_crusade_current=0
+    set udg_Whitemane_crusade_default=0
+    set udg_Whitemane_crusade_level=0
+    set udg_Whitemane_crusade_mode=false
 endfunction
 
 //***************************************************************************
@@ -2385,14 +2395,6 @@ function Trig_ChooseWhitemane_Actions takes nothing returns nothing
     call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , "1")
     call ConditionalTriggerExecute(gg_trg_WhitemaneIni)
     call TriggerExecute(gg_trg_StartCameraReset)
-    call TriggerSleepAction(1.00)
-    call UpdateWhitemaneText(Player(0) , "10")
-    call TriggerSleepAction(1.00)
-    call UpdateWhitemaneText(Player(0) , "22")
-    call TriggerSleepAction(1.00)
-    call UpdateWhitemaneText(Player(0) , "39")
-    call TriggerSleepAction(1.00)
-    call UpdateWhitemaneText(Player(0) , "60")
 endfunction
 
 //===========================================================================
@@ -6487,12 +6489,77 @@ endfunction
 // Trigger: WhitemaneIni
 //===========================================================================
 function Trig_WhitemaneIni_Actions takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "off")
+    call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , "1")
 endfunction
 
 //===========================================================================
 function InitTrig_WhitemaneIni takes nothing returns nothing
     set gg_trg_WhitemaneIni=CreateTrigger()
     call TriggerAddAction(gg_trg_WhitemaneIni, function Trig_WhitemaneIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneCrusadeOnOff
+//===========================================================================
+function Trig_WhitemaneCrusadeOnOff_Func002C takes nothing returns boolean
+    if ( ( GetSpellAbilityId() == 'A08E' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A08F' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WhitemaneCrusadeOnOff_Conditions takes nothing returns boolean
+    if ( not Trig_WhitemaneCrusadeOnOff_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusadeOnOff_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A08E' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusadeOnOff_Actions takes nothing returns nothing
+    if ( Trig_WhitemaneCrusadeOnOff_Func001C() ) then
+        call UnitRemoveAbilityBJ('A08E', GetSpellAbilityUnit())
+        call UnitAddAbilityBJ('A08F', GetSpellAbilityUnit())
+        set udg_Whitemane_crusade_mode=true
+        call EnableTrigger(gg_trg_WhitemaneCrusade)
+    else
+        call UnitRemoveAbilityBJ('A08F', GetSpellAbilityUnit())
+        call UnitAddAbilityBJ('A08E', GetSpellAbilityUnit())
+        set udg_Whitemane_crusade_mode=false
+        call DisableTrigger(gg_trg_WhitemaneCrusade)
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneCrusadeOnOff takes nothing returns nothing
+    set gg_trg_WhitemaneCrusadeOnOff=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneCrusadeOnOff, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WhitemaneCrusadeOnOff, Condition(function Trig_WhitemaneCrusadeOnOff_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneCrusadeOnOff, function Trig_WhitemaneCrusadeOnOff_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneCrusade
+//===========================================================================
+function Trig_WhitemaneCrusade_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneCrusade takes nothing returns nothing
+    set gg_trg_WhitemaneCrusade=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneCrusade)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusade, 1.00)
+    call TriggerAddAction(gg_trg_WhitemaneCrusade, function Trig_WhitemaneCrusade_Actions)
 endfunction
 
 //===========================================================================
@@ -10704,6 +10771,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallNextPage()
     call InitTrig_ThrallElementalUpg()
     call InitTrig_WhitemaneIni()
+    call InitTrig_WhitemaneCrusadeOnOff()
+    call InitTrig_WhitemaneCrusade()
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()

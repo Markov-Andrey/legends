@@ -14681,3 +14681,27 @@ STRING 4887
 [Whitemane] Garrison
 }
 
+STRING 4890
+// Abilities: A08E ([Whitemane] Scarlet Crusade (On)), Name (Name)
+{
+[Whitemane] Scarlet Crusade (On)
+}
+
+STRING 4891
+// Abilities: A08E ([Whitemane] Scarlet Crusade (On)), Tip (Tooltip - Normal)
+{
+Scarlet Crusade (On)
+}
+
+STRING 4892
+// Abilities: A08F ([Whitemane] Scarlet Crusade (Off)), Name (Name)
+{
+[Whitemane] Scarlet Crusade (Off)
+}
+
+STRING 4893
+// Abilities: A08F ([Whitemane] Scarlet Crusade (Off)), Tip (Tooltip - Normal)
+{
+Scarlet Crusade (Off)
+}
+
