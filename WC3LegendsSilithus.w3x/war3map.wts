@@ -6175,12 +6175,6 @@ STRING 3016
 [Uther] Libram of Light
 }
 
-STRING 3017
-// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-[Uther] Iron Forged Swords
-}
-
 STRING 3018
 // Upgrades: R009 (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
@@ -14815,32 +14809,194 @@ Build Cathedral of Light
 }
 
 STRING 4938
-// Abilities: A08H ([Whitemane] Inquisition), Name (Name)
+// Abilities: A08I ([Whitemane] Inquisition), Name (Name)
 {
 [Whitemane] Inquisition
 }
 
 STRING 4939
-// Abilities: A08H ([Whitemane] Inquisition), Researchtip (Tooltip - Learn)
+// Abilities: A08I ([Whitemane] Inquisition), Researchtip (Tooltip - Learn)
 {
 Learn Inquisition - [|cffffcc00Level %d|r]
 }
 
 STRING 4940
-// Abilities: A08H ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+// Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 1|r]
 }
 
 STRING 4941
-// Abilities: A08H ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+// Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 2|r]
 }
 
 STRING 4942
-// Abilities: A08H ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+// Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 3|r]
+}
+
+STRING 4943
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Magically binds a target enemy air unit, so that it cannot move or attack and takes <Amls,DataA1> damage per second. |nLasts <Amls,Dur1> seconds.
+}
+
+STRING 4944
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Magically binds a target enemy air unit, so that it cannot move or attack and takes <Amls,DataA1> damage per second. |nLasts <Amls,Dur1> seconds.
+}
+
+STRING 4945
+// Abilities: A08I ([Whitemane] Inquisition), Researchubertip (Tooltip - Learn - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking hit points from it every second and giving them to the Dark Ranger. |n|nLife Drain also applies the current rank of the Black Arrow debuff to the target. |nLasts <ANdr,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANdr,DataA1> hit point drain per second. |n|cffffcc00Level 2|r - <ANdr,DataA2> hit point drain per second. |n|cffffcc00Level 3|r - <ANdr,DataA3> hit point drain per second.
+}
+
+STRING 4947
+// Abilities: A08H ([Whitemane] Zeal), Name (Name)
+{
+[Whitemane] Zeal
+}
+
+STRING 4948
+// Abilities: A08H ([Whitemane] Zeal), Researchtip (Tooltip - Learn)
+{
+Learn Zeal - [|cffffcc00Level %d|r]
+}
+
+STRING 4949
+// Abilities: A08H ([Whitemane] Zeal), Tip (Tooltip - Normal)
+{
+Zeal - [|cffffcc00Level 1|r]
+}
+
+STRING 4950
+// Abilities: A08H ([Whitemane] Zeal), Tip (Tooltip - Normal)
+{
+Zeal - [|cffffcc00Level 2|r]
+}
+
+STRING 4951
+// Abilities: A08H ([Whitemane] Zeal), Tip (Tooltip - Normal)
+{
+Zeal - [|cffffcc00Level 3|r]
+}
+
+STRING 4952
+// Buffs/Effects: B01F ([Whitemane] Zeal), Bufftip (Tooltip)
+{
+Zeal
+}
+
+STRING 4953
+// Buffs/Effects: B01F ([Whitemane] Zeal), EditorName (Name (Editor Only))
+{
+[Whitemane] Zeal
+}
+
+STRING 4954
+// Abilities: A08J ([Whitemane] Scarlet Aegis), Name (Name)
+{
+[Whitemane] Scarlet Aegis
+}
+
+STRING 4955
+// Abilities: A08J ([Whitemane] Scarlet Aegis), Tip (Tooltip - Normal)
+{
+Scarlet Aegis
+}
+
+STRING 4956
+// Buffs/Effects: B01G ([Whitemane] Scarlet Aegis), EditorName (Name (Editor Only))
+{
+[Whitemane] Scarlet Aegis
+}
+
+STRING 4957
+// Buffs/Effects: B01G ([Whitemane] Scarlet Aegis), Bufftip (Tooltip)
+{
+Scarlet Aegis
+}
+
+STRING 4959
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Whitemane] Sword Tempered in Ember
+}
+
+STRING 4960
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Sword Tempered in Fire
+}
+
+STRING 4961
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Sword Tempered in Blood
+}
+
+STRING 4962
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Sword Tempered in Ember
+}
+
+STRING 4963
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Sword Tempered in Fire
+}
+
+STRING 4964
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Sword Tempered in Blood
+}
+
+STRING 4965
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Protector, Knight-Paladin, War Wagon and Gryphon Knights.
+}
+
+STRING 4966
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+[Uther] Hammers of Faith
+}
+
+STRING 4967
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Hammers of Faith
+}
+
+STRING 4968
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hammers of Devotion
+}
+
+STRING 4969
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Hammers of Devotion
+}
+
+STRING 4970
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hammers of the Light
+}
+
+STRING 4971
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Upgrade to Hammers of the Light
 }
 
