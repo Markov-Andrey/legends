@@ -15030,3 +15030,21 @@ STRING 4981
 Fervent Burst
 }
 
+STRING 4985
+// Upgrades: R02Z (Sundering Blades), Name (Name)
+{
+[Uther] Sacred Rest
+}
+
+STRING 4986
+// Upgrades: R02Z (Sundering Blades), Tip (Tooltip)
+{
+Research Sacred Rest
+}
+
+STRING 4987
+// Upgrades: R02Z (Sundering Blades), Ubertip (Tooltip - Extended)
+{
+Fallen Silver Hand soldiers are sanctified, preventing their corpses from being used. Any enemy interaction with a sanctified corpse triggers holy flames, dealing 175 damage to the enemy and consuming the corpse in radiant fire
+}
+
