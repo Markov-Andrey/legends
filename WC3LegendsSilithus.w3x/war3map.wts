@@ -15006,3 +15006,27 @@ STRING 4977
 [Whitemane] Hide
 }
 
+STRING 4978
+// Abilities: A08L ([Whitemane] Fervent Burst), Name (Name)
+{
+[Whitemane] Fervent Burst
+}
+
+STRING 4979
+// Abilities: A08L ([Whitemane] Fervent Burst), Tip (Tooltip - Normal)
+{
+Fervent Burst
+}
+
+STRING 4980
+// Buffs/Effects: B01H ([Whitemane] Fervent Burst), EditorName (Name (Editor Only))
+{
+[Whitemane] Fervent Burst
+}
+
+STRING 4981
+// Buffs/Effects: B01H ([Whitemane] Fervent Burst), Bufftip (Tooltip)
+{
+Fervent Burst
+}
+
