@@ -173,6 +173,7 @@ trigger gg_trg_UtherDivineShield= null
 trigger gg_trg_UtherChampions= null
 trigger gg_trg_UtherChampionsDead= null
 trigger gg_trg_UtherLiturgy= null
+trigger gg_trg_UtherHolyDead= null
 trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
@@ -206,6 +207,7 @@ trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneFerventBurst= null
 trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
@@ -291,8 +293,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneFerventBurst= null
-trigger gg_trg_UtherHolyDead= null
 
     // Random Groups
 integer array gg_rg_000
