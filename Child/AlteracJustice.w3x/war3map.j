@@ -1,9 +1,12 @@
 globals
+//globals from ARTHASUI:
+constant boolean LIBRARY_ARTHASUI=true
+//endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -28,23 +31,24 @@ integer array Heroes_Nightelf
 //globals from THRALLUI:
 constant boolean LIBRARY_THRALLUI=true
 //endglobals from THRALLUI
-//globals from TIMEUI:
-constant boolean LIBRARY_TIMEUI=true
-//endglobals from TIMEUI
+//globals from WHITEMANEUI:
+constant boolean LIBRARY_WHITEMANEUI=true
+//endglobals from WHITEMANEUI
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+    // workerFace = true can only be used when you save the map in 1.32.6+
+constant boolean CustomConsoleUI__workerFace= true
+        
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
-        // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
 //endglobals from CustomConsoleUI
     // User-defined
 integer udg_ArthasSouls= 0
@@ -115,6 +119,10 @@ integer udg_CountHorse5= 0
 unit udg_LocalUnit= null
 race udg_RACE_RANDOM= null
 integer udg_GAME_DIFFICULTY= 0
+real udg_Whitemane_crusade_current= 0
+real udg_Whitemane_crusade_default= 0
+integer udg_Whitemane_crusade_level= 0
+player udg_WhitemanePlayer= null
 
     // Generated
 camerasetup gg_cam_StartView= null
@@ -129,6 +137,7 @@ trigger gg_trg_PreviewLegend= null
 trigger gg_trg_ChooseArthas= null
 trigger gg_trg_ChooseUther= null
 trigger gg_trg_ChooseWrynn= null
+trigger gg_trg_ChooseWhitemane= null
 trigger gg_trg_ChooseTyrande= null
 trigger gg_trg_ChooseThrall= null
 trigger gg_trg_UpgradesCondition= null
@@ -163,6 +172,7 @@ trigger gg_trg_UtherDivineShield= null
 trigger gg_trg_UtherChampions= null
 trigger gg_trg_UtherChampionsDead= null
 trigger gg_trg_UtherLiturgy= null
+trigger gg_trg_UtherHolyDead= null
 trigger gg_trg_UtherChurchDonations= null
 trigger gg_trg_UtherLightTower= null
 trigger gg_trg_WrynnIni= null
@@ -193,6 +203,11 @@ trigger gg_trg_ThrallCounterstrikeTotemCrutch= null
 trigger gg_trg_ThrallElementalDestruction= null
 trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
+trigger gg_trg_WhitemaneIni= null
+trigger gg_trg_WhitemaneCrusadeOnOff= null
+trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneFerventBurst= null
+trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
 trigger gg_trg_Mythic2Vampiric= null
@@ -280,10 +295,11 @@ trigger gg_trg_ApiEnemyCreate= null
 
     // Random Groups
 integer array gg_rg_000
-framehandle g_TextFrame= null
-integer g_GameTimeSeconds= 0
-integer g_GameTimeMinutes= 0
 framehandle ThrallIcon= null
+framehandle WhitemaneIcon= null
+framehandle WhitemaneText= null
+framehandle ArthasIcon= null
+framehandle ArthasText= null
 integer MYTHIC_INDEX= 0
 framehandle Icon01= null
 framehandle Icon02= null
@@ -297,30 +313,74 @@ trigger l__library_init
 endglobals
 
 
+//library ARTHASUI:
+
+    function ARTHASUI__CreateIcon takes nothing returns nothing
+        // Создание иконки
+        set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+        call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
+        call BlzFrameSetVisible(ArthasIcon, false)
+
+        // Создание текстового фрейма
+        set ArthasText=BlzCreateFrameByType("TEXT", "ArthasDynamicText", ArthasIcon, "", 0)
+        call BlzFrameSetPoint(ArthasText, FRAMEPOINT_CENTER, ArthasIcon, FRAMEPOINT_CENTER, 0, - 0.001)
+        call BlzFrameSetSize(ArthasText, 0.06, 0.025)
+        call BlzFrameSetScale(ArthasText, 1.3)
+        call BlzFrameSetTextAlignment(ArthasText, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_MIDDLE)
+        call BlzFrameSetText(ArthasText, "")
+        call BlzFrameSetVisible(ArthasText, false)
+    endfunction
+
+    function ShowArthasUiForPlayer takes player p returns nothing
+        local real xPos= 0.168
+        local real yPos= 0.125
+
+        if GetLocalPlayer() == p then
+            call BlzFrameSetTexture(ArthasIcon, "UI\\Console\\Arthas\\arthas_souls", 0, true)
+            call BlzFrameSetVisible(ArthasIcon, true)
+            call BlzFrameSetVisible(ArthasText, true)
+
+            call BlzFrameSetAbsPoint(ArthasIcon, FRAMEPOINT_TOPLEFT, xPos, yPos + 0.065)
+            call BlzFrameSetAbsPoint(ArthasIcon, FRAMEPOINT_BOTTOMRIGHT, xPos + 0.065, yPos)
+        endif
+    endfunction
+
+    function UpdateArthasText takes player p,string text returns nothing
+        if GetLocalPlayer() == p then
+            call BlzFrameSetText(ArthasText, text)
+        endif
+    endfunction
+
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
+    endfunction
+
+
+//library ARTHASUI ends
 //library FrameLoader:
 // in 1.31 and upto 1.32.9 PTR (when I wrote this). Frames are not correctly saved and loaded, breaking the game.
 // This library runs all functions added to it with a 0s delay after the game was loaded.
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -380,15 +440,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -523,7 +583,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -555,52 +615,75 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
-//library TIMEUI:
+//library WHITEMANEUI:
 
-    function TIMEUI___UpdateCurrentTime takes nothing returns nothing
-        local string gameTimeText
-        set g_GameTimeSeconds=g_GameTimeSeconds + 1
-        
-        if g_GameTimeSeconds >= 60 then
-            set g_GameTimeSeconds=0
-            set g_GameTimeMinutes=g_GameTimeMinutes + 1
-        endif
-        
-        if ( g_GameTimeSeconds < 10 ) then
-            set gameTimeText=I2S(g_GameTimeMinutes) + ":0" + I2S(g_GameTimeSeconds)
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
+        // Создание иконки
+        set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+        call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
+        call BlzFrameSetVisible(WhitemaneIcon, false)
+
+        // Создание текстового фрейма
+        set WhitemaneText=BlzCreateFrameByType("TEXT", "WhitemaneDynamicText", WhitemaneIcon, "", 0)
+        call BlzFrameSetPoint(WhitemaneText, FRAMEPOINT_CENTER, WhitemaneIcon, FRAMEPOINT_CENTER, 0, - 0.0135)
+        call BlzFrameSetSize(WhitemaneText, 0.06, 0.025)
+        call BlzFrameSetScale(WhitemaneText, 1.25)
+        call BlzFrameSetTextAlignment(WhitemaneText, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_MIDDLE)
+        call BlzFrameSetText(WhitemaneText, "")
+        call BlzFrameSetVisible(WhitemaneText, false)
+    endfunction
+
+    function ShowWhitemaneUiForPlayer takes player p,string iconCode returns nothing
+        local string texturePath
+        local real xPos= 0.345
+        local real yPos= 0.118
+
+        if iconCode == "off" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_off"
+        elseif iconCode == "on" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on"
+        elseif iconCode == "on1" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on1"
+        elseif iconCode == "on2" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on2"
+        elseif iconCode == "on3" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on3"
+        elseif iconCode == "on4" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on4"
+        elseif iconCode == "on5" then
+            set texturePath="UI\\Console\\Whitemane\\scarlet_crusade_on5"
         else
-            set gameTimeText=I2S(g_GameTimeMinutes) + ":" + I2S(g_GameTimeSeconds)
+            return
         endif
-        
-        call BlzFrameSetText(g_TextFrame, "|cFFC0C030Time: " + gameTimeText + "|R")
+
+        if GetLocalPlayer() == p then
+            call BlzFrameSetTexture(WhitemaneIcon, texturePath, 0, true)
+            call BlzFrameSetVisible(WhitemaneIcon, true)
+            call BlzFrameSetVisible(WhitemaneText, true)
+
+            call BlzFrameSetAbsPoint(WhitemaneIcon, FRAMEPOINT_TOPLEFT, xPos, yPos + 0.065)
+            call BlzFrameSetAbsPoint(WhitemaneIcon, FRAMEPOINT_BOTTOMRIGHT, xPos + 0.065, yPos)
+        endif
     endfunction
 
-    function TIMEUI___CreateCurrentTimeFrame takes nothing returns nothing
-        local framehandle parentFrame= BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
-        local trigger updateTimeTrigger= CreateTrigger()
-        
-        set g_TextFrame=BlzCreateFrameByType("TEXT", "MyTextFrame", parentFrame, "", 0)
-        call BlzFrameSetText(g_TextFrame, "")
-        call BlzFrameSetAbsPoint(g_TextFrame, FRAMEPOINT_CENTER, 0.465, 0.562)
-        call BlzFrameSetEnable(g_TextFrame, false)
-        call BlzFrameSetScale(g_TextFrame, 1.1)
-        
-        call TriggerRegisterTimerEvent(updateTimeTrigger, 1.00, true)
-        call TriggerAddAction(updateTimeTrigger, function TIMEUI___UpdateCurrentTime)
+    function UpdateWhitemaneText takes player p,string text returns nothing
+        if GetLocalPlayer() == p then
+            call BlzFrameSetText(WhitemaneText, "|cFFBF0000" + text + "|r")
+        endif
     endfunction
 
-    function TIMEUI___init takes nothing returns nothing
-        call TIMEUI___CreateCurrentTimeFrame()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
-//library TIMEUI ends
+//library WHITEMANEUI ends
 //library CustomConsoleUI:
 
 // CustomConsoleUI by Tasyen
@@ -615,7 +698,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -626,7 +709,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -646,10 +729,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -662,18 +745,23 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
+
+
+
+
+
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -694,19 +782,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -825,19 +913,33 @@ endglobals
         call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNPeon")
         set CustomConsoleUI_x[index]=0.0004
         set CustomConsoleUI_y[index]=0.0
-        if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
-        endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+        set index=GetHandleId(ConvertRace(10))
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile01")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile02")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile03")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile04")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile05")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile06")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Whitemane\\humanuitile-inventorycover")
+        call AddCustomConsole(index , "Legends\\Whitemane\\Houndmaster\\BTNBeastmistress")
+        set CustomConsoleUI_x[index]=0.000
+        set CustomConsoleUI_y[index]=0.0
+        
+        if GetLocalizedString("REFORGED") == "REFORGED" then
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
+        endif
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
+
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
 //library CustomConsoleUI ends
 //===========================================================================
 // 
-// [WarCraft Legends] Alterac's Justice
+// [WarCraft Legends] Voices of Sands
 // 
 //   Warcraft III map script
 //   Generated by the Warcraft III World Editor
@@ -980,7 +1082,7 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
-    set udg_Map="Alterac"
+    set udg_Map="Alterac Justice"
     set udg_ThrallMode="air"
     set udg_ThrallTotems=0
     set udg_MythicEnemy=Player(5)
@@ -991,6 +1093,9 @@ function InitGlobals takes nothing returns nothing
     set udg_CountHorse4=8
     set udg_CountHorse5=5
     set udg_GAME_DIFFICULTY=0
+    set udg_Whitemane_crusade_current=0
+    set udg_Whitemane_crusade_default=0
+    set udg_Whitemane_crusade_level=0
 endfunction
 
 //***************************************************************************
@@ -999,11 +1104,14 @@ endfunction
 //*
 //***************************************************************************
 //***************************************************************************
-//*  UiTimer
-
-//***************************************************************************
 //*  ThrallCurrentMode
 
+
+//***************************************************************************
+//*  WhitemaneCurrentMode
+
+//***************************************************************************
+//*  ArthasSouls
 
 //***************************************************************************
 //*  FrameMythic
@@ -1057,7 +1165,6 @@ endfunction
 
 //***************************************************************************
 //*  CustomConsoleUI vjass
-
 //***************************************************************************
 //*  ArthasFrameRunes
 
@@ -2134,6 +2241,9 @@ function Trig_LimitUnits_Func001A takes nothing returns nothing
     // Thrall
     call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
+    // Whitemane
+    call SetPlayerTechMaxAllowedSwap('H01R', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H02B', 1, GetEnumPlayer())
 endfunction
 
 function Trig_LimitUnits_Actions takes nothing returns nothing
@@ -2169,6 +2279,7 @@ endfunction
 //===========================================================================
 function InitTrig_StartCameraP1 takes nothing returns nothing
     set gg_trg_StartCameraP1=CreateTrigger()
+    call DisableTrigger(gg_trg_StartCameraP1)
     call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP1, 0.10)
     call TriggerAddAction(gg_trg_StartCameraP1, function Trig_StartCameraP1_Actions)
 endfunction
@@ -2183,6 +2294,7 @@ endfunction
 //===========================================================================
 function InitTrig_StartCameraP2 takes nothing returns nothing
     set gg_trg_StartCameraP2=CreateTrigger()
+    call DisableTrigger(gg_trg_StartCameraP2)
     call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP2, 0.10)
     call TriggerAddAction(gg_trg_StartCameraP2, function Trig_StartCameraP2_Actions)
 endfunction
@@ -2200,6 +2312,7 @@ endfunction
 //===========================================================================
 function InitTrig_StartCameraReset takes nothing returns nothing
     set gg_trg_StartCameraReset=CreateTrigger()
+    call DisableTrigger(gg_trg_StartCameraReset)
     call TriggerAddAction(gg_trg_StartCameraReset, function Trig_StartCameraReset_Actions)
 endfunction
 
@@ -2217,6 +2330,7 @@ endfunction
 //===========================================================================
 function InitTrig_ChooseFirst takes nothing returns nothing
     set gg_trg_ChooseFirst=CreateTrigger()
+    call DisableTrigger(gg_trg_ChooseFirst)
     call TriggerRegisterTimerEventSingle(gg_trg_ChooseFirst, 0.01)
     call TriggerAddAction(gg_trg_ChooseFirst, function Trig_ChooseFirst_Actions)
 endfunction
@@ -2286,6 +2400,17 @@ function Trig_UnSelect_Func009C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_UnSelect_Func010Func002A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(true, 'A071', GetEnumPlayer())
+endfunction
+
+function Trig_UnSelect_Func010C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01V' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_UnSelect_Actions takes nothing returns nothing
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
@@ -2311,6 +2436,10 @@ function Trig_UnSelect_Actions takes nothing returns nothing
         call ForForce(GetPlayersAll(), function Trig_UnSelect_Func009Func002A)
     else
     endif
+    if ( Trig_UnSelect_Func010C() ) then
+        call ForForce(GetPlayersAll(), function Trig_UnSelect_Func010Func002A)
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -2334,7 +2463,7 @@ function Trig_PreviewLegend takes nothing returns nothing
     local player p
     local unit unitU= GetSpellAbilityUnit()
 
-    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' or abilityId == 'A06B' then
+    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' or abilityId == 'A06B' or abilityId == 'A071' then
         if abilityId == 'A01C' then
             set unitType='h00T'
         elseif abilityId == 'A01J' then
@@ -2345,6 +2474,8 @@ function Trig_PreviewLegend takes nothing returns nothing
             set unitType='h01L'
         elseif abilityId == 'A06B' then
             set unitType='h01M'
+        elseif abilityId == 'A071' then
+            set unitType='h01V'
         else
             return
         endif
@@ -2368,6 +2499,8 @@ function Trig_PreviewLegend takes nothing returns nothing
                     call SetPlayerAbilityAvailable(p, 'A054', false)
                 elseif abilityId == 'A06B' then
                     call SetPlayerAbilityAvailable(p, 'A06B', false)
+                elseif abilityId == 'A071' then
+                    call SetPlayerAbilityAvailable(p, 'A071', false)
                 endif
             endif
             set p=Player(23)
@@ -2434,8 +2567,8 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     call DisableTrigger(gg_trg_StartCameraP1)
     // SoulsScore
     set udg_ArthasSouls=0
-    call CreateLeaderboardBJ(GetForceOfPlayer(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_800")
-    call LeaderboardAddItemBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellAbilityUnit())), "TRIGSTR_801", 0)
+    call ShowArthasUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
+    call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_PURPLE, true)
     call TriggerExecute(gg_trg_StartCameraReset)
 endfunction
@@ -2556,6 +2689,64 @@ function InitTrig_ChooseWrynn takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseWrynn, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ChooseWrynn, Condition(function Trig_ChooseWrynn_Conditions))
     call TriggerAddAction(gg_trg_ChooseWrynn, function Trig_ChooseWrynn_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ChooseWhitemane
+//===========================================================================
+function Trig_ChooseWhitemane_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h01V' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseWhitemane_Conditions takes nothing returns boolean
+    if ( not Trig_ChooseWhitemane_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseWhitemane_Func008A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h01S', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseWhitemane_Func010A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'h01X', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseWhitemane_Actions takes nothing returns nothing
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 10)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
+    // Town Hall
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWhitemane_Func008A)
+    // WorkerX5
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWhitemane_Func010A)
+    // ----------------------
+    call RemoveUnit(GetSpellAbilityUnit())
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_MAROON, true)
+    // Run-ALL-triggers
+    call SetPlayerTechResearchedSwap('R02D', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    set udg_WhitemanePlayer=GetOwningPlayer(GetSpellAbilityUnit())
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "off")
+    call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , "0")
+    call ConditionalTriggerExecute(gg_trg_WhitemaneIni)
+    call TriggerExecute(gg_trg_StartCameraReset)
+endfunction
+
+//===========================================================================
+function InitTrig_ChooseWhitemane takes nothing returns nothing
+    set gg_trg_ChooseWhitemane=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseWhitemane, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseWhitemane, Condition(function Trig_ChooseWhitemane_Conditions))
+    call TriggerAddAction(gg_trg_ChooseWhitemane, function Trig_ChooseWhitemane_Actions)
 endfunction
 
 //===========================================================================
@@ -3155,7 +3346,7 @@ endfunction
 function Trig_ArthasHarvestSoul_Actions takes nothing returns nothing
     call SetUnitVertexColorBJ(GetSpellAbilityUnit(), 100, 100, 100, 100.00)
     set udg_ArthasSouls=( udg_ArthasSouls + R2I(GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit())) )
-    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellTargetUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetSpellTargetUnit())), udg_ArthasSouls)
+    call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
 endfunction
 
 //===========================================================================
@@ -3279,7 +3470,7 @@ function Trig_ArthasSoulReforge_Actions takes nothing returns nothing
         call ReplaceUnitBJ(GetSpellTargetUnit(), unitReplacements[index], bj_UNIT_STATE_METHOD_RELATIVE)
         call AddSpecialEffectLoc(effectUnit, GetUnitLoc(bj_lastReplacedUnit))
         set udg_ArthasSouls=udg_ArthasSouls - ( GetUnitLevel(GetSpellTargetUnit()) * 10 )
-        call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetSpellAbilityUnit()), PlayerGetLeaderboard(GetOwningPlayer(GetSpellAbilityUnit())), udg_ArthasSouls)
+        call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     else
         call DisplayTextToPlayer(GetOwningPlayer(GetSpellAbilityUnit()), 0, 0, "TRIGSTR_2372")
     endif
@@ -3801,6 +3992,7 @@ function Trig_UtherIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_UtherChampions)
     call EnableTrigger(gg_trg_UtherChampionsDead)
     call EnableTrigger(gg_trg_UtherLiturgy)
+    call EnableTrigger(gg_trg_UtherHolyDead)
     call EnableTrigger(gg_trg_UtherChurchDonations)
     call EnableTrigger(gg_trg_UtherLightTower)
 endfunction
@@ -4100,6 +4292,82 @@ function InitTrig_UtherLiturgy takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherLiturgy, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_UtherLiturgy, Condition(function Trig_UtherLiturgy_Conditions))
     call TriggerAddAction(gg_trg_UtherLiturgy, function Trig_UtherLiturgy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UtherHolyDead
+//===========================================================================
+function Trig_UtherHolyDead_Func011Func004C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h005' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h00W' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h00K' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h00L' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h00J' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h000' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'h01Q' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_UtherHolyDead_Func011C takes nothing returns boolean
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerTechCountSimple('R02Z', GetOwningPlayer(GetSpellTargetUnit())) == 1 ) ) then
+        return false
+    endif
+    if ( not ( IsUnitDeadBJ(GetSpellTargetUnit()) == true ) ) then
+        return false
+    endif
+    if ( not Trig_UtherHolyDead_Func011Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherHolyDead_Conditions takes nothing returns boolean
+    if ( not Trig_UtherHolyDead_Func011C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UtherHolyDead_Actions takes nothing returns nothing
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellTargetUnit()), "Abilities\\Spells\\Orc\\HealingWave\\HealingWaveTarget.mdl")
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl")
+    call RemoveUnit(GetSpellTargetUnit())
+    call ExplodeUnitBJ(GetSpellTargetUnit())
+    call ShowUnitHide(GetSpellTargetUnit())
+    call PauseUnitBJ(true, GetSpellAbilityUnit())
+    call TriggerSleepAction(1.00)
+    call IssueImmediateOrderBJ(GetSpellAbilityUnit(), "stop")
+    call PauseUnitBJ(false, GetSpellAbilityUnit())
+    call SetUnitLifeBJ(GetSpellAbilityUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit()) - 175.00 ))
+endfunction
+
+//===========================================================================
+function InitTrig_UtherHolyDead takes nothing returns nothing
+    set gg_trg_UtherHolyDead=CreateTrigger()
+    call DisableTrigger(gg_trg_UtherHolyDead)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherHolyDead, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_UtherHolyDead, Condition(function Trig_UtherHolyDead_Conditions))
+    call TriggerAddAction(gg_trg_UtherHolyDead, function Trig_UtherHolyDead_Actions)
 endfunction
 
 //===========================================================================
@@ -6639,6 +6907,232 @@ function InitTrig_ThrallElementalUpg takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneIni
+//===========================================================================
+function Trig_WhitemaneIni_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneIni takes nothing returns nothing
+    set gg_trg_WhitemaneIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_WhitemaneIni, function Trig_WhitemaneIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneCrusadeOnOff
+//===========================================================================
+function Trig_WhitemaneCrusadeOnOff_Func002C takes nothing returns boolean
+    if ( ( GetSpellAbilityId() == 'A08E' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A08F' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WhitemaneCrusadeOnOff_Conditions takes nothing returns boolean
+    if ( not Trig_WhitemaneCrusadeOnOff_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusadeOnOff_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A08E' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusadeOnOff_Actions takes nothing returns nothing
+    if ( Trig_WhitemaneCrusadeOnOff_Func001C() ) then
+        call UnitAddAbilityBJ('A08F', GetSpellAbilityUnit())
+        call EnableTrigger(gg_trg_WhitemaneCrusade)
+        call UnitRemoveAbilityBJ('A08E', GetSpellAbilityUnit())
+    else
+        call UnitAddAbilityBJ('A08E', GetSpellAbilityUnit())
+        set udg_Whitemane_crusade_current=udg_Whitemane_crusade_default
+        call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(R2I(udg_Whitemane_crusade_current)))
+        call DisableTrigger(gg_trg_WhitemaneCrusade)
+        call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "off")
+        call SetUnitAbilityLevelSwapped('A08D', GetSpellAbilityUnit(), 1)
+        call UnitRemoveAbilityBJ('A08F', GetSpellAbilityUnit())
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneCrusadeOnOff takes nothing returns nothing
+    set gg_trg_WhitemaneCrusadeOnOff=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneCrusadeOnOff, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WhitemaneCrusadeOnOff, Condition(function Trig_WhitemaneCrusadeOnOff_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneCrusadeOnOff, function Trig_WhitemaneCrusadeOnOff_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneCrusade
+//===========================================================================
+function Trig_WhitemaneCrusade_Func002Func001Func002C takes nothing returns boolean
+    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) != true ) ) then
+        return false
+    endif
+    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_MECHANICAL) != true ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetEnumUnit()) != 'h01X' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusade_Func002Func001C takes nothing returns boolean
+    if ( not Trig_WhitemaneCrusade_Func002Func001Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusade_Func002A takes nothing returns nothing
+    if ( Trig_WhitemaneCrusade_Func002Func001C() ) then
+        call SetUnitLifePercentBJ(GetEnumUnit(), ( GetUnitLifePercent(GetEnumUnit()) - 1 ))
+    else
+    endif
+endfunction
+
+function Trig_WhitemaneCrusade_Func003A takes nothing returns nothing
+    call UpdateWhitemaneText(GetOwningPlayer(GetEnumUnit()) , I2S(R2I(udg_Whitemane_crusade_current)))
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001Func001Func001Func001A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on5")
+    call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 6)
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001Func001Func001Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on4")
+    call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 5)
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001Func001Func001C takes nothing returns boolean
+    if ( not ( udg_Whitemane_crusade_current < 60.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001Func001Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on3")
+    call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 4)
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001Func001C takes nothing returns boolean
+    if ( not ( udg_Whitemane_crusade_current < 45.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on2")
+    call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 3)
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func001C takes nothing returns boolean
+    if ( not ( udg_Whitemane_crusade_current < 30.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusade_Func004Func002A takes nothing returns nothing
+    call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetEnumUnit()) , "on1")
+    call SetUnitAbilityLevelSwapped('A08D', GetEnumUnit(), 2)
+endfunction
+
+function Trig_WhitemaneCrusade_Func004C takes nothing returns boolean
+    if ( not ( udg_Whitemane_crusade_current < 15.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusade_Actions takes nothing returns nothing
+    set udg_Whitemane_crusade_current=( udg_Whitemane_crusade_current + 1 )
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_WhitemanePlayer), function Trig_WhitemaneCrusade_Func002A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('H02B'), function Trig_WhitemaneCrusade_Func003A)
+    if ( Trig_WhitemaneCrusade_Func004C() ) then
+        call ForGroupBJ(GetUnitsOfTypeIdAll('H02B'), function Trig_WhitemaneCrusade_Func004Func002A)
+    else
+        if ( Trig_WhitemaneCrusade_Func004Func001C() ) then
+            call ForGroupBJ(GetUnitsOfTypeIdAll('H02B'), function Trig_WhitemaneCrusade_Func004Func001Func002A)
+        else
+            if ( Trig_WhitemaneCrusade_Func004Func001Func001C() ) then
+                call ForGroupBJ(GetUnitsOfTypeIdAll('H02B'), function Trig_WhitemaneCrusade_Func004Func001Func001Func002A)
+            else
+                if ( Trig_WhitemaneCrusade_Func004Func001Func001Func001C() ) then
+                    call ForGroupBJ(GetUnitsOfTypeIdAll('H02B'), function Trig_WhitemaneCrusade_Func004Func001Func001Func001Func002A)
+                else
+                    call ForGroupBJ(GetUnitsOfTypeIdAll('h01Y'), function Trig_WhitemaneCrusade_Func004Func001Func001Func001Func001A)
+                endif
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneCrusade takes nothing returns nothing
+    set gg_trg_WhitemaneCrusade=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneCrusade)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusade, 1.00)
+    call TriggerAddAction(gg_trg_WhitemaneCrusade, function Trig_WhitemaneCrusade_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneFerventBurst
+//===========================================================================
+function Trig_WhitemaneFerventBurst_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A08L' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneFerventBurst_Actions takes nothing returns nothing
+    call SetUnitLifeBJ(GetSpellAbilityUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit()) + 225.00 ))
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneFerventBurst takes nothing returns nothing
+    set gg_trg_WhitemaneFerventBurst=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneFerventBurst, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WhitemaneFerventBurst, Condition(function Trig_WhitemaneFerventBurst_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneFerventBurst, function Trig_WhitemaneFerventBurst_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneGraveyardBurn
+//===========================================================================
+function Trig_WhitemaneGraveyardBurn_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSummoningUnit()) == 'h025' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneGraveyardBurn_Actions takes nothing returns nothing
+    set udg_Whitemane_crusade_current=( udg_Whitemane_crusade_current + 1 )
+    call UnitAddItemByIdSwapped('I00D', GetSummonedUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneGraveyardBurn takes nothing returns nothing
+    set gg_trg_WhitemaneGraveyardBurn=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneGraveyardBurn, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(gg_trg_WhitemaneGraveyardBurn, Condition(function Trig_WhitemaneGraveyardBurn_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneGraveyardBurn, function Trig_WhitemaneGraveyardBurn_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: MythicAddRandom
 //===========================================================================
 function MythicAddRandom takes nothing returns nothing
@@ -7950,7 +8444,7 @@ function Trig_AlteracInitialization_Actions takes nothing returns nothing
     // Ini
     call EnableTrigger(gg_trg_AlliesEnemyAndNeutral)
     // NPC
-    call EnableTrigger(gg_trg_NPCInitialization)
+    call TriggerExecute(gg_trg_NPCInitialization)
     call EnableTrigger(gg_trg_NPCGreetings)
     call EnableTrigger(gg_trg_NPCMissCaravan)
     call EnableTrigger(gg_trg_NPCNextWave)
@@ -8023,7 +8517,7 @@ endfunction
 //===========================================================================
 function InitTrig_AlteracInitialization takes nothing returns nothing
     set gg_trg_AlteracInitialization=CreateTrigger()
-    if ( udg_Map == "Alterac" ) then
+    if ( udg_Map == "alterac" ) then
         call TriggerAddAction(gg_trg_AlteracInitialization, function Trig_AlteracInitialization_Actions)
     endif
 endfunction
@@ -8064,7 +8558,6 @@ endfunction
 function InitTrig_NPCInitialization takes nothing returns nothing
     set gg_trg_NPCInitialization=CreateTrigger()
     call DisableTrigger(gg_trg_NPCInitialization)
-    call TriggerAddAction(gg_trg_NPCInitialization, function Trig_NPCInitialization_Actions)
 endfunction
 
 
@@ -10760,6 +11253,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ChooseArthas()
     call InitTrig_ChooseUther()
     call InitTrig_ChooseWrynn()
+    call InitTrig_ChooseWhitemane()
     call InitTrig_ChooseTyrande()
     call InitTrig_ChooseThrall()
     call InitTrig_UpgradesCondition()
@@ -10794,6 +11288,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherChampions()
     call InitTrig_UtherChampionsDead()
     call InitTrig_UtherLiturgy()
+    call InitTrig_UtherHolyDead()
     call InitTrig_UtherChurchDonations()
     call InitTrig_UtherLightTower()
     call InitTrig_WrynnIni()
@@ -10824,6 +11319,11 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallElementalDestruction()
     call InitTrig_ThrallNextPage()
     call InitTrig_ThrallElementalUpg()
+    call InitTrig_WhitemaneIni()
+    call InitTrig_WhitemaneCrusadeOnOff()
+    call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneFerventBurst()
+    call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
     call InitTrig_Mythic2Vampiric()
@@ -10970,7 +11470,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
 endfunction
 
 function InitCustomTeams takes nothing returns nothing
-    // Force: TRIGSTR_006
+    // Force: 
     call SetPlayerTeam(Player(0), 0)
     call SetPlayerState(Player(0), PLAYER_STATE_ALLIED_VICTORY, 1)
     call SetPlayerTeam(Player(1), 0)
@@ -10994,7 +11494,7 @@ function InitCustomTeams takes nothing returns nothing
     call SetPlayerAllianceStateVisionBJ(Player(2), Player(0), true)
     call SetPlayerAllianceStateVisionBJ(Player(2), Player(1), true)
 
-    // Force: TRIGSTR_467
+    // Force: 
     call SetPlayerTeam(Player(4), 1)
     call SetPlayerState(Player(4), PLAYER_STATE_ALLIED_VICTORY, 1)
     call SetPlayerTeam(Player(5), 1)
@@ -11062,12 +11562,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("TIMEUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("ARTHASUI__init")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
