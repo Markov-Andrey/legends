@@ -1082,7 +1082,7 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
-    set udg_Map="Alterac Justice"
+    set udg_Map="alterac"
     set udg_ThrallMode="air"
     set udg_ThrallTotems=0
     set udg_MythicEnemy=Player(5)
