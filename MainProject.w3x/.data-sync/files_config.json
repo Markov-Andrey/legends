@@ -9966,5 +9966,69 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\BTNHoly_Fury_Icon_Off.blp",
+        "name": "BTNHoly_Fury_Icon_Off.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\BTNHoly_Fury_Icon_On.blp",
+        "name": "BTNHoly_Fury_Icon_On.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHoly_Fury_Icon_Off.blp",
+        "name": "DISBTNHoly_Fury_Icon_Off.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHoly_Fury_Icon_On.blp",
+        "name": "DISBTNHoly_Fury_Icon_On.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\BTNSally_\u0441rusader_passive_wrathful.blp",
+        "name": "BTNSally_\u0441rusader_passive_wrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\PASSally_\u0441rusader_passive_wrathful.blp",
+        "name": "PASSally_\u0441rusader_passive_wrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSally_\u0441rusader_passive_wrathful.blp",
+        "name": "DISBTNSally_\u0441rusader_passive_wrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASsally_\u0441rusader_passive_wrathful.blp",
+        "name": "DISPASsally_\u0441rusader_passive_wrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
     }
 ]

@@ -14766,3 +14766,69 @@ STRING 4987
 Fallen Silver Hand soldiers are sanctified, preventing their corpses from being used. Any enemy interaction with a sanctified corpse triggers holy flames, dealing 175 damage to the enemy and consuming the corpse in radiant fire
 }
 
+STRING 4988
+// Abilities: A08M (Holy Fury), Name (Name)
+{
+Holy Fury
+}
+
+STRING 4990
+// Abilities: A08M (Holy Fury), Tip (Tooltip - Normal)
+{
+Activate Holy Fury
+}
+
+STRING 4991
+// Abilities: A08M (Holy Fury), Untip (Tooltip - Turn Off)
+{
+Deactivate Holy Fury
+}
+
+STRING 4992
+// Abilities: A08M (Holy Fury), Unubertip (Tooltip - Turn Off - Extended)
+{
+Deactivate Holy Fury to stop draining mana.
+}
+
+STRING 4993
+// Abilities: A08M (Holy Fury), Ubertip (Tooltip - Normal - Extended)
+{
+Activate Holy Fury to engulf this unit in flames, causing <A08M,DataA1> damage per 0.5 second to nearby enemy land units. |nDrains mana until deactivated.
+}
+
+STRING 4994
+// Abilities: A08N (Wrathful), Tip (Tooltip - Normal)
+{
+Wrathful
+}
+
+STRING 4995
+// Abilities: A08N (Wrathful), Name (Name)
+{
+Wrathful
+}
+
+STRING 4996
+// Abilities: A08N (Wrathful), Ubertip (Tooltip - Normal - Extended)
+{
+Passive mana regeneration during Scarlet Crusade, equal to its level.
+}
+
+STRING 4997
+// Upgrades: R030 (Animal War Training), Name (Name)
+{
+Wrathful
+}
+
+STRING 4998
+// Upgrades: R030 (Animal War Training), Tip (Tooltip)
+{
+Research Wrathful
+}
+
+STRING 4999
+// Upgrades: R030 (Animal War Training), Ubertip (Tooltip - Extended)
+{
+Passive mana regeneration during Scarlet Crusade, equal to its level.
+}
+

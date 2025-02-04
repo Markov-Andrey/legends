@@ -123,6 +123,7 @@ real udg_Whitemane_crusade_current= 0
 real udg_Whitemane_crusade_default= 0
 integer udg_Whitemane_crusade_level= 0
 player udg_WhitemanePlayer= null
+boolean udg_Whitemane_crusade_bool= false
 
     // Generated
 camerasetup gg_cam_StartView= null
@@ -292,6 +293,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_WhitemaneCrusaderWrathful= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1096,6 +1098,7 @@ function InitGlobals takes nothing returns nothing
     set udg_Whitemane_crusade_current=0
     set udg_Whitemane_crusade_default=0
     set udg_Whitemane_crusade_level=0
+    set udg_Whitemane_crusade_bool=false
 endfunction
 
 //***************************************************************************
@@ -6947,10 +6950,12 @@ endfunction
 
 function Trig_WhitemaneCrusadeOnOff_Actions takes nothing returns nothing
     if ( Trig_WhitemaneCrusadeOnOff_Func001C() ) then
+        set udg_Whitemane_crusade_bool=false
         call UnitAddAbilityBJ('A08F', GetSpellAbilityUnit())
         call EnableTrigger(gg_trg_WhitemaneCrusade)
         call UnitRemoveAbilityBJ('A08E', GetSpellAbilityUnit())
     else
+        set udg_Whitemane_crusade_bool=true
         call UnitAddAbilityBJ('A08E', GetSpellAbilityUnit())
         set udg_Whitemane_crusade_current=udg_Whitemane_crusade_default
         call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(R2I(udg_Whitemane_crusade_current)))
@@ -7085,6 +7090,42 @@ function InitTrig_WhitemaneCrusade takes nothing returns nothing
     call DisableTrigger(gg_trg_WhitemaneCrusade)
     call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusade, 1.00)
     call TriggerAddAction(gg_trg_WhitemaneCrusade, function Trig_WhitemaneCrusade_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneCrusaderWrathful
+//===========================================================================
+function Trig_WhitemaneCrusaderWrathful_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R030', udg_WhitemanePlayer) == 1 ) ) then
+        return false
+    endif
+    if ( not ( udg_Whitemane_crusade_bool == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusaderWrathful_Conditions takes nothing returns boolean
+    if ( not Trig_WhitemaneCrusaderWrathful_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneCrusaderWrathful_Func002A takes nothing returns nothing
+    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + ( 1 * ( udg_Whitemane_crusade_current - 1 ) ) ))
+endfunction
+
+function Trig_WhitemaneCrusaderWrathful_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h02A'), function Trig_WhitemaneCrusaderWrathful_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneCrusaderWrathful takes nothing returns nothing
+    set gg_trg_WhitemaneCrusaderWrathful=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusaderWrathful, 1.00)
+    call TriggerAddCondition(gg_trg_WhitemaneCrusaderWrathful, Condition(function Trig_WhitemaneCrusaderWrathful_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneCrusaderWrathful, function Trig_WhitemaneCrusaderWrathful_Actions)
 endfunction
 
 //===========================================================================
@@ -11322,6 +11363,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
     call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneCrusaderWrathful()
     call InitTrig_WhitemaneFerventBurst()
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_MythicAddRandom()
