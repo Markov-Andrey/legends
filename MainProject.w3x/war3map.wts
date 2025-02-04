@@ -14813,18 +14813,6 @@ STRING 4942
 Inquisition - [|cffffcc00Level 3|r]
 }
 
-STRING 4943
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Magically binds a target enemy air unit, so that it cannot move or attack and takes <Amls,DataA1> damage per second. |nLasts <Amls,Dur1> seconds.
-}
-
-STRING 4944
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Magically binds a target enemy air unit, so that it cannot move or attack and takes <Amls,DataA1> damage per second. |nLasts <Amls,Dur1> seconds.
-}
-
 STRING 4945
 // Abilities: A08I ([Whitemane] Inquisition), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -15087,5 +15075,23 @@ STRING 4999
 // Upgrades: R030 (Animal War Training), Ubertip (Tooltip - Extended)
 {
 Passive mana regeneration during Scarlet Crusade, equal to its level.
+}
+
+STRING 5000
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA2> damage per second. |nLasts <A08I,Dur2> seconds.
+}
+
+STRING 5001
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA3> damage per second. |nLasts <A08I,Dur3> seconds.
+}
+
+STRING 5002
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA1> damage per second. |nLasts <A08I,Dur1> seconds.
 }
 
