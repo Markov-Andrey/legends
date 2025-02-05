@@ -14838,3 +14838,51 @@ STRING 5002
 Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA1> damage per second. |nLasts <A08I,Dur1> seconds.
 }
 
+STRING 5003
+// Abilities: A08O (Inquisitor's Silence), Name (Name)
+{
+Inquisitor's Silence
+}
+
+STRING 5004
+// Abilities: A08O (Inquisitor's Silence), Tip (Tooltip - Normal)
+{
+Inquisitor's Silence
+}
+
+STRING 5005
+// Abilities: A08O (Inquisitor's Silence), Ubertip (Tooltip - Normal - Extended)
+{
+Stops all enemies in a small target area from casting spells for <A08O,Dur1> seconds.
+}
+
+STRING 5006
+// Buffs/Effects: B01I (Inquisitor's Silence), EditorName (Name (Editor Only))
+{
+Inquisitor's Silence
+}
+
+STRING 5007
+// Buffs/Effects: B01I (Inquisitor's Silence), Bufftip (Tooltip)
+{
+Inquisitor's Silence
+}
+
+STRING 5008
+// Units: h02H (Crimson Immolator), Name (Name)
+{
+Crimson Immolator
+}
+
+STRING 5009
+// Units: h02H (Crimson Immolator), Tip (Tooltip - Basic)
+{
+Train Crimson Immolator
+}
+
+STRING 5010
+// Units: h02I (Workshop), Name (Name)
+{
+Workshop
+}
+

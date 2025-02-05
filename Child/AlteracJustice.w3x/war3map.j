@@ -207,6 +207,7 @@ trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneTowerSilence= null
 trigger gg_trg_WhitemaneCrusaderWrathful= null
 trigger gg_trg_WhitemaneFerventBurst= null
 trigger gg_trg_WhitemaneGraveyardBurn= null
@@ -1598,6 +1599,17 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p= Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'h01U', 320.0, - 576.0, 270.000, 'h01U')
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -1605,7 +1617,17 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
+    set u=BlzCreateUnitWithSkin(p, 'h020', - 578.8, - 186.1, 289.510, 'h020')
+    set u=BlzCreateUnitWithSkin(p, 'h02A', - 217.6, - 170.7, 243.286, 'h02A')
+    set u=BlzCreateUnitWithSkin(p, 'h02C', - 389.0, 103.0, 271.310, 'h02C')
+    set u=BlzCreateUnitWithSkin(p, 'h021', - 24.1, - 166.6, 293.478, 'h021')
+    set u=BlzCreateUnitWithSkin(p, 'h023', - 137.9, 125.0, 268.126, 'h023')
+    set u=BlzCreateUnitWithSkin(p, 'h022', 154.4, - 168.6, 272.771, 'h022')
+    set u=BlzCreateUnitWithSkin(p, 'h01Y', 308.8, - 169.6, 250.462, 'h01Y')
+    set u=BlzCreateUnitWithSkin(p, 'o00X', - 390.9, - 171.4, 265.330, 'o00X')
+    set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h02H', 251.5, 56.4, 269.710, 'h02H')
 endfunction
 
 //===========================================================================
@@ -2173,6 +2195,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -2187,7 +2210,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreateBuildingsForPlayer5() // INLINED!!
+    call CreatePlayerBuildings()
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
@@ -7093,6 +7116,28 @@ function InitTrig_WhitemaneCrusade takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneTowerSilence
+//===========================================================================
+function Trig_WhitemaneTowerSilence_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetAttacker()) == 'h029' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneTowerSilence_Actions takes nothing returns nothing
+    call IssuePointOrderLocBJ(GetAttacker(), "silence", GetUnitLoc(GetAttackedUnitBJ()))
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneTowerSilence takes nothing returns nothing
+    set gg_trg_WhitemaneTowerSilence=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneTowerSilence, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_WhitemaneTowerSilence, Condition(function Trig_WhitemaneTowerSilence_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneTowerSilence, function Trig_WhitemaneTowerSilence_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: WhitemaneCrusaderWrathful
 //===========================================================================
 function Trig_WhitemaneCrusaderWrathful_Func001C takes nothing returns boolean
@@ -11363,6 +11408,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
     call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneTowerSilence()
     call InitTrig_WhitemaneCrusaderWrathful()
     call InitTrig_WhitemaneFerventBurst()
     call InitTrig_WhitemaneGraveyardBurn()

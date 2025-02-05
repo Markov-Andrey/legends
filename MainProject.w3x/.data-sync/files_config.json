@@ -10008,14 +10008,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Knight\\PASSally_\u0441rusader_passive_wrathful.blp",
-        "name": "PASSally_\u0441rusader_passive_wrathful.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSally_\u0441rusader_passive_wrathful.blp",
         "name": "DISBTNSally_\u0441rusader_passive_wrathful.blp",
         "type": "file",
@@ -10024,8 +10016,96 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASsally_\u0441rusader_passive_wrathful.blp",
-        "name": "DISPASsally_\u0441rusader_passive_wrathful.blp",
+        "path": "Legends\\Whitemane\\Knight\\PASSallyWrathful.blp",
+        "name": "PASSallyWrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\SteamTank",
+        "name": "SteamTank",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\SteamTank\\BTNEliteSeigeTankHero.blp",
+        "name": "BTNEliteSeigeTankHero.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\SteamTank\\amphibious_transport.mdx",
+        "name": "amphibious_transport.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Tower\\BTNHumanSilence.blp",
+        "name": "BTNHumanSilence.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Workshop",
+        "name": "Workshop",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Workshop\\BTNLordaeronWorkshop.blp",
+        "name": "BTNLordaeronWorkshop.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Workshop\\LordaeronWorkshop.mdx",
+        "name": "LordaeronWorkshop.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNEliteSeigeTankHero.blp",
+        "name": "DISBTNEliteSeigeTankHero.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHumanSilence.blp",
+        "name": "DISBTNHumanSilence.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLordaeronWorkshop.blp",
+        "name": "DISBTNLordaeronWorkshop.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASSallyWrathful.blp.blp",
+        "name": "DISPASSallyWrathful.blp.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
