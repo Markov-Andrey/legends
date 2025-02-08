@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader__eventTrigger= CreateTrigger()
-trigger FrameLoader__actionTrigger= CreateTrigger()
-timer FrameLoader__t= CreateTimer()
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI__workerFace= true
+constant boolean CustomConsoleUI___workerFace= true
         
-framehandle CustomConsoleUI__idleWorkerButton
-framehandle CustomConsoleUI__idleWorkerButtonOverlay
-framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI__customInventoryCover
-framehandle CustomConsoleUI__customInventoryCoverParent
+framehandle CustomConsoleUI___idleWorkerButton
+framehandle CustomConsoleUI___idleWorkerButtonOverlay
+framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI___customInventoryCover
+framehandle CustomConsoleUI___customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI__dataPageSize= 11
+integer CustomConsoleUI___dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -209,7 +209,7 @@ trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
 trigger gg_trg_WhitemaneTowerSilence= null
 trigger gg_trg_WhitemaneCrusaderWrathful= null
-trigger gg_trg_WhitemaneFerventBurst= null
+trigger gg_trg_WhitemaneZealotSacriGift= null
 trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
@@ -295,7 +295,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_Untitled_Trigger_001= null
+trigger gg_trg_WhitemaneBowman= null
+trigger gg_trg_WhitemaneBowman_Copy= null
 
     // Random Groups
 integer array gg_rg_000
@@ -309,6 +310,7 @@ framehandle Icon01= null
 framehandle Icon02= null
 framehandle Icon03= null
 integer currentIconIndex= 0
+hashtable udg_HashTable= InitHashtable()
 
 trigger l__library_init
 
@@ -319,7 +321,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI__CreateIcon takes nothing returns nothing
+    function ARTHASUI___CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -355,8 +357,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI__init takes nothing returns nothing
-        call ARTHASUI__CreateIcon()
+    function ARTHASUI___init takes nothing returns nothing
+        call ARTHASUI___CreateIcon()
     endfunction
 
 
@@ -367,24 +369,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader__actionTrigger, func)
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
     endfunction
 
-    function FrameLoader__timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader__actionTrigger)
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
     endfunction
-    function FrameLoader__eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
     endfunction
-    function FrameLoader__init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -444,15 +446,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER__init takes nothing returns nothing
-        call REFORGEDUIMAKER__CreateIcons()
+    function REFORGEDUIMAKER___init takes nothing returns nothing
+        call REFORGEDUIMAKER___CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits__InitRaceUnits takes nothing returns nothing
+    function RaceUnits___InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -587,7 +589,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI__CreateIcon takes nothing returns nothing
+    function THRALLUI___CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -619,15 +621,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI__init takes nothing returns nothing
-        call THRALLUI__CreateIcon()
+    function THRALLUI___init takes nothing returns nothing
+        call THRALLUI___CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI__CreateIcon takes nothing returns nothing
+    function WHITEMANEUI___CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -682,8 +684,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI__init takes nothing returns nothing
-        call WHITEMANEUI__CreateIcon()
+    function WHITEMANEUI___init takes nothing returns nothing
+        call WHITEMANEUI___CreateIcon()
     endfunction
 
 
@@ -702,7 +704,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -713,7 +715,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI__dataPageSize
+        set pageValue=index * CustomConsoleUI___dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -733,10 +735,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -749,11 +751,11 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
-                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
-                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
+                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
+                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
 
 
 
@@ -761,11 +763,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
-            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
+            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -786,19 +788,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI__Init takes nothing returns nothing
+    function CustomConsoleUI___Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI__at0s takes nothing returns nothing
-        call CustomConsoleUI__Init()
+    function CustomConsoleUI___at0s takes nothing returns nothing
+        call CustomConsoleUI___Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI__update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI___update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI__init_function takes nothing returns nothing
+    function CustomConsoleUI___init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -932,11 +934,11 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
 
-            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
 
     endfunction
 
@@ -1608,6 +1610,8 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h01U', 320.0, - 576.0, 270.000, 'h01U')
+    set u=BlzCreateUnitWithSkin(p, 'h01W', - 320.0, - 512.0, 270.000, 'h01W')
+    set u=BlzCreateUnitWithSkin(p, 'h02E', 704.0, - 384.0, 270.000, 'h02E')
 endfunction
 
 //===========================================================================
@@ -1618,17 +1622,16 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h020', - 578.8, - 186.1, 289.510, 'h020')
-    set u=BlzCreateUnitWithSkin(p, 'h02A', - 217.6, - 170.7, 243.286, 'h02A')
-    set u=BlzCreateUnitWithSkin(p, 'h02C', - 389.0, 103.0, 271.310, 'h02C')
+    set u=BlzCreateUnitWithSkin(p, 'h020', - 461.8, - 169.9, - 84.428, 'h020')
+    set u=BlzCreateUnitWithSkin(p, 'h02A', - 166.2, - 149.1, - 85.897, 'h02A')
     set u=BlzCreateUnitWithSkin(p, 'h021', - 24.1, - 166.6, 293.478, 'h021')
     set u=BlzCreateUnitWithSkin(p, 'h023', - 137.9, 125.0, 268.126, 'h023')
     set u=BlzCreateUnitWithSkin(p, 'h022', 154.4, - 168.6, 272.771, 'h022')
     set u=BlzCreateUnitWithSkin(p, 'h01Y', 308.8, - 169.6, 250.462, 'h01Y')
-    set u=BlzCreateUnitWithSkin(p, 'o00X', - 390.9, - 171.4, 265.330, 'o00X')
+    set u=BlzCreateUnitWithSkin(p, 'o00X', - 324.7, - 144.8, - 86.263, 'o00X')
     set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'h02H', 251.5, 56.4, 269.710, 'h02H')
+    set u=BlzCreateUnitWithSkin(p, 'h02H', 517.1, 29.6, 264.690, 'h02H')
 endfunction
 
 //===========================================================================
@@ -2096,6 +2099,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 785.9, - 2726.2, 179.698, 'nspg')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.300, 'nsgt')
@@ -2128,6 +2132,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000007_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 617.5, - 2718.3, 15.458, 'nspg')
     set u=BlzCreateUnitWithSkin(p, 'ngst', 8977.8, - 3408.9, 126.611, 'ngst')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -2136,6 +2141,8 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 9015.9, - 3039.2, 210.367, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 8713.1, - 3403.7, 90.662, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1831.2, - 8684.7, 135.407, 'nmrm')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 448.9, - 2705.5, 343.564, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 369.1, - 2719.6, 325.095, 'nspg')
     set u=BlzCreateUnitWithSkin(p, 'nsqo', 7230.8, - 8315.2, 142.265, 'nsqo')
     set u=BlzCreateUnitWithSkin(p, 'nsqa', 7051.3, - 8476.4, 115.188, 'nsqa')
     set t=CreateTrigger()
@@ -2164,6 +2171,40 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 348.5, - 2819.2, 358.132, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 420.1, - 2865.7, 185.191, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 588.4, - 2862.5, 319.185, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 727.9, - 2845.4, 253.693, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 791.2, - 2812.3, 328.106, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 725.1, - 2661.9, 236.180, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 581.6, - 2654.4, 339.114, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 405.7, - 2652.0, 193.651, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 341.4, - 2655.0, 273.766, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 258.4, - 2700.6, 152.539, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 285.8, - 2793.8, 249.167, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 538.2, - 2794.7, 172.743, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 627.8, - 2782.1, 202.451, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 705.6, - 2773.1, 208.637, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 875.5, - 2749.3, 43.793, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 898.6, - 2814.5, 93.936, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 833.6, - 2857.9, 62.152, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 690.5, - 2910.2, 204.374, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 562.0, - 2932.5, 244.486, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 467.6, - 2928.6, 67.118, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 313.2, - 2871.8, 77.720, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 197.1, - 2763.5, 39.080, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 235.7, - 2834.4, 98.770, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 811.8, - 2922.9, 128.006, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 908.3, - 2890.8, 257.132, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 963.8, - 2852.4, 233.269, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 765.1, - 2967.9, 231.203, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 675.7, - 2988.0, 330.028, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 586.2, - 3003.1, 83.652, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 482.5, - 3004.8, 107.087, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 372.4, - 2980.3, 62.954, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 267.2, - 2946.7, 166.074, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 199.4, - 2908.5, 82.971, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 145.5, - 2829.8, 334.412, 'nspg')
 endfunction
 
 //===========================================================================
@@ -2245,19 +2286,6 @@ endfunction
 //*  Triggers
 //*
 //***************************************************************************
-
-//===========================================================================
-// Trigger: Untitled Trigger 001
-//===========================================================================
-function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
-endfunction
-
-//===========================================================================
-function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
-    set gg_trg_Untitled_Trigger_001=CreateTrigger()
-    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
-endfunction
-
 
 //===========================================================================
 // Trigger: LimitUnits
@@ -7130,6 +7158,57 @@ function InitTrig_WhitemaneCrusade takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneBowman
+//===========================================================================
+
+function Trig_WhitemaneBowman_Conditions takes nothing returns boolean
+    local unit attacker= GetEventDamageSource()
+    local unit target= GetTriggerUnit()
+    return GetUnitTypeId(attacker) == 'o00X' and IsUnitEnemy(target, GetOwningPlayer(attacker)) and GetPlayerTechCount(GetOwningPlayer(attacker), 'R032', true) > 0
+endfunction
+
+function MoveTarget takes nothing returns nothing
+    local integer max_attempts= 10
+    local real move_distance= 1.5
+    local timer t= GetExpiredTimer()
+    local unit target= LoadUnitHandle(udg_HashTable, GetHandleId(t), 0)
+    local real angle= LoadReal(udg_HashTable, GetHandleId(t), 1)
+    local integer attempts= LoadInteger(udg_HashTable, GetHandleId(t), 2)
+    local real x= GetUnitX(target) - move_distance * Cos(angle * bj_DEGTORAD)
+    local real y= GetUnitY(target) - move_distance * Sin(angle * bj_DEGTORAD)
+
+    if attempts < max_attempts and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
+        call SetUnitX(target, x)
+        call SetUnitY(target, y)
+        call SaveInteger(udg_HashTable, GetHandleId(t), 2, attempts + 1)
+        call TimerStart(t, 0.03, false, function MoveTarget)
+    else
+        call FlushChildHashtable(udg_HashTable, GetHandleId(t))
+        call DestroyTimer(t)
+    endif
+endfunction
+
+function Trig_WhitemaneBowman_Actions takes nothing returns nothing
+    local unit target= GetTriggerUnit()
+    local unit attacker= GetEventDamageSource()
+    local real angle= GetUnitFacing(attacker) + 180
+    local timer t= CreateTimer()
+    local integer timerId= GetHandleId(t)
+
+    call SaveUnitHandle(udg_HashTable, timerId, 0, target)
+    call SaveReal(udg_HashTable, timerId, 1, angle)
+    call SaveInteger(udg_HashTable, timerId, 2, 0)
+    
+    call TimerStart(t, 0.01, false, function MoveTarget)
+endfunction
+
+function InitTrig_WhitemaneBowman takes nothing returns nothing
+    set gg_trg_WhitemaneBowman=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneBowman, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_WhitemaneBowman, Condition(function Trig_WhitemaneBowman_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneBowman, function Trig_WhitemaneBowman_Actions)
+endfunction
+//===========================================================================
 // Trigger: WhitemaneTowerSilence
 //===========================================================================
 function Trig_WhitemaneTowerSilence_Conditions takes nothing returns boolean
@@ -7188,25 +7267,35 @@ function InitTrig_WhitemaneCrusaderWrathful takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: WhitemaneFerventBurst
+// Trigger: WhitemaneZealotSacriGift
 //===========================================================================
-function Trig_WhitemaneFerventBurst_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A08L' ) ) then
+function Trig_WhitemaneZealotSacriGift_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h020' ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerTechCountSimple('R031', GetOwningPlayer(GetDyingUnit())) == 1 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WhitemaneFerventBurst_Actions takes nothing returns nothing
-    call SetUnitLifeBJ(GetSpellAbilityUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellAbilityUnit()) + 225.00 ))
+function Trig_WhitemaneZealotSacriGift_Conditions takes nothing returns boolean
+    if ( not Trig_WhitemaneZealotSacriGift_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneZealotSacriGift_Actions takes nothing returns nothing
+    call CreateItemLoc('I00E', GetUnitLoc(GetDyingUnit()))
 endfunction
 
 //===========================================================================
-function InitTrig_WhitemaneFerventBurst takes nothing returns nothing
-    set gg_trg_WhitemaneFerventBurst=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneFerventBurst, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_WhitemaneFerventBurst, Condition(function Trig_WhitemaneFerventBurst_Conditions))
-    call TriggerAddAction(gg_trg_WhitemaneFerventBurst, function Trig_WhitemaneFerventBurst_Actions)
+function InitTrig_WhitemaneZealotSacriGift takes nothing returns nothing
+    set gg_trg_WhitemaneZealotSacriGift=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneZealotSacriGift, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_WhitemaneZealotSacriGift, Condition(function Trig_WhitemaneZealotSacriGift_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneZealotSacriGift, function Trig_WhitemaneZealotSacriGift_Actions)
 endfunction
 
 //===========================================================================
@@ -11342,7 +11431,6 @@ function InitTrig_ApiEnemyCreate takes nothing returns nothing
 endfunction
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_Untitled_Trigger_001()
     call InitTrig_LimitUnits()
     call InitTrig_StartResouces()
     call InitTrig_StartCameraP1()
@@ -11423,9 +11511,10 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
     call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneBowman()
     call InitTrig_WhitemaneTowerSilence()
     call InitTrig_WhitemaneCrusaderWrathful()
-    call InitTrig_WhitemaneFerventBurst()
+    call InitTrig_WhitemaneZealotSacriGift()
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
@@ -11665,13 +11754,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI__init")
-call ExecuteFunc("FrameLoader__init_function")
-call ExecuteFunc("REFORGEDUIMAKER__init")
-call ExecuteFunc("RaceUnits__InitRaceUnits")
-call ExecuteFunc("THRALLUI__init")
-call ExecuteFunc("WHITEMANEUI__init")
-call ExecuteFunc("CustomConsoleUI__init_function")
+call ExecuteFunc("ARTHASUI___init")
+call ExecuteFunc("FrameLoader___init_function")
+call ExecuteFunc("REFORGEDUIMAKER___init")
+call ExecuteFunc("RaceUnits___InitRaceUnits")
+call ExecuteFunc("THRALLUI___init")
+call ExecuteFunc("WHITEMANEUI___init")
+call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
     call InitCustomTriggers()

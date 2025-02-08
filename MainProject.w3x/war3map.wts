@@ -14182,12 +14182,6 @@ STRING 4788
 Improvement to check the player's army
 }
 
-STRING 4789
-// Units: h01Z ([Whitemane] Barracks), Name (Name)
-{
-[Whitemane] Barracks
-}
-
 STRING 4790
 // Units: h01W ([Whitemane] Garrison), Ubertip (Tooltip - Extended)
 {
@@ -14729,18 +14723,6 @@ STRING 4928
 Train Inquisitor
 }
 
-STRING 4929
-// Units: h02C ([Whitemane] Scout Airship), Name (Name)
-{
-[Whitemane] Scout Airship
-}
-
-STRING 4930
-// Units: h02C ([Whitemane] Scout Airship), Tip (Tooltip - Basic)
-{
-Train Scout Airship
-}
-
 STRING 4931
 // Units: h02N ([Uther] Gryphon Aviary), Name (Name)
 {
@@ -14811,12 +14793,6 @@ STRING 4942
 // Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 3|r]
-}
-
-STRING 4945
-// Abilities: A08I ([Whitemane] Inquisition), Researchubertip (Tooltip - Learn - Extended)
-{
-Absorbs the life essence of a target enemy unit by taking hit points from it every second and giving them to the Dark Ranger. |n|nLife Drain also applies the current rank of the Black Arrow debuff to the target. |nLasts <ANdr,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANdr,DataA1> hit point drain per second. |n|cffffcc00Level 2|r - <ANdr,DataA2> hit point drain per second. |n|cffffcc00Level 3|r - <ANdr,DataA3> hit point drain per second.
 }
 
 STRING 4947
@@ -14963,36 +14939,6 @@ STRING 4971
 Upgrade to Hammers of the Light
 }
 
-STRING 4977
-// Abilities: A08K ([Whitemane] Hide), Name (Name)
-{
-[Whitemane] Hide
-}
-
-STRING 4978
-// Abilities: A08L ([Whitemane] Fervent Burst), Name (Name)
-{
-[Whitemane] Fervent Burst
-}
-
-STRING 4979
-// Abilities: A08L ([Whitemane] Fervent Burst), Tip (Tooltip - Normal)
-{
-Fervent Burst
-}
-
-STRING 4980
-// Buffs/Effects: B01H ([Whitemane] Fervent Burst), EditorName (Name (Editor Only))
-{
-[Whitemane] Fervent Burst
-}
-
-STRING 4981
-// Buffs/Effects: B01H ([Whitemane] Fervent Burst), Bufftip (Tooltip)
-{
-Fervent Burst
-}
-
 STRING 4985
 // Upgrades: R02Z (Sundering Blades), Name (Name)
 {
@@ -15077,24 +15023,6 @@ STRING 4999
 Passive mana regeneration during Scarlet Crusade, equal to its level.
 }
 
-STRING 5000
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA2> damage per second. |nLasts <A08I,Dur2> seconds.
-}
-
-STRING 5001
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA3> damage per second. |nLasts <A08I,Dur3> seconds.
-}
-
-STRING 5002
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Magically binds a target enemy air unit, so that it cannot move or attack and takes <A08I,DataA1> damage per second. |nLasts <A08I,Dur1> seconds.
-}
-
 STRING 5003
 // Abilities: A08O ([Whitemane] Inquisitor's Silence), Name (Name)
 {
@@ -15141,5 +15069,227 @@ STRING 5010
 // Units: h02I ([Whitemane] Workshop), Name (Name)
 {
 [Whitemane] Workshop
+}
+
+STRING 5011
+// Items: I00E ([Whitemane] Sacrificial Gift), Name (Name)
+{
+[Whitemane] Sacrificial Gift
+}
+
+STRING 5012
+// Items: I00E ([Whitemane] Sacrificial Gift), Tip (Tooltip - Basic)
+{
+Purchase Sacrificial Gift
+}
+
+STRING 5013
+// Abilities: A08P ([Whitemane] Sacrificial Gift), Name (Name)
+{
+[Whitemane] Sacrificial Gift
+}
+
+STRING 5014
+// Items: I00E ([Whitemane] Sacrificial Gift), Ubertip (Tooltip - Extended)
+{
+Heals <A08P,DataA1> hit points to all nearby friendly non-mechanical units.
+}
+
+STRING 5015
+// Abilities: A08Q ([Whitemane] Sacrificial Gift), Name (Name)
+{
+[Whitemane] Sacrificial Gift
+}
+
+STRING 5016
+// Upgrades: R031 (Defend), Tip (Tooltip)
+{
+Research Sacrificial Gift
+}
+
+STRING 5017
+// Abilities: A08Q ([Whitemane] Sacrificial Gift), Ubertip (Tooltip - Normal - Extended)
+{
+After death, Zealot leaves a sphere of light that restores <A08P,DataA1> health.
+}
+
+STRING 5018
+// Abilities: A08Q ([Whitemane] Sacrificial Gift), Tip (Tooltip - Normal)
+{
+Sacrificial Gift
+}
+
+STRING 5019
+// Upgrades: R031 (Defend), Name (Name)
+{
+[Whitemane] Sacrificial Gift
+}
+
+STRING 5020
+// Upgrades: R031 (Defend), Ubertip (Tooltip - Extended)
+{
+After death, Zealot leaves a sphere of light that restores <A08P,DataA1> health.
+}
+
+STRING 5021
+// Abilities: A08L ([Whitemane] Iron Quarrel), Ubertip (Tooltip - Normal - Extended)
+{
+Each shot knocks the target back by 15 units, focused fire more effective.
+}
+
+STRING 5022
+// Abilities: A08L ([Whitemane] Iron Quarrel), Name (Name)
+{
+[Whitemane] Iron Quarrel
+}
+
+STRING 5023
+// Upgrades: R032 (Long Rifles), Tip (Tooltip)
+{
+Upgrade to Iron Quarrel
+}
+
+STRING 5024
+// Abilities: A08L ([Whitemane] Iron Quarrel), Tip (Tooltip - Normal)
+{
+Iron Quarrel
+}
+
+STRING 5025
+// Upgrades: R032 (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Each shot knocks the target back by 15 units, focused fire more effective.
+}
+
+STRING 5026
+// Upgrades: R032 (Long Rifles), Name (Name)
+{
+[Whitemane] Iron Quarrel
+}
+
+STRING 5027
+// Abilities: A087 ([Whitemane] Desperate Plea), Ubertip (Tooltip - Normal - Extended)
+{
+Calls forth a wave of healing energy that bounces up to <A087,DataB1> times, healing <A087,DataA1> damage on the primary target. Each bounce restores fewer hit points.
+}
+
+STRING 5028
+// Abilities: A087 ([Whitemane] Desperate Plea), Ubertip (Tooltip - Normal - Extended)
+{
+Calls forth a wave of healing energy that bounces up to <A087,DataB2> times, healing <A087,DataA2> damage on the primary target. Each bounce restores fewer hit points.
+}
+
+STRING 5029
+// Abilities: A087 ([Whitemane] Desperate Plea), Ubertip (Tooltip - Normal - Extended)
+{
+Calls forth a wave of healing energy that bounces up to <A087,DataB3> times, healing <A087,DataA3> damage on the primary target. Each bounce restores fewer hit points.
+}
+
+STRING 5030
+// Abilities: A087 ([Whitemane] Desperate Plea), Researchubertip (Tooltip - Learn - Extended)
+{
+Calls forth a wave of energy that heals a target and bounces to nearby friendlies. Each bounce restores fewer hit points. |n|n|cffffcc00Level 1|r - Heals <A087,DataA1> damage, jumps <A087,DataB1> times. |n|cffffcc00Level 2|r - Heals <A087,DataA2> damage, jumps <A087,DataB2> times. |n|cffffcc00Level 3|r - Heals <A087,DataA3> damage, jumps <A087,DataB3> times.
+}
+
+STRING 5032
+// Abilities: A08H ([Whitemane] Zeal), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby friendly melee units gain <A08H,DataA1,%>% of their attack damage when they hit enemy units.
+}
+
+STRING 5033
+// Abilities: A08H ([Whitemane] Zeal), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby friendly melee units gain <A08H,DataA2,%>% of their attack damage when they hit enemy units.
+}
+
+STRING 5034
+// Abilities: A08H ([Whitemane] Zeal), Ubertip (Tooltip - Normal - Extended)
+{
+Nearby friendly melee units gain <A08H,DataA3,%>% of their attack damage when they hit enemy units.
+}
+
+STRING 5035
+// Abilities: A08J ([Whitemane] Scarlet Aegis), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A08J,DataA1,%>% bonus to damage. |nLasts <A08J,Dur1> seconds.
+}
+
+STRING 5036
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA2> damage per second. |nLasts <A08I,Dur2> seconds.
+}
+
+STRING 5037
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA3> damage per second. |nLasts <A08I,Dur3> seconds.
+}
+
+STRING 5038
+// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA1> damage per second. |nLasts <A08I,Dur1> seconds.
+}
+
+STRING 5039
+// Abilities: A08I ([Whitemane] Inquisition), Researchubertip (Tooltip - Learn - Extended)
+{
+Restrains the target enemy unit, rendering it unable to move or act while suffering damage each second. |nLasts <A08I,Dur1> seconds. |n|n|cffffcc00Level 1|r - Stuns for <A08I,Dur1> seconds, dealing <A08I,DataA1> damage per second. |n|cffffcc00Level 2|r - Stuns for <A08I,Dur2> seconds, dealing <A08I,DataA2> damage per second. |n|cffffcc00Level 3|r - Stuns for <A08I,Dur3> seconds, dealing <A08I,DataA3> damage per second.
+}
+
+STRING 5040
+// Buffs/Effects: B01H ([Whitemane] Inquisition), Bufftip (Tooltip)
+{
+Inquisition
+}
+
+STRING 5041
+// Buffs/Effects: B01H ([Whitemane] Inquisition), EditorName (Name (Editor Only))
+{
+[Whitemane] Inquisition
+}
+
+STRING 5042
+// Buffs/Effects: B01H ([Whitemane] Inquisition), Buffubertip (Tooltip - Extended)
+{
+Target enemy unit is stunned and steadily loses health while under the Inquisitor's control.
+}
+
+STRING 5043
+// Abilities: A08K ([Whitemane] Radiant Essence), Name (Name)
+{
+[Whitemane] Radiant Essence
+}
+
+STRING 5044
+// Upgrades: R033 (Storm Hammers), Tip (Tooltip)
+{
+Research Radiant Essence
+}
+
+STRING 5045
+// Abilities: A08K ([Whitemane] Radiant Essence), Tip (Tooltip - Normal)
+{
+Radiant Essence
+}
+
+STRING 5046
+// Upgrades: R033 (Storm Hammers), Name (Name)
+{
+[Whitemane] Radiant Essence
+}
+
+STRING 5047
+// Abilities: A08K ([Whitemane] Radiant Essence), Ubertip (Tooltip - Normal - Extended)
+{
+Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
+}
+
+STRING 5048
+// Upgrades: R033 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
 }
 

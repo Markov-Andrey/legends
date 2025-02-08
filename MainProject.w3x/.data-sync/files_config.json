@@ -3648,38 +3648,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Airship",
-        "name": "Airship",
-        "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Airship\\BTNBanditHide.blp",
-        "name": "BTNBanditHide.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Airship\\BTNHumanZeppeline.blp",
-        "name": "BTNHumanZeppeline.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Airship\\HumanDestroyerZeppelin.mdx",
-        "name": "HumanDestroyerZeppelin.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\Aviary",
         "name": "Aviary",
         "type": "directory",
@@ -3707,22 +3675,6 @@
         "path": "Legends\\Whitemane\\Barracks",
         "name": "Barracks",
         "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Barracks\\BTNLordaeronBarracks.blp",
-        "name": "BTNLordaeronBarracks.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Barracks\\LordaeronBarracks.mdx",
-        "name": "LordaeronBarracks.mdx",
-        "type": "file",
         "copy": true,
         "copy_child": "",
         "validated": true
@@ -3867,14 +3819,6 @@
         "path": "Legends\\Whitemane\\Footman",
         "name": "Footman",
         "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Footman\\BTNFervent Burst.blp",
-        "name": "BTNFervent Burst.blp",
-        "type": "file",
         "copy": true,
         "copy_child": "",
         "validated": true
@@ -5984,14 +5928,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBanditHide.blp",
-        "name": "DISBTNBanditHide.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBank.blp",
         "name": "DISBTNBank.blp",
         "type": "file",
@@ -6136,14 +6072,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFervent Burst.blp",
-        "name": "DISBTNFervent Burst.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFireTotem.blp",
         "name": "DISBTNFireTotem.blp",
         "type": "file",
@@ -6216,14 +6144,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHumanZeppeline.blp",
-        "name": "DISBTNHumanZeppeline.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHunter_s_Mark_Icon.blp",
         "name": "DISBTNHunter_s_Mark_Icon.blp",
         "type": "file",
@@ -6274,14 +6194,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLions_Fang_Icon.blp",
         "name": "DISBTNLions_Fang_Icon.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLordaeronBarracks.blp",
-        "name": "DISBTNLordaeronBarracks.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10000,30 +9912,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Knight\\BTNSally_\u0441rusader_passive_wrathful.blp",
-        "name": "BTNSally_\u0441rusader_passive_wrathful.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSally_\u0441rusader_passive_wrathful.blp",
-        "name": "DISBTNSally_\u0441rusader_passive_wrathful.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Knight\\PASSallyWrathful.blp",
-        "name": "PASSallyWrathful.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\SteamTank",
         "name": "SteamTank",
         "type": "directory",
@@ -10104,8 +9992,160 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASSallyWrathful.blp.blp",
-        "name": "DISPASSallyWrathful.blp.blp",
+        "path": "Legends\\Whitemane\\Footman\\OrbLightX.mdx",
+        "name": "OrbLightX.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Footman\\BTNSacrificial_Gift.blp",
+        "name": "BTNSacrificial_Gift.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Footman\\PASSacrificial_Gift.blp",
+        "name": "PASSacrificial_Gift.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSacrificial_Gift.blp",
+        "name": "DISBTNSacrificial_Gift.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASSacrificial_Gift.blp",
+        "name": "DISPASSacrificial_Gift.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Barracks\\BTNWhitemaneBarrack.blp",
+        "name": "BTNWhitemaneBarrack.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Barracks\\HumanBarracks.mdx",
+        "name": "HumanBarracks.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Crossbowman\\BTNDarkImpalingBolt.blp",
+        "name": "BTNDarkImpalingBolt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Crossbowman\\PASDarkImpalingBolt.blp",
+        "name": "PASDarkImpalingBolt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\BTNWhitemaneWrathful.blp",
+        "name": "BTNWhitemaneWrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\PASWhitemaneWrathful.blp",
+        "name": "PASWhitemaneWrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\SteamTank\\BTNFlameBurst.blp",
+        "name": "BTNFlameBurst.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\SteamTank\\PASFlameBurst.blp",
+        "name": "PASFlameBurst.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDarkImpalingBolt.blp",
+        "name": "DISBTNDarkImpalingBolt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFlameBurst.blp",
+        "name": "DISBTNFlameBurst.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWhitemaneBarrack.blp",
+        "name": "DISBTNWhitemaneBarrack.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWhitemaneWrathful.blp",
+        "name": "DISBTNWhitemaneWrathful.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASDarkImpalingBolt.blp",
+        "name": "DISPASDarkImpalingBolt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASFlameBurst.blp",
+        "name": "DISPASFlameBurst.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASWhitemaneWrathful.blp",
+        "name": "DISPASWhitemaneWrathful.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
