@@ -14446,18 +14446,6 @@ STRING 4859
 [Whitemane] Scout Tower
 }
 
-STRING 4860
-// Units: h028 ([Whitemane] Gun Tower), Name (Name)
-{
-[Whitemane] Gun Tower
-}
-
-STRING 4861
-// Units: h028 ([Whitemane] Gun Tower), Tip (Tooltip - Basic)
-{
-Upgrade to Gun Tower
-}
-
 STRING 4862
 // Units: h029 ([Whitemane] Inquisition Tower), Name (Name)
 {
@@ -15291,5 +15279,179 @@ STRING 5048
 // Upgrades: R033 (Storm Hammers), Ubertip (Tooltip - Extended)
 {
 Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
+}
+
+STRING 5050
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+Advanced Defensive Outpost
+}
+
+STRING 5051
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+Imbued Defensive Outpost
+}
+
+STRING 5052
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
+{
+Upgrade to Improved Defensive Outpost
+}
+
+STRING 5053
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
+{
+Upgrade to Advanced Defensive Outpost
+}
+
+STRING 5054
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
+{
+Upgrade to Imbued Defensive Outpost
+}
+
+STRING 5055
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Grants Garrisons and Aviaries the ability to attack nearby enemies.
+}
+
+STRING 5056
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Garrisons and Aviaries.
+}
+
+STRING 5057
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Garrisons and Aviaries.
+}
+
+STRING 5058
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
+{
+[Whitemane] Improved Defensive Outpost
+}
+
+STRING 5060
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), effect1 (Effect 1)
+{
+renw
+}
+
+STRING 5061
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), effect2 (Effect 2)
+{
+ratd
+}
+
+STRING 5062
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), class (Class)
+{
+ranged
+}
+
+STRING 5064
+// Abilities: A08R ([Whitemane] Improved Martial Engineering), Tip (Tooltip - Normal)
+{
+Improved Martial Engineering
+}
+
+STRING 5065
+// Abilities: A08R ([Whitemane] Improved Martial Engineering), Tip (Tooltip - Normal)
+{
+Improved Martial Engineering
+}
+
+STRING 5066
+// Abilities: A08R ([Whitemane] Improved Martial Engineering), Name (Name)
+{
+[Whitemane] Improved Martial Engineering
+}
+
+STRING 5067
+// Abilities: A08R ([Whitemane] Improved Martial Engineering), Ubertip (Tooltip - Normal - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed <A08R,area2>%.
+}
+
+STRING 5068
+// Abilities: A08R ([Whitemane] Improved Martial Engineering), Ubertip (Tooltip - Normal - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed <A08R,area1>%.
+}
+
+STRING 5069
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+[Whitemane] Improved Martial Engineering
+}
+
+STRING 5070
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
+{
+Advanced Martial Engineering
+}
+
+STRING 5071
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
+{
+Improved Martial Engineering
+}
+
+STRING 5072
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
+{
+Advanced Martial Engineering
+}
+
+STRING 5075
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed <A08R,area1>%.
+}
+
+STRING 5076
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed <A08R,area2>%.
+}
+
+STRING 5079
+// Units: h028 ([Whitemane] Guard Tower), Name (Name)
+{
+[Whitemane] Guard Tower
+}
+
+STRING 5080
+// Units: n00K ([Whitemane] Lightspawn), Name (Name)
+{
+[Whitemane] Lightspawn
+}
+
+STRING 5081
+// Abilities: A08S ([Whitemane] Holy Nova), Name (Name)
+{
+[Whitemane] Holy Nova
+}
+
+STRING 5082
+// Abilities: A08S ([Whitemane] Holy Nova), Tip (Tooltip - Normal)
+{
+Holy Nova
+}
+
+STRING 5083
+// Abilities: A08T ([Whitemane] Summon Lightspawn), Name (Name)
+{
+[Whitemane] Summon Lightspawn
+}
+
+STRING 5084
+// Abilities: A08T ([Whitemane] Summon Lightspawn), Tip (Tooltip - Normal)
+{
+Summon Lightspawn
 }
 

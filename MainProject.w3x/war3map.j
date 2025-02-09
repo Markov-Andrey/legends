@@ -207,6 +207,7 @@ trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneBowman= null
 trigger gg_trg_WhitemaneTowerSilence= null
 trigger gg_trg_WhitemaneCrusaderWrathful= null
 trigger gg_trg_WhitemaneZealotSacriGift= null
@@ -295,8 +296,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneBowman= null
-trigger gg_trg_WhitemaneBowman_Copy= null
+trigger gg_trg_WhitemaneFastBuild= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1609,9 +1609,11 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
+    set u=BlzCreateUnitWithSkin(p, 'h028', - 512.0, - 384.0, 270.000, 'h028')
     set u=BlzCreateUnitWithSkin(p, 'h01U', 320.0, - 576.0, 270.000, 'h01U')
-    set u=BlzCreateUnitWithSkin(p, 'h01W', - 320.0, - 512.0, 270.000, 'h01W')
-    set u=BlzCreateUnitWithSkin(p, 'h02E', 704.0, - 384.0, 270.000, 'h02E')
+    set u=BlzCreateUnitWithSkin(p, 'h025', - 672.0, - 608.0, 270.000, 'h025')
+    set u=BlzCreateUnitWithSkin(p, 'h01W', - 256.0, - 576.0, 270.000, 'h01W')
+    set u=BlzCreateUnitWithSkin(p, 'h02E', 704.0, - 576.0, 270.000, 'h02E')
 endfunction
 
 //===========================================================================
@@ -1622,16 +1624,18 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h020', - 461.8, - 169.9, - 84.428, 'h020')
-    set u=BlzCreateUnitWithSkin(p, 'h02A', - 166.2, - 149.1, - 85.897, 'h02A')
+    set u=BlzCreateUnitWithSkin(p, 'h020', - 461.8, - 169.9, 275.572, 'h020')
+    set u=BlzCreateUnitWithSkin(p, 'h02A', - 166.2, - 149.1, 274.103, 'h02A')
     set u=BlzCreateUnitWithSkin(p, 'h021', - 24.1, - 166.6, 293.478, 'h021')
     set u=BlzCreateUnitWithSkin(p, 'h023', - 137.9, 125.0, 268.126, 'h023')
     set u=BlzCreateUnitWithSkin(p, 'h022', 154.4, - 168.6, 272.771, 'h022')
     set u=BlzCreateUnitWithSkin(p, 'h01Y', 308.8, - 169.6, 250.462, 'h01Y')
-    set u=BlzCreateUnitWithSkin(p, 'o00X', - 324.7, - 144.8, - 86.263, 'o00X')
+    set u=BlzCreateUnitWithSkin(p, 'o00X', - 324.7, - 144.8, 273.737, 'o00X')
     set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
     set u=BlzCreateUnitWithSkin(p, 'h02H', 517.1, 29.6, 264.690, 'h02H')
+    set u=BlzCreateUnitWithSkin(p, 'h01X', - 734.6, - 129.6, - 84.096, 'h01X')
+    set u=BlzCreateUnitWithSkin(p, 'n00K', - 404.2, - 11.7, 274.840, 'n00K')
 endfunction
 
 //===========================================================================
@@ -7322,6 +7326,29 @@ function InitTrig_WhitemaneGraveyardBurn takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneFastBuild
+//===========================================================================
+function Trig_WhitemaneFastBuild_Conditions takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R035', GetOwningPlayer(GetConstructingStructure())) > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneFastBuild_Actions takes nothing returns nothing
+    call TriggerSleepAction(0.10)
+    call UnitSetConstructionProgress(GetConstructingStructure(), ( GetPlayerTechCountSimple('R035', GetOwningPlayer(GetConstructingStructure())) * 10 ))
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneFastBuild takes nothing returns nothing
+    set gg_trg_WhitemaneFastBuild=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneFastBuild, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+    call TriggerAddCondition(gg_trg_WhitemaneFastBuild, Condition(function Trig_WhitemaneFastBuild_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneFastBuild, function Trig_WhitemaneFastBuild_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: MythicAddRandom
 //===========================================================================
 function MythicAddRandom takes nothing returns nothing
@@ -11516,6 +11543,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneCrusaderWrathful()
     call InitTrig_WhitemaneZealotSacriGift()
     call InitTrig_WhitemaneGraveyardBurn()
+    call InitTrig_WhitemaneFastBuild()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
     call InitTrig_Mythic2Vampiric()
