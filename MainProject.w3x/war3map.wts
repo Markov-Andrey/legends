@@ -15455,3 +15455,123 @@ STRING 5084
 Summon Lightspawn
 }
 
+STRING 5085
+// Upgrades: R036 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
+{
+[Whitemane] Studded Leather Armor
+}
+
+STRING 5086
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+[Whitemane] Black Gunpowder
+}
+
+STRING 5087
+// Units: h01Z ([Whitemane] Scorching Radiance), Name (Name)
+{
+[Whitemane] Scorching Radiance
+}
+
+STRING 5088
+// Abilities: A08U ([Whitemane] Scorching Radiance), Name (Name)
+{
+[Whitemane] Scorching Radiance
+}
+
+STRING 5090
+// Abilities: A08U ([Whitemane] Scorching Radiance), Tip (Tooltip - Normal)
+{
+Scorching Radiance
+}
+
+STRING 5091
+// Abilities: A08U ([Whitemane] Scorching Radiance), Ubertip (Tooltip - Normal - Extended)
+{
+Unleashes a sphere of light that travels to the target location and remains there. The effect lasts for 15 seconds. While moving, it deals damage to all enemies in a small radius.
+}
+
+STRING 5092
+// Abilities: A08V ([Whitemane] Scorching Radiance), Name (Name)
+{
+[Whitemane] Scorching Radiance
+}
+
+STRING 5093
+// Abilities: A08V ([Whitemane] Scorching Radiance), Tip (Tooltip - Normal)
+{
+Scorching Radiance
+}
+
+STRING 5094
+// Abilities: A08V ([Whitemane] Scorching Radiance), EditorSuffix (Editor Suffix)
+{
+(Ability)
+}
+
+STRING 5095
+// Buffs/Effects: B01J ([Whitemane] Holy Fury), Bufftip (Tooltip)
+{
+Holy Fury
+}
+
+STRING 5096
+// Buffs/Effects: B01J ([Whitemane] Holy Fury), EditorName (Name (Editor Only))
+{
+[Whitemane] Holy Fury
+}
+
+STRING 5097
+// Buffs/Effects: B01K ([Whitemane] Holy Fury (Caster)), EditorName (Name (Editor Only))
+{
+[Whitemane] Holy Fury (Caster)
+}
+
+STRING 5098
+// Abilities: A08W ([Whitemane] Inner Fire), Name (Name)
+{
+[Whitemane] Inner Fire
+}
+
+STRING 5099
+// Abilities: A08W ([Whitemane] Inner Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Increases a target friendly unit's damage by <Ainf,DataA1,%>% and life regen rate by <Ainf,DataD1,%>. |nLasts <Ainf,Dur1> seconds.
+}
+
+STRING 5100
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+[Whitemane] Conjuror Adept Training
+}
+
+STRING 5101
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Name (Name)
+{
+Conjuror Master Training
+}
+
+STRING 5102
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Conjuror Adept Training
+}
+
+STRING 5103
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
+{
+Conjuror Master Training
+}
+
+STRING 5104
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+}
+
+STRING 5105
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
+}
+
