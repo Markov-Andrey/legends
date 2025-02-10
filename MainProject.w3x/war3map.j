@@ -207,6 +207,7 @@ trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneConjurorRadiance= null
 trigger gg_trg_WhitemaneBowman= null
 trigger gg_trg_WhitemaneTowerSilence= null
 trigger gg_trg_WhitemaneCrusaderWrathful= null
@@ -297,7 +298,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneConjurorRadiance= null
+trigger gg_trg_WhitemaneOracleVisions= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1635,6 +1636,16 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
     set u=BlzCreateUnitWithSkin(p, 'h02H', 517.1, 29.6, 264.690, 'h02H')
+    set u=BlzCreateUnitWithSkin(p, 'h022', - 590.4, - 2015.1, 272.770, 'h022')
+    call SetUnitState(u, UNIT_STATE_MANA, 200)
+    set u=BlzCreateUnitWithSkin(p, 'h022', - 682.9, - 2026.0, 272.770, 'h022')
+    call SetUnitState(u, UNIT_STATE_MANA, 200)
+    set u=BlzCreateUnitWithSkin(p, 'h022', - 490.5, - 2022.6, 272.770, 'h022')
+    call SetUnitState(u, UNIT_STATE_MANA, 200)
+    set u=BlzCreateUnitWithSkin(p, 'h022', - 783.0, - 2008.6, 272.770, 'h022')
+    call SetUnitState(u, UNIT_STATE_MANA, 200)
+    set u=BlzCreateUnitWithSkin(p, 'h022', - 408.2, - 2015.0, 272.770, 'h022')
+    call SetUnitState(u, UNIT_STATE_MANA, 200)
     set u=BlzCreateUnitWithSkin(p, 'h01X', - 734.6, - 129.6, 275.904, 'h01X')
     set u=BlzCreateUnitWithSkin(p, 'n00K', - 404.2, - 11.7, 274.840, 'n00K')
 endfunction
@@ -2023,6 +2034,18 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
 endfunction
 
 //===========================================================================
+function CreateUnitsForPlayer8 takes nothing returns nothing
+    local player p= Player(8)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 694.1, - 2965.0, 66.681, 'nogm')
+    set u=BlzCreateUnitWithSkin(p, 'nogm', - 485.3, - 2971.4, 94.925, 'nogm')
+endfunction
+
+//===========================================================================
 function CreateNeutralHostile takes nothing returns nothing
     local player p= Player(PLAYER_NEUTRAL_AGGRESSIVE)
     local unit u
@@ -2214,6 +2237,7 @@ function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer2()
     call CreateUnitsForPlayer5()
+    call CreateUnitsForPlayer8()
 endfunction
 
 //===========================================================================
@@ -7125,6 +7149,60 @@ function InitTrig_WhitemaneCrusade takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneOracleVisions
+//===========================================================================
+function Trig_WhitemaneOracleVisions_Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetAttacker()) == 'h022' ) ) then
+        return false
+    endif
+    if ( not ( UnitHasBuffBJ(GetAttackedUnitBJ(), 'B01L') == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneOracleVisions_Conditions takes nothing returns boolean
+    if ( not Trig_WhitemaneOracleVisions_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneOracleVisions_Func003Func002C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetAttackedUnitBJ()) <= 50.00 ) ) then
+        return false
+    endif
+    if ( not ( GetRandomReal(0, 100.00) <= ( ( 50.00 - GetUnitLifePercent(GetAttackedUnitBJ()) ) / 2.00 ) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneOracleVisions_Func003C takes nothing returns boolean
+    if ( not Trig_WhitemaneOracleVisions_Func003Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneOracleVisions_Actions takes nothing returns nothing
+    call UnitRemoveBuffBJ('B01L', GetAttackedUnitBJ())
+    if ( Trig_WhitemaneOracleVisions_Func003C() ) then
+        call AddSpecialEffectTargetUnitBJ("origin", GetAttackedUnitBJ(), "Abilities\\Spells\\Other\\Charm\\CharmTarget.mdl")
+        call SetUnitOwner(GetAttackedUnitBJ(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneOracleVisions takes nothing returns nothing
+    set gg_trg_WhitemaneOracleVisions=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneOracleVisions, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_WhitemaneOracleVisions, Condition(function Trig_WhitemaneOracleVisions_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneOracleVisions, function Trig_WhitemaneOracleVisions_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: WhitemaneConjurorRadiance
 //===========================================================================
 function Trig_WhitemaneConjurorRadiance_Conditions takes nothing returns boolean
@@ -11525,6 +11603,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
     call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneOracleVisions()
     call InitTrig_WhitemaneConjurorRadiance()
     call InitTrig_WhitemaneBowman()
     call InitTrig_WhitemaneTowerSilence()

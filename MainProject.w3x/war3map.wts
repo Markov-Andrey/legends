@@ -15575,3 +15575,39 @@ STRING 5105
 Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
 }
 
+STRING 5106
+// Abilities: A08Y ([Whitemane] Ominous Visions), Name (Name)
+{
+[Whitemane] Ominous Visions
+}
+
+STRING 5107
+// Abilities: A08Y ([Whitemane] Ominous Visions), Tip (Tooltip - Normal)
+{
+Ominous Visions
+}
+
+STRING 5109
+// Buffs/Effects: B01L ([Whitemane] Ominous Visions), EditorName (Name (Editor Only))
+{
+[Whitemane] Ominous Visions
+}
+
+STRING 5110
+// Buffs/Effects: B01L ([Whitemane] Ominous Visions), Bufftip (Tooltip)
+{
+Ominous Visions
+}
+
+STRING 5111
+// Buffs/Effects: B01L ([Whitemane] Ominous Visions), Buffubertip (Tooltip - Extended)
+{
+This unit was affected by Ominous Visions; it has a chance to become neutral-aggressive upon taking damage.
+}
+
+STRING 5114
+// Abilities: A08Y ([Whitemane] Ominous Visions), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <A08Y,DataA1> bonus damage to attacks. The lower the target's health, the higher the chance to go insane and become neutral-aggressive.
+}
+
