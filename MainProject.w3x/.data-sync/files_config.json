@@ -10149,7 +10149,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "VoidGlow.blp",
@@ -10157,7 +10157,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Conjuror\\BTNHolySphere.blp",
@@ -10165,7 +10165,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Conjuror\\BTNINV_Wand_11.blp",
@@ -10173,7 +10173,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Conjuror\\BTNMagicStickFire.blp",
@@ -10181,7 +10181,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Conjuror\\Life Low.mdx",
@@ -10189,7 +10189,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Conjuror\\Psionic Shot Yellow.mdx",
@@ -10197,7 +10197,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Conjuror\\UPGINV_Wand_11.blp",
@@ -10205,7 +10205,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Graveyard\\BTNArrowsSpearsUpg1.blp",
@@ -10213,7 +10213,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Graveyard\\BTNArrowsSpearsUpg2.blp",
@@ -10221,7 +10221,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Graveyard\\BTNArrowsSpearsUpg3.blp",
@@ -10229,7 +10229,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Graveyard\\BTNWhitemaneBuild1.blp",
@@ -10237,7 +10237,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Graveyard\\BTNWhitemaneBuild2.blp",
@@ -10245,7 +10245,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Graveyard\\PASWhitemaneBuild2.blp",
@@ -10253,7 +10253,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Gryphon\\Firebrand Shot Orange.mdx",
@@ -10261,7 +10261,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Gryphon\\Firebrand Shot Red.mdx",
@@ -10269,7 +10269,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Gryphon\\Firebrand Shot Yellow.mdx",
@@ -10277,7 +10277,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Knight\\HolyImmolationDamage.mdx",
@@ -10285,7 +10285,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Knight\\HolyImmolationTarget.mdx",
@@ -10293,7 +10293,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Lightspawn",
@@ -10301,7 +10301,7 @@
         "type": "directory",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Lightspawn\\ATCSpell_Holy_HolyNova.blp",
@@ -10309,7 +10309,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Lightspawn\\BTNHoly_Guardian_TCG.blp",
@@ -10317,7 +10317,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Lightspawn\\beerelem2.mdx",
@@ -10325,7 +10325,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Oracle\\ATCDestroOrb.blp",
@@ -10333,7 +10333,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Oracle\\BTNDestroOrb.blp",
@@ -10341,7 +10341,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Oracle\\BTNRevealingLightnewalt.blp",
@@ -10349,7 +10349,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Oracle\\Psionic Shot Purple.mdx",
@@ -10357,7 +10357,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "Legends\\Whitemane\\Oracle\\Shot Purple.mdx",
@@ -10365,7 +10365,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATCDestroOrb.blp",
@@ -10373,7 +10373,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATCSpell_Holy_HolyNova.blp",
@@ -10381,7 +10381,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArrowsSpearsUpg1.blp",
@@ -10389,7 +10389,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArrowsSpearsUpg2.blp",
@@ -10397,7 +10397,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNArrowsSpearsUpg3.blp",
@@ -10405,7 +10405,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNDestroOrb.blp",
@@ -10413,7 +10413,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHolySphere.blp",
@@ -10421,7 +10421,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHoly_Guardian_TCG.blp",
@@ -10429,7 +10429,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNINV_Wand_11.blp",
@@ -10437,7 +10437,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNMagicStickFire.blp",
@@ -10445,7 +10445,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNRevealingLightnewalt.blp",
@@ -10453,7 +10453,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWhitemaneBuild1.blp",
@@ -10461,7 +10461,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWhitemaneBuild2.blp",
@@ -10469,7 +10469,7 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
     },
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASWhitemaneBuild2.blp",
@@ -10477,6 +10477,30 @@
         "type": "file",
         "copy": true,
         "copy_child": "",
-        "validated": false
+        "validated": true
+    },
+    {
+        "path": "war3map.w3u.json",
+        "name": "war3map.w3u.json",
+        "type": "file",
+        "copy": false,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "war3map.wts.json",
+        "name": "war3map.wts.json",
+        "type": "file",
+        "copy": false,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "war3mapSkin.w3u.json",
+        "name": "war3mapSkin.w3u.json",
+        "type": "file",
+        "copy": false,
+        "copy_child": "",
+        "validated": true
     }
 ]
