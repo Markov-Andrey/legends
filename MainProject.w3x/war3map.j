@@ -299,6 +299,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_WhitemaneLancerAttack= null
+unit gg_unit_h023_0243= null
+trigger gg_trg_WhitemaneLancerNoAttack= null
 
     // Random Groups
 integer array gg_rg_000
@@ -7129,6 +7132,138 @@ function InitTrig_WhitemaneCrusade takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneLancerAttack
+//===========================================================================
+function Trig_WhitemaneLancerAttack_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R039', GetOwningPlayer(GetAttacker())) == 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetAttacker()) == 'h023' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetAttacker()) < 25 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerAttack_Conditions takes nothing returns boolean
+    if ( not Trig_WhitemaneLancerAttack_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerAttack_Func003Func002Func003C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A091', GetAttacker()) != 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetAttacker()) >= 20 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerAttack_Func003Func002C takes nothing returns boolean
+    if ( not Trig_WhitemaneLancerAttack_Func003Func002Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerAttack_Func003Func004C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A090', GetAttacker()) != 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetAttacker()) >= 10 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetAttacker()) < 20 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerAttack_Func003C takes nothing returns boolean
+    if ( not Trig_WhitemaneLancerAttack_Func003Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerAttack_Actions takes nothing returns nothing
+    call SetUnitAbilityLevelSwapped('A08Z', GetAttacker(), ( GetUnitAbilityLevelSwapped('A08Z', GetAttacker()) + 1 ))
+    if ( Trig_WhitemaneLancerAttack_Func003C() ) then
+        call UnitRemoveAbilityBJ('A091', GetAttacker())
+        call UnitAddAbilityBJ('A090', GetAttacker())
+    else
+        if ( Trig_WhitemaneLancerAttack_Func003Func002C() ) then
+            call UnitRemoveAbilityBJ('A090', GetAttacker())
+            call UnitAddAbilityBJ('A091', GetAttacker())
+        else
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneLancerAttack takes nothing returns nothing
+    set gg_trg_WhitemaneLancerAttack=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneLancerAttack, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_WhitemaneLancerAttack, Condition(function Trig_WhitemaneLancerAttack_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneLancerAttack, function Trig_WhitemaneLancerAttack_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneLancerNoAttack
+//===========================================================================
+function Trig_WhitemaneLancerNoAttack_Func001Func001Func003C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetEnumUnit()) < 20 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerNoAttack_Func001Func001Func004C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetEnumUnit()) < 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerNoAttack_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A08Z', GetEnumUnit()) > 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneLancerNoAttack_Func001A takes nothing returns nothing
+    if ( Trig_WhitemaneLancerNoAttack_Func001Func001C() ) then
+        call SetUnitAbilityLevelSwapped('A08Z', GetEnumUnit(), ( GetUnitAbilityLevelSwapped('A08Z', GetEnumUnit()) - 1 ))
+        if ( Trig_WhitemaneLancerNoAttack_Func001Func001Func003C() ) then
+            call UnitRemoveAbilityBJ('A091', GetEnumUnit())
+        else
+        endif
+        if ( Trig_WhitemaneLancerNoAttack_Func001Func001Func004C() ) then
+            call UnitRemoveAbilityBJ('A090', GetEnumUnit())
+        else
+        endif
+    else
+    endif
+endfunction
+
+function Trig_WhitemaneLancerNoAttack_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h023'), function Trig_WhitemaneLancerNoAttack_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneLancerNoAttack takes nothing returns nothing
+    set gg_trg_WhitemaneLancerNoAttack=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneLancerNoAttack, 1.00)
+    call TriggerAddAction(gg_trg_WhitemaneLancerNoAttack, function Trig_WhitemaneLancerNoAttack_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: WhitemaneOracleVisions
 //===========================================================================
 function Trig_WhitemaneOracleVisions_Func001C takes nothing returns boolean
@@ -11583,6 +11718,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
     call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneLancerAttack()
+    call InitTrig_WhitemaneLancerNoAttack()
     call InitTrig_WhitemaneOracleVisions()
     call InitTrig_WhitemaneConjurorRadiance()
     call InitTrig_WhitemaneBowman()
