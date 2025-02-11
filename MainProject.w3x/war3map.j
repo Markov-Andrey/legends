@@ -207,6 +207,7 @@ trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneOracleVisions= null
 trigger gg_trg_WhitemaneConjurorRadiance= null
 trigger gg_trg_WhitemaneBowman= null
 trigger gg_trg_WhitemaneTowerSilence= null
@@ -298,7 +299,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneOracleVisions= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1636,16 +1636,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
     set u=BlzCreateUnitWithSkin(p, 'h02H', 517.1, 29.6, 264.690, 'h02H')
-    set u=BlzCreateUnitWithSkin(p, 'h022', - 590.4, - 2015.1, 272.770, 'h022')
-    call SetUnitState(u, UNIT_STATE_MANA, 200)
-    set u=BlzCreateUnitWithSkin(p, 'h022', - 682.9, - 2026.0, 272.770, 'h022')
-    call SetUnitState(u, UNIT_STATE_MANA, 200)
-    set u=BlzCreateUnitWithSkin(p, 'h022', - 490.5, - 2022.6, 272.770, 'h022')
-    call SetUnitState(u, UNIT_STATE_MANA, 200)
-    set u=BlzCreateUnitWithSkin(p, 'h022', - 783.0, - 2008.6, 272.770, 'h022')
-    call SetUnitState(u, UNIT_STATE_MANA, 200)
-    set u=BlzCreateUnitWithSkin(p, 'h022', - 408.2, - 2015.0, 272.770, 'h022')
-    call SetUnitState(u, UNIT_STATE_MANA, 200)
+    set u=BlzCreateUnitWithSkin(p, 'h023', - 670.3, - 1910.8, 268.126, 'h023')
+    set u=BlzCreateUnitWithSkin(p, 'h023', - 511.2, - 1901.7, 268.126, 'h023')
     set u=BlzCreateUnitWithSkin(p, 'h01X', - 734.6, - 129.6, 275.904, 'h01X')
     set u=BlzCreateUnitWithSkin(p, 'n00K', - 404.2, - 11.7, 274.840, 'n00K')
 endfunction
@@ -2034,18 +2026,6 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function CreateUnitsForPlayer8 takes nothing returns nothing
-    local player p= Player(8)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 694.1, - 2965.0, 66.681, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 485.3, - 2971.4, 94.925, 'nogm')
-endfunction
-
-//===========================================================================
 function CreateNeutralHostile takes nothing returns nothing
     local player p= Player(PLAYER_NEUTRAL_AGGRESSIVE)
     local unit u
@@ -2127,6 +2107,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nitw', - 616.0, - 2996.1, 88.066, 'nitw')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.300, 'nsgt')
@@ -2237,7 +2218,6 @@ function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer2()
     call CreateUnitsForPlayer5()
-    call CreateUnitsForPlayer8()
 endfunction
 
 //===========================================================================

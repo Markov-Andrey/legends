@@ -15611,3 +15611,21 @@ STRING 5114
 Adds <A08Y,DataA1> bonus damage to attacks. The lower the target's health, the higher the chance to go insane and become neutral-aggressive.
 }
 
+STRING 5116
+// Abilities: A08X ([Whitemane] Seer’s Eye), Name (Name)
+{
+[Whitemane] Seer’s Eye
+}
+
+STRING 5117
+// Abilities: A08X ([Whitemane] Seer’s Eye), Tip (Tooltip - Normal)
+{
+Seer’s Eye
+}
+
+STRING 5118
+// Abilities: A08X ([Whitemane] Seer’s Eye), Ubertip (Tooltip - Normal - Extended)
+{
+Reveals the area of the map that it is cast upon for <A08X,Dur1> seconds. Also reveals invisible units.
+}
+
