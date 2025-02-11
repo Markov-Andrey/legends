@@ -3864,14 +3864,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Graveyard\\StorageDenWestfallV1.00.mdx",
-        "name": "StorageDenWestfallV1.00.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\Gryphon",
         "name": "Gryphon",
         "type": "directory",
@@ -10500,6 +10492,46 @@
         "name": "war3mapSkin.w3u.json",
         "type": "file",
         "copy": false,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Graveyard\\ChurchOfTheHolyLightV1.00.mdx",
+        "name": "ChurchOfTheHolyLightV1.00.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Gryphon\\BTNFlameLance.blp",
+        "name": "BTNFlameLance.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Gryphon\\PASFlameLance.blp",
+        "name": "PASFlameLance.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFlameLance.blp",
+        "name": "DISBTNFlameLance.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASFlameLance.blp",
+        "name": "DISPASFlameLance.blp",
+        "type": "file",
+        "copy": true,
         "copy_child": "",
         "validated": true
     }

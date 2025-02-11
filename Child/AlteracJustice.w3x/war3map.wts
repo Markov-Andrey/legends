@@ -3436,12 +3436,6 @@ STRING 2202
 Varian Wrynn
 }
 
-STRING 2203
-// Units: O000 (King of Stormwind), Name (Name)
-{
-King of Stormwind
-}
-
 STRING 2204
 // Units: O000 (King of Stormwind), Awakentip (Tooltip - Awaken)
 {
@@ -4580,19 +4574,19 @@ Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A
 }
 
 STRING 2461
-// Units: U006 (Death Knight), Awakentip (Tooltip - Awaken)
+// Units: U006 (Lich King), Awakentip (Tooltip - Awaken)
 {
 Revive Arthas
 }
 
 STRING 2462
-// Units: U006 (Death Knight), Revivetip (Tooltip - Revive)
+// Units: U006 (Lich King), Revivetip (Tooltip - Revive)
 {
 Revive Arthas
 }
 
 STRING 2463
-// Units: U006 (Death Knight), Tip (Tooltip - Basic)
+// Units: U006 (Lich King), Tip (Tooltip - Basic)
 {
 Summon Arthas
 }
@@ -8137,12 +8131,6 @@ STRING 3617
 Revive Tyrande Whisperwind
 }
 
-STRING 3618
-// Units: E003 (High Priestess of Elune), Name (Name)
-{
-High Priestess of Elune
-}
-
 STRING 3619
 // Abilities: A04X (Dori'thur), Tip (Tooltip - Normal)
 {
@@ -9050,26 +9038,8 @@ STRING 3800
 Vorpal Blades
 }
 
-STRING 3802
-// Units: n001 (Dori'thur), Name (Name)
-{
-Dori'thur
-}
-
-STRING 3803
-// Units: n003 (Dori'thur), Name (Name)
-{
-Dori'thur
-}
-
-STRING 3804
-// Units: n004 (Dori'thur), Name (Name)
-{
-Dori'thur
-}
-
 STRING 3805
-// Abilities: A04X (Dori'thur), Name (Name)
+// Units: n001 (Dori'thur), Name (Name)
 {
 Dori'thur
 }
@@ -9965,12 +9935,6 @@ STRING 4001
 // Abilities: A06I (Switch to Wind Rush Totem), Hotkey (Hotkey - Normal)
 {
 Z
-}
-
-STRING 4002
-// Units: O00C (Horde Warchief), Name (Name)
-{
-Horde Warchief
 }
 
 STRING 4003
@@ -13787,12 +13751,6 @@ STRING 4762
 Silithid Tank
 }
 
-STRING 4764
-// Units: H01R (High Inquisitor), Name (Name)
-{
-High Inquisitor
-}
-
 STRING 4765
 // Units: H01R (High Inquisitor), Propernames (Proper Names)
 {
@@ -15370,5 +15328,389 @@ STRING 5118
 // Abilities: A08X (Seer’s Eye), Ubertip (Tooltip - Normal - Extended)
 {
 Reveals the area of the map that it is cast upon for <A08X,Dur1> seconds. Also reveals invisible units.
+}
+
+STRING 5119
+// Units: H02D (Paladin), Name (Name)
+{
+Paladin
+}
+
+STRING 5120
+// Units: O000 (King of Stormwind), Name (Name)
+{
+King of Stormwind
+}
+
+STRING 5121
+// Units: H01R (High Inquisitor), Name (Name)
+{
+High Inquisitor
+}
+
+STRING 5122
+// Units: U006 (Lich King), Name (Name)
+{
+Lich King
+}
+
+STRING 5123
+// Units: O00C (Horde Warchief), Name (Name)
+{
+Horde Warchief
+}
+
+STRING 5124
+// Units: E003 (High Priestess of Elune), Name (Name)
+{
+High Priestess of Elune
+}
+
+STRING 5125
+// Units: n003 (Dori'thur), Name (Name)
+{
+Dori'thur
+}
+
+STRING 5126
+// Units: n004 (Dori'thur), Name (Name)
+{
+Dori'thur
+}
+
+STRING 5127
+// Abilities: A04X (Dori'thur), Name (Name)
+{
+Dori'thur
+}
+
+STRING 5128
+// Abilities: A08Z (Gryphon Lancer Level), Name (Name)
+{
+Gryphon Lancer Level
+}
+
+STRING 5130
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+1/25
+}
+
+STRING 5131
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+2/25
+}
+
+STRING 5132
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+3/25
+}
+
+STRING 5133
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+4/25
+}
+
+STRING 5134
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+5/25
+}
+
+STRING 5135
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+6/25
+}
+
+STRING 5136
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+7/25
+}
+
+STRING 5137
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+8/25
+}
+
+STRING 5138
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+9/25
+}
+
+STRING 5139
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+10/25
+}
+
+STRING 5140
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+11/25
+}
+
+STRING 5141
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+12/25
+}
+
+STRING 5142
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+13/25
+}
+
+STRING 5143
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+14/25
+}
+
+STRING 5144
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+15/25
+}
+
+STRING 5145
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+16/25
+}
+
+STRING 5146
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+17/25
+}
+
+STRING 5147
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+18/25
+}
+
+STRING 5148
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+19/25
+}
+
+STRING 5149
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+20/25
+}
+
+STRING 5150
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+21/25
+}
+
+STRING 5151
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+22/25
+}
+
+STRING 5152
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+23/25
+}
+
+STRING 5153
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+24/25
+}
+
+STRING 5154
+// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+25/25
+}
+
+STRING 5179
+// Abilities: A090 (Gryphon Lancer Attack Orange), Name (Name)
+{
+Gryphon Lancer Attack Orange
+}
+
+STRING 5180
+// Abilities: A091 (Gryphon Lancer Attack Red), Name (Name)
+{
+Gryphon Lancer Attack Red
+}
+
+STRING 5188
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5189
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5190
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5191
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5192
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5193
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5194
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5195
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5196
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 1
+}
+
+STRING 5197
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5198
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5199
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5200
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5201
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5202
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5203
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5204
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5205
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5206
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 2
+}
+
+STRING 5207
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 3
+}
+
+STRING 5208
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 3
+}
+
+STRING 5209
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 3
+}
+
+STRING 5210
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 3
+}
+
+STRING 5211
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 3
+}
+
+STRING 5212
+// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Gryphon Lancer Level 3
+}
+
+STRING 5213
+// Upgrades: R039 (Storm Hammers), Name (Name)
+{
+Gryphon Lancer Level
+}
+
+STRING 5214
+// Upgrades: R039 (Storm Hammers), Tip (Tooltip)
+{
+Research Gryphon Lancer Level
 }
 
