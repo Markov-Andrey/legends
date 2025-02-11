@@ -2222,25 +2222,25 @@ Brings back to life the corpses of <A008,DataA1> friendly nearby units.
 }
 
 STRING 1752
-// Units: H02D (Paladin), Tip (Tooltip - Basic)
+// Units: H02D ([Uther] Paladin), Tip (Tooltip - Basic)
 {
 Summon Uther
 }
 
 STRING 1753
-// Units: H02D (Paladin), Awakentip (Tooltip - Awaken)
+// Units: H02D ([Uther] Paladin), Awakentip (Tooltip - Awaken)
 {
 Revive Uther
 }
 
 STRING 1754
-// Units: H02D (Paladin), Propernames (Proper Names)
+// Units: H02D ([Uther] Paladin), Propernames (Proper Names)
 {
 Uther the Lightbringer
 }
 
 STRING 1764
-// Units: H02D (Paladin), Revivetip (Tooltip - Revive)
+// Units: H02D ([Uther] Paladin), Revivetip (Tooltip - Revive)
 {
 Revive Uther
 }
@@ -3447,31 +3447,25 @@ STRING 2201
 }
 
 STRING 2202
-// Units: O000 (King of Stormwind), Propernames (Proper Names)
+// Units: O000 ([Wrynn] King of Stormwind), Propernames (Proper Names)
 {
 Varian Wrynn
 }
 
-STRING 2203
-// Units: O000 (King of Stormwind), Name (Name)
-{
-King of Stormwind
-}
-
 STRING 2204
-// Units: O000 (King of Stormwind), Awakentip (Tooltip - Awaken)
+// Units: O000 ([Wrynn] King of Stormwind), Awakentip (Tooltip - Awaken)
 {
 Revive Varian Wrynn
 }
 
 STRING 2205
-// Units: O000 (King of Stormwind), Tip (Tooltip - Basic)
+// Units: O000 ([Wrynn] King of Stormwind), Tip (Tooltip - Basic)
 {
 Summon Varian Wrynn
 }
 
 STRING 2206
-// Units: O000 (King of Stormwind), Revivetip (Tooltip - Revive)
+// Units: O000 ([Wrynn] King of Stormwind), Revivetip (Tooltip - Revive)
 {
 Revive Varian Wrynn
 }
@@ -4596,19 +4590,19 @@ Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A
 }
 
 STRING 2461
-// Units: U006 (Death Knight), Awakentip (Tooltip - Awaken)
+// Units: U006 ([Arthas] Lich King), Awakentip (Tooltip - Awaken)
 {
 Revive Arthas
 }
 
 STRING 2462
-// Units: U006 (Death Knight), Revivetip (Tooltip - Revive)
+// Units: U006 ([Arthas] Lich King), Revivetip (Tooltip - Revive)
 {
 Revive Arthas
 }
 
 STRING 2463
-// Units: U006 (Death Knight), Tip (Tooltip - Basic)
+// Units: U006 ([Arthas] Lich King), Tip (Tooltip - Basic)
 {
 Summon Arthas
 }
@@ -8342,33 +8336,27 @@ STRING 3613
 }
 
 STRING 3614
-// Units: E003 (High Priestess of Elune), Propernames (Proper Names)
+// Units: E003 ([Tyrande] High Priestess of Elune), Propernames (Proper Names)
 {
 Tyrande Whisperwind
 }
 
 STRING 3615
-// Units: E003 (High Priestess of Elune), Tip (Tooltip - Basic)
+// Units: E003 ([Tyrande] High Priestess of Elune), Tip (Tooltip - Basic)
 {
 Summon Tyrande Whisperwind
 }
 
 STRING 3616
-// Units: E003 (High Priestess of Elune), Awakentip (Tooltip - Awaken)
+// Units: E003 ([Tyrande] High Priestess of Elune), Awakentip (Tooltip - Awaken)
 {
 Revive Tyrande Whisperwind
 }
 
 STRING 3617
-// Units: E003 (High Priestess of Elune), Revivetip (Tooltip - Revive)
+// Units: E003 ([Tyrande] High Priestess of Elune), Revivetip (Tooltip - Revive)
 {
 Revive Tyrande Whisperwind
-}
-
-STRING 3618
-// Units: E003 (High Priestess of Elune), Name (Name)
-{
-High Priestess of Elune
 }
 
 STRING 3619
@@ -9281,26 +9269,8 @@ STRING 3800
 [Tyrande] Vorpal Blades
 }
 
-STRING 3802
-// Units: n001 (Dori'thur), Name (Name)
-{
-Dori'thur
-}
-
-STRING 3803
-// Units: n003 (Dori'thur), Name (Name)
-{
-Dori'thur
-}
-
-STRING 3804
-// Units: n004 (Dori'thur), Name (Name)
-{
-Dori'thur
-}
-
 STRING 3805
-// Abilities: A04X ([Tyrande] Dori'thur), Name (Name)
+// Units: n001 ([Tyrande] Dori'thur), Name (Name)
 {
 [Tyrande] Dori'thur
 }
@@ -10199,26 +10169,20 @@ STRING 4001
 Z
 }
 
-STRING 4002
-// Units: O00C (Horde Warchief), Name (Name)
-{
-Horde Warchief
-}
-
 STRING 4003
-// Units: O00C (Horde Warchief), Awakentip (Tooltip - Awaken)
+// Units: O00C ([Thrall] Horde Warchief), Awakentip (Tooltip - Awaken)
 {
 Revive Thrall
 }
 
 STRING 4004
-// Units: O00C (Horde Warchief), Tip (Tooltip - Basic)
+// Units: O00C ([Thrall] Horde Warchief), Tip (Tooltip - Basic)
 {
 Summon Thrall
 }
 
 STRING 4005
-// Units: O00C (Horde Warchief), Revivetip (Tooltip - Revive)
+// Units: O00C ([Thrall] Horde Warchief), Revivetip (Tooltip - Revive)
 {
 Revive Thrall
 }
@@ -12545,13 +12509,13 @@ Long-range siege weaponry. Exceptional damage versus buildings, but slow and vul
 }
 
 STRING 4525
-// Units: H02D (Paladin), Ubertip (Tooltip - Extended)
+// Units: H02D ([Uther] Paladin), Ubertip (Tooltip - Extended)
 {
 Can learn Holy Light, Divine Shield, Seal Of Wisdom and Mass Resurrection. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 4526
-// Units: O000 (King of Stormwind), Ubertip (Tooltip - Extended)
+// Units: O000 ([Wrynn] King of Stormwind), Ubertip (Tooltip - Extended)
 {
 Can learn Lion's Fang, Heroic Strike, Stormwind Battlecry and Taunt. |n|n|cffffcc00Attacks land units.|r
 }
@@ -13328,7 +13292,7 @@ Heals <AIh2,DataA1> hit points when used.
 }
 
 STRING 4649
-// Units: O00C (Horde Warchief), Ubertip (Tooltip - Extended)
+// Units: O00C ([Thrall] Horde Warchief), Ubertip (Tooltip - Extended)
 {
 Can learn Chain Lightning, Far Sight, Whirling Elements and Earthquake. |n|n|cffffcc00Attacks land and air units.|r
 }
@@ -14026,32 +13990,26 @@ STRING 4762
 [Silithus] Silithid Tank
 }
 
-STRING 4764
-// Units: H01R (High Inquisitor), Name (Name)
-{
-High Inquisitor
-}
-
 STRING 4765
-// Units: H01R (High Inquisitor), Propernames (Proper Names)
+// Units: H01R ([Whitemane] High Inquisitor), Propernames (Proper Names)
 {
 Sally Whitemane
 }
 
 STRING 4766
-// Units: H01R (High Inquisitor), Awakentip (Tooltip - Awaken)
+// Units: H01R ([Whitemane] High Inquisitor), Awakentip (Tooltip - Awaken)
 {
 Revive Sally Whitemane
 }
 
 STRING 4767
-// Units: H01R (High Inquisitor), Tip (Tooltip - Basic)
+// Units: H01R ([Whitemane] High Inquisitor), Tip (Tooltip - Basic)
 {
 Summon Sally Whitemane
 }
 
 STRING 4768
-// Units: H01R (High Inquisitor), Revivetip (Tooltip - Revive)
+// Units: H01R ([Whitemane] High Inquisitor), Revivetip (Tooltip - Revive)
 {
 Revive Sally Whitemane
 }
@@ -15627,5 +15585,59 @@ STRING 5118
 // Abilities: A08X ([Whitemane] Seer’s Eye), Ubertip (Tooltip - Normal - Extended)
 {
 Reveals the area of the map that it is cast upon for <A08X,Dur1> seconds. Also reveals invisible units.
+}
+
+STRING 5119
+// Units: H02D ([Uther] Paladin), Name (Name)
+{
+[Uther] Paladin
+}
+
+STRING 5120
+// Units: O000 ([Wrynn] King of Stormwind), Name (Name)
+{
+[Wrynn] King of Stormwind
+}
+
+STRING 5121
+// Units: H01R ([Whitemane] High Inquisitor), Name (Name)
+{
+[Whitemane] High Inquisitor
+}
+
+STRING 5122
+// Units: U006 ([Arthas] Lich King), Name (Name)
+{
+[Arthas] Lich King
+}
+
+STRING 5123
+// Units: O00C ([Thrall] Horde Warchief), Name (Name)
+{
+[Thrall] Horde Warchief
+}
+
+STRING 5124
+// Units: E003 ([Tyrande] High Priestess of Elune), Name (Name)
+{
+[Tyrande] High Priestess of Elune
+}
+
+STRING 5125
+// Units: n003 ([Tyrande] Dori'thur), Name (Name)
+{
+[Tyrande] Dori'thur
+}
+
+STRING 5126
+// Units: n004 ([Tyrande] Dori'thur), Name (Name)
+{
+[Tyrande] Dori'thur
+}
+
+STRING 5127
+// Abilities: A04X ([Tyrande] Dori'thur), Name (Name)
+{
+[Tyrande] Dori'thur
 }
 
