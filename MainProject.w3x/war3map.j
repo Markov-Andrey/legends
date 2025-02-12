@@ -303,6 +303,7 @@ trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
 trigger gg_trg_WhitemaneOracleRequiem= null
 trigger gg_trg_WhitemaneOracleRequiemRemove= null
+trigger gg_trg_WhitemaneInqusitorSacrifice= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1635,15 +1636,13 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h021', - 25.6, - 151.0, 293.478, 'h021')
     set u=BlzCreateUnitWithSkin(p, 'h023', - 137.9, 125.0, 268.126, 'h023')
     set u=BlzCreateUnitWithSkin(p, 'h022', 154.4, - 168.6, 272.771, 'h022')
-    set u=BlzCreateUnitWithSkin(p, 'h01Y', 308.8, - 169.6, 250.462, 'h01Y')
+    set u=BlzCreateUnitWithSkin(p, 'h01Y', 284.9, - 164.4, 250.462, 'h01Y')
     set u=BlzCreateUnitWithSkin(p, 'o00X', - 324.7, - 144.8, 273.737, 'o00X')
     set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
     set u=BlzCreateUnitWithSkin(p, 'h02H', 517.1, 29.6, 264.690, 'h02H')
-    set u=BlzCreateUnitWithSkin(p, 'h022', - 609.5, - 1695.3, 272.771, 'h022')
-    set u=BlzCreateUnitWithSkin(p, 'h020', - 616.1, - 1847.0, 263.270, 'h020')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.20 * life)
+    set u=BlzCreateUnitWithSkin(p, 'h01Y', - 656.4, - 1776.9, 250.462, 'h01Y')
+    set u=BlzCreateUnitWithSkin(p, 'h01Y', - 520.3, - 1784.0, 250.462, 'h01Y')
     set u=BlzCreateUnitWithSkin(p, 'h01X', - 734.6, - 129.6, 275.904, 'h01X')
     set u=BlzCreateUnitWithSkin(p, 'n00K', - 404.2, - 11.7, 274.840, 'n00K')
 endfunction
@@ -7135,6 +7134,33 @@ function InitTrig_WhitemaneCrusade takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneInqusitorSacrifice
+//===========================================================================
+function Trig_WhitemaneInqusitorSacrifice_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A094' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInqusitorSacrifice_Actions takes nothing returns nothing
+    // ПОЧЕМУ ТО НЕ СРАБОТАЛ ДАММИ
+    call KillUnit(GetSpellTargetUnit())
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
+    call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+    call UnitAddAbilityBJ('A095', GetLastCreatedUnit())
+    call IssueImmediateOrderBJ(GetLastCreatedUnit(), "roar")
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInqusitorSacrifice takes nothing returns nothing
+    set gg_trg_WhitemaneInqusitorSacrifice=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInqusitorSacrifice, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WhitemaneInqusitorSacrifice, Condition(function Trig_WhitemaneInqusitorSacrifice_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneInqusitorSacrifice, function Trig_WhitemaneInqusitorSacrifice_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: WhitemaneLancerAttack
 //===========================================================================
 function Trig_WhitemaneLancerAttack_Func001C takes nothing returns boolean
@@ -11777,6 +11803,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
     call InitTrig_WhitemaneCrusade()
+    call InitTrig_WhitemaneInqusitorSacrifice()
     call InitTrig_WhitemaneLancerAttack()
     call InitTrig_WhitemaneLancerNoAttack()
     call InitTrig_WhitemaneOracleVisions()

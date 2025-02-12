@@ -16007,3 +16007,75 @@ STRING 5225
 (resurrection)
 }
 
+STRING 5230
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+[Whitemane] Oracle Adept Training
+}
+
+STRING 5231
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Oracle Master Training
+}
+
+STRING 5232
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Oracle Adept Training
+}
+
+STRING 5233
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Oracle Master Training
+}
+
+STRING 5234
+// Abilities: A094 ([Whitemane] Divine Sacrifice), Name (Name)
+{
+[Whitemane] Divine Sacrifice
+}
+
+STRING 5235
+// Abilities: A094 ([Whitemane] Divine Sacrifice), Tip (Tooltip - Normal)
+{
+Divine Sacrifice
+}
+
+STRING 5236
+// Abilities: A095 ([Whitemane] Divine Sacrifice), Name (Name)
+{
+[Whitemane] Divine Sacrifice
+}
+
+STRING 5237
+// Abilities: A095 ([Whitemane] Divine Sacrifice), Tip (Tooltip - Normal)
+{
+Divine Sacrifice
+}
+
+STRING 5238
+// Abilities: A095 ([Whitemane] Divine Sacrifice), EditorSuffix (Editor Suffix)
+{
+(dependency)
+}
+
+STRING 5239
+// Buffs/Effects: B01N ([Whitemane] Divine Sacrifice), Bufftip (Tooltip)
+{
+Divine Sacrifice
+}
+
+STRING 5240
+// Buffs/Effects: B01N ([Whitemane] Divine Sacrifice), EditorName (Name (Editor Only))
+{
+[Whitemane] Divine Sacrifice
+}
+
+STRING 5241
+// Buffs/Effects: B01N ([Whitemane] Divine Sacrifice), Buffubertip (Tooltip - Extended)
+{
+This unit has Divine Sacrifice; its attack damage has been increased.
+}
+
