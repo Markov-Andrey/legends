@@ -15971,3 +15971,39 @@ STRING 5214
 Research Gryphon Lancer Level
 }
 
+STRING 5215
+// Abilities: A092 ([Whitemane] Light’s Requiem), Name (Name)
+{
+[Whitemane] Light’s Requiem
+}
+
+STRING 5216
+// Abilities: A092 ([Whitemane] Light’s Requiem), Tip (Tooltip - Normal)
+{
+Light’s Requiem
+}
+
+STRING 5217
+// Abilities: A093 ([Whitemane] Light’s Requiem), Name (Name)
+{
+[Whitemane] Light’s Requiem
+}
+
+STRING 5218
+// Buffs/Effects: B01M ([Whitemane] Light’s Requiem), Bufftip (Tooltip)
+{
+Light’s Requiem
+}
+
+STRING 5219
+// Buffs/Effects: B01M ([Whitemane] Light’s Requiem), EditorName (Name (Editor Only))
+{
+[Whitemane] Light’s Requiem
+}
+
+STRING 5225
+// Abilities: A093 ([Whitemane] Light’s Requiem), EditorSuffix (Editor Suffix)
+{
+(resurrection)
+}
+
