@@ -16079,3 +16079,75 @@ STRING 5241
 This unit has Divine Sacrifice; its attack damage has been increased.
 }
 
+STRING 5242
+// Abilities: A096 ([Whitemane] Sinful Brand), Name (Name)
+{
+[Whitemane] Sinful Brand
+}
+
+STRING 5243
+// Abilities: A096 ([Whitemane] Sinful Brand), Tip (Tooltip - Normal)
+{
+Sinful Brand
+}
+
+STRING 5244
+// Abilities: A096 ([Whitemane] Sinful Brand), EditorSuffix (Editor Suffix)
+{
+(aura)
+}
+
+STRING 5245
+// Abilities: A097 ([Whitemane] Sinful Brand), Name (Name)
+{
+[Whitemane] Sinful Brand
+}
+
+STRING 5246
+// Abilities: A097 ([Whitemane] Sinful Brand), EditorSuffix (Editor Suffix)
+{
+(ability)
+}
+
+STRING 5247
+// Abilities: A097 ([Whitemane] Sinful Brand), Tip (Tooltip - Normal)
+{
+Sinful Brand
+}
+
+STRING 5248
+// Buffs/Effects: B01O ([Whitemane] Sinful Brand), EditorName (Name (Editor Only))
+{
+[Whitemane] Sinful Brand
+}
+
+STRING 5249
+// Buffs/Effects: B01O ([Whitemane] Sinful Brand), Bufftip (Tooltip)
+{
+Sinful Brand
+}
+
+STRING 5250
+// Buffs/Effects: B01O ([Whitemane] Sinful Brand), EditorSuffix (Editor Suffix)
+{
+(aura)
+}
+
+STRING 5251
+// Buffs/Effects: B01P ([Whitemane] Sinful Brand), EditorName (Name (Editor Only))
+{
+[Whitemane] Sinful Brand
+}
+
+STRING 5252
+// Buffs/Effects: B01P ([Whitemane] Sinful Brand), Bufftip (Tooltip)
+{
+Sinful Brand
+}
+
+STRING 5253
+// Buffs/Effects: B01P ([Whitemane] Sinful Brand), EditorSuffix (Editor Suffix)
+{
+(ability)
+}
+

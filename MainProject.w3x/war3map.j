@@ -207,9 +207,12 @@ trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
 trigger gg_trg_WhitemaneCrusade= null
+trigger gg_trg_WhitemaneInqusitorSacrifice= null
 trigger gg_trg_WhitemaneLancerAttack= null
 trigger gg_trg_WhitemaneLancerNoAttack= null
 trigger gg_trg_WhitemaneOracleVisions= null
+trigger gg_trg_WhitemaneOracleRequiem= null
+trigger gg_trg_WhitemaneOracleRequiemRemove= null
 trigger gg_trg_WhitemaneConjurorRadiance= null
 trigger gg_trg_WhitemaneBowman= null
 trigger gg_trg_WhitemaneTowerSilence= null
@@ -301,9 +304,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_WhitemaneOracleRequiem= null
-trigger gg_trg_WhitemaneOracleRequiemRemove= null
-trigger gg_trg_WhitemaneInqusitorSacrifice= null
+trigger gg_trg_WhitemaneInquisitorSinful= null
+trigger gg_trg_WhitemaneInquisitorSinfulRemove= null
+trigger gg_trg_WhitemaneInquisitorSinfulKill= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1635,14 +1638,15 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h02A', - 166.2, - 149.1, 274.103, 'h02A')
     set u=BlzCreateUnitWithSkin(p, 'h021', - 25.6, - 151.0, 293.478, 'h021')
     set u=BlzCreateUnitWithSkin(p, 'h023', - 137.9, 125.0, 268.126, 'h023')
-    set u=BlzCreateUnitWithSkin(p, 'h022', 154.4, - 168.6, 272.771, 'h022')
+    set u=BlzCreateUnitWithSkin(p, 'h022', 154.4, - 168.6, 272.770, 'h022')
+    call SetUnitState(u, UNIT_STATE_MANA, 200)
     set u=BlzCreateUnitWithSkin(p, 'h01Y', 284.9, - 164.4, 250.462, 'h01Y')
     set u=BlzCreateUnitWithSkin(p, 'o00X', - 324.7, - 144.8, 273.737, 'o00X')
     set u=BlzCreateUnitWithSkin(p, 'H01R', - 610.7, - 1.2, 267.800, 'H01R')
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
     set u=BlzCreateUnitWithSkin(p, 'h02H', 517.1, 29.6, 264.690, 'h02H')
-    set u=BlzCreateUnitWithSkin(p, 'h01Y', - 656.4, - 1776.9, 250.462, 'h01Y')
-    set u=BlzCreateUnitWithSkin(p, 'h01Y', - 520.3, - 1784.0, 250.462, 'h01Y')
+    set u=BlzCreateUnitWithSkin(p, 'h01Y', 26.8, 51.5, 250.462, 'h01Y')
+    set u=BlzCreateUnitWithSkin(p, 'h01Y', 163.0, 44.3, 250.462, 'h01Y')
     set u=BlzCreateUnitWithSkin(p, 'h01X', - 734.6, - 129.6, 275.904, 'h01X')
     set u=BlzCreateUnitWithSkin(p, 'n00K', - 404.2, - 11.7, 274.840, 'n00K')
 endfunction
@@ -2112,7 +2116,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nitw', - 616.0, - 2996.1, 88.066, 'nitw')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 829.0, - 2847.3, 53.869, 'nspg')
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.300, 'nsgt')
@@ -2153,6 +2157,7 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 9015.9, - 3039.2, 210.367, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 8713.1, - 3403.7, 90.662, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1831.2, - 8684.7, 135.407, 'nmrm')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 682.2, - 2846.5, 72.209, 'nspg')
     set u=BlzCreateUnitWithSkin(p, 'nsqo', 7230.8, - 8315.2, 142.265, 'nsqo')
     set u=BlzCreateUnitWithSkin(p, 'nsqa', 7051.3, - 8476.4, 115.188, 'nsqa')
     set t=CreateTrigger()
@@ -2181,6 +2186,13 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function ItemTable000009_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 538.3, - 2848.0, 94.664, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 344.3, - 2830.5, 123.195, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 184.5, - 2824.4, 138.813, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 740.3, - 2965.3, 70.062, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 600.9, - 2961.7, 85.970, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 435.6, - 2947.5, 106.066, 'nspg')
+    set u=BlzCreateUnitWithSkin(p, 'nspg', - 256.3, - 2937.8, 124.754, 'nspg')
 endfunction
 
 //===========================================================================
@@ -7403,6 +7415,81 @@ function InitTrig_WhitemaneOracleRequiemRemove takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WhitemaneInquisitorSinful
+//===========================================================================
+function Trig_WhitemaneInquisitorSinful_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A097' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInquisitorSinful_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A096', GetSpellTargetUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInquisitorSinful takes nothing returns nothing
+    set gg_trg_WhitemaneInquisitorSinful=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInquisitorSinful, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WhitemaneInquisitorSinful, Condition(function Trig_WhitemaneInquisitorSinful_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinful, function Trig_WhitemaneInquisitorSinful_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneInquisitorSinfulRemove
+//===========================================================================
+function Trig_WhitemaneInquisitorSinfulRemove_Func001Func001C takes nothing returns boolean
+    if ( not ( UnitHasBuffBJ(GetEnumUnit(), 'B01P') != true ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A096', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInquisitorSinfulRemove_Func001A takes nothing returns nothing
+    if ( Trig_WhitemaneInquisitorSinfulRemove_Func001Func001C() ) then
+        call UnitRemoveAbilityBJ('A096', GetEnumUnit())
+    else
+    endif
+endfunction
+
+function Trig_WhitemaneInquisitorSinfulRemove_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), function Trig_WhitemaneInquisitorSinfulRemove_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInquisitorSinfulRemove takes nothing returns nothing
+    set gg_trg_WhitemaneInquisitorSinfulRemove=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneInquisitorSinfulRemove, 1.00)
+    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinfulRemove, function Trig_WhitemaneInquisitorSinfulRemove_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneInquisitorSinfulKill
+//===========================================================================
+function Trig_WhitemaneInquisitorSinfulKill_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A096', GetDyingUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInquisitorSinfulKill_Actions takes nothing returns nothing
+    set udg_Whitemane_crusade_current=( udg_Whitemane_crusade_current + 3.00 )
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInquisitorSinfulKill takes nothing returns nothing
+    set gg_trg_WhitemaneInquisitorSinfulKill=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInquisitorSinfulKill, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_WhitemaneInquisitorSinfulKill, Condition(function Trig_WhitemaneInquisitorSinfulKill_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinfulKill, function Trig_WhitemaneInquisitorSinfulKill_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: WhitemaneConjurorRadiance
 //===========================================================================
 function Trig_WhitemaneConjurorRadiance_Conditions takes nothing returns boolean
@@ -11809,6 +11896,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneOracleVisions()
     call InitTrig_WhitemaneOracleRequiem()
     call InitTrig_WhitemaneOracleRequiemRemove()
+    call InitTrig_WhitemaneInquisitorSinful()
+    call InitTrig_WhitemaneInquisitorSinfulRemove()
+    call InitTrig_WhitemaneInquisitorSinfulKill()
     call InitTrig_WhitemaneConjurorRadiance()
     call InitTrig_WhitemaneBowman()
     call InitTrig_WhitemaneTowerSilence()
