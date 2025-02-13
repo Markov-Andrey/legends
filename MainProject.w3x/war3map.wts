@@ -16151,3 +16151,55 @@ STRING 5253
 (ability)
 }
 
+STRING 5254
+// Abilities: A098 ([Whitemane] Interrogation), Tip (Tooltip - Normal)
+{
+Interrogation
+}
+
+STRING 5255
+// Abilities: A098 ([Whitemane] Interrogation), Name (Name)
+{
+[Whitemane] Interrogation
+}
+
+STRING 5256
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+[Whitemane] Inquisitor Adept Training
+}
+
+STRING 5257
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Inquisitor Master Training
+}
+
+STRING 5258
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Inquisitor Adept Training
+}
+
+STRING 5259
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Inquisitor Master Training
+}
+
+STRING 5260
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Burn the heretic. Kill the mutant. Purge the unclean."|r
+
+Increases Sorceresses' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
+}
+
+STRING 5261
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"For the Em.. High Inquisitor!"|r
+
+Increases Sorceresses' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
+}
+
