@@ -10534,5 +10534,245 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\ATCability_rogue_bloodyeye.blp",
+        "name": "ATCability_rogue_bloodyeye.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\AmplifyDamage 2.mdx",
+        "name": "AmplifyDamage 2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\AmplifyDamage.mdx",
+        "name": "AmplifyDamage.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\BTNInquisiton.blp",
+        "name": "BTNInquisiton.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\BTNInquisiton1.blp",
+        "name": "BTNInquisiton1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\BTNSoul Rune.blp",
+        "name": "BTNSoul Rune.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\BTN_Whitemane_RitualOfSacrifice.blp",
+        "name": "BTN_Whitemane_RitualOfSacrifice.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\ClericMissile.mdx",
+        "name": "ClericMissile.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\CursedSTR097.mdx",
+        "name": "CursedSTR097.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Inquisitor\\UPGInquisiton.blp",
+        "name": "UPGInquisiton.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\BTNEyeOfVertex2.blp",
+        "name": "BTNEyeOfVertex2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\BTNEyeOfVertex3.blp",
+        "name": "BTNEyeOfVertex3.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\BTN_CW_Holy_Aura.blp",
+        "name": "BTN_CW_Holy_Aura.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\ChurchOfLight_RoarTargetV3.mdx",
+        "name": "ChurchOfLight_RoarTargetV3.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\PAS_CW_Holy_Aura.blp",
+        "name": "PAS_CW_Holy_Aura.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\UPGEyeOfVertex2.blp",
+        "name": "UPGEyeOfVertex2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\UpgRange",
+        "name": "UpgRange",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\UpgRange\\BTN_Whitemane_Weapon_Crossbow_01.blp",
+        "name": "BTN_Whitemane_Weapon_Crossbow_01.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\UpgRange\\BTN_Whitemane_Weapon_Crossbow_02.blp",
+        "name": "BTN_Whitemane_Weapon_Crossbow_02.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATCability_rogue_bloodyeye.blp",
+        "name": "DISATCability_rogue_bloodyeye.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNEyeOfVertex2.blp",
+        "name": "DISBTNEyeOfVertex2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNEyeOfVertex3.blp",
+        "name": "DISBTNEyeOfVertex3.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNInquisiton.blp",
+        "name": "DISBTNInquisiton.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNInquisiton1.blp",
+        "name": "DISBTNInquisiton1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSoul Rune.blp",
+        "name": "DISBTNSoul Rune.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_CW_Holy_Aura.blp",
+        "name": "DISBTN_CW_Holy_Aura.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_RitualOfSacrifice.blp",
+        "name": "DISBTN_Whitemane_RitualOfSacrifice.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_Weapon_Crossbow_01.blp",
+        "name": "DISBTN_Whitemane_Weapon_Crossbow_01.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_Weapon_Crossbow_02.blp",
+        "name": "DISBTN_Whitemane_Weapon_Crossbow_02.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_CW_Holy_Aura.blp",
+        "name": "DISPAS_CW_Holy_Aura.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
     }
 ]
