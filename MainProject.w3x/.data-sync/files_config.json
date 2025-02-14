@@ -3824,14 +3824,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Footman\\BTNScarletSquire.blp",
-        "name": "BTNScarletSquire.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\Footman\\ScarletSquire.mdx",
         "name": "ScarletSquire.mdx",
         "type": "file",
@@ -3979,14 +3971,6 @@
         "path": "Legends\\Whitemane\\Knight",
         "name": "Knight",
         "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Knight\\BTNScarletKnight.blp",
-        "name": "BTNScarletKnight.blp",
-        "type": "file",
         "copy": true,
         "copy_child": "",
         "validated": true
@@ -4258,14 +4242,6 @@
     {
         "path": "Legends\\Whitemane\\Whitemane\\BTNInquisition_Icon.blp",
         "name": "BTNInquisition_Icon.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Whitemane\\BTNSallyWhitemane.blp",
-        "name": "BTNSallyWhitemane.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -6328,14 +6304,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNSallyWhitemane.blp",
-        "name": "DISBTNSallyWhitemane.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNScarlet Oracle.blp",
         "name": "DISBTNScarlet Oracle.blp",
         "type": "file",
@@ -6354,14 +6322,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNScarletInquisitor.blp",
         "name": "DISBTNScarletInquisitor.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNScarletKnight.blp",
-        "name": "DISBTNScarletKnight.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -6418,14 +6378,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNScarletPlating3.blp",
         "name": "DISBTNScarletPlating3.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNScarletSquire.blp",
-        "name": "DISBTNScarletSquire.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10016,14 +9968,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Barracks\\BTNWhitemaneBarrack.blp",
-        "name": "BTNWhitemaneBarrack.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\Barracks\\HumanBarracks.mdx",
         "name": "HumanBarracks.mdx",
         "type": "file",
@@ -10090,14 +10034,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFlameBurst.blp",
         "name": "DISBTNFlameBurst.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWhitemaneBarrack.blp",
-        "name": "DISBTNWhitemaneBarrack.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10304,22 +10240,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Lightspawn\\BTNHoly_Guardian_TCG.blp",
-        "name": "BTNHoly_Guardian_TCG.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Lightspawn\\beerelem2.mdx",
-        "name": "beerelem2.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\Oracle\\ATCDestroOrb.blp",
         "name": "ATCDestroOrb.blp",
         "type": "file",
@@ -10410,14 +10330,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHolySphere.blp",
         "name": "DISBTNHolySphere.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHoly_Guardian_TCG.blp",
-        "name": "DISBTNHoly_Guardian_TCG.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10770,6 +10682,102 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_CW_Holy_Aura.blp",
         "name": "DISPAS_CW_Holy_Aura.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Footman\\BTNwhitemane-zealot.blp",
+        "name": "BTNwhitemane-zealot.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Knight\\BTN_Whitemane_Crusade.blp",
+        "name": "BTN_Whitemane_Crusade.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Lightspawn\\BTNLightshower_Elemental_HS.blp",
+        "name": "BTNLightshower_Elemental_HS.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Lightspawn\\VoidWalker.mdx",
+        "name": "VoidWalker.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Lightspawn\\VoidWalker_Portrait.mdx",
+        "name": "VoidWalker_Portrait.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Whitemane\\BTN_Sally_Whitemane.blp",
+        "name": "BTN_Sally_Whitemane.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLightshower_Elemental_HS.blp",
+        "name": "DISBTNLightshower_Elemental_HS.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Sally_Whitemane.blp",
+        "name": "DISBTN_Sally_Whitemane.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_Crusade.blp",
+        "name": "DISBTN_Whitemane_Crusade.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNwhitemane-zealot.blp",
+        "name": "DISBTNwhitemane-zealot.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Barracks\\BTN_Battle_Garrison.blp",
+        "name": "BTN_Battle_Garrison.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Battle_Garrison.blp",
+        "name": "DISBTN_Battle_Garrison.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",

@@ -2144,13 +2144,13 @@ Heal organic troops using resources.
 }
 
 STRING 1721
-// Units: h024 ([Whitemane] Grave Wagon), Hotkey (Hotkey)
+// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
 {
 F
 }
 
 STRING 1722
-// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
+// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -8204,7 +8204,7 @@ STRING 3585
 }
 
 STRING 3586
-// Abilities: A01F ([UI] Select), Hotkey (Hotkey - Normal)
+// Units: h020 ([Whitemane] Zealot), Hotkey (Hotkey)
 {
 Z
 }
@@ -10164,7 +10164,7 @@ X
 }
 
 STRING 4001
-// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Hotkey (Hotkey - Normal)
+// Abilities: A01F ([UI] Select), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -10218,7 +10218,7 @@ D
 }
 
 STRING 4023
-// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
+// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -11340,7 +11340,7 @@ Q
 }
 
 STRING 4304
-// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+// Units: o00X ([Whitemane] Crossbowman), Hotkey (Hotkey)
 {
 R
 }
@@ -11382,7 +11382,7 @@ STRING 4310
 }
 
 STRING 4312
-// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
+// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
 {
 F
 }
@@ -13117,7 +13117,7 @@ Upgrade to create a defensive structure. Strongly poisons enemies when attacking
 }
 
 STRING 4624
-// Upgrades: R00G (Cannibalize), Hotkey (Hotkey)
+// Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -14109,7 +14109,7 @@ Improvement to check the player's army
 }
 
 STRING 4790
-// Units: h01W ([Whitemane] Garrison), Ubertip (Tooltip - Extended)
+// Units: h01W ([Whitemane] Battle Garrison), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack #upgrades
 |R
@@ -14332,12 +14332,6 @@ STRING 4852
 Burn or Return
 }
 
-STRING 4853
-// Abilities: A08A ([Whitemane] Burn), Ubertip (Tooltip - Normal - Extended)
-{
-Burn the corpse of a unit.
-}
-
 STRING 4857
 // Items: I00D ([Whitemane] Gold +7), Name (Name)
 {
@@ -14378,12 +14372,6 @@ STRING 4868
 // Abilities: A08C ([Whitemane] Minimum Range), Tip (Tooltip - Normal)
 {
 Minimum Range
-}
-
-STRING 4869
-// Abilities: A08C ([Whitemane] Minimum Range), Ubertip (Tooltip - Normal - Extended)
-{
-The crossbowman cannot fire at targets within 200 range.
 }
 
 STRING 4872
@@ -14432,12 +14420,6 @@ STRING 4886
 // Units: h02A ([Whitemane] Crusader), Tip (Tooltip - Basic)
 {
 Train Crusader
-}
-
-STRING 4887
-// Units: h01W ([Whitemane] Garrison), Name (Name)
-{
-[Whitemane] Garrison
 }
 
 STRING 4890
@@ -14625,18 +14607,6 @@ STRING 4931
 // Units: h02N ([Uther] Gryphon Aviary), Name (Name)
 {
 [Uther] Gryphon Aviary
-}
-
-STRING 4932
-// Units: h02E ([Whitemane] Aviary), Name (Name)
-{
-[Whitemane] Aviary
-}
-
-STRING 4933
-// Units: h02E ([Whitemane] Aviary), Tip (Tooltip - Basic)
-{
-Build Aviary
 }
 
 STRING 4934
@@ -15221,24 +15191,6 @@ STRING 5054
 Upgrade to Imbued Defensive Outpost
 }
 
-STRING 5055
-// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
-{
-Grants Garrisons and Aviaries the ability to attack nearby enemies.
-}
-
-STRING 5056
-// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
-{
-Further increases the attack damage of Garrisons and Aviaries.
-}
-
-STRING 5057
-// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
-{
-Further increases the attack damage of Garrisons and Aviaries.
-}
-
 STRING 5058
 // Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
 {
@@ -15414,21 +15366,15 @@ STRING 5094
 }
 
 STRING 5095
-// Buffs/Effects: B01J ([Whitemane] Holy Fury), Bufftip (Tooltip)
+// Buffs/Effects: B01K ([Whitemane] Holy Fury), Bufftip (Tooltip)
 {
 Holy Fury
 }
 
 STRING 5096
-// Buffs/Effects: B01J ([Whitemane] Holy Fury), EditorName (Name (Editor Only))
+// Buffs/Effects: B01K ([Whitemane] Holy Fury), EditorName (Name (Editor Only))
 {
 [Whitemane] Holy Fury
-}
-
-STRING 5097
-// Buffs/Effects: B01K ([Whitemane] Holy Fury (Caster)), EditorName (Name (Editor Only))
-{
-[Whitemane] Holy Fury (Caster)
 }
 
 STRING 5098
@@ -15465,18 +15411,6 @@ STRING 5103
 // Upgrades: R038 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
 Conjuror Master Training
-}
-
-STRING 5104
-// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
-}
-
-STRING 5105
-// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
 }
 
 STRING 5106
@@ -15591,330 +15525,6 @@ STRING 5128
 // Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Name (Name)
 {
 [Whitemane] Gryphon Lancer Level
-}
-
-STRING 5130
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-1/25
-}
-
-STRING 5131
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-2/25
-}
-
-STRING 5132
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-3/25
-}
-
-STRING 5133
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-4/25
-}
-
-STRING 5134
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-5/25
-}
-
-STRING 5135
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-6/25
-}
-
-STRING 5136
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-7/25
-}
-
-STRING 5137
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-8/25
-}
-
-STRING 5138
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-9/25
-}
-
-STRING 5139
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-10/25
-}
-
-STRING 5140
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-11/25
-}
-
-STRING 5141
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-12/25
-}
-
-STRING 5142
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-13/25
-}
-
-STRING 5143
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-14/25
-}
-
-STRING 5144
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-15/25
-}
-
-STRING 5145
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-16/25
-}
-
-STRING 5146
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-17/25
-}
-
-STRING 5147
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-18/25
-}
-
-STRING 5148
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-19/25
-}
-
-STRING 5149
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-20/25
-}
-
-STRING 5150
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-21/25
-}
-
-STRING 5151
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-22/25
-}
-
-STRING 5152
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-23/25
-}
-
-STRING 5153
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-24/25
-}
-
-STRING 5154
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
-{
-25/25
-}
-
-STRING 5179
-// Abilities: A090 ([Whitemane] Gryphon Lancer Attack Orange), Name (Name)
-{
-[Whitemane] Gryphon Lancer Attack Orange
-}
-
-STRING 5180
-// Abilities: A091 ([Whitemane] Gryphon Lancer Attack Red), Name (Name)
-{
-[Whitemane] Gryphon Lancer Attack Red
-}
-
-STRING 5188
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5189
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5190
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5191
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5192
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5193
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5194
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5195
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5196
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 1
-}
-
-STRING 5197
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5198
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5199
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5200
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5201
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5202
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5203
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5204
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5205
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5206
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 2
-}
-
-STRING 5207
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 3
-}
-
-STRING 5208
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 3
-}
-
-STRING 5209
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 3
-}
-
-STRING 5210
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 3
-}
-
-STRING 5211
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 3
-}
-
-STRING 5212
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
-{
-Gryphon Lancer Level 3
-}
-
-STRING 5213
-// Upgrades: R039 (Storm Hammers), Name (Name)
-{
-[Whitemane] Gryphon Lancer Level
-}
-
-STRING 5214
-// Upgrades: R039 (Storm Hammers), Tip (Tooltip)
-{
-Research Gryphon Lancer Level
 }
 
 STRING 5215
@@ -16181,26 +15791,12 @@ STRING 5265
 Primary structure, used to train Beastmistress, Grave Wagon and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
 }
 
-STRING 5267
-// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
-{
-F
-}
-
 STRING 5268
 // Units: h024 ([Whitemane] Grave Wagon), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#food #support
 |R
 Provides 8 food and can collect corpses on the battlefield for further disposal by the High Inquisitor.
-}
-
-STRING 5269
-// Units: h025 ([Whitemane] Honor's Tomb), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#upgrade #storage #support
-|R
-Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for Defensive Outpost, and Martial Engineering. |nHas the ability to burn corpses to increase the level of the Scarlet Crusade (both during and at the initial stage) and gold reward.
 }
 
 STRING 5270
@@ -16260,5 +15856,849 @@ STRING 5279
 Devoted fanatic of the Scarlet Order. Can learn the Sacrificial Gift ability.
 
 |cffffcc00Attacks land units.|r
+}
+
+STRING 5282
+// Units: h021 ([Whitemane] Conjuror), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Inner Fire, which increases a target friendly unit's damage and armor. Can also learn Summon Lightspawn and Scorching Radiance.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5283
+// Units: h021 ([Whitemane] Conjuror), Casterupgradetip (Caster Upgrade Tips)
+{
+- Inner Fire,- Inner Fire|n- Summon Lightspawn,- Inner Fire|n- Summon Lightspawn|n- Scorching Radiance
+}
+
+STRING 5284
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Summon Lightspawn.
+}
+
+STRING 5285
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Scorching Radiance.
+}
+
+STRING 5286
+// Units: h01Y ([Whitemane] Inquisitor), Casterupgradename (Caster Upgrade Names)
+{
+Initiate, Adept, Master
+}
+
+STRING 5288
+// Units: o00X ([Whitemane] Crossbowman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Capable of keeping enemies at a distance but unable to attack in melee. Can gain the Iron Quarrel upgrade.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5289
+// Units: h021 ([Whitemane] Conjuror), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 5290
+// Units: h022 ([Whitemane] Oracle), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 5291
+// Units: h024 ([Whitemane] Grave Wagon), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 5292
+// Units: h02A ([Whitemane] Crusader), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 5293
+// Units: h01Y ([Whitemane] Inquisitor), Hotkey (Hotkey)
+{
+I
+}
+
+STRING 5294
+// Units: h02H ([Whitemane] Crimson Immolator), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 5295
+// Upgrades: R00G (Cannibalize), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 5296
+// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 5297
+// Abilities: A08C ([Whitemane] Minimum Range), Ubertip (Tooltip - Normal - Extended)
+{
+The crossbowman cannot attack targets within a range of less than 200.
+}
+
+STRING 5298
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 5299
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 5300
+// Upgrades: R032 (Long Rifles), Hotkey (Hotkey)
+{
+I
+}
+
+STRING 5301
+// Units: h02A ([Whitemane] Crusader), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+The Fist of the Scarlet Order, burning enemies with his hatred. Wields Holy Fury. Can learn Wrathful.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5302
+// Buffs/Effects: B01K ([Whitemane] Holy Fury), Buffubertip (Tooltip - Extended)
+{
+This unit has Immolation; nearby enemy ground units will take damage over time.
+}
+
+STRING 5303
+// Abilities: A08M ([Whitemane] Holy Fury), Hotkey (Hotkey - Normal)
+{
+H
+}
+
+STRING 5304
+// Abilities: A08M ([Whitemane] Holy Fury), Unhotkey (Hotkey - Turn Off)
+{
+H
+}
+
+STRING 5305
+// Units: h01W ([Whitemane] Battle Garrison), Name (Name)
+{
+[Whitemane] Battle Garrison
+}
+
+STRING 5306
+// Units: h02H ([Whitemane] Crimson Immolator), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Heavily armored vehicle that burns enemies in righteous fire, effective at destroying buildings. Can be upgraded with the Radiant Essence ability.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5307
+// Units: h01W ([Whitemane] Battle Garrison), Tip (Tooltip - Basic)
+{
+Build Battle Garrison
+}
+
+STRING 5308
+// Units: h027 ([Whitemane] Armory), Ubertip (Tooltip - Extended)
+{
+Contains upgrades for improved armor and weaponry.
+}
+
+STRING 5309
+// Abilities: A088 ([Whitemane] Get Corpse), Ubertip (Tooltip - Normal - Extended)
+{
+Picks up a nearby corpse for later use. Can be transported to Honor's Tomb for cremation.
+}
+
+STRING 5311
+// Abilities: A08A ([Whitemane] Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Burns the corpse of a unit, increasing the Scarlet Crusade points by 3 (in both active and inactive modes) and granting a reward of 7 gold.
+
+}
+
+STRING 5312
+// Units: h025 ([Whitemane] Honor's Tomb), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage #support
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for Defensive Outpost, and Martial Engineering.
+
+Has the ability to burn corpses to increase the level of the Scarlet Crusade (both during and at the initial stage) and gold reward.
+}
+
+STRING 5313
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5314
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5315
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5316
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5317
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5318
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5319
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5320
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5321
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5322
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5323
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5324
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5325
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5326
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5327
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5328
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5329
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5330
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5331
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5332
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5333
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5334
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5335
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5336
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5337
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5338
+// Upgrades: R039 (Storm Hammers), Name (Name)
+{
+[Whitemane] Judgment Ray
+}
+
+STRING 5339
+// Upgrades: R039 (Storm Hammers), Tip (Tooltip)
+{
+Research Judgment Ray
+}
+
+STRING 5341
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5342
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5343
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5344
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5345
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5346
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5347
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5348
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5349
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5350
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5351
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5352
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5353
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5354
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5355
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5356
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5357
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5358
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5359
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5360
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5361
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5362
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5363
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5364
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5365
+// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5366
+// Upgrades: R039 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+
+}
+
+STRING 5367
+// Abilities: A090 ([Whitemane] Gryphon Lancer Attack Orange +3), Name (Name)
+{
+[Whitemane] Gryphon Lancer Attack Orange +3
+}
+
+STRING 5368
+// Abilities: A091 ([Whitemane] Gryphon Lancer Attack Red +5), Name (Name)
+{
+[Whitemane] Gryphon Lancer Attack Red +5
+}
+
+STRING 5369
+// Units: h023 ([Whitemane] Gryphon Lancer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Gryphon Lancer incinerates enemies with a focused beam of holy energy, infused with the power of hatred.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5370
+// Units: h02E ([Whitemane] War Aviary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Gryphon Lancer. |nAlso contains the Judgment Ray upgrade.
+}
+
+STRING 5371
+// Units: h02E ([Whitemane] War Aviary), Name (Name)
+{
+[Whitemane] War Aviary
+}
+
+STRING 5372
+// Units: h02E ([Whitemane] War Aviary), Tip (Tooltip - Basic)
+{
+Build War Aviary
+}
+
+STRING 5373
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Grants Battle Garrison and War Aviary the ability to attack nearby enemies.
+}
+
+STRING 5374
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Battle Garrison and War Aviary.
+}
+
+STRING 5375
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Battle Garrison and War Aviary.
+}
+
+STRING 5376
+// Units: h022 ([Whitemane] Oracle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Ominous Visions, which deals bonus damage and has a chance to drive enemies mad. Can also learn Seer’s Eye and Light’s Requiem.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5377
+// Units: h022 ([Whitemane] Oracle), Casterupgradetip (Caster Upgrade Tips)
+{
+- Ominous Visions,- Ominous Visions|n- Seer’s Eye,- Ominous Visions|n- Seer’s Eye|n- Light’s Requiem
+}
+
+STRING 5378
+// Units: h02G ([Whitemane] Cathedral of Light), Ubertip (Tooltip - Extended)
+{
+Trains Conjuror, Oracle, and Inquisitor. |nAlso contains spell upgrades for Conjuror, Oracle, and Inquisitor.
+}
+
+STRING 5379
+// Units: h01Y ([Whitemane] Inquisitor), Casterupgradetip (Caster Upgrade Tips)
+{
+- Interrogation,- Interrogation|n- Divine Sacrifice,- Interrogation|n- Divine Sacrifice|n- Sinful Brand
+}
+
+STRING 5380
+// Units: h01Y ([Whitemane] Inquisitor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Interrogation, which redirects negative spells from allied units to an enemy target. Can also learn Divine Sacrifice and Sinful Brand. 
+
+|cffffcc00Attacks land and air units.|r
 }
 
