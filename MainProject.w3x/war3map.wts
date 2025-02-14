@@ -15379,12 +15379,6 @@ STRING 5085
 [Whitemane] Studded Leather Armor
 }
 
-STRING 5086
-// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
-{
-[Whitemane] Black Gunpowder
-}
-
 STRING 5087
 // Units: h01Z ([Whitemane] Scorching Radiance), Name (Name)
 {
@@ -16215,5 +16209,29 @@ STRING 5269
 |cffffcc00#upgrade #storage #support
 |R
 Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for Defensive Outpost, and Martial Engineering. |nHas the ability to burn corpses to increase the level of the Scarlet Crusade (both during and at the initial stage) and gold reward.
+}
+
+STRING 5270
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+[Whitemane] Steel-Tipped Bolts
+}
+
+STRING 5271
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+Serrated Bolts
+}
+
+STRING 5272
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
+{
+Upgrade to Steel-Tipped Bolts
+}
+
+STRING 5273
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
+{
+Upgrade to Serrated Bolts
 }
 
