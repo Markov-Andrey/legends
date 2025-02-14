@@ -2144,13 +2144,13 @@ Heal organic troops using resources.
 }
 
 STRING 1721
-// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
+// Units: h024 ([Whitemane] Grave Wagon), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 1722
-// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -10218,7 +10218,7 @@ D
 }
 
 STRING 4023
-// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
+// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -11382,7 +11382,7 @@ STRING 4310
 }
 
 STRING 4312
-// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -12277,16 +12277,8 @@ Fast moving flying machine. Excellent at scouting, and effective against air uni
 |cFFFFB700Veteran|R: Explosive Mixture
 }
 
-STRING 4498
-// Units: h00A ([Uther] Town Center), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
-}
-
 STRING 4499
-// Units: h00I ([Uther] Citadel), Ubertip (Tooltip - Extended)
+// Units: h01T ([Whitemane] Diocese), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T2 #food #storage
 |R
@@ -12294,7 +12286,7 @@ Upgrade to Diocese to enable the production of additional types of structures an
 }
 
 STRING 4500
-// Units: h01H ([Uther] Palace), Ubertip (Tooltip - Extended)
+// Units: h01U ([Whitemane] Parish), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T3 #food #storage
 |R
@@ -14056,40 +14048,16 @@ STRING 4775
 [Whitemane] Cathedral
 }
 
-STRING 4776
-// Units: h01S ([Whitemane] Cathedral), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
-}
-
 STRING 4777
 // Units: h01T ([Whitemane] Diocese), Name (Name)
 {
 [Whitemane] Diocese
 }
 
-STRING 4778
-// Units: h01T ([Whitemane] Diocese), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T2 #food #storage
-|R
-Upgrade to Diocese to enable the production of additional types of structures and units.
-}
-
 STRING 4779
 // Units: h01U ([Whitemane] Parish), Name (Name)
 {
 [Whitemane] Parish
-}
-
-STRING 4780
-// Units: h01U ([Whitemane] Parish), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T3 #food #storage
-|R
-Upgrade to Parish to enable the production of additional types of structures and units.
 }
 
 STRING 4781
@@ -14358,14 +14326,6 @@ STRING 4847
 |cffffcc00#worker #builder
 |R
 Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 4848
-// Units: h024 ([Whitemane] Grave Wagon), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#food #support
-|R
-Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
 }
 
 STRING 4851
@@ -16201,5 +16161,59 @@ STRING 5261
 |cFF24BBFF"For the Em.. High Inquisitor!"|r
 
 Increases Sorceresses' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
+}
+
+STRING 5262
+// Units: h00A ([Uther] Town Center), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Citadel and then Palace to enable the production of additional types of structures and units.
+}
+
+STRING 5263
+// Units: h00I ([Uther] Citadel), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Citadel to enable the production of additional types of structures and units.
+}
+
+STRING 5264
+// Units: h01H ([Uther] Palace), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Palace to enable the production of additional types of structures and units.
+}
+
+STRING 5265
+// Units: h01S ([Whitemane] Cathedral), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Beastmistress, Grave Wagon and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
+}
+
+STRING 5267
+// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 5268
+// Units: h024 ([Whitemane] Grave Wagon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#food #support
+|R
+Provides 8 food and can collect corpses on the battlefield for further disposal by the High Inquisitor.
+}
+
+STRING 5269
+// Units: h025 ([Whitemane] Honor's Tomb), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage #support
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for Defensive Outpost, and Martial Engineering. |nHas the ability to burn corpses to increase the level of the Scarlet Crusade (both during and at the initial stage) and gold reward.
 }
 
