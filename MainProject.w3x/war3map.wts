@@ -14320,14 +14320,6 @@ STRING 4844
 Silitus Glacier
 }
 
-STRING 4847
-// Units: h01X ([Whitemane] Beastmistress), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#worker #builder
-|R
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
 STRING 4851
 // Abilities: A08A ([Whitemane] Burn), Name (Name)
 {
@@ -16233,5 +16225,40 @@ STRING 5273
 // Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
 Upgrade to Serrated Bolts
+}
+
+STRING 5275
+{
+Stonebeard
+}
+
+STRING 5276
+{
+Syndicate
+}
+
+STRING 5277
+{
+Players
+}
+
+STRING 5278
+// Units: h01X ([Whitemane] Beastmistress), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can summon Hound.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5279
+// Units: h020 ([Whitemane] Zealot), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Devoted fanatic of the Scarlet Order. Can learn the Sacrificial Gift ability.
+
+|cffffcc00Attacks land units.|r
 }
 
