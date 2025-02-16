@@ -3059,11 +3059,6 @@ STRING 2077
 Liturgy
 }
 
-STRING 2079
-{
-+
-}
-
 STRING 2080
 // Units: h00J ([Uther] Cleric), Casterupgradetip (Caster Upgrade Tips)
 {
@@ -11320,7 +11315,7 @@ STRING 4302
 }
 
 STRING 4303
-// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08E ([Whitemane] Scarlet March (On)), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -11332,7 +11327,7 @@ R
 }
 
 STRING 4305
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08F ([Whitemane] Scarlet March (Off)), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -11462,7 +11457,7 @@ Add defense bonus
 }
 
 STRING 4327
-// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11534,7 +11529,7 @@ Research Windfury Weapon
 }
 
 STRING 4340
-// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11558,7 +11553,7 @@ Research Quaking Totem
 }
 
 STRING 4345
-// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11672,7 +11667,7 @@ STRING 4369
 }
 
 STRING 4370
-// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -14335,37 +14330,37 @@ Minimum Range
 }
 
 STRING 4872
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA4,%>% and attack rate by <A08D,DataB4,%>%.
 }
 
 STRING 4873
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA5,%>% and attack rate by <A08D,DataB5,%>%.
 }
 
 STRING 4874
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA1,%>% and attack rate by <A08D,DataB1,%>%.
 }
 
 STRING 4875
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA2,%>% and attack rate by <A08D,DataB2,%>%.
 }
 
 STRING 4876
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA3,%>% and attack rate by <A08D,DataB3,%>%.
 }
 
 STRING 4882
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D ([Whitemane] Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA6,%>% and attack rate by <A08D,DataB6,%>%.
 }
@@ -14380,90 +14375,6 @@ STRING 4886
 // Units: h02A ([Whitemane] Crusader), Tip (Tooltip - Basic)
 {
 Train Crusader
-}
-
-STRING 4890
-// Abilities: A08E ([Whitemane] Scarlet Crusade (On)), Name (Name)
-{
-[Whitemane] Scarlet Crusade (On)
-}
-
-STRING 4891
-// Abilities: A08E ([Whitemane] Scarlet Crusade (On)), Tip (Tooltip - Normal)
-{
-Scarlet Crusade (On)
-}
-
-STRING 4892
-// Abilities: A08F ([Whitemane] Scarlet Crusade (Off)), Name (Name)
-{
-[Whitemane] Scarlet Crusade (Off)
-}
-
-STRING 4893
-// Abilities: A08F ([Whitemane] Scarlet Crusade (Off)), Tip (Tooltip - Normal)
-{
-Scarlet Crusade (Off)
-}
-
-STRING 4894
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - [|cffffcc00Level 3|r]
-}
-
-STRING 4895
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - [|cffffcc00Level 4|r]
-}
-
-STRING 4896
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Name (Name)
-{
-[Whitemane] Scarlet Crusade
-}
-
-STRING 4897
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - [|cffffcc00Level 5|r]
-}
-
-STRING 4898
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - [|cffffcc00Level 2|r]
-}
-
-STRING 4899
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - [|cffffcc00Level 1|r]
-}
-
-STRING 4903
-// Abilities: A08D ([Whitemane] Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - [|cffffcc00Level 6|r]
-}
-
-STRING 4904
-// Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), Bufftip (Tooltip)
-{
-Scarlet Crusade
-}
-
-STRING 4905
-// Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), EditorName (Name (Editor Only))
-{
-[Whitemane] Scarlet Crusade
-}
-
-STRING 4906
-// Buffs/Effects: B00L ([Whitemane] Scarlet Crusade), Buffubertip (Tooltip - Extended)
-{
-This unit is under the effects of Scarlet Crusade; it has an increased movement speed and attack rate.
 }
 
 STRING 4907
@@ -14935,12 +14846,6 @@ STRING 5016
 Research Sacrificial Gift
 }
 
-STRING 5017
-// Abilities: A08Q ([Whitemane] Sacrificial Gift), Ubertip (Tooltip - Normal - Extended)
-{
-After death, Zealot leaves a sphere of light that restores <A08P,DataA1> health.
-}
-
 STRING 5018
 // Abilities: A08Q ([Whitemane] Sacrificial Gift), Tip (Tooltip - Normal)
 {
@@ -14951,12 +14856,6 @@ STRING 5019
 // Upgrades: R031 (Defend), Name (Name)
 {
 [Whitemane] Sacrificial Gift
-}
-
-STRING 5020
-// Upgrades: R031 (Defend), Ubertip (Tooltip - Extended)
-{
-After death, Zealot leaves a sphere of light that restores <A08P,DataA1> health.
 }
 
 STRING 5021
@@ -15049,12 +14948,6 @@ STRING 5041
 [Whitemane] Inquisition
 }
 
-STRING 5042
-// Buffs/Effects: B01H ([Whitemane] Inquisition), Buffubertip (Tooltip - Extended)
-{
-Target enemy unit is stunned and steadily loses health while under the Inquisitor's control.
-}
-
 STRING 5043
 // Abilities: A08K ([Whitemane] Radiant Essence), Name (Name)
 {
@@ -15081,12 +14974,6 @@ STRING 5046
 
 STRING 5047
 // Abilities: A08K ([Whitemane] Radiant Essence), Ubertip (Tooltip - Normal - Extended)
-{
-Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
-}
-
-STRING 5048
-// Upgrades: R033 (Storm Hammers), Ubertip (Tooltip - Extended)
 {
 Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
 }
@@ -15197,18 +15084,6 @@ STRING 5072
 // Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
 {
 Advanced Martial Engineering
-}
-
-STRING 5075
-// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
-{
-Greatly enhances construction speed, allowing buildings to be completed <A08R,area1>%.
-}
-
-STRING 5076
-// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
-{
-Greatly enhances construction speed, allowing buildings to be completed <A08R,area2>%.
 }
 
 STRING 5079
@@ -15451,38 +15326,8 @@ STRING 5127
 [Tyrande] Dori'thur
 }
 
-STRING 5215
-// Abilities: A092 ([Whitemane] Light’s Requiem), Name (Name)
-{
-[Whitemane] Light’s Requiem
-}
-
-STRING 5216
-// Abilities: A092 ([Whitemane] Light’s Requiem), Tip (Tooltip - Normal)
-{
-Light’s Requiem
-}
-
-STRING 5217
-// Abilities: A093 ([Whitemane] Light’s Requiem), Name (Name)
-{
-[Whitemane] Light’s Requiem
-}
-
-STRING 5218
-// Buffs/Effects: B01M ([Whitemane] Light’s Requiem), Bufftip (Tooltip)
-{
-Light’s Requiem
-}
-
-STRING 5219
-// Buffs/Effects: B01M ([Whitemane] Light’s Requiem), EditorName (Name (Editor Only))
-{
-[Whitemane] Light’s Requiem
-}
-
 STRING 5225
-// Abilities: A093 ([Whitemane] Light’s Requiem), EditorSuffix (Editor Suffix)
+// Abilities: A093 ([Whitemane] Intercession), EditorSuffix (Editor Suffix)
 {
 (resurrection)
 }
@@ -15881,7 +15726,7 @@ The crossbowman cannot attack targets within a range of less than 200.
 }
 
 STRING 5298
-// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
 {
 W
 }
@@ -16507,20 +16352,6 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 
 }
 
-STRING 5366
-// Upgrades: R039 (Storm Hammers), Ubertip (Tooltip - Extended)
-{
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-
-}
-
 STRING 5367
 // Abilities: A090 ([Whitemane] Gryphon Lancer Attack Orange +3), Name (Name)
 {
@@ -16581,12 +16412,6 @@ STRING 5376
 Supporting spellcaster. Can initially cast Ominous Visions, which deals bonus damage and has a chance to drive enemies mad. Can also learn Seer’s Eye and Light’s Requiem.
 
 |cffffcc00Attacks land and air units.|r
-}
-
-STRING 5377
-// Units: h022 ([Whitemane] Oracle), Casterupgradetip (Caster Upgrade Tips)
-{
-- Ominous Visions,- Ominous Visions|n- Seer’s Eye,- Ominous Visions|n- Seer’s Eye|n- Light’s Requiem
 }
 
 STRING 5378
@@ -16823,5 +16648,402 @@ STRING 5412
 // Abilities: A08H ([Whitemane] Zeal), Researchubertip (Tooltip - Learn - Extended)
 {
 Nearby friendly melee units gain hit points when they hit enemy units. |n|n|cffffcc00Level 1|r - Gains <A08H,DataA1,%>% of attack damage. |n|cffffcc00Level 2|r - Gains <A08H,DataA2,%>% of attack damage. |n|cffffcc00Level 3|r - Gains <A08H,DataA3,%>% of attack damage.
+}
+
+STRING 5414
+// Abilities: A096 ([Whitemane] Sinful Brand), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A096,DataA1> additional armor to nearby friendly units.
+}
+
+STRING 5415
+// Abilities: A097 ([Whitemane] Sinful Brand), Ubertip (Tooltip - Normal - Extended)
+{
+Marks an enemy unit with a seal that reduces armor by <A096,DataA1>  for all enemy units in a small radius. The marked unit itself is not affected. If the marked unit dies, it grants an additional +3 points to the Scarlet Crusade. Lasts <A097,Dur1> seconds.
+}
+
+STRING 5420
+// Abilities: A08F ([Whitemane] Scarlet March (Off)), Ubertip (Tooltip - Normal - Extended)
+{
+Removes all bonuses, stops health loss, and resets the Scarlet Crusade level to its default state.
+}
+
+STRING 5422
+// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 5423
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 5425
+// Units: h022 ([Whitemane] Oracle), Casterupgradetip (Caster Upgrade Tips)
+{
+- Ominous Visions,- Ominous Visions|n- Seer’s Eye,- Ominous Visions|n- Seer’s Eye|n- Intercession
+}
+
+STRING 5426
+// Abilities: A08Q ([Whitemane] Sacrificial Gift), Ubertip (Tooltip - Normal - Extended)
+{
+After death, Zealot leaves a sphere of light that restores 75 health.
+}
+
+STRING 5427
+// Abilities: A092 ([Whitemane] Intercession), Name (Name)
+{
+[Whitemane] Intercession
+}
+
+STRING 5428
+// Abilities: A092 ([Whitemane] Intercession), Tip (Tooltip - Normal)
+{
+Intercession
+}
+
+STRING 5429
+// Abilities: A093 ([Whitemane] Intercession), Name (Name)
+{
+[Whitemane] Intercession
+}
+
+STRING 5430
+// Abilities: A093 ([Whitemane] Intercession), Tip (Tooltip - Normal)
+{
+Intercession
+}
+
+STRING 5432
+// Buffs/Effects: B01I ([Whitemane] Inquisitor's Silence), Buffubertip (Tooltip - Extended)
+{
+This unit is Inquisitor's Silence; it cannot cast spells.
+}
+
+STRING 5433
+// Buffs/Effects: B01H ([Whitemane] Inquisition), Buffubertip (Tooltip - Extended)
+{
+Target enemy unit is steadily losing health while under the Inquisitor's control.
+}
+
+STRING 5434
+// Buffs/Effects: B01M ([Whitemane] Intercession), EditorName (Name (Editor Only))
+{
+[Whitemane] Intercession
+}
+
+STRING 5435
+// Buffs/Effects: B01M ([Whitemane] Intercession), Bufftip (Tooltip)
+{
+Intercession
+}
+
+STRING 5436
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Grave Wagon, Zealot, Crusader and Crimson Immolator.
+}
+
+STRING 5437
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Grave Wagon, Zealot, Crusader and Crimson Immolator.
+}
+
+STRING 5438
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Grave Wagon, Zealot, Crusader and Crimson Immolator.
+}
+
+STRING 5439
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Hound, Zealot and Crusader.
+}
+
+STRING 5440
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Hound, Zealot and Crusader.
+}
+
+STRING 5441
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Hound, Zealot and Crusader.
+}
+
+STRING 5442
+// Upgrades: R031 (Defend), Ubertip (Tooltip - Extended)
+{
+After death, Zealot leaves a sphere of light that restores 75 health.
+}
+
+STRING 5443
+// Upgrades: R033 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Crimson Immolator unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
+}
+
+STRING 5444
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed 10%.
+}
+
+STRING 5445
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed 20%.
+}
+
+STRING 5446
+// Upgrades: R036 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Hound, Crossbowman and Gryphon Lancer.
+}
+
+STRING 5447
+// Upgrades: R036 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Hound, Crossbowman and Gryphon Lancer.
+}
+
+STRING 5448
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Increases the ranged attack damage of Crossbowman, Crimson Immolator and Gryphon Lancer.
+}
+
+STRING 5449
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Crossbowman, Crimson Immolator and Gryphon Lancer.
+}
+
+STRING 5450
+// Upgrades: R039 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Gryphon Lancer focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+}
+
+STRING 5451
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Oracle mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Seer’s Eye.
+}
+
+STRING 5452
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Oracle mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Intercession.
+}
+
+STRING 5453
+// Abilities: A08S ([Whitemane] Holy Nova), Ubertip (Tooltip - Normal - Extended)
+{
+Restores <A08S,DataA1> hit points to up to 6 nearby friendly non-mechanical units.
+}
+
+STRING 5454
+// Abilities: A08T ([Whitemane] Summon Lightspawn), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a Lightspawn. Has <n00K,realHP> hit points and deals <n00K,mindmg1> - <n00K,maxdmg1> damage. Has the Holy Nova ability.  |nLasts <A08T,Dur1> seconds. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5455
+// Abilities: A092 ([Whitemane] Intercession), Ubertip (Tooltip - Normal - Extended)
+{
+Grants a target unit Intercession, allowing it to be reborn upon death. The unit will revive with 100% of its maximum health.
+}
+
+STRING 5456
+// Abilities: A093 ([Whitemane] Intercession), Ubertip (Tooltip - Normal - Extended)
+{
+Grants a target unit Intercession, allowing it to be reborn upon death. The unit will revive with 100% of its maximum health.
+}
+
+STRING 5457
+// Buffs/Effects: B01M ([Whitemane] Intercession), Buffubertip (Tooltip - Extended)
+{
+This unit has Intercession; upon death, it will be reborn.
+}
+
+STRING 5458
+// Buffs/Effects: B01Q ([Whitemane] Lightspawn), EditorName (Name (Editor Only))
+{
+[Whitemane] Lightspawn
+}
+
+STRING 5459
+// Buffs/Effects: B01Q ([Whitemane] Lightspawn), Bufftip (Tooltip)
+{
+Lightspawn
+}
+
+STRING 5460
+// Abilities: A08I ([UI] History: Whitemane), Name (Name)
+{
+[UI] History: Whitemane
+}
+
+STRING 5461
+// Abilities: A08I ([UI] History: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 5462
+// Abilities: A08I ([UI] History: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+Sally Whitemane
+
+A devoted priestess of the Light, Sally Whitemane's hatred for undeath was forged in tragedy when she was forced to slay her own family after they transformed into mindless undead.
+
+She rose to become the ruthless High Inquisitor of the Scarlet Crusade, overseeing the Scarlet Monastery. Though driven by a noble cause, her zeal turned to fanaticism, seeing all outsiders as tainted. Gifted with the power to resurrect fallen crusaders, she ruled the Monastery with fear and unwavering conviction, making her one of the most formidable leaders of the Scarlet Crusade.
+}
+
+STRING 5463
+// Abilities: A09A ([UI] Mechanics: Whitemane), Name (Name)
+{
+[UI] Mechanics: Whitemane
+}
+
+STRING 5464
+// Abilities: A09A ([UI] Mechanics: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 5466
+// Abilities: A08D ([Whitemane] Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - [|cffffcc00Level 4|r]
+}
+
+STRING 5467
+// Abilities: A08D ([Whitemane] Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - [|cffffcc00Level 5|r]
+}
+
+STRING 5468
+// Abilities: A08D ([Whitemane] Scarlet March), Name (Name)
+{
+[Whitemane] Scarlet March
+}
+
+STRING 5469
+// Abilities: A08D ([Whitemane] Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - [|cffffcc00Level 6|r]
+}
+
+STRING 5470
+// Abilities: A08D ([Whitemane] Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - [|cffffcc00Level 3|r]
+}
+
+STRING 5471
+// Abilities: A08D ([Whitemane] Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - [|cffffcc00Level 2|r]
+}
+
+STRING 5472
+// Abilities: A08D ([Whitemane] Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - [|cffffcc00Level 1|r]
+}
+
+STRING 5473
+// Abilities: A08E ([Whitemane] Scarlet March (On)), Name (Name)
+{
+[Whitemane] Scarlet March (On)
+}
+
+STRING 5474
+// Abilities: A08E ([Whitemane] Scarlet March (On)), Tip (Tooltip - Normal)
+{
+Scarlet March (On)
+}
+
+STRING 5475
+// Abilities: A08E ([Whitemane] Scarlet March (On)), Ubertip (Tooltip - Normal - Extended)
+{
+A call to embark on the Scarlet March. A special mode in which the army takes 1% damage per second in exchange for increased attack and movement speed. The effect intensifies the longer the ability remains active. |n  
+|cffffcc00Level 1|r (0 sec): No effect  
+|cffffcc00Level 2|r (>0 sec): +10% attack speed, +10% movement speed  
+|cffffcc00Level 3|r (≥15 sec): +20% attack speed, +20% movement speed  
+|cffffcc00Level 4|r (≥30 sec): +30% attack speed, +30% movement speed  
+|cffffcc00Level 5|r (≥45 sec): +40% attack speed, +40% movement speed  
+|cffffcc00Level 6|r (≥60 sec): +50% attack speed, +50% movement speed |n  
+|cffffcc00Does not affect workers or mechanical units.|r  
+}
+
+STRING 5476
+// Abilities: A08F ([Whitemane] Scarlet March (Off)), Name (Name)
+{
+[Whitemane] Scarlet March (Off)
+}
+
+STRING 5477
+// Abilities: A08F ([Whitemane] Scarlet March (Off)), Tip (Tooltip - Normal)
+{
+Scarlet March (Off)
+}
+
+STRING 5478
+// Abilities: A09A ([UI] Mechanics: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Scarlet March|R - A special mode in which units gradually lose health but gain increased movement speed and attack rate. The effect intensifies the longer Scarlet Crusade is active.
+}
+
+STRING 5479
+// Abilities: A09B ([UI] Features: Whitemane), Name (Name)
+{
+[UI] Features: Whitemane
+}
+
+STRING 5480
+// Abilities: A09B ([UI] Features: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 5481
+// Abilities: A09B ([UI] Features: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- High attack and movement speed
+- Accelerated construction
+- Powerful spellcasters|R
+|cFFFF5A4B- Requires high micro-management
+- Some abilities and effects rely on mechanics
+- Reduced health for units and structures|R
+}
+
+STRING 5482
+// Buffs/Effects: B00L ([Whitemane] Scarlet March), Bufftip (Tooltip)
+{
+Scarlet March
+}
+
+STRING 5483
+// Buffs/Effects: B00L ([Whitemane] Scarlet March), EditorName (Name (Editor Only))
+{
+[Whitemane] Scarlet March
+}
+
+STRING 5484
+// Buffs/Effects: B00L ([Whitemane] Scarlet March), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by Scarlet March, gaining increased movement speed and attack rate but losing health over time.
 }
 

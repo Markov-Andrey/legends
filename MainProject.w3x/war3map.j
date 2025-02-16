@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
+constant boolean CustomConsoleUI__workerFace= true
         
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -206,7 +206,6 @@ trigger gg_trg_ThrallNextPage= null
 trigger gg_trg_ThrallElementalUpg= null
 trigger gg_trg_WhitemaneIni= null
 trigger gg_trg_WhitemaneCrusadeOnOff= null
-trigger gg_trg_WhitemaneCrusadCurrent= null
 trigger gg_trg_WhitemaneCrusade= null
 trigger gg_trg_WhitemaneInqusitorSacrifice= null
 trigger gg_trg_WhitemaneLancerAttack= null
@@ -308,6 +307,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_WhitemaneCrusadeCurrent= null
 
     // Random Groups
 integer array gg_rg_000
@@ -332,7 +332,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI___CreateIcon takes nothing returns nothing
+    function ARTHASUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -368,8 +368,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI___init takes nothing returns nothing
-        call ARTHASUI___CreateIcon()
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
     endfunction
 
 
@@ -380,24 +380,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -457,15 +457,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -600,7 +600,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -632,15 +632,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI___CreateIcon takes nothing returns nothing
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -695,8 +695,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI___init takes nothing returns nothing
-        call WHITEMANEUI___CreateIcon()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
@@ -715,7 +715,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -726,7 +726,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -746,10 +746,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -762,11 +762,11 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
 
 
 
@@ -774,11 +774,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -799,19 +799,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -945,11 +945,11 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -2297,7 +2297,6 @@ endfunction
 //===========================================================================
 function InitTrig_StartCameraP1 takes nothing returns nothing
     set gg_trg_StartCameraP1=CreateTrigger()
-    call DisableTrigger(gg_trg_StartCameraP1)
     call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP1, 0.10)
     call TriggerAddAction(gg_trg_StartCameraP1, function Trig_StartCameraP1_Actions)
 endfunction
@@ -2312,7 +2311,6 @@ endfunction
 //===========================================================================
 function InitTrig_StartCameraP2 takes nothing returns nothing
     set gg_trg_StartCameraP2=CreateTrigger()
-    call DisableTrigger(gg_trg_StartCameraP2)
     call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP2, 0.10)
     call TriggerAddAction(gg_trg_StartCameraP2, function Trig_StartCameraP2_Actions)
 endfunction
@@ -4296,7 +4294,6 @@ endfunction
 
 function Trig_UtherLiturgy_Actions takes nothing returns nothing
     if ( Trig_UtherLiturgy_Func001C() ) then
-        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_2079")
         call SetUnitLifeBJ(GetSpellTargetUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit()) + 7.00 ))
     else
     endif
@@ -6927,6 +6924,24 @@ endfunction
 // Trigger: WhitemaneIni
 //===========================================================================
 function Trig_WhitemaneIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_WhitemaneCrusadeOnOff)
+    call EnableTrigger(gg_trg_WhitemaneCrusadeCurrent)
+    call EnableTrigger(gg_trg_WhitemaneInqusitorSacrifice)
+    call EnableTrigger(gg_trg_WhitemaneInquisitorSinful)
+    call EnableTrigger(gg_trg_WhitemaneInquisitorSinfulKill)
+    call EnableTrigger(gg_trg_WhitemaneInquisitorSinfulRemove)
+    call EnableTrigger(gg_trg_WhitemaneLancerAttack)
+    call EnableTrigger(gg_trg_WhitemaneLancerNoAttack)
+    call EnableTrigger(gg_trg_WhitemaneOracleVisions)
+    call EnableTrigger(gg_trg_WhitemaneOracleRequiem)
+    call EnableTrigger(gg_trg_WhitemaneOracleRequiemRemove)
+    call EnableTrigger(gg_trg_WhitemaneConjurorRadiance)
+    call EnableTrigger(gg_trg_WhitemaneBowman)
+    call EnableTrigger(gg_trg_WhitemaneTowerSilence)
+    call EnableTrigger(gg_trg_WhitemaneCrusaderWrathful)
+    call EnableTrigger(gg_trg_WhitemaneZealotSacriGift)
+    call EnableTrigger(gg_trg_WhitemaneGraveyardBurn)
+    call EnableTrigger(gg_trg_WhitemaneFastBuild)
 endfunction
 
 //===========================================================================
@@ -6982,23 +6997,25 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneCrusadeOnOff takes nothing returns nothing
     set gg_trg_WhitemaneCrusadeOnOff=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneCrusadeOnOff)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneCrusadeOnOff, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_WhitemaneCrusadeOnOff, Condition(function Trig_WhitemaneCrusadeOnOff_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneCrusadeOnOff, function Trig_WhitemaneCrusadeOnOff_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: WhitemaneCrusadCurrent
+// Trigger: WhitemaneCrusadeCurrent
 //===========================================================================
-function Trig_WhitemaneCrusadCurrent_Actions takes nothing returns nothing
+function Trig_WhitemaneCrusadeCurrent_Actions takes nothing returns nothing
     call UpdateWhitemaneText(udg_WhitemanePlayer , I2S(R2I(udg_Whitemane_crusade_current)))
 endfunction
 
 //===========================================================================
-function InitTrig_WhitemaneCrusadCurrent takes nothing returns nothing
-    set gg_trg_WhitemaneCrusadCurrent=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusadCurrent, 1.00)
-    call TriggerAddAction(gg_trg_WhitemaneCrusadCurrent, function Trig_WhitemaneCrusadCurrent_Actions)
+function InitTrig_WhitemaneCrusadeCurrent takes nothing returns nothing
+    set gg_trg_WhitemaneCrusadeCurrent=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneCrusadeCurrent)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusadeCurrent, 1.00)
+    call TriggerAddAction(gg_trg_WhitemaneCrusadeCurrent, function Trig_WhitemaneCrusadeCurrent_Actions)
 endfunction
 
 //===========================================================================
@@ -7141,9 +7158,92 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneInqusitorSacrifice takes nothing returns nothing
     set gg_trg_WhitemaneInqusitorSacrifice=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneInqusitorSacrifice)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInqusitorSacrifice, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_WhitemaneInqusitorSacrifice, Condition(function Trig_WhitemaneInqusitorSacrifice_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneInqusitorSacrifice, function Trig_WhitemaneInqusitorSacrifice_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneInquisitorSinful
+//===========================================================================
+function Trig_WhitemaneInquisitorSinful_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A097' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInquisitorSinful_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A096', GetSpellTargetUnit())
+    // Bug with automatic cancellation of the spell at the moment of casting
+    call DisableTrigger(gg_trg_WhitemaneInquisitorSinfulRemove)
+    call TriggerSleepAction(2.00)
+    call EnableTrigger(gg_trg_WhitemaneInquisitorSinfulRemove)
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInquisitorSinful takes nothing returns nothing
+    set gg_trg_WhitemaneInquisitorSinful=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneInquisitorSinful)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInquisitorSinful, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WhitemaneInquisitorSinful, Condition(function Trig_WhitemaneInquisitorSinful_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinful, function Trig_WhitemaneInquisitorSinful_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneInquisitorSinfulKill
+//===========================================================================
+function Trig_WhitemaneInquisitorSinfulKill_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A096', GetDyingUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInquisitorSinfulKill_Actions takes nothing returns nothing
+    set udg_Whitemane_crusade_current=( udg_Whitemane_crusade_current + 3.00 )
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInquisitorSinfulKill takes nothing returns nothing
+    set gg_trg_WhitemaneInquisitorSinfulKill=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneInquisitorSinfulKill)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInquisitorSinfulKill, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_WhitemaneInquisitorSinfulKill, Condition(function Trig_WhitemaneInquisitorSinfulKill_Conditions))
+    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinfulKill, function Trig_WhitemaneInquisitorSinfulKill_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WhitemaneInquisitorSinfulRemove
+//===========================================================================
+function Trig_WhitemaneInquisitorSinfulRemove_Func001Func001C takes nothing returns boolean
+    if ( not ( UnitHasBuffBJ(GetEnumUnit(), 'B01P') == false ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A096', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WhitemaneInquisitorSinfulRemove_Func001A takes nothing returns nothing
+    if ( Trig_WhitemaneInquisitorSinfulRemove_Func001Func001C() ) then
+        call UnitRemoveAbilityBJ('A096', GetEnumUnit())
+    else
+    endif
+endfunction
+
+function Trig_WhitemaneInquisitorSinfulRemove_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), function Trig_WhitemaneInquisitorSinfulRemove_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WhitemaneInquisitorSinfulRemove takes nothing returns nothing
+    set gg_trg_WhitemaneInquisitorSinfulRemove=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneInquisitorSinfulRemove)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneInquisitorSinfulRemove, 1.00)
+    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinfulRemove, function Trig_WhitemaneInquisitorSinfulRemove_Actions)
 endfunction
 
 //===========================================================================
@@ -7223,6 +7323,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneLancerAttack takes nothing returns nothing
     set gg_trg_WhitemaneLancerAttack=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneLancerAttack)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneLancerAttack, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_WhitemaneLancerAttack, Condition(function Trig_WhitemaneLancerAttack_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneLancerAttack, function Trig_WhitemaneLancerAttack_Actions)
@@ -7274,6 +7375,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneLancerNoAttack takes nothing returns nothing
     set gg_trg_WhitemaneLancerNoAttack=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneLancerNoAttack)
     call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneLancerNoAttack, 1.00)
     call TriggerAddAction(gg_trg_WhitemaneLancerNoAttack, function Trig_WhitemaneLancerNoAttack_Actions)
 endfunction
@@ -7327,6 +7429,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneOracleVisions takes nothing returns nothing
     set gg_trg_WhitemaneOracleVisions=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneOracleVisions)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneOracleVisions, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_WhitemaneOracleVisions, Condition(function Trig_WhitemaneOracleVisions_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneOracleVisions, function Trig_WhitemaneOracleVisions_Actions)
@@ -7352,6 +7455,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneOracleRequiem takes nothing returns nothing
     set gg_trg_WhitemaneOracleRequiem=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneOracleRequiem)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneOracleRequiem, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_WhitemaneOracleRequiem, Condition(function Trig_WhitemaneOracleRequiem_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneOracleRequiem, function Trig_WhitemaneOracleRequiem_Actions)
@@ -7384,87 +7488,9 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneOracleRequiemRemove takes nothing returns nothing
     set gg_trg_WhitemaneOracleRequiemRemove=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneOracleRequiemRemove)
     call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneOracleRequiemRemove, 1.00)
     call TriggerAddAction(gg_trg_WhitemaneOracleRequiemRemove, function Trig_WhitemaneOracleRequiemRemove_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: WhitemaneInquisitorSinful
-//===========================================================================
-function Trig_WhitemaneInquisitorSinful_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A097' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WhitemaneInquisitorSinful_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A096', GetSpellTargetUnit())
-    // Bug with automatic cancellation of the spell at the moment of casting
-    call DisableTrigger(gg_trg_WhitemaneInquisitorSinfulRemove)
-    call TriggerSleepAction(2.00)
-    call EnableTrigger(gg_trg_WhitemaneInquisitorSinfulRemove)
-endfunction
-
-//===========================================================================
-function InitTrig_WhitemaneInquisitorSinful takes nothing returns nothing
-    set gg_trg_WhitemaneInquisitorSinful=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInquisitorSinful, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_WhitemaneInquisitorSinful, Condition(function Trig_WhitemaneInquisitorSinful_Conditions))
-    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinful, function Trig_WhitemaneInquisitorSinful_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: WhitemaneInquisitorSinfulRemove
-//===========================================================================
-function Trig_WhitemaneInquisitorSinfulRemove_Func001Func001C takes nothing returns boolean
-    if ( not ( UnitHasBuffBJ(GetEnumUnit(), 'B01P') == false ) ) then
-        return false
-    endif
-    if ( not ( GetUnitAbilityLevelSwapped('A096', GetEnumUnit()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WhitemaneInquisitorSinfulRemove_Func001A takes nothing returns nothing
-    if ( Trig_WhitemaneInquisitorSinfulRemove_Func001Func001C() ) then
-        call UnitRemoveAbilityBJ('A096', GetEnumUnit())
-    else
-    endif
-endfunction
-
-function Trig_WhitemaneInquisitorSinfulRemove_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), function Trig_WhitemaneInquisitorSinfulRemove_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_WhitemaneInquisitorSinfulRemove takes nothing returns nothing
-    set gg_trg_WhitemaneInquisitorSinfulRemove=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneInquisitorSinfulRemove, 1.00)
-    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinfulRemove, function Trig_WhitemaneInquisitorSinfulRemove_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: WhitemaneInquisitorSinfulKill
-//===========================================================================
-function Trig_WhitemaneInquisitorSinfulKill_Conditions takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A096', GetDyingUnit()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_WhitemaneInquisitorSinfulKill_Actions takes nothing returns nothing
-    set udg_Whitemane_crusade_current=( udg_Whitemane_crusade_current + 3.00 )
-endfunction
-
-//===========================================================================
-function InitTrig_WhitemaneInquisitorSinfulKill takes nothing returns nothing
-    set gg_trg_WhitemaneInquisitorSinfulKill=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneInquisitorSinfulKill, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_WhitemaneInquisitorSinfulKill, Condition(function Trig_WhitemaneInquisitorSinfulKill_Conditions))
-    call TriggerAddAction(gg_trg_WhitemaneInquisitorSinfulKill, function Trig_WhitemaneInquisitorSinfulKill_Actions)
 endfunction
 
 //===========================================================================
@@ -7486,6 +7512,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneConjurorRadiance takes nothing returns nothing
     set gg_trg_WhitemaneConjurorRadiance=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneConjurorRadiance)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneConjurorRadiance, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_WhitemaneConjurorRadiance, Condition(function Trig_WhitemaneConjurorRadiance_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneConjurorRadiance, function Trig_WhitemaneConjurorRadiance_Actions)
@@ -7538,6 +7565,7 @@ endfunction
 
 function InitTrig_WhitemaneBowman takes nothing returns nothing
     set gg_trg_WhitemaneBowman=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneBowman)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneBowman, EVENT_PLAYER_UNIT_DAMAGED)
     call TriggerAddCondition(gg_trg_WhitemaneBowman, Condition(function Trig_WhitemaneBowman_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneBowman, function Trig_WhitemaneBowman_Actions)
@@ -7559,6 +7587,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneTowerSilence takes nothing returns nothing
     set gg_trg_WhitemaneTowerSilence=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneTowerSilence)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneTowerSilence, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_WhitemaneTowerSilence, Condition(function Trig_WhitemaneTowerSilence_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneTowerSilence, function Trig_WhitemaneTowerSilence_Actions)
@@ -7595,6 +7624,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneCrusaderWrathful takes nothing returns nothing
     set gg_trg_WhitemaneCrusaderWrathful=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneCrusaderWrathful)
     call TriggerRegisterTimerEventPeriodic(gg_trg_WhitemaneCrusaderWrathful, 1.00)
     call TriggerAddCondition(gg_trg_WhitemaneCrusaderWrathful, Condition(function Trig_WhitemaneCrusaderWrathful_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneCrusaderWrathful, function Trig_WhitemaneCrusaderWrathful_Actions)
@@ -7627,6 +7657,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneZealotSacriGift takes nothing returns nothing
     set gg_trg_WhitemaneZealotSacriGift=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneZealotSacriGift)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneZealotSacriGift, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_WhitemaneZealotSacriGift, Condition(function Trig_WhitemaneZealotSacriGift_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneZealotSacriGift, function Trig_WhitemaneZealotSacriGift_Actions)
@@ -7650,6 +7681,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneGraveyardBurn takes nothing returns nothing
     set gg_trg_WhitemaneGraveyardBurn=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneGraveyardBurn)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneGraveyardBurn, EVENT_PLAYER_UNIT_SUMMON)
     call TriggerAddCondition(gg_trg_WhitemaneGraveyardBurn, Condition(function Trig_WhitemaneGraveyardBurn_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneGraveyardBurn, function Trig_WhitemaneGraveyardBurn_Actions)
@@ -7673,6 +7705,7 @@ endfunction
 //===========================================================================
 function InitTrig_WhitemaneFastBuild takes nothing returns nothing
     set gg_trg_WhitemaneFastBuild=CreateTrigger()
+    call DisableTrigger(gg_trg_WhitemaneFastBuild)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WhitemaneFastBuild, EVENT_PLAYER_UNIT_CONSTRUCT_START)
     call TriggerAddCondition(gg_trg_WhitemaneFastBuild, Condition(function Trig_WhitemaneFastBuild_Conditions))
     call TriggerAddAction(gg_trg_WhitemaneFastBuild, function Trig_WhitemaneFastBuild_Actions)
@@ -11867,17 +11900,17 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ThrallElementalUpg()
     call InitTrig_WhitemaneIni()
     call InitTrig_WhitemaneCrusadeOnOff()
-    call InitTrig_WhitemaneCrusadCurrent()
+    call InitTrig_WhitemaneCrusadeCurrent()
     call InitTrig_WhitemaneCrusade()
     call InitTrig_WhitemaneInqusitorSacrifice()
+    call InitTrig_WhitemaneInquisitorSinful()
+    call InitTrig_WhitemaneInquisitorSinfulKill()
+    call InitTrig_WhitemaneInquisitorSinfulRemove()
     call InitTrig_WhitemaneLancerAttack()
     call InitTrig_WhitemaneLancerNoAttack()
     call InitTrig_WhitemaneOracleVisions()
     call InitTrig_WhitemaneOracleRequiem()
     call InitTrig_WhitemaneOracleRequiemRemove()
-    call InitTrig_WhitemaneInquisitorSinful()
-    call InitTrig_WhitemaneInquisitorSinfulRemove()
-    call InitTrig_WhitemaneInquisitorSinfulKill()
     call InitTrig_WhitemaneConjurorRadiance()
     call InitTrig_WhitemaneBowman()
     call InitTrig_WhitemaneTowerSilence()
@@ -12123,13 +12156,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI___init")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("WHITEMANEUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("ARTHASUI__init")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
