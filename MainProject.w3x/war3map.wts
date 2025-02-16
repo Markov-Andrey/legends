@@ -14594,31 +14594,31 @@ Build Cathedral of Light
 }
 
 STRING 4938
-// Abilities: A08I ([Whitemane] Inquisition), Name (Name)
+// Abilities: A099 ([Whitemane] Inquisition), Name (Name)
 {
 [Whitemane] Inquisition
 }
 
 STRING 4939
-// Abilities: A08I ([Whitemane] Inquisition), Researchtip (Tooltip - Learn)
+// Abilities: A099 ([Whitemane] Inquisition), Researchtip (Tooltip - Learn)
 {
 Learn Inquisition - [|cffffcc00Level %d|r]
 }
 
 STRING 4940
-// Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+// Abilities: A099 ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 1|r]
 }
 
 STRING 4941
-// Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+// Abilities: A099 ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 2|r]
 }
 
 STRING 4942
-// Abilities: A08I ([Whitemane] Inquisition), Tip (Tooltip - Normal)
+// Abilities: A099 ([Whitemane] Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - [|cffffcc00Level 3|r]
 }
@@ -15035,30 +15035,6 @@ STRING 5034
 // Abilities: A08H ([Whitemane] Zeal), Ubertip (Tooltip - Normal - Extended)
 {
 Nearby friendly melee units gain <A08H,DataA3,%>% of their attack damage when they hit enemy units.
-}
-
-STRING 5036
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA2> damage per second. |nLasts <A08I,Dur2> seconds.
-}
-
-STRING 5037
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA3> damage per second. |nLasts <A08I,Dur3> seconds.
-}
-
-STRING 5038
-// Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA1> damage per second. |nLasts <A08I,Dur1> seconds.
-}
-
-STRING 5039
-// Abilities: A08I ([Whitemane] Inquisition), Researchubertip (Tooltip - Learn - Extended)
-{
-Restrains the target enemy unit, rendering it unable to move or act while suffering damage each second. |nLasts <A08I,Dur1> seconds. |n|n|cffffcc00Level 1|r - Stuns for <A08I,Dur1> seconds, dealing <A08I,DataA1> damage per second. |n|cffffcc00Level 2|r - Stuns for <A08I,Dur2> seconds, dealing <A08I,DataA2> damage per second. |n|cffffcc00Level 3|r - Stuns for <A08I,Dur3> seconds, dealing <A08I,DataA3> damage per second.
 }
 
 STRING 5040
@@ -15984,13 +15960,6 @@ STRING 5309
 Picks up a nearby corpse for later use. Can be transported to Honor's Tomb for cremation.
 }
 
-STRING 5311
-// Abilities: A08A ([Whitemane] Burn), Ubertip (Tooltip - Normal - Extended)
-{
-Burns the corpse of a unit, increasing the Scarlet Crusade points by 3 (in both active and inactive modes) and granting a reward of 7 gold.
-
-}
-
 STRING 5312
 // Units: h025 ([Whitemane] Honor's Tomb), Ubertip (Tooltip - Extended)
 {
@@ -16806,5 +16775,53 @@ STRING 5404
 Gives friendly nearby units +<A08J,DataB1> armor and increases Life Regeneration Rate by <A08J,DataC1,%>%.
 
 Lasts <A08J,Dur1> seconds.
+}
+
+STRING 5405
+// Abilities: A08A ([Whitemane] Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Burns the corpse of a unit, increasing the Scarlet Crusade points by 3 (in both active and inactive modes) and granting a reward of <A08B,DataA1> gold.
+}
+
+STRING 5406
+// Buffs/Effects: B01J ([Whitemane] Inquisition (target)), EditorName (Name (Editor Only))
+{
+[Whitemane] Inquisition (target)
+}
+
+STRING 5407
+// Buffs/Effects: B01J ([Whitemane] Inquisition (target)), Bufftip (Tooltip)
+{
+Inquisition
+}
+
+STRING 5408
+// Abilities: A099 ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking <A099,DataA1> hit points per second from it and giving them to the High Inquisitor. |n |nLasts <A099,Dur1> seconds.
+}
+
+STRING 5409
+// Abilities: A099 ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking <A099,DataA2> hit points per second from it and giving them to the High Inquisitor. |n |nLasts <A099,Dur2> seconds.
+}
+
+STRING 5410
+// Abilities: A099 ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking <A099,DataA3> hit points per second from it and giving them to the High Inquisitor. |n |nLasts <A099,Dur3> seconds.
+}
+
+STRING 5411
+// Abilities: A099 ([Whitemane] Inquisition), Researchubertip (Tooltip - Learn - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking hit points from it every second and giving them to the High Inquisitor. |n|nLasts <A099,Dur1> seconds. |n|n|cffffcc00Level 1|r - <A099,DataA1> hit point drain per second. |n|cffffcc00Level 2|r - <A099,DataA2> hit point drain per second. |n|cffffcc00Level 3|r - <A099,DataA3> hit point drain per second.
+}
+
+STRING 5412
+// Abilities: A08H ([Whitemane] Zeal), Researchubertip (Tooltip - Learn - Extended)
+{
+Nearby friendly melee units gain hit points when they hit enemy units. |n|n|cffffcc00Level 1|r - Gains <A08H,DataA1,%>% of attack damage. |n|cffffcc00Level 2|r - Gains <A08H,DataA2,%>% of attack damage. |n|cffffcc00Level 3|r - Gains <A08H,DataA3,%>% of attack damage.
 }
 
