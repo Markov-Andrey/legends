@@ -6533,12 +6533,6 @@ STRING 3086
 This unit has Taunt; its armor are increased.
 }
 
-STRING 3087
-// Abilities: A03J ([Wrynn] Taunt), Researchtip (Tooltip - Learn)
-{
-Taunt
-}
-
 STRING 3088
 // Abilities: A03J ([Wrynn] Taunt), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -6969,14 +6963,6 @@ STRING 3284
 |cffffcc00#guard #support
 |R
 Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
-}
-
-STRING 3289
-// Units: h014 ([Wrynn] Guard Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 3290
@@ -12500,18 +12486,6 @@ Long-range siege weaponry. Exceptional damage versus buildings, but slow and vul
 |cFFFFB700Veteran|R: Brave's Spyglass
 }
 
-STRING 4525
-// Units: H02D ([Uther] Paladin), Ubertip (Tooltip - Extended)
-{
-Can learn Holy Light, Divine Shield, Seal Of Wisdom and Mass Resurrection. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 4526
-// Units: O000 ([Wrynn] King of Stormwind), Ubertip (Tooltip - Extended)
-{
-Can learn Lion's Fang, Heroic Strike, Stormwind Battlecry and Taunt. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 4527
 // Upgrades: R011 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
@@ -13281,12 +13255,6 @@ STRING 4646
 // Items: I005 (Alterac Manna Biscuit), Ubertip (Tooltip - Extended)
 {
 Heals <AIh2,DataA1> hit points when used.
-}
-
-STRING 4649
-// Units: O00C ([Thrall] Horde Warchief), Ubertip (Tooltip - Extended)
-{
-Can learn Chain Lightning, Far Sight, Whirling Elements and Earthquake. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 4650
@@ -14106,14 +14074,6 @@ STRING 4788
 // Upgrades: R02D (Magic Sentry), Ubertip (Tooltip - Extended)
 {
 Improvement to check the player's army
-}
-
-STRING 4790
-// Units: h01W ([Whitemane] Battle Garrison), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
 }
 
 STRING 4791
@@ -15077,12 +15037,6 @@ STRING 5034
 Nearby friendly melee units gain <A08H,DataA3,%>% of their attack damage when they hit enemy units.
 }
 
-STRING 5035
-// Abilities: A08J ([Whitemane] Scarlet Aegis), Ubertip (Tooltip - Normal - Extended)
-{
-Gives friendly nearby units a <A08J,DataA1,%>% bonus to damage. |nLasts <A08J,Dur1> seconds.
-}
-
 STRING 5036
 // Abilities: A08I ([Whitemane] Inquisition), Ubertip (Tooltip - Normal - Extended)
 {
@@ -15519,12 +15473,6 @@ STRING 5127
 // Abilities: A04X ([Tyrande] Dori'thur), Name (Name)
 {
 [Tyrande] Dori'thur
-}
-
-STRING 5128
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Name (Name)
-{
-[Whitemane] Gryphon Lancer Level
 }
 
 STRING 5215
@@ -16054,157 +16002,157 @@ Has the ability to burn corpses to increase the level of the Scarlet Crusade (bo
 }
 
 STRING 5313
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5314
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5315
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5316
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5317
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5318
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5319
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5320
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5321
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 1)
 }
 
 STRING 5322
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5323
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5324
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5325
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5326
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5327
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5328
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5329
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5330
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5331
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 2)
 }
 
 STRING 5332
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 3)
 }
 
 STRING 5333
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 3)
 }
 
 STRING 5334
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 3)
 }
 
 STRING 5335
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 3)
 }
 
 STRING 5336
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 3)
 }
 
 STRING 5337
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Tip (Tooltip - Normal)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Tip (Tooltip - Normal)
 {
 Judgment Ray (Level 3)
 }
 
 STRING 5338
-// Upgrades: R039 (Storm Hammers), Name (Name)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Name (Name)
 {
 [Whitemane] Judgment Ray
 }
@@ -16216,7 +16164,7 @@ Research Judgment Ray
 }
 
 STRING 5341
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16231,7 +16179,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5342
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16246,7 +16194,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5343
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16261,7 +16209,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5344
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16276,7 +16224,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5345
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16291,7 +16239,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5346
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16306,7 +16254,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5347
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16321,7 +16269,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5348
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16336,7 +16284,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5349
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00no bonus to attack
 |R
@@ -16351,7 +16299,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5350
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16366,7 +16314,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5351
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16381,7 +16329,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5352
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16396,7 +16344,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5353
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16411,7 +16359,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5354
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16426,7 +16374,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5355
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16441,7 +16389,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5356
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16456,7 +16404,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5357
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16471,7 +16419,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5358
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16486,7 +16434,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5359
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+3 damage
 |R
@@ -16501,7 +16449,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5360
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+5 damage
 |R
@@ -16516,7 +16464,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5361
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+5 damage
 |R
@@ -16531,7 +16479,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5362
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+5 damage
 |R
@@ -16546,7 +16494,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5363
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+5 damage
 |R
@@ -16561,7 +16509,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5364
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+5 damage
 |R
@@ -16576,7 +16524,7 @@ Focuses the beam and concentrates directed fury on a target, gradually accumulat
 }
 
 STRING 5365
-// Abilities: A08Z ([Whitemane] Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
 {
 |cffffcc00+5 damage
 |R
@@ -16624,14 +16572,6 @@ STRING 5369
 Gryphon Lancer incinerates enemies with a focused beam of holy energy, infused with the power of hatred.
 
 |cffffcc00Attacks land and air units.|r
-}
-
-STRING 5370
-// Units: h02E ([Whitemane] War Aviary), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Trains Gryphon Lancer. |nAlso contains the Judgment Ray upgrade.
 }
 
 STRING 5371
@@ -16700,5 +16640,171 @@ STRING 5380
 Supporting spellcaster. Can initially cast Interrogation, which redirects negative spells from allied units to an enemy target. Can also learn Divine Sacrifice and Sinful Brand. 
 
 |cffffcc00Attacks land and air units.|r
+}
+
+STRING 5381
+// Units: h014 ([Wrynn] Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure. Can learn the Magic Sentry ability.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5384
+// Units: h01W ([Whitemane] Battle Garrison), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Primary troop production building. Trains Zealot, Crossbowman and Crusader. |nAlso contains Sacrificial Gift, Iron Quarrel, Wrathful upgrades. Can be upgraded into a Defensive Outpost.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5385
+// Units: h02E ([Whitemane] War Aviary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Gryphon Lancer. |nAlso contains the Judgment Ray upgrade. Can be upgraded into a Defensive Outpost.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5386
+// Units: h02I ([Whitemane] Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Crimson Immolator.
+
+Also contains the Radiant Essence upgrades.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5387
+// Upgrades: R039 (Storm Hammers), Name (Name)
+{
+[Whitemane] Judgment Ray
+}
+
+STRING 5388
+// Units: h026 ([Whitemane] Scout Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, or a Inquisition Tower.
+}
+
+STRING 5389
+// Units: h028 ([Whitemane] Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5390
+// Units: h029 ([Whitemane] Inquisition Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard #support
+|R
+Magical defensive tower. Silences the target upon attack.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5391
+// Units: H02B ([Whitemane] Scarlet Monastery), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes #mechanics
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 5394
+// Units: O00C ([Thrall] Horde Warchief), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Chain Lightning, Far Sight, Whirling Elements and Earthquake. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5395
+// Units: U006 ([Arthas] Lich King), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Death Coil, Death Pact, Unholy Aura, and Animate Dead. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 5396
+// Units: H02D ([Uther] Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Holy Light, Divine Shield, Seal Of Wisdom and Mass Resurrection.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5397
+// Units: E003 ([Tyrande] High Priestess of Elune), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Scout, Searing Arrows, Trueshot Aura, and Starfall. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5398
+// Units: O000 ([Wrynn] King of Stormwind), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Lion's Fang, Heroic Strike, Stormwind Battlecry and Taunt.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5399
+// Units: H01R ([Whitemane] High Inquisitor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Desperate Plea, Inquisition, Zeal and Scarlet Aegis.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5400
+// Abilities: A03J ([Wrynn] Taunt), Researchtip (Tooltip - Learn)
+{
+Learn Taunt
+}
+
+STRING 5402
+// Abilities: A08J ([Whitemane] Scarlet Aegis), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units +<A08J,DataB1> armor and increases Life Regeneration Rate by <A08J,DataC1,%>%.
+
+Lasts <A08J,Dur1> seconds.
+}
+
+STRING 5403
+// Abilities: A08J ([Whitemane] Scarlet Aegis), Researchtip (Tooltip - Learn)
+{
+Learn Scarlet Aegis
+}
+
+STRING 5404
+// Abilities: A08J ([Whitemane] Scarlet Aegis), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives friendly nearby units +<A08J,DataB1> armor and increases Life Regeneration Rate by <A08J,DataC1,%>%.
+
+Lasts <A08J,Dur1> seconds.
 }
 
