@@ -3043,11 +3043,6 @@ STRING 2077
 Liturgy
 }
 
-STRING 2079
-{
-+
-}
-
 STRING 2080
 // Units: h00J (Cleric), Casterupgradetip (Caster Upgrade Tips)
 {
@@ -6305,12 +6300,6 @@ STRING 3086
 This unit has Taunt; its armor are increased.
 }
 
-STRING 3087
-// Abilities: A03J (Taunt), Researchtip (Tooltip - Learn)
-{
-Taunt
-}
-
 STRING 3088
 // Abilities: A03J (Taunt), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -6741,14 +6730,6 @@ STRING 3284
 |cffffcc00#guard #support
 |R
 Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
-}
-
-STRING 3289
-// Units: h014 (Guard Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 3290
@@ -7976,7 +7957,7 @@ STRING 3585
 }
 
 STRING 3586
-// Abilities: A01F (Select), Hotkey (Hotkey - Normal)
+// Units: h020 (Zealot), Hotkey (Hotkey)
 {
 Z
 }
@@ -9932,7 +9913,7 @@ X
 }
 
 STRING 4001
-// Abilities: A06I (Switch to Wind Rush Totem), Hotkey (Hotkey - Normal)
+// Abilities: A01F (Select), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -11095,19 +11076,19 @@ STRING 4302
 }
 
 STRING 4303
-// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08E (Scarlet March (On)), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 4304
-// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+// Units: o00X (Crossbowman), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 4305
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08F (Scarlet March (Off)), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -11237,7 +11218,7 @@ Add defense bonus
 }
 
 STRING 4327
-// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11309,7 +11290,7 @@ Research Windfury Weapon
 }
 
 STRING 4340
-// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11333,7 +11314,7 @@ Research Quaking Totem
 }
 
 STRING 4345
-// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11447,7 +11428,7 @@ STRING 4369
 }
 
 STRING 4370
-// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -12038,16 +12019,8 @@ Fast moving flying machine. Excellent at scouting, and effective against air uni
 |cFFFFB700Veteran|R: Explosive Mixture
 }
 
-STRING 4498
-// Units: h00A (Town Center), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
-}
-
 STRING 4499
-// Units: h00I (Citadel), Ubertip (Tooltip - Extended)
+// Units: h01T (Diocese), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T2 #food #storage
 |R
@@ -12055,7 +12028,7 @@ Upgrade to Diocese to enable the production of additional types of structures an
 }
 
 STRING 4500
-// Units: h01H (Palace), Ubertip (Tooltip - Extended)
+// Units: h01U (Parish), Ubertip (Tooltip - Extended)
 {
 |cffffcc00 #T3 #food #storage
 |R
@@ -12267,18 +12240,6 @@ Long-range siege weaponry. Exceptional damage versus buildings, but slow and vul
 
 |cFFFFB700Veteran|R: Tactical Strike
 |cFFFFB700Veteran|R: Brave's Spyglass
-}
-
-STRING 4525
-// Units: H02D (Paladin), Ubertip (Tooltip - Extended)
-{
-Can learn Holy Light, Divine Shield, Seal Of Wisdom and Mass Resurrection. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 4526
-// Units: O000 (King of Stormwind), Ubertip (Tooltip - Extended)
-{
-Can learn Lion's Fang, Heroic Strike, Stormwind Battlecry and Taunt. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 4527
@@ -12886,7 +12847,7 @@ Upgrade to create a defensive structure. Strongly poisons enemies when attacking
 }
 
 STRING 4624
-// Upgrades: R00G (Cannibalize), Hotkey (Hotkey)
+// Abilities: A06I (Switch to Wind Rush Totem), Hotkey (Hotkey - Normal)
 {
 Z
 }
@@ -13050,12 +13011,6 @@ STRING 4646
 // Items: I005 (Alterac Manna Biscuit), Ubertip (Tooltip - Extended)
 {
 Heals <AIh2,DataA1> hit points when used.
-}
-
-STRING 4649
-// Units: O00C (Horde Warchief), Ubertip (Tooltip - Extended)
-{
-Can learn Chain Lightning, Far Sight, Whirling Elements and Earthquake. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 4650
@@ -13817,40 +13772,16 @@ STRING 4775
 Cathedral
 }
 
-STRING 4776
-// Units: h01S (Cathedral), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
-}
-
 STRING 4777
 // Units: h01T (Diocese), Name (Name)
 {
 Diocese
 }
 
-STRING 4778
-// Units: h01T (Diocese), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T2 #food #storage
-|R
-Upgrade to Diocese to enable the production of additional types of structures and units.
-}
-
 STRING 4779
 // Units: h01U (Parish), Name (Name)
 {
 Parish
-}
-
-STRING 4780
-// Units: h01U (Parish), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T3 #food #storage
-|R
-Upgrade to Parish to enable the production of additional types of structures and units.
 }
 
 STRING 4781
@@ -13899,14 +13830,6 @@ STRING 4788
 // Upgrades: R02D (Magic Sentry), Ubertip (Tooltip - Extended)
 {
 Improvement to check the player's army
-}
-
-STRING 4790
-// Units: h01W (Garrison), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #upgrades
-|R
-Primary troop production building. Trains Soldier, Riflemen and Cavalry. |nAlso contains the Defend, Long Rifles upgrades.
 }
 
 STRING 4791
@@ -14113,22 +14036,6 @@ STRING 4844
 Silitus Glacier
 }
 
-STRING 4847
-// Units: h01X (Beastmistress), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#worker #builder
-|R
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can become Militia. |n|n|cffffcc00Attacks land units and trees.|r
-}
-
-STRING 4848
-// Units: h024 (Grave Wagon), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#food #support
-|R
-Heavily armored vehicle, effective at destroying buildings. Can be upgraded with the Barrage ability. |n|n|cffffcc00Attacks buildings.|r
-}
-
 STRING 4851
 // Abilities: A08A (Burn), Name (Name)
 {
@@ -14139,12 +14046,6 @@ STRING 4852
 // Abilities: A08A (Burn), Tip (Tooltip - Normal)
 {
 Burn or Return
-}
-
-STRING 4853
-// Abilities: A08A (Burn), Ubertip (Tooltip - Normal - Extended)
-{
-Burn the corpse of a unit.
 }
 
 STRING 4857
@@ -14189,44 +14090,38 @@ STRING 4868
 Minimum Range
 }
 
-STRING 4869
-// Abilities: A08C (Minimum Range), Ubertip (Tooltip - Normal - Extended)
-{
-The crossbowman cannot fire at targets within 200 range.
-}
-
 STRING 4872
-// Abilities: A08D (Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D (Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA4,%>% and attack rate by <A08D,DataB4,%>%.
 }
 
 STRING 4873
-// Abilities: A08D (Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D (Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA5,%>% and attack rate by <A08D,DataB5,%>%.
 }
 
 STRING 4874
-// Abilities: A08D (Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D (Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA1,%>% and attack rate by <A08D,DataB1,%>%.
 }
 
 STRING 4875
-// Abilities: A08D (Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D (Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA2,%>% and attack rate by <A08D,DataB2,%>%.
 }
 
 STRING 4876
-// Abilities: A08D (Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D (Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA3,%>% and attack rate by <A08D,DataB3,%>%.
 }
 
 STRING 4882
-// Abilities: A08D (Scarlet Crusade), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08D (Scarlet March), Ubertip (Tooltip - Normal - Extended)
 {
 Increases nearby friendly units' movement speed by <A08D,DataA6,%>% and attack rate by <A08D,DataB6,%>%.
 }
@@ -14241,90 +14136,6 @@ STRING 4886
 // Units: h02A (Crusader), Tip (Tooltip - Basic)
 {
 Train Crusader
-}
-
-STRING 4887
-// Units: h01W (Garrison), Name (Name)
-{
-Garrison
-}
-
-STRING 4890
-// Abilities: A08E (Scarlet Crusade (On)), Name (Name)
-{
-Scarlet Crusade (On)
-}
-
-STRING 4891
-// Abilities: A08E (Scarlet Crusade (On)), Tip (Tooltip - Normal)
-{
-Scarlet Crusade (On)
-}
-
-STRING 4892
-// Abilities: A08F (Scarlet Crusade (Off)), Name (Name)
-{
-Scarlet Crusade (Off)
-}
-
-STRING 4893
-// Abilities: A08F (Scarlet Crusade (Off)), Tip (Tooltip - Normal)
-{
-Scarlet Crusade (Off)
-}
-
-STRING 4894
-// Abilities: A08D (Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - }
-
-STRING 4895
-// Abilities: A08D (Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - }
-
-STRING 4896
-// Abilities: A08D (Scarlet Crusade), Name (Name)
-{
-Scarlet Crusade
-}
-
-STRING 4897
-// Abilities: A08D (Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - }
-
-STRING 4898
-// Abilities: A08D (Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - }
-
-STRING 4899
-// Abilities: A08D (Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - }
-
-STRING 4903
-// Abilities: A08D (Scarlet Crusade), Tip (Tooltip - Normal)
-{
-Scarlet Crusade - }
-
-STRING 4904
-// Buffs/Effects: B00L (Scarlet Crusade), Bufftip (Tooltip)
-{
-Scarlet Crusade
-}
-
-STRING 4905
-// Buffs/Effects: B00L (Scarlet Crusade), EditorName (Name (Editor Only))
-{
-Scarlet Crusade
-}
-
-STRING 4906
-// Buffs/Effects: B00L (Scarlet Crusade), Buffubertip (Tooltip - Extended)
-{
-This unit is under the effects of Scarlet Crusade; it has an increased movement speed and attack rate.
 }
 
 STRING 4907
@@ -14426,18 +14237,6 @@ STRING 4931
 Gryphon Aviary
 }
 
-STRING 4932
-// Units: h02E (Aviary), Name (Name)
-{
-Aviary
-}
-
-STRING 4933
-// Units: h02E (Aviary), Tip (Tooltip - Basic)
-{
-Build Aviary
-}
-
 STRING 4934
 // Units: h027 (Armory), Name (Name)
 {
@@ -14463,28 +14262,28 @@ Build Cathedral of Light
 }
 
 STRING 4938
-// Abilities: A08I (Inquisition), Name (Name)
+// Abilities: A099 (Inquisition), Name (Name)
 {
 Inquisition
 }
 
 STRING 4939
-// Abilities: A08I (Inquisition), Researchtip (Tooltip - Learn)
+// Abilities: A099 (Inquisition), Researchtip (Tooltip - Learn)
 {
 Learn Inquisition - }
 
 STRING 4940
-// Abilities: A08I (Inquisition), Tip (Tooltip - Normal)
+// Abilities: A099 (Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - }
 
 STRING 4941
-// Abilities: A08I (Inquisition), Tip (Tooltip - Normal)
+// Abilities: A099 (Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - }
 
 STRING 4942
-// Abilities: A08I (Inquisition), Tip (Tooltip - Normal)
+// Abilities: A099 (Inquisition), Tip (Tooltip - Normal)
 {
 Inquisition - }
 
@@ -14796,12 +14595,6 @@ STRING 5016
 Research Sacrificial Gift
 }
 
-STRING 5017
-// Abilities: A08Q (Sacrificial Gift), Ubertip (Tooltip - Normal - Extended)
-{
-After death, Zealot leaves a sphere of light that restores <A08P,DataA1> health.
-}
-
 STRING 5018
 // Abilities: A08Q (Sacrificial Gift), Tip (Tooltip - Normal)
 {
@@ -14812,12 +14605,6 @@ STRING 5019
 // Upgrades: R031 (Defend), Name (Name)
 {
 Sacrificial Gift
-}
-
-STRING 5020
-// Upgrades: R031 (Defend), Ubertip (Tooltip - Extended)
-{
-After death, Zealot leaves a sphere of light that restores <A08P,DataA1> health.
 }
 
 STRING 5021
@@ -14898,36 +14685,6 @@ STRING 5034
 Nearby friendly melee units gain <A08H,DataA3,%>% of their attack damage when they hit enemy units.
 }
 
-STRING 5035
-// Abilities: A08J (Scarlet Aegis), Ubertip (Tooltip - Normal - Extended)
-{
-Gives friendly nearby units a <A08J,DataA1,%>% bonus to damage. |nLasts <A08J,Dur1> seconds.
-}
-
-STRING 5036
-// Abilities: A08I (Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA2> damage per second. |nLasts <A08I,Dur2> seconds.
-}
-
-STRING 5037
-// Abilities: A08I (Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA3> damage per second. |nLasts <A08I,Dur3> seconds.
-}
-
-STRING 5038
-// Abilities: A08I (Inquisition), Ubertip (Tooltip - Normal - Extended)
-{
-Restrains the target enemy unit, preventing movement and actions while dealing <A08I,DataA1> damage per second. |nLasts <A08I,Dur1> seconds.
-}
-
-STRING 5039
-// Abilities: A08I (Inquisition), Researchubertip (Tooltip - Learn - Extended)
-{
-Restrains the target enemy unit, rendering it unable to move or act while suffering damage each second. |nLasts <A08I,Dur1> seconds. |n|n|cffffcc00Level 1|r - Stuns for <A08I,Dur1> seconds, dealing <A08I,DataA1> damage per second. |n|cffffcc00Level 2|r - Stuns for <A08I,Dur2> seconds, dealing <A08I,DataA2> damage per second. |n|cffffcc00Level 3|r - Stuns for <A08I,Dur3> seconds, dealing <A08I,DataA3> damage per second.
-}
-
 STRING 5040
 // Buffs/Effects: B01H (Inquisition), Bufftip (Tooltip)
 {
@@ -14938,12 +14695,6 @@ STRING 5041
 // Buffs/Effects: B01H (Inquisition), EditorName (Name (Editor Only))
 {
 Inquisition
-}
-
-STRING 5042
-// Buffs/Effects: B01H (Inquisition), Buffubertip (Tooltip - Extended)
-{
-Target enemy unit is stunned and steadily loses health while under the Inquisitor's control.
 }
 
 STRING 5043
@@ -14976,12 +14727,6 @@ STRING 5047
 Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
 }
 
-STRING 5048
-// Upgrades: R033 (Storm Hammers), Ubertip (Tooltip - Extended)
-{
-Unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
-}
-
 STRING 5050
 // Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Name (Name)
 {
@@ -15010,24 +14755,6 @@ STRING 5054
 // Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Tip (Tooltip)
 {
 Upgrade to Imbued Defensive Outpost
-}
-
-STRING 5055
-// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
-{
-Grants Garrisons and Aviaries the ability to attack nearby enemies.
-}
-
-STRING 5056
-// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
-{
-Further increases the attack damage of Garrisons and Aviaries.
-}
-
-STRING 5057
-// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
-{
-Further increases the attack damage of Garrisons and Aviaries.
 }
 
 STRING 5058
@@ -15108,18 +14835,6 @@ STRING 5072
 Advanced Martial Engineering
 }
 
-STRING 5075
-// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
-{
-Greatly enhances construction speed, allowing buildings to be completed <A08R,area1>%.
-}
-
-STRING 5076
-// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
-{
-Greatly enhances construction speed, allowing buildings to be completed <A08R,area2>%.
-}
-
 STRING 5079
 // Units: h028 (Guard Tower), Name (Name)
 {
@@ -15160,12 +14875,6 @@ STRING 5085
 // Upgrades: R036 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Name (Name)
 {
 Studded Leather Armor
-}
-
-STRING 5086
-// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
-{
-Black Gunpowder
 }
 
 STRING 5087
@@ -15211,21 +14920,15 @@ STRING 5094
 }
 
 STRING 5095
-// Buffs/Effects: B01J (Holy Fury), Bufftip (Tooltip)
+// Buffs/Effects: B01K (Holy Fury), Bufftip (Tooltip)
 {
 Holy Fury
 }
 
 STRING 5096
-// Buffs/Effects: B01J (Holy Fury), EditorName (Name (Editor Only))
+// Buffs/Effects: B01K (Holy Fury), EditorName (Name (Editor Only))
 {
 Holy Fury
-}
-
-STRING 5097
-// Buffs/Effects: B01K (Holy Fury (Caster)), EditorName (Name (Editor Only))
-{
-Holy Fury (Caster)
 }
 
 STRING 5098
@@ -15262,18 +14965,6 @@ STRING 5103
 // Upgrades: R038 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
 Conjuror Master Training
-}
-
-STRING 5104
-// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
-}
-
-STRING 5105
-// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
 }
 
 STRING 5106
@@ -15384,333 +15075,1718 @@ STRING 5127
 Dori'thur
 }
 
-STRING 5128
-// Abilities: A08Z (Gryphon Lancer Level), Name (Name)
+STRING 5225
+// Abilities: A093 (Intercession), EditorSuffix (Editor Suffix)
 {
-Gryphon Lancer Level
+(resurrection)
 }
 
-STRING 5130
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5230
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-1/25
+Oracle Adept Training
 }
 
-STRING 5131
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5231
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-2/25
+Oracle Master Training
 }
 
-STRING 5132
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5232
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-3/25
+Oracle Adept Training
 }
 
-STRING 5133
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5233
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-4/25
+Oracle Master Training
 }
 
-STRING 5134
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5234
+// Abilities: A094 (Divine Sacrifice), Name (Name)
 {
-5/25
+Divine Sacrifice
 }
 
-STRING 5135
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5235
+// Abilities: A094 (Divine Sacrifice), Tip (Tooltip - Normal)
 {
-6/25
+Divine Sacrifice
 }
 
-STRING 5136
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5236
+// Abilities: A095 (Divine Sacrifice), Name (Name)
 {
-7/25
+Divine Sacrifice
 }
 
-STRING 5137
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5237
+// Abilities: A095 (Divine Sacrifice), Tip (Tooltip - Normal)
 {
-8/25
+Divine Sacrifice
 }
 
-STRING 5138
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5238
+// Abilities: A095 (Divine Sacrifice), EditorSuffix (Editor Suffix)
 {
-9/25
+(dependency)
 }
 
-STRING 5139
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5239
+// Buffs/Effects: B01N (Divine Sacrifice), Bufftip (Tooltip)
 {
-10/25
+Divine Sacrifice
 }
 
-STRING 5140
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5240
+// Buffs/Effects: B01N (Divine Sacrifice), EditorName (Name (Editor Only))
 {
-11/25
+Divine Sacrifice
 }
 
-STRING 5141
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5241
+// Buffs/Effects: B01N (Divine Sacrifice), Buffubertip (Tooltip - Extended)
 {
-12/25
+This unit has Divine Sacrifice; its attack damage has been increased.
 }
 
-STRING 5142
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5242
+// Abilities: A096 (Sinful Brand), Name (Name)
 {
-13/25
+Sinful Brand
 }
 
-STRING 5143
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5243
+// Abilities: A096 (Sinful Brand), Tip (Tooltip - Normal)
 {
-14/25
+Sinful Brand
 }
 
-STRING 5144
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5244
+// Abilities: A096 (Sinful Brand), EditorSuffix (Editor Suffix)
 {
-15/25
+(aura)
 }
 
-STRING 5145
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5245
+// Abilities: A097 (Sinful Brand), Name (Name)
 {
-16/25
+Sinful Brand
 }
 
-STRING 5146
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5246
+// Abilities: A097 (Sinful Brand), EditorSuffix (Editor Suffix)
 {
-17/25
+(ability)
 }
 
-STRING 5147
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5247
+// Abilities: A097 (Sinful Brand), Tip (Tooltip - Normal)
 {
-18/25
+Sinful Brand
 }
 
-STRING 5148
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5248
+// Buffs/Effects: B01O (Sinful Brand), EditorName (Name (Editor Only))
 {
-19/25
+Sinful Brand
 }
 
-STRING 5149
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5249
+// Buffs/Effects: B01O (Sinful Brand), Bufftip (Tooltip)
 {
-20/25
+Sinful Brand
 }
 
-STRING 5150
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5250
+// Buffs/Effects: B01O (Sinful Brand), EditorSuffix (Editor Suffix)
 {
-21/25
+(aura)
 }
 
-STRING 5151
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5251
+// Buffs/Effects: B01P (Sinful Brand), EditorName (Name (Editor Only))
 {
-22/25
+Sinful Brand
 }
 
-STRING 5152
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5252
+// Buffs/Effects: B01P (Sinful Brand), Bufftip (Tooltip)
 {
-23/25
+Sinful Brand
 }
 
-STRING 5153
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5253
+// Buffs/Effects: B01P (Sinful Brand), EditorSuffix (Editor Suffix)
 {
-24/25
+(ability)
 }
 
-STRING 5154
-// Abilities: A08Z (Gryphon Lancer Level), Ubertip (Tooltip - Normal - Extended)
+STRING 5254
+// Abilities: A098 (Interrogation), Tip (Tooltip - Normal)
 {
-25/25
+Interrogation
 }
 
-STRING 5179
-// Abilities: A090 (Gryphon Lancer Attack Orange), Name (Name)
+STRING 5255
+// Abilities: A098 (Interrogation), Name (Name)
 {
-Gryphon Lancer Attack Orange
+Interrogation
 }
 
-STRING 5180
-// Abilities: A091 (Gryphon Lancer Attack Red), Name (Name)
+STRING 5256
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Gryphon Lancer Attack Red
+Inquisitor Adept Training
 }
 
-STRING 5188
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5257
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Gryphon Lancer Level 1
+Inquisitor Master Training
 }
 
-STRING 5189
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5258
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Gryphon Lancer Level 1
+Inquisitor Adept Training
 }
 
-STRING 5190
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5259
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Gryphon Lancer Level 1
+Inquisitor Master Training
 }
 
-STRING 5191
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5260
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 1
+|cFF24BBFF"Burn the heretic. Kill the mutant. Purge the unclean."|r
+
+Increases Sorceresses' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
 }
 
-STRING 5192
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5261
+// Upgrades: R03B (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 1
+|cFF24BBFF"For the Em.. High Inquisitor!"|r
+
+Increases Sorceresses' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Invisibility.
 }
 
-STRING 5193
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5262
+// Units: h00A (Town Center), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 1
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Piligrims and receive gathered resources. Can be upgraded to Citadel and then Palace to enable the production of additional types of structures and units.
 }
 
-STRING 5194
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5263
+// Units: h00I (Citadel), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 1
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Citadel to enable the production of additional types of structures and units.
 }
 
-STRING 5195
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5264
+// Units: h01H (Palace), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 1
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Palace to enable the production of additional types of structures and units.
 }
 
-STRING 5196
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5265
+// Units: h01S (Cathedral), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 1
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Beastmistress, Grave Wagon and receive gathered resources. Can be upgraded to Diocese and then Parish to enable the production of additional types of structures and units.
 }
 
-STRING 5197
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5268
+// Units: h024 (Grave Wagon), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 2
+|cffffcc00#food #support
+|R
+Provides 8 food and can collect corpses on the battlefield for further disposal by the High Inquisitor.
 }
 
-STRING 5198
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5270
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Gryphon Lancer Level 2
+Steel-Tipped Bolts
 }
 
-STRING 5199
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5271
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Gryphon Lancer Level 2
+Serrated Bolts
 }
 
-STRING 5200
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5272
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Gryphon Lancer Level 2
+Upgrade to Steel-Tipped Bolts
 }
 
-STRING 5201
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5273
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Gryphon Lancer Level 2
+Upgrade to Serrated Bolts
 }
 
-STRING 5202
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5275
 {
-Gryphon Lancer Level 2
+Stonebeard
 }
 
-STRING 5203
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5276
 {
-Gryphon Lancer Level 2
+Syndicate
 }
 
-STRING 5204
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5277
 {
-Gryphon Lancer Level 2
+Players
 }
 
-STRING 5205
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5278
+// Units: h01X (Beastmistress), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 2
+|cffffcc00#ranged #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. Can summon Hound.
+
+|cffffcc00Attacks land and air units.|r
 }
 
-STRING 5206
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5279
+// Units: h020 (Zealot), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 2
+|cffffcc00#melee
+|R
+Devoted fanatic of the Scarlet Order. Can learn the Sacrificial Gift ability.
+
+|cffffcc00Attacks land units.|r
 }
 
-STRING 5207
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5282
+// Units: h021 (Conjuror), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 3
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Inner Fire, which increases a target friendly unit's damage and armor. Can also learn Summon Lightspawn and Scorching Radiance.
+
+|cffffcc00Attacks land and air units.|r
 }
 
-STRING 5208
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5283
+// Units: h021 (Conjuror), Casterupgradetip (Caster Upgrade Tips)
 {
-Gryphon Lancer Level 3
+- Inner Fire,- Inner Fire|n- Summon Lightspawn,- Inner Fire|n- Summon Lightspawn|n- Scorching Radiance
 }
 
-STRING 5209
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5284
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 3
+Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Summon Lightspawn.
 }
 
-STRING 5210
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5285
+// Upgrades: R038 (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 3
+Increases Conjurors mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Scorching Radiance.
 }
 
-STRING 5211
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5286
+// Units: h01Y (Inquisitor), Casterupgradename (Caster Upgrade Names)
 {
-Gryphon Lancer Level 3
+Initiate, Adept, Master
 }
 
-STRING 5212
-// Abilities: A08Z (Gryphon Lancer Level), Tip (Tooltip - Normal)
+STRING 5288
+// Units: o00X (Crossbowman), Ubertip (Tooltip - Extended)
 {
-Gryphon Lancer Level 3
+|cffffcc00#ranged
+|R
+Capable of keeping enemies at a distance but unable to attack in melee. Can gain the Iron Quarrel upgrade.
+
+|cffffcc00Attacks land and air units.|r
 }
 
-STRING 5213
-// Upgrades: R039 (Storm Hammers), Name (Name)
+STRING 5289
+// Units: h021 (Conjuror), Hotkey (Hotkey)
 {
-Gryphon Lancer Level
+C
 }
 
-STRING 5214
+STRING 5290
+// Units: h022 (Oracle), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 5291
+// Units: h024 (Grave Wagon), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 5292
+// Units: h02A (Crusader), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 5293
+// Units: h01Y (Inquisitor), Hotkey (Hotkey)
+{
+I
+}
+
+STRING 5294
+// Units: h02H (Crimson Immolator), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 5295
+// Upgrades: R00G (Cannibalize), Hotkey (Hotkey)
+{
+Z
+}
+
+STRING 5296
+// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 5297
+// Abilities: A08C (Minimum Range), Ubertip (Tooltip - Normal - Extended)
+{
+The crossbowman cannot attack targets within a range of less than 200.
+}
+
+STRING 5298
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 5299
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 5300
+// Upgrades: R032 (Long Rifles), Hotkey (Hotkey)
+{
+I
+}
+
+STRING 5301
+// Units: h02A (Crusader), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+The Fist of the Scarlet Order, burning enemies with his hatred. Wields Holy Fury. Can learn Wrathful.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5302
+// Buffs/Effects: B01K (Holy Fury), Buffubertip (Tooltip - Extended)
+{
+This unit has Immolation; nearby enemy ground units will take damage over time.
+}
+
+STRING 5303
+// Abilities: A08M (Holy Fury), Hotkey (Hotkey - Normal)
+{
+H
+}
+
+STRING 5304
+// Abilities: A08M (Holy Fury), Unhotkey (Hotkey - Turn Off)
+{
+H
+}
+
+STRING 5305
+// Units: h01W (Battle Garrison), Name (Name)
+{
+Battle Garrison
+}
+
+STRING 5306
+// Units: h02H (Crimson Immolator), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Heavily armored vehicle that burns enemies in righteous fire, effective at destroying buildings. Can be upgraded with the Radiant Essence ability.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5307
+// Units: h01W (Battle Garrison), Tip (Tooltip - Basic)
+{
+Build Battle Garrison
+}
+
+STRING 5308
+// Units: h027 (Armory), Ubertip (Tooltip - Extended)
+{
+Contains upgrades for improved armor and weaponry.
+}
+
+STRING 5309
+// Abilities: A088 (Get Corpse), Ubertip (Tooltip - Normal - Extended)
+{
+Picks up a nearby corpse for later use. Can be transported to Honor's Tomb for cremation.
+}
+
+STRING 5312
+// Units: h025 (Honor's Tomb), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage #support
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for Defensive Outpost, and Martial Engineering.
+
+Has the ability to burn corpses to increase the level of the Scarlet Crusade (both during and at the initial stage) and gold reward.
+}
+
+STRING 5313
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5314
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5315
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5316
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5317
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5318
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5319
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5320
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5321
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 1)
+}
+
+STRING 5322
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5323
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5324
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5325
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5326
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5327
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5328
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5329
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5330
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5331
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 2)
+}
+
+STRING 5332
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5333
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5334
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5335
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5336
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5337
+// Abilities: A08Z (Judgment Ray), Tip (Tooltip - Normal)
+{
+Judgment Ray (Level 3)
+}
+
+STRING 5338
+// Abilities: A08Z (Judgment Ray), Name (Name)
+{
+Judgment Ray
+}
+
+STRING 5339
 // Upgrades: R039 (Storm Hammers), Tip (Tooltip)
 {
-Research Gryphon Lancer Level
+Research Judgment Ray
+}
+
+STRING 5341
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5342
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5343
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5344
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5345
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5346
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5347
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5348
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5349
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5350
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5351
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5352
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5353
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5354
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5355
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5356
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5357
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5358
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5359
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+3 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5360
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5361
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5362
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5363
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5364
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5365
+// Abilities: A08Z (Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+
+
+
+
+}
+
+STRING 5367
+// Abilities: A090 (Gryphon Lancer Attack Orange +3), Name (Name)
+{
+Gryphon Lancer Attack Orange +3
+}
+
+STRING 5368
+// Abilities: A091 (Gryphon Lancer Attack Red +5), Name (Name)
+{
+Gryphon Lancer Attack Red +5
+}
+
+STRING 5369
+// Units: h023 (Gryphon Lancer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|R
+Gryphon Lancer incinerates enemies with a focused beam of holy energy, infused with the power of hatred.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5371
+// Units: h02E (War Aviary), Name (Name)
+{
+War Aviary
+}
+
+STRING 5372
+// Units: h02E (War Aviary), Tip (Tooltip - Basic)
+{
+Build War Aviary
+}
+
+STRING 5373
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Grants Battle Garrison and War Aviary the ability to attack nearby enemies.
+}
+
+STRING 5374
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Battle Garrison and War Aviary.
+}
+
+STRING 5375
+// Upgrades: R034 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Battle Garrison and War Aviary.
+}
+
+STRING 5376
+// Units: h022 (Oracle), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Ominous Visions, which deals bonus damage and has a chance to drive enemies mad. Can also learn Seer’s Eye and Light’s Requiem.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5378
+// Units: h02G (Cathedral of Light), Ubertip (Tooltip - Extended)
+{
+Trains Conjuror, Oracle, and Inquisitor. |nAlso contains spell upgrades for Conjuror, Oracle, and Inquisitor.
+}
+
+STRING 5379
+// Units: h01Y (Inquisitor), Casterupgradetip (Caster Upgrade Tips)
+{
+- Interrogation,- Interrogation|n- Divine Sacrifice,- Interrogation|n- Divine Sacrifice|n- Sinful Brand
+}
+
+STRING 5380
+// Units: h01Y (Inquisitor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Supporting spellcaster. Can initially cast Interrogation, which redirects negative spells from allied units to an enemy target. Can also learn Divine Sacrifice and Sinful Brand. 
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5381
+// Units: h014 (Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure. Can learn the Magic Sentry ability.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5384
+// Units: h01W (Battle Garrison), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Primary troop production building. Trains Zealot, Crossbowman and Crusader. |nAlso contains Sacrificial Gift, Iron Quarrel, Wrathful upgrades. Can be upgraded into a Defensive Outpost.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5385
+// Units: h02E (War Aviary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Trains Gryphon Lancer. |nAlso contains the Judgment Ray upgrade. Can be upgraded into a Defensive Outpost.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5386
+// Units: h02I (Workshop), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #upgrades
+|R
+Produces Crimson Immolator.
+
+Also contains the Radiant Essence upgrades.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5387
+// Upgrades: R039 (Storm Hammers), Name (Name)
+{
+Judgment Ray
+}
+
+STRING 5388
+// Units: h026 (Scout Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, or a Inquisition Tower.
+}
+
+STRING 5389
+// Units: h028 (Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5390
+// Units: h029 (Inquisition Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard #support
+|R
+Magical defensive tower. Silences the target upon attack.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5391
+// Units: H02B (Scarlet Monastery), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes #mechanics
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 5394
+// Units: O00C (Horde Warchief), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Chain Lightning, Far Sight, Whirling Elements and Earthquake. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5395
+// Units: U006 (Lich King), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Death Coil, Death Pact, Unholy Aura, and Animate Dead. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 5396
+// Units: H02D (Paladin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Holy Light, Divine Shield, Seal Of Wisdom and Mass Resurrection.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5397
+// Units: E003 (High Priestess of Elune), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Scout, Searing Arrows, Trueshot Aura, and Starfall. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5398
+// Units: O000 (King of Stormwind), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Lion's Fang, Heroic Strike, Stormwind Battlecry and Taunt.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5399
+// Units: H01R (High Inquisitor), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Desperate Plea, Inquisition, Zeal and Scarlet Aegis.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5400
+// Abilities: A03J (Taunt), Researchtip (Tooltip - Learn)
+{
+Learn Taunt
+}
+
+STRING 5402
+// Abilities: A08J (Scarlet Aegis), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units +<A08J,DataB1> armor and increases Life Regeneration Rate by <A08J,DataC1,%>%.
+
+Lasts <A08J,Dur1> seconds.
+}
+
+STRING 5403
+// Abilities: A08J (Scarlet Aegis), Researchtip (Tooltip - Learn)
+{
+Learn Scarlet Aegis
+}
+
+STRING 5404
+// Abilities: A08J (Scarlet Aegis), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives friendly nearby units +<A08J,DataB1> armor and increases Life Regeneration Rate by <A08J,DataC1,%>%.
+
+Lasts <A08J,Dur1> seconds.
+}
+
+STRING 5405
+// Abilities: A08A (Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Burns the corpse of a unit, increasing the Scarlet Crusade points by 3 (in both active and inactive modes) and granting a reward of <A08B,DataA1> gold.
+}
+
+STRING 5406
+// Buffs/Effects: B01J (Inquisition (target)), EditorName (Name (Editor Only))
+{
+Inquisition (target)
+}
+
+STRING 5407
+// Buffs/Effects: B01J (Inquisition (target)), Bufftip (Tooltip)
+{
+Inquisition
+}
+
+STRING 5408
+// Abilities: A099 (Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking <A099,DataA1> hit points per second from it and giving them to the High Inquisitor. |n |nLasts <A099,Dur1> seconds.
+}
+
+STRING 5409
+// Abilities: A099 (Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking <A099,DataA2> hit points per second from it and giving them to the High Inquisitor. |n |nLasts <A099,Dur2> seconds.
+}
+
+STRING 5410
+// Abilities: A099 (Inquisition), Ubertip (Tooltip - Normal - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking <A099,DataA3> hit points per second from it and giving them to the High Inquisitor. |n |nLasts <A099,Dur3> seconds.
+}
+
+STRING 5411
+// Abilities: A099 (Inquisition), Researchubertip (Tooltip - Learn - Extended)
+{
+Absorbs the life essence of a target enemy unit by taking hit points from it every second and giving them to the High Inquisitor. |n|nLasts <A099,Dur1> seconds. |n|n|cffffcc00Level 1|r - <A099,DataA1> hit point drain per second. |n|cffffcc00Level 2|r - <A099,DataA2> hit point drain per second. |n|cffffcc00Level 3|r - <A099,DataA3> hit point drain per second.
+}
+
+STRING 5412
+// Abilities: A08H (Zeal), Researchubertip (Tooltip - Learn - Extended)
+{
+Nearby friendly melee units gain hit points when they hit enemy units. |n|n|cffffcc00Level 1|r - Gains <A08H,DataA1,%>% of attack damage. |n|cffffcc00Level 2|r - Gains <A08H,DataA2,%>% of attack damage. |n|cffffcc00Level 3|r - Gains <A08H,DataA3,%>% of attack damage.
+}
+
+STRING 5414
+// Abilities: A096 (Sinful Brand), Ubertip (Tooltip - Normal - Extended)
+{
+Gives <A096,DataA1> additional armor to nearby friendly units.
+}
+
+STRING 5415
+// Abilities: A097 (Sinful Brand), Ubertip (Tooltip - Normal - Extended)
+{
+Marks an enemy unit with a seal that reduces armor by <A096,DataA1>  for all enemy units in a small radius. The marked unit itself is not affected. If the marked unit dies, it grants an additional +3 points to the Scarlet Crusade. Lasts <A097,Dur1> seconds.
+}
+
+STRING 5420
+// Abilities: A08F (Scarlet March (Off)), Ubertip (Tooltip - Normal - Extended)
+{
+Removes all bonuses, stops health loss, and resets the Scarlet Crusade level to its default state.
+}
+
+STRING 5422
+// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 5423
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 5425
+// Units: h022 (Oracle), Casterupgradetip (Caster Upgrade Tips)
+{
+- Ominous Visions,- Ominous Visions|n- Seer’s Eye,- Ominous Visions|n- Seer’s Eye|n- Intercession
+}
+
+STRING 5426
+// Abilities: A08Q (Sacrificial Gift), Ubertip (Tooltip - Normal - Extended)
+{
+After death, Zealot leaves a sphere of light that restores 75 health.
+}
+
+STRING 5427
+// Abilities: A092 (Intercession), Name (Name)
+{
+Intercession
+}
+
+STRING 5428
+// Abilities: A092 (Intercession), Tip (Tooltip - Normal)
+{
+Intercession
+}
+
+STRING 5429
+// Abilities: A093 (Intercession), Name (Name)
+{
+Intercession
+}
+
+STRING 5430
+// Abilities: A093 (Intercession), Tip (Tooltip - Normal)
+{
+Intercession
+}
+
+STRING 5432
+// Buffs/Effects: B01I (Inquisitor's Silence), Buffubertip (Tooltip - Extended)
+{
+This unit is Inquisitor's Silence; it cannot cast spells.
+}
+
+STRING 5433
+// Buffs/Effects: B01H (Inquisition), Buffubertip (Tooltip - Extended)
+{
+Target enemy unit is steadily losing health while under the Inquisitor's control.
+}
+
+STRING 5434
+// Buffs/Effects: B01M (Intercession), EditorName (Name (Editor Only))
+{
+Intercession
+}
+
+STRING 5435
+// Buffs/Effects: B01M (Intercession), Bufftip (Tooltip)
+{
+Intercession
+}
+
+STRING 5436
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Grave Wagon, Zealot, Crusader and Crimson Immolator.
+}
+
+STRING 5437
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Grave Wagon, Zealot, Crusader and Crimson Immolator.
+}
+
+STRING 5438
+// Upgrades: R02X (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Grave Wagon, Zealot, Crusader and Crimson Immolator.
+}
+
+STRING 5439
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Hound, Zealot and Crusader.
+}
+
+STRING 5440
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Hound, Zealot and Crusader.
+}
+
+STRING 5441
+// Upgrades: R02Y (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Hound, Zealot and Crusader.
+}
+
+STRING 5442
+// Upgrades: R031 (Defend), Ubertip (Tooltip - Extended)
+{
+After death, Zealot leaves a sphere of light that restores 75 health.
+}
+
+STRING 5443
+// Upgrades: R033 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Crimson Immolator unleashes a stream of fire, dealing damage to the target and enemies behind it in a straight line.
+}
+
+STRING 5444
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed 10%.
+}
+
+STRING 5445
+// Upgrades: R035 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Greatly enhances construction speed, allowing buildings to be completed 20%.
+}
+
+STRING 5446
+// Upgrades: R036 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Hound, Crossbowman and Gryphon Lancer.
+}
+
+STRING 5447
+// Upgrades: R036 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Hound, Crossbowman and Gryphon Lancer.
+}
+
+STRING 5448
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Increases the ranged attack damage of Crossbowman, Crimson Immolator and Gryphon Lancer.
+}
+
+STRING 5449
+// Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Crossbowman, Crimson Immolator and Gryphon Lancer.
+}
+
+STRING 5450
+// Upgrades: R039 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Gryphon Lancer focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
+
+
+
+}
+
+STRING 5451
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Oracle mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Seer’s Eye.
+}
+
+STRING 5452
+// Upgrades: R03A (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Oracle mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Intercession.
+}
+
+STRING 5453
+// Abilities: A08S (Holy Nova), Ubertip (Tooltip - Normal - Extended)
+{
+Restores <A08S,DataA1> hit points to up to 6 nearby friendly non-mechanical units.
+}
+
+STRING 5454
+// Abilities: A08T (Summon Lightspawn), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a Lightspawn. Has <n00K,realHP> hit points and deals <n00K,mindmg1> - <n00K,maxdmg1> damage. Has the Holy Nova ability.  |nLasts <A08T,Dur1> seconds. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5455
+// Abilities: A092 (Intercession), Ubertip (Tooltip - Normal - Extended)
+{
+Grants a target unit Intercession, allowing it to be reborn upon death. The unit will revive with 100% of its maximum health.
+}
+
+STRING 5456
+// Abilities: A093 (Intercession), Ubertip (Tooltip - Normal - Extended)
+{
+Grants a target unit Intercession, allowing it to be reborn upon death. The unit will revive with 100% of its maximum health.
+}
+
+STRING 5457
+// Buffs/Effects: B01M (Intercession), Buffubertip (Tooltip - Extended)
+{
+This unit has Intercession; upon death, it will be reborn.
+}
+
+STRING 5458
+// Buffs/Effects: B01Q (Lightspawn), EditorName (Name (Editor Only))
+{
+Lightspawn
+}
+
+STRING 5459
+// Buffs/Effects: B01Q (Lightspawn), Bufftip (Tooltip)
+{
+Lightspawn
+}
+
+STRING 5460
+// Abilities: A08I (History: Whitemane), Name (Name)
+{
+History: Whitemane
+}
+
+STRING 5461
+// Abilities: A08I (History: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 5462
+// Abilities: A08I (History: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+Sally Whitemane
+
+A devoted priestess of the Light, Sally Whitemane's hatred for undeath was forged in tragedy when she was forced to slay her own family after they transformed into mindless undead.
+
+She rose to become the ruthless High Inquisitor of the Scarlet Crusade, overseeing the Scarlet Monastery. Though driven by a noble cause, her zeal turned to fanaticism, seeing all outsiders as tainted. Gifted with the power to resurrect fallen crusaders, she ruled the Monastery with fear and unwavering conviction, making her one of the most formidable leaders of the Scarlet Crusade.
+}
+
+STRING 5463
+// Abilities: A09A (Mechanics: Whitemane), Name (Name)
+{
+Mechanics: Whitemane
+}
+
+STRING 5464
+// Abilities: A09A (Mechanics: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 5466
+// Abilities: A08D (Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - }
+
+STRING 5467
+// Abilities: A08D (Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - }
+
+STRING 5468
+// Abilities: A08D (Scarlet March), Name (Name)
+{
+Scarlet March
+}
+
+STRING 5469
+// Abilities: A08D (Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - }
+
+STRING 5470
+// Abilities: A08D (Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - }
+
+STRING 5471
+// Abilities: A08D (Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - }
+
+STRING 5472
+// Abilities: A08D (Scarlet March), Tip (Tooltip - Normal)
+{
+Scarlet March - }
+
+STRING 5473
+// Abilities: A08E (Scarlet March (On)), Name (Name)
+{
+Scarlet March (On)
+}
+
+STRING 5474
+// Abilities: A08E (Scarlet March (On)), Tip (Tooltip - Normal)
+{
+Scarlet March (On)
+}
+
+STRING 5475
+// Abilities: A08E (Scarlet March (On)), Ubertip (Tooltip - Normal - Extended)
+{
+A call to embark on the Scarlet March. A special mode in which the army takes 1% damage per second in exchange for increased attack and movement speed. The effect intensifies the longer the ability remains active. |n  
+|cffffcc00Level 1|r (0 sec): No effect  
+|cffffcc00Level 2|r (>0 sec): +10% attack speed, +10% movement speed  
+|cffffcc00Level 3|r (≥15 sec): +20% attack speed, +20% movement speed  
+|cffffcc00Level 4|r (≥30 sec): +30% attack speed, +30% movement speed  
+|cffffcc00Level 5|r (≥45 sec): +40% attack speed, +40% movement speed  
+|cffffcc00Level 6|r (≥60 sec): +50% attack speed, +50% movement speed |n  
+|cffffcc00Does not affect workers or mechanical units.|r  
+}
+
+STRING 5476
+// Abilities: A08F (Scarlet March (Off)), Name (Name)
+{
+Scarlet March (Off)
+}
+
+STRING 5477
+// Abilities: A08F (Scarlet March (Off)), Tip (Tooltip - Normal)
+{
+Scarlet March (Off)
+}
+
+STRING 5478
+// Abilities: A09A (Mechanics: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Scarlet March|R - A special mode in which units gradually lose health but gain increased movement speed and attack rate. The effect intensifies the longer Scarlet Crusade is active.
+}
+
+STRING 5479
+// Abilities: A09B (Features: Whitemane), Name (Name)
+{
+Features: Whitemane
+}
+
+STRING 5480
+// Abilities: A09B (Features: Whitemane), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 5481
+// Abilities: A09B (Features: Whitemane), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- High attack and movement speed
+- Accelerated construction
+- Powerful spellcasters|R
+|cFFFF5A4B- Requires high micro-management
+- Some abilities and effects rely on mechanics
+- Reduced health for units and structures|R
+}
+
+STRING 5482
+// Buffs/Effects: B00L (Scarlet March), Bufftip (Tooltip)
+{
+Scarlet March
+}
+
+STRING 5483
+// Buffs/Effects: B00L (Scarlet March), EditorName (Name (Editor Only))
+{
+Scarlet March
+}
+
+STRING 5484
+// Buffs/Effects: B00L (Scarlet March), Buffubertip (Tooltip - Extended)
+{
+This unit is affected by Scarlet March, gaining increased movement speed and attack rate but losing health over time.
 }
 

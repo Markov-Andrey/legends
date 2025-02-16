@@ -10544,24 +10544,8 @@
         "validated": true
     },
     {
-        "path": "Legends\\Whitemane\\Oracle\\BTN_CW_Holy_Aura.blp",
-        "name": "BTN_CW_Holy_Aura.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Whitemane\\Oracle\\ChurchOfLight_RoarTargetV3.mdx",
         "name": "ChurchOfLight_RoarTargetV3.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Whitemane\\Oracle\\PAS_CW_Holy_Aura.blp",
-        "name": "PAS_CW_Holy_Aura.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10648,14 +10632,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_CW_Holy_Aura.blp",
-        "name": "DISBTN_CW_Holy_Aura.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_RitualOfSacrifice.blp",
         "name": "DISBTN_Whitemane_RitualOfSacrifice.blp",
         "type": "file",
@@ -10674,14 +10650,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_Weapon_Crossbow_02.blp",
         "name": "DISBTN_Whitemane_Weapon_Crossbow_02.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_CW_Holy_Aura.blp",
-        "name": "DISPAS_CW_Holy_Aura.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10778,6 +10746,46 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Battle_Garrison.blp",
         "name": "DISBTN_Battle_Garrison.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\BTN_Whitemane_Intercession.blp",
+        "name": "BTN_Whitemane_Intercession.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Oracle\\PAS_Whitemane_Intercession.blp",
+        "name": "PAS_Whitemane_Intercession.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Whitemane\\Whitemane\\Bondage Orange SD.mdx",
+        "name": "Bondage Orange SD.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_Intercession.blp",
+        "name": "DISBTN_Whitemane_Intercession.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Whitemane_Intercession.blp",
+        "name": "DISPAS_Whitemane_Intercession.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
