@@ -8685,12 +8685,6 @@ STRING 3683
 Shadowstalk
 }
 
-STRING 3684
-// Units: u004 ([Shared] Dummy), Name (Name)
-{
-[Shared] Dummy
-}
-
 STRING 3686
 // Abilities: A05A ([Tyrande] Shadowstalk), EditorSuffix (Editor Suffix)
 {
@@ -12513,50 +12507,26 @@ STRING 4536
 Restores 3.0% mana when attacking
 }
 
-STRING 4538
-// Units: u000 ([Shared] Fireworks), Name (Name)
-{
-[Shared] Fireworks
-}
-
 STRING 4539
-// Units: u000 ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+// Units: u000 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 blue
 }
 
-STRING 4540
-// Units: u007 ([Shared] Fireworks), Name (Name)
-{
-[Shared] Fireworks
-}
-
 STRING 4541
-// Units: u007 ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+// Units: u007 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 green
 }
 
-STRING 4542
-// Units: u008 ([Shared] Fireworks), Name (Name)
-{
-[Shared] Fireworks
-}
-
 STRING 4543
-// Units: u008 ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+// Units: u008 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 purple
 }
 
-STRING 4544
-// Units: u00D ([Shared] Fireworks), Name (Name)
-{
-[Shared] Fireworks
-}
-
 STRING 4545
-// Units: u00D ([Shared] Fireworks), EditorSuffix (Name - Editor Suffix)
+// Units: u00D ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 red
 }
@@ -17057,5 +17027,47 @@ STRING 5496
 // Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
 {
 Increases the amount of mana that can be stored in Moon Wells by 125, and their rate of mana regeneration by 50%.
+}
+
+STRING 5497
+// Units: u004 ([Special] Dummy), Name (Name)
+{
+[Special] Dummy
+}
+
+STRING 5498
+// Units: u000 ([Special] Fireworks), Name (Name)
+{
+[Special] Fireworks
+}
+
+STRING 5499
+// Units: u007 ([Special] Fireworks), Name (Name)
+{
+[Special] Fireworks
+}
+
+STRING 5500
+// Units: u008 ([Special] Fireworks), Name (Name)
+{
+[Special] Fireworks
+}
+
+STRING 5501
+// Units: u00D ([Special] Fireworks), Name (Name)
+{
+[Special] Fireworks
+}
+
+STRING 5503
+// Units: H02J ([Special] F1), Name (Name)
+{
+[Special] F1
+}
+
+STRING 5504
+// Units: H02J ([Special] F1), Propernames (Proper Names)
+{
+All units orders
 }
 
