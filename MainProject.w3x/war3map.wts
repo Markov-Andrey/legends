@@ -15188,12 +15188,6 @@ STRING 5098
 [Whitemane] Inner Fire
 }
 
-STRING 5099
-// Abilities: A08W ([Whitemane] Inner Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Increases a target friendly unit's damage by <Ainf,DataA1,%>% and life regen rate by <Ainf,DataD1,%>. |nLasts <Ainf,Dur1> seconds.
-}
-
 STRING 5100
 // Upgrades: R038 (Priest Adept Training,Priest Master Training), Name (Name)
 {
@@ -17045,5 +17039,17 @@ STRING 5484
 // Buffs/Effects: B00L ([Whitemane] Scarlet March), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Scarlet March, gaining increased movement speed and attack rate but losing health over time.
+}
+
+STRING 5485
+// Abilities: A098 ([Whitemane] Interrogation), Ubertip (Tooltip - Normal - Extended)
+{
+Takes a negative buff from a friendly unit and applies it to a nearby enemy unit.
+}
+
+STRING 5486
+// Abilities: A08W ([Whitemane] Inner Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Increases a target friendly unit's damage by <A08W,DataA1,%>% and life regen rate by <A08W,DataD1,%>. |nLasts <Ainf,Dur1> seconds.
 }
 

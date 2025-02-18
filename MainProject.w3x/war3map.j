@@ -7506,7 +7506,7 @@ endfunction
 function Trig_WhitemaneConjurorRadiance_Actions takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'h01Z', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
     call IssuePointOrderLocBJ(GetLastCreatedUnit(), "move", GetSpellTargetLoc())
-    call UnitApplyTimedLifeBJ(20.00, 'BTLF', GetLastCreatedUnit())
+    call UnitApplyTimedLifeBJ(15.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
@@ -9112,12 +9112,15 @@ function Trig_AlliesEnemyAndNeutral_Actions takes nothing returns nothing
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Player(4), bj_ALLIANCE_ALLIED)
     call SetPlayerAllianceStateBJ(Player(5), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED)
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Player(5), bj_ALLIANCE_ALLIED)
+    call SetPlayerAllianceStateBJ(Player(0), Player(2), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(1), Player(2), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(2), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(2), Player(1), bj_ALLIANCE_ALLIED_ADVUNITS)
 endfunction
 
 //===========================================================================
 function InitTrig_AlliesEnemyAndNeutral takes nothing returns nothing
     set gg_trg_AlliesEnemyAndNeutral=CreateTrigger()
-    call DisableTrigger(gg_trg_AlliesEnemyAndNeutral)
     call TriggerAddAction(gg_trg_AlliesEnemyAndNeutral, function Trig_AlliesEnemyAndNeutral_Actions)
 endfunction
 
