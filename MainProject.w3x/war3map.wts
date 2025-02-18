@@ -9084,26 +9084,10 @@ STRING 3771
 Searing Arrows
 }
 
-STRING 3772
-// Upgrades: R01U (Improved Bows), Ubertip (Tooltip - Extended)
-{
-Adds <AHfa,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
-
-|cFF005DFFNight:|R Damage increased to <AHfa,DataA2>.
-}
-
 STRING 3774
 // Abilities: A05L ([Tyrande] Evasion), Tip (Tooltip - Normal)
 {
 Evasion
-}
-
-STRING 3775
-// Upgrades: R01T (Sentinel), Ubertip (Tooltip - Extended)
-{
-Gives a <A05L,DataA1,%>% chance to avoid an attack.
-
-|cFF005DFFNight:|R Chance increased to <A05L,DataA2,%>%
 }
 
 STRING 3776
@@ -9212,18 +9196,6 @@ STRING 3793
 // Upgrades: R021 (Well Spring), Tip (Tooltip)
 {
 Research Pristine Spring
-}
-
-STRING 3794
-// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
-{
-Increases the amount of mana that can be stored in Moon Wells by <R021,mod1>, and their rate of mana regeneration by <R021,mod2,%>%.
-}
-
-STRING 3795
-// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
-{
-Increases the amount of mana that can be stored in Moon Wells by <R021,base1>, and their rate of mana regeneration by <R021,base2,%>%.
 }
 
 STRING 3796
@@ -17051,5 +17023,39 @@ STRING 5486
 // Abilities: A08W ([Whitemane] Inner Fire), Ubertip (Tooltip - Normal - Extended)
 {
 Increases a target friendly unit's damage by <A08W,DataA1,%>% and life regen rate by <A08W,DataD1,%>. |nLasts <Ainf,Dur1> seconds.
+}
+
+STRING 5489
+// Upgrades: R01U (Improved Bows), Ubertip (Tooltip - Extended)
+{
+Adds <A05M,DataA1> bonus fire damage to Archers and Hippogryph Riders when attacking enemies, but drains mana with each shot fired.
+
+|cFF005DFFNight:|R Damage increased to <A05M,DataA2>.
+}
+
+STRING 5490
+// Upgrades: R01T (Sentinel), Ubertip (Tooltip - Extended)
+{
+Gives a <A05L,DataA1,%>% chance to avoid an attack to Huntress.
+
+|cFF005DFFNight:|R Chance increased to <A05L,DataA2,%>%
+}
+
+STRING 5493
+// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by 100, and their rate of mana regeneration by 25%.
+}
+
+STRING 5495
+// Abilities: A05P ([Tyrande] Well Spring), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by 125 (100 at Level 2), and their rate of mana regeneration by 50% (25% at Level 2).
+}
+
+STRING 5496
+// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by 125, and their rate of mana regeneration by 50%.
 }
 
