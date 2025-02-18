@@ -9704,14 +9704,6 @@ STRING 3891
 Melee spellcaster. Can initially cast Roar, which increases attack damage. Can also learn Rejuvenation, Bear Form and Mark of the Claw. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 3893
-// Units: e00M ([Tyrande] Priestess of Elune), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Maneuverable spellcaster. Can initially cast Faerie Fire, which reduces armor and gives vision of an enemy unit. Can also learn Storm Crow Form, Cyclone and Mark of the Talon. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 3894
 // Abilities: A066 ([Tyrande] Cyclone), Name (Name)
 {
@@ -9776,12 +9768,6 @@ STRING 3904
 // Buffs/Effects: B010 ([Tyrande] Prayer of the Moon Goddess), Buffubertip (Tooltip - Extended)
 {
 Its mana will regenerate over time.
-}
-
-STRING 3905
-// Units: e00M ([Tyrande] Priestess of Elune), Casterupgradetip (Caster Upgrade Tips)
-{
-- Moonfire,- Moonfire|n- Prayer of the Moon Goddess,- Moonfire|n- Prayer of the Moon Goddess|n- Cyclone
 }
 
 STRING 3906
@@ -17069,5 +17055,27 @@ STRING 5504
 // Units: H02J ([Special] F1), Propernames (Proper Names)
 {
 All units orders
+}
+
+STRING 5506
+// Units: e00M ([Tyrande] Priestess of Elune), Casterupgradetip (Caster Upgrade Tips)
+{
+- Moonfire,- Moonfire|n- Sleep,- Moonfire|n- Sleep|n- Cyclone
+}
+
+STRING 5507
+// Units: e00M ([Tyrande] Priestess of Elune), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Mystic spellcaster. Can initially cast Moonfire, which reduces armor and gives vision of an enemy unit. Can also learn Sleep and Cyclone.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5508
+// Abilities: A065 ([Tyrande] Moonfire), Ubertip (Tooltip - Normal - Extended)
+{
+Deals 250 damage over 10 seconds to the target unit.
 }
 
