@@ -723,7 +723,7 @@ STRING 1037
 }
 
 STRING 1038
-// Units: h007 ([AI] Add Building), Tip (Tooltip - Basic)
+// Units: h007 ([UI] Add Building), Tip (Tooltip - Basic)
 {
 Add Building
 }
@@ -3847,12 +3847,6 @@ STRING 2305
 // Units: H004 ([Alterac] Stonebeard), Name (Name)
 {
 [Alterac] Stonebeard
-}
-
-STRING 2310
-// Units: h007 ([AI] Add Building), Name (Name)
-{
-[AI] Add Building
 }
 
 STRING 2314
@@ -17045,14 +17039,8 @@ STRING 5501
 [Special] Fireworks
 }
 
-STRING 5503
-// Units: H02J ([Special] F1), Name (Name)
-{
-[Special] F1
-}
-
 STRING 5504
-// Units: H02J ([Special] F1), Propernames (Proper Names)
+// Units: H02J ([UI] F1), Propernames (Proper Names)
 {
 All units orders
 }
@@ -17077,5 +17065,17 @@ STRING 5508
 // Abilities: A065 ([Tyrande] Moonfire), Ubertip (Tooltip - Normal - Extended)
 {
 Deals 250 damage over 10 seconds to the target unit.
+}
+
+STRING 5509
+// Units: h007 ([UI] Add Building), Name (Name)
+{
+[UI] Add Building
+}
+
+STRING 5510
+// Units: H02J ([UI] F1), Name (Name)
+{
+[UI] F1
 }
 
