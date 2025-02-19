@@ -2859,24 +2859,6 @@ STRING 2026
 Holy Aura - [|cffffcc00Level 3|r]
 }
 
-STRING 2027
-// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A00V,DataA1>
-}
-
-STRING 2028
-// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A00V,DataA2>
-}
-
-STRING 2029
-// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A00V,DataA3>
-}
-
 STRING 2030
 // Abilities: A005 ([Uther] Divine Shield), Untip (Tooltip - Turn Off)
 {
@@ -10909,12 +10891,6 @@ STRING 4239
 [Thrall] Airburst Amulet
 }
 
-STRING 4240
-// Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
-{
-Causes attacks to do <A07C,DataC1> times normal damage to air units.
-}
-
 STRING 4241
 // Abilities: A07C ([Thrall] Airburst Amulet), Tip (Tooltip - Normal)
 {
@@ -10991,14 +10967,6 @@ STRING 4260
 Improves the fighting capabilities of Grunts with a 4 bonus attack damage.
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Grunt
-}
-
-STRING 4261
-// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Improves the fighting capabilities of Grunts with a <R02K,base2> bonus attack damage.
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
 }
 
 STRING 4262
@@ -11338,14 +11306,6 @@ STRING 4325
 Research Earth Amulet
 }
 
-STRING 4326
-// Upgrades: R02R (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add defense bonus
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Raider
-}
-
 STRING 4327
 // Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
 {
@@ -11386,12 +11346,6 @@ STRING 4333
 // Abilities: A07J ([Thrall] Earth Amulet), Tip (Tooltip - Normal)
 {
 Earth Amulet
-}
-
-STRING 4334
-// Abilities: A07J ([Thrall] Earth Amulet), Ubertip (Tooltip - Normal - Extended)
-{
-Add defense bonus
 }
 
 STRING 4335
@@ -13157,17 +13111,6 @@ Long-range siege weaponry. Effective against buildings but slow and vulnerable. 
 
 |cFF64FF93Amulets|R: Perfect Windfeather
 |cFF64FF93Amulets|R: Fire Runic Stone
-}
-
-STRING 4654
-// Units: o005 ([Thrall] Shaman), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Primary spellcaster. Can initially cast Purge, which dispels magical buffs and can immobilize enemies. Can also learn Lightning Shield and Bloodlust. |n|n|cffffcc00Attacks land and air units.|r
-
-|cFF64FF93Amulets|R: Water Ring
-|cFF64FF93Amulets|R: Fire Eye Ring
 }
 
 STRING 4655
@@ -17115,5 +17058,86 @@ STRING 5524
 // Upgrades: R02C (Brute Strength), Name (Name)
 {
 [Thrall] Artisan-crafted Totem
+}
+
+STRING 5533
+// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the health regeneration of nearby friendly units by <A00V,DataB1,%>%.
+}
+
+STRING 5534
+// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the health regeneration of nearby friendly units by <A00V,DataB2,%>%.
+}
+
+STRING 5535
+// Abilities: A00V ([Uther] Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the health regeneration of nearby friendly units by <A00V,DataB3,%>%.
+}
+
+STRING 5537
+// Abilities: A07J ([Thrall] Earth Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Increases defense by +2
+}
+
+STRING 5538
+// Upgrades: R02R (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Increases defense by +2
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 5539
+// Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Has a 75% chance to deal 1.3 times normal damage.
+
+
+
+}
+
+STRING 5540
+// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Has a 75% chance to deal 1.3 times normal damage.
+
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
+}
+
+STRING 5541
+// Units: o005 ([Thrall] Shaman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Primary spellcaster. Can initially cast Purge, which dispels magical buffs and can immobilize enemies. Can also learn Lightning Shield and Elemental Destruction.
+
+|cffffcc00Attacks land and air units.|r
+
+|cFF64FF93Amulets|R: Water Ring
+|cFF64FF93Amulets|R: Fire Eye Ring
+}
+
+STRING 5542
+// Units: o005 ([Thrall] Shaman), Casterupgradetip (Caster Upgrade Tips)
+{
+- Purge,- Purge|n- Lightning Shield,- Purge|n- Lightning Shield|n- Elemental Destruction
+}
+
+STRING 5543
+// Upgrades: R02I (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Elemental Destruction.
+}
+
+STRING 5544
+// Abilities: A03G ([Wrynn] Lion's Fang), Researchubertip (Tooltip - Learn - Extended)
+{
+A wave of force that ripples out from the Hero, causing damage to land units in a line. |n|n|cffffcc00Level 1|r - <A03G,DataA1> damage. |n|cffffcc00Level 2|r - <A03G,DataA2> damage. |n|cffffcc00Level 3|r - <A03G,DataA3> damage.
 }
 
