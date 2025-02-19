@@ -127,6 +127,7 @@ boolean udg_Whitemane_crusade_bool= false
 
     // Generated
 camerasetup gg_cam_StartView= null
+trigger gg_trg_BtnF1= null
 trigger gg_trg_LimitUnitsF1= null
 trigger gg_trg_StartResouces= null
 trigger gg_trg_StartCameraP1= null
@@ -308,7 +309,6 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_BtnF1= null
 
     // Random Groups
 integer array gg_rg_000

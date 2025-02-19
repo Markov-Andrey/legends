@@ -8407,12 +8407,6 @@ STRING 3630
 [Tyrande] Tree of Life
 }
 
-STRING 3631
-// Units: e001 ([Tyrande] Wisp), Name (Name)
-{
-[Tyrande] Wisp
-}
-
 STRING 3632
 // Upgrades: R01M (Magic Sentry), Name (Name)
 {
@@ -9360,18 +9354,6 @@ STRING 3829
 [Tyrande] Moonkin Adept Training
 }
 
-STRING 3830
-// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Rejuvenation.
-}
-
-STRING 3831
-// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Bear Form.
-}
-
 STRING 3838
 // Abilities: A05W ([Tyrande] Bladed Feathers), Name (Name)
 {
@@ -9554,16 +9536,8 @@ STRING 3871
 Priestess of Elune Adept Training
 }
 
-STRING 3872
-// Units: e000 ([Tyrande] Tree of Life), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Wisps and entangle gold mines. Can be upgraded to Tree of Ages and then Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 3873
-// Units: e001 ([Tyrande] Wisp), Ubertip (Tooltip - Extended)
+// Units: e001 ([Tyrande] Mystic Wisp), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#worker #builder
 |R
@@ -9634,22 +9608,6 @@ STRING 3882
 Trains Chimaeras. |nAlso contains the Corrosive Breath upgrade.
 }
 
-STRING 3883
-// Units: e00A ([Tyrande] Tree of Ages), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Upgrade to Tree of Ages to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 3884
-// Units: e00E ([Tyrande] Tree of Eternity), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Upgrade to Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 3885
 // Units: e00F ([Tyrande] Huntress), Ubertip (Tooltip - Extended)
 {
@@ -9688,14 +9646,6 @@ STRING 3890
 |cffffcc00#ranged #fly
 |R
 Flying two headed Dragon. Can learn Corrosive Breath. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 3891
-// Units: e00L ([Tyrande] Moonkin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee #support
-|R
-Melee spellcaster. Can initially cast Roar, which increases attack damage. Can also learn Rejuvenation, Bear Form and Mark of the Claw. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 3894
@@ -10722,12 +10672,6 @@ STRING 4175
 Increases nearby friendly units' movement speed by <A06L,DataA1,%>%.
 }
 
-STRING 4176
-// Upgrades: R02C (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Improves the fighting capabilities of all totems with a <R02C,base1> hit point increase.
-}
-
 STRING 4177
 // Abilities: A06I ([Thrall] Switch to Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
 {
@@ -10738,7 +10682,7 @@ Increases nearby friendly units' movement speed by <A06L,DataA1,%>%.
 }
 
 STRING 4182
-// Upgrades: R02C (Brute Strength), Name (Name)
+// Abilities: A09C ([Thrall] Artisan-crafted Totem), Name (Name)
 {
 [Thrall] Artisan-crafted Totem
 }
@@ -17077,5 +17021,99 @@ STRING 5510
 // Units: H02J ([UI] F1), Name (Name)
 {
 [UI] F1
+}
+
+STRING 5511
+// Units: e000 ([Tyrande] Tree of Life), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Mystic Wisps and entangle gold mines. Can be upgraded to Tree of Ages and then Tree of Eternity to enable the production of additional types of structures and units.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5512
+// Units: e001 ([Tyrande] Mystic Wisp), Name (Name)
+{
+[Tyrande] Mystic Wisp
+}
+
+STRING 5513
+// Units: e001 ([Tyrande] Mystic Wisp), Tip (Tooltip - Basic)
+{
+Train Mystic Wisp
+}
+
+STRING 5514
+// Units: e00A ([Tyrande] Tree of Ages), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Tree of Ages to enable the production of additional types of structures and units.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5515
+// Units: e00E ([Tyrande] Tree of Eternity), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Tree of Eternity to enable the production of additional types of structures and units
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5517
+// Units: e00L ([Tyrande] Moonkin), Casterupgradetip (Caster Upgrade Tips)
+{
+-,- Bladed Feathers,- Bladed Feathers|n- Roar
+}
+
+STRING 5518
+// Units: e00L ([Tyrande] Moonkin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Melee spellcaster. Can also learn Bladed Feathers and Roar.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5519
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Bladed Feathers.
+}
+
+STRING 5520
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Roar.
+}
+
+STRING 5521
+// Abilities: A09C ([Thrall] Artisan-crafted Totem), Tip (Tooltip - Normal)
+{
+Artisan-crafted Totem
+}
+
+STRING 5522
+// Abilities: A09C ([Thrall] Artisan-crafted Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Totem with a 75 hit point increase.
+}
+
+STRING 5523
+// Upgrades: R02C (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of all totems with a 75 hit point increase.
+}
+
+STRING 5524
+// Upgrades: R02C (Brute Strength), Name (Name)
+{
+[Thrall] Artisan-crafted Totem
 }
 
