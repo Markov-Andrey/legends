@@ -1508,7 +1508,7 @@ STRING 1496
 }
 
 STRING 1501
-// Abilities: A029 ([Arthas] Corrosion), Tip (Tooltip - Normal)
+// Abilities: A09H ([Arthas] Corrosion), Tip (Tooltip - Normal)
 {
 Corrosion
 }
@@ -3658,7 +3658,7 @@ Build Bank of Stormwind
 }
 
 STRING 2255
-// Abilities: A029 ([Arthas] Corrosion), Name (Name)
+// Abilities: A09H ([Arthas] Corrosion), Name (Name)
 {
 [Arthas] Corrosion
 }
@@ -4006,12 +4006,6 @@ Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cos
 
 |cff00ff00Unholy:|r
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
-}
-
-STRING 2361
-// Abilities: A029 ([Arthas] Corrosion), Ubertip (Tooltip - Normal - Extended)
-{
-Reduces armor by <A029,DataB1> for <A029,Dur1> seconds on attack.
 }
 
 STRING 2362
@@ -4516,12 +4510,6 @@ Winds of Northrend - Reduce nearby enemy units' movement speed by <A02H,DataA1,%
 
 |cff00ff00Unholy:|r
 Icecrown Plague Spread - Plague continues to grow as unit mana pool grows.
-}
-
-STRING 2456
-// Abilities: A034 ([Arthas] Deathfrost Shards), Ubertip (Tooltip - Normal - Extended)
-{
-Bombards an area with shards, dealing up to <A034,Data1> damage to nearby enemy land units and stunning them for <A034,Dur1> second.
 }
 
 STRING 2457
@@ -6380,30 +6368,6 @@ STRING 3062
 Heroic Strike - [|cffffcc00Level 3|r]
 }
 
-STRING 3063
-// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A03H,DataA1>% chance to do <A03H,DataB1> times normal damage on an attack.
-}
-
-STRING 3064
-// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A03H,DataA2>% chance to do <A03H,DataB2> times normal damage on an attack.
-}
-
-STRING 3065
-// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A03H,DataA3>% chance to do <A03H,DataB3> times normal damage on an attack.
-}
-
-STRING 3066
-// Abilities: A03H ([Wrynn] Heroic Strike), Researchubertip (Tooltip - Learn - Extended)
-{
-Gives a chance to do more damage on an attack. |n|n|cffffcc00Level 1|r - <A03H,DataA1>% chance, <A03H,DataB1> times normal damage. |n|cffffcc00Level 2|r - <A03H,DataA2>% chance, <A03H,DataB2> times normal damage. |n|cffffcc00Level 3|r - <A03H,DataA3>% chance, <A03H,DataB3> times normal damage.
-}
-
 STRING 3069
 // Abilities: A03I ([Wrynn] Stormwind Battlecry), Ubertip (Tooltip - Normal - Extended)
 {
@@ -6502,18 +6466,6 @@ STRING 3086
 // Buffs/Effects: B00K (), Buffubertip (Tooltip - Extended)
 {
 This unit has Taunt; its armor are increased.
-}
-
-STRING 3088
-// Abilities: A03J ([Wrynn] Taunt), Researchubertip (Tooltip - Learn - Extended)
-{
-The closest <A03J,DataA1> enemies are forced to attack this unit.
-}
-
-STRING 3089
-// Abilities: A03J ([Wrynn] Taunt), Ubertip (Tooltip - Normal - Extended)
-{
-The closest <A03J,DataA1> enemies are forced to attack this unit.
 }
 
 STRING 3090
@@ -6726,12 +6678,6 @@ STRING 3155
 // Buffs/Effects: B00P ([Wrynn] Veteran: Defensive Stance), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Defensive Stance; it has increased armor.
-}
-
-STRING 3160
-// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
 }
 
 STRING 3169
@@ -7908,14 +7854,6 @@ STRING 3537
 |cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
 
 While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
-}
-
-STRING 3538
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
-{
-|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
-
-Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
 }
 
 STRING 3539
@@ -15517,7 +15455,7 @@ Z
 }
 
 STRING 5296
-// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+// Abilities: A09F ([F1] Tactical), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17139,5 +17077,185 @@ STRING 5544
 // Abilities: A03G ([Wrynn] Lion's Fang), Researchubertip (Tooltip - Learn - Extended)
 {
 A wave of force that ripples out from the Hero, causing damage to land units in a line. |n|n|cffffcc00Level 1|r - <A03G,DataA1> damage. |n|cffffcc00Level 2|r - <A03G,DataA2> damage. |n|cffffcc00Level 3|r - <A03G,DataA3> damage.
+}
+
+STRING 5549
+// Abilities: A09D ([F1] Disabled Auto Walk), Tip (Tooltip - Normal)
+{
+Disabled Auto Walk
+}
+
+STRING 5567
+// Abilities: A09E ([F1] Disabled Harvest), Tip (Tooltip - Normal)
+{
+Disabled Harvest
+}
+
+STRING 5568
+// Abilities: A09D ([F1] Disabled Auto Walk), Name (Name)
+{
+[F1] Disabled Auto Walk
+}
+
+STRING 5569
+// Abilities: A09E ([F1] Disabled Harvest), Name (Name)
+{
+[F1] Disabled Harvest
+}
+
+STRING 5570
+// Abilities: A09F ([F1] Tactical), Name (Name)
+{
+[F1] Tactical
+}
+
+STRING 5571
+// Abilities: A09F ([F1] Tactical), Tip (Tooltip - Normal)
+{
+Tactical
+}
+
+STRING 5573
+// Abilities: A09G ([F1] Regroup), Hotkey (Hotkey - Normal)
+{
+T
+}
+
+STRING 5574
+// Abilities: A09G ([F1] Regroup), Name (Name)
+{
+[F1] Regroup
+}
+
+STRING 5577
+// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 5582
+// Abilities: A09G ([F1] Regroup), Tip (Tooltip - Normal)
+{
+Regroup
+}
+
+STRING 5584
+// Abilities: A09F ([F1] Tactical), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF7E00Regroup|R - Select all units except workers, lumber-harvesting units, buildings, and special units. 
+
+|cFF64FF93Tactical|R - Select all units except workers, lumber-harvesting units, buildings, special units, and units with the patrol or hold position command.
+}
+
+STRING 5585
+// Abilities: A09G ([F1] Regroup), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF7E00Regroup|R - Select all units except workers, lumber-harvesting units, buildings, and special units. 
+
+|cFF64FF93Tactical|R - Select all units except workers, lumber-harvesting units, buildings, special units, and units with the patrol or hold position command.
+}
+
+STRING 5586
+// Abilities: A034 ([Arthas] Deathfrost Shards), Ubertip (Tooltip - Normal - Extended)
+{
+Bombards an area with shards, dealing up to 12 damage to nearby enemy land units and stunning them for 3 second.
+}
+
+STRING 5587
+// Buffs/Effects: B01R ([Arthas] Deathfrost Shards), EditorName (Name (Editor Only))
+{
+[Arthas] Deathfrost Shards
+}
+
+STRING 5588
+// Buffs/Effects: B01R ([Arthas] Deathfrost Shards), Bufftip (Tooltip)
+{
+Deathfrost Shards
+}
+
+STRING 5589
+// Buffs/Effects: B01R ([Arthas] Deathfrost Shards), Buffubertip (Tooltip - Extended)
+{
+Deathfrost Shards
+}
+
+STRING 5590
+// Buffs/Effects: X001 ([Arthas] Deathfrost Shards (effect)), EditorName (Name (Editor Only))
+{
+[Arthas] Deathfrost Shards (effect)
+}
+
+STRING 5591
+// Buffs/Effects: X001 ([Arthas] Deathfrost Shards (effect)), Bufftip (Tooltip)
+{
+Deathfrost Shards
+}
+
+STRING 5592
+// Abilities: A09H ([Arthas] Corrosion), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces armor by <A09H,DataB1> for <A09H,Dur1> seconds on attack.
+}
+
+STRING 5595
+// Abilities: A09H ([Arthas] Corrosion), Hotkey (Hotkey - Normal)
+{
+C
+}
+
+STRING 5596
+// Abilities: A09H ([Arthas] Corrosion), Unhotkey (Hotkey - Turn Off)
+{
+C
+}
+
+STRING 5600
+// Abilities: A03H ([Wrynn] Heroic Strike), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives a chance to do more damage on an attack. |n|n|cffffcc00Level 1|r - <A03H,DataA1>% chance, 1.5 times normal damage. |n|cffffcc00Level 2|r - <A03H,DataA2>% chance, 2.0 times normal damage. |n|cffffcc00Level 3|r - <A03H,DataA3>% chance, 2.5 times normal damage.
+}
+
+STRING 5601
+// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 15% chance to do 1.5 times normal damage on an attack.
+}
+
+STRING 5602
+// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 17.5% chance to do 2.0 times normal damage on an attack.
+}
+
+STRING 5603
+// Abilities: A03H ([Wrynn] Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 20% chance to do 2.5 times normal damage on an attack.
+}
+
+STRING 5604
+// Abilities: A042 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 15% chance to do 1.25 times normal damage on an attack.
+}
+
+STRING 5605
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Gives a 15% chance to do 1.25 times normal damage on an attack.
+}
+
+STRING 5606
+// Abilities: A03J ([Wrynn] Taunt), Researchubertip (Tooltip - Learn - Extended)
+{
+The closest <A03J,DataA1> enemies are forced to attack Wrynn, while he gains +50 armor.
+}
+
+STRING 5607
+// Abilities: A03J ([Wrynn] Taunt), Ubertip (Tooltip - Normal - Extended)
+{
+The closest <A03J,DataA1> enemies are forced to attack Wrynn, while he gains +50 armor.
 }
 

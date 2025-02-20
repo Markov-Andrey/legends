@@ -309,6 +309,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_OrderHoldPatrol= null
+trigger gg_trg_OrderHarvest= null
+trigger gg_trg_F1OrderSwap= null
 
     // Random Groups
 integer array gg_rg_000
@@ -2245,9 +2248,14 @@ function Trig_BtnF1_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetOrderedUnit()) == 'H02J'
 endfunction
 
-function Trig_BtnF1_UnitFilter takes nothing returns boolean
+function Trig_BtnF1_UnitFilter_All takes nothing returns boolean
     local unit u= GetFilterUnit()
-    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1
+    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1
+endfunction
+
+function Trig_BtnF1_UnitFilter_NoWalk takes nothing returns boolean
+    local unit u= GetFilterUnit()
+    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1 and GetUnitAbilityLevel(u, 'A09D') != 1
 endfunction
 
 function Trig_BtnF1_Actions takes nothing returns nothing
@@ -2256,7 +2264,7 @@ function Trig_BtnF1_Actions takes nothing returns nothing
     local integer orderId= GetIssuedOrderId()
     local unit targetUnit= GetOrderTargetUnit()
     local location targetLoc= GetOrderPointLoc()
-    local group g
+    local group g= null
     local unit u
 
     if orderId == 0 then
@@ -2266,28 +2274,34 @@ function Trig_BtnF1_Actions takes nothing returns nothing
         return
     endif
 
-    set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter))
+    if GetUnitAbilityLevel(orderedUnit, 'A09F') != 1 then
+        set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter_All))
+    else
+        set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter_NoWalk))
+    endif
 
-    loop
-        set u=FirstOfGroup(g)
-        exitwhen u == null
+    if g != null then
+        loop
+            set u=FirstOfGroup(g)
+            exitwhen u == null
 
-        if targetUnit != null then
-            call IssueTargetOrderById(u, orderId, targetUnit)
-        elseif targetLoc != null then
-            call IssuePointOrderByIdLoc(u, orderId, targetLoc)
-        else
-            call IssueImmediateOrderById(u, orderId)
-        endif
+            if targetUnit != null then
+                call IssueTargetOrderById(u, orderId, targetUnit)
+            elseif targetLoc != null then
+                call IssuePointOrderByIdLoc(u, orderId, targetLoc)
+            else
+                call IssueImmediateOrderById(u, orderId)
+            endif
 
-        call GroupRemoveUnit(g, u)
-    endloop
+            call GroupRemoveUnit(g, u)
+        endloop
+
+        call DestroyGroup(g)
+    endif
 
     if targetLoc != null then
         call RemoveLocation(targetLoc)
     endif
-
-    call DestroyGroup(g)
 endfunction
 
 function InitTrig_BtnF1 takes nothing returns nothing
@@ -2297,6 +2311,198 @@ function InitTrig_BtnF1 takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_BtnF1, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerAddCondition(gg_trg_BtnF1, Condition(function Trig_BtnF1_Conditions))
     call TriggerAddAction(gg_trg_BtnF1, function Trig_BtnF1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrderHoldPatrol
+//===========================================================================
+function Trig_OrderHoldPatrol_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09D', GetOrderedUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09D', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001Func001C takes nothing returns boolean
+    if ( not ( GetIssuedOrderIdBJ() == String2OrderIdBJ("patrol") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09D', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001C takes nothing returns boolean
+    if ( not ( GetIssuedOrderIdBJ() == String2OrderIdBJ("holdposition") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Actions takes nothing returns nothing
+    if ( Trig_OrderHoldPatrol_Func001C() ) then
+        if ( Trig_OrderHoldPatrol_Func001Func002C() ) then
+            call UnitAddAbilityBJ('A09D', GetOrderedUnit())
+        else
+        endif
+    else
+        if ( Trig_OrderHoldPatrol_Func001Func001C() ) then
+            if ( Trig_OrderHoldPatrol_Func001Func001Func002C() ) then
+                call UnitAddAbilityBJ('A09D', GetOrderedUnit())
+            else
+            endif
+        else
+            if ( Trig_OrderHoldPatrol_Func001Func001Func001C() ) then
+                call UnitRemoveAbilityBJ('A09D', GetOrderedUnit())
+            else
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_OrderHoldPatrol takes nothing returns nothing
+    set gg_trg_OrderHoldPatrol=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHoldPatrol, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHoldPatrol, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHoldPatrol, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddAction(gg_trg_OrderHoldPatrol, function Trig_OrderHoldPatrol_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrderHarvest
+//===========================================================================
+function Trig_OrderHarvest_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09E', GetOrderedUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09E', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001Func001C takes nothing returns boolean
+    if ( not ( GetIssuedOrderIdBJ() == String2OrderIdBJ("resumeharvesting") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09E', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001C takes nothing returns boolean
+    if ( not ( IsDestructableAliveBJ(GetOrderTargetDestructable()) == true ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('Ahrl', GetOrderedUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Actions takes nothing returns nothing
+    if ( Trig_OrderHarvest_Func001C() ) then
+        if ( Trig_OrderHarvest_Func001Func002C() ) then
+            call UnitAddAbilityBJ('A09E', GetOrderedUnit())
+        else
+        endif
+    else
+        if ( Trig_OrderHarvest_Func001Func001C() ) then
+            if ( Trig_OrderHarvest_Func001Func001Func002C() ) then
+                call UnitAddAbilityBJ('A09E', GetOrderedUnit())
+            else
+            endif
+        else
+            if ( Trig_OrderHarvest_Func001Func001Func001C() ) then
+                call UnitRemoveAbilityBJ('A09E', GetOrderedUnit())
+            else
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_OrderHarvest takes nothing returns nothing
+    set gg_trg_OrderHarvest=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHarvest, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddAction(gg_trg_OrderHarvest, function Trig_OrderHarvest_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: F1OrderSwap
+//===========================================================================
+function Trig_F1OrderSwap_Func003C takes nothing returns boolean
+    if ( ( GetSpellAbilityId() == 'A09G' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A09F' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_F1OrderSwap_Conditions takes nothing returns boolean
+    if ( not Trig_F1OrderSwap_Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_F1OrderSwap_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A09G' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_F1OrderSwap_Func002C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A09F' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_F1OrderSwap_Actions takes nothing returns nothing
+    if ( Trig_F1OrderSwap_Func001C() ) then
+        call UnitAddAbilityBJ('A09F', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A09G', GetSpellAbilityUnit())
+    else
+    endif
+    if ( Trig_F1OrderSwap_Func002C() ) then
+        call UnitAddAbilityBJ('A09G', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A09F', GetSpellAbilityUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_F1OrderSwap takes nothing returns nothing
+    set gg_trg_F1OrderSwap=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_F1OrderSwap, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_F1OrderSwap, Condition(function Trig_F1OrderSwap_Conditions))
+    call TriggerAddAction(gg_trg_F1OrderSwap, function Trig_F1OrderSwap_Actions)
 endfunction
 
 //===========================================================================
@@ -11899,6 +12105,9 @@ endfunction
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_BtnF1()
+    call InitTrig_OrderHoldPatrol()
+    call InitTrig_OrderHarvest()
+    call InitTrig_F1OrderSwap()
     call InitTrig_LimitUnitsF1()
     call InitTrig_StartResouces()
     call InitTrig_StartCameraP1()
