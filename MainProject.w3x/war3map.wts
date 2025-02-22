@@ -9635,7 +9635,7 @@ STRING 3996
 }
 
 STRING 3997
-// Abilities: A003 ([UI] Difficulty: Easy), Hotkey (Hotkey - Normal)
+// Abilities: A01C ([UI] Legends: Arthas), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -9689,7 +9689,7 @@ W
 }
 
 STRING 4010
-// Abilities: A057 ([Tyrande] Eclipse), Hotkey (Hotkey - Normal)
+// Abilities: A054 ([UI] Legends: Tyrande), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -10801,7 +10801,7 @@ STRING 4302
 }
 
 STRING 4303
-// Abilities: A08E ([Whitemane] Scarlet March (On)), Hotkey (Hotkey - Normal)
+// Abilities: A003 ([UI] Difficulty: Easy), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -10813,19 +10813,19 @@ R
 }
 
 STRING 4305
-// Abilities: A08F ([Whitemane] Scarlet March (Off)), Hotkey (Hotkey - Normal)
+// Abilities: A06B ([UI] Legends: Thrall), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 4306
-// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+// Abilities: A057 ([Tyrande] Eclipse), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 4307
-// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
+// Abilities: A031 ([UI] Legends: Varian Wrynn), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -10935,7 +10935,7 @@ Research Earth Amulet
 }
 
 STRING 4327
-// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08E ([Whitemane] Scarlet March (On)), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -10995,7 +10995,7 @@ Research Windfury Weapon
 }
 
 STRING 4340
-// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11019,7 +11019,7 @@ Research Quaking Totem
 }
 
 STRING 4345
-// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11133,7 +11133,7 @@ STRING 4369
 }
 
 STRING 4370
-// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -12508,7 +12508,7 @@ X
 }
 
 STRING 4626
-// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -13122,7 +13122,7 @@ S
 }
 
 STRING 4721
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A071 ([UI] Legends: Whitemane), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -15092,7 +15092,7 @@ Z
 }
 
 STRING 5296
-// Abilities: A09F ([F1] Tactical), Hotkey (Hotkey - Normal)
+// Abilities: A01J ([UI] Legends: Uther), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -15104,13 +15104,13 @@ The crossbowman cannot attack targets within a range of less than 200.
 }
 
 STRING 5298
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08F ([Whitemane] Scarlet March (Off)), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 5299
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -16047,13 +16047,13 @@ Removes all bonuses, stops health loss, and resets the Scarlet Crusade level to 
 }
 
 STRING 5422
-// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 5423
-// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
 {
 W
 }
@@ -16747,7 +16747,7 @@ STRING 5574
 }
 
 STRING 5577
-// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+// Abilities: A09F ([F1] Tactical), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -17486,5 +17486,41 @@ STRING 5708
 // Units: e00K ([Tyrande] Veiled Chimaera), Tip (Tooltip - Basic)
 {
 Train Veiled Chimaera
+}
+
+STRING 5709
+// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 5710
+// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 5711
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 5712
+// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 5713
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 5714
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
 }
 
