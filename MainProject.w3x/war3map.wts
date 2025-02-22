@@ -11016,14 +11016,6 @@ STRING 4292
 Research Water Ring
 }
 
-STRING 4294
-// Upgrades: R02P (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add +0.5 mana per second
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Shaman
-}
-
 STRING 4295
 // Buffs/Effects: B018 ([Thrall] Water Ring), Bufftip (Tooltip)
 {
@@ -16980,24 +16972,6 @@ Increases defense by +2
 |cFFFF5800Only 1 upgrade for the unit type|R - Raider
 }
 
-STRING 5539
-// Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
-{
-Has a 75% chance to deal 1.3 times normal damage.
-
-
-
-}
-
-STRING 5540
-// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Has a 75% chance to deal 1.3 times normal damage.
-
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
-}
-
 STRING 5541
 // Units: o005 ([Thrall] Shaman), Ubertip (Tooltip - Extended)
 {
@@ -17328,5 +17302,35 @@ STRING 5629
 // Upgrades: R013 (Fragmentation Shards), Ubertip (Tooltip - Extended)
 {
 Damage no longer causes damage to allied troops
+}
+
+STRING 5630
+// Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Has an 85% chance to deal 1.5 times normal damage to flying units.
+
+}
+
+STRING 5631
+// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Has an 85% chance to deal 1.5 times normal damage to flying units.
+
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
+}
+
+STRING 5632
+// Abilities: A07F ([Thrall] Water Ring), Ubertip (Tooltip - Normal - Extended)
+{
+Add +0.75 mana per second.
+}
+
+STRING 5633
+// Upgrades: R02P (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +0.75 mana per second
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Shaman
 }
 
