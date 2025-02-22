@@ -4286,7 +4286,6 @@ function Trig_ArthasSacrifice_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetTrainedUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
     call RemoveUnit(GetTrainedUnit())
     set udg_ArthasSouls=( udg_ArthasSouls + 5 )
-    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetTrainedUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetTrainedUnit())), udg_ArthasSouls)
 endfunction
 
 //===========================================================================

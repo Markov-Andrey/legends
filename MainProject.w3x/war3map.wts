@@ -1921,12 +1921,6 @@ STRING 1699
 [Arthas] Frostmourne's Hunger
 }
 
-STRING 1700
-// Abilities: A02R ([Arthas] Frostmourne's Hunger), Researchubertip (Tooltip - Learn - Extended)
-{
-Increases Soul movement speed.|n|n|cffffcc00Level 1|r - <A02R,DUR1,+> add speed. |n|cffffcc00Level 2|r - <A02R,DUR1,+> add speed. |n|cffffcc00Level 3|r - <A02R,DUR1,+> add speed.
-}
-
 STRING 1701
 // Abilities: A02R ([Arthas] Frostmourne's Hunger), Researchtip (Tooltip - Learn)
 {
@@ -2095,16 +2089,8 @@ STRING 1784
 Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, an Arcane Tower, or a Cannon Tower. Can learn the Magic Sentry ability.
 }
 
-STRING 1785
-// Units: h02P ([Uther] Guard Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 1786
-// Units: h02Q ([Uther] Cannon Tower), Ubertip (Tooltip - Extended)
+// Units: h015 ([Wrynn] Cannon Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -2923,24 +2909,6 @@ STRING 2100
 |cffffcc00 #T3 #food #storage
 |R
 Upgrade to Castle to enable the production of additional types of structures and units.
-}
-
-STRING 2101
-// Abilities: A00C ([Uther] Summon Champion of Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful champion who supports the army with his aura
-}
-
-STRING 2102
-// Abilities: A00D ([Uther] Summon Champion of Protection), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful champion who supports the army with his aura
-}
-
-STRING 2103
-// Abilities: A00E ([Uther] Summon Champion of Holy), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful champion who supports the army with his aura
 }
 
 STRING 2111
@@ -4278,12 +4246,6 @@ Ice of Northrend - Gives <A027,DataA1>% chance to Freeze the enemy for <A027,Dur
 
 |cff00ff00Unholy:|r
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
-}
-
-STRING 2452
-// Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
-{
-Plague continues to grow as unit mana pool grows
 }
 
 STRING 2454
@@ -6662,22 +6624,6 @@ STRING 3270
 |cffffcc00#heroes
 |R
 Summons Heroes. Revives slain Heroes.
-}
-
-STRING 3284
-// Units: h00C ([Uther] Light Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard #support
-|R
-Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
-}
-
-STRING 3290
-// Units: h015 ([Wrynn] Cannon Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land units and trees.|r
 }
 
 STRING 3298
@@ -12565,14 +12511,6 @@ STRING 4620
 Upgrade to create a defensive structure that deals cold damage and slows enemy units. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 4621
-// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#unique #mechanics
-|R
-Provides attack and armor upgrades for units. Also produces corpses and serves as a drop-off point for harvested lumber.
-}
-
 STRING 4623
 // Units: u00E ([Arthas] Unholy Tower), Ubertip (Tooltip - Extended)
 {
@@ -15908,7 +15846,7 @@ Supporting spellcaster. Can initially cast Interrogation, which redirects negati
 }
 
 STRING 5381
-// Units: h014 ([Wrynn] Guard Tower), Ubertip (Tooltip - Extended)
+// Units: h02P ([Uther] Guard Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -17470,5 +17408,77 @@ STRING 5691
 // Buffs/Effects: B00J ([Arthas] Glacial Gusto), EditorName (Name (Editor Only))
 {
 [Arthas] Glacial Gusto
+}
+
+STRING 5692
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Summon a powerful champion with a Retribution Aura, reflecting melee damage back to attacking enemies.
+}
+
+STRING 5693
+// Abilities: A00D ([Uther] Summon Champion of Protection), Ubertip (Tooltip - Normal - Extended)
+{
+Summon a powerful champion who possesses a Devotion Aura, granting additional armor to nearby friendly units.
+}
+
+STRING 5694
+// Abilities: A00E ([Uther] Summon Champion of Holy), Ubertip (Tooltip - Normal - Extended)
+{
+Summon a powerful champion who possesses a Holy Aura, enhancing the health regeneration of nearby friendly units.
+}
+
+STRING 5697
+// Units: h02Q ([Uther] Cannon Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability.
+
+|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 5698
+// Units: h00C ([Uther] Light Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#support
+|R
+A tower that channels pure light, unable to attack, but radiates healing energy to nearby friendly units. Can learn the Magic Sentry ability.
+
+|cffffcc00No attacks.|r
+}
+
+STRING 5699
+// Units: h014 ([Wrynn] Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure. Can learn the Magic Sentry ability.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5700
+// Abilities: A02R ([Arthas] Frostmourne's Hunger), Researchubertip (Tooltip - Learn - Extended)
+{
+Increases the movement speed of souls dropped by slain units. Souls can be collected by Arthas and used for unit transformation.
+
+|cffffcc00Level 1|r - Increases speed by <A02R,DUR1,+>
+|cffffcc00Level 2|r - Increases speed by <A02R,DUR1,+>
+|cffffcc00Level 3|r - Increases speed by <A02R,DUR1,+>
+}
+
+STRING 5701
+// Units: u01C ([Arthas] Frostmourne Pedestal), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#unique #mechanics
+|R
+Executes Acolytes, granting 5 souls to the resource pool.
+}
+
+STRING 5702
+// Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
+{
+The corruption of the land spreads as the building accumulates mana, allowing construction on the affected areas.
 }
 
