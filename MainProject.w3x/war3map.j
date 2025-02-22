@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader__eventTrigger= CreateTrigger()
-trigger FrameLoader__actionTrigger= CreateTrigger()
-timer FrameLoader__t= CreateTimer()
+trigger FrameLoader___eventTrigger= CreateTrigger()
+trigger FrameLoader___actionTrigger= CreateTrigger()
+timer FrameLoader___t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI__workerFace= true
+constant boolean CustomConsoleUI___workerFace= true
         
-framehandle CustomConsoleUI__idleWorkerButton
-framehandle CustomConsoleUI__idleWorkerButtonOverlay
-framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI__customInventoryCover
-framehandle CustomConsoleUI__customInventoryCoverParent
+framehandle CustomConsoleUI___idleWorkerButton
+framehandle CustomConsoleUI___idleWorkerButtonOverlay
+framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI___customInventoryCover
+framehandle CustomConsoleUI___customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI__dataPageSize= 11
+integer CustomConsoleUI___dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -131,11 +131,11 @@ trigger gg_trg_BtnF1= null
 trigger gg_trg_OrderHoldPatrol= null
 trigger gg_trg_OrderHarvest= null
 trigger gg_trg_F1OrderSwap= null
-trigger gg_trg_LimitUnitsF1= null
-trigger gg_trg_StartResouces= null
-trigger gg_trg_StartCameraP1= null
-trigger gg_trg_StartCameraP2= null
-trigger gg_trg_StartCameraReset= null
+trigger gg_trg_IniLimitUnitsF1= null
+trigger gg_trg_IniStartResouces= null
+trigger gg_trg_IniStartCameraP1= null
+trigger gg_trg_IniStartCameraP2= null
+trigger gg_trg_IniStartCameraReset= null
 trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
 trigger gg_trg_PreviewLegend= null
@@ -313,6 +313,7 @@ trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
 trigger gg_trg_TyrandeDori= null
+trigger gg_trg_IniSelectUnit= null
 
     // Random Groups
 integer array gg_rg_000
@@ -337,7 +338,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI__CreateIcon takes nothing returns nothing
+    function ARTHASUI___CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -373,8 +374,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI__init takes nothing returns nothing
-        call ARTHASUI__CreateIcon()
+    function ARTHASUI___init takes nothing returns nothing
+        call ARTHASUI___CreateIcon()
     endfunction
 
 
@@ -385,24 +386,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader__actionTrigger, func)
+        call TriggerAddAction(FrameLoader___actionTrigger, func)
     endfunction
 
-    function FrameLoader__timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader__actionTrigger)
+    function FrameLoader___timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader___actionTrigger)
     endfunction
-    function FrameLoader__eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
+    function FrameLoader___eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
     endfunction
-    function FrameLoader__init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
+    function FrameLoader___init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -462,15 +463,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER__init takes nothing returns nothing
-        call REFORGEDUIMAKER__CreateIcons()
+    function REFORGEDUIMAKER___init takes nothing returns nothing
+        call REFORGEDUIMAKER___CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits__InitRaceUnits takes nothing returns nothing
+    function RaceUnits___InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -605,7 +606,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI__CreateIcon takes nothing returns nothing
+    function THRALLUI___CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -637,15 +638,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI__init takes nothing returns nothing
-        call THRALLUI__CreateIcon()
+    function THRALLUI___init takes nothing returns nothing
+        call THRALLUI___CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI__CreateIcon takes nothing returns nothing
+    function WHITEMANEUI___CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -700,8 +701,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI__init takes nothing returns nothing
-        call WHITEMANEUI__CreateIcon()
+    function WHITEMANEUI___init takes nothing returns nothing
+        call WHITEMANEUI___CreateIcon()
     endfunction
 
 
@@ -720,7 +721,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -731,7 +732,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI__dataPageSize
+        set pageValue=index * CustomConsoleUI___dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -751,10 +752,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -767,11 +768,11 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             // Requires a native existing only in Reforged
 
-                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
-                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
-                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3)
+                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
+                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
 
 
 
@@ -779,11 +780,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
-            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
+            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -804,19 +805,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI__Init takes nothing returns nothing
+    function CustomConsoleUI___Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI__at0s takes nothing returns nothing
-        call CustomConsoleUI__Init()
+    function CustomConsoleUI___at0s takes nothing returns nothing
+        call CustomConsoleUI___Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI__update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI___update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI__init_function takes nothing returns nothing
+    function CustomConsoleUI___init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -950,11 +951,11 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
 
-            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
 
     endfunction
 
@@ -2507,19 +2508,19 @@ function InitTrig_F1OrderSwap takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: LimitUnitsF1
+// Trigger: IniLimitUnitsF1
 //
 // Construction Limit for Unique Units
 //===========================================================================
-function Trig_LimitUnitsF1_Func001Func001C takes nothing returns boolean
+function Trig_IniLimitUnitsF1_Func001Func001C takes nothing returns boolean
     if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LimitUnitsF1_Func001A takes nothing returns nothing
-    if ( Trig_LimitUnitsF1_Func001Func001C() ) then
+function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
+    if ( Trig_IniLimitUnitsF1_Func001Func001C() ) then
         call CreateNUnitsAtLoc(1, 'H02J', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
         call SuspendHeroXPBJ(false, GetLastCreatedUnit())
         // Arthas
@@ -2545,71 +2546,89 @@ function Trig_LimitUnitsF1_Func001A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_LimitUnitsF1_Actions takes nothing returns nothing
-    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnitsF1_Func001A)
+function Trig_IniLimitUnitsF1_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniLimitUnitsF1_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_LimitUnitsF1 takes nothing returns nothing
-    set gg_trg_LimitUnitsF1=CreateTrigger()
-    call TriggerAddAction(gg_trg_LimitUnitsF1, function Trig_LimitUnitsF1_Actions)
+function InitTrig_IniLimitUnitsF1 takes nothing returns nothing
+    set gg_trg_IniLimitUnitsF1=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniLimitUnitsF1, function Trig_IniLimitUnitsF1_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartResouces
+// Trigger: IniStartResouces
 //===========================================================================
-function Trig_StartResouces_Actions takes nothing returns nothing
+function Trig_IniStartResouces_Actions takes nothing returns nothing
     call MeleeStartingResources()
 endfunction
 
 //===========================================================================
-function InitTrig_StartResouces takes nothing returns nothing
-    set gg_trg_StartResouces=CreateTrigger()
-    call TriggerAddAction(gg_trg_StartResouces, function Trig_StartResouces_Actions)
+function InitTrig_IniStartResouces takes nothing returns nothing
+    set gg_trg_IniStartResouces=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniStartResouces, function Trig_IniStartResouces_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartCameraP1
+// Trigger: IniSelectUnit
 //===========================================================================
-function Trig_StartCameraP1_Actions takes nothing returns nothing
+function Trig_IniSelectUnit_Func001A takes nothing returns nothing
+    call SelectUnitForPlayerSingle(GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), 'h001')), GetEnumPlayer())
+endfunction
+
+function Trig_IniSelectUnit_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniSelectUnit_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_IniSelectUnit takes nothing returns nothing
+    set gg_trg_IniSelectUnit=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_IniSelectUnit, 0.10)
+    call TriggerAddAction(gg_trg_IniSelectUnit, function Trig_IniSelectUnit_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: IniStartCameraP1
+//===========================================================================
+function Trig_IniStartCameraP1_Actions takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_StartView, Player(0), 0)
 endfunction
 
 //===========================================================================
-function InitTrig_StartCameraP1 takes nothing returns nothing
-    set gg_trg_StartCameraP1=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP1, 0.10)
-    call TriggerAddAction(gg_trg_StartCameraP1, function Trig_StartCameraP1_Actions)
+function InitTrig_IniStartCameraP1 takes nothing returns nothing
+    set gg_trg_IniStartCameraP1=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_IniStartCameraP1, 0.10)
+    call TriggerAddAction(gg_trg_IniStartCameraP1, function Trig_IniStartCameraP1_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartCameraP2
+// Trigger: IniStartCameraP2
 //===========================================================================
-function Trig_StartCameraP2_Actions takes nothing returns nothing
+function Trig_IniStartCameraP2_Actions takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_StartView, Player(1), 0)
 endfunction
 
 //===========================================================================
-function InitTrig_StartCameraP2 takes nothing returns nothing
-    set gg_trg_StartCameraP2=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP2, 0.10)
-    call TriggerAddAction(gg_trg_StartCameraP2, function Trig_StartCameraP2_Actions)
+function InitTrig_IniStartCameraP2 takes nothing returns nothing
+    set gg_trg_IniStartCameraP2=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_IniStartCameraP2, 0.10)
+    call TriggerAddAction(gg_trg_IniStartCameraP2, function Trig_IniStartCameraP2_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartCameraReset
+// Trigger: IniStartCameraReset
 //===========================================================================
-function Trig_StartCameraReset_Actions takes nothing returns nothing
-    call DisableTrigger(gg_trg_StartCameraP1)
-    call DisableTrigger(gg_trg_StartCameraP2)
+function Trig_IniStartCameraReset_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_IniStartCameraP1)
+    call DisableTrigger(gg_trg_IniStartCameraP2)
     call ResetToGameCameraForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), 0)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
 endfunction
 
 //===========================================================================
-function InitTrig_StartCameraReset takes nothing returns nothing
-    set gg_trg_StartCameraReset=CreateTrigger()
-    call TriggerAddAction(gg_trg_StartCameraReset, function Trig_StartCameraReset_Actions)
+function InitTrig_IniStartCameraReset takes nothing returns nothing
+    set gg_trg_IniStartCameraReset=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniStartCameraReset, function Trig_IniStartCameraReset_Actions)
 endfunction
 
 //===========================================================================
@@ -2860,13 +2879,13 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     set udg_PlayerArthas=GetOwningPlayer(GetSpellAbilityUnit())
     call SetPlayerTechResearchedSwap('R00E', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_ArthasIni)
-    call DisableTrigger(gg_trg_StartCameraP1)
+    call DisableTrigger(gg_trg_IniStartCameraP1)
     // SoulsScore
     set udg_ArthasSouls=0
     call ShowArthasUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
     call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_PURPLE, true)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -2921,7 +2940,7 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_UtherIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -2976,7 +2995,7 @@ function Trig_ChooseWrynn_Actions takes nothing returns nothing
     // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_WrynnIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -3034,7 +3053,7 @@ function Trig_ChooseWhitemane_Actions takes nothing returns nothing
     call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "off")
     call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , "0")
     call ConditionalTriggerExecute(gg_trg_WhitemaneIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -3097,7 +3116,7 @@ function Trig_ChooseTyrande_Actions takes nothing returns nothing
     // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R01M', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_TyrandeIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
     call TriggerSleepAction(1.00)
     call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func017A)
 endfunction
@@ -3151,7 +3170,7 @@ function Trig_ChooseThrall_Actions takes nothing returns nothing
     call SetPlayerTechResearchedSwap('R02B', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "air")
     call ConditionalTriggerExecute(gg_trg_ThrallIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -12146,11 +12165,12 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_OrderHoldPatrol()
     call InitTrig_OrderHarvest()
     call InitTrig_F1OrderSwap()
-    call InitTrig_LimitUnitsF1()
-    call InitTrig_StartResouces()
-    call InitTrig_StartCameraP1()
-    call InitTrig_StartCameraP2()
-    call InitTrig_StartCameraReset()
+    call InitTrig_IniLimitUnitsF1()
+    call InitTrig_IniStartResouces()
+    call InitTrig_IniSelectUnit()
+    call InitTrig_IniStartCameraP1()
+    call InitTrig_IniStartCameraP2()
+    call InitTrig_IniStartCameraReset()
     call InitTrig_ChooseFirst()
     call InitTrig_UnSelect()
     call InitTrig_PreviewLegend()
@@ -12332,8 +12352,8 @@ endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_LimitUnitsF1)
-    call ConditionalTriggerExecute(gg_trg_StartResouces)
+    call ConditionalTriggerExecute(gg_trg_IniLimitUnitsF1)
+    call ConditionalTriggerExecute(gg_trg_IniStartResouces)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_AlteracInitialization)
     call ConditionalTriggerExecute(gg_trg_NPCInitialization)
@@ -12482,13 +12502,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI__init")
-call ExecuteFunc("FrameLoader__init_function")
-call ExecuteFunc("REFORGEDUIMAKER__init")
-call ExecuteFunc("RaceUnits__InitRaceUnits")
-call ExecuteFunc("THRALLUI__init")
-call ExecuteFunc("WHITEMANEUI__init")
-call ExecuteFunc("CustomConsoleUI__init_function")
+call ExecuteFunc("ARTHASUI___init")
+call ExecuteFunc("FrameLoader___init_function")
+call ExecuteFunc("REFORGEDUIMAKER___init")
+call ExecuteFunc("RaceUnits___InitRaceUnits")
+call ExecuteFunc("THRALLUI___init")
+call ExecuteFunc("WHITEMANEUI___init")
+call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
