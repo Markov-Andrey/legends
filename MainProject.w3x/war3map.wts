@@ -11222,12 +11222,6 @@ STRING 4330
 Windfury Weapon
 }
 
-STRING 4331
-// Abilities: A07I ([Thrall] Windfury Weapon), Ubertip (Tooltip - Normal - Extended)
-{
-Add +10% speed attack
-}
-
 STRING 4332
 // Abilities: A07I ([Thrall] Windfury Weapon), EditorSuffix (Editor Suffix)
 {
@@ -13254,14 +13248,6 @@ STRING 4690
 // Upgrades: R02W (Envenomed Spears), EditorSuffix (Editor Suffix)
 {
 (Wind Rider)
-}
-
-STRING 4697
-// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add +20% speed attack
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Raider
 }
 
 STRING 4698
@@ -17332,5 +17318,19 @@ STRING 5633
 Add +0.75 mana per second
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Shaman
+}
+
+STRING 5634
+// Abilities: A07I ([Thrall] Windfury Weapon), Ubertip (Tooltip - Normal - Extended)
+{
+Add +25% speed attack
+}
+
+STRING 5635
+// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +25% speed attack
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
 }
 
