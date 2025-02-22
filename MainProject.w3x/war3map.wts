@@ -2449,12 +2449,6 @@ STRING 1982
 Learn Seal Of Wisdom - [|cffffcc00Level %d|r]
 }
 
-STRING 1985
-// Abilities: A013 ([Uther] Seal Of Wisdom), Researchubertip (Tooltip - Learn - Extended)
-{
-Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Level 1|r - Restores 1.5% mana when attacking. |n|cffffcc00Level 2|r - Restores 2.5% mana when attacking. |n|cffffcc00Level 3|r - Restores 3.5% mana when attacking.
-}
-
 STRING 1986
 // Abilities: A02S ([Uther] Shake), Name (Name)
 {
@@ -8275,12 +8269,6 @@ STRING 3672
 [Tyrande] Hippogryph Rider
 }
 
-STRING 3673
-// Units: e00K ([Tyrande] Chimaera), Name (Name)
-{
-[Tyrande] Chimaera
-}
-
 STRING 3674
 // Units: e00L ([Tyrande] Moonkin), Name (Name)
 {
@@ -9271,7 +9259,7 @@ Archer mounted Hippogryph. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 3890
-// Units: e00K ([Tyrande] Chimaera), Ubertip (Tooltip - Extended)
+// Units: e00K ([Tyrande] Veiled Chimaera), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #fly
 |R
@@ -11995,18 +11983,6 @@ STRING 4534
 Restores 1.0% mana when attacking
 }
 
-STRING 4535
-// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 2.0% mana when attacking
-}
-
-STRING 4536
-// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 3.0% mana when attacking
-}
-
 STRING 4539
 // Units: u000 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
 {
@@ -12988,13 +12964,6 @@ STRING 4690
 // Upgrades: R02W (Envenomed Spears), EditorSuffix (Editor Suffix)
 {
 (Wind Rider)
-}
-
-STRING 4698
-// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
-{
-Replaces all totems on the map and grants the ability:
-Restores 1% per second hit points to nearby friendly units.
 }
 
 STRING 4700
@@ -17480,5 +17449,42 @@ STRING 5702
 // Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
 {
 The corruption of the land spreads as the building accumulates mana, allowing construction on the affected areas.
+}
+
+STRING 5703
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 0.5% mana when attacking
+}
+
+STRING 5704
+// Abilities: A013 ([Uther] Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 1.5% mana when attacking
+}
+
+STRING 5705
+// Abilities: A013 ([Uther] Seal Of Wisdom), Researchubertip (Tooltip - Learn - Extended)
+{
+Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Level 1|r - Restores 0.5% mana when attacking. |n|cffffcc00Level 2|r - Restores 1.0% mana when attacking. |n|cffffcc00Level 3|r - Restores 1.5% mana when attacking.
+}
+
+STRING 5706
+// Abilities: A06G ([Thrall] Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Replaces all totems on the map and grants the ability:
+Restores 0,7% per second hit points to nearby friendly units.
+}
+
+STRING 5707
+// Units: e00K ([Tyrande] Veiled Chimaera), Name (Name)
+{
+[Tyrande] Veiled Chimaera
+}
+
+STRING 5708
+// Units: e00K ([Tyrande] Veiled Chimaera), Tip (Tooltip - Basic)
+{
+Train Veiled Chimaera
 }
 
