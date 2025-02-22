@@ -264,55 +264,55 @@ STRING 713
 }
 
 STRING 716
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Tip (Tooltip - Normal)
+// Abilities: A01O ([Arthas] Blood Soul), Tip (Tooltip - Normal)
 {
 Blood Soul
 }
 
 STRING 719
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Tip (Tooltip - Normal)
+// Abilities: A01P ([Arthas] Frost Soul), Tip (Tooltip - Normal)
 {
 Frost Soul
 }
 
 STRING 722
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Tip (Tooltip - Normal)
+// Abilities: A01Q ([Arthas] Unholy Soul), Tip (Tooltip - Normal)
 {
 Unholy Soul
 }
 
 STRING 729
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Tip (Tooltip - Normal)
 {
 Blood Soul Reforging
 }
 
 STRING 730
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Tip (Tooltip - Normal)
 {
 Blood Soul Reforging
 }
 
 STRING 745
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Tip (Tooltip - Normal)
 {
 Frost Soul Reforging
 }
 
 STRING 746
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Tip (Tooltip - Normal)
 {
 Frost Soul Reforging
 }
 
 STRING 761
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Tip (Tooltip - Normal)
 {
 Unholy Soul Reforging
 }
 
 STRING 762
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Tip (Tooltip - Normal)
 {
 Unholy Soul Reforging
 }
@@ -988,13 +988,13 @@ Train Wagon
 }
 
 STRING 1255
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Tip (Tooltip - Normal)
+// Abilities: A01O ([Arthas] Blood Soul), Tip (Tooltip - Normal)
 {
 Blood Soul
 }
 
 STRING 1256
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Tip (Tooltip - Normal)
+// Abilities: A01O ([Arthas] Blood Soul), Tip (Tooltip - Normal)
 {
 Blood Soul
 }
@@ -1060,19 +1060,19 @@ Unholy Rune Novice
 }
 
 STRING 1294
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Tip (Tooltip - Normal)
 {
 Blood Soul Reforging
 }
 
 STRING 1298
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Tip (Tooltip - Normal)
 {
 Frost Soul Reforging
 }
 
 STRING 1302
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Tip (Tooltip - Normal)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Tip (Tooltip - Normal)
 {
 Unholy Soul Reforging
 }
@@ -1108,25 +1108,25 @@ rlev
 }
 
 STRING 1316
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Tip (Tooltip - Normal)
+// Abilities: A01P ([Arthas] Frost Soul), Tip (Tooltip - Normal)
 {
 Frost Soul
 }
 
 STRING 1317
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Tip (Tooltip - Normal)
+// Abilities: A01P ([Arthas] Frost Soul), Tip (Tooltip - Normal)
 {
 Frost Soul
 }
 
 STRING 1318
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Tip (Tooltip - Normal)
+// Abilities: A01Q ([Arthas] Unholy Soul), Tip (Tooltip - Normal)
 {
 Unholy Soul
 }
 
 STRING 1319
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Tip (Tooltip - Normal)
+// Abilities: A01Q ([Arthas] Unholy Soul), Tip (Tooltip - Normal)
 {
 Unholy Soul
 }
@@ -1326,19 +1326,19 @@ STRING 1372
 }
 
 STRING 1398
-// Buffs/Effects: B00A ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
+// Abilities: A025 ([Arthas] Rotten teeth), Name (Name)
 {
 [Arthas] Rotten teeth
 }
 
 STRING 1399
-// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), Tip (Tooltip - Normal)
+// Abilities: A025 ([Arthas] Rotten teeth), Tip (Tooltip - Normal)
 {
 Rotten teeth
 }
 
 STRING 1400
-// Buffs/Effects: B00B ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
+// Buffs/Effects: B00A ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
 {
 [Arthas] Rotten teeth
 }
@@ -1387,21 +1387,15 @@ STRING 1421
 }
 
 STRING 1455
-// Buffs/Effects: B00C ([Arthas] Blood Rage), EditorName (Name (Editor Only))
+// Abilities: A024 ([Arthas] Blood Rage), Name (Name)
 {
 [Arthas] Blood Rage
 }
 
 STRING 1456
-// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Tip (Tooltip - Normal)
+// Abilities: A024 ([Arthas] Blood Rage), Tip (Tooltip - Normal)
 {
 Blood Rage
-}
-
-STRING 1458
-// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), EditorSuffix (Editor Suffix)
-{
-(Ghoul - Unholy)
 }
 
 STRING 1460
@@ -1418,19 +1412,19 @@ Unit attacks faster but moves slower
 }
 
 STRING 1463
-// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A025 ([Arthas] Rotten teeth), Ubertip (Tooltip - Normal - Extended)
 {
 A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
 STRING 1466
-// Abilities: A026 ([Arthas_Ghoul_Frost] Ice Shard), Tip (Tooltip - Normal)
+// Abilities: A026 ([Arthas] Ice Shard), Tip (Tooltip - Normal)
 {
 Ice Shard
 }
 
 STRING 1468
-// Abilities: A026 ([Arthas_Ghoul_Frost] Ice Shard), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A026 ([Arthas] Ice Shard), Ubertip (Tooltip - Normal - Extended)
 {
 Adds additional damage <A026,DataA1> to attacking enemies at the cost of mana.
 }
@@ -1514,19 +1508,19 @@ Corrosion
 }
 
 STRING 1505
-// Buffs/Effects: B00E ([Arthas] Blood Feast Aura), EditorName (Name (Editor Only))
+// Abilities: A019 ([Arthas] Blood Feast Aura), Name (Name)
 {
 [Arthas] Blood Feast Aura
 }
 
 STRING 1506
-// Abilities: A019 ([Arthas_StoneForm_Blood] Blood Feast Aura), Tip (Tooltip - Normal)
+// Abilities: A019 ([Arthas] Blood Feast Aura), Tip (Tooltip - Normal)
 {
 Blood Feast Aura
 }
 
 STRING 1508
-// Abilities: A019 ([Arthas_StoneForm_Blood] Blood Feast Aura), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A019 ([Arthas] Blood Feast Aura), Ubertip (Tooltip - Normal - Extended)
 {
 Nearby friendly melee units gain <A019,DataA1,%>% of their attack damage when they hit enemy units. Compatible with other lifesteal auras.
 }
@@ -1543,92 +1537,26 @@ STRING 1511
 This unit is under the effects of Blood Feast Aura; damage it deals to enemy units will restore hit points.
 }
 
-STRING 1512
-// Abilities: A019 ([Arthas_StoneForm_Blood] Blood Feast Aura), Name (Name)
-{
-[Arthas_StoneForm_Blood] Blood Feast Aura
-}
-
-STRING 1513
-// Abilities: A02B ([Arthas_CryptFiend_Frost] Frost Beetles), Name (Name)
-{
-[Arthas_CryptFiend_Frost] Frost Beetles
-}
-
 STRING 1514
-// Abilities: A02B ([Arthas_CryptFiend_Frost] Frost Beetles), Tip (Tooltip - Normal)
+// Abilities: A02B ([Arthas] Frost Beetles), Tip (Tooltip - Normal)
 {
 Frost Beetles
 }
 
-STRING 1515
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Name (Name)
-{
-[Arthas_ForgeOfSoul] Blood Soul Reforging
-}
-
-STRING 1516
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Name (Name)
-{
-[Arthas_ForgeOfSoul] Frost Soul Reforging
-}
-
-STRING 1517
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Name (Name)
-{
-[Arthas_ForgeOfSoul] Unholy Soul Reforging
-}
-
-STRING 1518
-// Abilities: A026 ([Arthas_Ghoul_Frost] Ice Shard), Name (Name)
-{
-[Arthas_Ghoul_Frost] Ice Shard
-}
-
 STRING 1520
-// Abilities: A02B ([Arthas_CryptFiend_Frost] Frost Beetles), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02B ([Arthas] Frost Beetles), Ubertip (Tooltip - Normal - Extended)
 {
 Adds a cold effect to each attack, dealing <A02B,DataA1> bonus damage, slowing a target enemy unit's attacks by <A02B,DataB1,%>% and movement by <A02B,DataC1,%>% for <A02B,Dur1> seconds.
 }
 
-STRING 1524
-// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Name (Name)
-{
-[Arthas_Ghoul_Blood] Blood Rage
-}
-
-STRING 1525
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Name (Name)
-{
-[Arthas_Units_Blood] Blood Soul
-}
-
-STRING 1526
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Name (Name)
-{
-[Arthas_Units_Frost] Frost Soul
-}
-
-STRING 1527
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Name (Name)
-{
-[Arthas_Units_Unholy] Unholy Soul
-}
-
-STRING 1534
-// Abilities: A02D ([Arthas_CryptFiend_Blood] Rapacity), Name (Name)
-{
-[Arthas_CryptFiend_Blood] Rapacity
-}
-
 STRING 1535
-// Abilities: A02D ([Arthas_CryptFiend_Blood] Rapacity), Tip (Tooltip - Normal)
+// Abilities: A02D ([Arthas] Rapacity), Tip (Tooltip - Normal)
 {
 Rapacity
 }
 
 STRING 1537
-// Buffs/Effects: B00F ([Arthas] Rapacity), EditorName (Name (Editor Only))
+// Abilities: A02D ([Arthas] Rapacity), Name (Name)
 {
 [Arthas] Rapacity
 }
@@ -1646,7 +1574,7 @@ The unit has increased damage and loses health when attacked.
 }
 
 STRING 1540
-// Abilities: A02D ([Arthas_CryptFiend_Blood] Rapacity), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02D ([Arthas] Rapacity), Ubertip (Tooltip - Normal - Extended)
 {
 The unit has increased damage by <A02D,DataA1> and loses health equal to <A02D,DataB1,%>% of the damage dealt.
 }
@@ -1663,128 +1591,110 @@ STRING 1542
 Research Crypt Fiend Upgrade
 }
 
-STRING 1547
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), EditorSuffix (Editor Suffix)
-{
-(Stone Form)
-}
-
 STRING 1556
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap2,DataB2> damage per second. |nLasts <Aap2,DataA2> seconds.
 }
 
 STRING 1557
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap3,DataB3> damage per second. |nLasts <Aap3,DataA3> seconds.
 }
 
 STRING 1558
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap4,DataB4> damage per second. |nLasts <Aap4,DataA4> seconds.
 }
 
 STRING 1559
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap5,DataB5> damage per second. |nLasts <Aap5,DataA5> seconds.
 }
 
 STRING 1560
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap6,DataB6> damage per second. |nLasts <Aap6,DataA6> seconds.
 }
 
 STRING 1561
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap7,DataB7> damage per second. |nLasts <Aap7,DataA7> seconds.
 }
 
 STRING 1562
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap8,DataB8> damage per second. |nLasts <Aap8,DataA8> seconds.
 }
 
 STRING 1563
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02C ([Arthas] Disease Cloud), Ubertip (Tooltip - Normal - Extended)
 {
 Infects nearby enemy living units with Disease Cloud. Disease Cloud deals <Aap9,DataB9> damage per second. |nLasts <Aap9,DataA9> seconds.
 }
 
 STRING 1564
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 200
 }
 
 STRING 1565
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 300
 }
 
 STRING 1566
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 400
 }
 
 STRING 1567
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 500
 }
 
 STRING 1568
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 600
 }
 
 STRING 1569
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 700
 }
 
 STRING 1570
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 800
 }
 
 STRING 1571
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 900
 }
 
 STRING 1572
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Tip (Tooltip - Normal)
+// Abilities: A02C ([Arthas] Disease Cloud), Tip (Tooltip - Normal)
 {
 Disease Cloud - 100
 }
 
-STRING 1573
-// Abilities: A012 ([Arthas_Effect] Blood), Name (Name)
-{
-[Arthas_Effect] Blood
-}
-
-STRING 1575
-// Abilities: A016 ([Arthas_Effect] Unholy), Name (Name)
-{
-[Arthas_Effect] Unholy
-}
-
 STRING 1580
-// Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Tip (Tooltip - Normal)
+// Abilities: A02F ([Arthas] Blood Mark), Tip (Tooltip - Normal)
 {
 Blood Mark
 }
@@ -1796,25 +1706,13 @@ This unit has Blood Mark; his armor is reduced.
 }
 
 STRING 1583
-// Buffs/Effects: B00G ([Arthas] Blood Mark), EditorName (Name (Editor Only))
+// Abilities: A02F ([Arthas] Blood Mark), Name (Name)
 {
 [Arthas] Blood Mark
 }
 
-STRING 1585
-// Abilities: A02G ([Arthas_StoneForm_Blood] Life Steal), EditorSuffix (Editor Suffix)
-{
-(aura hide ability)
-}
-
-STRING 1593
-// Abilities: A02H ([Arthas_StoneForm_Frost] Winds of Northrend), Name (Name)
-{
-[Arthas_StoneForm_Frost] Winds of Northrend
-}
-
 STRING 1594
-// Abilities: A02H ([Arthas_StoneForm_Frost] Winds of Northrend), Tip (Tooltip - Normal)
+// Abilities: A02H ([Arthas] Winds of Northrend), Tip (Tooltip - Normal)
 {
 Winds of Northrend
 }
@@ -1832,7 +1730,7 @@ STRING 1597
 }
 
 STRING 1598
-// Buffs/Effects: B00H ([Arthas] Winds of Northrend), EditorName (Name (Editor Only))
+// Abilities: A02H ([Arthas] Winds of Northrend), Name (Name)
 {
 [Arthas] Winds of Northrend
 }
@@ -1850,13 +1748,13 @@ STRING 1600
 }
 
 STRING 1617
-// Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Tip (Tooltip - Normal)
+// Abilities: S00X ([Arthas] Necrotic Breath), Tip (Tooltip - Normal)
 {
 Necrotic Breath
 }
 
 STRING 1618
-// Buffs/Effects: B00I ([Arthas] Necrotic Breath), EditorName (Name (Editor Only))
+// Abilities: S00X ([Arthas] Necrotic Breath), Name (Name)
 {
 [Arthas] Necrotic Breath
 }
@@ -1873,24 +1771,6 @@ STRING 1621
 This unit is Necrotic Breath; its damage have been reduced.
 }
 
-STRING 1622
-// Abilities: A025 ([Arthas_Ghoul_Unholy] Rotten teeth), Name (Name)
-{
-[Arthas_Ghoul_Unholy] Rotten teeth
-}
-
-STRING 1623
-// Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Name (Name)
-{
-[Arthas_Gargoyle_Blood] Blood Mark
-}
-
-STRING 1625
-// Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Name (Name)
-{
-[Arthas_Gargoyle_Unholy] Necrotic Breath
-}
-
 STRING 1627
 // Upgrades: R00Q (Burrow), Name (Name)
 {
@@ -1903,86 +1783,56 @@ STRING 1628
 Research Gargoyle Upgrade
 }
 
-STRING 1631
-// Abilities: A02J ([Arthas_Abomination_Blood] Surfeit), Name (Name)
-{
-[Arthas_Abomination_Blood] Surfeit
-}
-
 STRING 1632
-// Abilities: A02J ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02J ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
-STRING 1633
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Name (Name)
-{
-[Arthas_Abomination_Blood] Surfeit
-}
-
-STRING 1634
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), EditorSuffix (Editor Suffix)
-{
-(Life Bonus)
-}
-
 STRING 1641
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02L ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
 STRING 1642
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02L ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
 STRING 1643
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02L ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
 STRING 1644
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02L ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
 STRING 1645
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02L ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
 STRING 1647
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Tip (Tooltip - Normal)
+// Abilities: A02L ([Arthas] Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
 }
 
-STRING 1656
-// Abilities: A02G ([Arthas_StoneForm_Blood] Life Steal), Name (Name)
-{
-[Arthas_StoneForm_Blood] Life Steal
-}
-
-STRING 1657
-// Abilities: A02C ([Arthas_StoneForm_Unholy] Disease Cloud), Name (Name)
-{
-[Arthas_StoneForm_Unholy] Disease Cloud
-}
-
 STRING 1660
-// Buffs/Effects: B00J ([Arthas] Glacial Gusto), EditorName (Name (Editor Only))
+// Abilities: A02M ([Arthas] Glacial Gusto), Name (Name)
 {
 [Arthas] Glacial Gusto
 }
 
 STRING 1661
-// Abilities: A02M ([Arthas_Abomination_Frost] Glacial Gusto), Tip (Tooltip - Normal)
+// Abilities: A02M ([Arthas] Glacial Gusto), Tip (Tooltip - Normal)
 {
 Glacial Gusto
 }
@@ -1994,27 +1844,9 @@ This unit is Frozen Gusto; its damage have been improved.
 }
 
 STRING 1666
-// Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Tip (Tooltip - Normal)
+// Abilities: A02K ([Arthas] Glacial Gusto), Tip (Tooltip - Normal)
 {
 Glacial Gusto
-}
-
-STRING 1669
-// Abilities: A02M ([Arthas_Abomination_Frost] Glacial Gusto), Name (Name)
-{
-[Arthas_Abomination_Frost] Glacial Gusto
-}
-
-STRING 1670
-// Abilities: A02M ([Arthas_Abomination_Frost] Glacial Gusto), EditorSuffix (Editor Suffix)
-{
-(dummy)
-}
-
-STRING 1671
-// Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Name (Name)
-{
-[Arthas_Abomination_Frost] Glacial Gusto
 }
 
 STRING 1672
@@ -2024,19 +1856,13 @@ Glacial Gusto
 }
 
 STRING 1675
-// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Tip (Tooltip - Normal)
+// Abilities: A02N ([Arthas] Infectious Outbreak), Tip (Tooltip - Normal)
 {
 Infectious Outbreak
 }
 
-STRING 1681
-// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Name (Name)
-{
-[Arthas_Abomination_Unholy] Infectious Outbreak
-}
-
 STRING 1682
-// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Untip (Tooltip - Turn Off)
+// Abilities: A02N ([Arthas] Infectious Outbreak), Untip (Tooltip - Turn Off)
 {
 Deactivate Infectious Outbreak
 }
@@ -3694,13 +3520,13 @@ STRING 2267
 }
 
 STRING 2268
-// Abilities: A035 ([Arthas] Disease Cloud), Name (Name)
+// Abilities: A02C ([Arthas] Disease Cloud), Name (Name)
 {
 [Arthas] Disease Cloud
 }
 
 STRING 2269
-// Abilities: A036 ([Arthas] Disease Cloud), Name (Name)
+// Abilities: A035 ([Arthas] Disease Cloud), Name (Name)
 {
 [Arthas] Disease Cloud
 }
@@ -3975,14 +3801,8 @@ STRING 2338
 [Arthas] Acolyte
 }
 
-STRING 2339
-// Abilities: A02E ([Arthas_StoneForm_Unholy] Effect Aura Unholy), Name (Name)
-{
-[Arthas_StoneForm_Unholy] Effect Aura Unholy
-}
-
 STRING 2359
-// Abilities: A024 ([Arthas_Ghoul_Blood] Blood Rage), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A024 ([Arthas] Blood Rage), Ubertip (Tooltip - Normal - Extended)
 {
 Causes this unit to attack <A024,DataB1,%> faster and move <A024,DataA1,%> faster.
 }
@@ -4017,32 +3837,26 @@ Frost Beetles - Adds a cold effect to each attack, dealing <A02B,DataA1> bonus d
 Corrosion - Reduces armor by <A029,DataB1> for <A029,Dur1> seconds on attack
 }
 
-STRING 2363
-// Abilities: A02I ([Arthas_Gargoyle_Frost] Overwhelming Sadness), Name (Name)
-{
-[Arthas_Gargoyle_Frost] Overwhelming Sadness
-}
-
 STRING 2364
-// Abilities: A02I ([Arthas_Gargoyle_Frost] Overwhelming Sadness), Tip (Tooltip - Normal)
+// Abilities: A02I ([Arthas] Overwhelming Sadness), Tip (Tooltip - Normal)
 {
 Overwhelming Sadness
 }
 
 STRING 2365
-// Abilities: A02I ([Arthas_Gargoyle_Frost] Overwhelming Sadness), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02I ([Arthas] Overwhelming Sadness), Ubertip (Tooltip - Normal - Extended)
 {
 Sends a bolt of negative energy that burns up to <A02I,DataA1> points of a target enemy unit's mana. The mana combusts, dealing damage equal to the amount of mana burned.
 }
 
 STRING 2368
-// Abilities: S00X ([Arthas_Gargoyle_Unholy] Necrotic Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: S00X ([Arthas] Necrotic Breath), Ubertip (Tooltip - Normal - Extended)
 {
 Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
 }
 
 STRING 2370
-// Abilities: A02F ([Arthas_Gargoyle_Blood] Blood Mark), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02F ([Arthas] Blood Mark), Ubertip (Tooltip - Normal - Extended)
 {
 Reduces armor by <A02F,DataB1>. |nLasts for <A02F,Dur1> seconds.
 }
@@ -4220,7 +4034,7 @@ Rune level:
 }
 
 STRING 2400
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01O ([Arthas] Blood Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 1. Novice. Higher health, damage reduction|r
@@ -4229,7 +4043,7 @@ Rune level:
 }
 
 STRING 2401
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01O ([Arthas] Blood Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 1. Novice. Higher health, damage reduction|r
@@ -4238,7 +4052,7 @@ Rune level:
 }
 
 STRING 2402
-// Abilities: A01O ([Arthas_Units_Blood] Blood Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01O ([Arthas] Blood Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 |cFFFF7A6F1. Novice. Higher health, damage reduction|r
@@ -4247,7 +4061,7 @@ Rune level:
 }
 
 STRING 2403
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01P ([Arthas] Frost Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 |cFF4F8CFF1. Novice. Add mana to units, armor reduce |R
@@ -4256,7 +4070,7 @@ Rune level:
 }
 
 STRING 2404
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01P ([Arthas] Frost Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 1. Novice. Add mana to units, armor reduce |R
@@ -4265,7 +4079,7 @@ Rune level:
 }
 
 STRING 2405
-// Abilities: A01P ([Arthas_Units_Frost] Frost Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01P ([Arthas] Frost Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 1. Novice. Add mana to units, armor reduce |R
@@ -4274,7 +4088,7 @@ Rune level:
 }
 
 STRING 2406
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01Q ([Arthas] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 |cFF2ED8641.Novice. The cost in the limit has been reduced, health reserve reduced
@@ -4284,7 +4098,7 @@ Rune level:
 }
 
 STRING 2407
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01Q ([Arthas] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 1.Novice. The cost in the limit has been reduced, health reserve reduced
@@ -4294,7 +4108,7 @@ Rune level:
 }
 
 STRING 2408
-// Abilities: A01Q ([Arthas_Units_Unholy] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01Q ([Arthas] Unholy Soul), Ubertip (Tooltip - Normal - Extended)
 {
 Rune level:
 1.Novice. The cost in the limit has been reduced, health reserve reduced
@@ -4338,73 +4152,73 @@ Rune level:
 }
 
 STRING 2420
-// Abilities: A02J ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02J ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Consumes a nearby corpse to heal <A02J,DataA1> hit points per second. If a corpse is completely consumed, the maximum health increases by <A02L,Rng2> (max - <A02L,Rng6>).
 }
 
 STRING 2421
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02L ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Abomination increases in size and max health by <A02L,Rng2>.
 }
 
 STRING 2422
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02L ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Abomination increases in size and max health by <A02L,Rng3>.
 }
 
 STRING 2423
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02L ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Abomination increases in size and max health by <A02L,Rng4>.
 }
 
 STRING 2424
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02L ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Abomination increases in size and max health by <A02L,Rng5>.
 }
 
 STRING 2425
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02L ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Abomination increases in size and max health by <A02L,Rng6>.
 }
 
 STRING 2426
-// Abilities: A02L ([Arthas_Abomination_Blood] Surfeit), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02L ([Arthas] Surfeit), Ubertip (Tooltip - Normal - Extended)
 {
 Abomination increases in size and max health by <A02L,Rng1>.
 }
 
 STRING 2427
-// Abilities: A02K ([Arthas_Abomination_Frost] Glacial Gusto), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02K ([Arthas] Glacial Gusto), Ubertip (Tooltip - Normal - Extended)
 {
 Consumes a nearby corpse gives +<A02M,DataA1,%>% damage for <A02M,Dur1> sec.
 }
 
 STRING 2429
-// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02N ([Arthas] Infectious Outbreak), Ubertip (Tooltip - Normal - Extended)
 {
 Activate Immolation to engulf this unit in flames, causing <A02N,DataA1> damage per 0.5 second to nearby enemy land units. |nDrains health until deactivated.
 }
 
 STRING 2430
-// Abilities: A02N ([Arthas_Abomination_Unholy] Infectious Outbreak), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A02N ([Arthas] Infectious Outbreak), Unubertip (Tooltip - Turn Off - Extended)
 {
 Deactivate Immolation to stop draining health.
 }
 
 STRING 2431
-// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Tip (Tooltip - Normal)
+// Abilities: A02O ([Arthas] Ghoulish Return), Tip (Tooltip - Normal)
 {
 Ghoulish Return
 }
 
 STRING 2432
-// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02O ([Arthas] Ghoulish Return), Ubertip (Tooltip - Normal - Extended)
 {
 |cFF24BBFF"Trojan Horse"|r
 
@@ -4425,12 +4239,6 @@ Glacial Gusto - Consumes a nearby corpse gives +<A02M,DataA1,%>% damage for <A02
 |cff00ff00Unholy:|r
 Infectious Outbreak - Activate Immolation to engulf this unit in flames, causing <A02N,DataA1> damage per 0.5 second to nearby enemy land units. Drains health until deactivated.
 Ghoulish Return - Upon death, spawn Decaying Ghouls equal to the mastery level of Unholy Runes
-}
-
-STRING 2434
-// Abilities: A02O ([Arthas_Abomination_Unholy] Ghoulish Return), Name (Name)
-{
-[Arthas_Abomination_Unholy] Ghoulish Return
 }
 
 STRING 2435
@@ -4472,12 +4280,6 @@ Ice of Northrend - Gives <A027,DataA1>% chance to Freeze the enemy for <A027,Dur
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
-STRING 2450
-// Abilities: A037 ([Arthas_Effect] Frost), Name (Name)
-{
-[Arthas_Effect] Frost
-}
-
 STRING 2452
 // Abilities: A02X ([Arthas] Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4485,7 +4287,7 @@ Plague continues to grow as unit mana pool grows
 }
 
 STRING 2454
-// Abilities: A02H ([Arthas_StoneForm_Frost] Winds of Northrend), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A02H ([Arthas] Winds of Northrend), Ubertip (Tooltip - Normal - Extended)
 {
 Reduce nearby enemy units' movement speed by <A02H,DataA1,%>% and attack rate by <A02H,DataB1,%>%.
 }
@@ -6243,7 +6045,7 @@ Bastion Reinforcement
 }
 
 STRING 3043
-// Abilities: A03F ([Wrynn] Bastion Reinforcement), EditorSuffix (Editor Suffix)
+// Abilities: A012 ([Arthas] Blood), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -8885,7 +8687,7 @@ E
 }
 
 STRING 3758
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Hotkey (Hotkey - Normal)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -9905,7 +9707,7 @@ Q
 }
 
 STRING 3998
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Hotkey (Hotkey - Normal)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -9971,7 +9773,7 @@ S
 }
 
 STRING 4019
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -10279,7 +10081,7 @@ Overload
 }
 
 STRING 4116
-// Abilities: A06W ([Thrall] Totem of Wrath), EditorSuffix (Editor Suffix)
+// Abilities: A016 ([Arthas] Unholy), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -10519,7 +10321,7 @@ Dispels positive buffs from enemy units, and negative buffs from friendly units.
 }
 
 STRING 4170
-// Abilities: A06Z ([Thrall] Wind Rush Totem), EditorSuffix (Editor Suffix)
+// Abilities: A037 ([Arthas] Frost), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -10531,7 +10333,7 @@ STRING 4171
 }
 
 STRING 4172
-// Abilities: A070 ([Thrall] Healing Tide Totem), EditorSuffix (Editor Suffix)
+// Abilities: A03F ([Wrynn] Bastion Reinforcement), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -12362,7 +12164,7 @@ Upgrade to Unholy Tower
 }
 
 STRING 4561
-// Abilities: A00Q ([Arthas] Blood), Name (Name)
+// Abilities: A012 ([Arthas] Blood), Name (Name)
 {
 [Arthas] Blood
 }
@@ -12374,7 +12176,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A080 ([Arthas] Frost), Name (Name)
+// Abilities: A037 ([Arthas] Frost), Name (Name)
 {
 [Arthas] Frost
 }
@@ -12386,7 +12188,7 @@ STRING 4564
 }
 
 STRING 4565
-// Abilities: A081 ([Arthas] Unholy), Name (Name)
+// Abilities: A016 ([Arthas] Unholy), Name (Name)
 {
 [Arthas] Unholy
 }
@@ -12416,7 +12218,7 @@ STRING 4569
 }
 
 STRING 4570
-// Abilities: A083 ([Arthas] Life Steal), Name (Name)
+// Abilities: A02G ([Arthas] Life Steal), Name (Name)
 {
 [Arthas] Life Steal
 }
@@ -12810,7 +12612,7 @@ D
 }
 
 STRING 4629
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Higher health
@@ -12819,7 +12621,7 @@ Current rune level:
 }
 
 STRING 4630
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Higher health
@@ -12828,7 +12630,7 @@ Current rune level:
 }
 
 STRING 4631
-// Abilities: A01W ([Arthas_ForgeOfSoul] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Higher health
@@ -12837,7 +12639,7 @@ Current rune level:
 }
 
 STRING 4632
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Increased Damage
@@ -12846,7 +12648,7 @@ Current rune level:
 }
 
 STRING 4633
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Increased Damage
@@ -12855,7 +12657,7 @@ Current rune level:
 }
 
 STRING 4634
-// Abilities: A01X ([Arthas_ForgeOfSoul] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Increased Damage
@@ -12864,7 +12666,7 @@ Current rune level:
 }
 
 STRING 4635
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Spreading the plague
@@ -12874,7 +12676,7 @@ Current rune level:
 }
 
 STRING 4636
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Spreading the plague
@@ -12884,7 +12686,7 @@ Current rune level:
 }
 
 STRING 4637
-// Abilities: A01Y ([Arthas_ForgeOfSoul] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Ubertip (Tooltip - Normal - Extended)
 {
 Current rune level:
 - Spreading the plague
@@ -17332,5 +17134,341 @@ STRING 5635
 Add +25% speed attack
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 5636
+// Abilities: A019 ([Arthas] Blood Feast Aura), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Blood)
+}
+
+STRING 5637
+// Abilities: A01O ([Arthas] Blood Soul), EditorSuffix (Editor Suffix)
+{
+(Units_Blood)
+}
+
+STRING 5638
+// Abilities: A01O ([Arthas] Blood Soul), Name (Name)
+{
+[Arthas] Blood Soul
+}
+
+STRING 5639
+// Abilities: A01P ([Arthas] Frost Soul), EditorSuffix (Editor Suffix)
+{
+(Units_Frost)
+}
+
+STRING 5640
+// Abilities: A01P ([Arthas] Frost Soul), Name (Name)
+{
+[Arthas] Frost Soul
+}
+
+STRING 5641
+// Abilities: A01Q ([Arthas] Unholy Soul), EditorSuffix (Editor Suffix)
+{
+(Units_Unholy)
+}
+
+STRING 5642
+// Abilities: A01Q ([Arthas] Unholy Soul), Name (Name)
+{
+[Arthas] Unholy Soul
+}
+
+STRING 5643
+// Abilities: A01W ([Arthas] Blood Soul Reforging), Name (Name)
+{
+[Arthas] Blood Soul Reforging
+}
+
+STRING 5644
+// Abilities: A01W ([Arthas] Blood Soul Reforging), EditorSuffix (Editor Suffix)
+{
+(ForgeOfSoul)
+}
+
+STRING 5645
+// Abilities: A01X ([Arthas] Frost Soul Reforging), Name (Name)
+{
+[Arthas] Frost Soul Reforging
+}
+
+STRING 5646
+// Abilities: A01X ([Arthas] Frost Soul Reforging), EditorSuffix (Editor Suffix)
+{
+(ForgeOfSoul)
+}
+
+STRING 5647
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Name (Name)
+{
+[Arthas] Unholy Soul Reforging
+}
+
+STRING 5648
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), EditorSuffix (Editor Suffix)
+{
+(ForgeOfSoul)
+}
+
+STRING 5649
+// Abilities: A025 ([Arthas] Rotten teeth), EditorSuffix (Editor Suffix)
+{
+(Ghoul_Unholy)
+}
+
+STRING 5650
+// Abilities: A024 ([Arthas] Blood Rage), EditorSuffix (Editor Suffix)
+{
+(Ghoul_Blood)
+}
+
+STRING 5651
+// Abilities: A026 ([Arthas] Ice Shard), Name (Name)
+{
+[Arthas] Ice Shard
+}
+
+STRING 5652
+// Abilities: A026 ([Arthas] Ice Shard), EditorSuffix (Editor Suffix)
+{
+(Ghoul_Frost)
+}
+
+STRING 5653
+// Abilities: A02B ([Arthas] Frost Beetles), Name (Name)
+{
+[Arthas] Frost Beetles
+}
+
+STRING 5654
+// Abilities: A02B ([Arthas] Frost Beetles), EditorSuffix (Editor Suffix)
+{
+(CryptFiend_Frost)
+}
+
+STRING 5655
+// Abilities: A02D ([Arthas] Rapacity), EditorSuffix (Editor Suffix)
+{
+(CryptFiend_Blood)
+}
+
+STRING 5656
+// Abilities: A02C ([Arthas] Disease Cloud), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Unholy)
+}
+
+STRING 5657
+// Abilities: A02E ([Arthas] Effect Aura Unholy), Name (Name)
+{
+[Arthas] Effect Aura Unholy
+}
+
+STRING 5658
+// Abilities: A02E ([Arthas] Effect Aura Unholy), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Unholy)
+}
+
+STRING 5659
+// Abilities: A02F ([Arthas] Blood Mark), EditorSuffix (Editor Suffix)
+{
+(Gargoyle_Blood)
+}
+
+STRING 5660
+// Abilities: A02G ([Arthas] Life Steal), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Blood aura hide ability)
+}
+
+STRING 5661
+// Abilities: A02H ([Arthas] Winds of Northrend), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Frost)
+}
+
+STRING 5662
+// Abilities: A02I ([Arthas] Overwhelming Sadness), Name (Name)
+{
+[Arthas] Overwhelming Sadness
+}
+
+STRING 5663
+// Abilities: A02I ([Arthas] Overwhelming Sadness), EditorSuffix (Editor Suffix)
+{
+(Gargoyle_Frost)
+}
+
+STRING 5664
+// Abilities: S00X ([Arthas] Necrotic Breath), EditorSuffix (Editor Suffix)
+{
+(Gargoyle_Unholy)
+}
+
+STRING 5665
+// Abilities: A02J ([Arthas] Surfeit), Name (Name)
+{
+[Arthas] Surfeit
+}
+
+STRING 5666
+// Abilities: A02J ([Arthas] Surfeit), EditorSuffix (Editor Suffix)
+{
+(Abomination_Blood)
+}
+
+STRING 5667
+// Abilities: A02L ([Arthas] Surfeit), Name (Name)
+{
+[Arthas] Surfeit
+}
+
+STRING 5668
+// Abilities: A02L ([Arthas] Surfeit), EditorSuffix (Editor Suffix)
+{
+(Abomination_Blood Life Bonus)
+}
+
+STRING 5669
+// Abilities: A02M ([Arthas] Glacial Gusto), EditorSuffix (Editor Suffix)
+{
+(Abomination_Frost dummy)
+}
+
+STRING 5670
+// Abilities: A02K ([Arthas] Glacial Gusto), Name (Name)
+{
+[Arthas] Glacial Gusto
+}
+
+STRING 5671
+// Abilities: A02K ([Arthas] Glacial Gusto), EditorSuffix (Editor Suffix)
+{
+(Abomination_Frost)
+}
+
+STRING 5672
+// Abilities: A02N ([Arthas] Infectious Outbreak), Name (Name)
+{
+[Arthas] Infectious Outbreak
+}
+
+STRING 5673
+// Abilities: A02N ([Arthas] Infectious Outbreak), EditorSuffix (Editor Suffix)
+{
+(Abomination_Unholy)
+}
+
+STRING 5674
+// Abilities: A02O ([Arthas] Ghoulish Return), Name (Name)
+{
+[Arthas] Ghoulish Return
+}
+
+STRING 5675
+// Abilities: A02O ([Arthas] Ghoulish Return), EditorSuffix (Editor Suffix)
+{
+(Abomination_Unholy)
+}
+
+STRING 5676
+// Abilities: A036 ([Arthas] Disease Cloud), Name (Name)
+{
+[Arthas] Disease Cloud
+}
+
+STRING 5677
+// Abilities: A06W ([Thrall] Totem of Wrath), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 5678
+// Abilities: A06Z ([Thrall] Wind Rush Totem), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 5679
+// Abilities: A070 ([Thrall] Healing Tide Totem), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 5680
+// Abilities: A00Q ([Arthas] Blood), Name (Name)
+{
+[Arthas] Blood
+}
+
+STRING 5681
+// Abilities: A080 ([Arthas] Frost), Name (Name)
+{
+[Arthas] Frost
+}
+
+STRING 5682
+// Abilities: A081 ([Arthas] Unholy), Name (Name)
+{
+[Arthas] Unholy
+}
+
+STRING 5683
+// Abilities: A083 ([Arthas] Life Steal), Name (Name)
+{
+[Arthas] Life Steal
+}
+
+STRING 5684
+// Buffs/Effects: B00B ([Arthas] Rotten teeth), EditorName (Name (Editor Only))
+{
+[Arthas] Rotten teeth
+}
+
+STRING 5685
+// Buffs/Effects: B00C ([Arthas] Blood Rage), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Rage
+}
+
+STRING 5686
+// Buffs/Effects: B00E ([Arthas] Blood Feast Aura), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Feast Aura
+}
+
+STRING 5687
+// Buffs/Effects: B00F ([Arthas] Rapacity), EditorName (Name (Editor Only))
+{
+[Arthas] Rapacity
+}
+
+STRING 5688
+// Buffs/Effects: B00G ([Arthas] Blood Mark), EditorName (Name (Editor Only))
+{
+[Arthas] Blood Mark
+}
+
+STRING 5689
+// Buffs/Effects: B00H ([Arthas] Winds of Northrend), EditorName (Name (Editor Only))
+{
+[Arthas] Winds of Northrend
+}
+
+STRING 5690
+// Buffs/Effects: B00I ([Arthas] Necrotic Breath), EditorName (Name (Editor Only))
+{
+[Arthas] Necrotic Breath
+}
+
+STRING 5691
+// Buffs/Effects: B00J ([Arthas] Glacial Gusto), EditorName (Name (Editor Only))
+{
+[Arthas] Glacial Gusto
 }
 
