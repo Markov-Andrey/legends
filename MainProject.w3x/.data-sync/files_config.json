@@ -576,14 +576,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Arthas\\CryptFiend\\PAS_Arthas_Corrosion.blp",
-        "name": "PAS_Arthas_Corrosion.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Arthas\\Effects",
         "name": "Effects",
         "type": "directory",
@@ -3162,30 +3154,6 @@
     {
         "path": "Legends\\Uther\\Monument\\BTNLordaeronMonument.blp",
         "name": "BTNLordaeronMonument.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Uther\\Monument\\BTNUther_Grace.blp",
-        "name": "BTNUther_Grace.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Uther\\Monument\\PASUther_Grace.blp",
-        "name": "PASUther_Grace.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Uther\\Monument\\Uther_Command-Aura.mdx",
-        "name": "Uther_Command-Aura.mdx",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -6808,14 +6776,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNUther_Grace.blp",
-        "name": "DISBTNUther_Grace.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNUther_HammerofJustice.blp",
         "name": "DISBTNUther_HammerofJustice.blp",
         "type": "file",
@@ -7936,14 +7896,6 @@
         "validated": true
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASUther_Grace.blp",
-        "name": "DISPASUther_Grace.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASUther_HammerofJustice.blp",
         "name": "DISPASUther_HammerofJustice.blp",
         "type": "file",
@@ -8002,14 +7954,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Arthas_BloodAura.blp",
         "name": "DISPAS_Arthas_BloodAura.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Arthas_Corrosion.blp",
-        "name": "DISPAS_Arthas_Corrosion.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -10786,6 +10730,326 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Whitemane_Intercession.blp",
         "name": "DISPAS_Whitemane_Intercession.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "HolyBuffTexture.blp",
+        "name": "HolyBuffTexture.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Arthas\\CryptFiend\\ATC_Arthas_Corrosion.blp",
+        "name": "ATC_Arthas_Corrosion.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Arthas\\CryptFiend\\BTN_Arthas_Corrosion.blp",
+        "name": "BTN_Arthas_Corrosion.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Tyrande\\Priestess\\BTNMoonOrb.blp",
+        "name": "BTNMoonOrb.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Tyrande\\Priestess\\BTNNightMoon.blp",
+        "name": "BTNNightMoon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Tyrande\\Priestess\\UPGNightMoon.blp",
+        "name": "UPGNightMoon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Tyrande\\Wisp",
+        "name": "Wisp",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Tyrande\\Wisp\\BTN_Tyrande_Wisp.blp",
+        "name": "BTN_Tyrande_Wisp.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Uther\\Monument\\BTN_Uther_MercyPeople.blp",
+        "name": "BTN_Uther_MercyPeople.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Uther\\Monument\\HolyBuff_Overhead.mdx",
+        "name": "HolyBuff_Overhead.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Uther\\Monument\\PAS_Uther_MercyPeople.blp",
+        "name": "PAS_Uther_MercyPeople.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Uther\\Mortar\\PASHolyBomb.blp",
+        "name": "PASHolyBomb.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Arthas_Corrosion.blp",
+        "name": "DISATC_Arthas_Corrosion.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHoldPositionOrc.blp",
+        "name": "DISBTNHoldPositionOrc.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHoldPositionUndead.blp",
+        "name": "DISBTNHoldPositionUndead.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNMoonOrb.blp",
+        "name": "DISBTNMoonOrb.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNNightMoon.blp",
+        "name": "DISBTNNightMoon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Arthas_Corrosion.blp",
+        "name": "DISBTN_Arthas_Corrosion.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Tyrande_Wisp.blp",
+        "name": "DISBTN_Tyrande_Wisp.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Uther_MercyPeople.blp",
+        "name": "DISBTN_Uther_MercyPeople.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNbutton_f1.blp",
+        "name": "DISBTNbutton_f1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASHolyBomb.blp",
+        "name": "DISPASHolyBomb.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Uther_MercyPeople.blp",
+        "name": "DISPAS_Uther_MercyPeople.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Btn_F1",
+        "name": "Btn_F1",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Btn_F1\\BTNHoldPositionOrc.blp",
+        "name": "BTNHoldPositionOrc.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Btn_F1\\BTNHoldPositionUndead.blp",
+        "name": "BTNHoldPositionUndead.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Btn_F1\\BTNbutton_f1.blp",
+        "name": "BTNbutton_f1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human",
+        "name": "Human",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain",
+        "name": "TheCaptain",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainPissed1.flac",
+        "name": "CaptainPissed1.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainPissed2.flac",
+        "name": "CaptainPissed2.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainPissed3.flac",
+        "name": "CaptainPissed3.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainWarcry1.flac",
+        "name": "CaptainWarcry1.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainWhat1.flac",
+        "name": "CaptainWhat1.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainWhat2.flac",
+        "name": "CaptainWhat2.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainWhat3.flac",
+        "name": "CaptainWhat3.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainYes1.flac",
+        "name": "CaptainYes1.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainYes2.flac",
+        "name": "CaptainYes2.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainYes3.flac",
+        "name": "CaptainYes3.flac",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Units\\Human\\TheCaptain\\CaptainYesAttack1.flac",
+        "name": "CaptainYesAttack1.flac",
         "type": "file",
         "copy": true,
         "copy_child": "",

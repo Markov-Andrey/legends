@@ -127,11 +127,15 @@ boolean udg_Whitemane_crusade_bool= false
 
     // Generated
 camerasetup gg_cam_StartView= null
-trigger gg_trg_LimitUnits= null
-trigger gg_trg_StartResouces= null
-trigger gg_trg_StartCameraP1= null
-trigger gg_trg_StartCameraP2= null
-trigger gg_trg_StartCameraReset= null
+trigger gg_trg_BtnF1= null
+trigger gg_trg_OrderHoldPatrol= null
+trigger gg_trg_OrderHarvest= null
+trigger gg_trg_F1OrderSwap= null
+trigger gg_trg_IniLimitUnitsF1= null
+trigger gg_trg_IniStartResouces= null
+trigger gg_trg_IniStartCameraP1= null
+trigger gg_trg_IniStartCameraP2= null
+trigger gg_trg_IniStartCameraReset= null
 trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
 trigger gg_trg_PreviewLegend= null
@@ -308,6 +312,9 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_TyrandeDori= null
+trigger gg_trg_IniSelectUnit= null
+trigger gg_trg_Untitled_Trigger_001= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1146,10 +1153,10 @@ function FrameMythic takes string iconPath,string titleText,string descriptionTe
     local real pointx= 0.79
     local real array yPositions
 
-    set yPositions[0]=0.2
-    set yPositions[1]=yPositions[0] + 0.031
-    set yPositions[2]=yPositions[1] + 0.031
-    set yPositions[3]=yPositions[2] + 0.031
+    set yPositions[0]=0.55
+    set yPositions[1]=yPositions[0] - 0.031
+    set yPositions[2]=yPositions[1] - 0.031
+    set yPositions[3]=yPositions[2] - 0.031
 
     set buttonMyth=BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(buttonMyth, FRAMEPOINT_CENTER, pointx, yPositions[MYTHIC_INDEX])
@@ -1179,10 +1186,10 @@ function FrameMythic takes string iconPath,string titleText,string descriptionTe
     set MYTHIC_INDEX=MYTHIC_INDEX + 1
 endfunction
 //***************************************************************************
-//*  FrameLoader vjass
+//*  FrameLoader
 
 //***************************************************************************
-//*  CustomConsoleUI vjass
+//*  CustomConsoleUI
 //***************************************************************************
 //*  ArthasFrameRunes
 
@@ -2238,97 +2245,411 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-// Trigger: LimitUnits
+// Trigger: IniLimitUnitsF1
 //
 // Construction Limit for Unique Units
 //===========================================================================
-function Trig_LimitUnits_Func001A takes nothing returns nothing
-    // Arthas
-    call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('u01C', 1, GetEnumPlayer())
-    // Uther
-    call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
-    // Wrynn
-    call SetPlayerTechMaxAllowedSwap('h00X', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('O000', 1, GetEnumPlayer())
-    // Tyrande
-    call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('E006', 1, GetEnumPlayer())
-    // Thrall
-    call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
-    // Whitemane
-    call SetPlayerTechMaxAllowedSwap('H01R', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H02B', 1, GetEnumPlayer())
+function Trig_IniLimitUnitsF1_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
+        return false
+    endif
+    return true
 endfunction
 
-function Trig_LimitUnits_Actions takes nothing returns nothing
-    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_LimitUnits_Func001A)
+function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
+    if ( Trig_IniLimitUnitsF1_Func001Func001C() ) then
+        call CreateNUnitsAtLoc(1, 'H02J', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+        call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+        // Arthas
+        call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('u01C', 1, GetEnumPlayer())
+        // Uther
+        call SetPlayerTechMaxAllowedSwap('H02D', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('H00B', 1, GetEnumPlayer())
+        // Wrynn
+        call SetPlayerTechMaxAllowedSwap('h00X', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('O000', 1, GetEnumPlayer())
+        // Tyrande
+        call SetPlayerTechMaxAllowedSwap('E003', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('E006', 1, GetEnumPlayer())
+        // Thrall
+        call SetPlayerTechMaxAllowedSwap('O00C', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('O00O', 1, GetEnumPlayer())
+        // Whitemane
+        call SetPlayerTechMaxAllowedSwap('H01R', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('H02B', 1, GetEnumPlayer())
+    else
+    endif
+endfunction
+
+function Trig_IniLimitUnitsF1_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniLimitUnitsF1_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_LimitUnits takes nothing returns nothing
-    set gg_trg_LimitUnits=CreateTrigger()
-    call TriggerAddAction(gg_trg_LimitUnits, function Trig_LimitUnits_Actions)
+function InitTrig_IniLimitUnitsF1 takes nothing returns nothing
+    set gg_trg_IniLimitUnitsF1=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniLimitUnitsF1, function Trig_IniLimitUnitsF1_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartResouces
+// Trigger: IniStartResouces
 //===========================================================================
-function Trig_StartResouces_Actions takes nothing returns nothing
+function Trig_IniStartResouces_Actions takes nothing returns nothing
     call MeleeStartingResources()
 endfunction
 
 //===========================================================================
-function InitTrig_StartResouces takes nothing returns nothing
-    set gg_trg_StartResouces=CreateTrigger()
-    call TriggerAddAction(gg_trg_StartResouces, function Trig_StartResouces_Actions)
+function InitTrig_IniStartResouces takes nothing returns nothing
+    set gg_trg_IniStartResouces=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniStartResouces, function Trig_IniStartResouces_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartCameraP1
+// Trigger: IniSelectUnit
 //===========================================================================
-function Trig_StartCameraP1_Actions takes nothing returns nothing
+function Trig_IniSelectUnit_Func001A takes nothing returns nothing
+    call SelectUnitForPlayerSingle(GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), 'h001')), GetEnumPlayer())
+endfunction
+
+function Trig_IniSelectUnit_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniSelectUnit_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_IniSelectUnit takes nothing returns nothing
+    set gg_trg_IniSelectUnit=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_IniSelectUnit, 0.10)
+    call TriggerAddAction(gg_trg_IniSelectUnit, function Trig_IniSelectUnit_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: IniStartCameraP1
+//===========================================================================
+function Trig_IniStartCameraP1_Actions takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_StartView, Player(0), 0)
 endfunction
 
 //===========================================================================
-function InitTrig_StartCameraP1 takes nothing returns nothing
-    set gg_trg_StartCameraP1=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP1, 0.10)
-    call TriggerAddAction(gg_trg_StartCameraP1, function Trig_StartCameraP1_Actions)
+function InitTrig_IniStartCameraP1 takes nothing returns nothing
+    set gg_trg_IniStartCameraP1=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_IniStartCameraP1, 0.10)
+    call TriggerAddAction(gg_trg_IniStartCameraP1, function Trig_IniStartCameraP1_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartCameraP2
+// Trigger: IniStartCameraP2
 //===========================================================================
-function Trig_StartCameraP2_Actions takes nothing returns nothing
+function Trig_IniStartCameraP2_Actions takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_StartView, Player(1), 0)
 endfunction
 
 //===========================================================================
-function InitTrig_StartCameraP2 takes nothing returns nothing
-    set gg_trg_StartCameraP2=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_StartCameraP2, 0.10)
-    call TriggerAddAction(gg_trg_StartCameraP2, function Trig_StartCameraP2_Actions)
+function InitTrig_IniStartCameraP2 takes nothing returns nothing
+    set gg_trg_IniStartCameraP2=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_IniStartCameraP2, 0.10)
+    call TriggerAddAction(gg_trg_IniStartCameraP2, function Trig_IniStartCameraP2_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: StartCameraReset
+// Trigger: IniStartCameraReset
 //===========================================================================
-function Trig_StartCameraReset_Actions takes nothing returns nothing
-    call DisableTrigger(gg_trg_StartCameraP1)
-    call DisableTrigger(gg_trg_StartCameraP2)
+function Trig_IniStartCameraReset_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_IniStartCameraP1)
+    call DisableTrigger(gg_trg_IniStartCameraP2)
     call ResetToGameCameraForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), 0)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
 endfunction
 
 //===========================================================================
-function InitTrig_StartCameraReset takes nothing returns nothing
-    set gg_trg_StartCameraReset=CreateTrigger()
-    call TriggerAddAction(gg_trg_StartCameraReset, function Trig_StartCameraReset_Actions)
+function InitTrig_IniStartCameraReset takes nothing returns nothing
+    set gg_trg_IniStartCameraReset=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniStartCameraReset, function Trig_IniStartCameraReset_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: BtnF1
+//===========================================================================
+function Trig_BtnF1_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetOrderedUnit()) == 'H02J'
+endfunction
+
+function Trig_BtnF1_UnitFilter_All takes nothing returns boolean
+    local unit u= GetFilterUnit()
+    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1
+endfunction
+
+function Trig_BtnF1_UnitFilter_NoWalk takes nothing returns boolean
+    local unit u= GetFilterUnit()
+    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1 and GetUnitAbilityLevel(u, 'A09D') != 1
+endfunction
+
+function Trig_BtnF1_Actions takes nothing returns nothing
+    local unit orderedUnit= GetOrderedUnit()
+    local player p= GetOwningPlayer(orderedUnit)
+    local integer orderId= GetIssuedOrderId()
+    local unit targetUnit= GetOrderTargetUnit()
+    local location targetLoc= GetOrderPointLoc()
+    local group g= null
+    local unit u
+    local integer unitCount= 0
+
+    if orderId == 0 then
+        if targetLoc != null then
+            call RemoveLocation(targetLoc)
+        endif
+        return
+    endif
+
+    if GetUnitAbilityLevel(orderedUnit, 'A09F') != 1 then
+        set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter_All))
+    else
+        set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter_NoWalk))
+    endif
+
+    if g != null then
+        loop
+            set u=FirstOfGroup(g)
+            exitwhen u == null
+
+            set unitCount=unitCount + 1
+
+            if targetUnit != null then
+                call IssueTargetOrderById(u, orderId, targetUnit)
+            elseif targetLoc != null then
+                call IssuePointOrderByIdLoc(u, orderId, targetLoc)
+            else
+                call IssueImmediateOrderById(u, orderId)
+            endif
+
+            call GroupRemoveUnit(g, u)
+        endloop
+
+        call DestroyGroup(g)
+    endif
+
+    if targetLoc != null then
+        call RemoveLocation(targetLoc)
+    endif
+
+    call SetUnitState(orderedUnit, UNIT_STATE_MANA, I2R(unitCount))
+endfunction
+
+function InitTrig_BtnF1 takes nothing returns nothing
+    set gg_trg_BtnF1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BtnF1, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BtnF1, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BtnF1, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddCondition(gg_trg_BtnF1, Condition(function Trig_BtnF1_Conditions))
+    call TriggerAddAction(gg_trg_BtnF1, function Trig_BtnF1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Untitled Trigger 001
+//===========================================================================
+function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
+    call SetUnitState(GetEnumUnit(), UNIT_STATE_MANA, 100.00)
+    call BlzSetUnitMaxMana(GetEnumUnit(), 300)
+endfunction
+
+//===========================================================================
+function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
+    set gg_trg_Untitled_Trigger_001=CreateTrigger()
+    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: OrderHoldPatrol
+//===========================================================================
+function Trig_OrderHoldPatrol_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09D', GetOrderedUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09D', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001Func001C takes nothing returns boolean
+    if ( not ( GetIssuedOrderIdBJ() == String2OrderIdBJ("patrol") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09D', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Func001C takes nothing returns boolean
+    if ( not ( GetIssuedOrderIdBJ() == String2OrderIdBJ("holdposition") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHoldPatrol_Actions takes nothing returns nothing
+    if ( Trig_OrderHoldPatrol_Func001C() ) then
+        if ( Trig_OrderHoldPatrol_Func001Func002C() ) then
+            call UnitAddAbilityBJ('A09D', GetOrderedUnit())
+        else
+        endif
+    else
+        if ( Trig_OrderHoldPatrol_Func001Func001C() ) then
+            if ( Trig_OrderHoldPatrol_Func001Func001Func002C() ) then
+                call UnitAddAbilityBJ('A09D', GetOrderedUnit())
+            else
+            endif
+        else
+            if ( Trig_OrderHoldPatrol_Func001Func001Func001C() ) then
+                call UnitRemoveAbilityBJ('A09D', GetOrderedUnit())
+            else
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_OrderHoldPatrol takes nothing returns nothing
+    set gg_trg_OrderHoldPatrol=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHoldPatrol, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHoldPatrol, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHoldPatrol, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddAction(gg_trg_OrderHoldPatrol, function Trig_OrderHoldPatrol_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OrderHarvest
+//===========================================================================
+function Trig_OrderHarvest_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09E', GetOrderedUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09E', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001Func001C takes nothing returns boolean
+    if ( not ( GetIssuedOrderIdBJ() == String2OrderIdBJ("resumeharvesting") ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A09E', GetOrderedUnit()) != 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Func001C takes nothing returns boolean
+    if ( not ( IsDestructableAliveBJ(GetOrderTargetDestructable()) == true ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('Ahrl', GetOrderedUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OrderHarvest_Actions takes nothing returns nothing
+    if ( Trig_OrderHarvest_Func001C() ) then
+        if ( Trig_OrderHarvest_Func001Func002C() ) then
+            call UnitAddAbilityBJ('A09E', GetOrderedUnit())
+        else
+        endif
+    else
+        if ( Trig_OrderHarvest_Func001Func001C() ) then
+            if ( Trig_OrderHarvest_Func001Func001Func002C() ) then
+                call UnitAddAbilityBJ('A09E', GetOrderedUnit())
+            else
+            endif
+        else
+            if ( Trig_OrderHarvest_Func001Func001Func001C() ) then
+                call UnitRemoveAbilityBJ('A09E', GetOrderedUnit())
+            else
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_OrderHarvest takes nothing returns nothing
+    set gg_trg_OrderHarvest=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OrderHarvest, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddAction(gg_trg_OrderHarvest, function Trig_OrderHarvest_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: F1OrderSwap
+//===========================================================================
+function Trig_F1OrderSwap_Func003C takes nothing returns boolean
+    if ( ( GetSpellAbilityId() == 'A09G' ) ) then
+        return true
+    endif
+    if ( ( GetSpellAbilityId() == 'A09F' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_F1OrderSwap_Conditions takes nothing returns boolean
+    if ( not Trig_F1OrderSwap_Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_F1OrderSwap_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A09G' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_F1OrderSwap_Func002C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A09F' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_F1OrderSwap_Actions takes nothing returns nothing
+    if ( Trig_F1OrderSwap_Func001C() ) then
+        call UnitAddAbilityBJ('A09F', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A09G', GetSpellAbilityUnit())
+    else
+    endif
+    if ( Trig_F1OrderSwap_Func002C() ) then
+        call UnitAddAbilityBJ('A09G', GetSpellAbilityUnit())
+        call UnitRemoveAbilityBJ('A09F', GetSpellAbilityUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_F1OrderSwap takes nothing returns nothing
+    set gg_trg_F1OrderSwap=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_F1OrderSwap, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_F1OrderSwap, Condition(function Trig_F1OrderSwap_Conditions))
+    call TriggerAddAction(gg_trg_F1OrderSwap, function Trig_F1OrderSwap_Actions)
 endfunction
 
 //===========================================================================
@@ -2579,13 +2900,13 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     set udg_PlayerArthas=GetOwningPlayer(GetSpellAbilityUnit())
     call SetPlayerTechResearchedSwap('R00E', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_ArthasIni)
-    call DisableTrigger(gg_trg_StartCameraP1)
+    call DisableTrigger(gg_trg_IniStartCameraP1)
     // SoulsScore
     set udg_ArthasSouls=0
     call ShowArthasUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()))
     call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_PURPLE, true)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -2640,7 +2961,7 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R00F', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_UtherIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -2695,7 +3016,7 @@ function Trig_ChooseWrynn_Actions takes nothing returns nothing
     // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R00K', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_WrynnIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -2753,7 +3074,7 @@ function Trig_ChooseWhitemane_Actions takes nothing returns nothing
     call ShowWhitemaneUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "off")
     call UpdateWhitemaneText(GetOwningPlayer(GetSpellAbilityUnit()) , "0")
     call ConditionalTriggerExecute(gg_trg_WhitemaneIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -2816,7 +3137,7 @@ function Trig_ChooseTyrande_Actions takes nothing returns nothing
     // Run-ALL-triggers
     call SetPlayerTechResearchedSwap('R01M', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ConditionalTriggerExecute(gg_trg_TyrandeIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
     call TriggerSleepAction(1.00)
     call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func017A)
 endfunction
@@ -2870,7 +3191,7 @@ function Trig_ChooseThrall_Actions takes nothing returns nothing
     call SetPlayerTechResearchedSwap('R02B', 1, GetOwningPlayer(GetSpellAbilityUnit()))
     call ShowThrallUiForPlayer(GetOwningPlayer(GetSpellAbilityUnit()) , "air")
     call ConditionalTriggerExecute(gg_trg_ThrallIni)
-    call TriggerExecute(gg_trg_StartCameraReset)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
 endfunction
 
 //===========================================================================
@@ -3986,7 +4307,6 @@ function Trig_ArthasSacrifice_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetTrainedUnit()), "Abilities\\Spells\\Items\\RitualDagger\\RitualDaggerTarget.mdl")
     call RemoveUnit(GetTrainedUnit())
     set udg_ArthasSouls=( udg_ArthasSouls + 5 )
-    call LeaderboardSetPlayerItemValueBJ(GetOwningPlayer(GetTrainedUnit()), PlayerGetLeaderboardBJ(GetOwningPlayer(GetTrainedUnit())), udg_ArthasSouls)
 endfunction
 
 //===========================================================================
@@ -4045,7 +4365,7 @@ function Trig_UtherSealOfWisdom_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_UtherSealOfWisdom_Actions takes nothing returns nothing
-    call SetUnitManaPercentBJ(GetAttacker(), ( GetUnitManaPercent(GetAttacker()) + ( I2R(GetUnitAbilityLevelSwapped('A013', GetAttacker())) + 0.00 ) ))
+    call SetUnitManaPercentBJ(GetAttacker(), ( GetUnitManaPercent(GetAttacker()) + ( I2R(GetUnitAbilityLevelSwapped('A013', GetAttacker())) * 0.50 ) ))
 endfunction
 
 //===========================================================================
@@ -5297,6 +5617,7 @@ endfunction
 // Trigger: TyrandeIni
 //===========================================================================
 function Trig_TyrandeIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_TyrandeDori)
     call EnableTrigger(gg_trg_TyrandeShadowstalk)
     call EnableTrigger(gg_trg_TyrandeTearsOfElune)
     call EnableTrigger(gg_trg_TyrandeLunarFlare)
@@ -5309,6 +5630,42 @@ endfunction
 function InitTrig_TyrandeIni takes nothing returns nothing
     set gg_trg_TyrandeIni=CreateTrigger()
     call TriggerAddAction(gg_trg_TyrandeIni, function Trig_TyrandeIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeDori
+//===========================================================================
+function Trig_TyrandeDori_Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetSummonedUnit()) == 'n001' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSummonedUnit()) == 'n003' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSummonedUnit()) == 'n004' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeDori_Conditions takes nothing returns boolean
+    if ( not Trig_TyrandeDori_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeDori_Actions takes nothing returns nothing
+    call SetUnitAbilityLevelSwapped('A05S', GetSummonedUnit(), GetUnitAbilityLevelSwapped('A04X', GetSummoningUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeDori takes nothing returns nothing
+    set gg_trg_TyrandeDori=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeDori)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeDori, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(gg_trg_TyrandeDori, Condition(function Trig_TyrandeDori_Conditions))
+    call TriggerAddAction(gg_trg_TyrandeDori, function Trig_TyrandeDori_Actions)
 endfunction
 
 //===========================================================================
@@ -6892,7 +7249,7 @@ function Trig_ThrallElementalUpg_Actions takes nothing returns nothing
     else
         if ( Trig_ThrallElementalUpg_Func012Func001C() ) then
             call EnableTrigger(gg_trg_ThrallCounterstrikeTotemCrutch)
-            call ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_PlayerThrall, 'o003'), function Trig_ThrallElementalUpg_Func012Func001Func002A)
+            call ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_PlayerThrall, 'o009'), function Trig_ThrallElementalUpg_Func012Func001Func002A)
             call SetPlayerTechMaxAllowedSwap('R02T', 0, udg_PlayerThrall)
             call SetPlayerAbilityAvailableBJ(true, 'A07L', udg_PlayerThrall)
         else
@@ -7506,7 +7863,7 @@ endfunction
 function Trig_WhitemaneConjurorRadiance_Actions takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'h01Z', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
     call IssuePointOrderLocBJ(GetLastCreatedUnit(), "move", GetSpellTargetLoc())
-    call UnitApplyTimedLifeBJ(20.00, 'BTLF', GetLastCreatedUnit())
+    call UnitApplyTimedLifeBJ(15.00, 'BTLF', GetLastCreatedUnit())
 endfunction
 
 //===========================================================================
@@ -7804,11 +8161,11 @@ endfunction
 // Trigger: Mythic3Tiranic
 //===========================================================================
 function Trig_Mythic3Tiranic_Func001A takes nothing returns nothing
-    call SetPlayerHandicapBJ(GetEnumPlayer(), 130.00)
+    call SetPlayerHandicapBJ(GetEnumPlayer(), 120.00)
 endfunction
 
 function Trig_Mythic3Tiranic_Actions takes nothing returns nothing
-    call FrameMythic("UI\\Mythic\\Tyrannical.blp" , "Tyrannical" , "Additional enemy health +30%")
+    call FrameMythic("UI\\Mythic\\Tyrannical.blp" , "Tyrannical" , "Additional enemy health +20%")
     call ForForce(GetPlayersAllies(udg_MythicEnemy), function Trig_Mythic3Tiranic_Func001A)
 endfunction
 
@@ -9112,12 +9469,15 @@ function Trig_AlliesEnemyAndNeutral_Actions takes nothing returns nothing
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Player(4), bj_ALLIANCE_ALLIED)
     call SetPlayerAllianceStateBJ(Player(5), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED)
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), Player(5), bj_ALLIANCE_ALLIED)
+    call SetPlayerAllianceStateBJ(Player(0), Player(2), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(1), Player(2), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(2), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(2), Player(1), bj_ALLIANCE_ALLIED_ADVUNITS)
 endfunction
 
 //===========================================================================
 function InitTrig_AlliesEnemyAndNeutral takes nothing returns nothing
     set gg_trg_AlliesEnemyAndNeutral=CreateTrigger()
-    call DisableTrigger(gg_trg_AlliesEnemyAndNeutral)
     call TriggerAddAction(gg_trg_AlliesEnemyAndNeutral, function Trig_AlliesEnemyAndNeutral_Actions)
 endfunction
 
@@ -11806,26 +12166,18 @@ function InitTrig_EnemyHeroAddItem takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ApiEnemyCreate
-//===========================================================================
-function Trig_ApiEnemyCreate_Actions takes nothing returns nothing
-    local integer createUnit= ApiEnemyGet(udg_RACE_RANDOM , "unit" , 3)
-    call CreateUnitAtLoc(Player(0), createUnit, GetRectCenter(bj_mapInitialPlayableArea), bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ApiEnemyCreate takes nothing returns nothing
-    set gg_trg_ApiEnemyCreate=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_ApiEnemyCreate, 5)
-    call TriggerAddAction(gg_trg_ApiEnemyCreate, function Trig_ApiEnemyCreate_Actions)
-endfunction
-//===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_LimitUnits()
-    call InitTrig_StartResouces()
-    call InitTrig_StartCameraP1()
-    call InitTrig_StartCameraP2()
-    call InitTrig_StartCameraReset()
+    call InitTrig_IniLimitUnitsF1()
+    call InitTrig_IniStartResouces()
+    call InitTrig_IniSelectUnit()
+    call InitTrig_IniStartCameraP1()
+    call InitTrig_IniStartCameraP2()
+    call InitTrig_IniStartCameraReset()
+    call InitTrig_BtnF1()
+    call InitTrig_Untitled_Trigger_001()
+    call InitTrig_OrderHoldPatrol()
+    call InitTrig_OrderHarvest()
+    call InitTrig_F1OrderSwap()
     call InitTrig_ChooseFirst()
     call InitTrig_UnSelect()
     call InitTrig_PreviewLegend()
@@ -11880,6 +12232,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
     call InitTrig_TyrandeIni()
+    call InitTrig_TyrandeDori()
     call InitTrig_TyrandeEluneLevelNight()
     call InitTrig_TyrandeShadowstalk()
     call InitTrig_TyrandeTearsOfElune()
@@ -12001,13 +12354,12 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EnemyWave4()
     call InitTrig_EnemyHero()
     call InitTrig_EnemyHeroAddItem()
-    call InitTrig_ApiEnemyCreate()
 endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_LimitUnits)
-    call ConditionalTriggerExecute(gg_trg_StartResouces)
+    call ConditionalTriggerExecute(gg_trg_IniLimitUnitsF1)
+    call ConditionalTriggerExecute(gg_trg_IniStartResouces)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_AlteracInitialization)
     call ConditionalTriggerExecute(gg_trg_NPCInitialization)

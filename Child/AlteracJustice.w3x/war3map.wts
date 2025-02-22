@@ -1324,7 +1324,7 @@ Sacrifice
 }
 
 STRING 1398
-// Buffs/Effects: B00A (Rotten teeth), EditorName (Name (Editor Only))
+// Abilities: A025 (Rotten teeth), Name (Name)
 {
 Rotten teeth
 }
@@ -1336,7 +1336,7 @@ Rotten teeth
 }
 
 STRING 1400
-// Buffs/Effects: B00B (Rotten teeth), EditorName (Name (Editor Only))
+// Buffs/Effects: B00A (Rotten teeth), EditorName (Name (Editor Only))
 {
 Rotten teeth
 }
@@ -1385,7 +1385,7 @@ Slave of the Lich King
 }
 
 STRING 1455
-// Buffs/Effects: B00C (Blood Rage), EditorName (Name (Editor Only))
+// Abilities: A024 (Blood Rage), Name (Name)
 {
 Blood Rage
 }
@@ -1394,12 +1394,6 @@ STRING 1456
 // Abilities: A024 (Blood Rage), Tip (Tooltip - Normal)
 {
 Blood Rage
-}
-
-STRING 1458
-// Abilities: A025 (Rotten teeth), EditorSuffix (Editor Suffix)
-{
-(Ghoul - Unholy)
 }
 
 STRING 1460
@@ -1506,13 +1500,13 @@ Chance to cast on attack
 }
 
 STRING 1501
-// Abilities: A029 (Corrosion), Tip (Tooltip - Normal)
+// Abilities: A09H (Corrosion), Tip (Tooltip - Normal)
 {
 Corrosion
 }
 
 STRING 1505
-// Buffs/Effects: B00E (Blood Feast Aura), EditorName (Name (Editor Only))
+// Abilities: A019 (Blood Feast Aura), Name (Name)
 {
 Blood Feast Aura
 }
@@ -1541,82 +1535,16 @@ STRING 1511
 This unit is under the effects of Blood Feast Aura; damage it deals to enemy units will restore hit points.
 }
 
-STRING 1512
-// Abilities: A019 (Blood Feast Aura), Name (Name)
-{
-Blood Feast Aura
-}
-
-STRING 1513
-// Abilities: A02B (Frost Beetles), Name (Name)
-{
-Frost Beetles
-}
-
 STRING 1514
 // Abilities: A02B (Frost Beetles), Tip (Tooltip - Normal)
 {
 Frost Beetles
 }
 
-STRING 1515
-// Abilities: A01W (Blood Soul Reforging), Name (Name)
-{
-Blood Soul Reforging
-}
-
-STRING 1516
-// Abilities: A01X (Frost Soul Reforging), Name (Name)
-{
-Frost Soul Reforging
-}
-
-STRING 1517
-// Abilities: A01Y (Unholy Soul Reforging), Name (Name)
-{
-Unholy Soul Reforging
-}
-
-STRING 1518
-// Abilities: A026 (Ice Shard), Name (Name)
-{
-Ice Shard
-}
-
 STRING 1520
 // Abilities: A02B (Frost Beetles), Ubertip (Tooltip - Normal - Extended)
 {
 Adds a cold effect to each attack, dealing <A02B,DataA1> bonus damage, slowing a target enemy unit's attacks by <A02B,DataB1,%>% and movement by <A02B,DataC1,%>% for <A02B,Dur1> seconds.
-}
-
-STRING 1524
-// Abilities: A024 (Blood Rage), Name (Name)
-{
-Blood Rage
-}
-
-STRING 1525
-// Abilities: A01O (Blood Soul), Name (Name)
-{
-Blood Soul
-}
-
-STRING 1526
-// Abilities: A01P (Frost Soul), Name (Name)
-{
-Frost Soul
-}
-
-STRING 1527
-// Abilities: A01Q (Unholy Soul), Name (Name)
-{
-Unholy Soul
-}
-
-STRING 1534
-// Abilities: A02D (Rapacity), Name (Name)
-{
-Rapacity
 }
 
 STRING 1535
@@ -1626,7 +1554,7 @@ Rapacity
 }
 
 STRING 1537
-// Buffs/Effects: B00F (Rapacity), EditorName (Name (Editor Only))
+// Abilities: A02D (Rapacity), Name (Name)
 {
 Rapacity
 }
@@ -1659,12 +1587,6 @@ STRING 1542
 // Upgrades: R00P (Burrow), Tip (Tooltip)
 {
 Research Crypt Fiend Upgrade
-}
-
-STRING 1547
-// Abilities: A02C (Disease Cloud), EditorSuffix (Editor Suffix)
-{
-(Stone Form)
 }
 
 STRING 1556
@@ -1769,18 +1691,6 @@ STRING 1572
 Disease Cloud - 100
 }
 
-STRING 1573
-// Abilities: A012 (Blood), Name (Name)
-{
-Blood
-}
-
-STRING 1575
-// Abilities: A016 (Unholy), Name (Name)
-{
-Unholy
-}
-
 STRING 1580
 // Abilities: A02F (Blood Mark), Tip (Tooltip - Normal)
 {
@@ -1794,21 +1704,9 @@ This unit has Blood Mark; his armor is reduced.
 }
 
 STRING 1583
-// Buffs/Effects: B00G (Blood Mark), EditorName (Name (Editor Only))
+// Abilities: A02F (Blood Mark), Name (Name)
 {
 Blood Mark
-}
-
-STRING 1585
-// Abilities: A02G (Life Steal), EditorSuffix (Editor Suffix)
-{
-(aura hide ability)
-}
-
-STRING 1593
-// Abilities: A02H (Winds of Northrend), Name (Name)
-{
-Winds of Northrend
 }
 
 STRING 1594
@@ -1830,7 +1728,7 @@ STRING 1597
 }
 
 STRING 1598
-// Buffs/Effects: B00H (Winds of Northrend), EditorName (Name (Editor Only))
+// Abilities: A02H (Winds of Northrend), Name (Name)
 {
 Winds of Northrend
 }
@@ -1854,7 +1752,7 @@ Necrotic Breath
 }
 
 STRING 1618
-// Buffs/Effects: B00I (Necrotic Breath), EditorName (Name (Editor Only))
+// Abilities: S00X (Necrotic Breath), Name (Name)
 {
 Necrotic Breath
 }
@@ -1871,24 +1769,6 @@ STRING 1621
 This unit is Necrotic Breath; its damage have been reduced.
 }
 
-STRING 1622
-// Abilities: A025 (Rotten teeth), Name (Name)
-{
-Rotten teeth
-}
-
-STRING 1623
-// Abilities: A02F (Blood Mark), Name (Name)
-{
-Blood Mark
-}
-
-STRING 1625
-// Abilities: S00X (Necrotic Breath), Name (Name)
-{
-Necrotic Breath
-}
-
 STRING 1627
 // Upgrades: R00Q (Burrow), Name (Name)
 {
@@ -1901,28 +1781,10 @@ STRING 1628
 Research Gargoyle Upgrade
 }
 
-STRING 1631
-// Abilities: A02J (Surfeit), Name (Name)
-{
-Surfeit
-}
-
 STRING 1632
 // Abilities: A02J (Surfeit), Tip (Tooltip - Normal)
 {
 Surfeit
-}
-
-STRING 1633
-// Abilities: A02L (Surfeit), Name (Name)
-{
-Surfeit
-}
-
-STRING 1634
-// Abilities: A02L (Surfeit), EditorSuffix (Editor Suffix)
-{
-(Life Bonus)
 }
 
 STRING 1641
@@ -1961,20 +1823,8 @@ STRING 1647
 Surfeit
 }
 
-STRING 1656
-// Abilities: A02G (Life Steal), Name (Name)
-{
-Life Steal
-}
-
-STRING 1657
-// Abilities: A02C (Disease Cloud), Name (Name)
-{
-Disease Cloud
-}
-
 STRING 1660
-// Buffs/Effects: B00J (Glacial Gusto), EditorName (Name (Editor Only))
+// Abilities: A02M (Glacial Gusto), Name (Name)
 {
 Glacial Gusto
 }
@@ -1997,24 +1847,6 @@ STRING 1666
 Glacial Gusto
 }
 
-STRING 1669
-// Abilities: A02M (Glacial Gusto), Name (Name)
-{
-Glacial Gusto
-}
-
-STRING 1670
-// Abilities: A02M (Glacial Gusto), EditorSuffix (Editor Suffix)
-{
-(dummy)
-}
-
-STRING 1671
-// Abilities: A02K (Glacial Gusto), Name (Name)
-{
-Glacial Gusto
-}
-
 STRING 1672
 // Buffs/Effects: B00J (Glacial Gusto), Bufftip (Tooltip)
 {
@@ -2023,12 +1855,6 @@ Glacial Gusto
 
 STRING 1675
 // Abilities: A02N (Infectious Outbreak), Tip (Tooltip - Normal)
-{
-Infectious Outbreak
-}
-
-STRING 1681
-// Abilities: A02N (Infectious Outbreak), Name (Name)
 {
 Infectious Outbreak
 }
@@ -2088,12 +1914,6 @@ STRING 1699
 // Abilities: A02R (Frostmourne's Hunger), Name (Name)
 {
 Frostmourne's Hunger
-}
-
-STRING 1700
-// Abilities: A02R (Frostmourne's Hunger), Researchubertip (Tooltip - Learn - Extended)
-{
-Increases Soul movement speed.|n|n|cffffcc00Level 1|r - <A02R,DUR1,+> add speed. |n|cffffcc00Level 2|r - <A02R,DUR1,+> add speed. |n|cffffcc00Level 3|r - <A02R,DUR1,+> add speed.
 }
 
 STRING 1701
@@ -2263,16 +2083,8 @@ STRING 1784
 Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, an Arcane Tower, or a Cannon Tower. Can learn the Magic Sentry ability.
 }
 
-STRING 1785
-// Units: h02P (Guard Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Primary defensive structure. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 1786
-// Units: h02Q (Cannon Tower), Ubertip (Tooltip - Extended)
+// Units: h015 (Cannon Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -2627,44 +2439,32 @@ STRING 1982
 {
 Learn Seal Of Wisdom - }
 
-STRING 1985
-// Abilities: A013 (Seal Of Wisdom), Researchubertip (Tooltip - Learn - Extended)
-{
-Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Level 1|r - Restores 1.5% mana when attacking. |n|cffffcc00Level 2|r - Restores 2.5% mana when attacking. |n|cffffcc00Level 3|r - Restores 3.5% mana when attacking.
-}
-
 STRING 1986
-// Abilities: A01Z (Shake), Name (Name)
-{
-Shake
-}
-
-STRING 1987
-// Abilities: A01Z (Shake), Tip (Tooltip - Normal)
-{
-Shake
-}
-
-STRING 1989
 // Abilities: A02S (Shake), Name (Name)
 {
 Shake
 }
 
-STRING 1990
+STRING 1987
 // Abilities: A02S (Shake), Tip (Tooltip - Normal)
 {
 Shake
 }
 
-STRING 1991
+STRING 1989
 // Buffs/Effects: B00M (Shake), EditorName (Name (Editor Only))
 {
 Shake
 }
 
-STRING 1992
+STRING 1990
 // Buffs/Effects: B00M (Shake), Bufftip (Tooltip)
+{
+Shake
+}
+
+STRING 1991
+// Upgrades: R010 (Flying Machine Bombs), Name (Name)
 {
 Shake
 }
@@ -2843,24 +2643,6 @@ STRING 2026
 {
 Holy Aura - }
 
-STRING 2027
-// Abilities: A00V (Holy Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A00V,DataA1>
-}
-
-STRING 2028
-// Abilities: A00V (Holy Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A00V,DataA2>
-}
-
-STRING 2029
-// Abilities: A00V (Holy Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Increases nearby friendly units' movement speed by <A00V,DataA3>
-}
-
 STRING 2030
 // Abilities: A005 (Divine Shield), Untip (Tooltip - Turn Off)
 {
@@ -2946,7 +2728,7 @@ Research Holy Bomb
 }
 
 STRING 2058
-// Upgrades: R013 (Fragmentation Shards), Ubertip (Tooltip - Extended)
+// Abilities: A01Z (Holy Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Damage no longer causes damage to allied troops
 }
@@ -3105,24 +2887,6 @@ STRING 2100
 |cffffcc00 #T3 #food #storage
 |R
 Upgrade to Castle to enable the production of additional types of structures and units.
-}
-
-STRING 2101
-// Abilities: A00C (Summon Champion of Retribution), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful champion who supports the army with his aura
-}
-
-STRING 2102
-// Abilities: A00D (Summon Champion of Protection), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful champion who supports the army with his aura
-}
-
-STRING 2103
-// Abilities: A00E (Summon Champion of Holy), Ubertip (Tooltip - Normal - Extended)
-{
-A powerful champion who supports the army with his aura
 }
 
 STRING 2111
@@ -3660,7 +3424,7 @@ Build Bank of Stormwind
 }
 
 STRING 2255
-// Abilities: A029 (Corrosion), Name (Name)
+// Abilities: A09H (Corrosion), Name (Name)
 {
 Corrosion
 }
@@ -3702,13 +3466,13 @@ STRING 2267
 }
 
 STRING 2268
-// Abilities: A035 (Disease Cloud), Name (Name)
+// Abilities: A02C (Disease Cloud), Name (Name)
 {
 Disease Cloud
 }
 
 STRING 2269
-// Abilities: A036 (Disease Cloud), Name (Name)
+// Abilities: A035 (Disease Cloud), Name (Name)
 {
 Disease Cloud
 }
@@ -3831,12 +3595,6 @@ STRING 2305
 // Units: H004 (Stonebeard), Name (Name)
 {
 Stonebeard
-}
-
-STRING 2310
-// Units: h007 (Add Building), Name (Name)
-{
-Add Building
 }
 
 STRING 2314
@@ -3989,12 +3747,6 @@ STRING 2338
 Acolyte
 }
 
-STRING 2339
-// Abilities: A02E (Effect Aura Unholy), Name (Name)
-{
-Effect Aura Unholy
-}
-
 STRING 2359
 // Abilities: A024 (Blood Rage), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4016,12 +3768,6 @@ Ice Shard - Adds additional damage <A026,DataA1> to attacking enemies at the cos
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
-STRING 2361
-// Abilities: A029 (Corrosion), Ubertip (Tooltip - Normal - Extended)
-{
-Reduces armor by <A029,DataB1> for <A029,Dur1> seconds on attack.
-}
-
 STRING 2362
 // Upgrades: R00P (Burrow), Ubertip (Tooltip - Extended)
 {
@@ -4035,12 +3781,6 @@ Frost Beetles - Adds a cold effect to each attack, dealing <A02B,DataA1> bonus d
 
 |cff00ff00Unholy:|r
 Corrosion - Reduces armor by <A029,DataB1> for <A029,Dur1> seconds on attack
-}
-
-STRING 2363
-// Abilities: A02I (Overwhelming Sadness), Name (Name)
-{
-Overwhelming Sadness
 }
 
 STRING 2364
@@ -4447,12 +4187,6 @@ Infectious Outbreak - Activate Immolation to engulf this unit in flames, causing
 Ghoulish Return - Upon death, spawn Decaying Ghouls equal to the mastery level of Unholy Runes
 }
 
-STRING 2434
-// Abilities: A02O (Ghoulish Return), Name (Name)
-{
-Ghoulish Return
-}
-
 STRING 2435
 // Abilities: A02A (Swallow), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4492,18 +4226,6 @@ Ice of Northrend - Gives <A027,DataA1>% chance to Freeze the enemy for <A027,Dur
 Rotten Teeth - A poison attack that deals <A025,DataA1> damage per second for <A025,Dur1> seconds.
 }
 
-STRING 2450
-// Abilities: A037 (Frost), Name (Name)
-{
-Frost
-}
-
-STRING 2452
-// Abilities: A02X (Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
-{
-Plague continues to grow as unit mana pool grows
-}
-
 STRING 2454
 // Abilities: A02H (Winds of Northrend), Ubertip (Tooltip - Normal - Extended)
 {
@@ -4524,12 +4246,6 @@ Winds of Northrend - Reduce nearby enemy units' movement speed by <A02H,DataA1,%
 
 |cff00ff00Unholy:|r
 Icecrown Plague Spread - Plague continues to grow as unit mana pool grows.
-}
-
-STRING 2456
-// Abilities: A034 (Deathfrost Shards), Ubertip (Tooltip - Normal - Extended)
-{
-Bombards an area with shards, dealing up to <A034,Data1> damage to nearby enemy land units and stunning them for <A034,Dur1> second.
 }
 
 STRING 2457
@@ -6002,12 +5718,6 @@ STRING 3026
 Hammer of Justice
 }
 
-STRING 3027
-// Upgrades: R010 (Flying Machine Bombs), Name (Name)
-{
-Shake
-}
-
 STRING 3028
 // Upgrades: R011 (Priest Adept Training,Priest Master Training), Name (Name)
 {
@@ -6021,7 +5731,7 @@ Exorcism
 }
 
 STRING 3030
-// Upgrades: R013 (Fragmentation Shards), Name (Name)
+// Abilities: A01Z (Holy Bomb), Name (Name)
 {
 Holy Bomb
 }
@@ -6075,7 +5785,7 @@ Bastion Reinforcement
 }
 
 STRING 3043
-// Abilities: A03F (Bastion Reinforcement), EditorSuffix (Editor Suffix)
+// Abilities: A012 (Blood), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -6180,30 +5890,6 @@ STRING 3062
 {
 Heroic Strike - }
 
-STRING 3063
-// Abilities: A03H (Heroic Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A03H,DataA1>% chance to do <A03H,DataB1> times normal damage on an attack.
-}
-
-STRING 3064
-// Abilities: A03H (Heroic Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A03H,DataA2>% chance to do <A03H,DataB2> times normal damage on an attack.
-}
-
-STRING 3065
-// Abilities: A03H (Heroic Strike), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A03H,DataA3>% chance to do <A03H,DataB3> times normal damage on an attack.
-}
-
-STRING 3066
-// Abilities: A03H (Heroic Strike), Researchubertip (Tooltip - Learn - Extended)
-{
-Gives a chance to do more damage on an attack. |n|n|cffffcc00Level 1|r - <A03H,DataA1>% chance, <A03H,DataB1> times normal damage. |n|cffffcc00Level 2|r - <A03H,DataA2>% chance, <A03H,DataB2> times normal damage. |n|cffffcc00Level 3|r - <A03H,DataA3>% chance, <A03H,DataB3> times normal damage.
-}
-
 STRING 3069
 // Abilities: A03I (Stormwind Battlecry), Ubertip (Tooltip - Normal - Extended)
 {
@@ -6298,18 +5984,6 @@ STRING 3086
 // Buffs/Effects: B00K (), Buffubertip (Tooltip - Extended)
 {
 This unit has Taunt; its armor are increased.
-}
-
-STRING 3088
-// Abilities: A03J (Taunt), Researchubertip (Tooltip - Learn - Extended)
-{
-The closest <A03J,DataA1> enemies are forced to attack this unit.
-}
-
-STRING 3089
-// Abilities: A03J (Taunt), Ubertip (Tooltip - Normal - Extended)
-{
-The closest <A03J,DataA1> enemies are forced to attack this unit.
 }
 
 STRING 3090
@@ -6524,12 +6198,6 @@ STRING 3155
 This unit is under the effects of Defensive Stance; it has increased armor.
 }
 
-STRING 3160
-// Abilities: A042 (Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
-{
-Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
-}
-
 STRING 3169
 // Units: h018 (Soldier), Name (Name)
 {
@@ -6722,22 +6390,6 @@ STRING 3270
 |cffffcc00#heroes
 |R
 Summons Heroes. Revives slain Heroes.
-}
-
-STRING 3284
-// Units: h00C (Light Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard #support
-|R
-Magical defensive tower. Particularly effective against enemy Heroes and spellcasters. Has the Feedback ability, which causes its attacks to destroy mana, dealing extra damage equal to the mana destroyed. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land and air units.
-}
-
-STRING 3290
-// Units: h015 (Cannon Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability. |n|n|cffffcc00Attacks land units and trees.|r
 }
 
 STRING 3298
@@ -7706,14 +7358,6 @@ STRING 3537
 While moving, generates a charge that adds bonus fire damage <A043,DataA1>.
 }
 
-STRING 3538
-// Abilities: A044 (Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
-{
-|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
-
-Gives a <A042,DataA1>% chance to do <A042,DataB1> times normal damage on an attack.
-}
-
 STRING 3539
 // Abilities: A045 (Veteran: Defensive Stance), Ubertip (Tooltip - Normal - Extended)
 {
@@ -8182,12 +7826,6 @@ STRING 3630
 Tree of Life
 }
 
-STRING 3631
-// Units: e001 (Wisp), Name (Name)
-{
-Wisp
-}
-
 STRING 3632
 // Upgrades: R01M (Magic Sentry), Name (Name)
 {
@@ -8400,12 +8038,6 @@ STRING 3672
 Hippogryph Rider
 }
 
-STRING 3673
-// Units: e00K (Chimaera), Name (Name)
-{
-Chimaera
-}
-
 STRING 3674
 // Units: e00L (Moonkin), Name (Name)
 {
@@ -8452,12 +8084,6 @@ STRING 3683
 // Abilities: A059 (Shadowstalk), Tip (Tooltip - Normal)
 {
 Shadowstalk
-}
-
-STRING 3684
-// Units: u004 (Dummy), Name (Name)
-{
-Dummy
 }
 
 STRING 3686
@@ -8853,26 +8479,10 @@ STRING 3771
 Searing Arrows
 }
 
-STRING 3772
-// Upgrades: R01U (Improved Bows), Ubertip (Tooltip - Extended)
-{
-Adds <AHfa,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
-
-|cFF005DFFNight:|R Damage increased to <AHfa,DataA2>.
-}
-
 STRING 3774
 // Abilities: A05L (Evasion), Tip (Tooltip - Normal)
 {
 Evasion
-}
-
-STRING 3775
-// Upgrades: R01T (Sentinel), Ubertip (Tooltip - Extended)
-{
-Gives a <A05L,DataA1,%>% chance to avoid an attack.
-
-|cFF005DFFNight:|R Chance increased to <A05L,DataA2,%>%
 }
 
 STRING 3776
@@ -8983,18 +8593,6 @@ STRING 3793
 Research Pristine Spring
 }
 
-STRING 3794
-// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
-{
-Increases the amount of mana that can be stored in Moon Wells by <R021,mod1>, and their rate of mana regeneration by <R021,mod2,%>%.
-}
-
-STRING 3795
-// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
-{
-Increases the amount of mana that can be stored in Moon Wells by <R021,base1>, and their rate of mana regeneration by <R021,base2,%>%.
-}
-
 STRING 3796
 // Abilities: A05Q (Sentinel), Name (Name)
 {
@@ -9036,18 +8634,6 @@ STRING 3807
 Summons an Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit. |nCan see invisible units. |nLasts <AEst,Dur1> seconds.
 }
 
-STRING 3808
-// Abilities: A04X (Dori'thur), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur2> seconds.
-}
-
-STRING 3809
-// Abilities: A04X (Dori'thur), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a very fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur3> seconds.
-}
-
 STRING 3810
 // Abilities: A05S (Mark of the Owl), Name (Name)
 {
@@ -9055,7 +8641,7 @@ Mark of the Owl
 }
 
 STRING 3811
-// Abilities: A05S (Mark of the Owl), Tip (Tooltip - Normal)
+// Buffs/Effects: B00X (Mark of the Owl), Bufftip (Tooltip)
 {
 Mark of the Owl
 }
@@ -9064,12 +8650,6 @@ STRING 3812
 // Abilities: A05S (Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
 {
 Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit. |nLasts <A05S,Dur1> seconds.
-}
-
-STRING 3813
-// Buffs/Effects: B00X (Mark of the Owl), Bufftip (Tooltip)
-{
-Mark of the Owl
 }
 
 STRING 3814
@@ -9168,18 +8748,6 @@ STRING 3829
 Moonkin Adept Training
 }
 
-STRING 3830
-// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Rejuvenation.
-}
-
-STRING 3831
-// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
-{
-Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Bear Form.
-}
-
 STRING 3838
 // Abilities: A05W (Bladed Feathers), Name (Name)
 {
@@ -9226,14 +8794,6 @@ STRING 3846
 // Buffs/Effects: B00Y (Bladed Feathers), EditorName (Name (Editor Only))
 {
 Bladed Feathers
-}
-
-STRING 3847
-// Abilities: A05W (Bladed Feathers), Ubertip (Tooltip - Normal - Extended)
-{
-An aura that gives friendly nearby units a damage shield, which deals <A05W,DataA1> of an enemy unit's melee attack damage back to it.
-
-|cFF005DFFNight:|R Restores health equal to  <A05X,DataA2,%>% of damage dealt.
 }
 
 STRING 3848
@@ -9362,16 +8922,8 @@ STRING 3871
 Priestess of Elune Adept Training
 }
 
-STRING 3872
-// Units: e000 (Tree of Life), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Primary structure, used to train Wisps and entangle gold mines. Can be upgraded to Tree of Ages and then Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 3873
-// Units: e001 (Wisp), Ubertip (Tooltip - Extended)
+// Units: e001 (Mystic Wisp), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#worker #builder
 |R
@@ -9442,22 +8994,6 @@ STRING 3882
 Trains Chimaeras. |nAlso contains the Corrosive Breath upgrade.
 }
 
-STRING 3883
-// Units: e00A (Tree of Ages), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Upgrade to Tree of Ages to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 3884
-// Units: e00E (Tree of Eternity), Ubertip (Tooltip - Extended)
-{
-|cffffcc00 #T1 #food #storage
-|R
-Upgrade to Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 3885
 // Units: e00F (Huntress), Ubertip (Tooltip - Extended)
 {
@@ -9491,27 +9027,11 @@ Archer mounted Hippogryph. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 3890
-// Units: e00K (Chimaera), Ubertip (Tooltip - Extended)
+// Units: e00K (Veiled Chimaera), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#ranged #fly
 |R
 Flying two headed Dragon. Can learn Corrosive Breath. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 3891
-// Units: e00L (Moonkin), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#melee #support
-|R
-Melee spellcaster. Can initially cast Roar, which increases attack damage. Can also learn Rejuvenation, Bear Form and Mark of the Claw. |n|n|cffffcc00Attacks land units.|r
-}
-
-STRING 3893
-// Units: e00M (Priestess of Elune), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Maneuverable spellcaster. Can initially cast Faerie Fire, which reduces armor and gives vision of an enemy unit. Can also learn Storm Crow Form, Cyclone and Mark of the Talon. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 3894
@@ -9578,12 +9098,6 @@ STRING 3904
 // Buffs/Effects: B010 (Prayer of the Moon Goddess), Buffubertip (Tooltip - Extended)
 {
 Its mana will regenerate over time.
-}
-
-STRING 3905
-// Units: e00M (Priestess of Elune), Casterupgradetip (Caster Upgrade Tips)
-{
-- Moonfire,- Moonfire|n- Prayer of the Moon Goddess,- Moonfire|n- Prayer of the Moon Goddess|n- Cyclone
 }
 
 STRING 3906
@@ -9889,7 +9403,7 @@ STRING 3996
 }
 
 STRING 3997
-// Abilities: A003 (Difficulty: Easy), Hotkey (Hotkey - Normal)
+// Abilities: A01C (Legends: Arthas), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -9943,7 +9457,7 @@ W
 }
 
 STRING 4010
-// Abilities: A057 (Eclipse), Hotkey (Hotkey - Normal)
+// Abilities: A054 (Legends: Tyrande), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -10269,7 +9783,7 @@ Overload
 }
 
 STRING 4116
-// Abilities: A06W (Totem of Wrath), EditorSuffix (Editor Suffix)
+// Abilities: A016 (Unholy), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -10505,7 +10019,7 @@ Dispels positive buffs from enemy units, and negative buffs from friendly units.
 }
 
 STRING 4170
-// Abilities: A06Z (Wind Rush Totem), EditorSuffix (Editor Suffix)
+// Abilities: A037 (Frost), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -10517,7 +10031,7 @@ Wind Rush Totem
 }
 
 STRING 4172
-// Abilities: A070 (Healing Tide Totem), EditorSuffix (Editor Suffix)
+// Abilities: A03F (Bastion Reinforcement), EditorSuffix (Editor Suffix)
 {
 (Effect)
 }
@@ -10540,12 +10054,6 @@ STRING 4175
 Increases nearby friendly units' movement speed by <A06L,DataA1,%>%.
 }
 
-STRING 4176
-// Upgrades: R02C (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Improves the fighting capabilities of all totems with a <R02C,base1> hit point increase.
-}
-
 STRING 4177
 // Abilities: A06I (Switch to Wind Rush Totem), Ubertip (Tooltip - Normal - Extended)
 {
@@ -10556,7 +10064,7 @@ Increases nearby friendly units' movement speed by <A06L,DataA1,%>%.
 }
 
 STRING 4182
-// Upgrades: R02C (Brute Strength), Name (Name)
+// Abilities: A09C (Artisan-crafted Totem), Name (Name)
 {
 Artisan-crafted Totem
 }
@@ -10780,12 +10288,6 @@ STRING 4239
 Airburst Amulet
 }
 
-STRING 4240
-// Abilities: A07C (Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
-{
-Causes attacks to do <A07C,DataC1> times normal damage to air units.
-}
-
 STRING 4241
 // Abilities: A07C (Airburst Amulet), Tip (Tooltip - Normal)
 {
@@ -10862,14 +10364,6 @@ STRING 4260
 Improves the fighting capabilities of Grunts with a 4 bonus attack damage.
 
 |cFFFF5800Only 1 upgrade for the unit type|R - Grunt
-}
-
-STRING 4261
-// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Improves the fighting capabilities of Grunts with a <R02K,base2> bonus attack damage.
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
 }
 
 STRING 4262
@@ -11019,14 +10513,6 @@ STRING 4292
 Research Water Ring
 }
 
-STRING 4294
-// Upgrades: R02P (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add +0.5 mana per second
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Shaman
-}
-
 STRING 4295
 // Buffs/Effects: B018 (Water Ring), Bufftip (Tooltip)
 {
@@ -11076,7 +10562,7 @@ STRING 4302
 }
 
 STRING 4303
-// Abilities: A08E (Scarlet March (On)), Hotkey (Hotkey - Normal)
+// Abilities: A003 (Difficulty: Easy), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -11088,19 +10574,19 @@ R
 }
 
 STRING 4305
-// Abilities: A08F (Scarlet March (Off)), Hotkey (Hotkey - Normal)
+// Abilities: A06B (Legends: Thrall), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 4306
-// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+// Abilities: A057 (Eclipse), Hotkey (Hotkey - Normal)
 {
 E
 }
 
 STRING 4307
-// Abilities: A06D (Place a Totem), Hotkey (Hotkey - Normal)
+// Abilities: A031 (Legends: Varian Wrynn), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -11209,16 +10695,8 @@ STRING 4325
 Research Earth Amulet
 }
 
-STRING 4326
-// Upgrades: R02R (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add defense bonus
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Raider
-}
-
 STRING 4327
-// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08E (Scarlet March (On)), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -11241,12 +10719,6 @@ STRING 4330
 Windfury Weapon
 }
 
-STRING 4331
-// Abilities: A07I (Windfury Weapon), Ubertip (Tooltip - Normal - Extended)
-{
-Add +10% speed attack
-}
-
 STRING 4332
 // Abilities: A07I (Windfury Weapon), EditorSuffix (Editor Suffix)
 {
@@ -11257,12 +10729,6 @@ STRING 4333
 // Abilities: A07J (Earth Amulet), Tip (Tooltip - Normal)
 {
 Earth Amulet
-}
-
-STRING 4334
-// Abilities: A07J (Earth Amulet), Ubertip (Tooltip - Normal - Extended)
-{
-Add defense bonus
 }
 
 STRING 4335
@@ -11290,7 +10756,7 @@ Research Windfury Weapon
 }
 
 STRING 4340
-// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11314,7 +10780,7 @@ Research Quaking Totem
 }
 
 STRING 4345
-// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11428,7 +10894,7 @@ STRING 4369
 }
 
 STRING 4370
-// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11728,18 +11194,6 @@ STRING 4450
 // Buffs/Effects: B01D (Brilliance Aura), EditorName (Name (Editor Only))
 {
 Brilliance Aura
-}
-
-STRING 4456
-// Abilities: A02V (Exorcism), Ubertip (Tooltip - Normal - Extended)
-{
-Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
-}
-
-STRING 4457
-// Upgrades: R012 (Storm Hammers), Ubertip (Tooltip - Extended)
-{
-Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
 }
 
 STRING 4458
@@ -12290,34 +11744,10 @@ STRING 4534
 Restores 1.0% mana when attacking
 }
 
-STRING 4535
-// Abilities: A013 (Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 2.0% mana when attacking
-}
-
-STRING 4536
-// Abilities: A013 (Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
-{
-Restores 3.0% mana when attacking
-}
-
-STRING 4538
-// Units: u000 (Fireworks), Name (Name)
-{
-Fireworks
-}
-
 STRING 4539
 // Units: u000 (Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 blue
-}
-
-STRING 4540
-// Units: u007 (Fireworks), Name (Name)
-{
-Fireworks
 }
 
 STRING 4541
@@ -12326,22 +11756,10 @@ STRING 4541
 green
 }
 
-STRING 4542
-// Units: u008 (Fireworks), Name (Name)
-{
-Fireworks
-}
-
 STRING 4543
 // Units: u008 (Fireworks), EditorSuffix (Name - Editor Suffix)
 {
 purple
-}
-
-STRING 4544
-// Units: u00D (Fireworks), Name (Name)
-{
-Fireworks
 }
 
 STRING 4545
@@ -12429,7 +11847,7 @@ Upgrade to Unholy Tower
 }
 
 STRING 4561
-// Abilities: A00Q (Blood), Name (Name)
+// Abilities: A012 (Blood), Name (Name)
 {
 Blood
 }
@@ -12441,7 +11859,7 @@ STRING 4562
 }
 
 STRING 4563
-// Abilities: A080 (Frost), Name (Name)
+// Abilities: A037 (Frost), Name (Name)
 {
 Frost
 }
@@ -12453,7 +11871,7 @@ STRING 4564
 }
 
 STRING 4565
-// Abilities: A081 (Unholy), Name (Name)
+// Abilities: A016 (Unholy), Name (Name)
 {
 Unholy
 }
@@ -12483,7 +11901,7 @@ STRING 4569
 }
 
 STRING 4570
-// Abilities: A083 (Life Steal), Name (Name)
+// Abilities: A02G (Life Steal), Name (Name)
 {
 Life Steal
 }
@@ -12830,14 +12248,6 @@ STRING 4620
 Upgrade to create a defensive structure that deals cold damage and slows enemy units. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 4621
-// Units: u01C (Frostmourne Pedestal), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#unique #mechanics
-|R
-Provides attack and armor upgrades for units. Also produces corpses and serves as a drop-off point for harvested lumber.
-}
-
 STRING 4623
 // Units: u00E (Unholy Tower), Ubertip (Tooltip - Extended)
 {
@@ -12859,7 +12269,7 @@ X
 }
 
 STRING 4626
-// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06D (Place a Totem), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -13052,17 +12462,6 @@ Long-range siege weaponry. Effective against buildings but slow and vulnerable. 
 
 |cFF64FF93Amulets|R: Perfect Windfeather
 |cFF64FF93Amulets|R: Fire Runic Stone
-}
-
-STRING 4654
-// Units: o005 (Shaman), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #support
-|R
-Primary spellcaster. Can initially cast Purge, which dispels magical buffs and can immobilize enemies. Can also learn Lightning Shield and Bloodlust. |n|n|cffffcc00Attacks land and air units.|r
-
-|cFF64FF93Amulets|R: Water Ring
-|cFF64FF93Amulets|R: Fire Eye Ring
 }
 
 STRING 4655
@@ -13328,21 +12727,6 @@ STRING 4690
 (Wind Rider)
 }
 
-STRING 4697
-// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Add +20% speed attack
-
-|cFFFF5800Only 1 upgrade for the unit type|R - Raider
-}
-
-STRING 4698
-// Abilities: A06G (Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
-{
-Replaces all totems on the map and grants the ability:
-Restores 1% per second hit points to nearby friendly units.
-}
-
 STRING 4700
 // Abilities: A06V (Whirling Elements), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -13499,7 +12883,7 @@ S
 }
 
 STRING 4721
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A071 (Legends: Whitemane), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -14937,12 +14321,6 @@ STRING 5098
 Inner Fire
 }
 
-STRING 5099
-// Abilities: A08W (Inner Fire), Ubertip (Tooltip - Normal - Extended)
-{
-Increases a target friendly unit's damage by <Ainf,DataA1,%>% and life regen rate by <Ainf,DataD1,%>. |nLasts <Ainf,Dur1> seconds.
-}
-
 STRING 5100
 // Upgrades: R038 (Priest Adept Training,Priest Master Training), Name (Name)
 {
@@ -15463,7 +14841,7 @@ Z
 }
 
 STRING 5296
-// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+// Abilities: A01J (Legends: Uther), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -15475,13 +14853,13 @@ The crossbowman cannot attack targets within a range of less than 200.
 }
 
 STRING 5298
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A08F (Scarlet March (Off)), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 5299
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -16186,7 +15564,7 @@ Supporting spellcaster. Can initially cast Interrogation, which redirects negati
 }
 
 STRING 5381
-// Units: h014 (Guard Tower), Ubertip (Tooltip - Extended)
+// Units: h02P (Guard Tower), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#guard
 |R
@@ -16418,13 +15796,13 @@ Removes all bonuses, stops health loss, and resets the Scarlet Crusade level to 
 }
 
 STRING 5422
-// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 5423
-// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
 {
 W
 }
@@ -16788,5 +16166,1101 @@ STRING 5484
 // Buffs/Effects: B00L (Scarlet March), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Scarlet March, gaining increased movement speed and attack rate but losing health over time.
+}
+
+STRING 5485
+// Abilities: A098 (Interrogation), Ubertip (Tooltip - Normal - Extended)
+{
+Takes a negative buff from a friendly unit and applies it to a nearby enemy unit.
+}
+
+STRING 5486
+// Abilities: A08W (Inner Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Increases a target friendly unit's damage by <A08W,DataA1,%>% and life regen rate by <A08W,DataD1,%>. |nLasts <Ainf,Dur1> seconds.
+}
+
+STRING 5489
+// Upgrades: R01U (Improved Bows), Ubertip (Tooltip - Extended)
+{
+Adds <A05M,DataA1> bonus fire damage to Archers and Hippogryph Riders when attacking enemies, but drains mana with each shot fired.
+
+|cFF005DFFNight:|R Damage increased to <A05M,DataA2>.
+}
+
+STRING 5490
+// Upgrades: R01T (Sentinel), Ubertip (Tooltip - Extended)
+{
+Gives a <A05L,DataA1,%>% chance to avoid an attack to Huntress.
+
+|cFF005DFFNight:|R Chance increased to <A05L,DataA2,%>%
+}
+
+STRING 5493
+// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by 100, and their rate of mana regeneration by 25%.
+}
+
+STRING 5495
+// Abilities: A05P (Well Spring), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by 125 (100 at Level 2), and their rate of mana regeneration by 50% (25% at Level 2).
+}
+
+STRING 5496
+// Upgrades: R021 (Well Spring), Ubertip (Tooltip - Extended)
+{
+Increases the amount of mana that can be stored in Moon Wells by 125, and their rate of mana regeneration by 50%.
+}
+
+STRING 5497
+// Units: u004 (Dummy), Name (Name)
+{
+Dummy
+}
+
+STRING 5498
+// Units: u000 (Fireworks), Name (Name)
+{
+Fireworks
+}
+
+STRING 5499
+// Units: u007 (Fireworks), Name (Name)
+{
+Fireworks
+}
+
+STRING 5500
+// Units: u008 (Fireworks), Name (Name)
+{
+Fireworks
+}
+
+STRING 5501
+// Units: u00D (Fireworks), Name (Name)
+{
+Fireworks
+}
+
+STRING 5504
+// Units: H02J (F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 5506
+// Units: e00M (Priestess of Elune), Casterupgradetip (Caster Upgrade Tips)
+{
+- Moonfire,- Moonfire|n- Sleep,- Moonfire|n- Sleep|n- Cyclone
+}
+
+STRING 5507
+// Units: e00M (Priestess of Elune), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Mystic spellcaster. Can initially cast Moonfire, which reduces armor and gives vision of an enemy unit. Can also learn Sleep and Cyclone.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5508
+// Abilities: A065 (Moonfire), Ubertip (Tooltip - Normal - Extended)
+{
+Deals 250 damage over 10 seconds to the target unit.
+}
+
+STRING 5509
+// Units: h007 (Add Building), Name (Name)
+{
+Add Building
+}
+
+STRING 5510
+// Units: H02J (F1), Name (Name)
+{
+F1
+}
+
+STRING 5511
+// Units: e000 (Tree of Life), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Mystic Wisps and entangle gold mines. Can be upgraded to Tree of Ages and then Tree of Eternity to enable the production of additional types of structures and units.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5512
+// Units: e001 (Mystic Wisp), Name (Name)
+{
+Mystic Wisp
+}
+
+STRING 5513
+// Units: e001 (Mystic Wisp), Tip (Tooltip - Basic)
+{
+Train Mystic Wisp
+}
+
+STRING 5514
+// Units: e00A (Tree of Ages), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Tree of Ages to enable the production of additional types of structures and units.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5515
+// Units: e00E (Tree of Eternity), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Upgrade to Tree of Eternity to enable the production of additional types of structures and units
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5517
+// Units: e00L (Moonkin), Casterupgradetip (Caster Upgrade Tips)
+{
+-,- Bladed Feathers,- Bladed Feathers|n- Roar
+}
+
+STRING 5518
+// Units: e00L (Moonkin), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Melee spellcaster. Can also learn Bladed Feathers and Roar.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 5519
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Bladed Feathers.
+}
+
+STRING 5520
+// Upgrades: R027 (Druid of the Claw Adept Training,Druid of the Claw Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Moonkin mana capacity, mana regeneration rate, hit points, attack damage and gives them the ability Roar.
+}
+
+STRING 5521
+// Abilities: A09C (Artisan-crafted Totem), Tip (Tooltip - Normal)
+{
+Artisan-crafted Totem
+}
+
+STRING 5522
+// Abilities: A09C (Artisan-crafted Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Totem with a 75 hit point increase.
+}
+
+STRING 5523
+// Upgrades: R02C (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of all totems with a 75 hit point increase.
+}
+
+STRING 5524
+// Upgrades: R02C (Brute Strength), Name (Name)
+{
+Artisan-crafted Totem
+}
+
+STRING 5533
+// Abilities: A00V (Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the health regeneration of nearby friendly units by <A00V,DataB1,%>%.
+}
+
+STRING 5534
+// Abilities: A00V (Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the health regeneration of nearby friendly units by <A00V,DataB2,%>%.
+}
+
+STRING 5535
+// Abilities: A00V (Holy Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the health regeneration of nearby friendly units by <A00V,DataB3,%>%.
+}
+
+STRING 5537
+// Abilities: A07J (Earth Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Increases defense by +2
+}
+
+STRING 5538
+// Upgrades: R02R (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Increases defense by +2
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 5541
+// Units: o005 (Shaman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Primary spellcaster. Can initially cast Purge, which dispels magical buffs and can immobilize enemies. Can also learn Lightning Shield and Elemental Destruction.
+
+|cffffcc00Attacks land and air units.|r
+
+|cFF64FF93Amulets|R: Water Ring
+|cFF64FF93Amulets|R: Fire Eye Ring
+}
+
+STRING 5542
+// Units: o005 (Shaman), Casterupgradetip (Caster Upgrade Tips)
+{
+- Purge,- Purge|n- Lightning Shield,- Purge|n- Lightning Shield|n- Elemental Destruction
+}
+
+STRING 5543
+// Upgrades: R02I (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Elemental Destruction.
+}
+
+STRING 5544
+// Abilities: A03G (Lion's Fang), Researchubertip (Tooltip - Learn - Extended)
+{
+A wave of force that ripples out from the Hero, causing damage to land units in a line. |n|n|cffffcc00Level 1|r - <A03G,DataA1> damage. |n|cffffcc00Level 2|r - <A03G,DataA2> damage. |n|cffffcc00Level 3|r - <A03G,DataA3> damage.
+}
+
+STRING 5549
+// Abilities: A09D (Disabled Auto Walk), Tip (Tooltip - Normal)
+{
+Disabled Auto Walk
+}
+
+STRING 5567
+// Abilities: A09E (Disabled Harvest), Tip (Tooltip - Normal)
+{
+Disabled Harvest
+}
+
+STRING 5568
+// Abilities: A09D (Disabled Auto Walk), Name (Name)
+{
+Disabled Auto Walk
+}
+
+STRING 5569
+// Abilities: A09E (Disabled Harvest), Name (Name)
+{
+Disabled Harvest
+}
+
+STRING 5570
+// Abilities: A09F (Tactical), Name (Name)
+{
+Tactical
+}
+
+STRING 5571
+// Abilities: A09F (Tactical), Tip (Tooltip - Normal)
+{
+Tactical
+}
+
+STRING 5573
+// Abilities: A09G (Regroup), Hotkey (Hotkey - Normal)
+{
+T
+}
+
+STRING 5574
+// Abilities: A09G (Regroup), Name (Name)
+{
+Regroup
+}
+
+STRING 5577
+// Abilities: A09F (Tactical), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 5582
+// Abilities: A09G (Regroup), Tip (Tooltip - Normal)
+{
+Regroup
+}
+
+STRING 5584
+// Abilities: A09F (Tactical), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF7E00Regroup|R - Select all units except workers, lumber-harvesting units, buildings, and special units. 
+
+|cFF64FF93Tactical|R - Select all units except workers, lumber-harvesting units, buildings, special units, and units with the patrol or hold position command.
+}
+
+STRING 5585
+// Abilities: A09G (Regroup), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF7E00Regroup|R - Select all units except workers, lumber-harvesting units, buildings, and special units. 
+
+|cFF64FF93Tactical|R - Select all units except workers, lumber-harvesting units, buildings, special units, and units with the patrol or hold position command.
+}
+
+STRING 5586
+// Abilities: A034 (Deathfrost Shards), Ubertip (Tooltip - Normal - Extended)
+{
+Bombards an area with shards, dealing up to 12 damage to nearby enemy land units and stunning them for 3 second.
+}
+
+STRING 5587
+// Buffs/Effects: B01R (Deathfrost Shards), EditorName (Name (Editor Only))
+{
+Deathfrost Shards
+}
+
+STRING 5588
+// Buffs/Effects: B01R (Deathfrost Shards), Bufftip (Tooltip)
+{
+Deathfrost Shards
+}
+
+STRING 5589
+// Buffs/Effects: B01R (Deathfrost Shards), Buffubertip (Tooltip - Extended)
+{
+Deathfrost Shards
+}
+
+STRING 5590
+// Buffs/Effects: X001 (Deathfrost Shards (effect)), EditorName (Name (Editor Only))
+{
+Deathfrost Shards (effect)
+}
+
+STRING 5591
+// Buffs/Effects: X001 (Deathfrost Shards (effect)), Bufftip (Tooltip)
+{
+Deathfrost Shards
+}
+
+STRING 5592
+// Abilities: A09H (Corrosion), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces armor by <A09H,DataB1> for <A09H,Dur1> seconds on attack.
+}
+
+STRING 5595
+// Abilities: A09H (Corrosion), Hotkey (Hotkey - Normal)
+{
+C
+}
+
+STRING 5596
+// Abilities: A09H (Corrosion), Unhotkey (Hotkey - Turn Off)
+{
+C
+}
+
+STRING 5600
+// Abilities: A03H (Heroic Strike), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives a chance to do more damage on an attack. |n|n|cffffcc00Level 1|r - <A03H,DataA1>% chance, 1.5 times normal damage. |n|cffffcc00Level 2|r - <A03H,DataA2>% chance, 2.0 times normal damage. |n|cffffcc00Level 3|r - <A03H,DataA3>% chance, 2.5 times normal damage.
+}
+
+STRING 5601
+// Abilities: A03H (Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 15% chance to do 1.5 times normal damage on an attack.
+}
+
+STRING 5602
+// Abilities: A03H (Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 17.5% chance to do 2.0 times normal damage on an attack.
+}
+
+STRING 5603
+// Abilities: A03H (Heroic Strike), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 20% chance to do 2.5 times normal damage on an attack.
+}
+
+STRING 5604
+// Abilities: A042 (Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+Gives a 15% chance to do 1.25 times normal damage on an attack.
+}
+
+STRING 5605
+// Abilities: A044 (Veteran: Aspect of the Hawk), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFF6F5DOnly 1 Veteran ability can be chosen.|R
+
+Gives a 15% chance to do 1.25 times normal damage on an attack.
+}
+
+STRING 5606
+// Abilities: A03J (Taunt), Researchubertip (Tooltip - Learn - Extended)
+{
+The closest <A03J,DataA1> enemies are forced to attack Wrynn, while he gains +50 armor.
+}
+
+STRING 5607
+// Abilities: A03J (Taunt), Ubertip (Tooltip - Normal - Extended)
+{
+The closest <A03J,DataA1> enemies are forced to attack Wrynn, while he gains +50 armor.
+}
+
+STRING 5610
+// Abilities: A05S (Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl - }
+
+STRING 5611
+// Abilities: A05S (Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces a target enemy unit's armor by <A05S,DataA2> and gives vision of that unit. |nLasts <A05S,Dur2> seconds.
+}
+
+STRING 5612
+// Abilities: A05S (Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces a target enemy unit's armor by <A05S,DataA3> and gives vision of that unit. |nLasts <A05S,Dur3> seconds.
+}
+
+STRING 5613
+// Abilities: A05S (Mark of the Owl), Untip (Tooltip - Turn Off)
+{
+|cffc3dbffRight-click to activate auto-casting.|r
+}
+
+STRING 5614
+// Abilities: A05S (Mark of the Owl), Untip (Tooltip - Turn Off)
+{
+|cffc3dbffRight-click to activate auto-casting.|r
+}
+
+STRING 5615
+// Abilities: A05S (Mark of the Owl), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cffc3dbffRight-click to deactivate auto-casting.|r
+}
+
+STRING 5616
+// Abilities: A05S (Mark of the Owl), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cffc3dbffRight-click to deactivate auto-casting.|r
+}
+
+STRING 5617
+// Abilities: A05S (Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl - }
+
+STRING 5618
+// Abilities: A05S (Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl - }
+
+STRING 5620
+// Abilities: A04X (Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA2> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur2> seconds.
+}
+
+STRING 5621
+// Abilities: A04X (Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a very fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA3> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur3> seconds.
+}
+
+STRING 5622
+// Abilities: A04X (Dori'thur), Researchubertip (Tooltip - Learn - Extended)
+{
+Temporarily summons an invincible Owl Scout, which can be used to scout the map.
+Can see invisible units. Reduces a target enemy unit's armor and gives vision of that unit.
+
+|cffffcc00Level 1|r - Summons an Owl Scout for <AEst,Cost1> mana. Reduces a target enemy unit's armor by <A05S,DataA1>.
+|cffffcc00Level 2|r - Summons a better Owl Scout for <AEst,Cost2> mana. Reduces a target enemy unit's armor by <A05S,DataA2>.
+|cffffcc00Level 3|r - Summons the best Owl Scout for <AEst,Cost3> mana. Reduces a target enemy unit's armor by <A05S,DataA3>.
+}
+
+STRING 5623
+// Abilities: A05W (Bladed Feathers), Ubertip (Tooltip - Normal - Extended)
+{
+A personal ability that makes the user’s hide razor-sharp, causing melee attackers to take <A05W,DataA1> of their own damage in return.
+
+|cFF005DFFNight:|R Restores health equal to <A05X,DataA2,%>% of damage dealt.
+}
+
+STRING 5624
+// Abilities: A02V (Exorcism), Ubertip (Tooltip - Normal - Extended)
+{
+Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this unit cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 5625
+// Upgrades: R012 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this unit cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 5626
+// Upgrades: R010 (Flying Machine Bombs), Ubertip (Tooltip - Extended)
+{
+When used on a building, temporarily stops all building activities. |nLasts <A02S,Dur1> seconds.
+}
+
+STRING 5627
+// Abilities: A01Z (Holy Bomb), Tip (Tooltip - Normal)
+{
+Holy Bomb
+}
+
+STRING 5628
+// Upgrades: R013 (Fragmentation Shards), Name (Name)
+{
+Holy Bomb
+}
+
+STRING 5629
+// Upgrades: R013 (Fragmentation Shards), Ubertip (Tooltip - Extended)
+{
+Damage no longer causes damage to allied troops
+}
+
+STRING 5630
+// Abilities: A07C (Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
+{
+Has an 85% chance to deal 1.5 times normal damage to flying units.
+
+}
+
+STRING 5631
+// Upgrades: R02M (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Has an 85% chance to deal 1.5 times normal damage to flying units.
+
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Headhunter
+}
+
+STRING 5632
+// Abilities: A07F (Water Ring), Ubertip (Tooltip - Normal - Extended)
+{
+Add +0.75 mana per second.
+}
+
+STRING 5633
+// Upgrades: R02P (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +0.75 mana per second
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Shaman
+}
+
+STRING 5634
+// Abilities: A07I (Windfury Weapon), Ubertip (Tooltip - Normal - Extended)
+{
+Add +25% speed attack
+}
+
+STRING 5635
+// Upgrades: R02S (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Add +25% speed attack
+
+|cFFFF5800Only 1 upgrade for the unit type|R - Raider
+}
+
+STRING 5636
+// Abilities: A019 (Blood Feast Aura), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Blood)
+}
+
+STRING 5637
+// Abilities: A01O (Blood Soul), EditorSuffix (Editor Suffix)
+{
+(Units_Blood)
+}
+
+STRING 5638
+// Abilities: A01O (Blood Soul), Name (Name)
+{
+Blood Soul
+}
+
+STRING 5639
+// Abilities: A01P (Frost Soul), EditorSuffix (Editor Suffix)
+{
+(Units_Frost)
+}
+
+STRING 5640
+// Abilities: A01P (Frost Soul), Name (Name)
+{
+Frost Soul
+}
+
+STRING 5641
+// Abilities: A01Q (Unholy Soul), EditorSuffix (Editor Suffix)
+{
+(Units_Unholy)
+}
+
+STRING 5642
+// Abilities: A01Q (Unholy Soul), Name (Name)
+{
+Unholy Soul
+}
+
+STRING 5643
+// Abilities: A01W (Blood Soul Reforging), Name (Name)
+{
+Blood Soul Reforging
+}
+
+STRING 5644
+// Abilities: A01W (Blood Soul Reforging), EditorSuffix (Editor Suffix)
+{
+(ForgeOfSoul)
+}
+
+STRING 5645
+// Abilities: A01X (Frost Soul Reforging), Name (Name)
+{
+Frost Soul Reforging
+}
+
+STRING 5646
+// Abilities: A01X (Frost Soul Reforging), EditorSuffix (Editor Suffix)
+{
+(ForgeOfSoul)
+}
+
+STRING 5647
+// Abilities: A01Y (Unholy Soul Reforging), Name (Name)
+{
+Unholy Soul Reforging
+}
+
+STRING 5648
+// Abilities: A01Y (Unholy Soul Reforging), EditorSuffix (Editor Suffix)
+{
+(ForgeOfSoul)
+}
+
+STRING 5649
+// Abilities: A025 (Rotten teeth), EditorSuffix (Editor Suffix)
+{
+(Ghoul_Unholy)
+}
+
+STRING 5650
+// Abilities: A024 (Blood Rage), EditorSuffix (Editor Suffix)
+{
+(Ghoul_Blood)
+}
+
+STRING 5651
+// Abilities: A026 (Ice Shard), Name (Name)
+{
+Ice Shard
+}
+
+STRING 5652
+// Abilities: A026 (Ice Shard), EditorSuffix (Editor Suffix)
+{
+(Ghoul_Frost)
+}
+
+STRING 5653
+// Abilities: A02B (Frost Beetles), Name (Name)
+{
+Frost Beetles
+}
+
+STRING 5654
+// Abilities: A02B (Frost Beetles), EditorSuffix (Editor Suffix)
+{
+(CryptFiend_Frost)
+}
+
+STRING 5655
+// Abilities: A02D (Rapacity), EditorSuffix (Editor Suffix)
+{
+(CryptFiend_Blood)
+}
+
+STRING 5656
+// Abilities: A02C (Disease Cloud), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Unholy)
+}
+
+STRING 5657
+// Abilities: A02E (Effect Aura Unholy), Name (Name)
+{
+Effect Aura Unholy
+}
+
+STRING 5658
+// Abilities: A02E (Effect Aura Unholy), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Unholy)
+}
+
+STRING 5659
+// Abilities: A02F (Blood Mark), EditorSuffix (Editor Suffix)
+{
+(Gargoyle_Blood)
+}
+
+STRING 5660
+// Abilities: A02G (Life Steal), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Blood aura hide ability)
+}
+
+STRING 5661
+// Abilities: A02H (Winds of Northrend), EditorSuffix (Editor Suffix)
+{
+(StoneForm_Frost)
+}
+
+STRING 5662
+// Abilities: A02I (Overwhelming Sadness), Name (Name)
+{
+Overwhelming Sadness
+}
+
+STRING 5663
+// Abilities: A02I (Overwhelming Sadness), EditorSuffix (Editor Suffix)
+{
+(Gargoyle_Frost)
+}
+
+STRING 5664
+// Abilities: S00X (Necrotic Breath), EditorSuffix (Editor Suffix)
+{
+(Gargoyle_Unholy)
+}
+
+STRING 5665
+// Abilities: A02J (Surfeit), Name (Name)
+{
+Surfeit
+}
+
+STRING 5666
+// Abilities: A02J (Surfeit), EditorSuffix (Editor Suffix)
+{
+(Abomination_Blood)
+}
+
+STRING 5667
+// Abilities: A02L (Surfeit), Name (Name)
+{
+Surfeit
+}
+
+STRING 5668
+// Abilities: A02L (Surfeit), EditorSuffix (Editor Suffix)
+{
+(Abomination_Blood Life Bonus)
+}
+
+STRING 5669
+// Abilities: A02M (Glacial Gusto), EditorSuffix (Editor Suffix)
+{
+(Abomination_Frost dummy)
+}
+
+STRING 5670
+// Abilities: A02K (Glacial Gusto), Name (Name)
+{
+Glacial Gusto
+}
+
+STRING 5671
+// Abilities: A02K (Glacial Gusto), EditorSuffix (Editor Suffix)
+{
+(Abomination_Frost)
+}
+
+STRING 5672
+// Abilities: A02N (Infectious Outbreak), Name (Name)
+{
+Infectious Outbreak
+}
+
+STRING 5673
+// Abilities: A02N (Infectious Outbreak), EditorSuffix (Editor Suffix)
+{
+(Abomination_Unholy)
+}
+
+STRING 5674
+// Abilities: A02O (Ghoulish Return), Name (Name)
+{
+Ghoulish Return
+}
+
+STRING 5675
+// Abilities: A02O (Ghoulish Return), EditorSuffix (Editor Suffix)
+{
+(Abomination_Unholy)
+}
+
+STRING 5676
+// Abilities: A036 (Disease Cloud), Name (Name)
+{
+Disease Cloud
+}
+
+STRING 5677
+// Abilities: A06W (Totem of Wrath), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 5678
+// Abilities: A06Z (Wind Rush Totem), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 5679
+// Abilities: A070 (Healing Tide Totem), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 5680
+// Abilities: A00Q (Blood), Name (Name)
+{
+Blood
+}
+
+STRING 5681
+// Abilities: A080 (Frost), Name (Name)
+{
+Frost
+}
+
+STRING 5682
+// Abilities: A081 (Unholy), Name (Name)
+{
+Unholy
+}
+
+STRING 5683
+// Abilities: A083 (Life Steal), Name (Name)
+{
+Life Steal
+}
+
+STRING 5684
+// Buffs/Effects: B00B (Rotten teeth), EditorName (Name (Editor Only))
+{
+Rotten teeth
+}
+
+STRING 5685
+// Buffs/Effects: B00C (Blood Rage), EditorName (Name (Editor Only))
+{
+Blood Rage
+}
+
+STRING 5686
+// Buffs/Effects: B00E (Blood Feast Aura), EditorName (Name (Editor Only))
+{
+Blood Feast Aura
+}
+
+STRING 5687
+// Buffs/Effects: B00F (Rapacity), EditorName (Name (Editor Only))
+{
+Rapacity
+}
+
+STRING 5688
+// Buffs/Effects: B00G (Blood Mark), EditorName (Name (Editor Only))
+{
+Blood Mark
+}
+
+STRING 5689
+// Buffs/Effects: B00H (Winds of Northrend), EditorName (Name (Editor Only))
+{
+Winds of Northrend
+}
+
+STRING 5690
+// Buffs/Effects: B00I (Necrotic Breath), EditorName (Name (Editor Only))
+{
+Necrotic Breath
+}
+
+STRING 5691
+// Buffs/Effects: B00J (Glacial Gusto), EditorName (Name (Editor Only))
+{
+Glacial Gusto
+}
+
+STRING 5692
+// Abilities: A00C (Summon Champion of Retribution), Ubertip (Tooltip - Normal - Extended)
+{
+Summon a powerful champion with a Retribution Aura, reflecting melee damage back to attacking enemies.
+}
+
+STRING 5693
+// Abilities: A00D (Summon Champion of Protection), Ubertip (Tooltip - Normal - Extended)
+{
+Summon a powerful champion who possesses a Devotion Aura, granting additional armor to nearby friendly units.
+}
+
+STRING 5694
+// Abilities: A00E (Summon Champion of Holy), Ubertip (Tooltip - Normal - Extended)
+{
+Summon a powerful champion who possesses a Holy Aura, enhancing the health regeneration of nearby friendly units.
+}
+
+STRING 5697
+// Units: h02Q (Cannon Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn the Magic Sentry ability.
+
+|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 5698
+// Units: h00C (Light Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#support
+|R
+A tower that channels pure light, unable to attack, but radiates healing energy to nearby friendly units. Can learn the Magic Sentry ability.
+
+|cffffcc00No attacks.|r
+}
+
+STRING 5699
+// Units: h014 (Guard Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Primary defensive structure. Can learn the Magic Sentry ability.
+
+|cffffcc00Attacks land and air units.|r
+}
+
+STRING 5700
+// Abilities: A02R (Frostmourne's Hunger), Researchubertip (Tooltip - Learn - Extended)
+{
+Increases the movement speed of souls dropped by slain units. Souls can be collected by Arthas and used for unit transformation.
+
+|cffffcc00Level 1|r - Increases speed by <A02R,DUR1,+>
+|cffffcc00Level 2|r - Increases speed by <A02R,DUR1,+>
+|cffffcc00Level 3|r - Increases speed by <A02R,DUR1,+>
+}
+
+STRING 5701
+// Units: u01C (Frostmourne Pedestal), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#unique #mechanics
+|R
+Executes Acolytes, granting 5 souls to the resource pool.
+}
+
+STRING 5702
+// Abilities: A02X (Icecrown Plague Spread), Ubertip (Tooltip - Normal - Extended)
+{
+The corruption of the land spreads as the building accumulates mana, allowing construction on the affected areas.
+}
+
+STRING 5703
+// Abilities: A013 (Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 0.5% mana when attacking
+}
+
+STRING 5704
+// Abilities: A013 (Seal Of Wisdom), Ubertip (Tooltip - Normal - Extended)
+{
+Restores 1.5% mana when attacking
+}
+
+STRING 5705
+// Abilities: A013 (Seal Of Wisdom), Researchubertip (Tooltip - Learn - Extended)
+{
+Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Level 1|r - Restores 0.5% mana when attacking. |n|cffffcc00Level 2|r - Restores 1.0% mana when attacking. |n|cffffcc00Level 3|r - Restores 1.5% mana when attacking.
+}
+
+STRING 5706
+// Abilities: A06G (Switch to Healing Tide Totem), Ubertip (Tooltip - Normal - Extended)
+{
+Replaces all totems on the map and grants the ability:
+Restores 0,7% per second hit points to nearby friendly units.
+}
+
+STRING 5707
+// Units: e00K (Veiled Chimaera), Name (Name)
+{
+Veiled Chimaera
+}
+
+STRING 5708
+// Units: e00K (Veiled Chimaera), Tip (Tooltip - Basic)
+{
+Train Veiled Chimaera
+}
+
+STRING 5709
+// Upgrades: R02K (Brute Strength), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 5710
+// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 5711
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 5712
+// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 5713
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 5714
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
 }
 

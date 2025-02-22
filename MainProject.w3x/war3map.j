@@ -12166,20 +12166,6 @@ function InitTrig_EnemyHeroAddItem takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ApiEnemyCreate
-//===========================================================================
-function Trig_ApiEnemyCreate_Actions takes nothing returns nothing
-    local integer createUnit= ApiEnemyGet(udg_RACE_RANDOM , "unit" , 3)
-    call CreateUnitAtLoc(Player(0), createUnit, GetRectCenter(bj_mapInitialPlayableArea), bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ApiEnemyCreate takes nothing returns nothing
-    set gg_trg_ApiEnemyCreate=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_ApiEnemyCreate, 5)
-    call TriggerAddAction(gg_trg_ApiEnemyCreate, function Trig_ApiEnemyCreate_Actions)
-endfunction
-//===========================================================================
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_IniLimitUnitsF1()
     call InitTrig_IniStartResouces()
@@ -12368,7 +12354,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EnemyWave4()
     call InitTrig_EnemyHero()
     call InitTrig_EnemyHeroAddItem()
-    call InitTrig_ApiEnemyCreate()
 endfunction
 
 //===========================================================================
