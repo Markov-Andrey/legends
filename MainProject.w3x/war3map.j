@@ -128,6 +128,9 @@ boolean udg_Whitemane_crusade_bool= false
     // Generated
 camerasetup gg_cam_StartView= null
 trigger gg_trg_BtnF1= null
+trigger gg_trg_OrderHoldPatrol= null
+trigger gg_trg_OrderHarvest= null
+trigger gg_trg_F1OrderSwap= null
 trigger gg_trg_LimitUnitsF1= null
 trigger gg_trg_StartResouces= null
 trigger gg_trg_StartCameraP1= null
@@ -309,9 +312,7 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
-trigger gg_trg_OrderHoldPatrol= null
-trigger gg_trg_OrderHarvest= null
-trigger gg_trg_F1OrderSwap= null
+trigger gg_trg_TyrandeDori= null
 
     // Random Groups
 integer array gg_rg_000
@@ -5577,6 +5578,7 @@ endfunction
 // Trigger: TyrandeIni
 //===========================================================================
 function Trig_TyrandeIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_TyrandeDori)
     call EnableTrigger(gg_trg_TyrandeShadowstalk)
     call EnableTrigger(gg_trg_TyrandeTearsOfElune)
     call EnableTrigger(gg_trg_TyrandeLunarFlare)
@@ -5589,6 +5591,42 @@ endfunction
 function InitTrig_TyrandeIni takes nothing returns nothing
     set gg_trg_TyrandeIni=CreateTrigger()
     call TriggerAddAction(gg_trg_TyrandeIni, function Trig_TyrandeIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TyrandeDori
+//===========================================================================
+function Trig_TyrandeDori_Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetSummonedUnit()) == 'n001' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSummonedUnit()) == 'n003' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSummonedUnit()) == 'n004' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_TyrandeDori_Conditions takes nothing returns boolean
+    if ( not Trig_TyrandeDori_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TyrandeDori_Actions takes nothing returns nothing
+    call SetUnitAbilityLevelSwapped('A05S', GetSummonedUnit(), GetUnitAbilityLevelSwapped('A04X', GetSummoningUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_TyrandeDori takes nothing returns nothing
+    set gg_trg_TyrandeDori=CreateTrigger()
+    call DisableTrigger(gg_trg_TyrandeDori)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TyrandeDori, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(gg_trg_TyrandeDori, Condition(function Trig_TyrandeDori_Conditions))
+    call TriggerAddAction(gg_trg_TyrandeDori, function Trig_TyrandeDori_Actions)
 endfunction
 
 //===========================================================================
@@ -12167,6 +12205,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
     call InitTrig_TyrandeIni()
+    call InitTrig_TyrandeDori()
     call InitTrig_TyrandeEluneLevelNight()
     call InitTrig_TyrandeShadowstalk()
     call InitTrig_TyrandeTearsOfElune()

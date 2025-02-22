@@ -2644,39 +2644,33 @@ Restores mana when attacking an enemy unit (except buildings). |n|n|cffffcc00Lev
 }
 
 STRING 1986
-// Abilities: A01Z ([Uther] Shake), Name (Name)
-{
-[Uther] Shake
-}
-
-STRING 1987
-// Abilities: A01Z ([Uther] Shake), Tip (Tooltip - Normal)
-{
-Shake
-}
-
-STRING 1989
 // Abilities: A02S ([Uther] Shake), Name (Name)
 {
 [Uther] Shake
 }
 
-STRING 1990
+STRING 1987
 // Abilities: A02S ([Uther] Shake), Tip (Tooltip - Normal)
 {
 Shake
 }
 
-STRING 1991
+STRING 1989
 // Buffs/Effects: B00M ([Uther] Shake), EditorName (Name (Editor Only))
 {
 [Uther] Shake
 }
 
-STRING 1992
+STRING 1990
 // Buffs/Effects: B00M ([Uther] Shake), Bufftip (Tooltip)
 {
 Shake
+}
+
+STRING 1991
+// Upgrades: R010 (Flying Machine Bombs), Name (Name)
+{
+[Uther] Shake
 }
 
 STRING 1994
@@ -2944,7 +2938,7 @@ Research Holy Bomb
 }
 
 STRING 2058
-// Upgrades: R013 (Fragmentation Shards), Ubertip (Tooltip - Extended)
+// Abilities: A01Z ([Uther] Holy Bomb), Ubertip (Tooltip - Normal - Extended)
 {
 Damage no longer causes damage to allied troops
 }
@@ -6182,12 +6176,6 @@ STRING 3026
 [Uther] Hammer of Justice
 }
 
-STRING 3027
-// Upgrades: R010 (Flying Machine Bombs), Name (Name)
-{
-[Uther] Shake
-}
-
 STRING 3028
 // Upgrades: R011 (Priest Adept Training,Priest Master Training), Name (Name)
 {
@@ -6201,7 +6189,7 @@ STRING 3029
 }
 
 STRING 3030
-// Upgrades: R013 (Fragmentation Shards), Name (Name)
+// Abilities: A01Z ([Uther] Holy Bomb), Name (Name)
 {
 [Uther] Holy Bomb
 }
@@ -9142,18 +9130,6 @@ STRING 3807
 Summons an Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit. |nCan see invisible units. |nLasts <AEst,Dur1> seconds.
 }
 
-STRING 3808
-// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur2> seconds.
-}
-
-STRING 3809
-// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
-{
-Summons a very fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur3> seconds.
-}
-
 STRING 3810
 // Abilities: A05S ([Tyrande] Mark of the Owl), Name (Name)
 {
@@ -9161,7 +9137,7 @@ STRING 3810
 }
 
 STRING 3811
-// Abilities: A05S ([Tyrande] Mark of the Owl), Tip (Tooltip - Normal)
+// Buffs/Effects: B00X ([Tyrande] Mark of the Owl), Bufftip (Tooltip)
 {
 Mark of the Owl
 }
@@ -9170,12 +9146,6 @@ STRING 3812
 // Abilities: A05S ([Tyrande] Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
 {
 Reduces a target enemy unit's armor by <A05S,DataA1> and gives vision of that unit. |nLasts <A05S,Dur1> seconds.
-}
-
-STRING 3813
-// Buffs/Effects: B00X ([Tyrande] Mark of the Owl), Bufftip (Tooltip)
-{
-Mark of the Owl
 }
 
 STRING 3814
@@ -9320,14 +9290,6 @@ STRING 3846
 // Buffs/Effects: B00Y ([Tyrande] Bladed Feathers), EditorName (Name (Editor Only))
 {
 [Tyrande] Bladed Feathers
-}
-
-STRING 3847
-// Abilities: A05W ([Tyrande] Bladed Feathers), Ubertip (Tooltip - Normal - Extended)
-{
-An aura that gives friendly nearby units a damage shield, which deals <A05W,DataA1> of an enemy unit's melee attack damage back to it.
-
-|cFF005DFFNight:|R Restores health equal to  <A05X,DataA2,%>% of damage dealt.
 }
 
 STRING 3848
@@ -11749,18 +11711,6 @@ STRING 4450
 // Buffs/Effects: B01D ([Mythic] Brilliance Aura), EditorName (Name (Editor Only))
 {
 [Mythic] Brilliance Aura
-}
-
-STRING 4456
-// Abilities: A02V ([Uther] Exorcism), Ubertip (Tooltip - Normal - Extended)
-{
-Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
-}
-
-STRING 4457
-// Upgrades: R012 (Storm Hammers), Ubertip (Tooltip - Extended)
-{
-Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this tower cause <A02V,DataE1> bonus damage against summoned units.
 }
 
 STRING 4458
@@ -17257,5 +17207,126 @@ STRING 5607
 // Abilities: A03J ([Wrynn] Taunt), Ubertip (Tooltip - Normal - Extended)
 {
 The closest <A03J,DataA1> enemies are forced to attack Wrynn, while he gains +50 armor.
+}
+
+STRING 5610
+// Abilities: A05S ([Tyrande] Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl - [|cffffcc00Level 1|r]
+}
+
+STRING 5611
+// Abilities: A05S ([Tyrande] Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces a target enemy unit's armor by <A05S,DataA2> and gives vision of that unit. |nLasts <A05S,Dur2> seconds.
+}
+
+STRING 5612
+// Abilities: A05S ([Tyrande] Mark of the Owl), Ubertip (Tooltip - Normal - Extended)
+{
+Reduces a target enemy unit's armor by <A05S,DataA3> and gives vision of that unit. |nLasts <A05S,Dur3> seconds.
+}
+
+STRING 5613
+// Abilities: A05S ([Tyrande] Mark of the Owl), Untip (Tooltip - Turn Off)
+{
+|cffc3dbffRight-click to activate auto-casting.|r
+}
+
+STRING 5614
+// Abilities: A05S ([Tyrande] Mark of the Owl), Untip (Tooltip - Turn Off)
+{
+|cffc3dbffRight-click to activate auto-casting.|r
+}
+
+STRING 5615
+// Abilities: A05S ([Tyrande] Mark of the Owl), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cffc3dbffRight-click to deactivate auto-casting.|r
+}
+
+STRING 5616
+// Abilities: A05S ([Tyrande] Mark of the Owl), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cffc3dbffRight-click to deactivate auto-casting.|r
+}
+
+STRING 5617
+// Abilities: A05S ([Tyrande] Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl - [|cffffcc00Level 2|r]
+}
+
+STRING 5618
+// Abilities: A05S ([Tyrande] Mark of the Owl), Tip (Tooltip - Normal)
+{
+Mark of the Owl - [|cffffcc00Level 3|r]
+}
+
+STRING 5620
+// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA2> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur2> seconds.
+}
+
+STRING 5621
+// Abilities: A04X ([Tyrande] Dori'thur), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a very fast Owl Scout, which can be used to scout. Reduces a target enemy unit's armor by <A05S,DataA3> and gives vision of that unit.|nCan see invisible units. |nLasts <AEst,Dur3> seconds.
+}
+
+STRING 5622
+// Abilities: A04X ([Tyrande] Dori'thur), Researchubertip (Tooltip - Learn - Extended)
+{
+Temporarily summons an invincible Owl Scout, which can be used to scout the map.
+Can see invisible units. Reduces a target enemy unit's armor and gives vision of that unit.
+
+|cffffcc00Level 1|r - Summons an Owl Scout for <AEst,Cost1> mana. Reduces a target enemy unit's armor by <A05S,DataA1>.
+|cffffcc00Level 2|r - Summons a better Owl Scout for <AEst,Cost2> mana. Reduces a target enemy unit's armor by <A05S,DataA2>.
+|cffffcc00Level 3|r - Summons the best Owl Scout for <AEst,Cost3> mana. Reduces a target enemy unit's armor by <A05S,DataA3>.
+}
+
+STRING 5623
+// Abilities: A05W ([Tyrande] Bladed Feathers), Ubertip (Tooltip - Normal - Extended)
+{
+A personal ability that makes the user’s hide razor-sharp, causing melee attackers to take <A05W,DataA1> of their own damage in return.
+
+|cFF005DFFNight:|R Restores health equal to <A05X,DataA2,%>% of damage dealt.
+}
+
+STRING 5624
+// Abilities: A02V ([Uther] Exorcism), Ubertip (Tooltip - Normal - Extended)
+{
+Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this unit cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 5625
+// Upgrades: R012 (Storm Hammers), Ubertip (Tooltip - Extended)
+{
+Attacks destroy <A02V,DataA1> mana per hit against any unit, causing bonus damage equal to the mana destroyed.|n|nAdditionally, attacks made by this unit cause <A02V,DataE1> bonus damage against summoned units.
+}
+
+STRING 5626
+// Upgrades: R010 (Flying Machine Bombs), Ubertip (Tooltip - Extended)
+{
+When used on a building, temporarily stops all building activities. |nLasts <A02S,Dur1> seconds.
+}
+
+STRING 5627
+// Abilities: A01Z ([Uther] Holy Bomb), Tip (Tooltip - Normal)
+{
+Holy Bomb
+}
+
+STRING 5628
+// Upgrades: R013 (Fragmentation Shards), Name (Name)
+{
+[Uther] Holy Bomb
+}
+
+STRING 5629
+// Upgrades: R013 (Fragmentation Shards), Ubertip (Tooltip - Extended)
+{
+Damage no longer causes damage to allied troops
 }
 
