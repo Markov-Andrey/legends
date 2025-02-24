@@ -17524,3 +17524,75 @@ STRING 5714
 S
 }
 
+STRING 5715
+// Units: n00L ([Special] Chest), Name (Name)
+{
+[Special] Chest
+}
+
+STRING 5716
+// Units: n00L ([Special] Chest), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5717
+// Units: n00L ([Special] Chest), EditorSuffix (Name - Editor Suffix)
+{
+(Legendary)
+}
+
+STRING 5718
+// Units: n00M ([Special] Chest), Name (Name)
+{
+[Special] Chest
+}
+
+STRING 5719
+// Units: n00M ([Special] Chest), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5720
+// Units: n00M ([Special] Chest), EditorSuffix (Name - Editor Suffix)
+{
+(Uncommon)
+}
+
+STRING 5721
+// Units: n00N ([Special] Chest), Name (Name)
+{
+[Special] Chest
+}
+
+STRING 5722
+// Units: n00N ([Special] Chest), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5723
+// Units: n00N ([Special] Chest), EditorSuffix (Name - Editor Suffix)
+{
+(Rare)
+}
+
+STRING 5724
+// Units: n00O ([Special] Chest), Name (Name)
+{
+[Special] Chest
+}
+
+STRING 5725
+// Units: n00O ([Special] Chest), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5726
+// Units: n00O ([Special] Chest), EditorSuffix (Name - Editor Suffix)
+{
+(Epic)
+}
+
