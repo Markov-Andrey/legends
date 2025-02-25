@@ -975,12 +975,6 @@ STRING 1204
 [Arthas] Harvest a soul
 }
 
-STRING 1209
-// Abilities: A00H (Hearthstone), Name (Name)
-{
-Hearthstone
-}
-
 STRING 1254
 // Units: u015 ([Arthas] Wagon), Tip (Tooltip - Basic)
 {
@@ -17578,12 +17572,6 @@ STRING 5726
 (Epic)
 }
 
-STRING 5727
-// Abilities: A029 (Coffer of Twin Faiths), Name (Name)
-{
-Coffer of Twin Faiths
-}
-
 STRING 5731
 // Items: I00F (|cFF6C9EFFCoffer of Twin Faiths|R), Ubertip (Tooltip - Extended)
 {
@@ -17656,9 +17644,28 @@ STRING 5751
 Select |cFF6C9EFFBlacksmith's Hammer|R
 }
 
-STRING 5752
-// Abilities: A09I (Repair Book), Name (Name)
+STRING 5753
+// Abilities: A00H ([Items] Hearthstone), Name (Name)
 {
-Repair Book
+[Items] Hearthstone
+}
+
+STRING 5754
+// Abilities: A029 ([Items] Coffer of Twin Faiths), Name (Name)
+{
+[Items] Coffer of Twin Faiths
+}
+
+STRING 5755
+// Abilities: A09I ([Items] Blacksmith's Hammer), Name (Name)
+{
+[Items] Blacksmith's Hammer
+}
+
+STRING 5757
+// Items: I00I (|cFF6C9EFFBlacksmith's Hammer|R), Ubertip (Tooltip - Extended)
+{
+Allows repairing buildings and vehicles for resources but cannot construct new ones.
++3 Strength, +3 Damage.
 }
 
