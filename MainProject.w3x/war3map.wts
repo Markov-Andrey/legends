@@ -17543,31 +17543,25 @@ STRING 5717
 }
 
 STRING 5718
-// Units: n00M ([Special] Chest), Name (Name)
-{
-[Special] Chest
-}
-
-STRING 5719
-// Units: n00M ([Special] Chest), Tip (Tooltip - Basic)
-{
-Chest
-}
-
-STRING 5720
-// Units: n00M ([Special] Chest), EditorSuffix (Name - Editor Suffix)
-{
-(Uncommon)
-}
-
-STRING 5721
 // Units: n00N ([Special] Chest), Name (Name)
 {
 [Special] Chest
 }
 
-STRING 5722
+STRING 5719
 // Units: n00N ([Special] Chest), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5721
+// Units: n00O ([Special] Chest), Name (Name)
+{
+[Special] Chest
+}
+
+STRING 5722
+// Units: n00O ([Special] Chest), Tip (Tooltip - Basic)
 {
 Chest
 }
@@ -17578,21 +17572,93 @@ STRING 5723
 (Rare)
 }
 
-STRING 5724
-// Units: n00O ([Special] Chest), Name (Name)
-{
-[Special] Chest
-}
-
-STRING 5725
-// Units: n00O ([Special] Chest), Tip (Tooltip - Basic)
-{
-Chest
-}
-
 STRING 5726
 // Units: n00O ([Special] Chest), EditorSuffix (Name - Editor Suffix)
 {
 (Epic)
+}
+
+STRING 5727
+// Abilities: A029 (Coffer of Twin Faiths), Name (Name)
+{
+Coffer of Twin Faiths
+}
+
+STRING 5731
+// Items: I00F (|cFF6C9EFFCoffer of Twin Faiths|R), Ubertip (Tooltip - Extended)
+{
+A mystical chest imbued with the blessings of two deities. Grants +2 to all attributes. Once per 60 minutes, it can be used to conjure 300 gold coins.
+}
+
+STRING 5732
+// Items: I00F (|cFF6C9EFFCoffer of Twin Faiths|R), Name (Name)
+{
+|cFF6C9EFFCoffer of Twin Faiths|R
+}
+
+STRING 5733
+// Items: I00G (|cFF6C9EFFDeepwood Ranger's Quiver|R), Name (Name)
+{
+|cFF6C9EFFDeepwood Ranger's Quiver|R
+}
+
+STRING 5734
+// Items: I00H (|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)), Name (Name)
+{
+|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)
+}
+
+STRING 5745
+// Items: I00F (|cFF6C9EFFCoffer of Twin Faiths|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFCoffer of Twin Faiths|R
+}
+
+STRING 5746
+// Items: I00G (|cFF6C9EFFDeepwood Ranger's Quiver|R), Ubertip (Tooltip - Extended)
+{
+Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
+
+
+
+}
+
+STRING 5747
+// Items: I00G (|cFF6C9EFFDeepwood Ranger's Quiver|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFDeepwood Ranger's Quiver|R
+}
+
+STRING 5748
+// Items: I00H (|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFDeepwood Ranger's Quiver|R
+}
+
+STRING 5749
+// Items: I00H (|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)), Ubertip (Tooltip - Extended)
+{
+Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
+
+
+
+}
+
+STRING 5750
+// Items: I00I (|cFF6C9EFFBlacksmith's Hammer|R), Name (Name)
+{
+|cFF6C9EFFBlacksmith's Hammer|R
+}
+
+STRING 5751
+// Items: I00I (|cFF6C9EFFBlacksmith's Hammer|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFBlacksmith's Hammer|R
+}
+
+STRING 5752
+// Abilities: A09I (Repair Book), Name (Name)
+{
+Repair Book
 }
 
