@@ -17681,17 +17681,49 @@ STRING 5763
 Select |cFF6C9EFFPuzzle Box of Yogg-Saron|R
 }
 
-STRING 5764
-// Items: I00J (|cFF6C9EFFPuzzle Box of Yogg-Saron|R), Ubertip (Tooltip - Extended)
-{
-|cFF24BBFF"Extremely difficult to open"|r
-
-A mysterious artifact infused with the chaotic whispers of an ancient being. Once every 90 seconds, the bearer gains 2 random attributes.
-}
-
 STRING 5765
 // Abilities: A09J ([Items] Puzzle Box of Yogg-Saron), Name (Name)
 {
 [Items] Puzzle Box of Yogg-Saron
+}
+
+STRING 5768
+// Items: I00J (|cFF6C9EFFPuzzle Box of Yogg-Saron|R), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"It is standing right behind you. Do not move. Do not breathe"|R
+
+A mysterious artifact infused with the chaotic whispers of an ancient being. Once every 90 seconds, the bearer gains 2 random attributes. 
+
+|cFFFF9700After being picked up, this item cannot be dropped!|R
+}
+
+STRING 5769
+// Items: I00K (|cFF6C9EFFCursed Blade|R), Name (Name)
+{
+|cFF6C9EFFCursed Blade|R
+}
+
+STRING 5770
+// Items: I00K (|cFF6C9EFFCursed Blade|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFCursed Blade|R
+}
+
+STRING 5771
+// Items: I00K (|cFF6C9EFFCursed Blade|R), Ubertip (Tooltip - Extended)
+{
+Increases the Hero's attack damage by 10 but reduces armor by 5 when worn.
+}
+
+STRING 5772
+// Abilities: A09K ([Items] Item Armor Bonus), Name (Name)
+{
+[Items] Item Armor Bonus
+}
+
+STRING 5773
+// Abilities: A09K ([Items] Item Armor Bonus), EditorSuffix (Editor Suffix)
+{
+(-5)
 }
 
