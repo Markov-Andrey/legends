@@ -17584,18 +17584,6 @@ STRING 5732
 |cFF6C9EFFCoffer of Twin Faiths|R
 }
 
-STRING 5733
-// Items: I00G (|cFF6C9EFFDeepwood Ranger's Quiver|R), Name (Name)
-{
-|cFF6C9EFFDeepwood Ranger's Quiver|R
-}
-
-STRING 5734
-// Items: I00H (|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)), Name (Name)
-{
-|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)
-}
-
 STRING 5745
 // Items: I00F (|cFF6C9EFFCoffer of Twin Faiths|R), Tip (Tooltip - Basic)
 {
@@ -17603,7 +17591,7 @@ Select |cFF6C9EFFCoffer of Twin Faiths|R
 }
 
 STRING 5746
-// Items: I00G (|cFF6C9EFFDeepwood Ranger's Quiver|R), Ubertip (Tooltip - Extended)
+// Items: I00G (|cFFA089FFDeepwood Ranger's Quiver|R), Ubertip (Tooltip - Extended)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
@@ -17611,20 +17599,8 @@ Grants +12 Attack while arrows are available. Arrows replenish once every 5 seco
 
 }
 
-STRING 5747
-// Items: I00G (|cFF6C9EFFDeepwood Ranger's Quiver|R), Tip (Tooltip - Basic)
-{
-Select |cFF6C9EFFDeepwood Ranger's Quiver|R
-}
-
-STRING 5748
-// Items: I00H (|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)), Tip (Tooltip - Basic)
-{
-Select |cFF6C9EFFDeepwood Ranger's Quiver|R
-}
-
 STRING 5749
-// Items: I00H (|cFF6C9EFFDeepwood Ranger's Quiver|R (Empty)), Ubertip (Tooltip - Extended)
+// Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Ubertip (Tooltip - Extended)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
@@ -17667,5 +17643,41 @@ STRING 5757
 {
 Allows repairing buildings and vehicles for resources but cannot construct new ones.
 +3 Strength, +3 Damage.
+}
+
+STRING 5758
+// Items: I00G (|cFFA089FFDeepwood Ranger's Quiver|R), Name (Name)
+{
+|cFFA089FFDeepwood Ranger's Quiver|R
+}
+
+STRING 5759
+// Items: I00G (|cFFA089FFDeepwood Ranger's Quiver|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFDeepwood Ranger's Quiver|R
+}
+
+STRING 5760
+// Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Name (Name)
+{
+|cFFA089FFDeepwood Ranger's Quiver|R (Empty)
+}
+
+STRING 5761
+// Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFDeepwood Ranger's Quiver|R
+}
+
+STRING 5762
+// Items: I00J (|cFF6C9EFFPuzzle Box of Yogg-Saron|R), Name (Name)
+{
+|cFF6C9EFFPuzzle Box of Yogg-Saron|R
+}
+
+STRING 5763
+// Items: I00J (|cFF6C9EFFPuzzle Box of Yogg-Saron|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFPuzzle Box of Yogg-Saron|R
 }
 
