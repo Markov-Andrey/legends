@@ -17681,3 +17681,17 @@ STRING 5763
 Select |cFF6C9EFFPuzzle Box of Yogg-Saron|R
 }
 
+STRING 5764
+// Items: I00J (|cFF6C9EFFPuzzle Box of Yogg-Saron|R), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Extremely difficult to open"|r
+
+A mysterious artifact infused with the chaotic whispers of an ancient being. Once every 90 seconds, the bearer gains 2 random attributes.
+}
+
+STRING 5765
+// Abilities: A09J ([Items] Puzzle Box of Yogg-Saron), Name (Name)
+{
+[Items] Puzzle Box of Yogg-Saron
+}
+
