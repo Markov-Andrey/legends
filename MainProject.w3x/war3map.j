@@ -323,6 +323,7 @@ trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
 trigger gg_trg_ItemsBoxYoggSaron= null
+trigger gg_trg_ItemMedalCourage= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1269,6 +1270,8 @@ function CreateAllItems takes nothing returns nothing
     call BlzCreateItemWithSkin('I00I', - 680.9, - 723.3, 'I00I')
     call BlzCreateItemWithSkin('I00J', - 286.6, - 706.2, 'I00J')
     call BlzCreateItemWithSkin('I00K', - 410.3, - 705.5, 'I00K')
+    call BlzCreateItemWithSkin('I00L', - 797.6, - 722.2, 'I00L')
+    call BlzCreateItemWithSkin('I00O', - 827.3, - 569.5, 'I00O')
 endfunction
 
 //***************************************************************************
@@ -1766,8 +1769,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1164.6, 8020.7, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nmmu', - 1647.9, - 8636.5, 72.885, 'nmmu')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 522.0, - 2265.2, 82.291, 'ngno')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 649.8, - 2248.7, 87.875, 'ngno')
 endfunction
 
 //===========================================================================
@@ -11799,6 +11800,76 @@ function InitTrig_EnemyHeroAddItem takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: ItemMedalCourage
+//===========================================================================
+function Trig_ItemMedalCourage_Func004C takes nothing returns boolean
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I00L' ) ) then
+        return true
+    endif
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I00M' ) ) then
+        return true
+    endif
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I00N' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_ItemMedalCourage_Conditions takes nothing returns boolean
+    if ( not Trig_ItemMedalCourage_Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemMedalCourage_Func001C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00L' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemMedalCourage_Func002C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00M' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemMedalCourage_Func003C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00N' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemMedalCourage_Actions takes nothing returns nothing
+    if ( Trig_ItemMedalCourage_Func001C() ) then
+        call RemoveItem(GetManipulatedItem())
+        call UnitAddItemByIdSwapped('I00M', GetManipulatingUnit())
+    else
+    endif
+    if ( Trig_ItemMedalCourage_Func002C() ) then
+        call RemoveItem(GetManipulatedItem())
+        call UnitAddItemByIdSwapped('I00N', GetManipulatingUnit())
+    else
+    endif
+    if ( Trig_ItemMedalCourage_Func003C() ) then
+        call RemoveItem(GetManipulatedItem())
+        call UnitAddItemByIdSwapped('I00L', GetManipulatingUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ItemMedalCourage takes nothing returns nothing
+    set gg_trg_ItemMedalCourage=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ItemMedalCourage, EVENT_PLAYER_UNIT_USE_ITEM)
+    call TriggerAddCondition(gg_trg_ItemMedalCourage, Condition(function Trig_ItemMedalCourage_Conditions))
+    call TriggerAddAction(gg_trg_ItemMedalCourage, function Trig_ItemMedalCourage_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ItemsBoxYoggSaron
 //===========================================================================
 function Trig_ItemsBoxYoggSaron_Conditions takes nothing returns boolean
@@ -12341,6 +12412,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EnemyWave4()
     call InitTrig_EnemyHero()
     call InitTrig_EnemyHeroAddItem()
+    call InitTrig_ItemMedalCourage()
     call InitTrig_ItemsBoxYoggSaron()
     call InitTrig_ItemsDeepwoodOn()
     call InitTrig_ItemsDeepwoodAtt()

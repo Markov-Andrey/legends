@@ -17600,7 +17600,7 @@ Grants +12 Attack while arrows are available. Arrows replenish once every 5 seco
 }
 
 STRING 5749
-// Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Ubertip (Tooltip - Extended)
+// Items: I00G (|cFFA089FFDeepwood Ranger's Quiver|R), Description (Description)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
@@ -17725,5 +17725,154 @@ STRING 5773
 // Abilities: A09K ([Items] Item Armor Bonus), EditorSuffix (Editor Suffix)
 {
 (-5)
+}
+
+STRING 5774
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Name (Name)
+{
+|cFF6C9EFFMedal of Courage|R (Agility)
+}
+
+STRING 5775
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFMedal of Courage|R
+}
+
+STRING 5776
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
+}
+
+STRING 5777
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Name (Name)
+{
+|cFF6C9EFFMedal of Courage|R (Intelligence)
+}
+
+STRING 5778
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFMedal of Courage|R
+}
+
+STRING 5779
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
+}
+
+STRING 5780
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Name (Name)
+{
+|cFF6C9EFFMedal of Courage|R (Strength)
+}
+
+STRING 5781
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFMedal of Courage|R
+}
+
+STRING 5782
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
+}
+
+STRING 5783
+// Abilities: A09L ([Items] Medal of Courage), Name (Name)
+{
+[Items] Medal of Courage
+}
+
+STRING 5784
+// Items: I00F (|cFF6C9EFFCoffer of Twin Faiths|R), Description (Description)
+{
+A mystical chest imbued with the blessings of two deities. Grants +2 to all attributes. Once per 60 minutes, it can be used to conjure 300 gold coins.
+}
+
+STRING 5785
+// Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Ubertip (Tooltip - Extended)
+{
+Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
+
+
+
+}
+
+STRING 5786
+// Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Description (Description)
+{
+Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
+
+
+
+}
+
+STRING 5787
+// Items: I00I (|cFF6C9EFFBlacksmith's Hammer|R), Description (Description)
+{
+Allows repairing buildings and vehicles for resources but cannot construct new ones.
++3 Strength, +3 Damage.
+}
+
+STRING 5789
+// Items: I00K (|cFF6C9EFFCursed Blade|R), Description (Description)
+{
+Increases the Hero's attack damage by 10 but reduces armor by 5 when worn.
+}
+
+STRING 5790
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
+}
+
+STRING 5791
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
+}
+
+STRING 5792
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
+}
+
+STRING 5793
+// Items: I00J (|cFF6C9EFFPuzzle Box of Yogg-Saron|R), Description (Description)
+{
+A mysterious artifact infused with the chaotic whispers of an ancient being. Once every 90 seconds, the bearer gains 2 random attributes. 
+
+|cFFFF9700After being picked up, this item cannot be dropped!|R
+}
+
+STRING 5794
+// Items: I00O (|cFF6C9EFFCogmaster's Wrench|R), Name (Name)
+{
+|cFF6C9EFFCogmaster's Wrench|R
+}
+
+STRING 5796
+// Abilities: A09N ([Items] Cogmaster's Wrench), Name (Name)
+{
+[Items] Cogmaster's Wrench
+}
+
+STRING 5797
+// Items: I00O (|cFF6C9EFFCogmaster's Wrench|R), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"For tightening cogs and smashin' troggs!"|R
+
++5 attack damage, consumes 50 mana to instantly repair 250 durability of mechanical units, 15-second cooldown.
+}
+
+STRING 5798
+// Items: I00O (|cFF6C9EFFCogmaster's Wrench|R), Description (Description)
+{
++5 attack damage, consumes 50 mana to instantly repair 250 durability of mechanical units, 15-second cooldown.
 }
 
