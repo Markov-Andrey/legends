@@ -17876,3 +17876,80 @@ STRING 5798
 +5 attack damage, consumes 50 mana to instantly repair 250 durability of mechanical units, 15-second cooldown.
 }
 
+STRING 5799
+// Items: I00P ([Items] Chest (1)), Name (Name)
+{
+[Items] Chest (1)
+}
+
+STRING 5800
+// Items: I00P ([Items] Chest (1)), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5801
+// Items: I00P ([Items] Chest (1)), Ubertip (Tooltip - Extended)
+{
+Chest
+}
+
+STRING 5802
+// Items: I00P ([Items] Chest (1)), Description (Description)
+{
+Chest
+}
+
+STRING 5803
+// Items: I00Q ([Items] Chest (2)), Name (Name)
+{
+[Items] Chest (2)
+}
+
+STRING 5804
+// Items: I00Q ([Items] Chest (2)), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5805
+// Items: I00Q ([Items] Chest (2)), Ubertip (Tooltip - Extended)
+{
+Chest
+}
+
+STRING 5806
+// Items: I00Q ([Items] Chest (2)), Description (Description)
+{
+Chest
+}
+
+STRING 5807
+// Items: I00R ([Items] Chest (3)), Name (Name)
+{
+[Items] Chest (3)
+}
+
+STRING 5808
+// Items: I00R ([Items] Chest (3)), Tip (Tooltip - Basic)
+{
+Chest
+}
+
+STRING 5809
+// Items: I00R ([Items] Chest (3)), Ubertip (Tooltip - Extended)
+{
+Chest
+}
+
+STRING 5810
+// Items: I00R ([Items] Chest (3)), Description (Description)
+{
+Chest
+}
+
+STRING 5811
+{
++
+}
+
