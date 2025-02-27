@@ -17876,80 +17876,77 @@ STRING 5798
 +5 attack damage, consumes 50 mana to instantly repair 250 durability of mechanical units, 15-second cooldown.
 }
 
-STRING 5799
-// Items: I00P ([Items] Chest (1)), Name (Name)
+STRING 5815
+// Items: I00P (|cFF6C9EFFBanner of Provocation|R), Name (Name)
 {
-[Items] Chest (1)
+|cFF6C9EFFBanner of Provocation|R
 }
 
-STRING 5800
-// Items: I00P ([Items] Chest (1)), Tip (Tooltip - Basic)
+STRING 5816
+// Items: I00P (|cFF6C9EFFBanner of Provocation|R), Tip (Tooltip - Basic)
 {
-Chest
+Select |cFF6C9EFFBanner of Provocation|R
 }
 
-STRING 5801
-// Items: I00P ([Items] Chest (1)), Ubertip (Tooltip - Extended)
+STRING 5818
+// Items: I00P (|cFF6C9EFFBanner of Provocation|R), Ubertip (Tooltip - Extended)
 {
-Chest
+Provokes the enemy to attack the wearer when struck. Grants +150 health and +3 armor.
 }
 
-STRING 5802
-// Items: I00P ([Items] Chest (1)), Description (Description)
+STRING 5819
+// Units: e00N ([Items] Treant), Name (Name)
 {
-Chest
+[Items] Treant
 }
 
-STRING 5803
-// Items: I00Q ([Items] Chest (2)), Name (Name)
+STRING 5820
+// Items: I00P (|cFF6C9EFFBanner of Provocation|R), Description (Description)
 {
-[Items] Chest (2)
+Provokes the enemy to attack the wearer when struck. Grants +150 health and +3 armor.
 }
 
-STRING 5804
-// Items: I00Q ([Items] Chest (2)), Tip (Tooltip - Basic)
+STRING 5821
+// Items: I00Q (|cFF6C9EFFTimber Tambourine|R), Name (Name)
 {
-Chest
+|cFF6C9EFFTimber Tambourine|R
 }
 
-STRING 5805
-// Items: I00Q ([Items] Chest (2)), Ubertip (Tooltip - Extended)
+STRING 5823
+// Items: I00Q (|cFF6C9EFFTimber Tambourine|R), Tip (Tooltip - Basic)
 {
-Chest
+Select |cFF6C9EFFTimber Tambourine|R
 }
 
-STRING 5806
-// Items: I00Q ([Items] Chest (2)), Description (Description)
+STRING 5824
+// Items: I00R ([Items] Lumber +50), Name (Name)
 {
-Chest
+[Items] Lumber +50
 }
 
-STRING 5807
-// Items: I00R ([Items] Chest (3)), Name (Name)
+STRING 5825
+// Abilities: A09M ([Items] Timber Tambourine), Name (Name)
 {
-[Items] Chest (3)
+[Items] Timber Tambourine
 }
 
-STRING 5808
-// Items: I00R ([Items] Chest (3)), Tip (Tooltip - Basic)
+STRING 5826
+// Abilities: A09O ([Items] Lumber +50), Name (Name)
 {
-Chest
+[Items] Lumber +50
 }
 
-STRING 5809
-// Items: I00R ([Items] Chest (3)), Ubertip (Tooltip - Extended)
+STRING 5827
+// Items: I00Q (|cFF6C9EFFTimber Tambourine|R), Ubertip (Tooltip - Extended)
 {
-Chest
+|cFF24BBFF"Timberine anyone? TIMBERINE!?"|R
+
++3 Intelligence. Summons 5 Treants that grant 50 wood upon death.
 }
 
-STRING 5810
-// Items: I00R ([Items] Chest (3)), Description (Description)
+STRING 5828
+// Items: I00Q (|cFF6C9EFFTimber Tambourine|R), Description (Description)
 {
-Chest
-}
-
-STRING 5811
-{
-+
++3 Intelligence. Summons 5 Treants that grant 50 wood upon death.
 }
 

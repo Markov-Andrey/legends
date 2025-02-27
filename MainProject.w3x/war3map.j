@@ -324,7 +324,8 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_ChestUse= null
+trigger gg_trg_ItemsBannerProvocation= null
+trigger gg_trg_ItemsTimberTambourine= null
 
     // Random Groups
 integer array gg_rg_000
@@ -617,7 +618,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI__CreateIcon takes nothing returns nothing
+    function THRALLUI___CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -649,8 +650,8 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI__init takes nothing returns nothing
-        call THRALLUI__CreateIcon()
+    function THRALLUI___init takes nothing returns nothing
+        call THRALLUI___CreateIcon()
     endfunction
 
 
@@ -1260,65 +1261,6 @@ endfunction
 
 //***************************************************************************
 //*
-//*  Unit Item Tables
-//*
-//***************************************************************************
-
-function Unit000244_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem('I00P', 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-
-//***************************************************************************
-//*
-//*  Items
-//*
-//***************************************************************************
-
-function CreateAllItems takes nothing returns nothing
-    local integer itemID
-
-    call BlzCreateItemWithSkin('I00F', - 535.2, - 708.2, 'I00F')
-    call BlzCreateItemWithSkin('I00I', - 680.9, - 723.3, 'I00I')
-    call BlzCreateItemWithSkin('I00J', - 286.6, - 706.2, 'I00J')
-    call BlzCreateItemWithSkin('I00K', - 410.3, - 705.5, 'I00K')
-    call BlzCreateItemWithSkin('I00L', - 797.6, - 722.2, 'I00L')
-    call BlzCreateItemWithSkin('I00O', - 827.3, - 569.5, 'I00O')
-endfunction
-
-//***************************************************************************
-//*
 //*  Unit Creation
 //*
 //***************************************************************************
@@ -1332,7 +1274,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'H01R', - 540.5, - 530.5, 268.524, 'H01R')
 endfunction
 
 //===========================================================================
@@ -1812,11 +1753,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1164.6, 8020.7, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nmmu', - 1647.9, - 8636.5, 72.885, 'nmmu')
-    set u=BlzCreateUnitWithSkin(p, 'ngno', - 526.4, - 1833.0, 97.180, 'ngno')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function Unit000244_DropItems)
 endfunction
 
 //===========================================================================
@@ -11848,6 +11784,62 @@ function InitTrig_EnemyHeroAddItem takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: ItemsTimberTambourine
+//===========================================================================
+function Trig_ItemsTimberTambourine_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'e00N' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemsTimberTambourine_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+    call UnitApplyTimedLifeBJ(3.00, 'BTLF', GetLastCreatedUnit())
+    call UnitAddItemByIdSwapped('I00R', GetLastCreatedUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_ItemsTimberTambourine takes nothing returns nothing
+    set gg_trg_ItemsTimberTambourine=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ItemsTimberTambourine, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ItemsTimberTambourine, Condition(function Trig_ItemsTimberTambourine_Conditions))
+    call TriggerAddAction(gg_trg_ItemsTimberTambourine, function Trig_ItemsTimberTambourine_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ItemsBannerProvocation
+//===========================================================================
+function Trig_ItemsBannerProvocation_Func001C takes nothing returns boolean
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetAttackedUnitBJ()), GetOwningPlayer(GetAttacker())) == true ) ) then
+        return false
+    endif
+    if ( not ( GetItemTypeId(GetItemOfTypeFromUnitBJ(GetAttacker(), 'I00P')) == 'I00P' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemsBannerProvocation_Conditions takes nothing returns boolean
+    if ( not Trig_ItemsBannerProvocation_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ItemsBannerProvocation_Actions takes nothing returns nothing
+    call IssueTargetOrderBJ(GetAttackedUnitBJ(), "attack", GetAttacker())
+endfunction
+
+//===========================================================================
+function InitTrig_ItemsBannerProvocation takes nothing returns nothing
+    set gg_trg_ItemsBannerProvocation=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ItemsBannerProvocation, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_ItemsBannerProvocation, Condition(function Trig_ItemsBannerProvocation_Conditions))
+    call TriggerAddAction(gg_trg_ItemsBannerProvocation, function Trig_ItemsBannerProvocation_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ItemMedalCourage
 //===========================================================================
 function Trig_ItemMedalCourage_Func004C takes nothing returns boolean
@@ -12056,76 +12048,6 @@ function InitTrig_ItemsDeepwoodReload takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ChestUse
-//
-// NOT WORKED!!!
-//===========================================================================
-function Trig_ChestUse_Func005C takes nothing returns boolean
-    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I00P' ) ) then
-        return true
-    endif
-    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I00Q' ) ) then
-        return true
-    endif
-    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I00R' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_ChestUse_Conditions takes nothing returns boolean
-    if ( not Trig_ChestUse_Func005C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChestUse_Func002C takes nothing returns boolean
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00P' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChestUse_Func003C takes nothing returns boolean
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00Q' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChestUse_Func004C takes nothing returns boolean
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00R' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ChestUse_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_5811")
-    if ( Trig_ChestUse_Func002C() ) then
-        call CreateNUnitsAtLoc(1, 'n00N', GetOwningPlayer(GetManipulatingUnit()), GetUnitLoc(GetManipulatingUnit()), bj_UNIT_FACING)
-    else
-    endif
-    if ( Trig_ChestUse_Func003C() ) then
-        call CreateNUnitsAtLoc(1, 'n00O', GetOwningPlayer(GetManipulatingUnit()), GetUnitLoc(GetManipulatingUnit()), bj_UNIT_FACING)
-    else
-    endif
-    if ( Trig_ChestUse_Func004C() ) then
-        call CreateNUnitsAtLoc(1, 'n00L', GetOwningPlayer(GetManipulatingUnit()), GetUnitLoc(GetManipulatingUnit()), bj_UNIT_FACING)
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_ChestUse takes nothing returns nothing
-    set gg_trg_ChestUse=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChestUse, EVENT_PLAYER_UNIT_USE_ITEM)
-    call TriggerAddCondition(gg_trg_ChestUse, Condition(function Trig_ChestUse_Conditions))
-    call TriggerAddAction(gg_trg_ChestUse, function Trig_ChestUse_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: ChestAllHide
 //===========================================================================
 function Trig_ChestAllHide_Func001A takes nothing returns nothing
@@ -12168,7 +12090,7 @@ function Trig_ChestNeutralDead_Func001Func001Func004001001003 takes nothing retu
 endfunction
 
 function Trig_ChestNeutralDead_Func001Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChestNeutralDead_Func001Func001Func004001001003))) == 0 ) ) then
+    if ( not ( CountUnitsInGroup(GetUnitsInRangeOfLocMatching(1000.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChestNeutralDead_Func001Func001Func004001001003))) == 0 ) ) then
         return false
     endif
     return true
@@ -12196,7 +12118,7 @@ function Trig_ChestNeutralDead_Func002Func001Func004001001003 takes nothing retu
 endfunction
 
 function Trig_ChestNeutralDead_Func002Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChestNeutralDead_Func002Func001Func004001001003))) == 0 ) ) then
+    if ( not ( CountUnitsInGroup(GetUnitsInRangeOfLocMatching(1000.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChestNeutralDead_Func002Func001Func004001001003))) == 0 ) ) then
         return false
     endif
     return true
@@ -12224,7 +12146,7 @@ function Trig_ChestNeutralDead_Func003Func001Func004001001003 takes nothing retu
 endfunction
 
 function Trig_ChestNeutralDead_Func003Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChestNeutralDead_Func003Func001Func004001001003))) == 0 ) ) then
+    if ( not ( CountUnitsInGroup(GetUnitsInRangeOfLocMatching(1000.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChestNeutralDead_Func003Func001Func004001001003))) == 0 ) ) then
         return false
     endif
     return true
@@ -12291,20 +12213,20 @@ endfunction
 // Trigger: ChestLoot
 //===========================================================================
 function Trig_ItemsLoot_Func002A_Level takes unit u,integer level returns nothing
-    local integer item1= ChooseRandomItemExBJ(level, ITEM_TYPE_ANY)
+    local integer item1= ChooseRandomItemEx(ITEM_TYPE_ANY, level)
     local integer item2= 0
     local integer item3= 0
     local integer i= 0
     
     loop
-        set item2=ChooseRandomItemExBJ(level, ITEM_TYPE_ANY)
+        set item2=ChooseRandomItemEx(ITEM_TYPE_ANY, level)
         set i=i + 1
         exitwhen item2 != item1 or i >= 10
     endloop
     
     set i=0
     loop
-        set item3=ChooseRandomItemExBJ(level, ITEM_TYPE_ANY)
+        set item3=ChooseRandomItemEx(ITEM_TYPE_ANY, level)
         set i=i + 1
         exitwhen ( item3 != item1 and item3 != item2 ) or i >= 10
     endloop
@@ -12330,14 +12252,14 @@ function AddLootForUnitType takes integer unitType,integer level returns nothing
 endfunction
 
 function Trig_ChestLoot_Actions takes nothing returns nothing
-    call AddLootForUnitType('n00N' , 5)
-    call AddLootForUnitType('n00L' , 6)
-    call AddLootForUnitType('n00O' , 7)
+    call AddLootForUnitType('n00N' , 6)
+    call AddLootForUnitType('n00L' , 7)
+    call AddLootForUnitType('n00O' , 8)
 endfunction
 
 function InitTrig_ChestLoot takes nothing returns nothing
     set gg_trg_ChestLoot=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_ChestLoot, 0.10)
+    call TriggerRegisterTimerEvent(gg_trg_ChestLoot, 0.10, false)
     call TriggerAddAction(gg_trg_ChestLoot, function Trig_ChestLoot_Actions)
 endfunction
 
@@ -12530,12 +12452,13 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EnemyWave4()
     call InitTrig_EnemyHero()
     call InitTrig_EnemyHeroAddItem()
+    call InitTrig_ItemsTimberTambourine()
+    call InitTrig_ItemsBannerProvocation()
     call InitTrig_ItemMedalCourage()
     call InitTrig_ItemsBoxYoggSaron()
     call InitTrig_ItemsDeepwoodOn()
     call InitTrig_ItemsDeepwoodAtt()
     call InitTrig_ItemsDeepwoodReload()
-    call InitTrig_ChestUse()
     call InitTrig_ChestAllHide()
     call InitTrig_ChestNeutralDead()
     call InitTrig_ChestSelectLoot()
@@ -12692,7 +12615,6 @@ function main takes nothing returns nothing
     call SetAmbientNightSound("LordaeronWinterNight")
     call SetMapMusic("Music", true, 0)
     call CreateCameras()
-    call CreateAllItems()
     call CreateAllUnits()
     call InitBlizzard()
 
@@ -12700,7 +12622,7 @@ call ExecuteFunc("ARTHASUI___init")
 call ExecuteFunc("FrameLoader___init_function")
 call ExecuteFunc("REFORGEDUIMAKER___init")
 call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("THRALLUI___init")
 call ExecuteFunc("WHITEMANEUI___init")
 call ExecuteFunc("CustomConsoleUI___init_function")
 
