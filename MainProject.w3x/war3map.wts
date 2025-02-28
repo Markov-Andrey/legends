@@ -17950,3 +17950,30 @@ STRING 5828
 +3 Intelligence. Summons 5 Treants that grant 50 wood upon death.
 }
 
+STRING 5829
+// Items: I00S (|cFF6C9EFFScarlet Boots|R), Name (Name)
+{
+|cFF6C9EFFScarlet Boots|R
+}
+
+STRING 5830
+// Items: I00S (|cFF6C9EFFScarlet Boots|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFScarlet Boots|R
+}
+
+STRING 5831
+// Items: I00S (|cFF6C9EFFScarlet Boots|R), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Boots—boots—boots—boots—movin' up and down again!
+There's no discharge in the war!"|R
+
++150 movement speed, +15% agility, +3 agility
+}
+
+STRING 5832
+// Items: I00S (|cFF6C9EFFScarlet Boots|R), Description (Description)
+{
++150 movement speed, +15% agility, +3 agility
+}
+
