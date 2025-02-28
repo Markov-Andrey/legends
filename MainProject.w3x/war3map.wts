@@ -17995,3 +17995,51 @@ STRING 5835
 +50% mana regeneration, +3 intelligence
 }
 
+STRING 5836
+// Items: I00U (|cFFA089FFNightmare Banner|R), Name (Name)
+{
+|cFFA089FFNightmare Banner|R
+}
+
+STRING 5837
+// Items: I00U (|cFFA089FFNightmare Banner|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFNightmare Banner|R
+}
+
+STRING 5838
+// Abilities: A09P ([Items] Nightmare Banner), Name (Name)
+{
+[Items] Nightmare Banner
+}
+
+STRING 5839
+// Items: I00U (|cFFA089FFNightmare Banner|R), Ubertip (Tooltip - Extended)
+{
++8 strength, Nightmare Banner aura reduces 3 armor of all enemies around the hero.
+}
+
+STRING 5840
+// Items: I00U (|cFFA089FFNightmare Banner|R), Description (Description)
+{
++8 strength, Nightmare Banner aura reduces 3 armor of all enemies around the hero.
+}
+
+STRING 5841
+// Buffs/Effects: B01S ([Items] Nightmare Banner), EditorName (Name (Editor Only))
+{
+[Items] Nightmare Banner
+}
+
+STRING 5842
+// Buffs/Effects: B01S ([Items] Nightmare Banner), Bufftip (Tooltip)
+{
+Nightmare Banner
+}
+
+STRING 5843
+// Buffs/Effects: B01S ([Items] Nightmare Banner), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Nightmare Banner; it has reduced armor.
+}
+
