@@ -17977,3 +17977,21 @@ STRING 5832
 +150 movement speed, +15% agility, +3 agility
 }
 
+STRING 5833
+// Items: I00T (|cFF6C9EFFWhitemane's Chapeau|R), Name (Name)
+{
+|cFF6C9EFFWhitemane's Chapeau|R
+}
+
+STRING 5834
+// Items: I00T (|cFF6C9EFFWhitemane's Chapeau|R), Tip (Tooltip - Basic)
+{
+Select |cFF6C9EFFWhitemane's Chapeau|R
+}
+
+STRING 5835
+// Items: I00T (|cFF6C9EFFWhitemane's Chapeau|R), Ubertip (Tooltip - Extended)
+{
++50% mana regeneration, +3 intelligence
+}
+
