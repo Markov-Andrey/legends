@@ -18133,15 +18133,87 @@ STRING 5858
 [Items] Item Experience Gain +1000
 }
 
-STRING 5859
-// Units: h02C ([Item] Portal), Name (Name)
-{
-[Item] Portal
-}
-
 STRING 5860
-// Units: h02C ([Item] Portal), EditorSuffix (Name - Editor Suffix)
+// Units: h02C ([Item] Portal 1), EditorSuffix (Name - Editor Suffix)
 {
 (Atiesh)
+}
+
+STRING 5861
+// Units: h02C ([Item] Portal 1), Name (Name)
+{
+[Item] Portal 1
+}
+
+STRING 5862
+// Units: h02K ([Item] Portal 2), Name (Name)
+{
+[Item] Portal 2
+}
+
+STRING 5863
+// Units: h02K ([Item] Portal 2), EditorSuffix (Name - Editor Suffix)
+{
+(Atiesh)
+}
+
+STRING 5864
+// Abilities: A09T ([Items] Portal 1), Name (Name)
+{
+[Items] Portal 1
+}
+
+STRING 5865
+// Abilities: A09T ([Items] Portal 1), EditorSuffix (Editor Suffix)
+{
+(Atiesh)
+}
+
+STRING 5866
+// Abilities: A09U ([Items] Portal 2), Name (Name)
+{
+[Items] Portal 2
+}
+
+STRING 5867
+// Abilities: A09U ([Items] Portal 2), EditorSuffix (Editor Suffix)
+{
+(Atiesh)
+}
+
+STRING 5868
+// Items: I00Y (|cFFFFAD40Atiesh|R), Name (Name)
+{
+|cFFFFAD40Atiesh|R
+}
+
+STRING 5869
+// Abilities: A09V ([Items] Atiesh), Name (Name)
+{
+[Items] Atiesh
+}
+
+STRING 5871
+// Abilities: A09W ([Items] Teleport), Name (Name)
+{
+[Items] Teleport
+}
+
+STRING 5872
+// Abilities: A09W ([Items] Teleport), EditorSuffix (Editor Suffix)
+{
+(Atiesh)
+}
+
+STRING 5874
+// Items: I00Y (|cFFFFAD40Atiesh|R), Ubertip (Tooltip - Extended)
+{
+Allows opening a pair of portals, also grants +2 to Agility and Strength, and +8 to Intelligence.
+}
+
+STRING 5875
+// Items: I00Y (|cFFFFAD40Atiesh|R), Description (Description)
+{
+Allows opening a pair of portals, also grants +2 to Agility and Strength, and +8 to Intelligence.
 }
 
