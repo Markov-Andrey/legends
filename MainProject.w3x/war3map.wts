@@ -18043,3 +18043,93 @@ STRING 5843
 This unit is under the effects of Nightmare Banner; it has reduced armor.
 }
 
+STRING 5844
+// Items: I00V ([Items] Tome of Experience (250)), Name (Name)
+{
+[Items] Tome of Experience (250)
+}
+
+STRING 5845
+// Items: I00V ([Items] Tome of Experience (250)), Tip (Tooltip - Basic)
+{
+Select Tome of Experience
+}
+
+STRING 5846
+// Items: I00V ([Items] Tome of Experience (250)), Ubertip (Tooltip - Extended)
+{
+Gives 250 experience to the Hero when used.
+}
+
+STRING 5847
+// Items: I00V ([Items] Tome of Experience (250)), Description (Description)
+{
+Gives 250 experience to the Hero when used.
+}
+
+STRING 5848
+// Items: I00W ([Items] Tome of Experience (500)), Name (Name)
+{
+[Items] Tome of Experience (500)
+}
+
+STRING 5849
+// Items: I00W ([Items] Tome of Experience (500)), Tip (Tooltip - Basic)
+{
+Select Tome of Experience
+}
+
+STRING 5850
+// Items: I00W ([Items] Tome of Experience (500)), Ubertip (Tooltip - Extended)
+{
+Gives 500 experience to the Hero when used.
+}
+
+STRING 5851
+// Items: I00W ([Items] Tome of Experience (500)), Description (Description)
+{
+Gives 500 experience to the Hero when used.
+}
+
+STRING 5852
+// Items: I00X ([Items] Tome of Experience (1000)), Name (Name)
+{
+[Items] Tome of Experience (1000)
+}
+
+STRING 5853
+// Items: I00X ([Items] Tome of Experience (1000)), Tip (Tooltip - Basic)
+{
+Select Tome of Experience
+}
+
+STRING 5854
+// Items: I00X ([Items] Tome of Experience (1000)), Ubertip (Tooltip - Extended)
+{
+Gives 1000 experience to the Hero when used.
+}
+
+STRING 5855
+// Items: I00X ([Items] Tome of Experience (1000)), Description (Description)
+{
+Gives 1000 experience to the Hero when used.
+}
+
+STRING 5856
+// Abilities: A09Q ([Items] Item Experience Gain +250), Name (Name)
+{
+[Items] Item Experience Gain +250
+}
+
+STRING 5857
+// Abilities: A09R ([Items] Item Experience Gain +500), Name (Name)
+{
+[Items] Item Experience Gain +500
+}
+
+STRING 5858
+// Abilities: A09S ([Items] Item Experience Gain +1000), Name (Name)
+{
+[Items] Item Experience Gain +1000
+}
+
