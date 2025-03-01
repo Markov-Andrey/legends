@@ -18217,3 +18217,39 @@ STRING 5875
 Allows opening a pair of portals, also grants +2 to Agility and Strength, and +8 to Intelligence.
 }
 
+STRING 5876
+// Abilities: A09T ([Items] Portal 1), Tip (Tooltip - Normal)
+{
+Portal 1
+}
+
+STRING 5877
+// Abilities: A09T ([Items] Portal 1), Ubertip (Tooltip - Normal - Extended)
+{
+Open Portal 1. Allows pairing with Portal 2 and transporting the army between them. Portal 1 remains until it is created elsewhere, at which point any stationed units will be unloaded.
+}
+
+STRING 5878
+// Abilities: A09U ([Items] Portal 2), Tip (Tooltip - Normal)
+{
+Portal 2
+}
+
+STRING 5879
+// Abilities: A09U ([Items] Portal 2), Ubertip (Tooltip - Normal - Extended)
+{
+Open Portal 2. Allows pairing with Portal 1 and transporting the army between them. Portal 2 remains until it is created elsewhere, at which point any stationed units will be unloaded.
+}
+
+STRING 5880
+// Abilities: A09W ([Items] Teleport), Tip (Tooltip - Normal)
+{
+Teleport
+}
+
+STRING 5881
+// Abilities: A09W ([Items] Teleport), Ubertip (Tooltip - Normal - Extended)
+{
+Allows transporting the army to another portal.
+}
+

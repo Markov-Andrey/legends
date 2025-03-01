@@ -1263,18 +1263,6 @@ endfunction
 
 //***************************************************************************
 //*
-//*  Items
-//*
-//***************************************************************************
-
-function CreateAllItems takes nothing returns nothing
-    local integer itemID
-
-    call BlzCreateItemWithSkin('I00Y', - 500.6, - 764.1, 'I00Y')
-endfunction
-
-//***************************************************************************
-//*
 //*  Unit Creation
 //*
 //***************************************************************************
@@ -1288,12 +1276,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'O000', - 594.6, - 631.1, 68.436, 'O000')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 138.8, - 453.5, 228.204, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 220.3, - 621.3, 299.584, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 829.6, - 671.8, 236.675, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 1003.6, - 598.5, 286.192, 'h018')
-    set u=BlzCreateUnitWithSkin(p, 'h018', - 932.7, - 251.2, 40.629, 'h018')
 endfunction
 
 //===========================================================================
@@ -12737,7 +12719,6 @@ function main takes nothing returns nothing
     call SetAmbientNightSound("LordaeronWinterNight")
     call SetMapMusic("Music", true, 0)
     call CreateCameras()
-    call CreateAllItems()
     call CreateAllUnits()
     call InitBlizzard()
 
