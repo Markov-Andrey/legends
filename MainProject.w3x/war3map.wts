@@ -18133,3 +18133,15 @@ STRING 5858
 [Items] Item Experience Gain +1000
 }
 
+STRING 5859
+// Units: h02C ([Item] Portal), Name (Name)
+{
+[Item] Portal
+}
+
+STRING 5860
+// Units: h02C ([Item] Portal), EditorSuffix (Name - Editor Suffix)
+{
+(Atiesh)
+}
+
