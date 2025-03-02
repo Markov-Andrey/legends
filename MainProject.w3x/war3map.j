@@ -315,6 +315,8 @@ trigger gg_trg_EnemyWave4= null
 trigger gg_trg_EnemyHero= null
 trigger gg_trg_EnemyHeroAddItem= null
 trigger gg_trg_ApiEnemyCreate= null
+trigger gg_trg_ItemAtieshCreate= null
+trigger gg_trg_ItemAtieshTeleport= null
 trigger gg_trg_ItemsTimberTambourine= null
 trigger gg_trg_ItemsBannerProvocation= null
 trigger gg_trg_ItemMedalCourage= null
@@ -326,8 +328,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_ItemAtieshCreate= null
-trigger gg_trg_ItemAtieshTeleport= null
+trigger gg_trg_ItemGorehowl= null
 
     // Random Groups
 integer array gg_rg_000
@@ -342,6 +343,7 @@ framehandle Icon02= null
 framehandle Icon03= null
 integer currentIconIndex= 0
 hashtable udg_HashTable= InitHashtable()
+integer array GorehowlItems
 
 trigger l__library_init
 
@@ -11786,6 +11788,50 @@ function InitTrig_EnemyHeroAddItem takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: ItemGorehowl
+//===========================================================================
+
+function InitGorehowlItems takes nothing returns nothing
+    set GorehowlItems[0]='I00Z'
+    set GorehowlItems[1]='I010'
+    set GorehowlItems[2]='I011'
+    set GorehowlItems[3]='I012'
+    set GorehowlItems[4]='I013'
+    set GorehowlItems[5]='I014'
+    set GorehowlItems[6]='I015'
+    set GorehowlItems[7]='I016'
+    set GorehowlItems[8]='I017'
+    set GorehowlItems[9]='I018'
+    set GorehowlItems[10]='I019'
+endfunction
+
+function Trig_ItemGorehowl_Actions takes nothing returns nothing
+    local unit killer= GetKillingUnit()
+    local item it
+    local integer i= 0
+
+    loop
+        exitwhen i > 9
+        set it=GetItemOfTypeFromUnitBJ(killer, GorehowlItems[i])
+
+        if it != null and GetItemTypeId(it) == GorehowlItems[i] then
+            call RemoveItem(it)
+            call UnitAddItemByIdSwapped(GorehowlItems[i + 1], killer)
+            return
+        endif
+
+        set i=i + 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_ItemGorehowl takes nothing returns nothing
+    call InitGorehowlItems()
+    set gg_trg_ItemGorehowl=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ItemGorehowl, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddAction(gg_trg_ItemGorehowl, function Trig_ItemGorehowl_Actions)
+endfunction
+//===========================================================================
 // Trigger: ItemAtieshCreate
 //===========================================================================
 function Trig_ItemAtieshCreate_Func003C takes nothing returns boolean
@@ -12554,6 +12600,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EnemyWave4()
     call InitTrig_EnemyHero()
     call InitTrig_EnemyHeroAddItem()
+    call InitTrig_ItemGorehowl()
     call InitTrig_ItemAtieshCreate()
     call InitTrig_ItemAtieshTeleport()
     call InitTrig_ItemsTimberTambourine()

@@ -18253,3 +18253,333 @@ STRING 5881
 Allows transporting the army to another portal.
 }
 
+STRING 5883
+// Items: I00Z (|cFFA089FFGorehowl|R +5), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5884
+// Abilities: A09X ([Items] Gorehowl +6), Name (Name)
+{
+[Items] Gorehowl +6
+}
+
+STRING 5885
+// Abilities: A0A1 ([Items] Gorehowl +9), Name (Name)
+{
+[Items] Gorehowl +9
+}
+
+STRING 5886
+// Abilities: A0A5 ([Items] Gorehowl +12), Name (Name)
+{
+[Items] Gorehowl +12
+}
+
+STRING 5887
+// Abilities: A0A7 ([Items] Gorehowl +15), Name (Name)
+{
+[Items] Gorehowl +15
+}
+
+STRING 5893
+// Abilities: A09Y ([Items] Gorehowl +5), Name (Name)
+{
+[Items] Gorehowl +5
+}
+
+STRING 5894
+// Abilities: A09Z ([Items] Gorehowl +7), Name (Name)
+{
+[Items] Gorehowl +7
+}
+
+STRING 5895
+// Abilities: A0A0 ([Items] Gorehowl +8), Name (Name)
+{
+[Items] Gorehowl +8
+}
+
+STRING 5896
+// Abilities: A0A2 ([Items] Gorehowl +10), Name (Name)
+{
+[Items] Gorehowl +10
+}
+
+STRING 5897
+// Abilities: A0A3 ([Items] Gorehowl +11), Name (Name)
+{
+[Items] Gorehowl +11
+}
+
+STRING 5898
+// Abilities: A0A4 ([Items] Gorehowl +13), Name (Name)
+{
+[Items] Gorehowl +13
+}
+
+STRING 5899
+// Abilities: A0A6 ([Items] Gorehowl +14), Name (Name)
+{
+[Items] Gorehowl +14
+}
+
+STRING 5900
+// Items: I00Z (|cFFA089FFGorehowl|R +5), Name (Name)
+{
+|cFFA089FFGorehowl|R +5
+}
+
+STRING 5901
+// Items: I00Z (|cFFA089FFGorehowl|R +5), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 5/15
+}
+
+STRING 5902
+// Items: I00Z (|cFFA089FFGorehowl|R +5), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 5/15
+}
+
+STRING 5903
+// Items: I010 (|cFFA089FFGorehowl|R +6), Name (Name)
+{
+|cFFA089FFGorehowl|R +6
+}
+
+STRING 5904
+// Items: I010 (|cFFA089FFGorehowl|R +6), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5905
+// Items: I010 (|cFFA089FFGorehowl|R +6), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 6/15
+}
+
+STRING 5906
+// Items: I010 (|cFFA089FFGorehowl|R +6), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 6/15
+}
+
+STRING 5907
+// Items: I011 (|cFFA089FFGorehowl|R +7), Name (Name)
+{
+|cFFA089FFGorehowl|R +7
+}
+
+STRING 5908
+// Items: I011 (|cFFA089FFGorehowl|R +7), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5909
+// Items: I011 (|cFFA089FFGorehowl|R +7), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 7/15
+}
+
+STRING 5910
+// Items: I011 (|cFFA089FFGorehowl|R +7), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 7/15
+}
+
+STRING 5911
+// Items: I012 (|cFFA089FFGorehowl|R +8), Name (Name)
+{
+|cFFA089FFGorehowl|R +8
+}
+
+STRING 5912
+// Items: I012 (|cFFA089FFGorehowl|R +8), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5913
+// Items: I012 (|cFFA089FFGorehowl|R +8), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 8/15
+}
+
+STRING 5914
+// Items: I012 (|cFFA089FFGorehowl|R +8), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 8/15
+}
+
+STRING 5915
+// Items: I013 (|cFFA089FFGorehowl|R +9), Name (Name)
+{
+|cFFA089FFGorehowl|R +9
+}
+
+STRING 5916
+// Items: I013 (|cFFA089FFGorehowl|R +9), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5917
+// Items: I013 (|cFFA089FFGorehowl|R +9), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 9/15
+}
+
+STRING 5918
+// Items: I013 (|cFFA089FFGorehowl|R +9), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 9/15
+}
+
+STRING 5919
+// Items: I014 (|cFFA089FFGorehowl|R +10), Name (Name)
+{
+|cFFA089FFGorehowl|R +10
+}
+
+STRING 5920
+// Items: I014 (|cFFA089FFGorehowl|R +10), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5921
+// Items: I014 (|cFFA089FFGorehowl|R +10), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 10/15
+}
+
+STRING 5922
+// Items: I014 (|cFFA089FFGorehowl|R +10), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 10/15
+}
+
+STRING 5923
+// Items: I015 (|cFFA089FFGorehowl|R +11), Name (Name)
+{
+|cFFA089FFGorehowl|R +11
+}
+
+STRING 5924
+// Items: I015 (|cFFA089FFGorehowl|R +11), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5925
+// Items: I015 (|cFFA089FFGorehowl|R +11), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 11/15
+}
+
+STRING 5926
+// Items: I015 (|cFFA089FFGorehowl|R +11), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 11/15
+}
+
+STRING 5927
+// Items: I016 (|cFFA089FFGorehowl|R +12), Name (Name)
+{
+|cFFA089FFGorehowl|R +12
+}
+
+STRING 5928
+// Items: I016 (|cFFA089FFGorehowl|R +12), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5929
+// Items: I016 (|cFFA089FFGorehowl|R +12), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 12/15
+}
+
+STRING 5930
+// Items: I016 (|cFFA089FFGorehowl|R +12), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 12/15
+}
+
+STRING 5931
+// Items: I017 (|cFFA089FFGorehowl|R +13), Name (Name)
+{
+|cFFA089FFGorehowl|R +13
+}
+
+STRING 5932
+// Items: I017 (|cFFA089FFGorehowl|R +13), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5933
+// Items: I017 (|cFFA089FFGorehowl|R +13), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 13/15
+}
+
+STRING 5934
+// Items: I017 (|cFFA089FFGorehowl|R +13), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 13/15
+}
+
+STRING 5935
+// Items: I018 (|cFFA089FFGorehowl|R +14), Name (Name)
+{
+|cFFA089FFGorehowl|R +14
+}
+
+STRING 5936
+// Items: I018 (|cFFA089FFGorehowl|R +14), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl|R
+}
+
+STRING 5937
+// Items: I018 (|cFFA089FFGorehowl|R +14), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 14/15
+}
+
+STRING 5938
+// Items: I018 (|cFFA089FFGorehowl|R +14), Description (Description)
+{
+Each kill increases the Hero's damage by 1 and attack speed by 1%. Level - 14/15
+}
+
+STRING 5943
+// Items: I019 (|cFFA089FFGorehowl, Might of the Warchief|R), Name (Name)
+{
+|cFFA089FFGorehowl, Might of the Warchief|R
+}
+
+STRING 5944
+// Items: I019 (|cFFA089FFGorehowl, Might of the Warchief|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFGorehowl, Might of the Warchief|R
+}
+
+STRING 5945
+// Items: I019 (|cFFA089FFGorehowl, Might of the Warchief|R), Ubertip (Tooltip - Extended)
+{
+Each kill increases the Hero's damage by 15 and attack speed by 15%.
+}
+
+STRING 5946
+// Items: I019 (|cFFA089FFGorehowl, Might of the Warchief|R), Description (Description)
+{
+Each kill increases the Hero's damage by 15 and attack speed by 15%.
+}
+
