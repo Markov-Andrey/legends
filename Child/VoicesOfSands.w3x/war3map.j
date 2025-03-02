@@ -12791,7 +12791,7 @@ endfunction
 
 function config takes nothing returns nothing
     call SetMapName("TRIGSTR_001")
-    call SetMapDescription("TRIGSTR_6043")
+    call SetMapDescription("")
     call SetPlayers(5)
     call SetTeams(5)
     call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)

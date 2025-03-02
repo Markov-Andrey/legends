@@ -18612,8 +18612,3 @@ STRING 6042
 Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
 }
 
-STRING 6043
-{
-:project_description
-}
-
