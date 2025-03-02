@@ -9689,13 +9689,13 @@ E
 }
 
 STRING 4011
-// Abilities: A010 ([UI] Difficulty: Mythic (+1)), Hotkey (Hotkey - Normal)
+// Abilities: A00E ([Uther] Summon Champion of Holy), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 4015
-// Abilities: A04K ([Wrynn] Portal to Stormwind), Hotkey (Hotkey - Normal)
+// Abilities: A00D ([Uther] Summon Champion of Protection), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -10819,19 +10819,19 @@ E
 }
 
 STRING 4307
-// Abilities: A031 ([UI] Legends: Varian Wrynn), Hotkey (Hotkey - Normal)
+// Abilities: A010 ([UI] Difficulty: Mythic (+1)), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 4308
-// Abilities: A04L ([Wrynn] Portal to Stormwind), Hotkey (Hotkey - Normal)
+// Abilities: A04K ([Wrynn] Portal to Stormwind), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4309
-// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -12502,19 +12502,19 @@ X
 }
 
 STRING 4626
-// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
+// Abilities: A031 ([UI] Legends: Varian Wrynn), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 4627
-// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
+// Abilities: A04L ([Wrynn] Portal to Stormwind), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4628
-// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -13110,13 +13110,13 @@ Anti-spellcaster that has a poison attack which slows and damages enemy units. C
 }
 
 STRING 4720
-// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Hotkey (Hotkey - Normal)
+// Abilities: A059 ([Tyrande] Shadowstalk), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 4721
-// Abilities: A071 ([UI] Legends: Whitemane), Hotkey (Hotkey - Normal)
+// Abilities: A06E ([UI] Difficulty: Mythic (+2)), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -15104,7 +15104,7 @@ W
 }
 
 STRING 5299
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A071 ([UI] Legends: Whitemane), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -15347,393 +15347,6 @@ STRING 5339
 // Upgrades: R039 (Storm Hammers), Tip (Tooltip)
 {
 Research Judgment Ray
-}
-
-STRING 5341
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5342
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5343
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5344
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5345
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5346
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5347
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5348
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5349
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00no bonus to attack
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5350
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5351
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5352
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5353
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5354
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5355
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5356
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5357
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5358
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5359
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+3 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5360
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+5 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5361
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+5 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5362
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+5 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5363
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+5 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5364
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+5 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5365
-// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
-{
-|cffffcc00+5 damage
-|R
-Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
-
-
-
-
-
-
-
-}
-
-STRING 5367
-// Abilities: A090 ([Whitemane] Gryphon Lancer Attack Orange +3), Name (Name)
-{
-[Whitemane] Gryphon Lancer Attack Orange +3
-}
-
-STRING 5368
-// Abilities: A091 ([Whitemane] Gryphon Lancer Attack Red +5), Name (Name)
-{
-[Whitemane] Gryphon Lancer Attack Red +5
 }
 
 STRING 5369
@@ -17495,7 +17108,7 @@ E
 }
 
 STRING 5711
-// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+// Abilities: A06D ([Thrall] Place a Totem), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -17513,7 +17126,7 @@ W
 }
 
 STRING 5714
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -18581,5 +18194,426 @@ STRING 5946
 // Items: I019 (|cFFA089FFGorehowl, Might of the Warchief|R), Description (Description)
 {
 Each kill increases the Hero's damage by 15 and attack speed by 15%.
+}
+
+STRING 5947
+// Items: ckng (|cFFFFAD40Crown of Kings|R), Name (Name)
+{
+|cFFFFAD40Crown of Kings|R
+}
+
+STRING 5948
+// Items: ckng (|cFFFFAD40Crown of Kings|R), Tip (Tooltip - Basic)
+{
+Select |cFFFFAD40Crown of Kings|R
+}
+
+STRING 5949
+// Items: afac (|cFFA089FFAlleria's Flute of Accuracy|R), Name (Name)
+{
+|cFFA089FFAlleria's Flute of Accuracy|R
+}
+
+STRING 5950
+// Items: afac (|cFFA089FFAlleria's Flute of Accuracy|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFAlleria's Flute of Accuracy|R
+}
+
+STRING 5951
+// Items: I00Y (|cFFFFAD40Atiesh|R), Tip (Tooltip - Basic)
+{
+Select |cFFFFAD40Atiesh|R
+}
+
+STRING 5952
+// Items: ofro (|cFFFFAD40Orb of Frost|R), Name (Name)
+{
+|cFFFFAD40Orb of Frost|R
+}
+
+STRING 5953
+// Items: ofro (|cFFFFAD40Orb of Frost|R), Tip (Tooltip - Basic)
+{
+Select |cFFFFAD40Orb of Frost|R
+}
+
+STRING 5954
+// Items: modt (|cFFFFAD40Mask of Death|R), Name (Name)
+{
+|cFFFFAD40Mask of Death|R
+}
+
+STRING 5955
+// Items: modt (|cFFFFAD40Mask of Death|R), Tip (Tooltip - Basic)
+{
+Select |cFFFFAD40Mask of Death|R
+}
+
+STRING 5956
+// Items: odef (|cFFA089FFOrb of Darkness|R), Name (Name)
+{
+|cFFA089FFOrb of Darkness|R
+}
+
+STRING 5957
+// Items: odef (|cFFA089FFOrb of Darkness|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFOrb of Darkness|R
+}
+
+STRING 5958
+// Items: ciri (|cFFA089FFRobe of the Magi|R), Name (Name)
+{
+|cFFA089FFRobe of the Magi|R
+}
+
+STRING 5959
+// Items: ciri (|cFFA089FFRobe of the Magi|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFRobe of the Magi|R
+}
+
+STRING 5960
+// Items: belv (|cFFA089FFBoots of Quel'Thalas|R), Name (Name)
+{
+|cFFA089FFBoots of Quel'Thalas|R
+}
+
+STRING 5961
+// Items: belv (|cFFA089FFBoots of Quel'Thalas|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFBoots of Quel'Thalas|R
+}
+
+STRING 5962
+// Items: bgst (|cFFA089FFBelt of Giant Strength|R), Name (Name)
+{
+|cFFA089FFBelt of Giant Strength|R
+}
+
+STRING 5963
+// Items: bgst (|cFFA089FFBelt of Giant Strength|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFBelt of Giant Strength|R
+}
+
+STRING 5964
+// Items: war2 (|cFFA089FFWarsong Battle Drums|R), Name (Name)
+{
+|cFFA089FFWarsong Battle Drums|R
+}
+
+STRING 5965
+// Items: war2 (|cFFA089FFWarsong Battle Drums|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFWarsong Battle Drums|R
+}
+
+STRING 5966
+// Items: lgdh (|cFFA089FFLegion Doom-Horn|R), Name (Name)
+{
+|cFFA089FFLegion Doom-Horn|R
+}
+
+STRING 5967
+// Items: lgdh (|cFFA089FFLegion Doom-Horn|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFLegion Doom-Horn|R
+}
+
+STRING 5968
+// Items: hval (|cFFA089FFHelm of Valor|R), Name (Name)
+{
+|cFFA089FFHelm of Valor|R
+}
+
+STRING 5969
+// Items: hval (|cFFA089FFHelm of Valor|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFHelm of Valor|R
+}
+
+STRING 5970
+// Items: kpin (|cFFA089FFKhadgar's Pipe of Insight|R), Name (Name)
+{
+|cFFA089FFKhadgar's Pipe of Insight|R
+}
+
+STRING 5971
+// Items: kpin (|cFFA089FFKhadgar's Pipe of Insight|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFKhadgar's Pipe of Insight|R
+}
+
+STRING 5972
+// Items: hcun (|cFFA089FFHood of Cunning|R), Name (Name)
+{
+|cFFA089FFHood of Cunning|R
+}
+
+STRING 5973
+// Items: hcun (|cFFA089FFHood of Cunning|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFHood of Cunning|R
+}
+
+STRING 5974
+// Items: ajen (|cFFA089FFAncient Janggo of Endurance|R), Name (Name)
+{
+|cFFA089FFAncient Janggo of Endurance|R
+}
+
+STRING 5975
+// Items: ajen (|cFFA089FFAncient Janggo of Endurance|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFAncient Janggo of Endurance|R
+}
+
+STRING 5976
+// Items: ratf (|cFFFFAD40Claws of Attack +15|R), Name (Name)
+{
+|cFFFFAD40Claws of Attack +15|R
+}
+
+STRING 5977
+// Items: ratf (|cFFFFAD40Claws of Attack +15|R), Tip (Tooltip - Basic)
+{
+Select |cFFFFAD40Claws of Attack +15|R
+}
+
+STRING 5978
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 5979
+// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 5980
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 6006
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6007
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6008
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6009
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6010
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6011
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6012
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6013
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6014
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00no bonus to attack
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6025
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6026
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6027
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6028
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6029
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6030
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6031
+// Abilities: A090 ([Whitemane] Gryphon Lancer Attack Orange +5), Name (Name)
+{
+[Whitemane] Gryphon Lancer Attack Orange +5
+}
+
+STRING 6032
+// Abilities: A091 ([Whitemane] Gryphon Lancer Attack Red +10), Name (Name)
+{
+[Whitemane] Gryphon Lancer Attack Red +10
+}
+
+STRING 6033
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6034
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6035
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6036
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+5 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6037
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+10 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6038
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+10 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6039
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+10 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6040
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+10 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6041
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+10 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6042
+// Abilities: A08Z ([Whitemane] Judgment Ray), Ubertip (Tooltip - Normal - Extended)
+{
+|cffffcc00+10 damage
+|R
+Focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 12 seconds.
+}
+
+STRING 6043
+{
+:project_description
 }
 

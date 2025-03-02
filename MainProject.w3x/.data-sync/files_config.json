@@ -11054,5 +11054,413 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "aurafreedom.blp",
+        "name": "aurafreedom.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items",
+        "name": "Items",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTNBookOfAncientKnowledge.blp",
+        "name": "BTNBookOfAncientKnowledge.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Blacksmith_Hammer.blp",
+        "name": "BTN_Blacksmith_Hammer.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Cogmaster_Wrench.blp",
+        "name": "BTN_Cogmaster_Wrench.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Cthunspuzzlebox.blp",
+        "name": "BTN_Cthunspuzzlebox.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Cursed_Blade.blp",
+        "name": "BTN_Cursed_Blade.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Deepwood_Ranger_Quiver.blp",
+        "name": "BTN_Deepwood_Ranger_Quiver.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Nightmare_Banner.blp",
+        "name": "BTN_Nightmare_Banner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Scarlet_Boots.blp",
+        "name": "BTN_Scarlet_Boots.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Timber_Tambourine.blp",
+        "name": "BTN_Timber_Tambourine.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_Whitemane_Chapeau.blp",
+        "name": "BTN_Whitemane_Chapeau.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_blessingofsalvation.blp",
+        "name": "BTN_blessingofsalvation.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_brd_banner.blp",
+        "name": "BTN_brd_banner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_jewelry_amulet_01.blp",
+        "name": "BTN_jewelry_amulet_01.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_jewelry_amulet_02.blp",
+        "name": "BTN_jewelry_amulet_02.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\BTN_jewelry_amulet_03.blp",
+        "name": "BTN_jewelry_amulet_03.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Atiesh",
+        "name": "Atiesh",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Atiesh\\BTNAtiesh.blp",
+        "name": "BTNAtiesh.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Atiesh\\BTNWarpPortal.blp",
+        "name": "BTNWarpPortal.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Atiesh\\BlueShimmeringPortal.mdx",
+        "name": "BlueShimmeringPortal.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Gorehowl",
+        "name": "Gorehowl",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Gorehowl\\BTN_Gorehowl_1.blp",
+        "name": "BTN_Gorehowl_1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\Gorehowl\\BTN_Gorehowl_2.blp",
+        "name": "BTN_Gorehowl_2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\NightmareBanner",
+        "name": "NightmareBanner",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Items\\NightmareBanner\\aurafreedom.mdx",
+        "name": "aurafreedom.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNAtiesh.blp",
+        "name": "DISBTNAtiesh.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBookOfAncientKnowledge.blp",
+        "name": "DISBTNBookOfAncientKnowledge.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWarpPortal.blp",
+        "name": "DISBTNWarpPortal.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Blacksmith_Hammer.blp",
+        "name": "DISBTN_Blacksmith_Hammer.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Cogmaster_Wrench.blp",
+        "name": "DISBTN_Cogmaster_Wrench.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Cthunspuzzlebox.blp",
+        "name": "DISBTN_Cthunspuzzlebox.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Cursed_Blade.blp",
+        "name": "DISBTN_Cursed_Blade.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Deepwood_Ranger_Quiver.blp",
+        "name": "DISBTN_Deepwood_Ranger_Quiver.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Gorehowl_1.blp",
+        "name": "DISBTN_Gorehowl_1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Gorehowl_2.blp",
+        "name": "DISBTN_Gorehowl_2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Nightmare_Banner.blp",
+        "name": "DISBTN_Nightmare_Banner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Scarlet_Boots.blp",
+        "name": "DISBTN_Scarlet_Boots.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Timber_Tambourine.blp",
+        "name": "DISBTN_Timber_Tambourine.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Whitemane_Chapeau.blp",
+        "name": "DISBTN_Whitemane_Chapeau.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_blessingofsalvation.blp",
+        "name": "DISBTN_blessingofsalvation.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_brd_banner.blp",
+        "name": "DISBTN_brd_banner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_jewelry_amulet_01.blp",
+        "name": "DISBTN_jewelry_amulet_01.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_jewelry_amulet_02.blp",
+        "name": "DISBTN_jewelry_amulet_02.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_jewelry_amulet_03.blp",
+        "name": "DISBTN_jewelry_amulet_03.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Special\\Box",
+        "name": "Box",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Special\\Box\\confetti.mdx",
+        "name": "confetti.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Special\\Box\\treasurechest_bloodelf_3.mdx",
+        "name": "treasurechest_bloodelf_3.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Special\\Box\\treasurechest_demon_6.mdx",
+        "name": "treasurechest_demon_6.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Special\\Box\\treasurechest_green.mdx",
+        "name": "treasurechest_green.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Special\\Box\\treasurechest_purple.mdx",
+        "name": "treasurechest_purple.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
     }
 ]
