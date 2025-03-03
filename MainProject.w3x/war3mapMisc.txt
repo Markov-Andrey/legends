@@ -2,5 +2,6 @@
 DisplayBuildingStatus=1
 DrainTransfersLife=1
 DrainTransfersMana=1
+MaxHeroLevel=14
 MinUnitSpeed=1.0
 
