@@ -11462,5 +11462,53 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "Legends\\Arthas\\Arthas\\BTN_Summon_Sindragosa_Icon.blp",
+        "name": "BTN_Summon_Sindragosa_Icon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Arthas\\Pedestal\\PAS_Eternal_Hunger_Icon.blp",
+        "name": "PAS_Eternal_Hunger_Icon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Arthas\\Pedestal\\PAS_Quest_Eternal_Hunger_Icon.blp",
+        "name": "PAS_Quest_Eternal_Hunger_Icon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Summon_Sindragosa_Icon.blp",
+        "name": "DISBTN_Summon_Sindragosa_Icon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Eternal_Hunger_Icon.blp",
+        "name": "DISPAS_Eternal_Hunger_Icon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Quest_Eternal_Hunger_Icon.blp",
+        "name": "DISPAS_Quest_Eternal_Hunger_Icon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
     }
 ]
