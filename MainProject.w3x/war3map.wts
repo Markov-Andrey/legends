@@ -13581,27 +13581,15 @@ STRING 4831
 }
 
 STRING 4840
-// Destructibles: B005 (Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B005 ([Silithus] Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Silitus
 }
 
-STRING 4841
-// Destructibles: B005 (Tree Wall), Name (Name)
-{
-Tree Wall
-}
-
 STRING 4842
-// Destructibles: B006 (Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B006 ([Silithus] Tree Wall), EditorSuffix (Editor Suffix)
 {
 Silitus
-}
-
-STRING 4843
-// Destructibles: B006 (Tree Wall), Name (Name)
-{
-Tree Wall
 }
 
 STRING 4844
@@ -14919,16 +14907,6 @@ STRING 5273
 // Upgrades: R037 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
 Upgrade to Serrated Bolts
-}
-
-STRING 5275
-{
-Stonebeard
-}
-
-STRING 5276
-{
-Syndicate
 }
 
 STRING 5277
@@ -19018,5 +18996,83 @@ STRING 6147
 // Abilities: A0AA ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
 {
 |cFFFFDC00Arthas:|R +15 Strength, +1000 Exp
+}
+
+STRING 6148
+{
+Druid
+}
+
+STRING 6149
+{
+Cultists
+}
+
+STRING 6150
+{
+Hive Zora
+}
+
+STRING 6151
+{
+Hive Ashi
+}
+
+STRING 6152
+{
+Hive Regal
+}
+
+STRING 6153
+{
+Hive
+}
+
+STRING 6154
+// Units: n00M ([Silithus] Big Eggs), Name (Name)
+{
+[Silithus] Big Eggs
+}
+
+STRING 6155
+{
+Voices of the Sands
+}
+
+STRING 6156
+{
+The sands of Silithus are once again teeming with silithid nests. They must be destroyed.
+}
+
+STRING 6157
+{
+Hold the line during the storm
+}
+
+STRING 6158
+{
+|cff32de00Victory:|r Destroy the nests in the calm
+}
+
+STRING 6159
+{
+Voices of the Sands
+}
+
+STRING 6160
+{
+Nests left
+}
+
+STRING 6166
+// Destructibles: B005 ([Silithus] Tree Wall), Name (Name)
+{
+[Silithus] Tree Wall
+}
+
+STRING 6167
+// Destructibles: B006 ([Silithus] Tree Wall), Name (Name)
+{
+[Silithus] Tree Wall
 }
 
