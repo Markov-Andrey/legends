@@ -18751,3 +18751,272 @@ STRING 6077
 Sacrifice an acolyte to Frostmourne in exchange for 7 souls.
 }
 
+STRING 6113
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Name (Name)
+{
+[Arthas] Personal Quest: Eternal Hunger
+}
+
+STRING 6114
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6115
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6116
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6117
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6118
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6119
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6120
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6121
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6122
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6123
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6124
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6125
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6126
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6127
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6128
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6129
+// Abilities: A0AA ([Arthas] Personal Quest: Eternal Hunger), Name (Name)
+{
+[Arthas] Personal Quest: Eternal Hunger
+}
+
+STRING 6130
+// Abilities: A0AA ([Arthas] Personal Quest: Eternal Hunger), EditorSuffix (Editor Suffix)
+{
+(complete)
+}
+
+STRING 6131
+// Abilities: A0AA ([Arthas] Personal Quest: Eternal Hunger), Tip (Tooltip - Normal)
+{
+Personal Quest: Eternal Hunger
+}
+
+STRING 6132
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 0/15
+}
+
+STRING 6133
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 1/15
+}
+
+STRING 6134
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 2/15
+}
+
+STRING 6135
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 3/15
+}
+
+STRING 6136
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 4/15
+}
+
+STRING 6137
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 5/15
+}
+
+STRING 6138
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 6/15
+}
+
+STRING 6139
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+|cFFFFDC00Progress:|R 7/15
+}
+
+STRING 6140
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 8/15
+}
+
+STRING 6141
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 9/15
+}
+
+STRING 6142
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 10/15
+}
+
+STRING 6143
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 11/15
+}
+
+STRING 6144
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 12/15
+}
+
+STRING 6145
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 13/15
+}
+
+STRING 6146
+// Abilities: A0A9 ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFA500Objective:|R Slay 15 enemies with Arthas to feed his insatiable hunger for power
+
+|cFF32CD32Reward:|R +15 Strength, +1000 Exp
+
+|cFFFFDC00Progress:|R 14/15
+}
+
+STRING 6147
+// Abilities: A0AA ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
+{
+|cFFFFDC00Arthas:|R +15 Strength, +1000 Exp
+}
+

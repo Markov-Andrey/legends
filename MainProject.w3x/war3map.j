@@ -329,6 +329,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_ArthasQuestFrostmourneKill= null
 
     // Random Groups
 integer array gg_rg_000
@@ -2889,6 +2890,57 @@ endfunction
 function InitTrig_ArthasIni takes nothing returns nothing
     set gg_trg_ArthasIni=CreateTrigger()
     call TriggerAddAction(gg_trg_ArthasIni, function Trig_ArthasIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ArthasQuestFrostmourneKill
+//===========================================================================
+function Trig_ArthasQuestFrostmourneKill_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetKillingUnitBJ()) == 'U006' ) ) then
+        return false
+    endif
+    if ( not ( CountLivingPlayerUnitsOfTypeId('u01C', GetOwningPlayer(GetKillingUnitBJ())) == 1 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A0A9', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C'))) >= 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasQuestFrostmourneKill_Conditions takes nothing returns boolean
+    if ( not Trig_ArthasQuestFrostmourneKill_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasQuestFrostmourneKill_Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0A9', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C'))) < 15 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ArthasQuestFrostmourneKill_Actions takes nothing returns nothing
+    if ( Trig_ArthasQuestFrostmourneKill_Func001C() ) then
+        call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetKillingUnitBJ())), ( "Personal Quest Eternal Hunger: " + ( I2S(( GetUnitAbilityLevelSwapped('A0A9', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C'))) - 0 )) + "/15" ) ))
+        call SetUnitAbilityLevelSwapped('A0A9', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C')), ( GetUnitAbilityLevelSwapped('A0A9', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C'))) + 1 ))
+    else
+        call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetKillingUnitBJ())), ( "Personal Quest Eternal Hunger: Complete! |cFF32CD32Reward:|R +500 HP, +5 Damage, +1000 Exp" ))
+        call UnitRemoveAbilityBJ('A0A9', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C')))
+        call UnitAddAbilityBJ('A0AA', GroupPickRandomUnit(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetKillingUnitBJ()), 'u01C')))
+        call AddHeroXPSwapped(1000, GetKillingUnitBJ(), false)
+        call ModifyHeroStat(bj_HEROSTAT_STR, GetKillingUnitBJ(), bj_MODIFYMETHOD_ADD, 15)
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_ArthasQuestFrostmourneKill takes nothing returns nothing
+    set gg_trg_ArthasQuestFrostmourneKill=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasQuestFrostmourneKill, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_ArthasQuestFrostmourneKill, Condition(function Trig_ArthasQuestFrostmourneKill_Conditions))
+    call TriggerAddAction(gg_trg_ArthasQuestFrostmourneKill, function Trig_ArthasQuestFrostmourneKill_Actions)
 endfunction
 
 //===========================================================================
@@ -12435,6 +12487,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ChooseThrall()
     call InitTrig_UpgradesCondition()
     call InitTrig_ArthasIni()
+    call InitTrig_ArthasQuestFrostmourneKill()
     call InitTrig_ArthasFrostmourne()
     call InitTrig_ArthasSelectRune()
     call InitTrig_ArthasNewRuneSecond()
