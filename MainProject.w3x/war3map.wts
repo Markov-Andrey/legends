@@ -1,29 +1,4 @@
-﻿STRING 1
-{
-:project_name
-}
-
-STRING 2
-{
-Coop Mode (2)
-}
-
-STRING 4
-{
-AMark
-}
-
-STRING 5
-{
-Player 1
-}
-
-STRING 463
-{
-Player 2
-}
-
-STRING 470
+﻿STRING 470
 // Units: u009 ([Arthas] Plague Necropolis), Tip (Tooltip - Basic)
 {
 Summon Plague Necropolis
@@ -441,21 +416,6 @@ STRING 897
 // Abilities: A001 ([Uther] Divine Shield), Tip (Tooltip - Normal)
 {
 Divine Shield
-}
-
-STRING 903
-{
-Alterac's Justice
-}
-
-STRING 904
-{
-In the mountains of Alterac, the Syndicate has set up smuggling supplies. This needs to be stopped urgently.
-}
-
-STRING 906
-{
-|cff32de00Victory:|r Destroy 5 waves of caravans
 }
 
 STRING 908
@@ -918,7 +878,6 @@ STRING 1172
 // Abilities: A00Z ([UI] Difficulty: Hard), Ubertip (Tooltip - Normal - Extended)
 {
 The level of difficulty that will require the maximum of your skills and the most coordinated work with an ally.
-
 }
 
 STRING 1176
@@ -1147,7 +1106,6 @@ STRING 1331
 // Upgrades: R00M (Backpack), Ubertip (Tooltip - Extended)
 {
 Your ally also spawns souls for you
-
 }
 
 STRING 1333
@@ -1340,7 +1298,6 @@ STRING 1421
 // Upgrades: R00M (Backpack), Name (Name)
 {
 [Arthas] Slave of the Lich King
-
 }
 
 STRING 1455
@@ -1365,7 +1322,6 @@ STRING 1461
 // Buffs/Effects: B00C ([Arthas] Blood Rage), Buffubertip (Tooltip - Extended)
 {
 Unit attacks faster but moves slower
-
 }
 
 STRING 1463
@@ -2740,14 +2696,12 @@ STRING 2069
 // Abilities: A002 ([Uther] Divine Shield), Ubertip (Tooltip - Normal - Extended)
 {
 After some time, Divine Provided will be available again
-
 }
 
 STRING 2070
 // Buffs/Effects: B000 ([Uther] Reload Divine Shield), Buffubertip (Tooltip - Extended)
 {
 After some time, Divine Provided will be available again
-
 }
 
 STRING 2071
@@ -3787,11 +3741,6 @@ Overwhelming Sadness - Sends a bolt of negative energy that burns up to <A02I,Da
 
 |cff00ff00Unholy:|r
 Necrotic Breath - Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
-}
-
-STRING 2372
-{
-|cffff0000Not enough souls to reforge!|r
 }
 
 STRING 2377
@@ -8114,16 +8063,6 @@ STRING 3649
 (icon)
 }
 
-STRING 3654
-{
-Defeat!
-}
-
-STRING 3655
-{
-Defeat!
-}
-
 STRING 3656
 // Units: e005 ([Tyrande] Moon Well), Name (Name)
 {
@@ -10668,11 +10607,6 @@ Add +10 damage
 |cFFFF5800Only 1 upgrade for the unit type|R - Catapult
 }
 
-STRING 4285
-{
-The summoning point must be within line of sight!
-}
-
 STRING 4288
 // Abilities: A07F ([Thrall] Water Ring), Name (Name)
 {
@@ -11750,7 +11684,6 @@ STRING 4508
 // Abilities: A000 ([Uther] Far Sight), Ubertip (Tooltip - Normal - Extended)
 {
 Reveals an area within a 1000 radius for <A000,Dur1> seconds. Also reveals invisible units.
-
 
 }
 
@@ -13088,7 +13021,6 @@ STRING 4723
 // Upgrades: R01D (Reinforced Defenses), Ubertip (Tooltip - Extended)
 {
 Upgrades all Towers. This structure ignores any damage over 30 per attack, shielding itself from excessive force.
-
 
 }
 
@@ -14909,11 +14841,6 @@ STRING 5273
 Upgrade to Serrated Bolts
 }
 
-STRING 5277
-{
-Players
-}
-
 STRING 5278
 // Units: h01X ([Whitemane] Beastmistress), Ubertip (Tooltip - Extended)
 {
@@ -15750,7 +15677,6 @@ STRING 5450
 Gryphon Lancer focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
 
 
-
 }
 
 STRING 5451
@@ -16545,7 +16471,6 @@ STRING 5630
 // Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
 {
 Has an 85% chance to deal 1.5 times normal damage to flying units.
-
 }
 
 STRING 5631
@@ -17144,14 +17069,12 @@ STRING 5746
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
 
-
 }
 
 STRING 5749
 // Items: I00G (|cFFA089FFDeepwood Ranger's Quiver|R), Description (Description)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
-
 
 
 }
@@ -17347,14 +17270,12 @@ STRING 5785
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
 
-
 }
 
 STRING 5786
 // Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Description (Description)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
-
 
 
 }
@@ -18714,7 +18635,6 @@ Doubles the movement speed of souls.
 
 
 
-
 }
 
 STRING 6076
@@ -18998,70 +18918,10 @@ STRING 6147
 |cFFFFDC00Arthas:|R +15 Strength, +1000 Exp
 }
 
-STRING 6148
-{
-Druid
-}
-
-STRING 6149
-{
-Cultists
-}
-
-STRING 6150
-{
-Hive Zora
-}
-
-STRING 6151
-{
-Hive Ashi
-}
-
-STRING 6152
-{
-Hive Regal
-}
-
-STRING 6153
-{
-Hive
-}
-
 STRING 6154
 // Units: n00M ([Silithus] Big Eggs), Name (Name)
 {
 [Silithus] Big Eggs
-}
-
-STRING 6155
-{
-Voices of the Sands
-}
-
-STRING 6156
-{
-The sands of Silithus are once again teeming with silithid nests. They must be destroyed.
-}
-
-STRING 6157
-{
-Hold the line during the storm
-}
-
-STRING 6158
-{
-|cff32de00Victory:|r Destroy the nests in the calm
-}
-
-STRING 6159
-{
-Voices of the Sands
-}
-
-STRING 6160
-{
-Nests left
 }
 
 STRING 6166
