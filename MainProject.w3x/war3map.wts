@@ -18936,3 +18936,27 @@ STRING 6167
 [Silithus] Tree Wall
 }
 
+STRING 6168
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Name (Name)
+{
+[Kelthuzad] Kel'Thuzad
+}
+
+STRING 6169
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Tip (Tooltip - Basic)
+{
+Summon Kel'Thuzad
+}
+
+STRING 6170
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Awakentip (Tooltip - Awaken)
+{
+Revive Kel'Thuzad
+}
+
+STRING 6171
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Revivetip (Tooltip - Revive)
+{
+Revive Kel'Thuzad
+}
+
