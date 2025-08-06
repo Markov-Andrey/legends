@@ -16986,7 +16986,7 @@ W
 }
 
 STRING 5714
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -18251,7 +18251,7 @@ D
 }
 
 STRING 5980
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -18958,5 +18958,149 @@ STRING 6171
 // Units: U00H ([Kelthuzad] Kel'Thuzad), Revivetip (Tooltip - Revive)
 {
 Revive Kel'Thuzad
+}
+
+STRING 6172
+// Units: u00I ([Kelthuzad] Сultist), Name (Name)
+{
+[Kelthuzad] Сultist
+}
+
+STRING 6173
+// Units: u00I ([Kelthuzad] Сultist), Tip (Tooltip - Basic)
+{
+Train Сultist
+}
+
+STRING 6174
+// Units: u00J ([Kelthuzad] Necropolis), Name (Name)
+{
+[Kelthuzad] Necropolis
+}
+
+STRING 6175
+// Units: h02M ([UI] Kel'Thuzad), Name (Name)
+{
+[UI] Kel'Thuzad
+}
+
+STRING 6176
+// Units: h02M ([UI] Kel'Thuzad), Tip (Tooltip - Basic)
+{
+Kel'Thuzad
+}
+
+STRING 6177
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFFFF4B3DKel'Thuzad|R
+}
+
+STRING 6178
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 6179
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Name (Name)
+{
+[UI] Legends: Kel'Thuzad
+}
+
+STRING 6180
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 6181
+// Upgrades: R03C (Magic Sentry), Name (Name)
+{
+[Special] Kel'Thuzad
+}
+
+STRING 6182
+// Upgrades: R03C (Magic Sentry), Tip (Tooltip)
+{
+Kel'Thuzad
+}
+
+STRING 6183
+// Upgrades: R03C (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 6184
+// Units: u00K ([Kelthuzad] Altar of Darkness), Name (Name)
+{
+[Kelthuzad] Altar of Darkness
+}
+
+STRING 6185
+// Abilities: A0AC ([Kelthuzad] Harvest), Name (Name)
+{
+[Kelthuzad] Harvest
+}
+
+STRING 6186
+// Abilities: A0AC ([Kelthuzad] Harvest), EditorSuffix (Editor Suffix)
+{
+ (Cultist Lumber)
+}
+
+STRING 6188
+// Units: u00L ([Kelthuzad] Crypt of the Cult), Name (Name)
+{
+[Kelthuzad] Crypt of the Cult
+}
+
+STRING 6189
+// Units: u00L ([Kelthuzad] Crypt of the Cult), Tip (Tooltip - Basic)
+{
+Summon Crypt of the Cult
+}
+
+STRING 6190
+// Units: u00M ([Kelthuzad] Bandit Warrior), Name (Name)
+{
+[Kelthuzad] Bandit Warrior
+}
+
+STRING 6191
+// Units: u00M ([Kelthuzad] Bandit Warrior), Tip (Tooltip - Basic)
+{
+Summon Bandit Warrior
+}
+
+STRING 6192
+// Units: u00N ([Kelthuzad] Skeleton Warrior), Name (Name)
+{
+[Kelthuzad] Skeleton Warrior
+}
+
+STRING 6193
+// Units: u00O ([Kelthuzad] Skeleton), Name (Name)
+{
+[Kelthuzad] Skeleton
+}
+
+STRING 6194
+// Units: u00O ([Kelthuzad] Skeleton), Tip (Tooltip - Basic)
+{
+Summon Skeleton
+}
+
+STRING 6195
+// Units: u00P ([Kelthuzad] High Necromancer), Name (Name)
+{
+[Kelthuzad] High Necromancer
+}
+
+STRING 6196
+// Units: u00P ([Kelthuzad] High Necromancer), Tip (Tooltip - Basic)
+{
+Train High Necromancer
 }
 

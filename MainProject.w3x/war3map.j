@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= false
+constant boolean CustomConsoleUI__workerFace= false
         
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -124,6 +124,7 @@ real udg_Whitemane_crusade_default= 0
 integer udg_Whitemane_crusade_level= 0
 player udg_WhitemanePlayer= null
 boolean udg_Whitemane_crusade_bool= false
+player udg_PlayerKelthuzad= null
 
     // Generated
 rect gg_rct_Region_000_Copy_2= null
@@ -336,6 +337,8 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_ChooseKelthuzad= null
+trigger gg_trg_KelthuzadIni= null
 
     // Random Groups
 integer array gg_rg_000
@@ -361,7 +364,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI___CreateIcon takes nothing returns nothing
+    function ARTHASUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -397,8 +400,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI___init takes nothing returns nothing
-        call ARTHASUI___CreateIcon()
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
     endfunction
 
 
@@ -409,24 +412,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -486,15 +489,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -629,7 +632,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -661,15 +664,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI___CreateIcon takes nothing returns nothing
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -724,8 +727,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI___init takes nothing returns nothing
-        call WHITEMANEUI___CreateIcon()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
@@ -744,7 +747,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -755,7 +758,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -778,7 +781,7 @@ endglobals
 
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -811,11 +814,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -836,19 +839,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -980,13 +983,26 @@ endglobals
         call AddCustomConsole(index , "Legends\\Whitemane\\Houndmaster\\BTNBeastmistress")
         set CustomConsoleUI_x[index]=0.000
         set CustomConsoleUI_y[index]=0.0
+
+	set index=GetHandleId(ConvertRace(11))
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile01")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile02")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile03")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile04")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile05")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile06")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile-timeindicatorframe")
+        call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile-inventorycover")
+        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNAcolyte")
+        set CustomConsoleUI_x[index]=0.000
+        set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -2785,6 +2801,17 @@ function Trig_UnSelect_Func010C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_UnSelect_Func011Func002A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(true, 'A0AB', GetEnumPlayer())
+endfunction
+
+function Trig_UnSelect_Func011C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h02M' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_UnSelect_Actions takes nothing returns nothing
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'h00S', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
@@ -2814,6 +2841,10 @@ function Trig_UnSelect_Actions takes nothing returns nothing
         call ForForce(GetPlayersAll(), function Trig_UnSelect_Func010Func002A)
     else
     endif
+    if ( Trig_UnSelect_Func011C() ) then
+        call ForForce(GetPlayersAll(), function Trig_UnSelect_Func011Func002A)
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -2837,7 +2868,7 @@ function Trig_PreviewLegend takes nothing returns nothing
     local player p
     local unit unitU= GetSpellAbilityUnit()
 
-    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' or abilityId == 'A06B' or abilityId == 'A071' then
+    if abilityId == 'A01C' or abilityId == 'A01J' or abilityId == 'A031' or abilityId == 'A054' or abilityId == 'A06B' or abilityId == 'A071' or abilityId == 'A0AB' then
         if abilityId == 'A01C' then
             set unitType='h00T'
         elseif abilityId == 'A01J' then
@@ -2850,6 +2881,8 @@ function Trig_PreviewLegend takes nothing returns nothing
             set unitType='h01M'
         elseif abilityId == 'A071' then
             set unitType='h01V'
+        elseif abilityId == 'A0AB' then
+            set unitType='h02M'
         else
             return
         endif
@@ -2875,6 +2908,8 @@ function Trig_PreviewLegend takes nothing returns nothing
                     call SetPlayerAbilityAvailable(p, 'A06B', false)
                 elseif abilityId == 'A071' then
                     call SetPlayerAbilityAvailable(p, 'A071', false)
+                elseif abilityId == 'A0AB' then
+                    call SetPlayerAbilityAvailable(p, 'A0AB', false)
                 endif
             endif
             set p=Player(23)
@@ -2953,6 +2988,70 @@ function InitTrig_ChooseArthas takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseArthas, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_ChooseArthas, Condition(function Trig_ChooseArthas_Conditions))
     call TriggerAddAction(gg_trg_ChooseArthas, function Trig_ChooseArthas_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ChooseKelthuzad
+//===========================================================================
+function Trig_ChooseKelthuzad_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'h02M' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseKelthuzad_Conditions takes nothing returns boolean
+    if ( not Trig_ChooseKelthuzad_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ChooseKelthuzad_Func008A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'u00J', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseKelthuzad_Func010A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'u00I', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseKelthuzad_Func012A takes nothing returns nothing
+    call ReplaceUnitBJ(GetEnumUnit(), 'u00I', bj_UNIT_STATE_METHOD_MAXIMUM)
+endfunction
+
+function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
+    call TriggerSleepAction(1.00)
+    call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 11)
+    call ShowUnitHide(GetSpellAbilityUnit())
+    call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
+    // Necropolis
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseKelthuzad_Func008A)
+    // Ghoul
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseKelthuzad_Func010A)
+    // Acolyte
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseKelthuzad_Func012A)
+    // ----------------------
+    call RemoveUnit(GetSpellAbilityUnit())
+    // Run-ALL-triggers
+    set udg_PlayerKelthuzad=GetOwningPlayer(GetSpellAbilityUnit())
+    call SetPlayerTechResearchedSwap('R03C', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+    call ConditionalTriggerExecute(gg_trg_KelthuzadIni)
+    call DisableTrigger(gg_trg_IniStartCameraP1)
+    // SoulsScore
+    call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_GREEN, true)
+    call TriggerExecute(gg_trg_IniStartCameraReset)
+endfunction
+
+//===========================================================================
+function InitTrig_ChooseKelthuzad takes nothing returns nothing
+    set gg_trg_ChooseKelthuzad=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ChooseKelthuzad, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_ChooseKelthuzad, Condition(function Trig_ChooseKelthuzad_Conditions))
+    call TriggerAddAction(gg_trg_ChooseKelthuzad, function Trig_ChooseKelthuzad_Actions)
 endfunction
 
 //===========================================================================
@@ -8158,6 +8257,18 @@ function InitTrig_WhitemaneFastBuild takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KelthuzadIni
+//===========================================================================
+function Trig_KelthuzadIni_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadIni takes nothing returns nothing
+    set gg_trg_KelthuzadIni=CreateTrigger()
+    call TriggerAddAction(gg_trg_KelthuzadIni, function Trig_KelthuzadIni_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: MythicAddRandom
 //===========================================================================
 function MythicAddRandom takes nothing returns nothing
@@ -13004,6 +13115,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UnSelect()
     call InitTrig_PreviewLegend()
     call InitTrig_ChooseArthas()
+    call InitTrig_ChooseKelthuzad()
     call InitTrig_ChooseUther()
     call InitTrig_ChooseWrynn()
     call InitTrig_ChooseWhitemane()
@@ -13094,6 +13206,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneZealotSacriGift()
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_WhitemaneFastBuild()
+    call InitTrig_KelthuzadIni()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
     call InitTrig_Mythic2Vampiric()
@@ -13400,13 +13513,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI___init")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("WHITEMANEUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("ARTHASUI__init")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
