@@ -144,6 +144,7 @@ trigger gg_trg_ChooseFirst= null
 trigger gg_trg_UnSelect= null
 trigger gg_trg_PreviewLegend= null
 trigger gg_trg_ChooseArthas= null
+trigger gg_trg_ChooseKelthuzad= null
 trigger gg_trg_ChooseUther= null
 trigger gg_trg_ChooseWrynn= null
 trigger gg_trg_ChooseWhitemane= null
@@ -234,6 +235,7 @@ trigger gg_trg_WhitemaneCrusaderWrathful= null
 trigger gg_trg_WhitemaneZealotSacriGift= null
 trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_WhitemaneFastBuild= null
+trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
 trigger gg_trg_Mythic2Vampiric= null
@@ -337,8 +339,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_ChooseKelthuzad= null
-trigger gg_trg_KelthuzadIni= null
 
     // Random Groups
 integer array gg_rg_000

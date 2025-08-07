@@ -19104,3 +19104,21 @@ STRING 6196
 Train High Necromancer
 }
 
+STRING 6197
+// Units: h02R ([Kelthuzad] Plague Cauldron), Name (Name)
+{
+[Kelthuzad] Plague Cauldron
+}
+
+STRING 6198
+// Units: h02R ([Kelthuzad] Plague Cauldron), Tip (Tooltip - Basic)
+{
+Build Plague Cauldron
+}
+
+STRING 6199
+// Units: h02R ([Kelthuzad] Plague Cauldron), Ubertip (Tooltip - Extended)
+{
+Распространяет порчу, генерирует усиление порчи
+}
+
