@@ -18251,7 +18251,7 @@ D
 }
 
 STRING 5980
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -19009,7 +19009,7 @@ STRING 6179
 }
 
 STRING 6180
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -19150,5 +19150,249 @@ Horde
 STRING 6205
 {
 Alliance
+}
+
+STRING 6206
+// Items: I01A ([Warsong] Night Elf Flag), Name (Name)
+{
+[Warsong] Night Elf Flag
+}
+
+STRING 6207
+// Items: I01B ([Warsong] Orc Flag), Name (Name)
+{
+[Warsong] Orc Flag
+}
+
+STRING 6208
+{
+Orc +1
+}
+
+STRING 6209
+{
+Night Elf +1
+}
+
+STRING 6210
+// Units: h02S ([UI] Hellscream), Name (Name)
+{
+[UI] Hellscream
+}
+
+STRING 6211
+// Units: h02S ([UI] Hellscream), Tip (Tooltip - Basic)
+{
+Hellscream
+}
+
+STRING 6212
+// Abilities: A0AD ([UI] Legends: Hellscream), Tip (Tooltip - Normal)
+{
+|cFFFF4B3DHellscream|R
+}
+
+STRING 6213
+// Abilities: A0AD ([UI] Legends: Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 6214
+// Abilities: A0AD ([UI] Legends: Hellscream), Name (Name)
+{
+[UI] Legends: Hellscream
+}
+
+STRING 6215
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 6216
+// Units: o010 ([Hellscream] Peon), Name (Name)
+{
+[Hellscream] Peon
+}
+
+STRING 6217
+// Units: o011 ([Hellscream] Grunt), Name (Name)
+{
+[Hellscream] Grunt
+}
+
+STRING 6218
+// Units: o012 ([Hellscream] Great Hall), Name (Name)
+{
+[Hellscream] Great Hall
+}
+
+STRING 6219
+// Units: O013 ([Hellscream] Warsong Warchief), Name (Name)
+{
+[Hellscream] Warsong Warchief
+}
+
+STRING 6220
+// Units: O013 ([Hellscream] Warsong Warchief), Awakentip (Tooltip - Awaken)
+{
+Revive Hellscream
+}
+
+STRING 6221
+// Units: O013 ([Hellscream] Warsong Warchief), Revivetip (Tooltip - Revive)
+{
+Revive Hellscream
+}
+
+STRING 6222
+// Units: O013 ([Hellscream] Warsong Warchief), Tip (Tooltip - Basic)
+{
+Summon Hellscream
+}
+
+STRING 6223
+// Upgrades: R03D (Magic Sentry), Name (Name)
+{
+[Special] Hellscream
+}
+
+STRING 6224
+// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
+{
+Hellscream
+}
+
+STRING 6225
+// Upgrades: R03D (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 6226
+// Units: o014 ([Hellscream] Stronghold), Name (Name)
+{
+[Hellscream] Stronghold
+}
+
+STRING 6227
+// Units: o015 ([Hellscream] Conquest Hold), Name (Name)
+{
+[Hellscream] Conquest Hold
+}
+
+STRING 6228
+// Units: o015 ([Hellscream] Conquest Hold), Tip (Tooltip - Basic)
+{
+Upgrade to Conquest Hold
+}
+
+STRING 6229
+// Units: o015 ([Hellscream] Conquest Hold), Ubertip (Tooltip - Extended)
+{
+Upgrade to Conquest Hold to enable the production of additional types of structures and units.
+}
+
+STRING 6230
+// Units: o016 ([Hellscream] Altar of Storms), Name (Name)
+{
+[Hellscream] Altar of Storms
+}
+
+STRING 6233
+// Units: o018 ([Hellscream] Barracks), Name (Name)
+{
+[Hellscream] Barracks
+}
+
+STRING 6235
+// Units: o019 ([Hellscream] Forge), Name (Name)
+{
+[Hellscream] Forge
+}
+
+STRING 6236
+// Units: o01A ([Hellscream] Beastiary), Name (Name)
+{
+[Hellscream] Beastiary
+}
+
+STRING 6237
+// Units: o01B ([Hellscream] Watch Tower), Name (Name)
+{
+[Hellscream] Watch Tower
+}
+
+STRING 6239
+// Units: o01C ([Hellscream] Mage Tent), Name (Name)
+{
+[Hellscream] Mage Tent
+}
+
+STRING 6240
+// Units: o01C ([Hellscream] Mage Tent), Tip (Tooltip - Basic)
+{
+Build Mage Tent
+}
+
+STRING 6243
+// Units: o01D ([Hellscream] Ogre Reservation), Name (Name)
+{
+[Hellscream] Ogre Reservation
+}
+
+STRING 6244
+// Units: o01D ([Hellscream] Ogre Reservation), Tip (Tooltip - Basic)
+{
+Build Ogre Reservation
+}
+
+STRING 6245
+// Units: o01E ([Hellscream] Boar), Name (Name)
+{
+[Hellscream] Boar
+}
+
+STRING 6246
+// Units: o01E ([Hellscream] Boar), Tip (Tooltip - Basic)
+{
+Train Boar
+}
+
+STRING 6247
+// Units: o017 ([Hellscream] Pig Farm), Name (Name)
+{
+[Hellscream] Pig Farm
+}
+
+STRING 6248
+// Units: o017 ([Hellscream] Pig Farm), Tip (Tooltip - Basic)
+{
+Build Pig Farm
+}
+
+STRING 6249
+// Units: n00P ([Hellscream] Shredder), Name (Name)
+{
+[Hellscream] Shredder
+}
+
+STRING 6250
+// Units: n00P ([Hellscream] Shredder), Tip (Tooltip - Basic)
+{
+Train Shredder
+}
+
+STRING 6251
+// Abilities: A0AE ([Hellscream] Harvest), Name (Name)
+{
+[Hellscream] Harvest
+}
+
+STRING 6252
+// Abilities: A0AE ([Hellscream] Harvest), EditorSuffix (Editor Suffix)
+{
+ (Gold and Lumber 8)
 }
 
