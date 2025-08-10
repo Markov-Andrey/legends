@@ -11510,5 +11510,261 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad",
+        "name": "Kelthuzad",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Acolyte",
+        "name": "Acolyte",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Acolyte\\NecromancerInitiateV1.00.mdx",
+        "name": "NecromancerInitiateV1.00.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Altar",
+        "name": "Altar",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Altar\\BoneyardAltarOfDarkness.mdx",
+        "name": "BoneyardAltarOfDarkness.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Bandit",
+        "name": "Bandit",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Bandit\\Cult_Bandit_V3.1.mdx",
+        "name": "Cult_Bandit_V3.1.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Crypt",
+        "name": "Crypt",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Crypt\\BoneyardCrypt.mdx",
+        "name": "BoneyardCrypt.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Kelthuzad",
+        "name": "Kelthuzad",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Kelthuzad\\KelThuzad.mdx",
+        "name": "KelThuzad.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Kelthuzad\\KelThuzad_portrait.mdx",
+        "name": "KelThuzad_portrait.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Necromancer",
+        "name": "Necromancer",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Necromancer\\KelthuzadV2.02.mdx",
+        "name": "KelthuzadV2.02.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Necropolis",
+        "name": "Necropolis",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Necropolis\\BoneyardNecropolis.mdx",
+        "name": "BoneyardNecropolis.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Sacrificial",
+        "name": "Sacrificial",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Sacrificial\\BoneyardSacrificialPit.mdx",
+        "name": "BoneyardSacrificialPit.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Skeleton",
+        "name": "Skeleton",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Legends\\Kelthuzad\\Skeleton\\SkeletonSquire.mdx",
+        "name": "SkeletonSquire.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Maps\\Silithus\\Quest",
+        "name": "Quest",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "Maps\\Silithus\\Quest\\BTN_Zone_Silithus.blp",
+        "name": "BTN_Zone_Silithus.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Zone_Silithus.blp",
+        "name": "DISBTN_Zone_Silithus.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad",
+        "name": "Kelthuzad",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile-inventorycover.blp",
+        "name": "undeaduitile-inventorycover.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile-timeindicatorframe.blp",
+        "name": "undeaduitile-timeindicatorframe.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile01.blp",
+        "name": "undeaduitile01.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile02.blp",
+        "name": "undeaduitile02.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile03.blp",
+        "name": "undeaduitile03.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile04.blp",
+        "name": "undeaduitile04.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile05.blp",
+        "name": "undeaduitile05.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
+    },
+    {
+        "path": "UI\\Console\\Kelthuzad\\undeaduitile06.blp",
+        "name": "undeaduitile06.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": true
     }
 ]

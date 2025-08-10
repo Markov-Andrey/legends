@@ -1,29 +1,4 @@
-﻿STRING 1
-{
-Alterac Justice
-}
-
-STRING 2
-{
-Coop Mode (2)
-}
-
-STRING 4
-{
-AMark
-}
-
-STRING 5
-{
-Player 1
-}
-
-STRING 463
-{
-Player 2
-}
-
-STRING 470
+﻿STRING 470
 // Units: u009 ([Arthas] Plague Necropolis), Tip (Tooltip - Basic)
 {
 Summon Plague Necropolis
@@ -441,21 +416,6 @@ STRING 897
 // Abilities: A001 ([Uther] Divine Shield), Tip (Tooltip - Normal)
 {
 Divine Shield
-}
-
-STRING 903
-{
-Alterac's Justice
-}
-
-STRING 904
-{
-In the mountains of Alterac, the Syndicate has set up smuggling supplies. This needs to be stopped urgently.
-}
-
-STRING 906
-{
-|cff32de00Victory:|r Destroy 5 waves of caravans
 }
 
 STRING 908
@@ -918,7 +878,6 @@ STRING 1172
 // Abilities: A00Z ([UI] Difficulty: Hard), Ubertip (Tooltip - Normal - Extended)
 {
 The level of difficulty that will require the maximum of your skills and the most coordinated work with an ally.
-
 }
 
 STRING 1176
@@ -1147,7 +1106,6 @@ STRING 1331
 // Upgrades: R00M (Backpack), Ubertip (Tooltip - Extended)
 {
 Your ally also spawns souls for you
-
 }
 
 STRING 1333
@@ -1340,7 +1298,6 @@ STRING 1421
 // Upgrades: R00M (Backpack), Name (Name)
 {
 [Arthas] Slave of the Lich King
-
 }
 
 STRING 1455
@@ -1365,7 +1322,6 @@ STRING 1461
 // Buffs/Effects: B00C ([Arthas] Blood Rage), Buffubertip (Tooltip - Extended)
 {
 Unit attacks faster but moves slower
-
 }
 
 STRING 1463
@@ -2740,14 +2696,12 @@ STRING 2069
 // Abilities: A002 ([Uther] Divine Shield), Ubertip (Tooltip - Normal - Extended)
 {
 After some time, Divine Provided will be available again
-
 }
 
 STRING 2070
 // Buffs/Effects: B000 ([Uther] Reload Divine Shield), Buffubertip (Tooltip - Extended)
 {
 After some time, Divine Provided will be available again
-
 }
 
 STRING 2071
@@ -3787,11 +3741,6 @@ Overwhelming Sadness - Sends a bolt of negative energy that burns up to <A02I,Da
 
 |cff00ff00Unholy:|r
 Necrotic Breath - Reduces damage by <S00X,DataC1,%>% of a target enemy unit. |nLasts <S00X,Dur1> seconds.
-}
-
-STRING 2372
-{
-|cffff0000Not enough souls to reforge!|r
 }
 
 STRING 2377
@@ -8114,16 +8063,6 @@ STRING 3649
 (icon)
 }
 
-STRING 3654
-{
-Defeat!
-}
-
-STRING 3655
-{
-Defeat!
-}
-
 STRING 3656
 // Units: e005 ([Tyrande] Moon Well), Name (Name)
 {
@@ -10668,11 +10607,6 @@ Add +10 damage
 |cFFFF5800Only 1 upgrade for the unit type|R - Catapult
 }
 
-STRING 4285
-{
-The summoning point must be within line of sight!
-}
-
 STRING 4288
 // Abilities: A07F ([Thrall] Water Ring), Name (Name)
 {
@@ -11750,7 +11684,6 @@ STRING 4508
 // Abilities: A000 ([Uther] Far Sight), Ubertip (Tooltip - Normal - Extended)
 {
 Reveals an area within a 1000 radius for <A000,Dur1> seconds. Also reveals invisible units.
-
 
 }
 
@@ -13089,7 +13022,6 @@ STRING 4723
 {
 Upgrades all Towers. This structure ignores any damage over 30 per attack, shielding itself from excessive force.
 
-
 }
 
 STRING 4725
@@ -13581,27 +13513,15 @@ STRING 4831
 }
 
 STRING 4840
-// Destructibles: B005 (Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B005 ([Silithus] Tree Wall), EditorSuffix (Editor Suffix)
 {
 (XL) Silitus
 }
 
-STRING 4841
-// Destructibles: B005 (Tree Wall), Name (Name)
-{
-Tree Wall
-}
-
 STRING 4842
-// Destructibles: B006 (Tree Wall), EditorSuffix (Editor Suffix)
+// Destructibles: B006 ([Silithus] Tree Wall), EditorSuffix (Editor Suffix)
 {
 Silitus
-}
-
-STRING 4843
-// Destructibles: B006 (Tree Wall), Name (Name)
-{
-Tree Wall
 }
 
 STRING 4844
@@ -14921,21 +14841,6 @@ STRING 5273
 Upgrade to Serrated Bolts
 }
 
-STRING 5275
-{
-Stonebeard
-}
-
-STRING 5276
-{
-Syndicate
-}
-
-STRING 5277
-{
-Players
-}
-
 STRING 5278
 // Units: h01X ([Whitemane] Beastmistress), Ubertip (Tooltip - Extended)
 {
@@ -15772,7 +15677,6 @@ STRING 5450
 Gryphon Lancer focuses the beam and concentrates directed fury on a target, gradually accumulating energy potential with 2 additional levels, reaching maximum power in 20 seconds.
 
 
-
 }
 
 STRING 5451
@@ -16567,7 +16471,6 @@ STRING 5630
 // Abilities: A07C ([Thrall] Airburst Amulet), Ubertip (Tooltip - Normal - Extended)
 {
 Has an 85% chance to deal 1.5 times normal damage to flying units.
-
 }
 
 STRING 5631
@@ -17083,7 +16986,7 @@ W
 }
 
 STRING 5714
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -17166,14 +17069,12 @@ STRING 5746
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
 
-
 }
 
 STRING 5749
 // Items: I00G (|cFFA089FFDeepwood Ranger's Quiver|R), Description (Description)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
-
 
 
 }
@@ -17369,14 +17270,12 @@ STRING 5785
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
 
 
-
 }
 
 STRING 5786
 // Items: I00H (|cFFA089FFDeepwood Ranger's Quiver|R (Empty)), Description (Description)
 {
 Grants +12 Attack while arrows are available. Arrows replenish once every 5 seconds. Used automatically.
-
 
 
 }
@@ -18352,7 +18251,7 @@ D
 }
 
 STRING 5980
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -18736,7 +18635,6 @@ Doubles the movement speed of souls.
 
 
 
-
 }
 
 STRING 6076
@@ -19018,5 +18916,209 @@ STRING 6147
 // Abilities: A0AA ([Arthas] Personal Quest: Eternal Hunger), Ubertip (Tooltip - Normal - Extended)
 {
 |cFFFFDC00Arthas:|R +15 Strength, +1000 Exp
+}
+
+STRING 6154
+// Units: n00M ([Silithus] Big Eggs), Name (Name)
+{
+[Silithus] Big Eggs
+}
+
+STRING 6166
+// Destructibles: B005 ([Silithus] Tree Wall), Name (Name)
+{
+[Silithus] Tree Wall
+}
+
+STRING 6167
+// Destructibles: B006 ([Silithus] Tree Wall), Name (Name)
+{
+[Silithus] Tree Wall
+}
+
+STRING 6168
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Name (Name)
+{
+[Kelthuzad] Kel'Thuzad
+}
+
+STRING 6169
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Tip (Tooltip - Basic)
+{
+Summon Kel'Thuzad
+}
+
+STRING 6170
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Awakentip (Tooltip - Awaken)
+{
+Revive Kel'Thuzad
+}
+
+STRING 6171
+// Units: U00H ([Kelthuzad] Kel'Thuzad), Revivetip (Tooltip - Revive)
+{
+Revive Kel'Thuzad
+}
+
+STRING 6172
+// Units: u00I ([Kelthuzad] Сultist), Name (Name)
+{
+[Kelthuzad] Сultist
+}
+
+STRING 6173
+// Units: u00I ([Kelthuzad] Сultist), Tip (Tooltip - Basic)
+{
+Train Сultist
+}
+
+STRING 6174
+// Units: u00J ([Kelthuzad] Necropolis), Name (Name)
+{
+[Kelthuzad] Necropolis
+}
+
+STRING 6175
+// Units: h02M ([UI] Kel'Thuzad), Name (Name)
+{
+[UI] Kel'Thuzad
+}
+
+STRING 6176
+// Units: h02M ([UI] Kel'Thuzad), Tip (Tooltip - Basic)
+{
+Kel'Thuzad
+}
+
+STRING 6177
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFFFF4B3DKel'Thuzad|R
+}
+
+STRING 6178
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 6179
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Name (Name)
+{
+[UI] Legends: Kel'Thuzad
+}
+
+STRING 6180
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 6181
+// Upgrades: R03C (Magic Sentry), Name (Name)
+{
+[Special] Kel'Thuzad
+}
+
+STRING 6182
+// Upgrades: R03C (Magic Sentry), Tip (Tooltip)
+{
+Kel'Thuzad
+}
+
+STRING 6183
+// Upgrades: R03C (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 6184
+// Units: u00K ([Kelthuzad] Altar of Darkness), Name (Name)
+{
+[Kelthuzad] Altar of Darkness
+}
+
+STRING 6185
+// Abilities: A0AC ([Kelthuzad] Harvest), Name (Name)
+{
+[Kelthuzad] Harvest
+}
+
+STRING 6186
+// Abilities: A0AC ([Kelthuzad] Harvest), EditorSuffix (Editor Suffix)
+{
+ (Cultist Lumber)
+}
+
+STRING 6188
+// Units: u00L ([Kelthuzad] Crypt of the Cult), Name (Name)
+{
+[Kelthuzad] Crypt of the Cult
+}
+
+STRING 6189
+// Units: u00L ([Kelthuzad] Crypt of the Cult), Tip (Tooltip - Basic)
+{
+Summon Crypt of the Cult
+}
+
+STRING 6190
+// Units: u00M ([Kelthuzad] Bandit Warrior), Name (Name)
+{
+[Kelthuzad] Bandit Warrior
+}
+
+STRING 6191
+// Units: u00M ([Kelthuzad] Bandit Warrior), Tip (Tooltip - Basic)
+{
+Summon Bandit Warrior
+}
+
+STRING 6192
+// Units: u00N ([Kelthuzad] Skeleton Warrior), Name (Name)
+{
+[Kelthuzad] Skeleton Warrior
+}
+
+STRING 6193
+// Units: u00O ([Kelthuzad] Skeleton), Name (Name)
+{
+[Kelthuzad] Skeleton
+}
+
+STRING 6194
+// Units: u00O ([Kelthuzad] Skeleton), Tip (Tooltip - Basic)
+{
+Summon Skeleton
+}
+
+STRING 6195
+// Units: u00P ([Kelthuzad] High Necromancer), Name (Name)
+{
+[Kelthuzad] High Necromancer
+}
+
+STRING 6196
+// Units: u00P ([Kelthuzad] High Necromancer), Tip (Tooltip - Basic)
+{
+Train High Necromancer
+}
+
+STRING 6197
+// Units: h02R ([Kelthuzad] Plague Cauldron), Name (Name)
+{
+[Kelthuzad] Plague Cauldron
+}
+
+STRING 6198
+// Units: h02R ([Kelthuzad] Plague Cauldron), Tip (Tooltip - Basic)
+{
+Build Plague Cauldron
+}
+
+STRING 6199
+// Units: h02R ([Kelthuzad] Plague Cauldron), Ubertip (Tooltip - Extended)
+{
+Распространяет порчу, генерирует усиление порчи
 }
 

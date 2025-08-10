@@ -1,5 +1,5 @@
 
-Frame "SIMPLEFRAME" "CustomConsoleUI" {
+Frame "SIMPLEFRAME" "CustomConsoleUITop" {
 	DecorateFileNames,
     Layer "BACKGROUND" {
         Texture "CustomConsoleUIClock" {
@@ -66,7 +66,11 @@ Frame "SIMPLEFRAME" "CustomConsoleUI" {
             AlphaMode "ALPHAKEY",
             Anchor TOPRIGHT,0.256,0,
         }
-
+    }
+}
+Frame "SIMPLEFRAME" "CustomConsoleUIBottom" {
+	DecorateFileNames,
+    Layer "BACKGROUND" {
         // The bottom of the UI console
         Texture "CustomConsoleUI5B" {
             File "ConsoleTexture05",
@@ -117,7 +121,6 @@ Frame "SIMPLEFRAME" "CustomConsoleUI" {
             Anchor BOTTOMRIGHT,0.256,0,
         }
     }
-
 }
 
 Frame "SIMPLEFRAME" "SimpleTextureFrame" {
