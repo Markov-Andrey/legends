@@ -19644,3 +19644,69 @@ STRING 6298
 rlev
 }
 
+STRING 6299
+// Abilities: A0AF ([Hellscream] Arena), Tip (Tooltip - Normal)
+{
+Arena
+}
+
+STRING 6300
+// Abilities: A0AH ([Hellscream] Onslaught), Name (Name)
+{
+[Hellscream] Onslaught
+}
+
+STRING 6301
+// Abilities: A0AH ([Hellscream] Onslaught), Tip (Tooltip - Normal)
+{
+Onslaught
+}
+
+STRING 6302
+// Abilities: A0AH ([Hellscream] Onslaught), Ubertip (Tooltip - Normal - Extended)
+{
+Brutally attack an enemy for (413.868% of Attack Power) Physical damage
+}
+
+STRING 6305
+// Abilities: A0AI ([Hellscream] Arrow), Name (Name)
+{
+[Hellscream] Arrow
+}
+
+STRING 6306
+// Abilities: A0AI ([Hellscream] Arrow), Tip (Tooltip - Normal)
+{
+Arrow
+}
+
+STRING 6307
+// Abilities: A0AI ([Hellscream] Arrow), Ubertip (Tooltip - Normal - Extended)
+{
+Brutally attack an enemy for (413.868% of Attack Power) Physical damage
+}
+
+STRING 6308
+// Abilities: A0AJ ([Hellscream] Chop Meat), Name (Name)
+{
+[Hellscream] Chop Meat
+}
+
+STRING 6309
+// Abilities: A0AJ ([Hellscream] Chop Meat), Tip (Tooltip - Normal)
+{
+Chop Meat
+}
+
+STRING 6310
+// Abilities: A0AJ ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
+{
+Принести в жертву, восстановить 250 здоровья и дать 70% ярости
+}
+
+STRING 6312
+// Abilities: A0AK ([Hellscream] Rejuvenation), Name (Name)
+{
+[Hellscream] Rejuvenation
+}
+
