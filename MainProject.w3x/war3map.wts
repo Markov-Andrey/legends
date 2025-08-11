@@ -19710,3 +19710,69 @@ STRING 6312
 [Hellscream] Rejuvenation
 }
 
+STRING 6313
+// Destructibles: B007 ([Warsong] Ashenvale Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL)
+}
+
+STRING 6314
+// Destructibles: B007 ([Warsong] Ashenvale Tree Wall), Name (Name)
+{
+[Warsong] Ashenvale Tree Wall
+}
+
+STRING 6315
+// Units: n00Q ([Warsong] Orcs Armory), Name (Name)
+{
+[Warsong] Orcs Armory
+}
+
+STRING 6316
+// Units: n00T ([Warsong] Elfs Armory), Name (Name)
+{
+[Warsong] Elfs Armory
+}
+
+STRING 6317
+// Items: I01C ([Warsong] Rune of Speed), Name (Name)
+{
+[Warsong] Rune of Speed
+}
+
+STRING 6318
+// Units: n00U ([Warsong] Restoration Hut), Name (Name)
+{
+[Warsong] Restoration Hut
+}
+
+STRING 6319
+// Items: I01D ([Warsong] Rune of Lesser Healing), Name (Name)
+{
+[Warsong] Rune of Lesser Healing
+}
+
+STRING 6320
+// Items: I01E ([Warsong] Rune of Berserk), Name (Name)
+{
+[Warsong] Rune of Berserk
+}
+
+STRING 6321
+// Items: I01E ([Warsong] Rune of Berserk), Tip (Tooltip - Basic)
+{
+Purchase Rune of the Berserk
+}
+
+STRING 6322
+// Abilities: A0AL ([Warsong] Berserk), Tip (Tooltip - Normal)
+{
+Berserk
+}
+
+STRING 6323
+// Abilities: A0AL ([Warsong] Berserk), Name (Name)
+{
+[Warsong] Berserk
+}
+

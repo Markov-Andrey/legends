@@ -239,6 +239,7 @@ trigger gg_trg_WhitemaneFastBuild= null
 trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
 trigger gg_trg_HellscreamRage= null
+trigger gg_trg_HellscreamChopMeat= null
 trigger gg_trg_HellscreamArenaChoose= null
 trigger gg_trg_HellscreamArenaCancel= null
 trigger gg_trg_HellscreamArenaFinish= null
@@ -348,7 +349,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamChopMeat= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1342,23 +1342,23 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
     set u=BlzCreateUnitWithSkin(p, 'o011', - 3236.2, - 5010.2, 270.096, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o01H', - 3114.2, - 5009.3, - 79.484, 'o01H')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 3368.4, - 5012.8, - 78.861, 'o01E')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 2980.3, - 4991.5, - 87.544, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01J', - 2802.9, - 5021.5, - 88.900, 'o01J')
+    set u=BlzCreateUnitWithSkin(p, 'o01H', - 3114.2, - 5009.3, 280.516, 'o01H')
+    set u=BlzCreateUnitWithSkin(p, 'o01E', - 3368.4, - 5012.8, 281.139, 'o01E')
+    set u=BlzCreateUnitWithSkin(p, 'o01F', - 2980.3, - 4991.5, 272.456, 'o01F')
+    set u=BlzCreateUnitWithSkin(p, 'o01J', - 2802.9, - 5021.5, 271.100, 'o01J')
     set u=BlzCreateUnitWithSkin(p, 'o01G', - 2606.0, - 5037.8, 261.191, 'o01G')
     set u=BlzCreateUnitWithSkin(p, 'o01I', - 2457.9, - 5036.5, 268.745, 'o01I')
     set u=BlzCreateUnitWithSkin(p, 'n00P', - 2287.9, - 5017.6, 264.292, 'n00P')
     set u=BlzCreateUnitWithSkin(p, 'n00S', - 2126.5, - 4998.7, 259.398, 'n00S')
     set u=BlzCreateUnitWithSkin(p, 'n00R', - 1988.6, - 4995.2, 262.901, 'n00R')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1042.2, - 5263.2, - 19.801, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 883.1, - 5273.0, - 20.461, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 892.9, - 5382.4, - 6.709, 'o011')
+    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1042.2, - 5263.2, 340.199, 'o01F')
+    set u=BlzCreateUnitWithSkin(p, 'o011', - 883.1, - 5273.0, 339.539, 'o011')
+    set u=BlzCreateUnitWithSkin(p, 'o011', - 892.9, - 5382.4, 353.291, 'o011')
     set u=BlzCreateUnitWithSkin(p, 'o011', - 902.5, - 5497.5, 7.941, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1045.1, - 5384.4, - 8.473, 'o01F')
+    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1045.1, - 5384.4, 351.527, 'o01F')
     set u=BlzCreateUnitWithSkin(p, 'o01F', - 1041.3, - 5552.4, 8.097, 'o01F')
     set u=BlzCreateUnitWithSkin(p, 'o01F', - 1051.4, - 5702.1, 21.576, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1028.4, - 5134.5, - 30.870, 'o01F')
+    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1028.4, - 5134.5, 329.130, 'o01F')
     set u=BlzCreateUnitWithSkin(p, 'o011', - 891.1, - 5622.2, 7.941, 'o011')
     set u=BlzCreateUnitWithSkin(p, 'o01E', - 1161.4, - 5077.8, 281.139, 'o01E')
     set u=BlzCreateUnitWithSkin(p, 'o01E', - 1171.3, - 5206.6, 281.139, 'o01E')
@@ -1430,6 +1430,10 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount(u, 50000)
     set u=BlzCreateUnitWithSkin(p, 'ngol', 4672.0, 6720.0, 270.000, 'ngol')
     call SetResourceAmount(u, 50000)
+    set u=BlzCreateUnitWithSkin(p, 'n00Q', 448.0, - 4416.0, 270.000, 'n00Q')
+    set u=BlzCreateUnitWithSkin(p, 'n00T', - 512.0, 4160.0, 270.000, 'n00T')
+    set u=BlzCreateUnitWithSkin(p, 'n00U', 2688.0, - 1728.0, 270.000, 'n00U')
+    set u=BlzCreateUnitWithSkin(p, 'n00U', - 2624.0, 1920.0, 270.000, 'n00U')
 endfunction
 
 //===========================================================================
