@@ -19282,12 +19282,6 @@ STRING 6229
 Upgrade to Conquest Hold to enable the production of additional types of structures and units.
 }
 
-STRING 6230
-// Units: o016 ([Hellscream] Altar of Storms), Name (Name)
-{
-[Hellscream] Altar of Storms
-}
-
 STRING 6233
 // Units: o018 ([Hellscream] Barracks), Name (Name)
 {
@@ -19418,5 +19412,235 @@ STRING 6258
 // Units: o014 ([Hellscream] Conquest Stronghold), Name (Name)
 {
 [Hellscream] Conquest Stronghold
+}
+
+STRING 6259
+// Units: o01H ([Hellscream] Raider), Name (Name)
+{
+[Hellscream] Raider
+}
+
+STRING 6260
+// Units: o01I ([Hellscream] Raider Spearthrower), Name (Name)
+{
+[Hellscream] Raider Spearthrower
+}
+
+STRING 6261
+// Units: o01I ([Hellscream] Raider Spearthrower), Tip (Tooltip - Basic)
+{
+Train Raider Spearthrower
+}
+
+STRING 6262
+// Units: n00S ([Hellscream] Ogre Mauler), Name (Name)
+{
+[Hellscream] Ogre Mauler
+}
+
+STRING 6263
+// Units: n00R ([Hellscream] Ogre Magi), Name (Name)
+{
+[Hellscream] Ogre Magi
+}
+
+STRING 6264
+// Units: o01J ([Hellscream] Demolisher), Name (Name)
+{
+[Hellscream] Demolisher
+}
+
+STRING 6265
+// Units: o01K ([Hellscream] Arena), Name (Name)
+{
+[Hellscream] Arena
+}
+
+STRING 6266
+// Units: o01K ([Hellscream] Arena), Tip (Tooltip - Basic)
+{
+Build Arena
+}
+
+STRING 6267
+// Units: o01L ([Hellscream] Battle), Name (Name)
+{
+[Hellscream] Battle
+}
+
+STRING 6268
+// Units: o01L ([Hellscream] Battle), Tip (Tooltip - Basic)
+{
+Battle
+}
+
+STRING 6269
+// Abilities: A0AF ([Hellscream] Arena), Name (Name)
+{
+[Hellscream] Arena
+}
+
+STRING 6270
+{
++Cancel
+}
+
+STRING 6271
+{
++Finish
+}
+
+STRING 6273
+{
++Choose1
+}
+
+STRING 6274
+{
++Choose2
+}
+
+STRING 6275
+// Units: n00S ([Hellscream] Ogre Mauler), Tip (Tooltip - Basic)
+{
+Hire Ogre Mauler
+}
+
+STRING 6276
+// Units: o016 ([Hellscream] Altar of Rage), Name (Name)
+{
+[Hellscream] Altar of Rage
+}
+
+STRING 6277
+// Units: o016 ([Hellscream] Altar of Rage), Tip (Tooltip - Basic)
+{
+Build Altar of Rage
+}
+
+STRING 6278
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+[Hellscream] Rage
+}
+
+STRING 6279
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+Improved Rage
+}
+
+STRING 6280
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+Advanced Rage
+}
+
+STRING 6281
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Rage
+}
+
+STRING 6282
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Improved Rage
+}
+
+STRING 6283
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Advanced Rage
+}
+
+STRING 6284
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), effect1 (Effect 1)
+{
+rmnx
+}
+
+STRING 6285
+// Abilities: A0AG ([Hellscream] Pillage), Name (Name)
+{
+[Hellscream] Pillage
+}
+
+STRING 6286
+// Upgrades: R03F (Pillage), Name (Name)
+{
+Improved Pillage
+}
+
+STRING 6287
+// Upgrades: R03F (Pillage), Name (Name)
+{
+Advanced Pillage
+}
+
+STRING 6288
+// Upgrades: R03F (Pillage), Tip (Tooltip)
+{
+Upgrade to Improved Pillage
+}
+
+STRING 6289
+// Upgrades: R03F (Pillage), Tip (Tooltip)
+{
+Upgrade to Advanced Pillage
+}
+
+STRING 6290
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Causes Peons', Grunts', and Raiders' attacks to gain resources when hitting enemy buildings.
+}
+
+STRING 6291
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Causes Peons', Grunts', and Raiders' attacks to gain resources when hitting enemy buildings.
+}
+
+STRING 6292
+// Upgrades: R03F (Pillage), Name (Name)
+{
+[Hellscream] Pillage
+}
+
+STRING 6293
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage 2
+}
+
+STRING 6294
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage 3
+}
+
+STRING 6295
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage 1
+}
+
+STRING 6296
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Each attack that does damage to an enemy building also gains resources.
+}
+
+STRING 6297
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Each attack that does damage to an enemy building also gains resources.
+}
+
+STRING 6298
+// Upgrades: R03F (Pillage), effect1 (Effect 1)
+{
+rlev
 }
 
