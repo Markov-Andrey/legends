@@ -19222,12 +19222,6 @@ STRING 6217
 [Hellscream] Grunt
 }
 
-STRING 6218
-// Units: o012 ([Hellscream] Great Hall), Name (Name)
-{
-[Hellscream] Great Hall
-}
-
 STRING 6219
 // Units: O013 ([Hellscream] Warsong Warchief), Name (Name)
 {
@@ -19268,12 +19262,6 @@ STRING 6225
 // Upgrades: R03D (Magic Sentry), Ubertip (Tooltip - Extended)
 {
 Improvement to check the player's army
-}
-
-STRING 6226
-// Units: o014 ([Hellscream] Stronghold), Name (Name)
-{
-[Hellscream] Stronghold
 }
 
 STRING 6227
@@ -19394,5 +19382,41 @@ STRING 6252
 // Abilities: A0AE ([Hellscream] Harvest), EditorSuffix (Editor Suffix)
 {
  (Gold and Lumber 8)
+}
+
+STRING 6253
+// Units: o01F ([Hellscream] Spearthrower), Name (Name)
+{
+[Hellscream] Spearthrower
+}
+
+STRING 6254
+// Units: o01F ([Hellscream] Spearthrower), Tip (Tooltip - Basic)
+{
+Train Spearthrower
+}
+
+STRING 6255
+// Units: o01G ([Hellscream] Warlock), Name (Name)
+{
+[Hellscream] Warlock
+}
+
+STRING 6256
+// Units: o01G ([Hellscream] Warlock), Tip (Tooltip - Basic)
+{
+Train Warlock
+}
+
+STRING 6257
+// Units: o012 ([Hellscream] Conquest Hall), Name (Name)
+{
+[Hellscream] Conquest Hall
+}
+
+STRING 6258
+// Units: o014 ([Hellscream] Conquest Stronghold), Name (Name)
+{
+[Hellscream] Conquest Stronghold
 }
 
