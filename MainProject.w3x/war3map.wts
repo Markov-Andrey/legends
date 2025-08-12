@@ -19838,3 +19838,23 @@ STRING 6350
 Train Lazy Peon
 }
 
+STRING 6351
+{
+:project_name
+}
+
+STRING 6352
+{
+:type_game
+}
+
+STRING 6353
+{
+:description
+}
+
+STRING 6354
+{
+:author
+}
+

@@ -11766,5 +11766,845 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "Legends\\Hellscream",
+        "name": "Hellscream",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Altar",
+        "name": "Altar",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Altar\\BTNLaughingSkullClanAlter.blp",
+        "name": "BTNLaughingSkullClanAlter.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Altar\\LaughingSkullClanAltar.mdx",
+        "name": "LaughingSkullClanAltar.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena",
+        "name": "Arena",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\BTNDragonArena.blp",
+        "name": "BTNDragonArena.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\BTNHellscreamOrcAttack.blp",
+        "name": "BTNHellscreamOrcAttack.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\BTNHellscreamOrcHoldPosition.blp",
+        "name": "BTNHellscreamOrcHoldPosition.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\DISBTNDragonArena.blp",
+        "name": "DISBTNDragonArena.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\DragonArena.mdx",
+        "name": "DragonArena.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Barracks",
+        "name": "Barracks",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Barracks\\BTNLaughingSkullClanBarrack.blp",
+        "name": "BTNLaughingSkullClanBarrack.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Barracks\\LaughingSkullClanBarrack.mdx",
+        "name": "LaughingSkullClanBarrack.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Beastiary",
+        "name": "Beastiary",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Beastiary\\BTNLaughingSkullClanBeastiary.blp",
+        "name": "BTNLaughingSkullClanBeastiary.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Beastiary\\LaughingSkullClanBeastiary.mdx",
+        "name": "LaughingSkullClanBeastiary.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Boar",
+        "name": "Boar",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Boar\\BTNChopMeat-13.blp",
+        "name": "BTNChopMeat-13.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Farm",
+        "name": "Farm",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Farm\\BTNLaughingSkullClanHouse.blp",
+        "name": "BTNLaughingSkullClanHouse.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Farm\\LaughingSkullClanHouse.mdx",
+        "name": "LaughingSkullClanHouse.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Forge",
+        "name": "Forge",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Forge\\BTNLaughingSkullClanForge.blp",
+        "name": "BTNLaughingSkullClanForge.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Forge\\LaughingSkullClanForge.mdx",
+        "name": "LaughingSkullClanForge.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt",
+        "name": "Grunt",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt\\ATCability_warrior_trauma.blp",
+        "name": "ATCability_warrior_trauma.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt\\BTNBurningBladeGrunt.blp",
+        "name": "BTNBurningBladeGrunt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt\\WarsongGruntV2.mdx",
+        "name": "WarsongGruntV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hall",
+        "name": "Hall",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hall\\BTNLaughingSkullClanHall1.blp",
+        "name": "BTNLaughingSkullClanHall1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hall\\BTNLaughingSkullClanHall2.blp",
+        "name": "BTNLaughingSkullClanHall2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hall\\BTNLaughingSkullClanHall3.blp",
+        "name": "BTNLaughingSkullClanHall3.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hall\\LaughingSkullClanHall.mdx",
+        "name": "LaughingSkullClanHall.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream",
+        "name": "Hellscream",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\GrommashHellscreamAV2.mdx",
+        "name": "GrommashHellscreamAV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\MageTent",
+        "name": "MageTent",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\MageTent\\BTNLaughingSkullClanMageTent.blp",
+        "name": "BTNLaughingSkullClanMageTent.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\MageTent\\LaughingSkullClanMageTent.mdx",
+        "name": "LaughingSkullClanMageTent.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreBattleMagi",
+        "name": "OgreBattleMagi",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreBattleMagi\\OgreBattleMagiV2.mdx",
+        "name": "OgreBattleMagiV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreCamp",
+        "name": "OgreCamp",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreCamp\\BTNLaughingSkullClanOrgeCamp.blp",
+        "name": "BTNLaughingSkullClanOrgeCamp.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreCamp\\LaughingSkullClanOrgeCamp.mdx",
+        "name": "LaughingSkullClanOrgeCamp.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreMauler",
+        "name": "OgreMauler",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreMauler\\OgreMaulerV2.mdx",
+        "name": "OgreMaulerV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Peon",
+        "name": "Peon",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Peon\\BTNWC1PeonRemastered.blp",
+        "name": "BTNWC1PeonRemastered.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Peon\\TwilightPeon.mdx",
+        "name": "TwilightPeon.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Peon\\TwilightPeon_Portrait.mdx",
+        "name": "TwilightPeon_Portrait.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Pillage",
+        "name": "Pillage",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Pillage\\BTNPillage2.blp",
+        "name": "BTNPillage2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Pillage\\BTNPillage3.blp",
+        "name": "BTNPillage3.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Rage",
+        "name": "Rage",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Rage\\BTNAbility_Racial_BloodRage.blp",
+        "name": "BTNAbility_Racial_BloodRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Rage\\BTNAbility_Warrior_InnerRage.blp",
+        "name": "BTNAbility_Warrior_InnerRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Rage\\BTNFieryRage2.blp",
+        "name": "BTNFieryRage2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Raider",
+        "name": "Raider",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Raider\\BTNWC1RaiderRemastered.blp",
+        "name": "BTNWC1RaiderRemastered.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Raider\\WarsongRaiderCommanderNoBannerV2.mdx",
+        "name": "WarsongRaiderCommanderNoBannerV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\RaiderSpearthrower",
+        "name": "RaiderSpearthrower",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\RaiderSpearthrower\\BTNWarsongWolfrider.blp",
+        "name": "BTNWarsongWolfrider.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\RaiderSpearthrower\\WarsongRaiderSpearthrowerMissileV2.mdx",
+        "name": "WarsongRaiderSpearthrowerMissileV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\RaiderSpearthrower\\WarsongRaiderSpearthrowerV2.mdx",
+        "name": "WarsongRaiderSpearthrowerV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Spearthrower",
+        "name": "Spearthrower",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Spearthrower\\BTNWarsongSpearthrower.blp",
+        "name": "BTNWarsongSpearthrower.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Spearthrower\\WarsongOrcSpearthrowerMissileV2.mdx",
+        "name": "WarsongOrcSpearthrowerMissileV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Spearthrower\\WarsongOrcSpearthrowerV2.mdx",
+        "name": "WarsongOrcSpearthrowerV2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Tower",
+        "name": "Tower",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Tower\\BTNLaughingSkullClanWatchTower.blp",
+        "name": "BTNLaughingSkullClanWatchTower.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Tower\\LaughingSkullClanWatchTower.mdx",
+        "name": "LaughingSkullClanWatchTower.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock",
+        "name": "Warlock",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BTNWarsongWarlock.blp",
+        "name": "BTNWarsongWarlock.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\WarsongWarlock.mdx",
+        "name": "WarsongWarlock.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Maps\\Warsong",
+        "name": "Warsong",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Maps\\Warsong\\Items",
+        "name": "Items",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Maps\\Warsong\\Items\\BTNwarsong_nightelf_banner.png.blp",
+        "name": "BTNwarsong_nightelf_banner.png.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Maps\\Warsong\\Items\\BTNwarsong_orcs_banner.blp",
+        "name": "BTNwarsong_orcs_banner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATCability_warrior_trauma.blp",
+        "name": "DISATCability_warrior_trauma.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNAbility_Racial_BloodRage.blp",
+        "name": "DISBTNAbility_Racial_BloodRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNAbility_Warrior_InnerRage.blp",
+        "name": "DISBTNAbility_Warrior_InnerRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBurningBladeGrunt.blp",
+        "name": "DISBTNBurningBladeGrunt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNChopMeat-13.blp",
+        "name": "DISBTNChopMeat-13.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFieryRage2.blp",
+        "name": "DISBTNFieryRage2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHellscreamOrcAttack.blp",
+        "name": "DISBTNHellscreamOrcAttack.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHellscreamOrcHoldPosition.blp",
+        "name": "DISBTNHellscreamOrcHoldPosition.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanAlter.blp",
+        "name": "DISBTNLaughingSkullClanAlter.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanBarrack.blp",
+        "name": "DISBTNLaughingSkullClanBarrack.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanBeastiary.blp",
+        "name": "DISBTNLaughingSkullClanBeastiary.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanForge.blp",
+        "name": "DISBTNLaughingSkullClanForge.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanHall1.blp",
+        "name": "DISBTNLaughingSkullClanHall1.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanHall2.blp",
+        "name": "DISBTNLaughingSkullClanHall2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanHall3.blp",
+        "name": "DISBTNLaughingSkullClanHall3.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanHouse.blp",
+        "name": "DISBTNLaughingSkullClanHouse.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanMageTent.blp",
+        "name": "DISBTNLaughingSkullClanMageTent.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanOrgeCamp.blp",
+        "name": "DISBTNLaughingSkullClanOrgeCamp.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLaughingSkullClanWatchTower.blp",
+        "name": "DISBTNLaughingSkullClanWatchTower.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNPillage2.blp",
+        "name": "DISBTNPillage2.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNPillage3.blp",
+        "name": "DISBTNPillage3.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWC1PeonRemastered.blp",
+        "name": "DISBTNWC1PeonRemastered.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWC1RaiderRemastered.blp",
+        "name": "DISBTNWC1RaiderRemastered.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWarsongSpearthrower.blp",
+        "name": "DISBTNWarsongSpearthrower.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWarsongWarlock.blp",
+        "name": "DISBTNWarsongWarlock.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWarsongWolfrider.blp",
+        "name": "DISBTNWarsongWolfrider.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNwarsong_nightelf_banner.png.blp",
+        "name": "DISBTNwarsong_nightelf_banner.png.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNwarsong_orcs_banner.blp",
+        "name": "DISBTNwarsong_orcs_banner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
     }
 ]
