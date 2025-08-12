@@ -19164,12 +19164,6 @@ STRING 6215
 S
 }
 
-STRING 6216
-// Units: o010 ([Hellscream] Peon), Name (Name)
-{
-[Hellscream] Peon
-}
-
 STRING 6217
 // Units: o011 ([Hellscream] Grunt), Name (Name)
 {
@@ -19830,5 +19824,17 @@ STRING 6348
 // Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Description (Description)
 {
 Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6349
+// Units: o010 ([Hellscream] Lazy Peon), Name (Name)
+{
+[Hellscream] Lazy Peon
+}
+
+STRING 6350
+// Units: o010 ([Hellscream] Lazy Peon), Tip (Tooltip - Basic)
+{
+Train Lazy Peon
 }
 
