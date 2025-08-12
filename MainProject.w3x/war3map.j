@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= false
+constant boolean CustomConsoleUI__workerFace= false
         
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -130,6 +130,8 @@ rect udg_WarsongZoneNightelf= null
 player udg_PlayerHellscream= null
 unit udg_HellscreamArenaChoose1= null
 unit udg_HellscreamArenaChoose2= null
+integer udg_WarsongCountNightelf= 0
+integer udg_WarsongCountOrc= 0
 
     // Generated
 trigger gg_trg_IniLimitUnitsF1= null
@@ -349,6 +351,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_WarsongFlagReturn= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -371,7 +374,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI___CreateIcon takes nothing returns nothing
+    function ARTHASUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -407,8 +410,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI___init takes nothing returns nothing
-        call ARTHASUI___CreateIcon()
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
     endfunction
 
 
@@ -419,24 +422,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -496,15 +499,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -639,7 +642,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -671,15 +674,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI___CreateIcon takes nothing returns nothing
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -734,8 +737,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI___init takes nothing returns nothing
-        call WHITEMANEUI___CreateIcon()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
@@ -754,7 +757,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -765,7 +768,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -788,7 +791,7 @@ endglobals
 
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -821,11 +824,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -846,19 +849,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -1018,11 +1021,11 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -1187,6 +1190,8 @@ function InitGlobals takes nothing returns nothing
     set udg_Whitemane_crusade_default=0
     set udg_Whitemane_crusade_level=0
     set udg_Whitemane_crusade_bool=false
+    set udg_WarsongCountNightelf=0
+    set udg_WarsongCountOrc=0
 endfunction
 
 //***************************************************************************
@@ -1341,30 +1346,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 3236.2, - 5010.2, 270.096, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o01H', - 3114.2, - 5009.3, 280.516, 'o01H')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 3368.4, - 5012.8, 281.139, 'o01E')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 2980.3, - 4991.5, 272.456, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01J', - 2802.9, - 5021.5, 271.100, 'o01J')
-    set u=BlzCreateUnitWithSkin(p, 'o01G', - 2606.0, - 5037.8, 261.191, 'o01G')
-    set u=BlzCreateUnitWithSkin(p, 'o01I', - 2457.9, - 5036.5, 268.745, 'o01I')
-    set u=BlzCreateUnitWithSkin(p, 'n00P', - 2287.9, - 5017.6, 264.292, 'n00P')
-    set u=BlzCreateUnitWithSkin(p, 'n00S', - 2126.5, - 4998.7, 259.398, 'n00S')
-    set u=BlzCreateUnitWithSkin(p, 'n00R', - 1988.6, - 4995.2, 262.901, 'n00R')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1042.2, - 5263.2, 340.199, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 883.1, - 5273.0, 339.539, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 892.9, - 5382.4, 353.291, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 902.5, - 5497.5, 7.941, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1045.1, - 5384.4, 351.527, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1041.3, - 5552.4, 8.097, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1051.4, - 5702.1, 21.576, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01F', - 1028.4, - 5134.5, 329.130, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o011', - 891.1, - 5622.2, 7.941, 'o011')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 1161.4, - 5077.8, 281.139, 'o01E')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 1171.3, - 5206.6, 281.139, 'o01E')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 1164.8, - 5326.4, 281.139, 'o01E')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 1158.5, - 5486.4, 281.139, 'o01E')
-    set u=BlzCreateUnitWithSkin(p, 'o01E', - 1160.8, - 5661.7, 281.139, 'o01E')
 endfunction
 
 //===========================================================================
@@ -1408,10 +1389,112 @@ function CreateNeutralHostile takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'nfrl', 203.2, - 5299.9, 196.466, 'nfrl')
-    set u=BlzCreateUnitWithSkin(p, 'nfrl', 172.0, - 5462.0, 176.820, 'nfrl')
-    set u=BlzCreateUnitWithSkin(p, 'nfrl', 185.4, - 5592.1, 161.031, 'nfrl')
-    set u=BlzCreateUnitWithSkin(p, 'nfrl', 162.1, - 5713.8, 147.036, 'nfrl')
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2591.4, 2144.9, 143.921, 'nfrl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrs', 2872.1, - 1892.0, - 59.720, 'nfrs')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', 2628.6, - 1940.8, - 57.853, 'nfrl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', 2903.4, - 1655.9, - 47.786, 'nfrl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrs', - 2788.4, 2101.1, 124.802, 'nfrs')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2850.2, 1909.6, 132.599, 'nfrl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nstl', - 3398.4, - 1735.1, 242.476, 'nstl')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsts', - 3170.5, - 1720.5, 242.294, 'nsts')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nssp', 5155.5, - 3371.8, 136.478, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspr', 5124.4, - 3068.7, 114.511, 'nspr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtw', - 4973.9, 309.1, - 3.143, 'ndtw')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndth', - 5076.0, 404.9, 33.056, 'ndth')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', - 4846.1, 478.9, 40.012, 'ndtb')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', - 4973.3, 157.2, - 34.795, 'ndtb')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', - 4837.4, 337.3, - 5.942, 'ndtb')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtw', 4909.9, - 202.9, 183.143, 'ndtw')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndth', 5012.0, - 107.1, 146.944, 'ndth')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', 4782.1, - 33.1, 139.988, 'ndtb')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', 4909.3, - 354.8, 214.795, 'ndtb')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', 4773.4, - 174.7, 185.942, 'ndtb')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsty', - 5213.5, - 2884.8, 15.781, 'nsty')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsty', - 5116.7, - 3079.3, 45.820, 'nsty')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsat', - 5307.1, - 3070.6, 33.847, 'nsat')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsty', 5021.5, 2948.8, 195.781, 'nsty')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsty', 4924.7, 3143.3, 225.820, 'nsty')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsat', 5115.1, 3134.6, 213.847, 'nsat')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspr', - 5139.7, 2877.9, 294.511, 'nspr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspr', - 4864.9, 3221.0, 347.440, 'nspr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nstl', 3910.4, 2375.1, 62.476, 'nstl')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsts', 3682.5, 2360.5, 62.294, 'nsts')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsts', 3933.0, 2162.6, 27.769, 'nsts')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', - 1767.4, - 3133.9, 96.057, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', - 1604.5, - 3209.1, 91.932, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', - 1444.5, - 3103.2, 99.932, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 2151.4, 3005.9, 276.057, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1988.5, 3081.1, 271.932, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 1828.5, 2975.2, 279.932, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtp', 1693.5, - 3483.2, 91.549, 'ndtp')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', 1570.6, - 3446.2, 70.211, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', 1809.2, - 3439.5, 112.097, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtp', - 1501.5, 3419.2, 271.549, 'ndtp')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1378.6, 3382.2, 250.211, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1617.2, 3375.5, 292.097, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
 endfunction
 
 //===========================================================================
@@ -1430,10 +1513,42 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount(u, 50000)
     set u=BlzCreateUnitWithSkin(p, 'ngol', 4672.0, 6720.0, 270.000, 'ngol')
     call SetResourceAmount(u, 50000)
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 2784.0, - 1952.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 2848.0, 2016.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
     set u=BlzCreateUnitWithSkin(p, 'n00Q', 448.0, - 4416.0, 270.000, 'n00Q')
     set u=BlzCreateUnitWithSkin(p, 'n00T', - 512.0, 4160.0, 270.000, 'n00T')
     set u=BlzCreateUnitWithSkin(p, 'n00U', 2688.0, - 1728.0, 270.000, 'n00U')
     set u=BlzCreateUnitWithSkin(p, 'n00U', - 2624.0, 1920.0, 270.000, 'n00U')
+    set u=BlzCreateUnitWithSkin(p, 'n00V', - 3200.0, - 1536.0, 270.000, 'n00V')
+    set u=BlzCreateUnitWithSkin(p, 'n00V', 3712.0, 2176.0, 270.000, 'n00V')
+    set u=BlzCreateUnitWithSkin(p, 'n00L', - 5088.0, 288.0, 270.000, 'n00L')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00L', 5024.0, - 224.0, 270.000, 'n00L')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'nfh0', 5248.0, - 256.0, 270.000, 'nfh0')
+    set u=BlzCreateUnitWithSkin(p, 'nfh1', - 5280.0, 224.0, 270.000, 'nfh1')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 5216.0, - 3040.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 5024.0, 3104.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 5024.0, 3040.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 5024.0, - 3232.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 3296.0, - 1760.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 3808.0, 2400.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 1632.0, - 3168.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 2016.0, 3040.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 1696.0, - 3488.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 1504.0, 3424.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
 endfunction
 
 //===========================================================================
@@ -8983,7 +9098,7 @@ endfunction
 //===========================================================================
 // Trigger: WarsongFlagPlus
 //===========================================================================
-function Trig_WarsongFlagPlus_Func003C takes nothing returns boolean
+function Trig_WarsongFlagPlus_Func007C takes nothing returns boolean
     if ( ( GetItemTypeId(GetManipulatedItem()) == 'I01B' ) ) then
         return true
     endif
@@ -8994,13 +9109,47 @@ function Trig_WarsongFlagPlus_Func003C takes nothing returns boolean
 endfunction
 
 function Trig_WarsongFlagPlus_Conditions takes nothing returns boolean
-    if ( not Trig_WarsongFlagPlus_Func003C() ) then
+    if ( not Trig_WarsongFlagPlus_Func007C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WarsongFlagPlus_Func002Func002Func003C takes nothing returns boolean
+function Trig_WarsongFlagPlus_Func003Func002Func001C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetEnumItem()) == 'I01B' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagPlus_Func003Func002A takes nothing returns nothing
+    if ( Trig_WarsongFlagPlus_Func003Func002Func001C() ) then
+        call SetItemPositionLoc(GetManipulatedItem(), GetRectCenter(udg_WarsongZoneNightelf))
+        set udg_WarsongCountOrc=( udg_WarsongCountOrc + 1 )
+        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6330")
+        call DisplayTextToForce(GetPlayersAll(), ( I2S(udg_WarsongCountOrc) + ( " : " + I2S(udg_WarsongCountNightelf) ) ))
+    else
+    endif
+endfunction
+
+function Trig_WarsongFlagPlus_Func003Func003Func001Func001C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetEnumItem()) == 'I01A' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagPlus_Func003Func003Func001A takes nothing returns nothing
+    if ( Trig_WarsongFlagPlus_Func003Func003Func001Func001C() ) then
+        call SetItemPositionLoc(GetManipulatedItem(), GetRectCenter(udg_WarsongZoneOrc))
+        set udg_WarsongCountNightelf=( udg_WarsongCountNightelf + 1 )
+        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6332")
+        call DisplayTextToForce(GetPlayersAll(), ( I2S(udg_WarsongCountOrc) + ( " : " + I2S(udg_WarsongCountNightelf) ) ))
+    else
+    endif
+endfunction
+
+function Trig_WarsongFlagPlus_Func003Func003Func002C takes nothing returns boolean
     if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I01B' ) ) then
         return false
     endif
@@ -9010,14 +9159,14 @@ function Trig_WarsongFlagPlus_Func002Func002Func003C takes nothing returns boole
     return true
 endfunction
 
-function Trig_WarsongFlagPlus_Func002Func002C takes nothing returns boolean
-    if ( not Trig_WarsongFlagPlus_Func002Func002Func003C() ) then
+function Trig_WarsongFlagPlus_Func003Func003C takes nothing returns boolean
+    if ( not Trig_WarsongFlagPlus_Func003Func003Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_WarsongFlagPlus_Func002Func004C takes nothing returns boolean
+function Trig_WarsongFlagPlus_Func003Func004C takes nothing returns boolean
     if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I01A' ) ) then
         return false
     endif
@@ -9027,8 +9176,22 @@ function Trig_WarsongFlagPlus_Func002Func004C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_WarsongFlagPlus_Func002C takes nothing returns boolean
-    if ( not Trig_WarsongFlagPlus_Func002Func004C() ) then
+function Trig_WarsongFlagPlus_Func003C takes nothing returns boolean
+    if ( not Trig_WarsongFlagPlus_Func003Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagPlus_Func005C takes nothing returns boolean
+    if ( not ( udg_WarsongCountNightelf >= 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagPlus_Func006C takes nothing returns boolean
+    if ( not ( udg_WarsongCountOrc >= 3 ) ) then
         return false
     endif
     return true
@@ -9036,15 +9199,30 @@ endfunction
 
 function Trig_WarsongFlagPlus_Actions takes nothing returns nothing
     call PolledWait(0.10)
-    if ( Trig_WarsongFlagPlus_Func002C() ) then
-        call SetItemPositionLoc(GetManipulatedItem(), GetRectCenter(udg_WarsongZoneNightelf))
-        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6208")
+    // orc zone
+    if ( Trig_WarsongFlagPlus_Func003C() ) then
+        call EnumItemsInRectBJ(udg_WarsongZoneOrc, function Trig_WarsongFlagPlus_Func003Func002A)
     else
-        if ( Trig_WarsongFlagPlus_Func002Func002C() ) then
-            call SetItemPositionLoc(GetManipulatedItem(), GetRectCenter(udg_WarsongZoneOrc))
-            call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6209")
+        // nightelf zone
+        if ( Trig_WarsongFlagPlus_Func003Func003C() ) then
+            call EnumItemsInRectBJ(udg_WarsongZoneNightelf, function Trig_WarsongFlagPlus_Func003Func003Func001A)
         else
         endif
+    endif
+    call PolledWait(10.00)
+    if ( Trig_WarsongFlagPlus_Func005C() ) then
+        call CustomVictoryBJ(Player(2), true, true)
+        call CustomVictoryBJ(Player(3), true, true)
+        call CustomDefeatBJ(Player(0), "TRIGSTR_6326")
+        call CustomDefeatBJ(Player(1), "TRIGSTR_6327")
+    else
+    endif
+    if ( Trig_WarsongFlagPlus_Func006C() ) then
+        call CustomVictoryBJ(Player(0), true, true)
+        call CustomVictoryBJ(Player(1), true, true)
+        call CustomDefeatBJ(Player(2), "TRIGSTR_6328")
+        call CustomDefeatBJ(Player(3), "TRIGSTR_6329")
+    else
     endif
 endfunction
 
@@ -9054,6 +9232,101 @@ function InitTrig_WarsongFlagPlus takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WarsongFlagPlus, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(gg_trg_WarsongFlagPlus, Condition(function Trig_WarsongFlagPlus_Conditions))
     call TriggerAddAction(gg_trg_WarsongFlagPlus, function Trig_WarsongFlagPlus_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WarsongFlagReturn
+//===========================================================================
+function Trig_WarsongFlagReturn_Func003C takes nothing returns boolean
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I01A' ) ) then
+        return true
+    endif
+    if ( ( GetItemTypeId(GetManipulatedItem()) == 'I01B' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WarsongFlagReturn_Conditions takes nothing returns boolean
+    if ( not Trig_WarsongFlagReturn_Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagReturn_Func001Func003Func002C takes nothing returns boolean
+    if ( ( GetOwningPlayer(GetManipulatingUnit()) == Player(0) ) ) then
+        return true
+    endif
+    if ( ( GetOwningPlayer(GetManipulatingUnit()) == Player(1) ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WarsongFlagReturn_Func001Func003C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I01B' ) ) then
+        return false
+    endif
+    if ( not Trig_WarsongFlagReturn_Func001Func003Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagReturn_Func001C takes nothing returns boolean
+    if ( not Trig_WarsongFlagReturn_Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagReturn_Func002Func003Func002C takes nothing returns boolean
+    if ( ( GetOwningPlayer(GetManipulatingUnit()) == Player(2) ) ) then
+        return true
+    endif
+    if ( ( GetOwningPlayer(GetManipulatingUnit()) == Player(3) ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_WarsongFlagReturn_Func002Func003C takes nothing returns boolean
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I01A' ) ) then
+        return false
+    endif
+    if ( not Trig_WarsongFlagReturn_Func002Func003Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagReturn_Func002C takes nothing returns boolean
+    if ( not Trig_WarsongFlagReturn_Func002Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongFlagReturn_Actions takes nothing returns nothing
+    if ( Trig_WarsongFlagReturn_Func001C() ) then
+        call UnitRemoveItemSwapped(GetManipulatedItem(), GetManipulatingUnit())
+        call SetItemPositionLoc(GetManipulatedItem(), GetRectCenter(udg_WarsongZoneOrc))
+    else
+    endif
+    if ( Trig_WarsongFlagReturn_Func002C() ) then
+        call UnitRemoveItemSwapped(GetManipulatedItem(), GetManipulatingUnit())
+        call SetItemPositionLoc(GetManipulatedItem(), GetRectCenter(udg_WarsongZoneNightelf))
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_WarsongFlagReturn takes nothing returns nothing
+    set gg_trg_WarsongFlagReturn=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WarsongFlagReturn, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(gg_trg_WarsongFlagReturn, Condition(function Trig_WarsongFlagReturn_Conditions))
+    call TriggerAddAction(gg_trg_WarsongFlagReturn, function Trig_WarsongFlagReturn_Actions)
 endfunction
 
 //===========================================================================
@@ -12630,41 +12903,54 @@ endfunction
 // Trigger: ChestLoot
 //===========================================================================
 function Trig_ItemsLoot_Func002A_Level takes unit u,integer level returns nothing
-    local integer item1= ChooseRandomItemEx(ITEM_TYPE_ANY, level)
+    local integer item1= 0
     local integer item2= 0
     local integer item3= 0
     local integer i= 0
-    
-    loop
-        set item2=ChooseRandomItemEx(ITEM_TYPE_ANY, level)
-        set i=i + 1
-        exitwhen item2 != item1 or i >= 10
-    endloop
-    
+
     set i=0
     loop
-        set item3=ChooseRandomItemEx(ITEM_TYPE_ANY, level)
+        set item1=ChooseRandomItemEx(ITEM_TYPE_ARTIFACT, level)
         set i=i + 1
-        exitwhen ( item3 != item1 and item3 != item2 ) or i >= 10
+        exitwhen item1 != 0 or i >= 50
     endloop
-    
-    call AddItemToStockBJ(item1, u, 1, 1)
-    call AddItemToStockBJ(item2, u, 1, 1)
-    call AddItemToStockBJ(item3, u, 1, 1)
+
+    set i=0
+    loop
+        set item2=ChooseRandomItemEx(ITEM_TYPE_ARTIFACT, level)
+        set i=i + 1
+        exitwhen ( item2 != 0 and item2 != item1 ) or i >= 50
+    endloop
+
+    set i=0
+    loop
+        set item3=ChooseRandomItemEx(ITEM_TYPE_ARTIFACT, level)
+        set i=i + 1
+        exitwhen ( item3 != 0 and item3 != item1 and item3 != item2 ) or i >= 50
+    endloop
+
+    if item1 != 0 then
+        call AddItemToStockBJ(item1, u, 1, 1)
+    endif
+    if item2 != 0 and item2 != item1 then
+        call AddItemToStockBJ(item2, u, 1, 1)
+    endif
+    if item3 != 0 and item3 != item1 and item3 != item2 then
+        call AddItemToStockBJ(item3, u, 1, 1)
+    endif
 endfunction
 
 function AddLootForUnitType takes integer unitType,integer level returns nothing
     local group g= GetUnitsOfTypeIdAll(unitType)
     local unit u
-    
+
     loop
         set u=FirstOfGroup(g)
         exitwhen u == null
-        
         call GroupRemoveUnit(g, u)
         call Trig_ItemsLoot_Func002A_Level(u , level)
     endloop
-    
+
     call DestroyGroup(g)
 endfunction
 
@@ -12815,6 +13101,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WarsongInitialization()
     call InitTrig_WarsongFlagZone()
     call InitTrig_WarsongFlagPlus()
+    call InitTrig_WarsongFlagReturn()
     call InitTrig_WinFireworks()
     call InitTrig_Win()
     call InitTrig_AlteracInitialization()
@@ -13019,13 +13306,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI___init")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("WHITEMANEUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("ARTHASUI__init")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()

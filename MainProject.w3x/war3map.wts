@@ -17210,12 +17210,6 @@ STRING 5775
 Select |cFF6C9EFFMedal of Courage|R
 }
 
-STRING 5776
-// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Ubertip (Tooltip - Extended)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
 STRING 5777
 // Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Name (Name)
 {
@@ -17228,12 +17222,6 @@ STRING 5778
 Select |cFF6C9EFFMedal of Courage|R
 }
 
-STRING 5779
-// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Description (Description)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
 STRING 5780
 // Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Name (Name)
 {
@@ -17244,12 +17232,6 @@ STRING 5781
 // Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Tip (Tooltip - Basic)
 {
 Select |cFF6C9EFFMedal of Courage|R
-}
-
-STRING 5782
-// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Ubertip (Tooltip - Extended)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
 }
 
 STRING 5783
@@ -17291,24 +17273,6 @@ STRING 5789
 // Items: I00K (|cFF6C9EFFCursed Blade|R), Description (Description)
 {
 Increases the Hero's attack damage by 10 but reduces armor by 5 when worn.
-}
-
-STRING 5790
-// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Description (Description)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
-STRING 5791
-// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Ubertip (Tooltip - Extended)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
-STRING 5792
-// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Description (Description)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
 }
 
 STRING 5793
@@ -19164,16 +19128,6 @@ STRING 6207
 [Warsong] Orc Flag
 }
 
-STRING 6208
-{
-Orc +1
-}
-
-STRING 6209
-{
-Night Elf +1
-}
-
 STRING 6210
 // Units: h02S ([UI] Hellscream), Name (Name)
 {
@@ -19774,5 +19728,107 @@ STRING 6323
 // Abilities: A0AL ([Warsong] Berserk), Name (Name)
 {
 [Warsong] Berserk
+}
+
+STRING 6324
+// Units: n00V ([Warsong] Berserker Hut), Name (Name)
+{
+[Warsong] Berserker Hut
+}
+
+STRING 6325
+// Abilities: A0AM ([Warsong] Rune Area Heal/Mana Regain), Name (Name)
+{
+[Warsong] Rune Area Heal/Mana Regain
+}
+
+STRING 6326
+{
+Defeat!
+}
+
+STRING 6327
+{
+Defeat!
+}
+
+STRING 6328
+{
+Defeat!
+}
+
+STRING 6329
+{
+Defeat!
+}
+
+STRING 6330
+{
+|cFFD10000Warsong Outriders|R - |cFF0068FFSilverwing Sentinels|R
+}
+
+STRING 6332
+{
+|cFFD10000Warsong Outriders|R - |cFF0068FFSilverwing Sentinels|R
+}
+
+STRING 6333
+// Destructibles: B008 ([Warsong] Ashenvale Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XXL)
+}
+
+STRING 6334
+// Destructibles: B008 ([Warsong] Ashenvale Tree Wall), Name (Name)
+{
+[Warsong] Ashenvale Tree Wall
+}
+
+STRING 6335
+// Destructibles: B009 ([Warsong] Ashenvale Fall Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XXL)
+}
+
+STRING 6336
+// Destructibles: B009 ([Warsong] Ashenvale Fall Tree Wall), Name (Name)
+{
+[Warsong] Ashenvale Fall Tree Wall
+}
+
+STRING 6343
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6344
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6345
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6346
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6347
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6348
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
 }
 
