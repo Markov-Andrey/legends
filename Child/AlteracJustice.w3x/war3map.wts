@@ -17210,12 +17210,6 @@ STRING 5775
 Select |cFF6C9EFFMedal of Courage|R
 }
 
-STRING 5776
-// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Ubertip (Tooltip - Extended)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
 STRING 5777
 // Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Name (Name)
 {
@@ -17228,12 +17222,6 @@ STRING 5778
 Select |cFF6C9EFFMedal of Courage|R
 }
 
-STRING 5779
-// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Description (Description)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
 STRING 5780
 // Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Name (Name)
 {
@@ -17244,12 +17232,6 @@ STRING 5781
 // Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Tip (Tooltip - Basic)
 {
 Select |cFF6C9EFFMedal of Courage|R
-}
-
-STRING 5782
-// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Ubertip (Tooltip - Extended)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
 }
 
 STRING 5783
@@ -17291,24 +17273,6 @@ STRING 5789
 // Items: I00K (|cFF6C9EFFCursed Blade|R), Description (Description)
 {
 Increases the Hero's attack damage by 10 but reduces armor by 5 when worn.
-}
-
-STRING 5790
-// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Description (Description)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
-STRING 5791
-// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Ubertip (Tooltip - Extended)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
-}
-
-STRING 5792
-// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Description (Description)
-{
-Grants the Hero the ability to switch between three modes, each providing a different bonus: +5 Strength, +5 Agility, or +5 Intelligence.
 }
 
 STRING 5793
@@ -18251,7 +18215,7 @@ D
 }
 
 STRING 5980
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -19009,7 +18973,7 @@ STRING 6179
 }
 
 STRING 6180
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -19120,5 +19084,777 @@ STRING 6199
 // Units: h02R ([Kelthuzad] Plague Cauldron), Ubertip (Tooltip - Extended)
 {
 Распространяет порчу, генерирует усиление порчи
+}
+
+STRING 6200
+{
+P1
+}
+
+STRING 6201
+{
+P2
+}
+
+STRING 6202
+{
+P3
+}
+
+STRING 6203
+{
+P4
+}
+
+STRING 6204
+{
+Horde
+}
+
+STRING 6205
+{
+Alliance
+}
+
+STRING 6206
+// Items: I01A ([Warsong] Night Elf Flag), Name (Name)
+{
+[Warsong] Night Elf Flag
+}
+
+STRING 6207
+// Items: I01B ([Warsong] Orc Flag), Name (Name)
+{
+[Warsong] Orc Flag
+}
+
+STRING 6210
+// Units: h02S ([UI] Hellscream), Name (Name)
+{
+[UI] Hellscream
+}
+
+STRING 6211
+// Units: h02S ([UI] Hellscream), Tip (Tooltip - Basic)
+{
+Hellscream
+}
+
+STRING 6212
+// Abilities: A0AD ([UI] Legends: Hellscream), Tip (Tooltip - Normal)
+{
+|cFFFF4B3DHellscream|R
+}
+
+STRING 6213
+// Abilities: A0AD ([UI] Legends: Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+Preview Army
+}
+
+STRING 6214
+// Abilities: A0AD ([UI] Legends: Hellscream), Name (Name)
+{
+[UI] Legends: Hellscream
+}
+
+STRING 6215
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 6217
+// Units: o011 ([Hellscream] Grunt), Name (Name)
+{
+[Hellscream] Grunt
+}
+
+STRING 6219
+// Units: O013 ([Hellscream] Warsong Warchief), Name (Name)
+{
+[Hellscream] Warsong Warchief
+}
+
+STRING 6220
+// Units: O013 ([Hellscream] Warsong Warchief), Awakentip (Tooltip - Awaken)
+{
+Revive Hellscream
+}
+
+STRING 6221
+// Units: O013 ([Hellscream] Warsong Warchief), Revivetip (Tooltip - Revive)
+{
+Revive Hellscream
+}
+
+STRING 6222
+// Units: O013 ([Hellscream] Warsong Warchief), Tip (Tooltip - Basic)
+{
+Summon Hellscream
+}
+
+STRING 6223
+// Upgrades: R03D (Magic Sentry), Name (Name)
+{
+[Special] Hellscream
+}
+
+STRING 6224
+// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
+{
+Hellscream
+}
+
+STRING 6225
+// Upgrades: R03D (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Improvement to check the player's army
+}
+
+STRING 6227
+// Units: o015 ([Hellscream] Conquest Hold), Name (Name)
+{
+[Hellscream] Conquest Hold
+}
+
+STRING 6228
+// Units: o015 ([Hellscream] Conquest Hold), Tip (Tooltip - Basic)
+{
+Upgrade to Conquest Hold
+}
+
+STRING 6229
+// Units: o015 ([Hellscream] Conquest Hold), Ubertip (Tooltip - Extended)
+{
+Upgrade to Conquest Hold to enable the production of additional types of structures and units.
+}
+
+STRING 6233
+// Units: o018 ([Hellscream] Barracks), Name (Name)
+{
+[Hellscream] Barracks
+}
+
+STRING 6235
+// Units: o019 ([Hellscream] Forge), Name (Name)
+{
+[Hellscream] Forge
+}
+
+STRING 6236
+// Units: o01A ([Hellscream] Beastiary), Name (Name)
+{
+[Hellscream] Beastiary
+}
+
+STRING 6237
+// Units: o01B ([Hellscream] Watch Tower), Name (Name)
+{
+[Hellscream] Watch Tower
+}
+
+STRING 6239
+// Units: o01C ([Hellscream] Mage Tent), Name (Name)
+{
+[Hellscream] Mage Tent
+}
+
+STRING 6240
+// Units: o01C ([Hellscream] Mage Tent), Tip (Tooltip - Basic)
+{
+Build Mage Tent
+}
+
+STRING 6243
+// Units: o01D ([Hellscream] Ogre Reservation), Name (Name)
+{
+[Hellscream] Ogre Reservation
+}
+
+STRING 6244
+// Units: o01D ([Hellscream] Ogre Reservation), Tip (Tooltip - Basic)
+{
+Build Ogre Reservation
+}
+
+STRING 6245
+// Units: o01E ([Hellscream] Boar), Name (Name)
+{
+[Hellscream] Boar
+}
+
+STRING 6246
+// Units: o01E ([Hellscream] Boar), Tip (Tooltip - Basic)
+{
+Train Boar
+}
+
+STRING 6247
+// Units: o017 ([Hellscream] Pig Farm), Name (Name)
+{
+[Hellscream] Pig Farm
+}
+
+STRING 6248
+// Units: o017 ([Hellscream] Pig Farm), Tip (Tooltip - Basic)
+{
+Build Pig Farm
+}
+
+STRING 6249
+// Units: n00P ([Hellscream] Shredder), Name (Name)
+{
+[Hellscream] Shredder
+}
+
+STRING 6250
+// Units: n00P ([Hellscream] Shredder), Tip (Tooltip - Basic)
+{
+Train Shredder
+}
+
+STRING 6251
+// Abilities: A0AE ([Hellscream] Harvest), Name (Name)
+{
+[Hellscream] Harvest
+}
+
+STRING 6252
+// Abilities: A0AE ([Hellscream] Harvest), EditorSuffix (Editor Suffix)
+{
+ (Gold and Lumber 8)
+}
+
+STRING 6253
+// Units: o01F ([Hellscream] Spearthrower), Name (Name)
+{
+[Hellscream] Spearthrower
+}
+
+STRING 6254
+// Units: o01F ([Hellscream] Spearthrower), Tip (Tooltip - Basic)
+{
+Train Spearthrower
+}
+
+STRING 6255
+// Units: o01G ([Hellscream] Warlock), Name (Name)
+{
+[Hellscream] Warlock
+}
+
+STRING 6256
+// Units: o01G ([Hellscream] Warlock), Tip (Tooltip - Basic)
+{
+Train Warlock
+}
+
+STRING 6257
+// Units: o012 ([Hellscream] Conquest Hall), Name (Name)
+{
+[Hellscream] Conquest Hall
+}
+
+STRING 6258
+// Units: o014 ([Hellscream] Conquest Stronghold), Name (Name)
+{
+[Hellscream] Conquest Stronghold
+}
+
+STRING 6259
+// Units: o01H ([Hellscream] Raider), Name (Name)
+{
+[Hellscream] Raider
+}
+
+STRING 6260
+// Units: o01I ([Hellscream] Raider Spearthrower), Name (Name)
+{
+[Hellscream] Raider Spearthrower
+}
+
+STRING 6261
+// Units: o01I ([Hellscream] Raider Spearthrower), Tip (Tooltip - Basic)
+{
+Train Raider Spearthrower
+}
+
+STRING 6262
+// Units: n00S ([Hellscream] Ogre Mauler), Name (Name)
+{
+[Hellscream] Ogre Mauler
+}
+
+STRING 6263
+// Units: n00R ([Hellscream] Ogre Magi), Name (Name)
+{
+[Hellscream] Ogre Magi
+}
+
+STRING 6264
+// Units: o01J ([Hellscream] Demolisher), Name (Name)
+{
+[Hellscream] Demolisher
+}
+
+STRING 6265
+// Units: o01K ([Hellscream] Arena), Name (Name)
+{
+[Hellscream] Arena
+}
+
+STRING 6266
+// Units: o01K ([Hellscream] Arena), Tip (Tooltip - Basic)
+{
+Build Arena
+}
+
+STRING 6267
+// Units: o01L ([Hellscream] Battle), Name (Name)
+{
+[Hellscream] Battle
+}
+
+STRING 6268
+// Units: o01L ([Hellscream] Battle), Tip (Tooltip - Basic)
+{
+Battle
+}
+
+STRING 6269
+// Abilities: A0AF ([Hellscream] Arena), Name (Name)
+{
+[Hellscream] Arena
+}
+
+STRING 6270
+{
++Cancel
+}
+
+STRING 6271
+{
++Finish
+}
+
+STRING 6273
+{
++Choose1
+}
+
+STRING 6274
+{
++Choose2
+}
+
+STRING 6275
+// Units: n00S ([Hellscream] Ogre Mauler), Tip (Tooltip - Basic)
+{
+Hire Ogre Mauler
+}
+
+STRING 6276
+// Units: o016 ([Hellscream] Altar of Rage), Name (Name)
+{
+[Hellscream] Altar of Rage
+}
+
+STRING 6277
+// Units: o016 ([Hellscream] Altar of Rage), Tip (Tooltip - Basic)
+{
+Build Altar of Rage
+}
+
+STRING 6278
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+[Hellscream] Rage
+}
+
+STRING 6279
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+Improved Rage
+}
+
+STRING 6280
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+Advanced Rage
+}
+
+STRING 6281
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Rage
+}
+
+STRING 6282
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Improved Rage
+}
+
+STRING 6283
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Advanced Rage
+}
+
+STRING 6284
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), effect1 (Effect 1)
+{
+rmnx
+}
+
+STRING 6285
+// Abilities: A0AG ([Hellscream] Pillage), Name (Name)
+{
+[Hellscream] Pillage
+}
+
+STRING 6286
+// Upgrades: R03F (Pillage), Name (Name)
+{
+Improved Pillage
+}
+
+STRING 6287
+// Upgrades: R03F (Pillage), Name (Name)
+{
+Advanced Pillage
+}
+
+STRING 6288
+// Upgrades: R03F (Pillage), Tip (Tooltip)
+{
+Upgrade to Improved Pillage
+}
+
+STRING 6289
+// Upgrades: R03F (Pillage), Tip (Tooltip)
+{
+Upgrade to Advanced Pillage
+}
+
+STRING 6290
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Causes Peons', Grunts', and Raiders' attacks to gain resources when hitting enemy buildings.
+}
+
+STRING 6291
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Causes Peons', Grunts', and Raiders' attacks to gain resources when hitting enemy buildings.
+}
+
+STRING 6292
+// Upgrades: R03F (Pillage), Name (Name)
+{
+[Hellscream] Pillage
+}
+
+STRING 6293
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage 2
+}
+
+STRING 6294
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage 3
+}
+
+STRING 6295
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage 1
+}
+
+STRING 6296
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Each attack that does damage to an enemy building also gains resources.
+}
+
+STRING 6297
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Each attack that does damage to an enemy building also gains resources.
+}
+
+STRING 6298
+// Upgrades: R03F (Pillage), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 6299
+// Abilities: A0AF ([Hellscream] Arena), Tip (Tooltip - Normal)
+{
+Arena
+}
+
+STRING 6300
+// Abilities: A0AH ([Hellscream] Onslaught), Name (Name)
+{
+[Hellscream] Onslaught
+}
+
+STRING 6301
+// Abilities: A0AH ([Hellscream] Onslaught), Tip (Tooltip - Normal)
+{
+Onslaught
+}
+
+STRING 6302
+// Abilities: A0AH ([Hellscream] Onslaught), Ubertip (Tooltip - Normal - Extended)
+{
+Brutally attack an enemy for (413.868% of Attack Power) Physical damage
+}
+
+STRING 6305
+// Abilities: A0AI ([Hellscream] Arrow), Name (Name)
+{
+[Hellscream] Arrow
+}
+
+STRING 6306
+// Abilities: A0AI ([Hellscream] Arrow), Tip (Tooltip - Normal)
+{
+Arrow
+}
+
+STRING 6307
+// Abilities: A0AI ([Hellscream] Arrow), Ubertip (Tooltip - Normal - Extended)
+{
+Brutally attack an enemy for (413.868% of Attack Power) Physical damage
+}
+
+STRING 6308
+// Abilities: A0AJ ([Hellscream] Chop Meat), Name (Name)
+{
+[Hellscream] Chop Meat
+}
+
+STRING 6309
+// Abilities: A0AJ ([Hellscream] Chop Meat), Tip (Tooltip - Normal)
+{
+Chop Meat
+}
+
+STRING 6310
+// Abilities: A0AJ ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
+{
+Принести в жертву, восстановить 250 здоровья и дать 70% ярости
+}
+
+STRING 6312
+// Abilities: A0AK ([Hellscream] Rejuvenation), Name (Name)
+{
+[Hellscream] Rejuvenation
+}
+
+STRING 6313
+// Destructibles: B007 ([Warsong] Ashenvale Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XL)
+}
+
+STRING 6314
+// Destructibles: B007 ([Warsong] Ashenvale Tree Wall), Name (Name)
+{
+[Warsong] Ashenvale Tree Wall
+}
+
+STRING 6315
+// Units: n00Q ([Warsong] Orcs Armory), Name (Name)
+{
+[Warsong] Orcs Armory
+}
+
+STRING 6316
+// Units: n00T ([Warsong] Elfs Armory), Name (Name)
+{
+[Warsong] Elfs Armory
+}
+
+STRING 6317
+// Items: I01C ([Warsong] Rune of Speed), Name (Name)
+{
+[Warsong] Rune of Speed
+}
+
+STRING 6318
+// Units: n00U ([Warsong] Restoration Hut), Name (Name)
+{
+[Warsong] Restoration Hut
+}
+
+STRING 6319
+// Items: I01D ([Warsong] Rune of Lesser Healing), Name (Name)
+{
+[Warsong] Rune of Lesser Healing
+}
+
+STRING 6320
+// Items: I01E ([Warsong] Rune of Berserk), Name (Name)
+{
+[Warsong] Rune of Berserk
+}
+
+STRING 6321
+// Items: I01E ([Warsong] Rune of Berserk), Tip (Tooltip - Basic)
+{
+Purchase Rune of the Berserk
+}
+
+STRING 6322
+// Abilities: A0AL ([Warsong] Berserk), Tip (Tooltip - Normal)
+{
+Berserk
+}
+
+STRING 6323
+// Abilities: A0AL ([Warsong] Berserk), Name (Name)
+{
+[Warsong] Berserk
+}
+
+STRING 6324
+// Units: n00V ([Warsong] Berserker Hut), Name (Name)
+{
+[Warsong] Berserker Hut
+}
+
+STRING 6325
+// Abilities: A0AM ([Warsong] Rune Area Heal/Mana Regain), Name (Name)
+{
+[Warsong] Rune Area Heal/Mana Regain
+}
+
+STRING 6326
+{
+Defeat!
+}
+
+STRING 6327
+{
+Defeat!
+}
+
+STRING 6328
+{
+Defeat!
+}
+
+STRING 6329
+{
+Defeat!
+}
+
+STRING 6330
+{
+|cFFD10000Warsong Outriders|R - |cFF0068FFSilverwing Sentinels|R
+}
+
+STRING 6332
+{
+|cFFD10000Warsong Outriders|R - |cFF0068FFSilverwing Sentinels|R
+}
+
+STRING 6333
+// Destructibles: B008 ([Warsong] Ashenvale Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XXL)
+}
+
+STRING 6334
+// Destructibles: B008 ([Warsong] Ashenvale Tree Wall), Name (Name)
+{
+[Warsong] Ashenvale Tree Wall
+}
+
+STRING 6335
+// Destructibles: B009 ([Warsong] Ashenvale Fall Tree Wall), EditorSuffix (Editor Suffix)
+{
+(XXL)
+}
+
+STRING 6336
+// Destructibles: B009 ([Warsong] Ashenvale Fall Tree Wall), Name (Name)
+{
+[Warsong] Ashenvale Fall Tree Wall
+}
+
+STRING 6343
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6344
+// Items: I00L (|cFF6C9EFFMedal of Courage|R (Agility)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6345
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6346
+// Items: I00M (|cFF6C9EFFMedal of Courage|R (Intelligence)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6347
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Ubertip (Tooltip - Extended)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6348
+// Items: I00N (|cFF6C9EFFMedal of Courage|R (Strength)), Description (Description)
+{
+Grants the Hero the ability to switch between three modes, each providing a different bonus: +4 Strength, +4 Agility, or +4 Intelligence.
+}
+
+STRING 6349
+// Units: o010 ([Hellscream] Lazy Peon), Name (Name)
+{
+[Hellscream] Lazy Peon
+}
+
+STRING 6350
+// Units: o010 ([Hellscream] Lazy Peon), Tip (Tooltip - Basic)
+{
+Train Lazy Peon
+}
+
+STRING 6351
+{
+Alterac
+}
+
+STRING 6352
+{
+PvE 2vE
+}
+
+STRING 6353
+{
+Some description for Alterac
+}
+
+STRING 6354
+{
+:author
 }
 
