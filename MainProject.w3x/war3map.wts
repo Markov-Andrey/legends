@@ -19224,12 +19224,6 @@ STRING 6228
 Upgrade to Conquest Hold
 }
 
-STRING 6229
-// Units: o015 ([Hellscream] Conquest Hold), Ubertip (Tooltip - Extended)
-{
-Upgrade to Conquest Hold to enable the production of additional types of structures and units.
-}
-
 STRING 6233
 // Units: o018 ([Hellscream] Barracks), Name (Name)
 {
@@ -19502,12 +19496,6 @@ STRING 6283
 Upgrade to Advanced Rage
 }
 
-STRING 6284
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), effect1 (Effect 1)
-{
-rmnx
-}
-
 STRING 6285
 // Abilities: A0AG ([Hellscream] Pillage), Name (Name)
 {
@@ -19538,52 +19526,10 @@ STRING 6289
 Upgrade to Advanced Pillage
 }
 
-STRING 6290
-// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
-{
-Causes Peons', Grunts', and Raiders' attacks to gain resources when hitting enemy buildings.
-}
-
-STRING 6291
-// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
-{
-Causes Peons', Grunts', and Raiders' attacks to gain resources when hitting enemy buildings.
-}
-
 STRING 6292
 // Upgrades: R03F (Pillage), Name (Name)
 {
 [Hellscream] Pillage
-}
-
-STRING 6293
-// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
-{
-Pillage 2
-}
-
-STRING 6294
-// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
-{
-Pillage 3
-}
-
-STRING 6295
-// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
-{
-Pillage 1
-}
-
-STRING 6296
-// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
-{
-Each attack that does damage to an enemy building also gains resources.
-}
-
-STRING 6297
-// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
-{
-Each attack that does damage to an enemy building also gains resources.
 }
 
 STRING 6298
@@ -19856,5 +19802,164 @@ STRING 6353
 STRING 6354
 {
 :author
+}
+
+STRING 6355
+// Units: o010 ([Hellscream] Lazy Peon), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#worker #builder
+|R
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 6356
+// Abilities: A0AN ([Hellscream] Small Pockets), Name (Name)
+{
+[Hellscream] Small Pockets
+}
+
+STRING 6357
+// Abilities: A0AN ([Hellscream] Small Pockets), Tip (Tooltip - Normal)
+{
+Small Pockets
+}
+
+STRING 6358
+// Abilities: A0AN ([Hellscream] Small Pockets), Ubertip (Tooltip - Normal - Extended)
+{
+Lazy peon carries fewer resources at once. 
+Resource carry limit reduced to 8.
+}
+
+STRING 6359
+// Units: o012 ([Hellscream] Conquest Hall), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T1 #food #storage
+|R
+Primary structure, used to train Lazy Peons and receive gathered resources. Can be upgraded to Conquest Stronghold and then Conquest Hold to enable the production of additional types of structures and units.
+}
+
+STRING 6360
+// Units: o012 ([Hellscream] Conquest Hall), Tip (Tooltip - Basic)
+{
+Build Conquest Hall
+}
+
+STRING 6361
+// Units: o014 ([Hellscream] Conquest Stronghold), Tip (Tooltip - Basic)
+{
+Upgrade to Conquest Stronghold
+}
+
+STRING 6362
+// Units: o014 ([Hellscream] Conquest Stronghold), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T2 #food #storage
+|R
+Upgrade to Conquest Stronghold to enable the production of additional types of structures and units.
+}
+
+STRING 6363
+// Units: o015 ([Hellscream] Conquest Hold), Ubertip (Tooltip - Extended)
+{
+|cffffcc00 #T3 #food #storage
+|R
+Upgrade to Conquest Hold to enable the production of additional types of structures and units.
+}
+
+STRING 6364
+// Units: O00O ([Thrall] Altar of Elements), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 6365
+// Units: O013 ([Hellscream] Warsong Warchief), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn 1, 2, 3 and 4. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6366
+// Units: o016 ([Hellscream] Altar of Rage), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#heroes #upgrade
+|R
+Summons Heroes. Revives slain Heroes.
+}
+
+STRING 6367
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage - [|cffffcc00Level 2|r]
+}
+
+STRING 6368
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage - [|cffffcc00Level 3|r]
+}
+
+STRING 6369
+// Abilities: A0AG ([Hellscream] Pillage), Tip (Tooltip - Normal)
+{
+Pillage - [|cffffcc00Level 1|r]
+}
+
+STRING 6373
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Generates resources with each attack that damages enemy units. Refunds up to 40% of the attacked unit’s
+}
+
+STRING 6374
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Generates resources with each attack that damages enemy units. Refunds up to 60% of the attacked unit’s
+}
+
+STRING 6375
+// Abilities: A0AG ([Hellscream] Pillage), Ubertip (Tooltip - Normal - Extended)
+{
+Generates resources with each attack that damages enemy units. Refunds up to 20% of the attacked unit’s
+}
+
+STRING 6376
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Each strike against enemy units grants 5  to 9 rage. Rage gradually drains over time
+}
+
+STRING 6377
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Each strike against enemy units grants 6  to 10 rage. Rage gradually drains over time
+}
+
+STRING 6378
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Each strike against enemy units grants 7  to 11 rage. Rage gradually drains over time
+}
+
+STRING 6379
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Generates resources with each attack that damages enemy units. Refunds up to 40% of the attacked unit’s
+}
+
+STRING 6380
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Generates resources with each attack that damages enemy units. Refunds up to 60% of the attacked unit’s
+}
+
+STRING 6381
+// Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
+{
+Generates resources with each attack that damages enemy units. Refunds up to 20% of the attacked unit’s
 }
 
