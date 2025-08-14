@@ -238,6 +238,7 @@ trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_WhitemaneFastBuild= null
 trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
+trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
 trigger gg_trg_HellscreamChopMeat= null
 trigger gg_trg_HellscreamArenaChoose= null
@@ -350,7 +351,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamExecute= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1345,10 +1345,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
-    set u=BlzCreateUnitWithSkin(p, 'o01M', - 3747.1, - 5748.0, 33.676, 'o01M')
-    set u=BlzCreateUnitWithSkin(p, 'o01M', - 3632.5, - 5908.8, 50.483, 'o01M')
-    set u=BlzCreateUnitWithSkin(p, 'o01M', - 3458.1, - 5960.0, 65.772, 'o01M')
-    set u=BlzCreateUnitWithSkin(p, 'o01M', - 3304.4, - 6071.3, 65.772, 'o01M')
 endfunction
 
 //===========================================================================
@@ -1408,8 +1404,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3170.5, - 1720.5, 242.294, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2636.6, - 4923.3, 77.906, 'nfrl')
-    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2538.8, - 5013.5, 55.966, 'nfrl')
     set u=BlzCreateUnitWithSkin(p, 'nssp', 5155.5, - 3371.8, 136.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 5124.4, - 3068.7, 114.511, 'nspr')
@@ -7700,8 +7694,6 @@ endfunction
 
 //===========================================================================
 // Trigger: HellscreamChopMeat
-//
-// TODO FIXED PLEASE, REMOVE OLD ABILITY
 //===========================================================================
 function Trig_HellscreamChopMeat_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A0AK' ) ) then
@@ -7710,56 +7702,14 @@ function Trig_HellscreamChopMeat_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_HellscreamChopMeat_Func001Func002C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o011' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o01H' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o01F' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o01J' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o01G' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'o01I' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'n00P' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'n00S' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetSpellTargetUnit()) == 'n00R' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_HellscreamChopMeat_Func001C takes nothing returns boolean
-    if ( not Trig_HellscreamChopMeat_Func001Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_HellscreamChopMeat_Actions takes nothing returns nothing
-    if ( Trig_HellscreamChopMeat_Func001C() ) then
-        call SetUnitManaPercentBJ(GetSpellTargetUnit(), ( GetUnitManaPercent(GetSpellTargetUnit()) + 70.00 ))
-    else
-    endif
     call KillUnit(GetSpellAbilityUnit())
 endfunction
 
 //===========================================================================
 function InitTrig_HellscreamChopMeat takes nothing returns nothing
     set gg_trg_HellscreamChopMeat=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamChopMeat, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamChopMeat, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_HellscreamChopMeat, Condition(function Trig_HellscreamChopMeat_Conditions))
     call TriggerAddAction(gg_trg_HellscreamChopMeat, function Trig_HellscreamChopMeat_Actions)
 endfunction

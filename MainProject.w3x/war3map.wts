@@ -19201,7 +19201,7 @@ STRING 6223
 }
 
 STRING 6224
-// Abilities: A0AR ([Hellscream] Hellscream), Tip (Tooltip - Normal)
+// Abilities: A0AT ([Hellscream] Hellscream), Tip (Tooltip - Normal)
 {
 Hellscream
 }
@@ -19581,27 +19581,15 @@ Brutally attack an enemy for (413.868% of Attack Power) Physical damage
 }
 
 STRING 6308
-// Abilities: A0AJ ([Hellscream] Chop Meat), Name (Name)
+// Abilities: A0AK ([Hellscream] Chop Meat), Name (Name)
 {
 [Hellscream] Chop Meat
 }
 
 STRING 6309
-// Abilities: A0AJ ([Hellscream] Chop Meat), Tip (Tooltip - Normal)
+// Abilities: A0AK ([Hellscream] Chop Meat), Tip (Tooltip - Normal)
 {
 Chop Meat
-}
-
-STRING 6310
-// Abilities: A0AJ ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
-{
-Принести в жертву, восстановить 250 здоровья и дать 70% ярости
-}
-
-STRING 6312
-// Abilities: A0AK ([Hellscream] Rejuvenation), Name (Name)
-{
-[Hellscream] Rejuvenation
 }
 
 STRING 6313
@@ -19963,12 +19951,6 @@ STRING 6381
 Generates resources with each attack that damages enemy units. Refunds up to 20% of the attacked unit’s
 }
 
-STRING 6382
-// Units: o01M ([Hellscream] Kodo Beast), Name (Name)
-{
-[Hellscream] Kodo Beast
-}
-
 STRING 6383
 // Abilities: A0AO ([Hellscream] Execute), Name (Name)
 {
@@ -20081,33 +20063,21 @@ STRING 6400
 }
 
 STRING 6401
-// Abilities: A0AR ([Hellscream] Hellscream), Name (Name)
+// Abilities: A0AT ([Hellscream] Hellscream), Name (Name)
 {
 [Hellscream] Hellscream
 }
 
-STRING 6402
-// Abilities: A0AR ([Hellscream] Hellscream), Ubertip (Tooltip - Normal - Extended)
-{
-Gives friendly nearby units a <A0AR,DataA1,%>% bonus to damage and reduces their own armor by <A0AR,DataB1>. |nLasts <A0AR,Dur1> seconds.
-}
-
 STRING 6403
-// Buffs/Effects: B01T ([Hellscream] Hellscream), Bufftip (Tooltip)
+// Buffs/Effects: B01V ([Hellscream] Hellscream), Bufftip (Tooltip)
 {
 Hellscream
 }
 
 STRING 6404
-// Buffs/Effects: B01T ([Hellscream] Hellscream), EditorName (Name (Editor Only))
+// Buffs/Effects: B01V ([Hellscream] Hellscream), EditorName (Name (Editor Only))
 {
 [Hellscream] Hellscream
-}
-
-STRING 6405
-// Buffs/Effects: B01T ([Hellscream] Hellscream), Buffubertip (Tooltip - Extended)
-{
-This unit has Hellscream; its attack damage has been increased and its armor has been reduced.
 }
 
 STRING 6406
@@ -20116,39 +20086,87 @@ STRING 6406
 Hellscream
 }
 
-STRING 6409
-// Abilities: A0AS ([Hellscream] Mosh Pit), Name (Name)
+STRING 6415
+// Abilities: A0AT ([Hellscream] Hellscream), Researchtip (Tooltip - Learn)
 {
-[Hellscream] Mosh Pit
+Learn Hellscream
 }
 
-STRING 6410
-// Abilities: A0AS ([Hellscream] Mosh Pit), Tip (Tooltip - Normal)
+STRING 6416
+// Abilities: A0AT ([Hellscream] Hellscream), Researchubertip (Tooltip - Learn - Extended)
 {
-Mosh Pit
+Hellscream lets loose a terrifying howl that causes nearby enemy units to shiver in fear, reducing their attack damage. |nLasts <ANht,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANht,DataA1,%>% attack damage reduction. |n|cffffcc00Level 2|r - <ANht,DataA2,%>% attack damage reduction. |n|cffffcc00Level 3|r - <ANht,DataA3,%>% attack damage reduction.
 }
 
-STRING 6411
-// Buffs/Effects: B01U ([Hellscream] Mosh Pit), EditorName (Name (Editor Only))
+STRING 6417
+// Abilities: A0AT ([Hellscream] Hellscream), Ubertip (Tooltip - Normal - Extended)
 {
-[Hellscream] Mosh Pit
+Hellscream lets loose a terrifying howl that reduces nearby enemy units' attack damage by <ANht,DataA1,%>% for <ANht,Dur1> seconds.
 }
 
-STRING 6412
-// Buffs/Effects: B01U ([Hellscream] Mosh Pit), Bufftip (Tooltip)
+STRING 6419
+// Buffs/Effects: B01V ([Hellscream] Hellscream), Buffubertip (Tooltip - Extended)
 {
-Mosh Pit
+This unit has heard the Hellscream; it deals less damage for a duration.
 }
 
-STRING 6413
-// Buffs/Effects: B01U ([Hellscream] Mosh Pit), Buffubertip (Tooltip - Extended)
+STRING 6420
+// Abilities: A0AS ([Hellscream] War Song), Name (Name)
 {
-This unit has been hit by Mosh Pit; its movement speed and attack rate are improved.
+[Hellscream] War Song
 }
 
-STRING 6414
-// Abilities: A0AS ([Hellscream] Mosh Pit), Ubertip (Tooltip - Normal - Extended)
+STRING 6421
+// Abilities: A0AS ([Hellscream] War Song), Tip (Tooltip - Normal)
 {
-НЕ ДЕЙСТВУЕТ НА СВИХ НИКАК... НУЖНО КОСТЫЛИТЬ ЧЕРЕЗ ДАММИ
+War Song
+}
+
+STRING 6422
+// Units: o01M ([Hellscream] War Drummer), Name (Name)
+{
+[Hellscream] War Drummer
+}
+
+STRING 6423
+// Units: o01M ([Hellscream] War Drummer), Tip (Tooltip - Basic)
+{
+Train War Drummer
+}
+
+STRING 6424
+// Buffs/Effects: B01T ([Hellscream] War Song), EditorName (Name (Editor Only))
+{
+[Hellscream] War Song
+}
+
+STRING 6425
+// Buffs/Effects: B01T ([Hellscream] War Song), Bufftip (Tooltip)
+{
+War Song
+}
+
+STRING 6427
+// Buffs/Effects: B01T ([Hellscream] War Song), Buffubertip (Tooltip - Extended)
+{
+Attack power increased.
+}
+
+STRING 6429
+// Abilities: A0AK ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a target friendly unit for <A0AK,DataA1> hit points and <A0AK,DataB1> mana points over <A0AK,Dur1> seconds.
+}
+
+STRING 6430
+// Abilities: A0AJ ([Hellscream] Bloodlust), Name (Name)
+{
+[Hellscream] Bloodlust
+}
+
+STRING 6431
+// Buffs/Effects: B01U ([Hellscream] Bloodlust), EditorName (Name (Editor Only))
+{
+[Hellscream] Bloodlust
 }
 
