@@ -19201,7 +19201,7 @@ STRING 6223
 }
 
 STRING 6224
-// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
+// Abilities: A0AR ([Hellscream] Hellscream), Tip (Tooltip - Normal)
 {
 Hellscream
 }
@@ -19961,5 +19961,194 @@ STRING 6381
 // Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
 {
 Generates resources with each attack that damages enemy units. Refunds up to 20% of the attacked unit’s
+}
+
+STRING 6382
+// Units: o01M ([Hellscream] Kodo Beast), Name (Name)
+{
+[Hellscream] Kodo Beast
+}
+
+STRING 6383
+// Abilities: A0AO ([Hellscream] Execute), Name (Name)
+{
+[Hellscream] Execute
+}
+
+STRING 6384
+// Abilities: A0AO ([Hellscream] Execute), Tip (Tooltip - Normal)
+{
+Execute - [|cffffcc00Level 1|r]
+}
+
+STRING 6385
+// Abilities: A0AO ([Hellscream] Execute), Tip (Tooltip - Normal)
+{
+Execute - [|cffffcc00Level 2|r]
+}
+
+STRING 6386
+// Abilities: A0AO ([Hellscream] Execute), Tip (Tooltip - Normal)
+{
+Execute - [|cffffcc00Level 3|r]
+}
+
+STRING 6387
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing <A0AO,DataA1> damage and converting each extra point of rage into 3 additional damage
+}
+
+STRING 6388
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing <A0AO,DataA2> damage and converting each extra point of rage into 4 additional damage
+}
+
+STRING 6389
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing <A0AO,DataA3> damage and converting each extra point of rage into 5 additional damage
+}
+
+STRING 6390
+// Abilities: A0AO ([Hellscream] Execute), Researchtip (Tooltip - Learn)
+{
+Execute - [|cffffcc00Level %d|r]
+}
+
+STRING 6391
+// Abilities: A0AO ([Hellscream] Execute), Researchubertip (Tooltip - Learn - Extended)
+{
+Attempts to finish off a wounded foe, causing damage and converting each extra point of Rage into additional damage.
+|n|cffffcc00Level 1|r – <A0AO,DataA1> base damage + 3 damage per extra rage point.
+|cffffcc00Level 2|r – <A0AO,DataA2> base damage + 4 damage per extra rage point.
+|cffffcc00Level 3|r – <A0AO,DataA3> base damage + 5 damage per extra rage point.
+}
+
+STRING 6392
+// Abilities: A0AP ([Hellscream] Whirlwind), Researchtip (Tooltip - Learn)
+{
+Learn Whirlwind
+}
+
+STRING 6393
+// Abilities: A0AP ([Hellscream] Whirlwind), Tip (Tooltip - Normal)
+{
+Whirlwind - [|cffffcc00Level 1|r]
+}
+
+STRING 6394
+// Abilities: A0AP ([Hellscream] Whirlwind), Tip (Tooltip - Normal)
+{
+Whirlwind - [|cffffcc00Level 2|r]
+}
+
+STRING 6395
+// Abilities: A0AP ([Hellscream] Whirlwind), Tip (Tooltip - Normal)
+{
+Whirlwind - [|cffffcc00Level 3|r]
+}
+
+STRING 6396
+// Abilities: A0AP ([Hellscream] Whirlwind), Name (Name)
+{
+[Hellscream] Whirlwind
+}
+
+STRING 6397
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA1> damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6398
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA2> damage per second to nearby enemy land units. |nLasts 2 second
+}
+
+STRING 6399
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA3> damage per second to nearby enemy land units. |nLasts 3 second
+}
+
+STRING 6400
+// Abilities: A0AQ ([Hellscream] Critical Strike), Name (Name)
+{
+[Hellscream] Critical Strike
+}
+
+STRING 6401
+// Abilities: A0AR ([Hellscream] Hellscream), Name (Name)
+{
+[Hellscream] Hellscream
+}
+
+STRING 6402
+// Abilities: A0AR ([Hellscream] Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A0AR,DataA1,%>% bonus to damage and reduces their own armor by <A0AR,DataB1>. |nLasts <A0AR,Dur1> seconds.
+}
+
+STRING 6403
+// Buffs/Effects: B01T ([Hellscream] Hellscream), Bufftip (Tooltip)
+{
+Hellscream
+}
+
+STRING 6404
+// Buffs/Effects: B01T ([Hellscream] Hellscream), EditorName (Name (Editor Only))
+{
+[Hellscream] Hellscream
+}
+
+STRING 6405
+// Buffs/Effects: B01T ([Hellscream] Hellscream), Buffubertip (Tooltip - Extended)
+{
+This unit has Hellscream; its attack damage has been increased and its armor has been reduced.
+}
+
+STRING 6406
+// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
+{
+Hellscream
+}
+
+STRING 6409
+// Abilities: A0AS ([Hellscream] Mosh Pit), Name (Name)
+{
+[Hellscream] Mosh Pit
+}
+
+STRING 6410
+// Abilities: A0AS ([Hellscream] Mosh Pit), Tip (Tooltip - Normal)
+{
+Mosh Pit
+}
+
+STRING 6411
+// Buffs/Effects: B01U ([Hellscream] Mosh Pit), EditorName (Name (Editor Only))
+{
+[Hellscream] Mosh Pit
+}
+
+STRING 6412
+// Buffs/Effects: B01U ([Hellscream] Mosh Pit), Bufftip (Tooltip)
+{
+Mosh Pit
+}
+
+STRING 6413
+// Buffs/Effects: B01U ([Hellscream] Mosh Pit), Buffubertip (Tooltip - Extended)
+{
+This unit has been hit by Mosh Pit; its movement speed and attack rate are improved.
+}
+
+STRING 6414
+// Abilities: A0AS ([Hellscream] Mosh Pit), Ubertip (Tooltip - Normal - Extended)
+{
+НЕ ДЕЙСТВУЕТ НА СВИХ НИКАК... НУЖНО КОСТЫЛИТЬ ЧЕРЕЗ ДАММИ
 }
 
