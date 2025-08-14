@@ -20170,3 +20170,75 @@ STRING 6431
 [Hellscream] Bloodlust
 }
 
+STRING 6432
+// Abilities: A0AR ([Hellscream] Savage Feast), Name (Name)
+{
+[Hellscream] Savage Feast
+}
+
+STRING 6433
+// Abilities: A0AR ([Hellscream] Savage Feast), Tip (Tooltip - Normal)
+{
+Savage Feast
+}
+
+STRING 6434
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
+{
+[Hellscream] Savage Feast
+}
+
+STRING 6435
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
+{
+Research Savage Feast
+}
+
+STRING 6436
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), effect1 (Effect 1)
+{
+rmnx
+}
+
+STRING 6438
+// Abilities: A0AR ([Hellscream] Savage Feast), Ubertip (Tooltip - Normal - Extended)
+{
+Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
+}
+
+STRING 6439
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
+{
+Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
+}
+
+STRING 6440
+// Abilities: A0AU ([Hellscream] Slam), Name (Name)
+{
+[Hellscream] Slam
+}
+
+STRING 6441
+// Abilities: A0AU ([Hellscream] Slam), Tip (Tooltip - Normal)
+{
+Slam
+}
+
+STRING 6442
+// Buffs/Effects: B01W ([Hellscream] Slam), EditorName (Name (Editor Only))
+{
+[Hellscream] Slam
+}
+
+STRING 6443
+// Buffs/Effects: B01W ([Hellscream] Slam), Bufftip (Tooltip)
+{
+Slam
+}
+
+STRING 6444
+// Buffs/Effects: B01W ([Hellscream] Slam), Buffubertip (Tooltip - Extended)
+{
+This unit was hit by a Slam; its attack rate and movement speed have been reduced.
+}
+
