@@ -19230,12 +19230,6 @@ STRING 6233
 [Hellscream] Barracks
 }
 
-STRING 6235
-// Units: o019 ([Hellscream] Forge), Name (Name)
-{
-[Hellscream] Forge
-}
-
 STRING 6236
 // Units: o01A ([Hellscream] Beastiary), Name (Name)
 {
@@ -19384,12 +19378,6 @@ STRING 6263
 // Units: n00R ([Hellscream] Ogre Magi), Name (Name)
 {
 [Hellscream] Ogre Magi
-}
-
-STRING 6264
-// Units: o01J ([Hellscream] Demolisher), Name (Name)
-{
-[Hellscream] Demolisher
 }
 
 STRING 6265
@@ -19558,24 +19546,6 @@ Onslaught
 
 STRING 6302
 // Abilities: A0AH ([Hellscream] Onslaught), Ubertip (Tooltip - Normal - Extended)
-{
-Brutally attack an enemy for (413.868% of Attack Power) Physical damage
-}
-
-STRING 6305
-// Abilities: A0AI ([Hellscream] Arrow), Name (Name)
-{
-[Hellscream] Arrow
-}
-
-STRING 6306
-// Abilities: A0AI ([Hellscream] Arrow), Tip (Tooltip - Normal)
-{
-Arrow
-}
-
-STRING 6307
-// Abilities: A0AI ([Hellscream] Arrow), Ubertip (Tooltip - Normal - Extended)
 {
 Brutally attack an enemy for (413.868% of Attack Power) Physical damage
 }
@@ -20240,5 +20210,209 @@ STRING 6444
 // Buffs/Effects: B01W ([Hellscream] Slam), Buffubertip (Tooltip - Extended)
 {
 This unit was hit by a Slam; its attack rate and movement speed have been reduced.
+}
+
+STRING 6446
+// Abilities: A0AV ([Hellscream] Ensnare), Tip (Tooltip - Normal)
+{
+Ensnare
+}
+
+STRING 6447
+// Abilities: A0AV ([Hellscream] Ensnare), Name (Name)
+{
+[Hellscream] Ensnare
+}
+
+STRING 6450
+// Upgrades: R03J (War Drums Damage Increase), Name (Name)
+{
+[Hellscream] War Drums Damage Increase
+}
+
+STRING 6451
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
+{
+[Hellscream] Steel Melee Axes
+}
+
+STRING 6452
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
+{
+Thorium Melee Axes
+}
+
+STRING 6453
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
+{
+Arcanite Melee Axes
+}
+
+STRING 6454
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
+{
+Upgrade to Steel Melee Axes
+}
+
+STRING 6455
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
+{
+Upgrade to Thorium Melee Axes
+}
+
+STRING 6456
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
+{
+Upgrade to Arcanite Melee Axes
+}
+
+STRING 6457
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), effect2 (Effect 2)
+{
+rats
+}
+
+STRING 6458
+// Units: o019 ([Hellscream] War Forge), Name (Name)
+{
+[Hellscream] War Forge
+}
+
+STRING 6459
+// Units: o019 ([Hellscream] War Forge), Tip (Tooltip - Basic)
+{
+Build War Forge
+}
+
+STRING 6460
+// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
+{
+[Hellscream] Steel Ranged Spears
+}
+
+STRING 6461
+// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
+{
+Thorium Ranged Spears
+}
+
+STRING 6462
+// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
+{
+Arcanite Ranged Spears
+}
+
+STRING 6463
+// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), effect2 (Effect 2)
+{
+rats
+}
+
+STRING 6464
+// Upgrades: R03K (Brute Strength), Name (Name)
+{
+[Hellscream] Brute Strength
+}
+
+STRING 6465
+// Units: n00W ([Hellscream] Worg), Name (Name)
+{
+[Hellscream] Worg
+}
+
+STRING 6466
+// Units: n00W ([Hellscream] Worg), Tip (Tooltip - Basic)
+{
+Summon Worg
+}
+
+STRING 6467
+// Abilities: A0AI ([Hellscream] Taming), Name (Name)
+{
+[Hellscream] Taming
+}
+
+STRING 6468
+// Abilities: A0AI ([Hellscream] Taming), Tip (Tooltip - Normal)
+{
+Taming
+}
+
+STRING 6469
+// Abilities: A0AW ([Hellscream] Mount’s Escape), Name (Name)
+{
+[Hellscream] Mount’s Escape
+}
+
+STRING 6470
+// Abilities: A0AW ([Hellscream] Mount’s Escape), Tip (Tooltip - Normal)
+{
+Mount’s Escape
+}
+
+STRING 6471
+// Abilities: A0AW ([Hellscream] Mount’s Escape), Ubertip (Tooltip - Normal - Extended)
+{
+After the death of a Raider or Raider Spearthrower, a neutral Worg appears for 120 seconds. It can be tamed again by a Grunt or Spearthrower.
+}
+
+STRING 6472
+// Abilities: A0AI ([Hellscream] Taming), Ubertip (Tooltip - Normal - Extended)
+{
+Tames a neutral Worg, turning a Grunt into a Raider or a Spearthrower into a Raider Spearthrower
+}
+
+STRING 6473
+// Upgrades: R03L (Ensnare), Name (Name)
+{
+[Hellscream] Mount’s Escape/Taming
+}
+
+STRING 6474
+// Upgrades: R03L (Ensnare), Ubertip (Tooltip - Extended)
+{
+Unlocks the ability for Raiders and Raider-Spearthrowers to release their mount upon death, leaving behind a neutral Worg for 120 seconds, and grants Grunts and Spearthrowers the ability to tame such Worgs to gain a mount
+}
+
+STRING 6475
+// Upgrades: R03L (Ensnare), Tip (Tooltip)
+{
+Research Mount’s Escape/Taming
+}
+
+STRING 6477
+// Abilities: A0AX ([Hellscream] Harvest), Name (Name)
+{
+[Hellscream] Harvest
+}
+
+STRING 6482
+// Abilities: A0AY ([Hellscream] Circular Saw), Name (Name)
+{
+[Hellscream] Circular Saw
+}
+
+STRING 6483
+// Abilities: A0AY ([Hellscream] Circular Saw), Tip (Tooltip - Normal)
+{
+Circular Saw
+}
+
+STRING 6484
+// Abilities: A0AY ([Hellscream] Circular Saw), Ubertip (Tooltip - Normal - Extended)
+{
+Shredder launches a spinning circular saw at a targeted mechanical unit or building up to 600 range. Upon impact, it deals <A0AY,DataA1> damage and stuns the target for <A0AY,Dur1> seconds.
+}
+
+STRING 6485
+// Abilities: A0AZ ([Hellscream] !!!!!!!!!!!!!!! Unholy Frenzy!!!!!!!!!!!!!!), Name (Name)
+{
+[Hellscream] !!!!!!!!!!!!!!! Unholy Frenzy!!!!!!!!!!!!!!
+}
+
+STRING 6486
+// Abilities: A0B0 ([Hellscream] !!!!!!!!! Inner Fire!!!!!!!!!!!!!!!!!!!!), Name (Name)
+{
+[Hellscream] !!!!!!!!! Inner Fire!!!!!!!!!!!!!!!!!!!!
 }
 

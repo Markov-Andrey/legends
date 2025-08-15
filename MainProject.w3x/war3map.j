@@ -240,6 +240,7 @@ trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
 trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
+trigger gg_trg_HellscreamSavageFeast= null
 trigger gg_trg_HellscreamChopMeat= null
 trigger gg_trg_HellscreamArenaChoose= null
 trigger gg_trg_HellscreamArenaCancel= null
@@ -351,7 +352,8 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamSavageFeast= null
+trigger gg_trg_HellscreamRaiderDead= null
+trigger gg_trg_HellscreamTaming= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1346,6 +1348,17 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
+    set u=BlzCreateUnitWithSkin(p, 'o011', - 3486.5, - 5963.8, 93.901, 'o011')
+    set u=BlzCreateUnitWithSkin(p, 'o01H', - 3231.0, - 5974.8, 115.570, 'o01H')
+    set u=BlzCreateUnitWithSkin(p, 'o01E', - 3592.5, - 5955.5, 64.812, 'o01E')
+    set u=BlzCreateUnitWithSkin(p, 'o01F', - 3381.7, - 5949.7, 132.316, 'o01F')
+    set u=BlzCreateUnitWithSkin(p, 'o01M', - 3066.1, - 5945.3, 146.433, 'o01M')
+    set u=BlzCreateUnitWithSkin(p, 'o01G', - 2863.9, - 5925.3, 155.544, 'o01G')
+    set u=BlzCreateUnitWithSkin(p, 'n00P', - 3740.3, - 5985.3, 49.588, 'n00P')
+    set u=BlzCreateUnitWithSkin(p, 'o01I', - 3304.6, - 5977.2, 104.982, 'o01I')
+    set u=BlzCreateUnitWithSkin(p, 'n00S', - 3882.4, - 5984.1, 38.420, 'n00S')
+    set u=BlzCreateUnitWithSkin(p, 'n00R', - 4022.1, - 5974.8, 30.388, 'n00R')
+    set u=BlzCreateUnitWithSkin(p, 'odoc', - 4004.7, - 6083.4, 62.822, 'odoc')
 endfunction
 
 //===========================================================================
@@ -7591,7 +7604,7 @@ endfunction
 //===========================================================================
 // Trigger: HellscreamRage
 //===========================================================================
-function Trig_HellscreamRage_Func002Func003C takes nothing returns boolean
+function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'O013' ) ) then
         return true
     endif
@@ -7602,9 +7615,6 @@ function Trig_HellscreamRage_Func002Func003C takes nothing returns boolean
         return true
     endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01F' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01J' ) ) then
         return true
     endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01G' ) ) then
@@ -7632,13 +7642,10 @@ function Trig_HellscreamRage_Func002Func003C takes nothing returns boolean
 endfunction
 
 function Trig_HellscreamRage_Func002C takes nothing returns boolean
-    if ( not ( IsUnitType(GetAttackedUnitBJ(), UNIT_TYPE_STRUCTURE) == false ) ) then
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetAttackedUnitBJ()), GetOwningPlayer(GetAttacker())) == true ) ) then
         return false
     endif
-    if ( not ( IsUnitIllusionBJ(GetAttackedUnitBJ()) == false ) ) then
-        return false
-    endif
-    if ( not Trig_HellscreamRage_Func002Func003C() ) then
+    if ( not Trig_HellscreamRage_Func002Func002C() ) then
         return false
     endif
     return true
@@ -7694,6 +7701,101 @@ function InitTrig_HellscreamRage takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamRage, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamRage, Condition(function Trig_HellscreamRage_Conditions))
     call TriggerAddAction(gg_trg_HellscreamRage, function Trig_HellscreamRage_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamRaiderDead
+//===========================================================================
+function Trig_HellscreamRaiderDead_Func001C takes nothing returns boolean
+    if ( ( GetPlayerTechCountSimple('R03L', GetOwningPlayer(GetDyingUnit())) == 1 ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'o01H' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'o01I' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_HellscreamRaiderDead_Conditions takes nothing returns boolean
+    if ( not Trig_HellscreamRaiderDead_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamRaiderDead_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'n00W', Player(PLAYER_NEUTRAL_PASSIVE), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
+    call UnitApplyTimedLifeBJ(120.00, 'BTLF', GetLastCreatedUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamRaiderDead takes nothing returns nothing
+    set gg_trg_HellscreamRaiderDead=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamRaiderDead, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_HellscreamRaiderDead, Condition(function Trig_HellscreamRaiderDead_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamRaiderDead, function Trig_HellscreamRaiderDead_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamTaming
+//===========================================================================
+function Trig_HellscreamTaming_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0AI' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'n00W' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamTaming_Conditions takes nothing returns boolean
+    if ( not Trig_HellscreamTaming_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamTaming_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'o01F' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamTaming_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetSpellAbilityUnit()) == 'o011' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamTaming_Actions takes nothing returns nothing
+    if ( Trig_HellscreamTaming_Func002C() ) then
+        call CreateNUnitsAtLoc(1, 'o01H', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
+        call SetUnitLifePercentBJ(GetLastCreatedUnit(), ( ( GetUnitLifePercent(GetSpellAbilityUnit()) + GetUnitLifePercent(GetSpellTargetUnit()) ) / 2.00 ))
+        call RemoveUnit(GetSpellTargetUnit())
+        call RemoveUnit(GetSpellAbilityUnit())
+    else
+        if ( Trig_HellscreamTaming_Func002Func001C() ) then
+            call CreateNUnitsAtLoc(1, 'o01I', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit()), bj_UNIT_FACING)
+            call SetUnitLifePercentBJ(GetLastCreatedUnit(), ( ( GetUnitLifePercent(GetSpellAbilityUnit()) + GetUnitLifePercent(GetSpellTargetUnit()) ) / 2.00 ))
+            call RemoveUnit(GetSpellTargetUnit())
+            call RemoveUnit(GetSpellAbilityUnit())
+        else
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamTaming takes nothing returns nothing
+    set gg_trg_HellscreamTaming=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamTaming, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamTaming, Condition(function Trig_HellscreamTaming_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamTaming, function Trig_HellscreamTaming_Actions)
 endfunction
 
 //===========================================================================
@@ -13064,6 +13166,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_HellscreamIni()
     call InitTrig_HellscreamExecute()
     call InitTrig_HellscreamRage()
+    call InitTrig_HellscreamRaiderDead()
+    call InitTrig_HellscreamTaming()
     call InitTrig_HellscreamSavageFeast()
     call InitTrig_HellscreamChopMeat()
     call InitTrig_HellscreamArenaChoose()
