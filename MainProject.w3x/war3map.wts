@@ -20404,15 +20404,57 @@ STRING 6484
 Shredder launches a spinning circular saw at a targeted mechanical unit or building up to 600 range. Upon impact, it deals <A0AY,DataA1> damage and stuns the target for <A0AY,Dur1> seconds.
 }
 
-STRING 6485
-// Abilities: A0AZ ([Hellscream] !!!!!!!!!!!!!!! Unholy Frenzy!!!!!!!!!!!!!!), Name (Name)
-{
-[Hellscream] !!!!!!!!!!!!!!! Unholy Frenzy!!!!!!!!!!!!!!
-}
-
 STRING 6486
 // Abilities: A0B0 ([Hellscream] !!!!!!!!! Inner Fire!!!!!!!!!!!!!!!!!!!!), Name (Name)
 {
 [Hellscream] !!!!!!!!! Inner Fire!!!!!!!!!!!!!!!!!!!!
+}
+
+STRING 6487
+// Abilities: A0AZ ([Hellscream] Demonic Gift), Name (Name)
+{
+[Hellscream] Demonic Gift
+}
+
+STRING 6488
+// Abilities: A0AZ ([Hellscream] Demonic Gift), Tip (Tooltip - Normal)
+{
+Demonic Gift
+}
+
+STRING 6489
+// Buffs/Effects: B01X ([Hellscream] Demonic Gift), EditorName (Name (Editor Only))
+{
+[Hellscream] Demonic Gift
+}
+
+STRING 6490
+// Buffs/Effects: B01X ([Hellscream] Demonic Gift), Bufftip (Tooltip)
+{
+Demonic Gift
+}
+
+STRING 6491
+// Buffs/Effects: B01X ([Hellscream] Demonic Gift), Buffubertip (Tooltip - Extended)
+{
+This unit has Demonic Gift; its attack rate is increased, but it takes damage over time.
+}
+
+STRING 6492
+// Units: o01J ([Hellscream] Eye of Kilrogg), Name (Name)
+{
+[Hellscream] Eye of Kilrogg
+}
+
+STRING 6493
+// Abilities: A0B1 ([Hellscream] Eye of Kilrogg), Name (Name)
+{
+[Hellscream] Eye of Kilrogg
+}
+
+STRING 6494
+// Abilities: A0B1 ([Hellscream] Eye of Kilrogg), Tip (Tooltip - Normal)
+{
+Eye of Kilrogg
 }
 

@@ -240,6 +240,8 @@ trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
 trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
+trigger gg_trg_HellscreamRaiderDead= null
+trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
 trigger gg_trg_HellscreamChopMeat= null
 trigger gg_trg_HellscreamArenaChoose= null
@@ -352,8 +354,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamRaiderDead= null
-trigger gg_trg_HellscreamTaming= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1358,7 +1358,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o01I', - 3304.6, - 5977.2, 104.982, 'o01I')
     set u=BlzCreateUnitWithSkin(p, 'n00S', - 3882.4, - 5984.1, 38.420, 'n00S')
     set u=BlzCreateUnitWithSkin(p, 'n00R', - 4022.1, - 5974.8, 30.388, 'n00R')
-    set u=BlzCreateUnitWithSkin(p, 'odoc', - 4004.7, - 6083.4, 62.822, 'odoc')
 endfunction
 
 //===========================================================================
