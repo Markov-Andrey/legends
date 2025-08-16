@@ -1358,6 +1358,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o01I', - 3304.6, - 5977.2, 104.982, 'o01I')
     set u=BlzCreateUnitWithSkin(p, 'n00S', - 3882.4, - 5984.1, 38.420, 'n00S')
     set u=BlzCreateUnitWithSkin(p, 'n00R', - 4022.1, - 5974.8, 30.388, 'n00R')
+    set u=BlzCreateUnitWithSkin(p, 'o01G', - 4118.5, - 4541.4, - 6.137, 'o01G')
+    set u=BlzCreateUnitWithSkin(p, 'o01G', - 4104.7, - 4672.5, 4.493, 'o01G')
+    set u=BlzCreateUnitWithSkin(p, 'o01G', - 4098.6, - 4785.5, 13.653, 'o01G')
+    set u=BlzCreateUnitWithSkin(p, 'o011', - 3978.6, - 4482.5, - 13.335, 'o011')
+    set u=BlzCreateUnitWithSkin(p, 'o011', - 3962.8, - 4594.4, - 2.410, 'o011')
+    set u=BlzCreateUnitWithSkin(p, 'o011', - 3937.6, - 4729.6, 11.926, 'o011')
 endfunction
 
 //===========================================================================
@@ -1424,6 +1430,12 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2853.5, - 4358.3, 179.830, 'nfrl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2847.6, - 4482.2, 161.136, 'nfrl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2858.7, - 4631.1, 142.315, 'nfrl')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
