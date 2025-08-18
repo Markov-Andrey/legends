@@ -19544,12 +19544,6 @@ STRING 6301
 Onslaught
 }
 
-STRING 6302
-// Abilities: A0AH ([Hellscream] Onslaught), Ubertip (Tooltip - Normal - Extended)
-{
-Brutally attack an enemy for (413.868% of Attack Power) Physical damage
-}
-
 STRING 6308
 // Abilities: A0AK ([Hellscream] Chop Meat), Name (Name)
 {
@@ -20474,5 +20468,230 @@ STRING 6503
 // Buffs/Effects: B01X ([Hellscream] Boiling Blood), Buffubertip (Tooltip - Extended)
 {
 This unit has Boiling Blood; its attack rate is increased, but it takes damage over time.
+}
+
+STRING 6504
+// Abilities: A0AZ ([Hellscream] Boiling Blood), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the attack rate of a target unit by <A0AZ,DataA1,%>%, but drains <A0AZ,DataB1> hit points per second. |nLasts <A0AZ,Dur1> seconds.
+}
+
+STRING 6510
+// Abilities: A0B2 ([Hellscream] Firebolt), Name (Name)
+{
+[Hellscream] Firebolt
+}
+
+STRING 6511
+// Units: o01G ([Hellscream] Warlock), Casterupgradetip (Caster Upgrade Tips)
+{
+- Skull Runes,- Skull Runes|n- Firebolt,- Skull Runes|n- Firebolt|n- Boiling Blood
+}
+
+STRING 6512
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), Name (Name)
+{
+[Hellscream] Warlock Adept Training
+}
+
+STRING 6513
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), Name (Name)
+{
+Warlock Master Training
+}
+
+STRING 6514
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
+{
+Warlock Adept Training
+}
+
+STRING 6515
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), Tip (Tooltip)
+{
+Warlock Master Training
+}
+
+STRING 6516
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Warlock mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Lightning Shield.
+}
+
+STRING 6517
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Warlock mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Bloodlust.
+}
+
+STRING 6518
+// Upgrades: R03M (Shaman Adept Training,Shaman Master Training), effect1 (Effect 1)
+{
+ratx
+}
+
+STRING 6519
+// Abilities: A0AH ([Hellscream] Onslaught), Ubertip (Tooltip - Normal - Extended)
+{
+Brutally attack an enemy for <A0AH,DataA1> add damage
+}
+
+STRING 6520
+// Upgrades: R03N (Reinforced Defenses), Name (Name)
+{
+[Hellscream] Fuel of Fury
+}
+
+STRING 6524
+// Upgrades: R03N (Reinforced Defenses), Tip (Tooltip)
+{
+Research Fuel of Fury
+}
+
+STRING 6525
+// Upgrades: R03O (Liquid Fire), Name (Name)
+{
+[Hellscream] Demonic Blood
+}
+
+STRING 6526
+// Upgrades: R03O (Liquid Fire), Tip (Tooltip)
+{
+Research Demonic Blood
+}
+
+STRING 6527
+// Upgrades: R03O (Liquid Fire), effect1 (Effect 1)
+{
+rmnr
+}
+
+STRING 6528
+// Upgrades: R03O (Liquid Fire), effect2 (Effect 2)
+{
+rmnx
+}
+
+STRING 6529
+// Upgrades: R03P (Brute Strength), Name (Name)
+{
+[Hellscream] Blade to Blade
+}
+
+STRING 6530
+// Upgrades: R03P (Brute Strength), Tip (Tooltip)
+{
+Research Blade to Blade
+}
+
+STRING 6531
+// Upgrades: R03K (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of Grunts and Raider with a <R03K,base1> hit point increase, and <R03K,base2> bonus attack damage.
+}
+
+STRING 6532
+// Upgrades: R03N (Reinforced Defenses), Ubertip (Tooltip - Extended)
+{
+Gain 1 Rage each time you take damage.
+}
+
+STRING 6533
+// Upgrades: R03O (Liquid Fire), Ubertip (Tooltip - Extended)
+{
+Increases the maximum Rage by <R03O,base1> and slows Rage decay outside of combat.
+}
+
+STRING 6534
+// Upgrades: R03P (Brute Strength), Ubertip (Tooltip - Extended)
+{
+While in melee combat, nearby melee units generate an additional 1–3 Rage when they attack or are attacked.
+}
+
+STRING 6535
+// Abilities: A0B3 ([UI] Race: Hellscream), Name (Name)
+{
+[UI] Race: Hellscream
+}
+
+STRING 6536
+// Abilities: A0B3 ([UI] Race: Hellscream), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 6537
+// Abilities: A0B3 ([UI] Race: Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Orc
+|cFF48BFFFSubrace:|R Warsong Clan
+}
+
+STRING 6538
+// Abilities: A0B4 ([UI] History: Hellscream), Name (Name)
+{
+[UI] History: Hellscream
+}
+
+STRING 6539
+// Abilities: A0B4 ([UI] History: Hellscream), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 6540
+// Abilities: A0B4 ([UI] History: Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+Grommash Hellscream
+
+Born into the blood and fire of the orcish clans, Grommash carved his path through war and fury, earning his place as a fearsome Warchief of the Warsong Clan.
+
+Driven by honor and unyielding strength, he fought to unite his people under the banner of the Horde, wielding his axe with unmatched ferocity.
+
+Feared by enemies and revered by allies, Grommash’s legacy is one of raw courage, relentless battle, and the indomitable spirit of the orcish warrior.
+
+A living embodiment of rage and power, his story is a testament to the ferocity and pride of the Horde.
+}
+
+STRING 6541
+// Abilities: A0B5 ([UI] Mechanics: Hellscream), Name (Name)
+{
+[UI] Mechanics: Hellscream
+}
+
+STRING 6542
+// Abilities: A0B5 ([UI] Mechanics: Hellscream), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 6544
+// Abilities: A0B6 ([UI] Features: Hellscream), Name (Name)
+{
+[UI] Features: Hellscream
+}
+
+STRING 6545
+// Abilities: A0B6 ([UI] Features: Hellscream), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 6547
+// Abilities: A0B5 ([UI] Mechanics: Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Rage|R - Melee forces accumulate Rage in combat, channeling it to unleash their powerful abilities with devastating effect.
+|cFF00C850- Pillage|R - The Warsong orcs do not gather; they reap rewards from every conquest, claiming spoils from both enemy troops and structures, turning each battle into profit.
+}
+
+STRING 6548
+// Abilities: A0B6 ([UI] Features: Hellscream), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Formidable in direct combat
+- Numerous battle abilities|R
+
+|cFFFF5A4B- No healing capabilities
+- Poor ranged support 
+- Economy relies on combat|R
 }
 
