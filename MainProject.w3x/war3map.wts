@@ -20813,3 +20813,89 @@ STRING 6574
 Summon 5 training dummies (level 1) around the barracks for additional army experience.
 }
 
+STRING 6575
+// Units: o011 ([Hellscream] Grunt), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Brutish Orc warrior. Can learn Brute Strength. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6576
+// Units: o018 ([Hellscream] Barracks), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Primary troop production building. Trains Grunts, Spearthrowers. |nAlso contains the Brute Strength upgrade
+}
+
+STRING 6577
+// Units: o01E ([Hellscream] Boar), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #food
+|RA boar provides 3 food, but consumes 1. You can slaughter it to replenish your unit's health and rage. Can be upgraded to Savage Feast |n|n|cffffcc00Attacks land and air units.|r 
+}
+
+STRING 6578
+// Units: o01F ([Hellscream] Spearthrower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Versatile spear-thrower, effective against air units. |n|n|cffffcc00Attacks land and air units.|r 
+}
+
+STRING 6579
+// Units: o01G ([Hellscream] Warlock), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Primary spellcaster. Can initially cast Skull Runes, which slows and dispels positive and negative buffs. Can also learn Firebolt and Boiling Blood. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 6580
+// Units: o01H ([Hellscream] Raider), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|RHighly mobile wolf rider. Effective against buildings. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6581
+// Units: o01M ([Hellscream] War Drummer), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #support
+|R
+Lumbering war beast, mounted by an Orcish drummer. Has the abilities War Drums. War Drums gives friendly units nearby a bonus to attack damage. Can gain the War Drums Upgrade. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 6582
+// Units: n00P ([Hellscream] Shredder), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #siege
+|R
+Medium melee unit made of iron. Excellent at harvesting large amounts of lumber. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 6583
+// Units: o01I ([Hellscream] Raider Spearthrower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged
+|R
+Versatile spear-thrower, effective against air units. |n|n|cffffcc00Attacks land and air units.|r 
+}
+
+STRING 6584
+// Units: n00R ([Hellscream] Ogre Magi), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee #support
+|R
+Mighty warrior.Spellcasting warrior of the Ogre Legion. Can cast Bloodlust. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6585
+// Units: n00S ([Hellscream] Ogre Mauler), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Mighty warrior. Standard warrior of the Ogre Legion. |n|n|cffffcc00Attacks land units.|r
+}
+
