@@ -20804,3 +20804,27 @@ STRING 6569
 F
 }
 
+STRING 6570
+// Units: o01N ([Wrynn] Training Dummy), Name (Name)
+{
+[Wrynn] Training Dummy
+}
+
+STRING 6571
+// Abilities: A0BA ([Wrynn] Training Dummy), Name (Name)
+{
+[Wrynn] Training Dummy
+}
+
+STRING 6572
+// Abilities: A0BA ([Wrynn] Training Dummy), Tip (Tooltip - Normal)
+{
+Training Dummy
+}
+
+STRING 6574
+// Abilities: A0BA ([Wrynn] Training Dummy), Ubertip (Tooltip - Normal - Extended)
+{
+Summon 5 training dummies (level 1) around the barracks for additional army experience.
+}
+

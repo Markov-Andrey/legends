@@ -356,6 +356,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_WrynnDummy= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -4932,6 +4933,32 @@ function InitTrig_WrynnKnightRearAttack takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnKnightRearAttack, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_WrynnKnightRearAttack, Condition(function Trig_WrynnKnightRearAttack_Conditions))
     call TriggerAddAction(gg_trg_WrynnKnightRearAttack, function Trig_WrynnKnightRearAttack_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: WrynnDummy
+//===========================================================================
+function Trig_WrynnDummy_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0BA' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WrynnDummy_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'o01N', Player(PLAYER_NEUTRAL_AGGRESSIVE), PolarProjectionBJ(GetUnitLoc(GetSpellAbilityUnit()), 250.00, 0), bj_UNIT_FACING)
+    call CreateNUnitsAtLoc(1, 'o01N', Player(PLAYER_NEUTRAL_AGGRESSIVE), PolarProjectionBJ(GetUnitLoc(GetSpellAbilityUnit()), 250.00, 72.00), bj_UNIT_FACING)
+    call CreateNUnitsAtLoc(1, 'o01N', Player(PLAYER_NEUTRAL_AGGRESSIVE), PolarProjectionBJ(GetUnitLoc(GetSpellAbilityUnit()), 250.00, 144.00), bj_UNIT_FACING)
+    call CreateNUnitsAtLoc(1, 'o01N', Player(PLAYER_NEUTRAL_AGGRESSIVE), PolarProjectionBJ(GetUnitLoc(GetSpellAbilityUnit()), 250.00, 216.00), bj_UNIT_FACING)
+    call CreateNUnitsAtLoc(1, 'o01N', Player(PLAYER_NEUTRAL_AGGRESSIVE), PolarProjectionBJ(GetUnitLoc(GetSpellAbilityUnit()), 250.00, 288.00), bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_WrynnDummy takes nothing returns nothing
+    set gg_trg_WrynnDummy=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WrynnDummy, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_WrynnDummy, Condition(function Trig_WrynnDummy_Conditions))
+    call TriggerAddAction(gg_trg_WrynnDummy, function Trig_WrynnDummy_Actions)
 endfunction
 
 //===========================================================================
@@ -13286,6 +13313,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WrynnUpgradeVeterans()
     call InitTrig_WrynnRiflemanCheetah()
     call InitTrig_WrynnKnightRearAttack()
+    call InitTrig_WrynnDummy()
     call InitTrig_WrynnRent()
     call InitTrig_WrynnDeposit()
     call InitTrig_WrynnDepositTimer()
