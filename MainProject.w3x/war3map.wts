@@ -19415,11 +19415,6 @@ STRING 6270
 +Cancel
 }
 
-STRING 6271
-{
-+Finish
-}
-
 STRING 6273
 {
 +Choose1
@@ -20693,5 +20688,119 @@ STRING 6548
 |cFFFF5A4B- No healing capabilities
 - Poor ranged support 
 - Economy relies on combat|R
+}
+
+STRING 6549
+// Abilities: A0B7 ([Hellscream] Battle Trophy), Name (Name)
+{
+[Hellscream] Battle Trophy
+}
+
+STRING 6550
+// Abilities: A0B7 ([Hellscream] Battle Trophy), EditorSuffix (Editor Suffix)
+{
+(Arena)
+}
+
+STRING 6551
+// Abilities: A0B7 ([Hellscream] Battle Trophy), Tip (Tooltip - Normal)
+{
+Battle Trophy
+}
+
+STRING 6552
+// Abilities: A0B7 ([Hellscream] Battle Trophy), Ubertip (Tooltip - Normal - Extended)
+{
++3 damage
+}
+
+STRING 6553
+// Abilities: A0B8 ([Hellscream] Potion of Rage), Name (Name)
+{
+[Hellscream] Potion of Rage
+}
+
+STRING 6554
+// Abilities: A0B8 ([Hellscream] Potion of Rage), EditorSuffix (Editor Suffix)
+{
+(Arena)
+}
+
+STRING 6555
+// Abilities: A0B8 ([Hellscream] Potion of Rage), Ubertip (Tooltip - Normal - Extended)
+{
++50 max rage
+}
+
+STRING 6556
+// Abilities: A0B8 ([Hellscream] Potion of Rage), Tip (Tooltip - Normal)
+{
+Potion of Rage
+}
+
+STRING 6557
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Name (Name)
+{
+[Hellscream] Warsong Banner
+}
+
+STRING 6558
+// Buffs/Effects: B01Z ([Hellscream] Warsong Banner), Bufftip (Tooltip)
+{
+Warsong Banner
+}
+
+STRING 6559
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Tip (Tooltip - Normal)
+{
+Warsong Banner - [|cffffcc00Level 1|r]
+}
+
+STRING 6560
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Tip (Tooltip - Normal)
+{
+Warsong Banner - [|cffffcc00Level 2|r]
+}
+
+STRING 6561
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Tip (Tooltip - Normal)
+{
+Warsong Banner - [|cffffcc00Level 3|r]
+}
+
+STRING 6562
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Ubertip (Tooltip - Normal - Extended)
+{
+- Warsong Banner - additional 2 armor
+|cff808080- Potion of Rage - additional 50 maximum rage
+- Battle Trophy - additional 3 damage|r
+}
+
+STRING 6563
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Ubertip (Tooltip - Normal - Extended)
+{
+- Warsong Banner - additional 2 armor
+- Potion of Rage - additional 50 maximum rage
+|cff808080- Battle Trophy - additional 3 damage|r
+}
+
+STRING 6564
+// Abilities: A0B9 ([Hellscream] Warsong Banner), Ubertip (Tooltip - Normal - Extended)
+{
+- Warsong Banner - additional 2 armor
+- Potion of Rage - additional 50 maximum rage
+- Battle Trophy - additional 3 damage
+}
+
+STRING 6565
+// Buffs/Effects: B01Z ([Hellscream] Warsong Banner), EditorName (Name (Editor Only))
+{
+[Hellscream] Warsong Banner
+}
+
+STRING 6566
+// Buffs/Effects: B01Z ([Hellscream] Warsong Banner), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Warsong Banner.
 }
 

@@ -240,6 +240,8 @@ trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
 trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
+trigger gg_trg_HellscreamBladeBlade= null
+trigger gg_trg_HellscreamFuelFury= null
 trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
@@ -354,8 +356,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamFuelFury= null
-trigger gg_trg_HellscreamBladeBlade= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -8051,16 +8051,36 @@ function Trig_HellscreamArenaFinish_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_HellscreamArenaFinish_Func002C takes nothing returns boolean
+function Trig_HellscreamArenaFinish_Func001C takes nothing returns boolean
     if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
         return false
     endif
     return true
 endfunction
 
+function Trig_HellscreamArenaFinish_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamArenaFinish_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamArenaFinish_Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_HellscreamArenaFinish_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6271")
-    if ( Trig_HellscreamArenaFinish_Func002C() ) then
+    if ( Trig_HellscreamArenaFinish_Func001C() ) then
         call ShowUnitShow(udg_HellscreamArenaChoose1)
         call RemoveUnit(udg_HellscreamArenaChoose2)
         call SetUnitPositionLoc(udg_HellscreamArenaChoose1, GetUnitLoc(GetTrainedUnit()))
@@ -8068,11 +8088,24 @@ function Trig_HellscreamArenaFinish_Actions takes nothing returns nothing
         call ShowUnitShow(udg_HellscreamArenaChoose2)
         call RemoveUnit(udg_HellscreamArenaChoose1)
         call SetUnitPositionLoc(udg_HellscreamArenaChoose2, GetUnitLoc(GetTrainedUnit()))
+        set udg_HellscreamArenaChoose1=udg_HellscreamArenaChoose2
+    endif
+    if ( Trig_HellscreamArenaFinish_Func002C() ) then
+        call UnitAddAbilityBJ('A0B9', udg_HellscreamArenaChoose1)
+    else
+        if ( Trig_HellscreamArenaFinish_Func002Func001C() ) then
+            call SetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1, 2)
+        else
+            if ( Trig_HellscreamArenaFinish_Func002Func001Func001C() ) then
+                call SetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1, 3)
+            else
+            endif
+        endif
     endif
     call RemoveUnit(GetTrainedUnit())
     set udg_HellscreamArenaChoose1=null
     set udg_HellscreamArenaChoose2=null
-    call SetPlayerTechMaxAllowedSwap('o01L', 0, GetOwningPlayer(GetSpellAbilityUnit()))
+    call SetPlayerTechMaxAllowedSwap('o01L', 0, GetOwningPlayer(GetTrainedUnit()))
 endfunction
 
 //===========================================================================
