@@ -193,6 +193,7 @@ trigger gg_trg_WrynnExp= null
 trigger gg_trg_WrynnUpgradeVeterans= null
 trigger gg_trg_WrynnRiflemanCheetah= null
 trigger gg_trg_WrynnKnightRearAttack= null
+trigger gg_trg_WrynnDummy= null
 trigger gg_trg_WrynnRent= null
 trigger gg_trg_WrynnDeposit= null
 trigger gg_trg_WrynnDepositTimer= null
@@ -341,6 +342,7 @@ trigger gg_trg_SilithusMainQuest= null
 trigger gg_trg_SilithusNestCount= null
 trigger gg_trg_SilithusNestPing= null
 trigger gg_trg_SilithusNestDead= null
+trigger gg_trg_WarsongAddAi= null
 trigger gg_trg_ApiEnemyCreate= null
 trigger gg_trg_ItemGorehowl= null
 trigger gg_trg_ItemAtieshCreate= null
@@ -356,7 +358,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_WrynnDummy= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -7577,12 +7578,22 @@ endfunction
 // Trigger: HellscreamIni
 //===========================================================================
 function Trig_HellscreamIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_HellscreamExecute)
+    call EnableTrigger(gg_trg_HellscreamRage)
+    call EnableTrigger(gg_trg_HellscreamBladeBlade)
+    call EnableTrigger(gg_trg_HellscreamFuelFury)
+    call EnableTrigger(gg_trg_HellscreamRaiderDead)
+    call EnableTrigger(gg_trg_HellscreamTaming)
+    call EnableTrigger(gg_trg_HellscreamSavageFeast)
+    call EnableTrigger(gg_trg_HellscreamChopMeat)
+    call EnableTrigger(gg_trg_HellscreamArenaChoose)
+    call EnableTrigger(gg_trg_HellscreamArenaCancel)
+    call EnableTrigger(gg_trg_HellscreamArenaFinish)
 endfunction
 
 //===========================================================================
 function InitTrig_HellscreamIni takes nothing returns nothing
     set gg_trg_HellscreamIni=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamIni, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddAction(gg_trg_HellscreamIni, function Trig_HellscreamIni_Actions)
 endfunction
 
@@ -7716,6 +7727,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamRage takes nothing returns nothing
     set gg_trg_HellscreamRage=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamRage)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamRage, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamRage, Condition(function Trig_HellscreamRage_Conditions))
     call TriggerAddAction(gg_trg_HellscreamRage, function Trig_HellscreamRage_Actions)
@@ -7780,6 +7792,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamBladeBlade takes nothing returns nothing
     set gg_trg_HellscreamBladeBlade=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamBladeBlade)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamBladeBlade, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamBladeBlade, Condition(function Trig_HellscreamBladeBlade_Conditions))
     call TriggerAddAction(gg_trg_HellscreamBladeBlade, function Trig_HellscreamBladeBlade_Actions)
@@ -7859,6 +7872,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamFuelFury takes nothing returns nothing
     set gg_trg_HellscreamFuelFury=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamFuelFury)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFuelFury, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamFuelFury, Condition(function Trig_HellscreamFuelFury_Conditions))
     call TriggerAddAction(gg_trg_HellscreamFuelFury, function Trig_HellscreamFuelFury_Actions)
@@ -7895,6 +7909,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamRaiderDead takes nothing returns nothing
     set gg_trg_HellscreamRaiderDead=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamRaiderDead)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamRaiderDead, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_HellscreamRaiderDead, Condition(function Trig_HellscreamRaiderDead_Conditions))
     call TriggerAddAction(gg_trg_HellscreamRaiderDead, function Trig_HellscreamRaiderDead_Actions)
@@ -7954,6 +7969,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamTaming takes nothing returns nothing
     set gg_trg_HellscreamTaming=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamTaming)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamTaming, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_HellscreamTaming, Condition(function Trig_HellscreamTaming_Conditions))
     call TriggerAddAction(gg_trg_HellscreamTaming, function Trig_HellscreamTaming_Actions)
@@ -7979,6 +7995,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamSavageFeast takes nothing returns nothing
     set gg_trg_HellscreamSavageFeast=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamSavageFeast)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamSavageFeast, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_HellscreamSavageFeast, Condition(function Trig_HellscreamSavageFeast_Conditions))
     call TriggerAddAction(gg_trg_HellscreamSavageFeast, function Trig_HellscreamSavageFeast_Actions)
@@ -8001,6 +8018,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamChopMeat takes nothing returns nothing
     set gg_trg_HellscreamChopMeat=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamChopMeat)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamChopMeat, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_HellscreamChopMeat, Condition(function Trig_HellscreamChopMeat_Conditions))
     call TriggerAddAction(gg_trg_HellscreamChopMeat, function Trig_HellscreamChopMeat_Actions)
@@ -8025,13 +8043,11 @@ endfunction
 
 function Trig_HellscreamArenaChoose_Actions takes nothing returns nothing
     if ( Trig_HellscreamArenaChoose_Func001C() ) then
-        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6274")
         set udg_HellscreamArenaChoose2=GetSpellTargetUnit()
         call ShowUnitHide(udg_HellscreamArenaChoose2)
         call SetPlayerTechMaxAllowedSwap('o01L', 1, GetOwningPlayer(GetSpellAbilityUnit()))
         call IssueTrainOrderByIdBJ(GetSpellAbilityUnit(), 'o01L')
     else
-        call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6273")
         set udg_HellscreamArenaChoose1=GetSpellTargetUnit()
         call ShowUnitHide(udg_HellscreamArenaChoose1)
     endif
@@ -8040,6 +8056,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamArenaChoose takes nothing returns nothing
     set gg_trg_HellscreamArenaChoose=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamArenaChoose)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaChoose, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_HellscreamArenaChoose, Condition(function Trig_HellscreamArenaChoose_Conditions))
     call TriggerAddAction(gg_trg_HellscreamArenaChoose, function Trig_HellscreamArenaChoose_Actions)
@@ -8053,7 +8070,6 @@ function Trig_HellscreamArenaCancel_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_HellscreamArenaCancel_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6270")
     call ShowUnitShow(udg_HellscreamArenaChoose1)
     call ShowUnitShow(udg_HellscreamArenaChoose2)
     set udg_HellscreamArenaChoose1=null
@@ -8138,6 +8154,7 @@ endfunction
 //===========================================================================
 function InitTrig_HellscreamArenaFinish takes nothing returns nothing
     set gg_trg_HellscreamArenaFinish=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamArenaFinish)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaFinish, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(gg_trg_HellscreamArenaFinish, Condition(function Trig_HellscreamArenaFinish_Conditions))
     call TriggerAddAction(gg_trg_HellscreamArenaFinish, function Trig_HellscreamArenaFinish_Actions)
@@ -12616,6 +12633,53 @@ function InitTrig_SilithusNestDead takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: WarsongAddAi
+//===========================================================================
+function Trig_WarsongAddAi_Conditions takes nothing returns boolean
+    if ( not ( udg_Map == "warsong" ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongAddAi_Func001Func001Func003C takes nothing returns boolean
+    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongAddAi_Func001Func001C takes nothing returns boolean
+    if ( not Trig_WarsongAddAi_Func001Func001Func003C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_WarsongAddAi_Func001A takes nothing returns nothing
+    if ( Trig_WarsongAddAi_Func001Func001C() ) then
+        call MeleeStartingUnitsForPlayer(GetPlayerRace(GetEnumPlayer()), GetEnumPlayer(), GetPlayerStartLocationLoc(GetEnumPlayer()), false)
+        call MeleeStartingAI()
+    else
+    endif
+endfunction
+
+function Trig_WarsongAddAi_Actions takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function Trig_WarsongAddAi_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_WarsongAddAi takes nothing returns nothing
+    set gg_trg_WarsongAddAi=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_WarsongAddAi, 30.00)
+    call TriggerAddCondition(gg_trg_WarsongAddAi, Condition(function Trig_WarsongAddAi_Conditions))
+    call TriggerAddAction(gg_trg_WarsongAddAi, function Trig_WarsongAddAi_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ItemGorehowl
 //===========================================================================
 
@@ -13462,6 +13526,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_SilithusNestCount()
     call InitTrig_SilithusNestPing()
     call InitTrig_SilithusNestDead()
+    call InitTrig_WarsongAddAi()
     call InitTrig_ItemGorehowl()
     call InitTrig_ItemAtieshCreate()
     call InitTrig_ItemAtieshTeleport()

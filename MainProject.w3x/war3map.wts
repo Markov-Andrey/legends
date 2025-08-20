@@ -19392,21 +19392,6 @@ STRING 6269
 [Hellscream] Arena
 }
 
-STRING 6270
-{
-+Cancel
-}
-
-STRING 6273
-{
-+Choose1
-}
-
-STRING 6274
-{
-+Choose2
-}
-
 STRING 6275
 // Units: n00S ([Hellscream] Ogre Mauler), Tip (Tooltip - Basic)
 {
