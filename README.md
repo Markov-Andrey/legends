@@ -4,7 +4,7 @@
 
 ## PvE (2):
 - **Alterac's Justice** - Intercept 5 waves of caravans
-- **Voices of Sands** - Destroy all silithid nests
+- **Voices of Sands** - Destroy all silithid nests 
 
 ## PvP (2x2):
 - **Warsong Gylch** - capture 3 flags and defend yours
