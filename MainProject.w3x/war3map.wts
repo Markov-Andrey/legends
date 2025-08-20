@@ -10734,7 +10734,7 @@ STRING 4310
 }
 
 STRING 4312
-// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -16986,7 +16986,7 @@ W
 }
 
 STRING 5714
-// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
+// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
 {
 S
 }
@@ -18209,13 +18209,13 @@ A
 }
 
 STRING 5979
-// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 5980
-// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
+// Upgrades: R031 (Defend), Hotkey (Hotkey)
 {
 S
 }
@@ -18954,12 +18954,6 @@ STRING 6176
 Kel'Thuzad
 }
 
-STRING 6177
-// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
-{
-|cFFFF4B3DKel'Thuzad|R
-}
-
 STRING 6178
 // Abilities: A0AB ([UI] Legends: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
 {
@@ -18970,12 +18964,6 @@ STRING 6179
 // Abilities: A0AB ([UI] Legends: Kel'Thuzad), Name (Name)
 {
 [UI] Legends: Kel'Thuzad
-}
-
-STRING 6180
-// Upgrades: R02O (Brute Strength), Hotkey (Hotkey)
-{
-S
 }
 
 STRING 6181
@@ -19156,12 +19144,6 @@ STRING 6214
 // Abilities: A0AD ([UI] Legends: Hellscream), Name (Name)
 {
 [UI] Legends: Hellscream
-}
-
-STRING 6215
-// Upgrades: R031 (Defend), Hotkey (Hotkey)
-{
-S
 }
 
 STRING 6217
@@ -20802,5 +20784,23 @@ STRING 6566
 // Buffs/Effects: B01Z ([Hellscream] Warsong Banner), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Warsong Banner.
+}
+
+STRING 6567
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFFA068FFKel'Thuzad|R
+}
+
+STRING 6568
+// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 6569
+// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+{
+F
 }
 
