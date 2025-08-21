@@ -15522,7 +15522,7 @@ Q
 }
 
 STRING 5423
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AP ([Hellscream] Whirlwind), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -16962,7 +16962,7 @@ R
 }
 
 STRING 5710
-// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AO ([Hellscream] Execute), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16980,7 +16980,7 @@ Q
 }
 
 STRING 5713
-// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+// Abilities: A0AP ([Hellscream] Whirlwind), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -19970,18 +19970,6 @@ STRING 6397
 Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA1> damage per second to nearby enemy land units. |nLasts 1 second
 }
 
-STRING 6398
-// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
-{
-Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA2> damage per second to nearby enemy land units. |nLasts 2 second
-}
-
-STRING 6399
-// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
-{
-Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA3> damage per second to nearby enemy land units. |nLasts 3 second
-}
-
 STRING 6400
 // Abilities: A0AQ ([Hellscream] Critical Strike), Name (Name)
 {
@@ -20546,12 +20534,6 @@ STRING 6530
 Research Blade to Blade
 }
 
-STRING 6531
-// Upgrades: R03K (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Improves the fighting capabilities of Grunts and Raider with a <R03K,base1> hit point increase, and <R03K,base2> bonus attack damage.
-}
-
 STRING 6532
 // Upgrades: R03N (Reinforced Defenses), Ubertip (Tooltip - Extended)
 {
@@ -20897,5 +20879,136 @@ STRING 6585
 |cffffcc00#melee
 |R
 Mighty warrior. Standard warrior of the Ogre Legion. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6586
+// Units: o017 ([Hellscream] Pig Farm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #food
+|R
+TProvides food, which increases the maximum number of units that can be trained. Can learn the Savage Feast upgrade.
+}
+
+STRING 6588
+// Units: o01A ([Hellscream] Beastiary), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Trains Raiders, Raiders Spearthrower and War Drummer. |nAlso contains the Mount's Escape/Taming,  and War Drums upgrades.
+}
+
+STRING 6589
+// Units: o01B ([Hellscream] Watch Tower), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+Defensive structure. Can learn the Reinforced Defenses upgrade. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 6590
+// Units: o01C ([Hellscream] Mage Tent), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Spellcaster production building. Trains Warlocs. |nAlso contains spell upgrades for Warlocs.
+}
+
+STRING 6591
+// Units: o01D ([Hellscream] Ogre Reservation), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack
+|R
+Trains Ogre Mauler and Ogre Magi.
+}
+
+STRING 6592
+// Units: o01K ([Hellscream] Arena), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#unique
+|R
+Two units will fight, the winner will receive an upgrade, and the loser will die
+}
+
+STRING 6593
+// Abilities: A0BB ([Hellscream] War Drums), Name (Name)
+{
+[Hellscream] War Drums
+}
+
+STRING 6594
+// Upgrades: R03K (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of Grunts and Raider with a 100 hit point increase, and 3 bonus attack damage.
+}
+
+STRING 6595
+// Abilities: A0AO ([Hellscream] Execute), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 6596
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA2> damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6597
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA3> damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6598
+// Abilities: A0AP ([Hellscream] Whirlwind), Researchubertip (Tooltip - Learn - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells.
+|n|cffffcc00Level 1|r – dealing 125 damage per second to nearby enemy land units.
+|cffffcc00Level 2|r – dealing 175 damage per second to nearby enemy land units.
+|cffffcc00Level 3|r –  dealing 225 damage per second to nearby enemy land units/
+}
+
+STRING 6599
+// Abilities: A0AT ([Hellscream] Hellscream), Researchhotkey (Hotkey - Learn)
+{
+H
+}
+
+STRING 6600
+// Abilities: A0AT ([Hellscream] Hellscream), Hotkey (Hotkey - Normal)
+{
+H
+}
+
+STRING 6601
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 6602
+// Upgrades: R02M (Brute Strength), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 6603
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 6604
+// Abilities: A0AS ([Hellscream] War Song), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A0AS,DataA1,%>% bonus to damage. |nLasts <A0AS,Dur1> seconds.
+}
+
+STRING 6605
+// Units: o019 ([Hellscream] War Forge), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#upgrade #storage
+|R
+Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for improved melee and ranged weapons.
 }
 

@@ -7881,10 +7881,7 @@ endfunction
 //===========================================================================
 // Trigger: HellscreamRaiderDead
 //===========================================================================
-function Trig_HellscreamRaiderDead_Func001C takes nothing returns boolean
-    if ( ( GetPlayerTechCountSimple('R03L', GetOwningPlayer(GetDyingUnit())) == 1 ) ) then
-        return true
-    endif
+function Trig_HellscreamRaiderDead_Func001Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetDyingUnit()) == 'o01H' ) ) then
         return true
     endif
@@ -7892,6 +7889,16 @@ function Trig_HellscreamRaiderDead_Func001C takes nothing returns boolean
         return true
     endif
     return false
+endfunction
+
+function Trig_HellscreamRaiderDead_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R03L', GetOwningPlayer(GetDyingUnit())) == 1 ) ) then
+        return false
+    endif
+    if ( not Trig_HellscreamRaiderDead_Func001Func002C() ) then
+        return false
+    endif
+    return true
 endfunction
 
 function Trig_HellscreamRaiderDead_Conditions takes nothing returns boolean
