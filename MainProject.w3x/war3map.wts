@@ -11867,30 +11867,6 @@ STRING 4534
 Restores 1.0% mana when attacking
 }
 
-STRING 4539
-// Units: u000 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
-{
-blue
-}
-
-STRING 4541
-// Units: u007 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
-{
-green
-}
-
-STRING 4543
-// Units: u008 ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
-{
-purple
-}
-
-STRING 4545
-// Units: u00D ([Special] Fireworks), EditorSuffix (Name - Editor Suffix)
-{
-red
-}
-
 STRING 4546
 // Abilities: A010 ([UI] Difficulty: Mythic (+1)), Tip (Tooltip - Normal)
 {
@@ -15943,30 +15919,6 @@ STRING 5497
 // Units: u004 ([Special] Dummy), Name (Name)
 {
 [Special] Dummy
-}
-
-STRING 5498
-// Units: u000 ([Special] Fireworks), Name (Name)
-{
-[Special] Fireworks
-}
-
-STRING 5499
-// Units: u007 ([Special] Fireworks), Name (Name)
-{
-[Special] Fireworks
-}
-
-STRING 5500
-// Units: u008 ([Special] Fireworks), Name (Name)
-{
-[Special] Fireworks
-}
-
-STRING 5501
-// Units: u00D ([Special] Fireworks), Name (Name)
-{
-[Special] Fireworks
 }
 
 STRING 5504
