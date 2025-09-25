@@ -8512,70 +8512,6 @@
         "validated": true
     },
     {
-        "path": "Special\\Win",
-        "name": "Win",
-        "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Special\\Win\\Fireworksblue.mdx",
-        "name": "Fireworksblue.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Special\\Win\\Fireworksgreen.mdx",
-        "name": "Fireworksgreen.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Special\\Win\\Fireworkspurple.mdx",
-        "name": "Fireworkspurple.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Special\\Win\\Fireworksred.mdx",
-        "name": "Fireworksred.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "TerrainArt",
-        "name": "TerrainArt",
-        "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "TerrainArt\\Barrens",
-        "name": "Barrens",
-        "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "TerrainArt\\Barrens\\Barrens_DirtRough.blp",
-        "name": "Barrens_DirtRough.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Textures",
         "name": "Textures",
         "type": "directory",
@@ -11808,14 +11744,6 @@
         "validated": true
     },
     {
-        "path": "Legends\\Hellscream\\Arena\\BTNDragonArena.blp",
-        "name": "BTNDragonArena.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
         "path": "Legends\\Hellscream\\Arena\\BTNHellscreamOrcAttack.blp",
         "name": "BTNHellscreamOrcAttack.blp",
         "type": "file",
@@ -11826,22 +11754,6 @@
     {
         "path": "Legends\\Hellscream\\Arena\\BTNHellscreamOrcHoldPosition.blp",
         "name": "BTNHellscreamOrcHoldPosition.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Hellscream\\Arena\\DISBTNDragonArena.blp",
-        "name": "DISBTNDragonArena.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": true
-    },
-    {
-        "path": "Legends\\Hellscream\\Arena\\DragonArena.mdx",
-        "name": "DragonArena.mdx",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -12606,5 +12518,717 @@
         "copy": true,
         "copy_child": "",
         "validated": true
+    },
+    {
+        "path": "OrcClansRoar.blp",
+        "name": "OrcClansRoar.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "SwordBuffTexture.blp",
+        "name": "SwordBuffTexture.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\BTNOrcishFightingGrounds.blp",
+        "name": "BTNOrcishFightingGrounds.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\BTN_Hellscream_OrcBanner.blp",
+        "name": "BTN_Hellscream_OrcBanner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\Orc_fight_grounds2.mdx",
+        "name": "Orc_fight_grounds2.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Arena\\PAS_Hellscream_OrcBanner.blp",
+        "name": "PAS_Hellscream_OrcBanner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Boar\\BTN_Hellscream_INV_Misc_Food_14.blp",
+        "name": "BTN_Hellscream_INV_Misc_Food_14.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Boar\\PAS_Hellscream_INV_Misc_Food_14.blp",
+        "name": "PAS_Hellscream_INV_Misc_Food_14.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Eye",
+        "name": "Eye",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Eye\\BTN_Hellscream_KilgroggEye.blp",
+        "name": "BTN_Hellscream_KilgroggEye.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Eye\\Hellscream_EvilEye.mdx",
+        "name": "Hellscream_EvilEye.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt\\BTN_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "name": "BTN_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\BTNGrommashHellscream.blp",
+        "name": "BTNGrommashHellscream.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\BTNHellscreamExecute.blp",
+        "name": "BTNHellscreamExecute.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\BTN_Hellscream_ability_warrior_warcry.blp",
+        "name": "BTN_Hellscream_ability_warrior_warcry.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo",
+        "name": "Kodo",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo\\ATC_Hellscream_war_song.blp",
+        "name": "ATC_Hellscream_war_song.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo\\BTN_Hellscream_ability_mount_kodo_03.blp",
+        "name": "BTN_Hellscream_ability_mount_kodo_03.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo\\BTN_Hellscream_war_song.blp",
+        "name": "BTN_Hellscream_war_song.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo\\WarDrummerOrcClefthoofV1.00.mdx",
+        "name": "WarDrummerOrcClefthoofV1.00.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo\\Warsong_RoarCaster.mdx",
+        "name": "Warsong_RoarCaster.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Kodo\\Warsong_RoarTarget.mdx",
+        "name": "Warsong_RoarTarget.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreBattleMagi\\ATC_Hellscream_BloodLust.blp",
+        "name": "ATC_Hellscream_BloodLust.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreBattleMagi\\BTN_Hellscream_BloodLust.BLP",
+        "name": "BTN_Hellscream_BloodLust.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreBattleMagi\\BTN_Hellscream_Ogre_Mage.blp",
+        "name": "BTN_Hellscream_Ogre_Mage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreMauler\\ATC_Hellscream_ability_warrior_decisivestrike.blp",
+        "name": "ATC_Hellscream_ability_warrior_decisivestrike.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreMauler\\BTN_Hellscream_Ogre.blp",
+        "name": "BTN_Hellscream_Ogre.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\OgreMauler\\BTN_Hellscream_ability_warrior_decisivestrike.blp",
+        "name": "BTN_Hellscream_ability_warrior_decisivestrike.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Peon\\PASINV_Misc_Bag_09_Red.blp",
+        "name": "PASINV_Misc_Bag_09_Red.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Raider\\PAS_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "name": "PAS_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\RaiderSpearthrower\\ATC_Hellscream_ability_ensnare.blp",
+        "name": "ATC_Hellscream_ability_ensnare.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Shredder",
+        "name": "Shredder",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Shredder\\BTN_Hellscream_ShredderSaws.blp",
+        "name": "BTN_Hellscream_ShredderSaws.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Shredder\\Hellscream_Saw_Missile.mdx",
+        "name": "Hellscream_Saw_Missile.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades",
+        "name": "Upgrades",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades\\BTN_Hellscream_EmberBlade.blp",
+        "name": "BTN_Hellscream_EmberBlade.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades\\BTN_Hellscream_OrcRage12.blp",
+        "name": "BTN_Hellscream_OrcRage12.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades\\BTN_Hellscream_UpgradeAxe1.BLP",
+        "name": "BTN_Hellscream_UpgradeAxe1.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades\\BTN_Hellscream_UpgradeAxe2.BLP",
+        "name": "BTN_Hellscream_UpgradeAxe2.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades\\BTN_Hellscream_UpgradeAxe3.BLP",
+        "name": "BTN_Hellscream_UpgradeAxe3.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Upgrades\\BTN_Hellscream_WC1UnholyArmorRemasteredAlt.blp",
+        "name": "BTN_Hellscream_WC1UnholyArmorRemasteredAlt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\ATC_Hellscream_Runes.blp",
+        "name": "ATC_Hellscream_Runes.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BTN_Hellscream_OrcRage.blp",
+        "name": "BTN_Hellscream_OrcRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BTN_Hellscream_Runes.blp",
+        "name": "BTN_Hellscream_Runes.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BTN_Hellscream_WC1WarlockAdeptTraining.blp",
+        "name": "BTN_Hellscream_WC1WarlockAdeptTraining.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BTN_Hellscream_WC1WarlockMasterTraining.blp",
+        "name": "BTN_Hellscream_WC1WarlockMasterTraining.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BoilingBlood_buff.mdx",
+        "name": "BoilingBlood_buff.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\RedArcaneMissile004.mdx",
+        "name": "RedArcaneMissile004.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\SwordBuff_Origin.mdx",
+        "name": "SwordBuff_Origin.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\UPG_Hellscream_WC1WarlockAdeptTraining.blp",
+        "name": "UPG_Hellscream_WC1WarlockAdeptTraining.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Wrynn\\Barracks\\BTN_Wrynn_TrainingDummy.blp",
+        "name": "BTN_Wrynn_TrainingDummy.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Wrynn\\Barracks\\WrynnDummy.mdx",
+        "name": "WrynnDummy.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Hellscream_BloodLust.blp",
+        "name": "DISATC_Hellscream_BloodLust.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Hellscream_Runes.blp",
+        "name": "DISATC_Hellscream_Runes.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Hellscream_ability_ensnare.blp",
+        "name": "DISATC_Hellscream_ability_ensnare.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Hellscream_ability_warrior_decisivestrike.blp",
+        "name": "DISATC_Hellscream_ability_warrior_decisivestrike.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Hellscream_war_song.blp",
+        "name": "DISATC_Hellscream_war_song.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGrommashHellscream.blp",
+        "name": "DISBTNGrommashHellscream.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNHellscreamExecute.blp",
+        "name": "DISBTNHellscreamExecute.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNOrcishFightingGrounds.blp",
+        "name": "DISBTNOrcishFightingGrounds.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "name": "DISBTN_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_BloodLust.BLP",
+        "name": "DISBTN_Hellscream_BloodLust.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_EmberBlade.blp",
+        "name": "DISBTN_Hellscream_EmberBlade.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_INV_Misc_Food_14.blp",
+        "name": "DISBTN_Hellscream_INV_Misc_Food_14.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_KilgroggEye.blp",
+        "name": "DISBTN_Hellscream_KilgroggEye.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Ogre.blp",
+        "name": "DISBTN_Hellscream_Ogre.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Ogre_Mage.blp",
+        "name": "DISBTN_Hellscream_Ogre_Mage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_OrcBanner.blp",
+        "name": "DISBTN_Hellscream_OrcBanner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_OrcRage.blp",
+        "name": "DISBTN_Hellscream_OrcRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_OrcRage12.blp",
+        "name": "DISBTN_Hellscream_OrcRage12.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Runes.blp",
+        "name": "DISBTN_Hellscream_Runes.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_ShredderSaws.blp",
+        "name": "DISBTN_Hellscream_ShredderSaws.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_UpgradeAxe1.BLP",
+        "name": "DISBTN_Hellscream_UpgradeAxe1.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_UpgradeAxe2.BLP",
+        "name": "DISBTN_Hellscream_UpgradeAxe2.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_UpgradeAxe3.BLP",
+        "name": "DISBTN_Hellscream_UpgradeAxe3.BLP",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_WC1UnholyArmorRemasteredAlt.blp",
+        "name": "DISBTN_Hellscream_WC1UnholyArmorRemasteredAlt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_WC1WarlockAdeptTraining.blp",
+        "name": "DISBTN_Hellscream_WC1WarlockAdeptTraining.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_WC1WarlockMasterTraining.blp",
+        "name": "DISBTN_Hellscream_WC1WarlockMasterTraining.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_ability_mount_kodo_03.blp",
+        "name": "DISBTN_Hellscream_ability_mount_kodo_03.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_ability_warrior_decisivestrike.blp",
+        "name": "DISBTN_Hellscream_ability_warrior_decisivestrike.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_ability_warrior_warcry.blp",
+        "name": "DISBTN_Hellscream_ability_warrior_warcry.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_war_song.blp",
+        "name": "DISBTN_Hellscream_war_song.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Wrynn_TrainingDummy.blp",
+        "name": "DISBTN_Wrynn_TrainingDummy.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASINV_Misc_Bag_09_Red.blp",
+        "name": "DISPASINV_Misc_Bag_09_Red.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "name": "DISPAS_Hellscream_Ability_Hunter_BeastTaming.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellscream_INV_Misc_Food_14.blp",
+        "name": "DISPAS_Hellscream_INV_Misc_Food_14.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellscream_OrcBanner.blp",
+        "name": "DISPAS_Hellscream_OrcBanner.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellsream_WarsongClan.blp",
+        "name": "DISPAS_Hellsream_WarsongClan.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Special\\UI\\PAS_Hellsream_WarsongClan.blp",
+        "name": "PAS_Hellsream_WarsongClan.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
     }
 ]
