@@ -19652,17 +19652,17 @@ Train Lazy Peon
 
 STRING 6351
 {
-Warsong
+:project_name
 }
 
 STRING 6352
 {
-PvP 2v2
+:type_game
 }
 
 STRING 6353
 {
-Some description for Warsong
+:description
 }
 
 STRING 6354
