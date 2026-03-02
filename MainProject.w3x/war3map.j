@@ -357,6 +357,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_HellscreamSuicide= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1351,6 +1352,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
+    set u=BlzCreateUnitWithSkin(p, 'h02T', - 3229.0, - 5417.4, 36.820, 'h02T')
+    set u=BlzCreateUnitWithSkin(p, 'h02T', - 3116.0, - 5470.8, 54.747, 'h02T')
+    set u=BlzCreateUnitWithSkin(p, 'h02T', - 3205.3, - 5547.4, 51.268, 'h02T')
 endfunction
 
 //===========================================================================
@@ -1410,12 +1414,15 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3170.5, - 1720.5, 242.294, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1808.8, - 4952.5, 206.991, 'ndtr')
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1789.7, - 5075.1, 189.773, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', 5155.5, - 3371.8, 136.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 5124.4, - 3068.7, 114.511, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1763.4, - 5201.5, 189.773, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')
@@ -7666,6 +7673,9 @@ function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01E' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetAttacker()) == 'h02T' ) ) then
+        return true
+    endif
     return false
 endfunction
 
@@ -7834,6 +7844,9 @@ function Trig_HellscreamFuelFury_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01E' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'h02T' ) ) then
+        return true
+    endif
     return false
 endfunction
 
@@ -7875,6 +7888,28 @@ function InitTrig_HellscreamFuelFury takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFuelFury, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamFuelFury, Condition(function Trig_HellscreamFuelFury_Conditions))
     call TriggerAddAction(gg_trg_HellscreamFuelFury, function Trig_HellscreamFuelFury_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamSuicide
+//===========================================================================
+function Trig_HellscreamSuicide_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'Asds' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamSuicide_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6618")
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamSuicide takes nothing returns nothing
+    set gg_trg_HellscreamSuicide=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamSuicide, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamSuicide, Condition(function Trig_HellscreamSuicide_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamSuicide, function Trig_HellscreamSuicide_Actions)
 endfunction
 
 //===========================================================================
@@ -13371,6 +13406,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_HellscreamRage()
     call InitTrig_HellscreamBladeBlade()
     call InitTrig_HellscreamFuelFury()
+    call InitTrig_HellscreamSuicide()
     call InitTrig_HellscreamRaiderDead()
     call InitTrig_HellscreamTaming()
     call InitTrig_HellscreamSavageFeast()

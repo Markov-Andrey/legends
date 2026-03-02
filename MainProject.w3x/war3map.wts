@@ -19188,18 +19188,6 @@ STRING 6240
 Build Mage Tent
 }
 
-STRING 6243
-// Units: o01D ([Hellscream] Ogre Reservation), Name (Name)
-{
-[Hellscream] Ogre Reservation
-}
-
-STRING 6244
-// Units: o01D ([Hellscream] Ogre Reservation), Tip (Tooltip - Basic)
-{
-Build Ogre Reservation
-}
-
 STRING 6245
 // Units: o01E ([Hellscream] Boar), Name (Name)
 {
@@ -20866,7 +20854,7 @@ Spellcaster production building. Trains Warlocs. |nAlso contains spell upgrades 
 }
 
 STRING 6591
-// Units: o01D ([Hellscream] Ogre Reservation), Ubertip (Tooltip - Extended)
+// Units: o01D ([Hellscream] Ogre Mound), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#barrack
 |R
@@ -20962,5 +20950,46 @@ STRING 6605
 |cffffcc00#upgrade #storage
 |R
 Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for improved melee and ranged weapons.
+}
+
+STRING 6606
+// Units: o01D ([Hellscream] Ogre Mound), Name (Name)
+{
+[Hellscream] Ogre Mound
+}
+
+STRING 6607
+// Units: o01D ([Hellscream] Ogre Mound), Tip (Tooltip - Basic)
+{
+Build Ogre Mound
+}
+
+STRING 6608
+// Units: o01O ([Hellscream] Goblin Alchemist), Name (Name)
+{
+[Hellscream] Goblin Alchemist
+}
+
+STRING 6609
+// Units: o01O ([Hellscream] Goblin Alchemist), Tip (Tooltip - Basic)
+{
+Build Goblin Alchemist
+}
+
+STRING 6610
+// Units: h02T ([Hellscream] Goblin Sapper), Name (Name)
+{
+[Hellscream] Goblin Sapper
+}
+
+STRING 6611
+// Units: h02T ([Hellscream] Goblin Sapper), Tip (Tooltip - Basic)
+{
+Train Goblin Sapper
+}
+
+STRING 6618
+{
++++suicide+++
 }
 
