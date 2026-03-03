@@ -243,6 +243,7 @@ trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
 trigger gg_trg_HellscreamBladeBlade= null
 trigger gg_trg_HellscreamFuelFury= null
+trigger gg_trg_HellscreamSuicide= null
 trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
@@ -357,7 +358,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamSuicide= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -380,7 +380,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI___CreateIcon takes nothing returns nothing
+    function ARTHASUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -416,8 +416,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI___init takes nothing returns nothing
-        call ARTHASUI___CreateIcon()
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
     endfunction
 
 
@@ -648,7 +648,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -680,15 +680,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI___CreateIcon takes nothing returns nothing
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -743,8 +743,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI___init takes nothing returns nothing
-        call WHITEMANEUI___CreateIcon()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
@@ -1352,9 +1352,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
-    set u=BlzCreateUnitWithSkin(p, 'h02T', - 3229.0, - 5417.4, 36.820, 'h02T')
-    set u=BlzCreateUnitWithSkin(p, 'h02T', - 3116.0, - 5470.8, 54.747, 'h02T')
-    set u=BlzCreateUnitWithSkin(p, 'h02T', - 3205.3, - 5547.4, 51.268, 'h02T')
 endfunction
 
 //===========================================================================
@@ -1414,15 +1411,12 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3170.5, - 1720.5, 242.294, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1808.8, - 4952.5, 206.991, 'ndtr')
-    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1789.7, - 5075.1, 189.773, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', 5155.5, - 3371.8, 136.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 5124.4, - 3068.7, 114.511, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1763.4, - 5201.5, 189.773, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')
@@ -7658,9 +7652,6 @@ function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01I' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'n00P' ) ) then
-        return true
-    endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'n00S' ) ) then
         return true
     endif
@@ -7755,9 +7746,6 @@ function Trig_HellscreamBladeBlade_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01H' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'n00P' ) ) then
-        return true
-    endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'n00S' ) ) then
         return true
     endif
@@ -7827,9 +7815,6 @@ function Trig_HellscreamFuelFury_Func002Func002C takes nothing returns boolean
         return true
     endif
     if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01I' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'n00P' ) ) then
         return true
     endif
     if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'n00S' ) ) then
@@ -13641,12 +13626,12 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI___init")
+call ExecuteFunc("ARTHASUI__init")
 call ExecuteFunc("FrameLoader___init_function")
 call ExecuteFunc("REFORGEDUIMAKER___init")
 call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("WHITEMANEUI___init")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
 call ExecuteFunc("CustomConsoleUI___init_function")
 
     call InitGlobals()

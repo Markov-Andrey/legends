@@ -19170,24 +19170,6 @@ STRING 6236
 [Hellscream] Beastiary
 }
 
-STRING 6237
-// Units: o01B ([Hellscream] Watch Tower), Name (Name)
-{
-[Hellscream] Watch Tower
-}
-
-STRING 6239
-// Units: o01C ([Hellscream] Mage Tent), Name (Name)
-{
-[Hellscream] Mage Tent
-}
-
-STRING 6240
-// Units: o01C ([Hellscream] Mage Tent), Tip (Tooltip - Basic)
-{
-Build Mage Tent
-}
-
 STRING 6245
 // Units: o01E ([Hellscream] Boar), Name (Name)
 {
@@ -20156,18 +20138,6 @@ STRING 6457
 rats
 }
 
-STRING 6458
-// Units: o019 ([Hellscream] War Forge), Name (Name)
-{
-[Hellscream] War Forge
-}
-
-STRING 6459
-// Units: o019 ([Hellscream] War Forge), Tip (Tooltip - Basic)
-{
-Build War Forge
-}
-
 STRING 6460
 // Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
 {
@@ -20268,24 +20238,6 @@ STRING 6477
 // Abilities: A0AX ([Hellscream] Harvest), Name (Name)
 {
 [Hellscream] Harvest
-}
-
-STRING 6482
-// Abilities: A0AY ([Hellscream] Circular Saw), Name (Name)
-{
-[Hellscream] Circular Saw
-}
-
-STRING 6483
-// Abilities: A0AY ([Hellscream] Circular Saw), Tip (Tooltip - Normal)
-{
-Circular Saw
-}
-
-STRING 6484
-// Abilities: A0AY ([Hellscream] Circular Saw), Ubertip (Tooltip - Normal - Extended)
-{
-Shredder launches a spinning circular saw at a targeted mechanical unit or building up to 600 range. Upon impact, it deals <A0AY,DataA1> damage and stuns the target for <A0AY,Dur1> seconds.
 }
 
 STRING 6492
@@ -20837,22 +20789,6 @@ STRING 6588
 Trains Raiders, Raiders Spearthrower and War Drummer. |nAlso contains the Mount's Escape/Taming,  and War Drums upgrades.
 }
 
-STRING 6589
-// Units: o01B ([Hellscream] Watch Tower), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#guard
-|R
-Defensive structure. Can learn the Reinforced Defenses upgrade. |n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 6590
-// Units: o01C ([Hellscream] Mage Tent), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack
-|R
-Spellcaster production building. Trains Warlocs. |nAlso contains spell upgrades for Warlocs.
-}
-
 STRING 6591
 // Units: o01D ([Hellscream] Ogre Mound), Ubertip (Tooltip - Extended)
 {
@@ -20945,7 +20881,7 @@ Gives friendly nearby units a <A0AS,DataA1,%>% bonus to damage. |nLasts <A0AS,Du
 }
 
 STRING 6605
-// Units: o019 ([Hellscream] War Forge), Ubertip (Tooltip - Extended)
+// Units: o019 ([Hellscream] Lumberyard), Ubertip (Tooltip - Extended)
 {
 |cffffcc00#upgrade #storage
 |R
@@ -20991,5 +20927,41 @@ Train Goblin Sapper
 STRING 6618
 {
 +++suicide+++
+}
+
+STRING 6619
+// Units: o019 ([Hellscream] Lumberyard), Name (Name)
+{
+[Hellscream] Lumberyard
+}
+
+STRING 6620
+// Units: o019 ([Hellscream] Lumberyard), Tip (Tooltip - Basic)
+{
+Build Lumberyard
+}
+
+STRING 6621
+// Abilities: A0BC ([Hellscream] Shredder), Name (Name)
+{
+[Hellscream] Shredder
+}
+
+STRING 6622
+// Abilities: A0BC ([Hellscream] Shredder), Tip (Tooltip - Normal)
+{
+Shredder
+}
+
+STRING 6623
+// Abilities: A0AY ([Hellscream] Spiked Barricades), Name (Name)
+{
+[Hellscream] Spiked Barricades
+}
+
+STRING 6624
+// Upgrades: R03Q (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+[Hellscream] Spiked Barricades
 }
 
