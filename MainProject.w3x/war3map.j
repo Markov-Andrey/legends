@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
+constant boolean CustomConsoleUI__workerFace= true
         
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -128,8 +128,6 @@ player udg_PlayerKelthuzad= null
 rect udg_WarsongZoneOrc= null
 rect udg_WarsongZoneNightelf= null
 player udg_PlayerHellscream= null
-unit udg_HellscreamArenaChoose1= null
-unit udg_HellscreamArenaChoose2= null
 integer udg_WarsongCountNightelf= 0
 integer udg_WarsongCountOrc= 0
 
@@ -248,9 +246,6 @@ trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
 trigger gg_trg_HellscreamChopMeat= null
-trigger gg_trg_HellscreamArenaChoose= null
-trigger gg_trg_HellscreamArenaCancel= null
-trigger gg_trg_HellscreamArenaFinish= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
 trigger gg_trg_Mythic2Vampiric= null
@@ -358,6 +353,10 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_HellscreamWorgBreeding= null
+trigger gg_trg_HellscreamTraining= null
+trigger gg_trg_HellscreamTrainingDebug= null
+trigger gg_trg_HellscreamWoodburner= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -428,24 +427,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -505,15 +504,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -763,7 +762,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -774,7 +773,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -794,10 +793,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -818,11 +817,11 @@ endglobals
             // Requires a native existing only in Reforged
             
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3), 0)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3), 0)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
 
 
 
@@ -830,11 +829,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -855,19 +854,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -1027,11 +1026,11 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -1352,6 +1351,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
+    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3517.2, - 5743.2, 257.157, 'h02U')
+    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3787.2, - 5638.5, 257.157, 'h02U')
+    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3281.5, - 5919.6, 257.157, 'h02U')
 endfunction
 
 //===========================================================================
@@ -1417,6 +1419,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 2039.0, - 4891.6, 111.668, 'ndtr')
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 2011.1, - 4975.2, 78.390, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')
@@ -1610,8 +1614,7 @@ function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
         // Hellscream
         call SetPlayerTechMaxAllowedSwap('O013', 1, GetEnumPlayer())
         call SetPlayerTechMaxAllowedSwap('o016', 1, GetEnumPlayer())
-        call SetPlayerTechMaxAllowedSwap('o01K', 1, GetEnumPlayer())
-        call SetPlayerTechMaxAllowedSwap('o01L', 0, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('o01K', 4, GetEnumPlayer())
     else
     endif
 endfunction
@@ -7586,9 +7589,10 @@ function Trig_HellscreamIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_HellscreamTaming)
     call EnableTrigger(gg_trg_HellscreamSavageFeast)
     call EnableTrigger(gg_trg_HellscreamChopMeat)
-    call EnableTrigger(gg_trg_HellscreamArenaChoose)
-    call EnableTrigger(gg_trg_HellscreamArenaCancel)
-    call EnableTrigger(gg_trg_HellscreamArenaFinish)
+    call EnableTrigger(gg_trg_HellscreamWorgBreeding)
+    call EnableTrigger(gg_trg_HellscreamTraining)
+    call EnableTrigger(gg_trg_HellscreamTrainingDebug)
+    call EnableTrigger(gg_trg_HellscreamSuicide)
 endfunction
 
 //===========================================================================
@@ -7876,22 +7880,90 @@ function InitTrig_HellscreamFuelFury takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: HellscreamSuicide
+// Trigger: HellscreamWoodburner
 //===========================================================================
-function Trig_HellscreamSuicide_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'Asds' ) ) then
+function Trig_HellscreamWoodburner_Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerState(GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_LUMBER) >= 1 ) ) then
         return false
     endif
     return true
 endfunction
 
+function Trig_HellscreamWoodburner_Func001A takes nothing returns nothing
+    if ( Trig_HellscreamWoodburner_Func001Func001C() ) then
+        call AdjustPlayerStateBJ(- 1, GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+    else
+        call IssueImmediateOrderBJ(GetEnumUnit(), "unrobogoblin")
+    endif
+endfunction
+
+function Trig_HellscreamWoodburner_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h02V'), function Trig_HellscreamWoodburner_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamWoodburner takes nothing returns nothing
+    set gg_trg_HellscreamWoodburner=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_HellscreamWoodburner, 1.00)
+    call TriggerAddAction(gg_trg_HellscreamWoodburner, function Trig_HellscreamWoodburner_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamWorgBreeding
+//===========================================================================
+function Trig_HellscreamWorgBreeding_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0BD' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamWorgBreeding_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'n00W', Player(PLAYER_NEUTRAL_PASSIVE), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    call UnitApplyTimedLifeBJ(120.00, 'BTLF', GetLastCreatedUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamWorgBreeding takes nothing returns nothing
+    set gg_trg_HellscreamWorgBreeding=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamWorgBreeding)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamWorgBreeding, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamWorgBreeding, Condition(function Trig_HellscreamWorgBreeding_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamWorgBreeding, function Trig_HellscreamWorgBreeding_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamSuicide
+//===========================================================================
+function Trig_HellscreamSuicide_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0B9' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamSuicide_Func001Func001C takes nothing returns boolean
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamSuicide_Func001A takes nothing returns nothing
+    if ( Trig_HellscreamSuicide_Func001Func001C() ) then
+        call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - ( GetUnitStateSwap(UNIT_STATE_MANA, GetSpellAbilityUnit()) * 2.00 ) ))
+    else
+    endif
+endfunction
+
 function Trig_HellscreamSuicide_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_6618")
+    call ForGroupBJ(GetUnitsInRangeOfLocAll(250.00, GetUnitLoc(GetSpellAbilityUnit())), function Trig_HellscreamSuicide_Func001A)
 endfunction
 
 //===========================================================================
 function InitTrig_HellscreamSuicide takes nothing returns nothing
     set gg_trg_HellscreamSuicide=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamSuicide)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamSuicide, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(gg_trg_HellscreamSuicide, Condition(function Trig_HellscreamSuicide_Conditions))
     call TriggerAddAction(gg_trg_HellscreamSuicide, function Trig_HellscreamSuicide_Actions)
@@ -8051,141 +8123,68 @@ function InitTrig_HellscreamChopMeat takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: HellscreamArenaChoose
+// Trigger: HellscreamTraining
 //===========================================================================
-function Trig_HellscreamArenaChoose_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0AF' ) ) then
-        return false
-    endif
-    return true
+function Trig_HellscreamTraining_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A0AF' or GetSpellAbilityId() == 'A0B7'
 endfunction
 
-function Trig_HellscreamArenaChoose_Func001C takes nothing returns boolean
-    if ( not ( IsUnitAliveBJ(udg_HellscreamArenaChoose1) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamArenaChoose_Actions takes nothing returns nothing
-    if ( Trig_HellscreamArenaChoose_Func001C() ) then
-        set udg_HellscreamArenaChoose2=GetSpellTargetUnit()
-        call ShowUnitHide(udg_HellscreamArenaChoose2)
-        call SetPlayerTechMaxAllowedSwap('o01L', 1, GetOwningPlayer(GetSpellAbilityUnit()))
-        call IssueTrainOrderByIdBJ(GetSpellAbilityUnit(), 'o01L')
+function Trig_HellscreamTraining_Actions takes nothing returns nothing
+    local player p= GetOwningPlayer(GetSpellAbilityUnit())
+    local unit u= GetTriggerUnit()
+    if GetSpellAbilityId() == 'A0AF' then
+        call SetPlayerTechResearchedSwap('R03H', GetPlayerTechCountSimple('R03H', p) + 1, p)
     else
-        set udg_HellscreamArenaChoose1=GetSpellTargetUnit()
-        call ShowUnitHide(udg_HellscreamArenaChoose1)
+        call SetPlayerTechResearchedSwap('R03I', GetPlayerTechCountSimple('R03I', p) + 1, p)
     endif
+    call SetPlayerTechResearchedSwap('R03S', GetPlayerTechCountSimple('R03S', p) + 1, p)
+    call AddSpecialEffectLocBJ(GetUnitLoc(u), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
+    call UnitRemoveAbilityBJ('A0AF', u)
+    call UnitRemoveAbilityBJ('A0B7', u)
+    call DisplayTextToForce(GetPlayersAll(), I2S(GetPlayerTechCountSimple('R03S', p)))
+    set u=null
 endfunction
 
-//===========================================================================
-function InitTrig_HellscreamArenaChoose takes nothing returns nothing
-    set gg_trg_HellscreamArenaChoose=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamArenaChoose)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaChoose, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamArenaChoose, Condition(function Trig_HellscreamArenaChoose_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamArenaChoose, function Trig_HellscreamArenaChoose_Actions)
+function InitTrig_HellscreamTraining takes nothing returns nothing
+    set gg_trg_HellscreamTraining=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamTraining)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamTraining, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamTraining, Condition(function Trig_HellscreamTraining_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamTraining, function Trig_HellscreamTraining_Actions)
 endfunction
-
 //===========================================================================
-// Trigger: HellscreamArenaCancel
+// Trigger: HellscreamTrainingDebug
 //===========================================================================
-function Trig_HellscreamArenaCancel_Conditions takes nothing returns boolean
-    return GetTrainedUnitType() == 'o01L'
-endfunction
-
-function Trig_HellscreamArenaCancel_Actions takes nothing returns nothing
-    call ShowUnitShow(udg_HellscreamArenaChoose1)
-    call ShowUnitShow(udg_HellscreamArenaChoose2)
-    set udg_HellscreamArenaChoose1=null
-    set udg_HellscreamArenaChoose2=null
-    call SetPlayerTechMaxAllowedSwap('o01L', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-function InitTrig_HellscreamArenaCancel takes nothing returns nothing
-    set gg_trg_HellscreamArenaCancel=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaCancel, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
-    call TriggerAddCondition(gg_trg_HellscreamArenaCancel, Condition(function Trig_HellscreamArenaCancel_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamArenaCancel, function Trig_HellscreamArenaCancel_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamArenaFinish
-//===========================================================================
-function Trig_HellscreamArenaFinish_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTrainedUnit()) == 'o01L' ) ) then
+function Trig_HellscreamTrainingDebug_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'o01K' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamArenaFinish_Func001C takes nothing returns boolean
-    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
+function Trig_HellscreamTrainingDebug_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R03S', GetOwningPlayer(GetConstructedStructure())) >= 4 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamArenaFinish_Func002Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamArenaFinish_Func002Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamArenaFinish_Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 0 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamArenaFinish_Actions takes nothing returns nothing
-    if ( Trig_HellscreamArenaFinish_Func001C() ) then
-        call ShowUnitShow(udg_HellscreamArenaChoose1)
-        call RemoveUnit(udg_HellscreamArenaChoose2)
-        call SetUnitPositionLoc(udg_HellscreamArenaChoose1, GetUnitLoc(GetTrainedUnit()))
+function Trig_HellscreamTrainingDebug_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A0B8', GetConstructedStructure())
+    if ( Trig_HellscreamTrainingDebug_Func002C() ) then
+        call UnitRemoveAbilityBJ('A0AF', GetConstructedStructure())
+        call UnitRemoveAbilityBJ('A0B7', GetConstructedStructure())
     else
-        call ShowUnitShow(udg_HellscreamArenaChoose2)
-        call RemoveUnit(udg_HellscreamArenaChoose1)
-        call SetUnitPositionLoc(udg_HellscreamArenaChoose2, GetUnitLoc(GetTrainedUnit()))
-        set udg_HellscreamArenaChoose1=udg_HellscreamArenaChoose2
     endif
-    if ( Trig_HellscreamArenaFinish_Func002C() ) then
-        call UnitAddAbilityBJ('A0B9', udg_HellscreamArenaChoose1)
-    else
-        if ( Trig_HellscreamArenaFinish_Func002Func001C() ) then
-            call SetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1, 2)
-            call UnitAddAbilityBJ('A0B8', udg_HellscreamArenaChoose1)
-        else
-            if ( Trig_HellscreamArenaFinish_Func002Func001Func001C() ) then
-                call SetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1, 3)
-                call UnitAddAbilityBJ('A0B7', udg_HellscreamArenaChoose1)
-            else
-            endif
-        endif
-    endif
-    call RemoveUnit(GetTrainedUnit())
-    set udg_HellscreamArenaChoose1=null
-    set udg_HellscreamArenaChoose2=null
-    call SetPlayerTechMaxAllowedSwap('o01L', 0, GetOwningPlayer(GetTrainedUnit()))
 endfunction
 
 //===========================================================================
-function InitTrig_HellscreamArenaFinish takes nothing returns nothing
-    set gg_trg_HellscreamArenaFinish=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamArenaFinish)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaFinish, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerAddCondition(gg_trg_HellscreamArenaFinish, Condition(function Trig_HellscreamArenaFinish_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamArenaFinish, function Trig_HellscreamArenaFinish_Actions)
+function InitTrig_HellscreamTrainingDebug takes nothing returns nothing
+    set gg_trg_HellscreamTrainingDebug=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamTrainingDebug)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamTrainingDebug, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(gg_trg_HellscreamTrainingDebug, Condition(function Trig_HellscreamTrainingDebug_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamTrainingDebug, function Trig_HellscreamTrainingDebug_Actions)
 endfunction
 
 //===========================================================================
@@ -13391,14 +13390,15 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_HellscreamRage()
     call InitTrig_HellscreamBladeBlade()
     call InitTrig_HellscreamFuelFury()
+    call InitTrig_HellscreamWoodburner()
+    call InitTrig_HellscreamWorgBreeding()
     call InitTrig_HellscreamSuicide()
     call InitTrig_HellscreamRaiderDead()
     call InitTrig_HellscreamTaming()
     call InitTrig_HellscreamSavageFeast()
     call InitTrig_HellscreamChopMeat()
-    call InitTrig_HellscreamArenaChoose()
-    call InitTrig_HellscreamArenaCancel()
-    call InitTrig_HellscreamArenaFinish()
+    call InitTrig_HellscreamTraining()
+    call InitTrig_HellscreamTrainingDebug()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
     call InitTrig_Mythic2Vampiric()
@@ -13627,12 +13627,12 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("ARTHASUI__init")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
 call ExecuteFunc("THRALLUI__init")
 call ExecuteFunc("WHITEMANEUI__init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()

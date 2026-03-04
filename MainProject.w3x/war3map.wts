@@ -19296,24 +19296,6 @@ STRING 6266
 Build Arena
 }
 
-STRING 6267
-// Units: o01L ([Hellscream] Battle), Name (Name)
-{
-[Hellscream] Battle
-}
-
-STRING 6268
-// Units: o01L ([Hellscream] Battle), Tip (Tooltip - Basic)
-{
-Battle
-}
-
-STRING 6269
-// Abilities: A0AF ([Hellscream] Arena), Name (Name)
-{
-[Hellscream] Arena
-}
-
 STRING 6275
 // Units: n00S ([Hellscream] Ogre Mauler), Tip (Tooltip - Basic)
 {
@@ -19408,12 +19390,6 @@ STRING 6298
 // Upgrades: R03F (Pillage), effect1 (Effect 1)
 {
 rlev
-}
-
-STRING 6299
-// Abilities: A0AF ([Hellscream] Arena), Tip (Tooltip - Normal)
-{
-Arena
 }
 
 STRING 6300
@@ -19763,24 +19739,6 @@ STRING 6375
 Generates resources with each attack that damages enemy units. Refunds up to 20% of the attacked unit’s
 }
 
-STRING 6376
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
-{
-Each strike against enemy units grants 5  to 9 rage. Rage gradually drains over time
-}
-
-STRING 6377
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
-{
-Each strike against enemy units grants 6  to 10 rage. Rage gradually drains over time
-}
-
-STRING 6378
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
-{
-Each strike against enemy units grants 7  to 11 rage. Rage gradually drains over time
-}
-
 STRING 6379
 // Upgrades: R03F (Pillage), Ubertip (Tooltip - Extended)
 {
@@ -20096,72 +20054,6 @@ STRING 6450
 [Hellscream] War Drums Damage Increase
 }
 
-STRING 6451
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
-{
-[Hellscream] Steel Melee Axes
-}
-
-STRING 6452
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
-{
-Thorium Melee Axes
-}
-
-STRING 6453
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
-{
-Arcanite Melee Axes
-}
-
-STRING 6454
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
-{
-Upgrade to Steel Melee Axes
-}
-
-STRING 6455
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
-{
-Upgrade to Thorium Melee Axes
-}
-
-STRING 6456
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Tip (Tooltip)
-{
-Upgrade to Arcanite Melee Axes
-}
-
-STRING 6457
-// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), effect2 (Effect 2)
-{
-rats
-}
-
-STRING 6460
-// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
-{
-[Hellscream] Steel Ranged Spears
-}
-
-STRING 6461
-// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
-{
-Thorium Ranged Spears
-}
-
-STRING 6462
-// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Name (Name)
-{
-Arcanite Ranged Spears
-}
-
-STRING 6463
-// Upgrades: R03I (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), effect2 (Effect 2)
-{
-rats
-}
-
 STRING 6464
 // Upgrades: R03K (Brute Strength), Name (Name)
 {
@@ -20432,12 +20324,6 @@ STRING 6532
 Gain 1 Rage each time you take damage.
 }
 
-STRING 6533
-// Upgrades: R03O (Liquid Fire), Ubertip (Tooltip - Extended)
-{
-Increases the maximum Rage by <R03O,base1> and slows Rage decay outside of combat.
-}
-
 STRING 6534
 // Upgrades: R03P (Brute Strength), Ubertip (Tooltip - Extended)
 {
@@ -20529,120 +20415,6 @@ STRING 6548
 |cFFFF5A4B- No healing capabilities
 - Poor ranged support 
 - Economy relies on combat|R
-}
-
-STRING 6549
-// Abilities: A0B7 ([Hellscream] Battle Trophy), Name (Name)
-{
-[Hellscream] Battle Trophy
-}
-
-STRING 6550
-// Abilities: A0B7 ([Hellscream] Battle Trophy), EditorSuffix (Editor Suffix)
-{
-(Arena)
-}
-
-STRING 6551
-// Abilities: A0B7 ([Hellscream] Battle Trophy), Tip (Tooltip - Normal)
-{
-Battle Trophy
-}
-
-STRING 6552
-// Abilities: A0B7 ([Hellscream] Battle Trophy), Ubertip (Tooltip - Normal - Extended)
-{
-+3 damage
-}
-
-STRING 6553
-// Abilities: A0B8 ([Hellscream] Potion of Rage), Name (Name)
-{
-[Hellscream] Potion of Rage
-}
-
-STRING 6554
-// Abilities: A0B8 ([Hellscream] Potion of Rage), EditorSuffix (Editor Suffix)
-{
-(Arena)
-}
-
-STRING 6555
-// Abilities: A0B8 ([Hellscream] Potion of Rage), Ubertip (Tooltip - Normal - Extended)
-{
-+50 max rage
-}
-
-STRING 6556
-// Abilities: A0B8 ([Hellscream] Potion of Rage), Tip (Tooltip - Normal)
-{
-Potion of Rage
-}
-
-STRING 6557
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Name (Name)
-{
-[Hellscream] Warsong Banner
-}
-
-STRING 6558
-// Buffs/Effects: B01Z ([Hellscream] Warsong Banner), Bufftip (Tooltip)
-{
-Warsong Banner
-}
-
-STRING 6559
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Tip (Tooltip - Normal)
-{
-Warsong Banner - [|cffffcc00Level 1|r]
-}
-
-STRING 6560
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Tip (Tooltip - Normal)
-{
-Warsong Banner - [|cffffcc00Level 2|r]
-}
-
-STRING 6561
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Tip (Tooltip - Normal)
-{
-Warsong Banner - [|cffffcc00Level 3|r]
-}
-
-STRING 6562
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Ubertip (Tooltip - Normal - Extended)
-{
-- Warsong Banner - additional 2 armor
-|cff808080- Potion of Rage - additional 50 maximum rage
-- Battle Trophy - additional 3 damage|r
-}
-
-STRING 6563
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Ubertip (Tooltip - Normal - Extended)
-{
-- Warsong Banner - additional 2 armor
-- Potion of Rage - additional 50 maximum rage
-|cff808080- Battle Trophy - additional 3 damage|r
-}
-
-STRING 6564
-// Abilities: A0B9 ([Hellscream] Warsong Banner), Ubertip (Tooltip - Normal - Extended)
-{
-- Warsong Banner - additional 2 armor
-- Potion of Rage - additional 50 maximum rage
-- Battle Trophy - additional 3 damage
-}
-
-STRING 6565
-// Buffs/Effects: B01Z ([Hellscream] Warsong Banner), EditorName (Name (Editor Only))
-{
-[Hellscream] Warsong Banner
-}
-
-STRING 6566
-// Buffs/Effects: B01Z ([Hellscream] Warsong Banner), Buffubertip (Tooltip - Extended)
-{
-This unit is under the effects of Warsong Banner.
 }
 
 STRING 6567
@@ -20924,11 +20696,6 @@ STRING 6611
 Train Goblin Sapper
 }
 
-STRING 6618
-{
-+++suicide+++
-}
-
 STRING 6619
 // Units: o019 ([Hellscream] Lumberyard), Name (Name)
 {
@@ -20963,5 +20730,241 @@ STRING 6624
 // Upgrades: R03Q (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
 {
 [Hellscream] Spiked Barricades
+}
+
+STRING 6628
+// Abilities: A0BD ([Hellscream] Worg Breeding), Name (Name)
+{
+[Hellscream] Worg Breeding
+}
+
+STRING 6629
+// Abilities: A0BD ([Hellscream] Worg Breeding), Tip (Tooltip - Normal)
+{
+Worg Breeding
+}
+
+STRING 6630
+// Upgrades: R03R (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
+{
+[Hellscream] Worg Breeding
+}
+
+STRING 6631
+// Upgrades: R03R (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
+{
+Research Worg Breeding
+}
+
+STRING 6635
+// Abilities: A0BE ([Hellscream] Gold +200), Name (Name)
+{
+[Hellscream] Gold +200
+}
+
+STRING 6636
+// Items: I01F ([Hellscream] Goblin Barter), Name (Name)
+{
+[Hellscream] Goblin Barter
+}
+
+STRING 6637
+// Items: I01F ([Hellscream] Goblin Barter), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Steamwheedle Cartel never cheats! This deal's practically charity."|r
+
+Invest 750 wood and receive 200 gold in return.
+}
+
+STRING 6638
+// Items: I01F ([Hellscream] Goblin Barter), Tip (Tooltip - Basic)
+{
+Purchase Goblin Barter
+}
+
+STRING 6639
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Each strike against enemy units grants 3 to 6 rage. Rage gradually drains over time
+}
+
+STRING 6640
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Each strike against enemy units grants 4 to 7 rage. Rage gradually drains over time
+}
+
+STRING 6641
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Ubertip (Tooltip - Extended)
+{
+Each strike against enemy units grants 5 to 8 rage. Rage gradually drains over time
+}
+
+STRING 6642
+// Upgrades: R03O (Liquid Fire), Ubertip (Tooltip - Extended)
+{
+Increases the maximum Rage by 10 and slows Rage decay outside of combat.
+}
+
+STRING 6644
+// Abilities: A0AF ([Hellscream] Attack Training), Name (Name)
+{
+[Hellscream] Attack Training
+}
+
+STRING 6645
+// Abilities: A0AF ([Hellscream] Attack Training), Tip (Tooltip - Normal)
+{
+Attack Training
+}
+
+STRING 6646
+// Abilities: A0B7 ([Hellscream] Defense Training), Name (Name)
+{
+[Hellscream] Defense Training
+}
+
+STRING 6647
+// Abilities: A0B7 ([Hellscream] Defense Training), Tip (Tooltip - Normal)
+{
+Defense Training
+}
+
+STRING 6648
+// Upgrades: R03H (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
+{
+[Hellscream] Attack Training
+}
+
+STRING 6649
+// Upgrades: R03I (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
+{
+[Hellscream] Defense Training
+}
+
+STRING 6650
+// Abilities: A0B8 ([Hellscream] WarCraft), Name (Name)
+{
+[Hellscream] WarCraft
+}
+
+STRING 6651
+// Buffs/Effects: B020 ([Hellscream] WarCraft), Bufftip (Tooltip)
+{
+WarCraft
+}
+
+STRING 6652
+// Upgrades: R03S (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Name (Name)
+{
+[Hellscream] Training Count
+}
+
+STRING 6653
+// Buffs/Effects: B020 ([Hellscream] WarCraft), EditorName (Name (Editor Only))
+{
+[Hellscream] WarCraft
+}
+
+STRING 6655
+// Abilities: A0B8 ([Hellscream] WarCraft), Tip (Tooltip - Normal)
+{
+WarCraft - [|cffffcc00Level 1|r]
+}
+
+STRING 6656
+// Abilities: A0B8 ([Hellscream] WarCraft), Tip (Tooltip - Normal)
+{
+WarCraft - [|cffffcc00Level 2|r]
+}
+
+STRING 6658
+// Abilities: A0B8 ([Hellscream] WarCraft), Ubertip (Tooltip - Normal - Extended)
+{
+Increases nearby friendly units' movement speed by 20% and attack rate by 10%.
+}
+
+STRING 6661
+// Abilities: A0B8 ([Hellscream] WarCraft), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFFWarcraft inside Warcraft? The fourth wall's cracking. Thanks to everyone who's been in the franchise for over 25 years.|r
+
+Increases nearby friendly units' movement speed by 20% and attack rate by 10%.
+}
+
+STRING 6662
+// Abilities: A0B9 ([Hellscream] Kaboom!!!), Name (Name)
+{
+[Hellscream] Kaboom!!!
+}
+
+STRING 6663
+// Abilities: A0B9 ([Hellscream] Kaboom!!!), Tip (Tooltip - Normal)
+{
+Kaboom!!!
+}
+
+STRING 6669
+// Units: h02U ([Hellscream] Hellscream's Fist), Name (Name)
+{
+[Hellscream] Hellscream's Fist
+}
+
+STRING 6670
+// Units: h02U ([Hellscream] Hellscream's Fist), Tip (Tooltip - Basic)
+{
+Train Hellscream's Fist
+}
+
+STRING 6671
+// Units: h02U ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #siege
+|R
+The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFFFFB700Veteran|R: Throw Passenger
+|cFFFFB700Veteran|R: Gunship Cannon Fire
+}
+
+STRING 6674
+// Units: h02V ([Hellscream] Hellscream's Fist), Name (Name)
+{
+[Hellscream] Hellscream's Fist
+}
+
+STRING 6675
+// Units: h02V ([Hellscream] Hellscream's Fist), Tip (Tooltip - Basic)
+{
+Train Hellscream's Fist
+}
+
+STRING 6676
+// Units: h02V ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly #siege
+|R
+The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
+
+|cFFFFB700Veteran|R: Throw Passenger
+|cFFFFB700Veteran|R: Gunship Cannon Fire
+}
+
+STRING 6677
+// Units: h02V ([Hellscream] Hellscream's Fist), EditorSuffix (Name - Editor Suffix)
+{
+(Woodburner)
+}
+
+STRING 6678
+// Abilities: A0BF ([Hellscream] Wood Burn), Name (Name)
+{
+[Hellscream] Wood Burn
+}
+
+STRING 6679
+// Abilities: A0BF ([Hellscream] Wood Burn), Tip (Tooltip - Normal)
+{
+Wood Burn
 }
 
