@@ -241,11 +241,15 @@ trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
 trigger gg_trg_HellscreamBladeBlade= null
 trigger gg_trg_HellscreamFuelFury= null
+trigger gg_trg_HellscreamWoodburner= null
+trigger gg_trg_HellscreamWorgBreeding= null
 trigger gg_trg_HellscreamSuicide= null
 trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
 trigger gg_trg_HellscreamChopMeat= null
+trigger gg_trg_HellscreamTraining= null
+trigger gg_trg_HellscreamTrainingDebug= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
 trigger gg_trg_Mythic2Vampiric= null
@@ -353,10 +357,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamWorgBreeding= null
-trigger gg_trg_HellscreamTraining= null
-trigger gg_trg_HellscreamTrainingDebug= null
-trigger gg_trg_HellscreamWoodburner= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1351,9 +1351,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
-    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3517.2, - 5743.2, 257.157, 'h02U')
-    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3787.2, - 5638.5, 257.157, 'h02U')
-    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3281.5, - 5919.6, 257.157, 'h02U')
 endfunction
 
 //===========================================================================
@@ -1419,8 +1416,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 2039.0, - 4891.6, 111.668, 'ndtr')
-    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 2011.1, - 4975.2, 78.390, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')

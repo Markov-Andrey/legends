@@ -19296,12 +19296,6 @@ STRING 6266
 Build Arena
 }
 
-STRING 6275
-// Units: n00S ([Hellscream] Ogre Mauler), Tip (Tooltip - Basic)
-{
-Hire Ogre Mauler
-}
-
 STRING 6276
 // Units: o016 ([Hellscream] Altar of Rage), Name (Name)
 {
@@ -20966,5 +20960,137 @@ STRING 6679
 // Abilities: A0BF ([Hellscream] Wood Burn), Tip (Tooltip - Normal)
 {
 Wood Burn
+}
+
+STRING 6684
+// Units: h02X ([Hellscream] Warmachine), EditorSuffix (Name - Editor Suffix)
+{
+(siege)
+}
+
+STRING 6685
+// Abilities: A0BG ([Hellscream] Siege Mod), Name (Name)
+{
+[Hellscream] Siege Mod
+}
+
+STRING 6686
+// Abilities: A0BG ([Hellscream] Siege Mod), Tip (Tooltip - Normal)
+{
+Siege Mod
+}
+
+STRING 6687
+// Units: h02W ([Hellscream] Warmachine), Name (Name)
+{
+[Hellscream] Warmachine
+}
+
+STRING 6688
+// Units: h02W ([Hellscream] Warmachine), Tip (Tooltip - Basic)
+{
+Train Warmachine
+}
+
+STRING 6689
+// Units: h02X ([Hellscream] Warmachine), Name (Name)
+{
+[Hellscream] Warmachine
+}
+
+STRING 6690
+// Units: h02X ([Hellscream] Warmachine), Tip (Tooltip - Basic)
+{
+Train Warmachine
+}
+
+STRING 6693
+// Abilities: A0BH ([Hellscream] Devour), Name (Name)
+{
+[Hellscream] Devour
+}
+
+STRING 6694
+// Abilities: A0BI ([Hellscream] Devour Cargo), Name (Name)
+{
+[Hellscream] Devour Cargo
+}
+
+STRING 6695
+// Abilities: A0BJ ([Hellscream] Burp), Name (Name)
+{
+[Hellscream] Burp
+}
+
+STRING 6696
+// Abilities: A0BJ ([Hellscream] Burp), Tip (Tooltip - Normal)
+{
+Burp
+}
+
+STRING 6697
+// Units: n00R ([Hellscream] Ogre Magi), Tip (Tooltip - Basic)
+{
+Train Ogre Magi
+}
+
+STRING 6698
+// Units: n00S ([Hellscream] Ogre Mauler), Tip (Tooltip - Basic)
+{
+Train Ogre Mauler
+}
+
+STRING 6700
+// Abilities: A0BJ ([Hellscream] Burp), Ubertip (Tooltip - Normal - Extended)
+{
+Regurgitates the captured enemy at the target location
+}
+
+STRING 6701
+// Units: n00Y ([Hellscream] Deathwing's Brood), Name (Name)
+{
+[Hellscream] Deathwing's Brood
+}
+
+STRING 6702
+// Units: n00Y ([Hellscream] Deathwing's Brood), Tip (Tooltip - Basic)
+{
+Train Deathwing's Brood
+}
+
+STRING 6703
+// Units: o01B ([Hellscream] Dragon Roost), Name (Name)
+{
+[Hellscream] Dragon Roost
+}
+
+STRING 6704
+// Units: o01B ([Hellscream] Dragon Roost), Tip (Tooltip - Basic)
+{
+Build Dragon Roost
+}
+
+STRING 6705
+// Abilities: A0BK ([Hellscream] Elementium Plating), Name (Name)
+{
+[Hellscream] Elementium Plating
+}
+
+STRING 6706
+// Abilities: A0BK ([Hellscream] Elementium Plating), Tip (Tooltip - Normal)
+{
+Elementium Plating
+}
+
+STRING 6707
+// Upgrades: R03T (Hardened Skin), Name (Name)
+{
+[Hellscream] Elementium Plating
+}
+
+STRING 6708
+// Upgrades: R03T (Hardened Skin), Tip (Tooltip)
+{
+Research Elementium Plating
 }
 
