@@ -21094,3 +21094,45 @@ STRING 6708
 Research Elementium Plating
 }
 
+STRING 6709
+// Abilities: A0BL ([Hellscream] Fury Fire), Name (Name)
+{
+[Hellscream] Fury Fire
+}
+
+STRING 6710
+// Abilities: A0BL ([Hellscream] Fury Fire), Tip (Tooltip - Normal)
+{
+Fury Fire
+}
+
+STRING 6711
+// Abilities: A0BM ([Hellscream] Fury Fire), Name (Name)
+{
+[Hellscream] Fury Fire
+}
+
+STRING 6712
+// Abilities: A0BM ([Hellscream] Fury Fire), Tip (Tooltip - Normal)
+{
+Fury Fire
+}
+
+STRING 6713
+// Abilities: A0BM ([Hellscream] Fury Fire), EditorSuffix (Editor Suffix)
+{
+(Bash)
+}
+
+STRING 6717
+// Abilities: A0BN ([Hellscream] Tracer Ammo), Name (Name)
+{
+[Hellscream] Tracer Ammo
+}
+
+STRING 6718
+// Abilities: A0BN ([Hellscream] Tracer Ammo), Tip (Tooltip - Normal)
+{
+Tracer Ammo
+}
+

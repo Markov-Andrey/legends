@@ -357,6 +357,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_HellscreamFuryFire= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1351,6 +1352,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
+    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3856.9, - 5827.1, 26.741, 'h02U')
+    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3685.6, - 6021.9, 50.869, 'h02U')
 endfunction
 
 //===========================================================================
@@ -1410,6 +1413,9 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsts', - 3170.5, - 1720.5, 242.294, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1987.1, - 4856.1, 209.549, 'ndtr')
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 2009.3, - 5023.5, 234.378, 'ndtr')
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 2007.6, - 5167.4, 81.433, 'ndtr')
     set u=BlzCreateUnitWithSkin(p, 'nssp', 5155.5, - 3371.8, 136.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nspr', 5124.4, - 3068.7, 114.511, 'nspr')
@@ -7666,6 +7672,12 @@ function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'h02T' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetAttacker()) == 'h02U' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetAttacker()) == 'h02V' ) ) then
+        return true
+    endif
     return false
 endfunction
 
@@ -7831,6 +7843,12 @@ function Trig_HellscreamFuelFury_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'h02T' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'h02U' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'h02V' ) ) then
+        return true
+    endif
     return false
 endfunction
 
@@ -7872,6 +7890,30 @@ function InitTrig_HellscreamFuelFury takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFuelFury, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamFuelFury, Condition(function Trig_HellscreamFuelFury_Conditions))
     call TriggerAddAction(gg_trg_HellscreamFuelFury, function Trig_HellscreamFuelFury_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamFuryFire
+//===========================================================================
+function Trig_HellscreamFuryFire_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0BL' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamFuryFire_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A0BM', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GetSpellAbilityUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamFuryFire takes nothing returns nothing
+    set gg_trg_HellscreamFuryFire=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFuryFire, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamFuryFire, Condition(function Trig_HellscreamFuryFire_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamFuryFire, function Trig_HellscreamFuryFire_Actions)
 endfunction
 
 //===========================================================================
@@ -13385,6 +13427,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_HellscreamRage()
     call InitTrig_HellscreamBladeBlade()
     call InitTrig_HellscreamFuelFury()
+    call InitTrig_HellscreamFuryFire()
     call InitTrig_HellscreamWoodburner()
     call InitTrig_HellscreamWorgBreeding()
     call InitTrig_HellscreamSuicide()
