@@ -241,7 +241,7 @@ trigger gg_trg_HellscreamExecute= null
 trigger gg_trg_HellscreamRage= null
 trigger gg_trg_HellscreamBladeBlade= null
 trigger gg_trg_HellscreamFuelFury= null
-trigger gg_trg_HellscreamWoodburner= null
+trigger gg_trg_HellscreamFistFuryFire= null
 trigger gg_trg_HellscreamWorgBreeding= null
 trigger gg_trg_HellscreamSuicide= null
 trigger gg_trg_HellscreamRaiderDead= null
@@ -357,7 +357,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamFuryFire= null
+trigger gg_trg_HellscreamFistWoodburner= null
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -1352,8 +1352,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
-    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3856.9, - 5827.1, 26.741, 'h02U')
-    set u=BlzCreateUnitWithSkin(p, 'h02U', - 3685.6, - 6021.9, 50.869, 'h02U')
+    set u=BlzCreateUnitWithSkin(p, 'h02W', - 3898.1, - 5821.8, 13.612, 'h02W')
+    set u=BlzCreateUnitWithSkin(p, 'h02W', - 3732.2, - 6036.4, 41.285, 'h02W')
+    set u=BlzCreateUnitWithSkin(p, 'h02U', - 4223.5, - 5865.3, 29.037, 'h02U')
 endfunction
 
 //===========================================================================
@@ -7893,56 +7894,56 @@ function InitTrig_HellscreamFuelFury takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: HellscreamFuryFire
+// Trigger: HellscreamFistWoodburner
 //===========================================================================
-function Trig_HellscreamFuryFire_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0BL' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamFuryFire_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
-    call UnitAddAbilityBJ('A0BM', GetLastCreatedUnit())
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GetSpellAbilityUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamFuryFire takes nothing returns nothing
-    set gg_trg_HellscreamFuryFire=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFuryFire, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamFuryFire, Condition(function Trig_HellscreamFuryFire_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamFuryFire, function Trig_HellscreamFuryFire_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamWoodburner
-//===========================================================================
-function Trig_HellscreamWoodburner_Func001Func001C takes nothing returns boolean
+function Trig_HellscreamFistWoodburner_Func001Func001C takes nothing returns boolean
     if ( not ( GetPlayerState(GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_LUMBER) >= 1 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamWoodburner_Func001A takes nothing returns nothing
-    if ( Trig_HellscreamWoodburner_Func001Func001C() ) then
+function Trig_HellscreamFistWoodburner_Func001A takes nothing returns nothing
+    if ( Trig_HellscreamFistWoodburner_Func001Func001C() ) then
         call AdjustPlayerStateBJ(- 1, GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_LUMBER)
     else
         call IssueImmediateOrderBJ(GetEnumUnit(), "unrobogoblin")
     endif
 endfunction
 
-function Trig_HellscreamWoodburner_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsOfTypeIdAll('h02V'), function Trig_HellscreamWoodburner_Func001A)
+function Trig_HellscreamFistWoodburner_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('h02V'), function Trig_HellscreamFistWoodburner_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_HellscreamWoodburner takes nothing returns nothing
-    set gg_trg_HellscreamWoodburner=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_HellscreamWoodburner, 1.00)
-    call TriggerAddAction(gg_trg_HellscreamWoodburner, function Trig_HellscreamWoodburner_Actions)
+function InitTrig_HellscreamFistWoodburner takes nothing returns nothing
+    set gg_trg_HellscreamFistWoodburner=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_HellscreamFistWoodburner, 1.00)
+    call TriggerAddAction(gg_trg_HellscreamFistWoodburner, function Trig_HellscreamFistWoodburner_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamFistFuryFire
+//===========================================================================
+function Trig_HellscreamFistFuryFire_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0BL' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamFistFuryFire_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    call UnitAddAbilityBJ('A0BM', GetLastCreatedUnit())
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GetSpellAbilityUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamFistFuryFire takes nothing returns nothing
+    set gg_trg_HellscreamFistFuryFire=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFistFuryFire, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamFistFuryFire, Condition(function Trig_HellscreamFistFuryFire_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamFistFuryFire, function Trig_HellscreamFistFuryFire_Actions)
 endfunction
 
 //===========================================================================
@@ -13427,8 +13428,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_HellscreamRage()
     call InitTrig_HellscreamBladeBlade()
     call InitTrig_HellscreamFuelFury()
-    call InitTrig_HellscreamFuryFire()
-    call InitTrig_HellscreamWoodburner()
+    call InitTrig_HellscreamFistWoodburner()
+    call InitTrig_HellscreamFistFuryFire()
     call InitTrig_HellscreamWorgBreeding()
     call InitTrig_HellscreamSuicide()
     call InitTrig_HellscreamRaiderDead()

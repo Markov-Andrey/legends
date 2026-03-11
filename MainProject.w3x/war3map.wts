@@ -20962,12 +20962,6 @@ STRING 6679
 Wood Burn
 }
 
-STRING 6684
-// Units: h02X ([Hellscream] Warmachine), EditorSuffix (Name - Editor Suffix)
-{
-(siege)
-}
-
 STRING 6685
 // Abilities: A0BG ([Hellscream] Siege Mod), Name (Name)
 {
@@ -21134,5 +21128,41 @@ STRING 6718
 // Abilities: A0BN ([Hellscream] Tracer Ammo), Tip (Tooltip - Normal)
 {
 Tracer Ammo
+}
+
+STRING 6719
+// Abilities: A0BO ([Hellscream] Burning Oil), Name (Name)
+{
+[Hellscream] Burning Oil
+}
+
+STRING 6720
+// Upgrades: R03U (Burning Oil), Name (Name)
+{
+[Hellscream] Burning Oil
+}
+
+STRING 6721
+// Units: h02X ([Hellscream] Warmachine), EditorSuffix (Name - Editor Suffix)
+{
+(Siege)
+}
+
+STRING 6725
+// Abilities: A0BF ([Hellscream] Wood Burn), EditorSuffix (Editor Suffix)
+{
+(Hellscream's Fist)
+}
+
+STRING 6729
+// Upgrades: R03V (Ensnare), Name (Name)
+{
+[Hellscream] Fury Fire
+}
+
+STRING 6730
+// Upgrades: R03V (Ensnare), Tip (Tooltip)
+{
+Research Fury Fire
 }
 
