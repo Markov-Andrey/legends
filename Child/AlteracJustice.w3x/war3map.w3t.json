@@ -1,0 +1,2001 @@
+{
+  "original": {
+    "stel": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "clsd": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "tkno": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Charged"
+      }
+    ],
+    "ofro": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 8
+      }
+    ],
+    "modt": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "infs": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "ckng": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "wild": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "fgdg": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "ankh": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "fgsk": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "crys": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "whwd": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "hlst": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "shar": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "mnst": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "pdi2": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "pghe": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "pgma": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "pnvu": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "pres": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "rej3": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "sres": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "sror": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "wswd": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "fgfh": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "fgrg": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "will": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "wlsd": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "woms": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "wcyc": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "rej6": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "rin1": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "ssil": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "odef": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "pmna": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "spsh": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "rhth": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "ratf": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 8
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "desc": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Permanent"
+      }
+    ],
+    "afac": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "ciri": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "belv": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      }
+    ],
+    "bgst": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "war2": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "lgdh": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      }
+    ],
+    "hval": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      }
+    ],
+    "kpin": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "hcun": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "ajen": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "rde4": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Permanent"
+      }
+    ]
+  },
+  "custom": {
+    "I002:stwp": [
+      {
+        "id": "ureq",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "ista",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A00H"
+      },
+      {
+        "id": "isst",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 5
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iuse",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      }
+    ],
+    "I004:plcl": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "AIm2"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 250
+      }
+    ],
+    "I005:plcl": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "AIh2"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 300
+      }
+    ],
+    "I000:gold": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "istr",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "ista",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "isto",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "I001:gold": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1000
+      },
+      {
+        "id": "istr",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "ista",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "isto",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "I003:gold": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "istr",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "ista",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "isto",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "I006:gold": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "istr",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "ista",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "isto",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "I007:rspd": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A05B"
+      }
+    ],
+    "I009:silk": [],
+    "I008:wswd": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Purchasable"
+      }
+    ],
+    "I00A:ankh": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Purchasable"
+      }
+    ],
+    "I00B:gold": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A00F"
+      }
+    ],
+    "I00C:lmbr": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A00I"
+      }
+    ],
+    "I00D:gold": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A08B"
+      }
+    ],
+    "I00E:rhe1": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A08P"
+      }
+    ],
+    "I00F:rde2": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A029,AIx2"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "icid",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A029"
+      }
+    ],
+    "I00G:rwiz": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "iuse",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 15
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "AItc"
+      }
+    ],
+    "I00H:rwiz": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "I00I:rde2": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09I,AIs3,AIat"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "icid",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09I"
+      }
+    ],
+    "I00J:ajen": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09J"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "idro",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I00K:ratc": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09K,AItn"
+      }
+    ],
+    "I00L:hval": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09L,AIa4"
+      }
+    ],
+    "I00M:hval": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09L,AIi4"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "I00N:hval": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09L,AIs4"
+      }
+    ],
+    "I00O:rwiz": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09N,AItj"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "I00P:rde2": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "AId3,AIlf"
+      }
+    ],
+    "I00Q:rin1": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09M,AIi3"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "icid",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09M"
+      }
+    ],
+    "I00R:lmbr": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09O"
+      }
+    ],
+    "I00S:bspd": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "AIms,AIa3,AIev"
+      }
+    ],
+    "I00T:rwiz": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 6
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "AIrm,AIi3"
+      }
+    ],
+    "I00U:bgst": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09P,AIs6,AIs1,AIs1"
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      }
+    ],
+    "I00V:texp": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09Q"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I00W:texp": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09R"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I00X:texp": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09S"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I00Y:rhth": [
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 8
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09V,AIx2,AIi6"
+      },
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "iusa",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I00Z:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09Y,AItj"
+      }
+    ],
+    "I010:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09X,AIt6"
+      }
+    ],
+    "I011:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A09Z,AItk"
+      }
+    ],
+    "I012:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A0,AItl"
+      }
+    ],
+    "I013:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A1,AIt9"
+      }
+    ],
+    "I014:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A2,AItn"
+      }
+    ],
+    "I015:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A3,AItn,AItg"
+      }
+    ],
+    "I016:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A5,AItn,AIth"
+      }
+    ],
+    "I017:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A4,AItn,AIat"
+      }
+    ],
+    "I018:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A6,AItn,AIti"
+      }
+    ],
+    "I019:gcel": [
+      {
+        "id": "icla",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "Artifact"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ilev",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0A7,AItf"
+      }
+    ],
+    "I01A:nflg": [
+      {
+        "id": "ihtp",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 500000
+      },
+      {
+        "id": "ipaw",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "isel",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I01B:oflg": [
+      {
+        "id": "ihtp",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 500000
+      },
+      {
+        "id": "isel",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "ipaw",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I01C:rspd": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "I01D:rhe1": [
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0AM"
+      }
+    ],
+    "I01E:rwat": [
+      {
+        "id": "iabi",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0AL"
+      },
+      {
+        "id": "igol",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "istr",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 90
+      }
+    ]
+  }
+}

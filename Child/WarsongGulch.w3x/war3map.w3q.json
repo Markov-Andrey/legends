@@ -1,0 +1,3274 @@
+{
+  "original": {},
+  "custom": {
+    "R004:Rura": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u00B"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u00C"
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      }
+    ],
+    "R005:Rucr": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u00B"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u00C"
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      }
+    ],
+    "R006:Ruar": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u00B"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u00C"
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      }
+    ],
+    "R007:Rume": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u00B"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u00C"
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      }
+    ],
+    "R008:Rusf": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u003,u00B"
+      }
+    ],
+    "R002:Rhss": [
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 50
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 50
+      }
+    ],
+    "R00B:Rhlh": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00I"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "R00C:Rhac": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00I"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01H"
+      }
+    ],
+    "R00D:Rhde": [],
+    "R00A:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      }
+    ],
+    "R00E:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R00F:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R00G:Ruac": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 3
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 5
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "gco1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A01W"
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1260"
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1305"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gco2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A01O"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R00H:Ruac": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 3
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 5
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1306"
+      },
+      {
+        "id": "gco1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A01Y"
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1315"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gco2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A01Q"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R00I:Ruac": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 3
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 5
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "u002"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1326"
+      },
+      {
+        "id": "gco1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A01X"
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1327"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gco2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A01P"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R00M:Rupm": [
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 180
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 40
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u01C,u00B"
+      }
+    ],
+    "R00N:Ruac": [
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      }
+    ],
+    "R00P:Rubu": [
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 90
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 80
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u00B,u003"
+      }
+    ],
+    "R00Q:Rubu": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u00B,u003"
+      }
+    ],
+    "R00R:Rupc": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u00C"
+      }
+    ],
+    "R00S:Rugf": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1702"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 120
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      }
+    ],
+    "R001:Rhme": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00I"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 120
+      },
+      {
+        "id": "gtim",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 120
+      },
+      {
+        "id": "gcls",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1811"
+      },
+      {
+        "id": "gmo3",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.325
+      },
+      {
+        "id": "gba3",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.325
+      },
+      {
+        "id": "gba4",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gmo4",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R003:Rhme": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00I"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01H"
+      }
+    ],
+    "R009:Rhar": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 4
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 4,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00I"
+      }
+    ],
+    "R00T:Rhla": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00I"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01H"
+      }
+    ],
+    "R00U:Rhra": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00I"
+      }
+    ],
+    "R000:Rhri": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00I"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R00V:Rhan": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1813"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 59
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01H,H00B"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 750
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 60
+      }
+    ],
+    "R00W:Rhpt": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01H"
+      }
+    ],
+    "R00X:Rhst": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01H"
+      }
+    ],
+    "R00Y:Rhse": [],
+    "R00Z:Rhgb": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 45
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 200
+      }
+    ],
+    "R010:Rhgb": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01H"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R011:Rhpt": [
+      {
+        "id": "gef4",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2032"
+      },
+      {
+        "id": "gco4",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A011"
+      },
+      {
+        "id": "gba4",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gmo4",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2033"
+      },
+      {
+        "id": "gef3",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2034"
+      },
+      {
+        "id": "gco3",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A00U"
+      },
+      {
+        "id": "gmo3",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gba3",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gco2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A00V"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01H"
+      }
+    ],
+    "R012:Rhhb": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R013:Rhfs": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2055"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R014:Ruac": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1308"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -0.2
+      }
+    ],
+    "R015:Ruac": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2114"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.15
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1310"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.15
+      }
+    ],
+    "R00J:Ruac": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2271"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.15
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.15
+      }
+    ],
+    "R00L:Ruac": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_1473"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.325
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.325
+      }
+    ],
+    "R016:Ruac": [
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -0.2
+      }
+    ],
+    "R00K:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R00O:Ruex": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "u00C"
+      }
+    ],
+    "R017:Rufb": [],
+    "R018:Rhfs": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "undead"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_2301"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      }
+    ],
+    "R019:Rhde": [],
+    "R01A:Rhri": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h010"
+      }
+    ],
+    "R01B:Rhlh": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00G"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01C:Rhac": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00G"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01D:Rorb": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "human"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01E:Rhme": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00G"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01F:Rhar": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00G"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01G:Rhra": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00G"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01H:Rhla": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00G"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01I:Rhse": [],
+    "R01J:Rhpt": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01K:Rhst": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01L:Rhfl": [],
+    "R01N:Rhfc": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01O:Rhgb": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01P:Rhhb": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h00H"
+      }
+    ],
+    "R01M:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R01Q:Reuv": [
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 30
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 25
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 25
+      }
+    ],
+    "R01R:Renb": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00A"
+      }
+    ],
+    "R01S:Reuv": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00A"
+      }
+    ],
+    "R01T:Resc": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 25
+      }
+    ],
+    "R01U:Reib": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 42
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R01V:Reib": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00A"
+      }
+    ],
+    "R01W:Remk": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00B,e00E"
+      }
+    ],
+    "R01X:Rema": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "e00A"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "e00E"
+      }
+    ],
+    "R01Y:Resm": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "e00A"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "e00E"
+      }
+    ],
+    "R01Z:Resw": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "e00A"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "e00E"
+      }
+    ],
+    "R020:Rerh": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      }
+    ],
+    "R021:Rews": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00A"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.25
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gtim",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 15
+      },
+      {
+        "id": "glmm",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "gglm",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "e00E"
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.5
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 125
+      }
+    ],
+    "R022:Resc": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00B"
+      }
+    ],
+    "R023:Repb": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00A,e00B"
+      }
+    ],
+    "R024:Remg": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "e00B,e00A"
+      }
+    ],
+    "R025:Recb": [],
+    "R026:Remg": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R027:Redc": [
+      {
+        "id": "gmo3",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "gba3",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.1
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.1
+      },
+      {
+        "id": "gmo4",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "gba4",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 25
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 25
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "e00E"
+      }
+    ],
+    "R028:Reht": [],
+    "R029:Resi": [],
+    "R02A:Redt": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "e00E"
+      }
+    ],
+    "R02B:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R02C:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00G"
+      }
+    ],
+    "R02E:Rorb": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00B"
+      }
+    ],
+    "R02F:Roar": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o00B"
+      }
+    ],
+    "R02G:Rome": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o00B"
+      }
+    ],
+    "R02H:Rora": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o00B"
+      }
+    ],
+    "R02I:Rost": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o00D"
+      }
+    ],
+    "R02J:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00B,o00F"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      }
+    ],
+    "R02K:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00B,o00F,o00G"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      }
+    ],
+    "R02L:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00B,o00F"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 4
+      }
+    ],
+    "R02M:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00B,o00F,o00G"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R02N:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00F"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 300
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_4273"
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 30
+      }
+    ],
+    "R02O:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00F"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 10
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_4282"
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 30
+      }
+    ],
+    "R02P:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00I"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 10
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": -5
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      }
+    ],
+    "R02Q:Robs": [
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 7
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00I"
+      }
+    ],
+    "R02R:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00J"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_4328"
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      }
+    ],
+    "R02S:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00J"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.25
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_4341"
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      }
+    ],
+    "R02T:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00H"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 50
+      }
+    ],
+    "R02U:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00H"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 50
+      }
+    ],
+    "R02V:Rovs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00J"
+      }
+    ],
+    "R02W:Rovs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o00D,o00J"
+      }
+    ],
+    "R02D:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R02X:Rhar": [
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.25
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.25
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01T"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R02Y:Rhme": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01T"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R02Z:Rhsb": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "H00B,h00I"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 50
+      }
+    ],
+    "R030:Rhan": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h025,h027,h01U"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R031:Rhde": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h025"
+      }
+    ],
+    "R032:Rhri": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01T,h027"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R033:Rhhb": [
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 300
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R034:Rhac": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_5061"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_5060"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "gcls",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_5062"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01T"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R035:Rhlh": [
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gglm",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 175
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 65
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01T"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      }
+    ],
+    "R036:Rhla": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01U"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01T"
+      }
+    ],
+    "R037:Rhra": [
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 2
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01U"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01T"
+      }
+    ],
+    "R038:Rhpt": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R039:Rhhb": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R03A:Rhst": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R03B:Rhst": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "h01U"
+      }
+    ],
+    "R03C:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R03D:Rhse": [
+      {
+        "id": "grac",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "other"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R03E:Rosp": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o014"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "o015"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 10
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 15
+      }
+    ],
+    "R03F:Ropg": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6298"
+      },
+      {
+        "id": "gco1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "A0AG"
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o014"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "o015"
+      },
+      {
+        "id": "glvl",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 3
+      },
+      {
+        "id": "gglm",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 75
+      },
+      {
+        "id": "glmm",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 50
+      },
+      {
+        "id": "gtim",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 15
+      }
+    ],
+    "R03G:Rotr": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o01A"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6436"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0
+      }
+    ],
+    "R03H:Rome": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o014"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "o015"
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6457"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.05
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.05
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 125
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 90
+      }
+    ],
+    "R03I:Rora": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6463"
+      },
+      {
+        "id": "gmo2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.05
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.05
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o014"
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 3,
+        "column": 0,
+        "value": "o015"
+      },
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 125
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 110
+      }
+    ],
+    "R03J:Rwdm": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o015,o019"
+      }
+    ],
+    "R03K:Robs": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "o014"
+      }
+    ],
+    "R03L:Roen": [
+      {
+        "id": "gglb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 100
+      },
+      {
+        "id": "glmb",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 150
+      },
+      {
+        "id": "gtib",
+        "type": "int",
+        "level": 0,
+        "column": 0,
+        "value": 60
+      }
+    ],
+    "R03M:Rost": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6518"
+      },
+      {
+        "id": "gmo1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 1
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 2,
+        "column": 0,
+        "value": "o015"
+      }
+    ],
+    "R03N:Rorb": [
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "R03E"
+      }
+    ],
+    "R03O:Rolf": [
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "R03E"
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6527"
+      },
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": "TRIGSTR_6528"
+      },
+      {
+        "id": "gba1",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 0.3
+      },
+      {
+        "id": "gba2",
+        "type": "unreal",
+        "level": 0,
+        "column": 0,
+        "value": 10
+      }
+    ],
+    "R03P:Robs": [
+      {
+        "id": "gef2",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "gef1",
+        "type": "string",
+        "level": 0,
+        "column": 0,
+        "value": ""
+      },
+      {
+        "id": "greq",
+        "type": "string",
+        "level": 1,
+        "column": 0,
+        "value": "R03E"
+      }
+    ]
+  }
+}
