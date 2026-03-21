@@ -19046,16 +19046,6 @@ STRING 6203
 P4
 }
 
-STRING 6204
-{
-Horde
-}
-
-STRING 6205
-{
-Alliance
-}
-
 STRING 6206
 // Items: I01A ([Warsong] Night Elf Flag), Name (Name)
 {
@@ -19588,26 +19578,6 @@ STRING 6350
 // Units: o010 ([Hellscream] Lazy Peon), Tip (Tooltip - Basic)
 {
 Train Lazy Peon
-}
-
-STRING 6351
-{
-:project_name
-}
-
-STRING 6352
-{
-:type_game
-}
-
-STRING 6353
-{
-:description
-}
-
-STRING 6354
-{
-:author
 }
 
 STRING 6355
@@ -21164,5 +21134,20 @@ STRING 6730
 // Upgrades: R03V (Ensnare), Tip (Tooltip)
 {
 Research Fury Fire
+}
+
+STRING 6731
+{
+P5
+}
+
+STRING 6732
+{
+Players
+}
+
+STRING 6733
+{
+Syndicate
 }
 
