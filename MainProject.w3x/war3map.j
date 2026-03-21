@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
+constant boolean CustomConsoleUI__workerFace= true
         
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -384,7 +384,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI___CreateIcon takes nothing returns nothing
+    function ARTHASUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -420,8 +420,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI___init takes nothing returns nothing
-        call ARTHASUI___CreateIcon()
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
     endfunction
 
 
@@ -432,24 +432,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -509,15 +509,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -652,7 +652,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -684,15 +684,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI___CreateIcon takes nothing returns nothing
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -747,8 +747,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI___init takes nothing returns nothing
-        call WHITEMANEUI___CreateIcon()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
@@ -767,7 +767,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -778,7 +778,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -798,10 +798,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -822,11 +822,11 @@ endglobals
             // Requires a native existing only in Reforged
             
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3), 0)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3), 0)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
 
 
 
@@ -834,11 +834,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -859,19 +859,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -1031,11 +1031,11 @@ endglobals
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
@@ -2109,31 +2109,15 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 2026.5, 2642.6, 182.431, 'nenf')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 7964.6, 8541.8, 269.264, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nogl', - 7720.4, 8652.4, 287.883, 'nogl')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000008_DropItems)
+    set u=BlzCreateUnitWithSkin(p, 'nogl', - 7720.4, 8652.4, 287.880, 'nogl')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 7918.8, 8294.6, 287.271, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 5293.7, - 171.8, 40.327, 'nwlt')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwld', 949.6, 7915.7, 298.870, 'nwld')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 739.5, 7782.9, 302.558, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 5415.2, - 369.9, 83.310, 'nwlg')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1191.4, - 9011.2, 45.939, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2008.2, - 8774.1, 135.530, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 5581.6, - 218.9, 112.050, 'nwlt')
@@ -2148,10 +2132,6 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1337.6, - 8639.1, 63.661, 'nmrr')
     set u=BlzCreateUnitWithSkin(p, 'nogm', - 9181.2, 2779.4, 305.500, 'nogm')
     set u=BlzCreateUnitWithSkin(p, 'nomg', - 9180.9, 3060.8, 299.400, 'nomg')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 3654.7, 1452.3, 329.207, 'nwlt')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 8867.2, - 3265.3, 145.083, 'ngrk')
@@ -2159,18 +2139,10 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 3615.7, 1242.3, 1.360, 'nwlg')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 4071.2, 3534.9, 279.221, 'nwlt')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 4273.7, 3480.7, 211.580, 'nwlg')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlt', 4262.7, 3291.5, 159.998, 'nwlt')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
@@ -2179,10 +2151,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.300, 'nsgt')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5127.3, - 3416.8, 329.309, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nssp', - 5356.4, - 3727.7, 273.423, 'nssp')
@@ -2197,38 +2165,18 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 5176.6, - 702.9, 146.850, 'nenf')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nenf', - 4147.4, 2183.2, 146.850, 'nenf')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000007_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'ngst', 8977.8, - 3408.9, 126.611, 'ngst')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 9015.9, - 3039.2, 210.367, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'ngrk', 8713.1, - 3403.7, 90.662, 'ngrk')
     set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1831.2, - 8684.7, 135.407, 'nmrm')
     set u=BlzCreateUnitWithSkin(p, 'nsqo', 7230.8, - 8315.2, 142.265, 'nsqo')
     set u=BlzCreateUnitWithSkin(p, 'nsqa', 7051.3, - 8476.4, 115.188, 'nsqa')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000008_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1186.6, 7723.3, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nsqt', 7047.7, - 8136.9, 143.456, 'nsqt')
     set u=BlzCreateUnitWithSkin(p, 'ngnv', 1340.3, 2953.5, 143.426, 'ngnv')
     call SetUnitAcquireRange(u, 200.0)
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'ngnw', 1410.5, 3196.5, 228.206, 'ngnw')
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'ngns', 1192.6, 2850.4, 92.375, 'ngns')
@@ -2239,10 +2187,6 @@ function CreateNeutralHostile takes nothing returns nothing
     call SetUnitAcquireRange(u, 200.0)
     set u=BlzCreateUnitWithSkin(p, 'nwlg', 1164.6, 8020.7, 305.519, 'nwlg')
     set u=BlzCreateUnitWithSkin(p, 'nmmu', - 1599.6, - 8713.6, 72.885, 'nmmu')
-    set t=CreateTrigger()
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
-    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
-    call TriggerAddAction(t, function ItemTable000009_DropItems)
 endfunction
 
 //===========================================================================
@@ -2261,14 +2205,42 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount(u, 17500)
     set u=BlzCreateUnitWithSkin(p, 'n000', 2560.0, - 2560.0, 270.000, 'n000')
     call SetUnitColor(u, ConvertPlayerColor(18))
+    set u=BlzCreateUnitWithSkin(p, 'n00L', - 7648.0, 8544.0, 270.000, 'n00L')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00L', 7008.0, - 8352.0, 270.000, 'n00L')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 1952.0, - 8672.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 992.0, 7776.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
     set u=BlzCreateUnitWithSkin(p, 'ngol', - 8320.0, - 6336.0, 270.000, 'ngol')
     call SetResourceAmount(u, 25000)
     set u=BlzCreateUnitWithSkin(p, 'ngol', 8128.0, 4416.0, 270.000, 'ngol')
     call SetResourceAmount(u, 25000)
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 9120.0, 2976.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 1248.0, 3104.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 8800.0, - 3168.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 5088.0, - 3744.0, 270.000, 'n00O')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 5408.0, - 224.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 3744.0, 1248.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
     set u=BlzCreateUnitWithSkin(p, 'ntn2', - 2656.0, 2912.0, 270.000, 'ntn2')
     set u=BlzCreateUnitWithSkin(p, 'nmh0', - 2144.0, - 9120.0, 270.000, 'nmh0')
     set u=BlzCreateUnitWithSkin(p, 'nmh1', - 1632.0, - 8928.0, 270.000, 'nmh1')
     set u=BlzCreateUnitWithSkin(p, 'nmh1', - 2464.0, - 9632.0, 270.000, 'nmh1')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 4128.0, 3360.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 1952.0, 2656.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 4064.0, 2144.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 5152.0, - 800.0, 270.000, 'n00N')
+    call SetUnitColor(u, ConvertPlayerColor(0))
     set u=BlzCreateUnitWithSkin(p, 'ngol', 2944.0, - 8448.0, 270.000, 'ngol')
     call SetResourceAmount(u, 17500)
 endfunction
@@ -14450,13 +14422,13 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI___init")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("WHITEMANEUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("ARTHASUI__init")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
