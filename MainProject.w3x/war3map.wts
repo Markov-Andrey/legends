@@ -21151,3 +21151,21 @@ STRING 6733
 Syndicate
 }
 
+STRING 6734
+// Abilities: A0BP ([Hellscream] Flame Strike), Name (Name)
+{
+[Hellscream] Flame Strike
+}
+
+STRING 6735
+// Abilities: A0BQ ([Hellscream] Flame Strike), Name (Name)
+{
+[Hellscream] Flame Strike
+}
+
+STRING 6736
+// Abilities: A0BQ ([Hellscream] Flame Strike), EditorSuffix (Editor Suffix)
+{
+(Siege)
+}
+
