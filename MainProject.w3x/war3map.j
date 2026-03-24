@@ -238,7 +238,10 @@ trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_WhitemaneFastBuild= null
 trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
+trigger gg_trg_HellscreamEnraged= null
 trigger gg_trg_HellscreamExecute= null
+trigger gg_trg_HellscreamBloodCurse= null
+trigger gg_trg_HellscreamBattleMadness= null
 trigger gg_trg_HellscreamRage= null
 trigger gg_trg_HellscreamBladeBlade= null
 trigger gg_trg_HellscreamFuelFury= null
@@ -246,6 +249,10 @@ trigger gg_trg_HellscreamFistWoodburner= null
 trigger gg_trg_HellscreamFistFuryFire= null
 trigger gg_trg_HellscreamWorgBreeding= null
 trigger gg_trg_HellscreamSuicide= null
+trigger gg_trg_HellscreamMine= null
+trigger gg_trg_HellscreamMineCycle= null
+trigger gg_trg_HellscreamMineDel= null
+trigger gg_trg_HellscreamMineDelete= null
 trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
@@ -359,13 +366,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamEnraged= null
-trigger gg_trg_HellscreamBloodCurse= null
-trigger gg_trg_HellscreamMine= null
-trigger gg_trg_HellscreamMineDel= null
-trigger gg_trg_HellscreamMineCycle= null
-trigger gg_trg_HellscreamMineDelete= null
-trigger gg_trg_HellscreamBattleMadness= null
+trigger gg_trg_HellscreamPigFarmBuild= null
 
     // Random Groups
 integer array gg_rg_000
@@ -8332,6 +8333,7 @@ function Trig_HellscreamIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_HellscreamMineDel)
     call EnableTrigger(gg_trg_HellscreamMineDelete)
     call EnableTrigger(gg_trg_HellscreamBattleMadness)
+    call EnableTrigger(gg_trg_HellscreamPigFarmBuild)
 endfunction
 
 //===========================================================================
@@ -9109,6 +9111,29 @@ function InitTrig_HellscreamChopMeat takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamChopMeat, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_HellscreamChopMeat, Condition(function Trig_HellscreamChopMeat_Conditions))
     call TriggerAddAction(gg_trg_HellscreamChopMeat, function Trig_HellscreamChopMeat_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamPigFarmBuild
+//===========================================================================
+function Trig_HellscreamPigFarmBuild_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'o017' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamPigFarmBuild_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc(2, 'o01E', GetOwningPlayer(GetConstructedStructure()), GetUnitLoc(GetConstructedStructure()), bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_HellscreamPigFarmBuild takes nothing returns nothing
+    set gg_trg_HellscreamPigFarmBuild=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamPigFarmBuild)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamPigFarmBuild, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(gg_trg_HellscreamPigFarmBuild, Condition(function Trig_HellscreamPigFarmBuild_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamPigFarmBuild, function Trig_HellscreamPigFarmBuild_Actions)
 endfunction
 
 //===========================================================================
@@ -14393,6 +14418,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_HellscreamTaming()
     call InitTrig_HellscreamSavageFeast()
     call InitTrig_HellscreamChopMeat()
+    call InitTrig_HellscreamPigFarmBuild()
     call InitTrig_HellscreamTraining()
     call InitTrig_HellscreamTrainingDebug()
     call InitTrig_MythicAddRandom()

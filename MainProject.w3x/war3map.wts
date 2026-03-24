@@ -19299,33 +19299,15 @@ Build Altar of Rage
 }
 
 STRING 6278
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+// Abilities: A0BX ([Hellscream] Rage), Name (Name)
 {
 [Hellscream] Rage
-}
-
-STRING 6279
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
-{
-Improved Rage
 }
 
 STRING 6280
 // Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
 {
 Advanced Rage
-}
-
-STRING 6281
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
-{
-Upgrade to Rage
-}
-
-STRING 6282
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
-{
-Upgrade to Improved Rage
 }
 
 STRING 6283
@@ -19371,7 +19353,7 @@ STRING 6292
 }
 
 STRING 6298
-// Upgrades: R03F (Pillage), effect1 (Effect 1)
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), effect1 (Effect 1)
 {
 rlev
 }
@@ -19851,12 +19833,6 @@ STRING 6427
 // Buffs/Effects: B01T ([Hellscream] War Song), Buffubertip (Tooltip - Extended)
 {
 Attack power increased.
-}
-
-STRING 6429
-// Abilities: A0AK ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
-{
-Heals a target friendly unit for <A0AK,DataA1> hit points and <A0AK,DataB1> mana points over <A0AK,Dur1> seconds.
 }
 
 STRING 6430
@@ -20376,13 +20352,6 @@ STRING 6576
 Primary troop production building. Trains Grunts, Spearthrowers. |nAlso contains the Brute Strength upgrade
 }
 
-STRING 6577
-// Units: o01E ([Hellscream] Boar), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #food
-|RA boar provides 3 food, but consumes 1. You can slaughter it to replenish your unit's health and rage. Can be upgraded to Savage Feast |n|n|cffffcc00Attacks land and air units.|r 
-}
-
 STRING 6578
 // Units: o01F ([Hellscream] Spearthrower), Ubertip (Tooltip - Extended)
 {
@@ -20446,14 +20415,6 @@ STRING 6585
 Mighty warrior. Standard warrior of the Ogre Legion. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 6586
-// Units: o017 ([Hellscream] Pig Farm), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #food
-|R
-TProvides food, which increases the maximum number of units that can be trained. Can learn the Savage Feast upgrade.
-}
-
 STRING 6588
 // Units: o01A ([Hellscream] Beastiary), Ubertip (Tooltip - Extended)
 {
@@ -20503,7 +20464,7 @@ H
 }
 
 STRING 6601
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0BD ([Hellscream] Worg Breeding), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20515,7 +20476,7 @@ E
 }
 
 STRING 6603
-// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
 {
 W
 }
@@ -21524,5 +21485,135 @@ STRING 6809
 // Upgrades: R03K (Brute Strength), Tip (Tooltip)
 {
 Research Frenzy Strength
+}
+
+STRING 6812
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+[Hellscream] Greater Rage
+}
+
+STRING 6813
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+Improved Berserker Rage
+}
+
+STRING 6814
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Greater Rage
+}
+
+STRING 6815
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Berserker Rage
+}
+
+STRING 6816
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 6817
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 6820
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), class (Class)
+{
+caster
+}
+
+STRING 6823
+// Abilities: A0BX ([Hellscream] Rage), Tip (Tooltip - Normal)
+{
+[Hellscream] Rage
+}
+
+STRING 6824
+// Abilities: A0BX ([Hellscream] Rage), Tip (Tooltip - Normal)
+{
+Greater Rage
+}
+
+STRING 6825
+// Abilities: A0BX ([Hellscream] Rage), Tip (Tooltip - Normal)
+{
+Berserker Rage
+}
+
+STRING 6826
+// Abilities: A0BX ([Hellscream] Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Rage — adds +3–6 rage per attack.
+|cFF9B9B9BGreater Rage — improved version, adds +4–7 rage per attack.|R
+|cFF9B9B9BBerserker Rage — the highest form of rage, adds +5–8 rage per attack.|R
+}
+
+STRING 6827
+// Abilities: A0BX ([Hellscream] Rage), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF9B9B9BRage — adds +3–6 rage per attack.|R
+Greater Rage — improved version, adds +4–7 rage per attack.
+|cFF9B9B9BBerserker Rage — the highest form of rage, adds +5–8 rage per attack.|R
+}
+
+STRING 6828
+// Abilities: A0BX ([Hellscream] Rage), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF9B9B9BRage — adds +3–6 rage per attack.|R
+|cFF9B9B9BGreater Rage — improved version, adds +4–7 rage per attack.|R
+Berserker Rage — the highest form of rage, adds +5–8 rage per attack.
+}
+
+STRING 6829
+// Upgrades: R03F (Pillage), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 6830
+// Abilities: A0AK ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a target friendly unit for 220 hit points and 100 rage points over 12 seconds.
+}
+
+STRING 6831
+// Abilities: A0BD ([Hellscream] Worg Breeding), Ubertip (Tooltip - Normal - Extended)
+{
+Get 1 free neutral Worg. It can be tamed with Grunt and Spear Thrower.
+}
+
+STRING 6832
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 6833
+// Abilities: A0BK ([Hellscream] Elementium Plating), Ubertip (Tooltip - Normal - Extended)
+{
+Grants a 65% chance to reduce ranged damage taken by 9 points, to a minimum of 3 damage.
+}
+
+STRING 6834
+// Units: o017 ([Hellscream] Pig Farm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #food
+|R
+Provides food, which increases the maximum number of units that can be trained. Upon completion of construction, you will immediately receive 2 boars for free.
+}
+
+STRING 6835
+// Units: o01E ([Hellscream] Boar), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #food
+|R
+A boar provides 3 food, but consumes 1. You can slaughter it to replenish your unit's health and rage. Can be upgraded to Savage Feast |n|n|cffffcc00Attacks land and air units.|r 
 }
 
