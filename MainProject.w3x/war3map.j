@@ -257,6 +257,7 @@ trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
 trigger gg_trg_HellscreamChopMeat= null
+trigger gg_trg_HellscreamPigFarmBuild= null
 trigger gg_trg_HellscreamTraining= null
 trigger gg_trg_HellscreamTrainingDebug= null
 trigger gg_trg_MythicAddRandom= null
@@ -366,7 +367,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamPigFarmBuild= null
 
     // Random Groups
 integer array gg_rg_000

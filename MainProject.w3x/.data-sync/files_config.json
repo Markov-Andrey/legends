@@ -1600,14 +1600,6 @@
         "validated": false
     },
     {
-        "path": "Legends\\Hellscream\\Grunt\\BTNBurningBladeGrunt.blp",
-        "name": "BTNBurningBladeGrunt.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
         "path": "Legends\\Hellscream\\Grunt\\BTN_Hellscream_Ability_Hunter_BeastTaming.blp",
         "name": "BTN_Hellscream_Ability_Hunter_BeastTaming.blp",
         "type": "file",
@@ -1819,14 +1811,6 @@
         "path": "Legends\\Hellscream\\Peon",
         "name": "Peon",
         "type": "directory",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
-        "path": "Legends\\Hellscream\\Peon\\BTNWC1PeonRemastered.blp",
-        "name": "BTNWC1PeonRemastered.blp",
-        "type": "file",
         "copy": true,
         "copy_child": "",
         "validated": false
@@ -2058,14 +2042,6 @@
     {
         "path": "Legends\\Hellscream\\Warlock\\ATC_Hellscream_Runes.blp",
         "name": "ATC_Hellscream_Runes.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
-        "path": "Legends\\Hellscream\\Warlock\\BTNWarsongWarlock.blp",
-        "name": "BTNWarsongWarlock.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -7880,14 +7856,6 @@
         "validated": false
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBurningBladeGrunt.blp",
-        "name": "DISBTNBurningBladeGrunt.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNCageWagon.blp",
         "name": "DISBTNCageWagon.blp",
         "type": "file",
@@ -9064,14 +9032,6 @@
         "validated": false
     },
     {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWC1PeonRemastered.blp",
-        "name": "DISBTNWC1PeonRemastered.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWC1RaiderRemastered.blp",
         "name": "DISBTNWC1RaiderRemastered.blp",
         "type": "file",
@@ -9098,14 +9058,6 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWarsongSpearthrower.blp",
         "name": "DISBTNWarsongSpearthrower.blp",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
-        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNWarsongWarlock.blp",
-        "name": "DISBTNWarsongWarlock.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",
@@ -12968,14 +12920,6 @@
         "validated": false
     },
     {
-        "path": "Legends\\Hellscream\\Farm\\WarsongPigFarm.mdx",
-        "name": "WarsongPigFarm.mdx",
-        "type": "file",
-        "copy": true,
-        "copy_child": "",
-        "validated": false
-    },
-    {
         "path": "Legends\\Hellscream\\GoblinAlchemist",
         "name": "GoblinAlchemist",
         "type": "directory",
@@ -13410,6 +13354,230 @@
     {
         "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellscream_Warcraft.blp",
         "name": "DISPAS_Hellscream_Warcraft.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Boar\\BTN_Hellscream_CritterBoar.blp",
+        "name": "BTN_Hellscream_CritterBoar.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Farm\\BTN_Hellscream_Pig_Farm.blp",
+        "name": "BTN_Hellscream_Pig_Farm.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Farm\\WCIIPigFarm.mdx",
+        "name": "WCIIPigFarm.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\GoblinSapper",
+        "name": "GoblinSapper",
+        "type": "directory",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\GoblinSapper\\BTNGoblinSapper.blp",
+        "name": "BTNGoblinSapper.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt\\BTNFrenzyBite.blp",
+        "name": "BTNFrenzyBite.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Grunt\\BTN_Hellscream_Grunt.blp",
+        "name": "BTN_Hellscream_Grunt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\BTNBloodZap.blp",
+        "name": "BTNBloodZap.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\BTN_Hellscream_HellscreamRage.blp",
+        "name": "BTN_Hellscream_HellscreamRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\BTN_Hellscream_Whirlwind.blp",
+        "name": "BTN_Hellscream_Whirlwind.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\PASBloodZap.blp",
+        "name": "PASBloodZap.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Hellscream\\PAS_Hellscream_Enraged.blp",
+        "name": "PAS_Hellscream_Enraged.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Peon\\BTNLazyPeon.blp",
+        "name": "BTNLazyPeon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Rage\\PAS_Hellscream_ability_warrior_rampage.blp",
+        "name": "PAS_Hellscream_ability_warrior_rampage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\BTN_Hellscream_BlacktoothGrinWarlock.blp",
+        "name": "BTN_Hellscream_BlacktoothGrinWarlock.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNBloodZap.blp",
+        "name": "DISBTNBloodZap.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNFrenzyBite.blp",
+        "name": "DISBTNFrenzyBite.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNGoblinSapper.blp",
+        "name": "DISBTNGoblinSapper.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNLazyPeon.blp",
+        "name": "DISBTNLazyPeon.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_BlacktoothGrinWarlock.blp",
+        "name": "DISBTN_Hellscream_BlacktoothGrinWarlock.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_CritterBoar.blp",
+        "name": "DISBTN_Hellscream_CritterBoar.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Grunt.blp",
+        "name": "DISBTN_Hellscream_Grunt.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_HellscreamRage.blp",
+        "name": "DISBTN_Hellscream_HellscreamRage.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Pig_Farm.blp",
+        "name": "DISBTN_Hellscream_Pig_Farm.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTN_Hellscream_Whirlwind.blp",
+        "name": "DISBTN_Hellscream_Whirlwind.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASBloodZap.blp",
+        "name": "DISPASBloodZap.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellscream_Enraged.blp",
+        "name": "DISPAS_Hellscream_Enraged.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISPAS_Hellscream_ability_warrior_rampage.blp",
+        "name": "DISPAS_Hellscream_ability_warrior_rampage.blp",
         "type": "file",
         "copy": true,
         "copy_child": "",

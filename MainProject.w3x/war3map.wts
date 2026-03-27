@@ -14970,13 +14970,13 @@ This unit has Immolation; nearby enemy ground units will take damage over time.
 }
 
 STRING 5303
-// Abilities: A08M ([Whitemane] Holy Fury), Hotkey (Hotkey - Normal)
+// Units: O013 ([Hellscream] Warsong Warchief), Hotkey (Hotkey)
 {
 H
 }
 
 STRING 5304
-// Abilities: A08M ([Whitemane] Holy Fury), Unhotkey (Hotkey - Turn Off)
+// Abilities: A08M ([Whitemane] Holy Fury), Hotkey (Hotkey - Normal)
 {
 H
 }
@@ -19125,7 +19125,7 @@ STRING 6223
 }
 
 STRING 6224
-// Buffs/Effects: B01V ([Hellscream] Hellscream), Bufftip (Tooltip)
+// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
 {
 Hellscream
 }
@@ -19633,14 +19633,6 @@ STRING 6364
 Summons Heroes. Revives slain Heroes.
 }
 
-STRING 6365
-// Units: O013 ([Hellscream] Warsong Warchief), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#legend
-|R
-Can learn 1, 2, 3 and 4. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 6366
 // Units: o016 ([Hellscream] Altar of Rage), Ubertip (Tooltip - Extended)
 {
@@ -19763,36 +19755,6 @@ STRING 6396
 [Hellscream] Whirlwind
 }
 
-STRING 6401
-// Abilities: A0AT ([Hellscream] Hellscream), Name (Name)
-{
-[Hellscream] Hellscream
-}
-
-STRING 6403
-// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
-{
-Hellscream
-}
-
-STRING 6404
-// Buffs/Effects: B01V ([Hellscream] Hellscream), EditorName (Name (Editor Only))
-{
-[Hellscream] Hellscream
-}
-
-STRING 6415
-// Abilities: A0AT ([Hellscream] Hellscream), Researchtip (Tooltip - Learn)
-{
-Learn Hellscream
-}
-
-STRING 6419
-// Buffs/Effects: B01V ([Hellscream] Hellscream), Buffubertip (Tooltip - Extended)
-{
-This unit has heard the Hellscream; it deals less damage for a duration.
-}
-
 STRING 6420
 // Abilities: A0AS ([Hellscream] War Song), Name (Name)
 {
@@ -19879,12 +19841,6 @@ rmnx
 
 STRING 6438
 // Abilities: A0AR ([Hellscream] Savage Feast), Ubertip (Tooltip - Normal - Extended)
-{
-Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
-}
-
-STRING 6439
-// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
 {
 Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
 }
@@ -20088,7 +20044,7 @@ Increases the attack rate of a target unit by <A0AZ,DataA1,%>%, but drains <A0AZ
 }
 
 STRING 6510
-// Abilities: A0B2 ([Hellscream] Firebolt), Name (Name)
+// Abilities: A0BY ([Hellscream] Firebolt), Name (Name)
 {
 [Hellscream] Firebolt
 }
@@ -20452,13 +20408,13 @@ E
 }
 
 STRING 6599
-// Abilities: A0AT ([Hellscream] Hellscream), Researchhotkey (Hotkey - Learn)
+// Abilities: A08M ([Whitemane] Holy Fury), Unhotkey (Hotkey - Turn Off)
 {
 H
 }
 
 STRING 6600
-// Abilities: A0AT ([Hellscream] Hellscream), Hotkey (Hotkey - Normal)
+// Abilities: A0AT ([Hellscream] Hell Scream), Researchhotkey (Hotkey - Learn)
 {
 H
 }
@@ -21302,18 +21258,6 @@ STRING 6779
 Blood Curse
 }
 
-STRING 6780
-// Abilities: A0AT ([Hellscream] Hellscream), Tip (Tooltip - Normal)
-{
-Hellscream - [|cffffcc00Level 1|r]
-}
-
-STRING 6781
-// Abilities: A0AT ([Hellscream] Hellscream), Tip (Tooltip - Normal)
-{
-Hellscream - [|cffffcc00Level 2|r]
-}
-
 STRING 6782
 // Abilities: A0BS ([Hellscream] Blood Curse), Tip (Tooltip - Normal)
 {
@@ -21383,24 +21327,6 @@ STRING 6792
 // Upgrades: R03W (Brute Strength), Name (Name)
 {
 [Hellscream] Blood Curse
-}
-
-STRING 6793
-// Abilities: A0AT ([Hellscream] Hellscream), Researchubertip (Tooltip - Learn - Extended)
-{
-Hellscream lets loose a terrifying howl that causes nearby enemy units to shiver in fear, reducing their attack damage. |nLasts <ANht,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANht,DataA1,%>% attack damage reduction. |n|cffffcc00Level 2|r - <ANht,DataA2,%>% attack damage reduction.
-}
-
-STRING 6794
-// Abilities: A0AT ([Hellscream] Hellscream), Ubertip (Tooltip - Normal - Extended)
-{
-Hellscream lets loose a terrifying howl that reduces nearby enemy units' attack damage by 50% and 5 armor for 15 seconds.
-}
-
-STRING 6795
-// Abilities: A0AT ([Hellscream] Hellscream), Ubertip (Tooltip - Normal - Extended)
-{
-Hellscream lets loose a terrifying howl that reduces nearby enemy units' attack damage by70% and 7 armor for 15 seconds.
 }
 
 STRING 6796
@@ -21615,5 +21541,109 @@ STRING 6835
 |cffffcc00#ranged #food
 |R
 A boar provides 3 food, but consumes 1. You can slaughter it to replenish your unit's health and rage. Can be upgraded to Savage Feast |n|n|cffffcc00Attacks land and air units.|r 
+}
+
+STRING 6837
+// Abilities: A0BC ([Hellscream] Shredder), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Shredder. Medium melee unit made of iron. Excellent at harvesting large amounts of lumber. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 6838
+// Units: O013 ([Hellscream] Warsong Warchief), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Execute, Whirlwind, Battle Madness, Blood Curse and Hell Scream. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6839
+// Abilities: A0AT ([Hellscream] Hell Scream), Name (Name)
+{
+[Hellscream] Hell Scream
+}
+
+STRING 6840
+// Abilities: A0AT ([Hellscream] Hell Scream), Tip (Tooltip - Normal)
+{
+Hell Scream - [|cffffcc00Level 1|r]
+}
+
+STRING 6841
+// Abilities: A0AT ([Hellscream] Hell Scream), Researchtip (Tooltip - Learn)
+{
+Learn Hell Scream
+}
+
+STRING 6842
+// Abilities: A0AT ([Hellscream] Hell Scream), Researchubertip (Tooltip - Learn - Extended)
+{
+Hell Scream lets loose a terrifying howl that causes nearby enemy units to shiver in fear, reducing their attack damage. |nLasts <ANht,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANht,DataA1,%>% attack damage reduction. |n|cffffcc00Level 2|r - <ANht,DataA2,%>% attack damage reduction.
+}
+
+STRING 6843
+// Abilities: A0AT ([Hellscream] Hell Scream), Ubertip (Tooltip - Normal - Extended)
+{
+Hell Scream lets loose a terrifying howl that reduces nearby enemy units' attack damage by 50% and 5 armor for 15 seconds.
+}
+
+STRING 6844
+// Abilities: A0AT ([Hellscream] Hell Scream), Hotkey (Hotkey - Normal)
+{
+H
+}
+
+STRING 6845
+// Abilities: A0AT ([Hellscream] Hell Scream), Tip (Tooltip - Normal)
+{
+Hell Scream - [|cffffcc00Level 2|r]
+}
+
+STRING 6846
+// Abilities: A0AT ([Hellscream] Hell Scream), Ubertip (Tooltip - Normal - Extended)
+{
+Hell Scream lets loose a terrifying howl that reduces nearby enemy units' attack damage by70% and 7 armor for 15 seconds.
+}
+
+STRING 6847
+// Buffs/Effects: B01V ([Hellscream] Hell Scream), EditorName (Name (Editor Only))
+{
+[Hellscream] Hell Scream
+}
+
+STRING 6848
+// Buffs/Effects: B01V ([Hellscream] Hell Scream), Bufftip (Tooltip)
+{
+Hell Scream
+}
+
+STRING 6849
+// Buffs/Effects: B01V ([Hellscream] Hell Scream), Buffubertip (Tooltip - Extended)
+{
+This unit has heard the Hell Scream; it deals less damage for a duration.
+}
+
+STRING 6850
+// Abilities: A0BY ([Hellscream] Firebolt), Tip (Tooltip - Normal)
+{
+Firebolt
+}
+
+STRING 6852
+// Abilities: A0BY ([Hellscream] Firebolt), Ubertip (Tooltip - Normal - Extended)
+{
+Adds 35 bonus fire damage to an attack against enemies, but drains mana with each shot fired.
+}
+
+STRING 6853
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
+{
+Chop Meat instantly restores an additional 2 health for each point of Rage.
+}
+
+STRING 6854
+// Buffs/Effects: B020 ([Hellscream] WarCraft), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of WarCraft; it has an increased movement speed and attack rate.
 }
 
