@@ -14315,12 +14315,14 @@ function AddLootForUnitType takes integer unitType,integer level returns nothing
     endloop
 
     call DestroyGroup(g)
+    set u=null
+    set g=null
 endfunction
 
 function Trig_ChestLoot_Actions takes nothing returns nothing
     call AddLootForUnitType('n00N' , 6)
-    call AddLootForUnitType('n00L' , 7)
-    call AddLootForUnitType('n00O' , 8)
+    call AddLootForUnitType('n00O' , 7)
+    call AddLootForUnitType('n00L' , 8)
 endfunction
 
 function InitTrig_ChestLoot takes nothing returns nothing

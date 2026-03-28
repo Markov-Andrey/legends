@@ -21831,3 +21831,41 @@ STRING 6891
 G
 }
 
+STRING 6897
+// Abilities: A0BZ ([Items] Burning Blade +10% speed), Name (Name)
+{
+[Items] Burning Blade +10% speed
+}
+
+STRING 6898
+// Abilities: A0C0 ([Items] Burning Blade - Mirror Image), Name (Name)
+{
+[Items] Burning Blade - Mirror Image
+}
+
+STRING 6901
+// Items: I01H (|cFFA089FFBurning Blade|R), Name (Name)
+{
+|cFFA089FFBurning Blade|R
+}
+
+STRING 6902
+// Items: I01H (|cFFA089FFBurning Blade|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFBurning Blade|R
+}
+
+STRING 6903
+// Items: I01H (|cFFA089FFBurning Blade|R), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Whispers say this is Samuro's own blade."|r
+
+Grants 10% attack speed and creates 2 hero illusions that last for 45 seconds.
+}
+
+STRING 6904
+// Items: I01H (|cFFA089FFBurning Blade|R), Description (Description)
+{
+Grants 10% attack speed and creates 2 hero illusions that last for 45 seconds.
+}
+
