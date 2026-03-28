@@ -1871,13 +1871,13 @@ Heal organic troops using resources.
 }
 
 STRING 1721
-// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
+// Units: o017 ([Hellscream] Pig Farm), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 1722
-// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -2777,7 +2777,7 @@ STRING 2094
 }
 
 STRING 2095
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Units: o019 ([Hellscream] Lumberyard), Hotkey (Hotkey)
 {
 L
 }
@@ -7195,19 +7195,19 @@ V
 }
 
 STRING 3484
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Hotkey (Hotkey - Normal)
+// Units: o01A ([Hellscream] Beastiary), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 3485
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Unhotkey (Hotkey - Turn Off)
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Hotkey (Hotkey - Normal)
 {
 B
 }
 
 STRING 3486
-// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Hotkey (Hotkey - Normal)
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Unhotkey (Hotkey - Turn Off)
 {
 B
 }
@@ -7219,13 +7219,13 @@ V
 }
 
 STRING 3488
-// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Hotkey (Hotkey - Normal)
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Hotkey (Hotkey - Normal)
 {
 B
 }
 
 STRING 3489
-// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Hotkey (Hotkey - Normal)
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -7237,7 +7237,7 @@ V
 }
 
 STRING 3491
-// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Hotkey (Hotkey - Normal)
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -7249,7 +7249,7 @@ V
 }
 
 STRING 3493
-// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Hotkey (Hotkey - Normal)
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -9597,13 +9597,13 @@ S
 }
 
 STRING 4019
-// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
+// Units: o01B ([Hellscream] Dragon Roost), Hotkey (Hotkey)
 {
 D
 }
 
 STRING 4023
-// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
+// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -10722,7 +10722,7 @@ S
 }
 
 STRING 4309
-// Abilities: A00C ([Uther] Summon Champion of Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -10734,7 +10734,7 @@ STRING 4310
 }
 
 STRING 4312
-// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
+// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -10880,7 +10880,7 @@ Research Windfury Weapon
 }
 
 STRING 4340
-// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AP ([Hellscream] Whirlwind), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -10904,7 +10904,7 @@ Research Quaking Totem
 }
 
 STRING 4345
-// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AP ([Hellscream] Whirlwind), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -11018,7 +11018,7 @@ STRING 4369
 }
 
 STRING 4370
-// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02J (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -12380,7 +12380,7 @@ S
 }
 
 STRING 4628
-// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -14970,13 +14970,13 @@ This unit has Immolation; nearby enemy ground units will take damage over time.
 }
 
 STRING 5303
-// Abilities: A08M ([Whitemane] Holy Fury), Hotkey (Hotkey - Normal)
+// Units: O013 ([Hellscream] Warsong Warchief), Hotkey (Hotkey)
 {
 H
 }
 
 STRING 5304
-// Abilities: A08M ([Whitemane] Holy Fury), Unhotkey (Hotkey - Turn Off)
+// Abilities: A08M ([Whitemane] Holy Fury), Hotkey (Hotkey - Normal)
 {
 H
 }
@@ -15492,13 +15492,13 @@ Removes all bonuses, stops health loss, and resets the Scarlet Crusade level to 
 }
 
 STRING 5422
-// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02R (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 5423
-// Abilities: A0AP ([Hellscream] Whirlwind), Researchhotkey (Hotkey - Learn)
+// Abilities: A0AO ([Hellscream] Execute), Researchhotkey (Hotkey - Learn)
 {
 W
 }
@@ -16914,7 +16914,7 @@ R
 }
 
 STRING 5710
-// Abilities: A0AO ([Hellscream] Execute), Researchhotkey (Hotkey - Learn)
+// Abilities: A0BR ([Hellscream] Battle Madness), Researchhotkey (Hotkey - Learn)
 {
 E
 }
@@ -16926,13 +16926,13 @@ A
 }
 
 STRING 5712
-// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+// Upgrades: R02S (Brute Strength), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 5713
-// Abilities: A0AP ([Hellscream] Whirlwind), Hotkey (Hotkey - Normal)
+// Abilities: A0AO ([Hellscream] Execute), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -18155,13 +18155,13 @@ Select |cFFFFAD40Claws of Attack +15|R
 }
 
 STRING 5978
-// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AF ([Hellscream] Attack Training), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 5979
-// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
+// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19125,7 +19125,7 @@ STRING 6223
 }
 
 STRING 6224
-// Abilities: A0AT ([Hellscream] Hellscream), Tip (Tooltip - Normal)
+// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
 {
 Hellscream
 }
@@ -19299,33 +19299,15 @@ Build Altar of Rage
 }
 
 STRING 6278
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+// Abilities: A0BX ([Hellscream] Rage), Name (Name)
 {
 [Hellscream] Rage
-}
-
-STRING 6279
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
-{
-Improved Rage
 }
 
 STRING 6280
 // Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
 {
 Advanced Rage
-}
-
-STRING 6281
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
-{
-Upgrade to Rage
-}
-
-STRING 6282
-// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
-{
-Upgrade to Improved Rage
 }
 
 STRING 6283
@@ -19371,7 +19353,7 @@ STRING 6292
 }
 
 STRING 6298
-// Upgrades: R03F (Pillage), effect1 (Effect 1)
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), effect1 (Effect 1)
 {
 rlev
 }
@@ -19651,14 +19633,6 @@ STRING 6364
 Summons Heroes. Revives slain Heroes.
 }
 
-STRING 6365
-// Units: O013 ([Hellscream] Warsong Warchief), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#legend
-|R
-Can learn 1, 2, 3 and 4. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 6366
 // Units: o016 ([Hellscream] Altar of Rage), Ubertip (Tooltip - Extended)
 {
@@ -19745,37 +19719,10 @@ STRING 6386
 Execute - [|cffffcc00Level 3|r]
 }
 
-STRING 6387
-// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
-{
-Attempt to finish off a wounded foe, causing <A0AO,DataA1> damage and converting each extra point of rage into 3 additional damage
-}
-
-STRING 6388
-// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
-{
-Attempt to finish off a wounded foe, causing <A0AO,DataA2> damage and converting each extra point of rage into 4 additional damage
-}
-
-STRING 6389
-// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
-{
-Attempt to finish off a wounded foe, causing <A0AO,DataA3> damage and converting each extra point of rage into 5 additional damage
-}
-
 STRING 6390
 // Abilities: A0AO ([Hellscream] Execute), Researchtip (Tooltip - Learn)
 {
 Execute - [|cffffcc00Level %d|r]
-}
-
-STRING 6391
-// Abilities: A0AO ([Hellscream] Execute), Researchubertip (Tooltip - Learn - Extended)
-{
-Attempts to finish off a wounded foe, causing damage and converting each extra point of Rage into additional damage.
-|n|cffffcc00Level 1|r – <A0AO,DataA1> base damage + 3 damage per extra rage point.
-|cffffcc00Level 2|r – <A0AO,DataA2> base damage + 4 damage per extra rage point.
-|cffffcc00Level 3|r – <A0AO,DataA3> base damage + 5 damage per extra rage point.
 }
 
 STRING 6392
@@ -19806,66 +19753,6 @@ STRING 6396
 // Abilities: A0AP ([Hellscream] Whirlwind), Name (Name)
 {
 [Hellscream] Whirlwind
-}
-
-STRING 6397
-// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
-{
-Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA1> damage per second to nearby enemy land units. |nLasts 1 second
-}
-
-STRING 6400
-// Abilities: A0AQ ([Hellscream] Critical Strike), Name (Name)
-{
-[Hellscream] Critical Strike
-}
-
-STRING 6401
-// Abilities: A0AT ([Hellscream] Hellscream), Name (Name)
-{
-[Hellscream] Hellscream
-}
-
-STRING 6403
-// Buffs/Effects: B01V ([Hellscream] Hellscream), Bufftip (Tooltip)
-{
-Hellscream
-}
-
-STRING 6404
-// Buffs/Effects: B01V ([Hellscream] Hellscream), EditorName (Name (Editor Only))
-{
-[Hellscream] Hellscream
-}
-
-STRING 6406
-// Upgrades: R03D (Magic Sentry), Tip (Tooltip)
-{
-Hellscream
-}
-
-STRING 6415
-// Abilities: A0AT ([Hellscream] Hellscream), Researchtip (Tooltip - Learn)
-{
-Learn Hellscream
-}
-
-STRING 6416
-// Abilities: A0AT ([Hellscream] Hellscream), Researchubertip (Tooltip - Learn - Extended)
-{
-Hellscream lets loose a terrifying howl that causes nearby enemy units to shiver in fear, reducing their attack damage. |nLasts <ANht,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANht,DataA1,%>% attack damage reduction. |n|cffffcc00Level 2|r - <ANht,DataA2,%>% attack damage reduction. |n|cffffcc00Level 3|r - <ANht,DataA3,%>% attack damage reduction.
-}
-
-STRING 6417
-// Abilities: A0AT ([Hellscream] Hellscream), Ubertip (Tooltip - Normal - Extended)
-{
-Hellscream lets loose a terrifying howl that reduces nearby enemy units' attack damage by <ANht,DataA1,%>% for <ANht,Dur1> seconds.
-}
-
-STRING 6419
-// Buffs/Effects: B01V ([Hellscream] Hellscream), Buffubertip (Tooltip - Extended)
-{
-This unit has heard the Hellscream; it deals less damage for a duration.
 }
 
 STRING 6420
@@ -19910,12 +19797,6 @@ STRING 6427
 Attack power increased.
 }
 
-STRING 6429
-// Abilities: A0AK ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
-{
-Heals a target friendly unit for <A0AK,DataA1> hit points and <A0AK,DataB1> mana points over <A0AK,Dur1> seconds.
-}
-
 STRING 6430
 // Abilities: A0AJ ([Hellscream] Bloodlust), Name (Name)
 {
@@ -19956,18 +19837,6 @@ STRING 6436
 // Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), effect1 (Effect 1)
 {
 rmnx
-}
-
-STRING 6438
-// Abilities: A0AR ([Hellscream] Savage Feast), Ubertip (Tooltip - Normal - Extended)
-{
-Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
-}
-
-STRING 6439
-// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
-{
-Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
 }
 
 STRING 6440
@@ -20016,12 +19885,6 @@ STRING 6450
 // Upgrades: R03J (War Drums Damage Increase), Name (Name)
 {
 [Hellscream] War Drums Damage Increase
-}
-
-STRING 6464
-// Upgrades: R03K (Brute Strength), Name (Name)
-{
-[Hellscream] Brute Strength
 }
 
 STRING 6465
@@ -20175,7 +20038,7 @@ Increases the attack rate of a target unit by <A0AZ,DataA1,%>%, but drains <A0AZ
 }
 
 STRING 6510
-// Abilities: A0B2 ([Hellscream] Firebolt), Name (Name)
+// Abilities: A0BY ([Hellscream] Firebolt), Name (Name)
 {
 [Hellscream] Firebolt
 }
@@ -20388,13 +20251,13 @@ STRING 6567
 }
 
 STRING 6568
-// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6569
-// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -20437,13 +20300,6 @@ STRING 6576
 |cffffcc00#barrack
 |R
 Primary troop production building. Trains Grunts, Spearthrowers. |nAlso contains the Brute Strength upgrade
-}
-
-STRING 6577
-// Units: o01E ([Hellscream] Boar), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #food
-|RA boar provides 3 food, but consumes 1. You can slaughter it to replenish your unit's health and rage. Can be upgraded to Savage Feast |n|n|cffffcc00Attacks land and air units.|r 
 }
 
 STRING 6578
@@ -20509,14 +20365,6 @@ STRING 6585
 Mighty warrior. Standard warrior of the Ogre Legion. |n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 6586
-// Units: o017 ([Hellscream] Pig Farm), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#barrack #food
-|R
-TProvides food, which increases the maximum number of units that can be trained. Can learn the Savage Feast upgrade.
-}
-
 STRING 6588
 // Units: o01A ([Hellscream] Beastiary), Ubertip (Tooltip - Extended)
 {
@@ -20547,53 +20395,26 @@ STRING 6593
 [Hellscream] War Drums
 }
 
-STRING 6594
-// Upgrades: R03K (Brute Strength), Ubertip (Tooltip - Extended)
-{
-Improves the fighting capabilities of Grunts and Raider with a 100 hit point increase, and 3 bonus attack damage.
-}
-
 STRING 6595
-// Abilities: A0AO ([Hellscream] Execute), Hotkey (Hotkey - Normal)
+// Abilities: A0BR ([Hellscream] Battle Madness), Hotkey (Hotkey - Normal)
 {
 E
 }
 
-STRING 6596
-// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
-{
-Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA2> damage per second to nearby enemy land units. |nLasts 1 second
-}
-
-STRING 6597
-// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
-{
-Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing <A0AP,DataA3> damage per second to nearby enemy land units. |nLasts 1 second
-}
-
-STRING 6598
-// Abilities: A0AP ([Hellscream] Whirlwind), Researchubertip (Tooltip - Learn - Extended)
-{
-Causes a bladestorm of destructive force around, rendering him immune to magic and spells.
-|n|cffffcc00Level 1|r – dealing 125 damage per second to nearby enemy land units.
-|cffffcc00Level 2|r – dealing 175 damage per second to nearby enemy land units.
-|cffffcc00Level 3|r –  dealing 225 damage per second to nearby enemy land units/
-}
-
 STRING 6599
-// Abilities: A0AT ([Hellscream] Hellscream), Researchhotkey (Hotkey - Learn)
+// Abilities: A08M ([Whitemane] Holy Fury), Unhotkey (Hotkey - Turn Off)
 {
 H
 }
 
 STRING 6600
-// Abilities: A0AT ([Hellscream] Hellscream), Hotkey (Hotkey - Normal)
+// Abilities: A0AT ([Hellscream] Hell Scream), Researchhotkey (Hotkey - Learn)
 {
 H
 }
 
 STRING 6601
-// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0BD ([Hellscream] Worg Breeding), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -20605,7 +20426,7 @@ E
 }
 
 STRING 6603
-// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R02L (Brute Strength), Hotkey (Hotkey)
 {
 W
 }
@@ -20880,17 +20701,6 @@ STRING 6670
 Train Hellscream's Fist
 }
 
-STRING 6671
-// Units: h02U ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly #siege
-|R
-The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
-
-|cFFFFB700Veteran|R: Throw Passenger
-|cFFFFB700Veteran|R: Gunship Cannon Fire
-}
-
 STRING 6674
 // Units: h02V ([Hellscream] Hellscream's Fist), Name (Name)
 {
@@ -20901,17 +20711,6 @@ STRING 6675
 // Units: h02V ([Hellscream] Hellscream's Fist), Tip (Tooltip - Basic)
 {
 Train Hellscream's Fist
-}
-
-STRING 6676
-// Units: h02V ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly #siege
-|R
-The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
-
-|cFFFFB700Veteran|R: Throw Passenger
-|cFFFFB700Veteran|R: Gunship Cannon Fire
 }
 
 STRING 6677
@@ -20926,22 +20725,10 @@ STRING 6678
 [Hellscream] Wood Burn
 }
 
-STRING 6679
-// Abilities: A0BF ([Hellscream] Wood Burn), Tip (Tooltip - Normal)
-{
-Wood Burn
-}
-
 STRING 6685
 // Abilities: A0BG ([Hellscream] Siege Mod), Name (Name)
 {
 [Hellscream] Siege Mod
-}
-
-STRING 6686
-// Abilities: A0BG ([Hellscream] Siege Mod), Tip (Tooltip - Normal)
-{
-Siege Mod
 }
 
 STRING 6687
@@ -21149,5 +20936,898 @@ Players
 STRING 6733
 {
 Syndicate
+}
+
+STRING 6734
+// Abilities: A0BP ([Hellscream] Flame Strike), Name (Name)
+{
+[Hellscream] Flame Strike
+}
+
+STRING 6735
+// Abilities: A0BQ ([Hellscream] Flame Strike), Name (Name)
+{
+[Hellscream] Flame Strike
+}
+
+STRING 6736
+// Abilities: A0BQ ([Hellscream] Flame Strike), EditorSuffix (Editor Suffix)
+{
+(Siege)
+}
+
+STRING 6737
+// Abilities: A0AQ ([Hellscream] Enraged), Name (Name)
+{
+[Hellscream] Enraged
+}
+
+STRING 6738
+// Abilities: A0AQ ([Hellscream] Enraged), Tip (Tooltip - Normal)
+{
+Enraged - [|cffffcc00Level 1|r]
+}
+
+STRING 6739
+// Abilities: A0AQ ([Hellscream] Enraged), Tip (Tooltip - Normal)
+{
+Enraged - [|cffffcc00Level 2|r]
+}
+
+STRING 6740
+// Abilities: A0AQ ([Hellscream] Enraged), Tip (Tooltip - Normal)
+{
+Enraged - [|cffffcc00Level 3|r]
+}
+
+STRING 6741
+// Abilities: A0AQ ([Hellscream] Enraged), Tip (Tooltip - Normal)
+{
+Enraged - [|cffffcc00Level 4|r]
+}
+
+STRING 6746
+// Abilities: A0AQ ([Hellscream] Enraged), Ubertip (Tooltip - Normal - Extended)
+{
+Has a 20% chance to deal bonus damage on an attack. The damage multiplier depends on current health:|n
+Above 75% HP - 1.5x damage
+|cFF787878Above 50% HP - 2.0x damage|r
+|cFF787878Above 25% HP - 3.0x damage|r
+|cFF78787825% HP or below - 4.0x damage|r
+}
+
+STRING 6747
+// Abilities: A0AQ ([Hellscream] Enraged), Ubertip (Tooltip - Normal - Extended)
+{
+Has a 20% chance to deal bonus damage on an attack. The damage multiplier depends on current health:|n
+|cFF787878Above 75% HP - 1.5x damage|r
+Above 50% HP - 2.0x damage
+|cFF787878Above 25% HP - 3.0x damage|r
+|cFF78787825% HP or below - 4.0x damage|r
+}
+
+STRING 6748
+// Abilities: A0AQ ([Hellscream] Enraged), Ubertip (Tooltip - Normal - Extended)
+{
+Has a 20% chance to deal bonus damage on an attack. The damage multiplier depends on current health:|n
+|cFF787878Above 75% HP - 1.5x damage|r
+|cFF787878Above 50% HP - 2.0x damage|r
+Above 25% HP - 3.0x damage
+|cFF78787825% HP or below - 4.0x damage|r
+}
+
+STRING 6749
+// Abilities: A0AQ ([Hellscream] Enraged), Ubertip (Tooltip - Normal - Extended)
+{
+Has a 20% chance to deal bonus damage on an attack. The damage multiplier depends on current health:|n
+|cFF787878Above 75% HP - 1.5x damage|r
+|cFF787878Above 50% HP - 2.0x damage|r
+|cFF787878Above 25% HP - 3.0x damage|r
+25% HP or below - 4.0x damage
+}
+
+STRING 6750
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing 125 damage and converting each extra point of rage into 1 additional damage
+}
+
+STRING 6751
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing 175 damage and converting each extra point of rage into 2 additional damage
+}
+
+STRING 6752
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing 225 damage and converting each extra point of rage into 3 additional damage
+}
+
+STRING 6753
+// Abilities: A0AO ([Hellscream] Execute), Researchubertip (Tooltip - Learn - Extended)
+{
+Attempts to finish off a wounded foe, causing damage and converting each extra point of Rage into additional damage.
+|n|cffffcc00Level 1|r – 125 base damage + 1 damage per extra rage point.
+|cffffcc00Level 2|r – 175 base damage + 2 damage per extra rage point.
+|cffffcc00Level 3|r – 225 base damage + 3 damage per extra rage point.
+|cffffcc00Level 4|r – 325 base damage + 4 damage per extra rage point.
+}
+
+STRING 6754
+// Abilities: A0AO ([Hellscream] Execute), Tip (Tooltip - Normal)
+{
+Execute - [|cffffcc00Level 4|r]
+}
+
+STRING 6755
+// Abilities: A0AO ([Hellscream] Execute), Ubertip (Tooltip - Normal - Extended)
+{
+Attempt to finish off a wounded foe, causing 325 damage and converting each extra point of rage into 4 additional damage
+}
+
+STRING 6756
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing 100 damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6757
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing 150 damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6758
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing 200 damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6759
+// Abilities: A0AP ([Hellscream] Whirlwind), Researchubertip (Tooltip - Learn - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells.
+|n|cffffcc00Level 1|r – dealing 100 damage per second to nearby enemy land units.
+|cffffcc00Level 2|r – dealing 150 damage per second to nearby enemy land units.
+|cffffcc00Level 3|r –  dealing 200 damage per second to nearby enemy land units.
+|cffffcc00Level 4|r –  dealing 275 damage per second to nearby enemy land units.
+}
+
+STRING 6760
+// Abilities: A0AP ([Hellscream] Whirlwind), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a whirlwind of destructive force around the hero, rendering him immune to magic and spells, dealing 275 damage per second to nearby enemy land units. |nLasts 1 second
+}
+
+STRING 6761
+// Abilities: A0AP ([Hellscream] Whirlwind), Tip (Tooltip - Normal)
+{
+Whirlwind - [|cffffcc00Level 4|r]
+}
+
+STRING 6762
+// Upgrades: R02T (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 6763
+// Upgrades: R02U (Brute Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 6764
+// Abilities: A0BR ([Hellscream] Battle Madness), Name (Name)
+{
+[Hellscream] Battle Madness
+}
+
+STRING 6765
+// Abilities: A0BR ([Hellscream] Battle Madness), Researchtip (Tooltip - Learn)
+{
+Learn Battle Madness
+}
+
+STRING 6766
+// Abilities: A0BR ([Hellscream] Battle Madness), Researchubertip (Tooltip - Learn - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells. Costs 10% of maximum health. Lasts 12 seconds.
+|n|cffffcc00Level 1|r – grants 20% attack speed.
+|cffffcc00Level 2|r – grants 30% attack speed.
+|cffffcc00Level 3|r – grants 40% attack speed.
+|cffffcc00Level 4|r – grants 55% attack speed.
+}
+
+STRING 6767
+// Abilities: A0BR ([Hellscream] Battle Madness), Tip (Tooltip - Normal)
+{
+Battle Madness - [|cffffcc00Level 1|r]
+}
+
+STRING 6768
+// Abilities: A0BR ([Hellscream] Battle Madness), Tip (Tooltip - Normal)
+{
+Battle Madness - [|cffffcc00Level 2|r]
+}
+
+STRING 6769
+// Abilities: A0BR ([Hellscream] Battle Madness), Tip (Tooltip - Normal)
+{
+Battle Madness - [|cffffcc00Level 3|r]
+}
+
+STRING 6770
+// Abilities: A0BR ([Hellscream] Battle Madness), Tip (Tooltip - Normal)
+{
+Battle Madness - [|cffffcc00Level 4|r]
+}
+
+STRING 6771
+// Abilities: A0BR ([Hellscream] Battle Madness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells. Costs 10% of maximum health. Lasts 12 seconds. Grants 20% attack speed.
+}
+
+STRING 6772
+// Abilities: A0BR ([Hellscream] Battle Madness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells. Costs 10% of maximum health. Lasts 12 seconds. Grants 30% attack speed.
+}
+
+STRING 6773
+// Abilities: A0BR ([Hellscream] Battle Madness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells. Costs 10% of maximum health. Lasts 12 seconds. Grants 40% attack speed.
+}
+
+STRING 6774
+// Abilities: A0BR ([Hellscream] Battle Madness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes a bladestorm of destructive force around, rendering him immune to magic and spells. Costs 10% of maximum health. Lasts 12 seconds. Grants 55% attack speed.
+}
+
+STRING 6775
+// Buffs/Effects: B01Z ([Hellscream] Battle Madness), EditorName (Name (Editor Only))
+{
+[Hellscream] Battle Madness
+}
+
+STRING 6776
+// Buffs/Effects: B01Z ([Hellscream] Battle Madness), Bufftip (Tooltip)
+{
+Battle Madness
+}
+
+STRING 6777
+// Buffs/Effects: B01Z ([Hellscream] Battle Madness), Buffubertip (Tooltip - Extended)
+{
+This unit is Battle Madness; it will deal more damage.
+}
+
+STRING 6778
+// Abilities: A0BS ([Hellscream] Blood Curse), Name (Name)
+{
+[Hellscream] Blood Curse
+}
+
+STRING 6779
+// Upgrades: R03W (Brute Strength), Tip (Tooltip)
+{
+Blood Curse
+}
+
+STRING 6782
+// Abilities: A0BS ([Hellscream] Blood Curse), Tip (Tooltip - Normal)
+{
+Blood Curse - [|cffffcc00Level 1|r]
+}
+
+STRING 6783
+// Abilities: A0BS ([Hellscream] Blood Curse), Tip (Tooltip - Normal)
+{
+Blood Curse - [|cffffcc00Level 2|r]
+}
+
+STRING 6784
+// Abilities: A0BS ([Hellscream] Blood Curse), Tip (Tooltip - Normal)
+{
+Blood Curse - [|cffffcc00Level 3|r]
+}
+
+STRING 6785
+// Abilities: A0BS ([Hellscream] Blood Curse), Tip (Tooltip - Normal)
+{
+Blood Curse - [|cffffcc00Level 4|r]
+}
+
+STRING 6786
+// Abilities: A0BS ([Hellscream] Blood Curse), Ubertip (Tooltip - Normal - Extended)
+{
+Inflicts the orcs' demonic blood curse, originating from Magtheridon, granting them unnatural strength and power. +125 health, +3 attack damage.
+}
+
+STRING 6787
+// Abilities: A0BS ([Hellscream] Blood Curse), Researchtip (Tooltip - Learn)
+{
+Learn Blood Curse
+}
+
+STRING 6788
+// Abilities: A0BS ([Hellscream] Blood Curse), Researchubertip (Tooltip - Learn - Extended)
+{
+Inflicts the orcs' demonic blood curse, originating from Magtheridon, granting them unnatural strength and power.
+
+|cffffcc00Level 1|r – +125 health, +3 attack damage.
+|cffffcc00Level 2|r – +250 health, +6 attack damage.
+|cffffcc00Level 3|r – +375 health, +9 attack damage.
+|cffffcc00Level 4|r – +500 health, +12 attack damage.
+}
+
+STRING 6789
+// Abilities: A0BS ([Hellscream] Blood Curse), Ubertip (Tooltip - Normal - Extended)
+{
+Inflicts the orcs' demonic blood curse, originating from Magtheridon, granting them unnatural strength and power. +250 health, +6 attack damage.
+}
+
+STRING 6790
+// Abilities: A0BS ([Hellscream] Blood Curse), Ubertip (Tooltip - Normal - Extended)
+{
+Inflicts the orcs' demonic blood curse, originating from Magtheridon, granting them unnatural strength and power. +375 health, +9 attack damage.
+}
+
+STRING 6791
+// Abilities: A0BS ([Hellscream] Blood Curse), Ubertip (Tooltip - Normal - Extended)
+{
+Inflicts the orcs' demonic blood curse, originating from Magtheridon, granting them unnatural strength and power. +500 health, +12 attack damage.
+}
+
+STRING 6792
+// Upgrades: R03W (Brute Strength), Name (Name)
+{
+[Hellscream] Blood Curse
+}
+
+STRING 6796
+// Units: n00Z ([Hellscream] Goblin Land Mine), Name (Name)
+{
+[Hellscream] Goblin Land Mine
+}
+
+STRING 6797
+// Items: I01G ([Hellscream] Goblin Land Mines), Name (Name)
+{
+[Hellscream] Goblin Land Mines
+}
+
+STRING 6798
+// Abilities: A0BT ([Hellscream] Item Place Goblin Land Mine), Name (Name)
+{
+[Hellscream] Item Place Goblin Land Mine
+}
+
+STRING 6799
+// Abilities: A0BU ([Hellscream] AOE damage upon death), Name (Name)
+{
+[Hellscream] AOE damage upon death
+}
+
+STRING 6800
+// Abilities: A0BV ([Hellscream] Mine - exploding), Name (Name)
+{
+[Hellscream] Mine - exploding
+}
+
+STRING 6801
+// Abilities: A0BW ([General] Inventory), Name (Name)
+{
+[General] Inventory
+}
+
+STRING 6802
+// Abilities: A0BW ([General] Inventory), EditorSuffix (Editor Suffix)
+{
+ (Hero 1)
+}
+
+STRING 6803
+// Upgrades: R03X (Pulverize Damage Increase), Name (Name)
+{
+[Hellscream] Goblin Land Mines
+}
+
+STRING 6804
+// Upgrades: R03X (Pulverize Damage Increase), Tip (Tooltip)
+{
+Upgrade Goblin Land Mines
+}
+
+STRING 6805
+// Upgrades: R03X (Pulverize Damage Increase), Ubertip (Tooltip - Extended)
+{
+Allows Sappers to deploy mines. Each Sapper unit carries 3 mines. Mines deal damage and stun enemies.
+}
+
+STRING 6806
+// Upgrades: R03K (Brute Strength), Name (Name)
+{
+[Hellscream] Frenzy Strength
+}
+
+STRING 6807
+// Upgrades: R03K (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of Grunts and Raiders with a 20% increase to attack speed, and 3 bonus attack damage.
+}
+
+STRING 6808
+// Upgrades: R03K (Brute Strength), effect1 (Effect 1)
+{
+rats
+}
+
+STRING 6809
+// Upgrades: R03K (Brute Strength), Tip (Tooltip)
+{
+Research Frenzy Strength
+}
+
+STRING 6812
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+[Hellscream] Greater Rage
+}
+
+STRING 6813
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Name (Name)
+{
+Improved Berserker Rage
+}
+
+STRING 6814
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Greater Rage
+}
+
+STRING 6815
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Tip (Tooltip)
+{
+Upgrade to Berserker Rage
+}
+
+STRING 6816
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 6817
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 6820
+// Upgrades: R03E (Spiked Barricades,Improved Spiked Barricades,Advanced Spiked Barricades), class (Class)
+{
+caster
+}
+
+STRING 6823
+// Abilities: A0BX ([Hellscream] Rage), Tip (Tooltip - Normal)
+{
+[Hellscream] Rage
+}
+
+STRING 6824
+// Abilities: A0BX ([Hellscream] Rage), Tip (Tooltip - Normal)
+{
+Greater Rage
+}
+
+STRING 6825
+// Abilities: A0BX ([Hellscream] Rage), Tip (Tooltip - Normal)
+{
+Berserker Rage
+}
+
+STRING 6826
+// Abilities: A0BX ([Hellscream] Rage), Ubertip (Tooltip - Normal - Extended)
+{
+Rage — adds +3–6 rage per attack.
+|cFF9B9B9BGreater Rage — improved version, adds +4–7 rage per attack.|R
+|cFF9B9B9BBerserker Rage — the highest form of rage, adds +5–8 rage per attack.|R
+}
+
+STRING 6827
+// Abilities: A0BX ([Hellscream] Rage), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF9B9B9BRage — adds +3–6 rage per attack.|R
+Greater Rage — improved version, adds +4–7 rage per attack.
+|cFF9B9B9BBerserker Rage — the highest form of rage, adds +5–8 rage per attack.|R
+}
+
+STRING 6828
+// Abilities: A0BX ([Hellscream] Rage), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF9B9B9BRage — adds +3–6 rage per attack.|R
+|cFF9B9B9BGreater Rage — improved version, adds +4–7 rage per attack.|R
+Berserker Rage — the highest form of rage, adds +5–8 rage per attack.
+}
+
+STRING 6829
+// Upgrades: R03F (Pillage), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 6830
+// Abilities: A0AK ([Hellscream] Chop Meat), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a target friendly unit for 220 hit points and 100 rage points over 12 seconds.
+}
+
+STRING 6831
+// Abilities: A0BD ([Hellscream] Worg Breeding), Ubertip (Tooltip - Normal - Extended)
+{
+Get 1 free neutral Worg. It can be tamed with Grunt and Spear Thrower.
+}
+
+STRING 6832
+// Upgrades: R030 (Animal War Training), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 6833
+// Abilities: A0BK ([Hellscream] Elementium Plating), Ubertip (Tooltip - Normal - Extended)
+{
+Grants a 65% chance to reduce ranged damage taken by 9 points, to a minimum of 3 damage.
+}
+
+STRING 6834
+// Units: o017 ([Hellscream] Pig Farm), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#barrack #food
+|R
+Provides food, which increases the maximum number of units that can be trained. Upon completion of construction, you will immediately receive 2 boars for free.
+}
+
+STRING 6835
+// Units: o01E ([Hellscream] Boar), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #food
+|R
+A boar provides 3 food, but consumes 1. You can slaughter it to replenish your unit's health and rage. Can be upgraded to Savage Feast |n|n|cffffcc00Attacks land and air units.|r 
+}
+
+STRING 6837
+// Abilities: A0BC ([Hellscream] Shredder), Ubertip (Tooltip - Normal - Extended)
+{
+Summons Shredder. Medium melee unit made of iron. Excellent at harvesting large amounts of lumber. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 6838
+// Units: O013 ([Hellscream] Warsong Warchief), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#legend
+|R
+Can learn Execute, Whirlwind, Battle Madness, Blood Curse and Hell Scream. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6839
+// Abilities: A0AT ([Hellscream] Hell Scream), Name (Name)
+{
+[Hellscream] Hell Scream
+}
+
+STRING 6840
+// Abilities: A0AT ([Hellscream] Hell Scream), Tip (Tooltip - Normal)
+{
+Hell Scream - [|cffffcc00Level 1|r]
+}
+
+STRING 6841
+// Abilities: A0AT ([Hellscream] Hell Scream), Researchtip (Tooltip - Learn)
+{
+Learn Hell Scream
+}
+
+STRING 6842
+// Abilities: A0AT ([Hellscream] Hell Scream), Researchubertip (Tooltip - Learn - Extended)
+{
+Hell Scream lets loose a terrifying howl that causes nearby enemy units to shiver in fear, reducing their attack damage. |nLasts <ANht,Dur1> seconds. |n|n|cffffcc00Level 1|r - <ANht,DataA1,%>% attack damage reduction. |n|cffffcc00Level 2|r - <ANht,DataA2,%>% attack damage reduction.
+}
+
+STRING 6843
+// Abilities: A0AT ([Hellscream] Hell Scream), Ubertip (Tooltip - Normal - Extended)
+{
+Hell Scream lets loose a terrifying howl that reduces nearby enemy units' attack damage by 50% and 5 armor for 15 seconds.
+}
+
+STRING 6844
+// Abilities: A0AT ([Hellscream] Hell Scream), Hotkey (Hotkey - Normal)
+{
+H
+}
+
+STRING 6845
+// Abilities: A0AT ([Hellscream] Hell Scream), Tip (Tooltip - Normal)
+{
+Hell Scream - [|cffffcc00Level 2|r]
+}
+
+STRING 6846
+// Abilities: A0AT ([Hellscream] Hell Scream), Ubertip (Tooltip - Normal - Extended)
+{
+Hell Scream lets loose a terrifying howl that reduces nearby enemy units' attack damage by70% and 7 armor for 15 seconds.
+}
+
+STRING 6847
+// Buffs/Effects: B01V ([Hellscream] Hell Scream), EditorName (Name (Editor Only))
+{
+[Hellscream] Hell Scream
+}
+
+STRING 6848
+// Buffs/Effects: B01V ([Hellscream] Hell Scream), Bufftip (Tooltip)
+{
+Hell Scream
+}
+
+STRING 6849
+// Buffs/Effects: B01V ([Hellscream] Hell Scream), Buffubertip (Tooltip - Extended)
+{
+This unit has heard the Hell Scream; it deals less damage for a duration.
+}
+
+STRING 6850
+// Abilities: A0BY ([Hellscream] Firebolt), Tip (Tooltip - Normal)
+{
+Firebolt
+}
+
+STRING 6852
+// Abilities: A0BY ([Hellscream] Firebolt), Ubertip (Tooltip - Normal - Extended)
+{
+Adds 35 bonus fire damage to an attack against enemies, but drains mana with each shot fired.
+}
+
+STRING 6853
+// Abilities: A0AR ([Hellscream] Savage Feast), Ubertip (Tooltip - Normal - Extended)
+{
+Chop Meat instantly restores an additional 2 health for each point of Rage.
+}
+
+STRING 6854
+// Buffs/Effects: B020 ([Hellscream] WarCraft), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of WarCraft; it has an increased movement speed and attack rate.
+}
+
+STRING 6855
+// Units: o01B ([Hellscream] Dragon Roost), Ubertip (Tooltip - Extended)
+{
+Trains Deathwing's Brood. |nAlso contains upgrades for Deathwing's Brood.
+}
+
+STRING 6856
+// Units: u000 ([Special] Rally Point), Name (Name)
+{
+[Special] Rally Point
+}
+
+STRING 6857
+// Upgrades: R03T (Hardened Skin), Ubertip (Tooltip - Extended)
+{
+Grants a 65% chance to reduce ranged damage taken by 9 points, to a minimum of 3 damage.
+}
+
+STRING 6858
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
+{
+Chop Meat instantly restores an additional 2 health for each point of Rage.
+}
+
+STRING 6859
+// Units: o01O ([Hellscream] Goblin Alchemist), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 6860
+// Upgrades: R03F (Pillage), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 6861
+// Abilities: A0AF ([Hellscream] Attack Training), Ubertip (Tooltip - Normal - Extended)
+{
+Improves units attack by +2
+}
+
+STRING 6862
+// Abilities: A0B7 ([Hellscream] Defense Training), Ubertip (Tooltip - Normal - Extended)
+{
+Improves units defense by +2
+}
+
+STRING 6863
+// Abilities: A0BG ([Hellscream] Siege Mod), Tip (Tooltip - Normal)
+{
+Siege Mod On
+}
+
+STRING 6864
+// Abilities: A0BG ([Hellscream] Siege Mod), Ubertip (Tooltip - Normal - Extended)
+{
+Warmachine loses its ability to move, its attack range is increased, and shrapnel spreads farther.
+}
+
+STRING 6865
+// Abilities: A0BG ([Hellscream] Siege Mod), Untip (Tooltip - Turn Off)
+{
+Siege Mod Off
+}
+
+STRING 6866
+// Abilities: A0BG ([Hellscream] Siege Mod), Unubertip (Tooltip - Turn Off - Extended)
+{
+Warmachine regains its ability to move, its attack range is reduced, and shrapnel spreads a shorter distance
+}
+
+STRING 6867
+// Abilities: A0BN ([Hellscream] Tracer Ammo), Ubertip (Tooltip - Normal - Extended)
+{
+Adds 5 bonus fire damage to an attack against enemies.
+}
+
+STRING 6868
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 6869
+// Abilities: A0B7 ([Hellscream] Defense Training), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 6870
+// Abilities: A0BF ([Hellscream] Wood Burn), Tip (Tooltip - Normal)
+{
+Wood Burn On
+}
+
+STRING 6871
+// Abilities: A0BF ([Hellscream] Wood Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Hellscream's Fist continuously burns wood while active. Increased flight speed.
+}
+
+STRING 6872
+// Abilities: A0BF ([Hellscream] Wood Burn), Unubertip (Tooltip - Turn Off - Extended)
+{
+Hellscream's Fist stops burning wood but flight speed decreases.
+}
+
+STRING 6873
+// Abilities: A0BF ([Hellscream] Wood Burn), Untip (Tooltip - Turn Off)
+{
+Wood Burn Off
+}
+
+STRING 6874
+// Abilities: A0B2 ([Hellscream] Hellscream Fist), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 6875
+// Abilities: A0B2 ([Hellscream] Hellscream Fist), Name (Name)
+{
+[Hellscream] Hellscream Fist
+}
+
+STRING 6876
+// Abilities: A0BL ([Hellscream] Fury Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Causes this unit to attack 100% faster, but becomes incapacitated for 7 seconds.
+}
+
+STRING 6877
+// Units: h02U ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|RThe Horde gunship appears, unleashes a crushing barrage from the sky, and disappears. |n|n|cffffcc00Attacks land and air units.
+}
+
+STRING 6878
+// Units: h02V ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|RThe Horde gunship appears, unleashes a crushing barrage from the sky, and disappears. |n|n|cffffcc00Attacks land and air units.
+}
+
+STRING 6879
+// Units: h02T ([Hellscream] Goblin Sapper), Ubertip (Tooltip - Extended)
+{
+Goblins have achieved unparalleled success with explosives. Such a pity that pyrotechnics are so unstable. |n|n|cffffcc00Attacks land units and trees, suicide, plant mines.|r
+}
+
+STRING 6880
+// Units: h02W ([Hellscream] Warmachine), Ubertip (Tooltip - Extended)
+{
+Siege engine capable of firing from a distance in siege mode, striking enemies with fire. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6881
+// Units: h02X ([Hellscream] Warmachine), Ubertip (Tooltip - Extended)
+{
+Siege engine capable of firing from a distance in siege mode, striking enemies with fire. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6882
+// Upgrades: R03V (Ensnare), Ubertip (Tooltip - Extended)
+{
+Enables Hellscream's Fist to use the Fury Fire ability. Causes this unit to attack 100% faster, but becomes incapacitated for 7 seconds.
+}
+
+STRING 6883
+// Abilities: A0BO ([Hellscream] Burning Oil), Ubertip (Tooltip - Normal - Extended)
+{
+Drenches the Warmachine in Siege Mod ammo in burning oil, causing them to light the ground on fire and burn enemy units.
+}
+
+STRING 6884
+// Upgrades: R03U (Burning Oil), Ubertip (Tooltip - Extended)
+{
+Upgrades Warmachine in Siege Mod to fire rocks smothered in burning oil, which causes the ground to burn.
+}
+
+STRING 6885
+// Abilities: A0B0 ([Hellscream] Skull Runes), Ubertip (Tooltip - Normal - Extended)
+{
+Increases a target friendly unit's damage by 25% and armor reduces by 2. |nLasts 25 seconds.
+}
+
+STRING 6886
+// Units: o01D ([Hellscream] Ogre Mound), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 6887
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 6888
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 6889
+// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 6890
+// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 6891
+// Upgrades: R03F (Pillage), Hotkey (Hotkey)
+{
+G
 }
 

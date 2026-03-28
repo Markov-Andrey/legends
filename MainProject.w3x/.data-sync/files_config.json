@@ -13582,5 +13582,29 @@
         "copy": true,
         "copy_child": "",
         "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\HellscreamFist\\Windwalk Fire.mdx",
+        "name": "Windwalk Fire.mdx",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "Legends\\Hellscream\\Warlock\\ATC_Hellcream_SkullFire.blp",
+        "name": "ATC_Hellcream_SkullFire.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
+    },
+    {
+        "path": "ReplaceableTextures\\CommandButtonsDisabled\\DISATC_Hellcream_SkullFire.blp",
+        "name": "DISATC_Hellcream_SkullFire.blp",
+        "type": "file",
+        "copy": true,
+        "copy_child": "",
+        "validated": false
     }
 ]
