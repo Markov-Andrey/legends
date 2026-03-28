@@ -1871,13 +1871,13 @@ Heal organic troops using resources.
 }
 
 STRING 1721
-// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
+// Units: o017 ([Hellscream] Pig Farm), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 1722
-// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00G ([Wrynn] First Aid), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -2777,7 +2777,7 @@ STRING 2094
 }
 
 STRING 2095
-// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+// Units: o019 ([Hellscream] Lumberyard), Hotkey (Hotkey)
 {
 L
 }
@@ -7195,19 +7195,19 @@ V
 }
 
 STRING 3484
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Hotkey (Hotkey - Normal)
+// Units: o01A ([Hellscream] Beastiary), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 3485
-// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Unhotkey (Hotkey - Turn Off)
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Hotkey (Hotkey - Normal)
 {
 B
 }
 
 STRING 3486
-// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Hotkey (Hotkey - Normal)
+// Abilities: A044 ([Wrynn] Veteran: Aspect of the Hawk), Unhotkey (Hotkey - Turn Off)
 {
 B
 }
@@ -7219,13 +7219,13 @@ V
 }
 
 STRING 3488
-// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Hotkey (Hotkey - Normal)
+// Abilities: A045 ([Wrynn] Veteran: Defensive Stance), Hotkey (Hotkey - Normal)
 {
 B
 }
 
 STRING 3489
-// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Hotkey (Hotkey - Normal)
+// Abilities: A049 ([Wrynn] Veteran: Rear Attack), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -7237,7 +7237,7 @@ V
 }
 
 STRING 3491
-// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Hotkey (Hotkey - Normal)
+// Abilities: A04C ([Wrynn] Veteran: Throw Passenger), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -7249,7 +7249,7 @@ V
 }
 
 STRING 3493
-// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Hotkey (Hotkey - Normal)
+// Abilities: A04H ([Wrynn] Veteran: Multi-barreled Gun), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -9597,13 +9597,13 @@ S
 }
 
 STRING 4019
-// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
+// Units: o01B ([Hellscream] Dragon Roost), Hotkey (Hotkey)
 {
 D
 }
 
 STRING 4023
-// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
+// Abilities: A00G ([Wrynn] First Aid), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -10722,7 +10722,7 @@ S
 }
 
 STRING 4309
-// Abilities: A00C ([Uther] Summon Champion of Retribution), Hotkey (Hotkey - Normal)
+// Abilities: A01Y ([Arthas] Unholy Soul Reforging), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -10734,7 +10734,7 @@ STRING 4310
 }
 
 STRING 4312
-// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
+// Abilities: A06K ([UI] Difficulty: Mythic (+4)), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -12380,7 +12380,7 @@ S
 }
 
 STRING 4628
-// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
+// Abilities: A00C ([Uther] Summon Champion of Retribution), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -18155,13 +18155,13 @@ Select |cFFFFAD40Claws of Attack +15|R
 }
 
 STRING 5978
-// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AF ([Hellscream] Attack Training), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 5979
-// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
+// Abilities: A06J ([UI] Difficulty: Mythic (+3)), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -19839,12 +19839,6 @@ STRING 6436
 rmnx
 }
 
-STRING 6438
-// Abilities: A0AR ([Hellscream] Savage Feast), Ubertip (Tooltip - Normal - Extended)
-{
-Unlock Boar Rage up to 100. Chop Meat instantly restores an additional 2 health for each point of Rage.
-}
-
 STRING 6440
 // Abilities: A0AU ([Hellscream] Slam), Name (Name)
 {
@@ -20257,13 +20251,13 @@ STRING 6567
 }
 
 STRING 6568
-// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
 {
 D
 }
 
 STRING 6569
-// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+// Abilities: A0AD ([UI] Legends: Hellscream), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -20707,17 +20701,6 @@ STRING 6670
 Train Hellscream's Fist
 }
 
-STRING 6671
-// Units: h02U ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly #siege
-|R
-The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
-
-|cFFFFB700Veteran|R: Throw Passenger
-|cFFFFB700Veteran|R: Gunship Cannon Fire
-}
-
 STRING 6674
 // Units: h02V ([Hellscream] Hellscream's Fist), Name (Name)
 {
@@ -20728,17 +20711,6 @@ STRING 6675
 // Units: h02V ([Hellscream] Hellscream's Fist), Tip (Tooltip - Basic)
 {
 Train Hellscream's Fist
-}
-
-STRING 6676
-// Units: h02V ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
-{
-|cffffcc00#ranged #fly #siege
-|R
-The Skyfire Gunship, a marvel of Stormwind engineering, rules the skies with its unmatched speed and firepower. Designed for long-range bombardment and troop transport. Can be upgraded with Passenger Cabins. |n|n|cffffcc00Attacks land and air units.|r
-
-|cFFFFB700Veteran|R: Throw Passenger
-|cFFFFB700Veteran|R: Gunship Cannon Fire
 }
 
 STRING 6677
@@ -20753,22 +20725,10 @@ STRING 6678
 [Hellscream] Wood Burn
 }
 
-STRING 6679
-// Abilities: A0BF ([Hellscream] Wood Burn), Tip (Tooltip - Normal)
-{
-Wood Burn
-}
-
 STRING 6685
 // Abilities: A0BG ([Hellscream] Siege Mod), Name (Name)
 {
 [Hellscream] Siege Mod
-}
-
-STRING 6686
-// Abilities: A0BG ([Hellscream] Siege Mod), Tip (Tooltip - Normal)
-{
-Siege Mod
 }
 
 STRING 6687
@@ -21636,7 +21596,7 @@ Adds 35 bonus fire damage to an attack against enemies, but drains mana with eac
 }
 
 STRING 6853
-// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
+// Abilities: A0AR ([Hellscream] Savage Feast), Ubertip (Tooltip - Normal - Extended)
 {
 Chop Meat instantly restores an additional 2 health for each point of Rage.
 }
@@ -21645,5 +21605,229 @@ STRING 6854
 // Buffs/Effects: B020 ([Hellscream] WarCraft), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of WarCraft; it has an increased movement speed and attack rate.
+}
+
+STRING 6855
+// Units: o01B ([Hellscream] Dragon Roost), Ubertip (Tooltip - Extended)
+{
+Trains Deathwing's Brood. |nAlso contains upgrades for Deathwing's Brood.
+}
+
+STRING 6856
+// Units: u000 ([Special] Rally Point), Name (Name)
+{
+[Special] Rally Point
+}
+
+STRING 6857
+// Upgrades: R03T (Hardened Skin), Ubertip (Tooltip - Extended)
+{
+Grants a 65% chance to reduce ranged damage taken by 9 points, to a minimum of 3 damage.
+}
+
+STRING 6858
+// Upgrades: R03G (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
+{
+Chop Meat instantly restores an additional 2 health for each point of Rage.
+}
+
+STRING 6859
+// Units: o01O ([Hellscream] Goblin Alchemist), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 6860
+// Upgrades: R03F (Pillage), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 6861
+// Abilities: A0AF ([Hellscream] Attack Training), Ubertip (Tooltip - Normal - Extended)
+{
+Improves units attack by +2
+}
+
+STRING 6862
+// Abilities: A0B7 ([Hellscream] Defense Training), Ubertip (Tooltip - Normal - Extended)
+{
+Improves units defense by +2
+}
+
+STRING 6863
+// Abilities: A0BG ([Hellscream] Siege Mod), Tip (Tooltip - Normal)
+{
+Siege Mod On
+}
+
+STRING 6864
+// Abilities: A0BG ([Hellscream] Siege Mod), Ubertip (Tooltip - Normal - Extended)
+{
+Warmachine loses its ability to move, its attack range is increased, and shrapnel spreads farther.
+}
+
+STRING 6865
+// Abilities: A0BG ([Hellscream] Siege Mod), Untip (Tooltip - Turn Off)
+{
+Siege Mod Off
+}
+
+STRING 6866
+// Abilities: A0BG ([Hellscream] Siege Mod), Unubertip (Tooltip - Turn Off - Extended)
+{
+Warmachine regains its ability to move, its attack range is reduced, and shrapnel spreads a shorter distance
+}
+
+STRING 6867
+// Abilities: A0BN ([Hellscream] Tracer Ammo), Ubertip (Tooltip - Normal - Extended)
+{
+Adds 5 bonus fire damage to an attack against enemies.
+}
+
+STRING 6868
+// Upgrades: R02N (Brute Strength), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 6869
+// Abilities: A0B7 ([Hellscream] Defense Training), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 6870
+// Abilities: A0BF ([Hellscream] Wood Burn), Tip (Tooltip - Normal)
+{
+Wood Burn On
+}
+
+STRING 6871
+// Abilities: A0BF ([Hellscream] Wood Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Hellscream's Fist continuously burns wood while active. Increased flight speed.
+}
+
+STRING 6872
+// Abilities: A0BF ([Hellscream] Wood Burn), Unubertip (Tooltip - Turn Off - Extended)
+{
+Hellscream's Fist stops burning wood but flight speed decreases.
+}
+
+STRING 6873
+// Abilities: A0BF ([Hellscream] Wood Burn), Untip (Tooltip - Turn Off)
+{
+Wood Burn Off
+}
+
+STRING 6874
+// Abilities: A0B2 ([Hellscream] Hellscream Fist), EditorSuffix (Editor Suffix)
+{
+(Effect)
+}
+
+STRING 6875
+// Abilities: A0B2 ([Hellscream] Hellscream Fist), Name (Name)
+{
+[Hellscream] Hellscream Fist
+}
+
+STRING 6876
+// Abilities: A0BL ([Hellscream] Fury Fire), Ubertip (Tooltip - Normal - Extended)
+{
+Causes this unit to attack 100% faster, but becomes incapacitated for 7 seconds.
+}
+
+STRING 6877
+// Units: h02U ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|RThe Horde gunship appears, unleashes a crushing barrage from the sky, and disappears. |n|n|cffffcc00Attacks land and air units.
+}
+
+STRING 6878
+// Units: h02V ([Hellscream] Hellscream's Fist), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#ranged #fly
+|RThe Horde gunship appears, unleashes a crushing barrage from the sky, and disappears. |n|n|cffffcc00Attacks land and air units.
+}
+
+STRING 6879
+// Units: h02T ([Hellscream] Goblin Sapper), Ubertip (Tooltip - Extended)
+{
+Goblins have achieved unparalleled success with explosives. Such a pity that pyrotechnics are so unstable. |n|n|cffffcc00Attacks land units and trees, suicide, plant mines.|r
+}
+
+STRING 6880
+// Units: h02W ([Hellscream] Warmachine), Ubertip (Tooltip - Extended)
+{
+Siege engine capable of firing from a distance in siege mode, striking enemies with fire. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6881
+// Units: h02X ([Hellscream] Warmachine), Ubertip (Tooltip - Extended)
+{
+Siege engine capable of firing from a distance in siege mode, striking enemies with fire. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 6882
+// Upgrades: R03V (Ensnare), Ubertip (Tooltip - Extended)
+{
+Enables Hellscream's Fist to use the Fury Fire ability. Causes this unit to attack 100% faster, but becomes incapacitated for 7 seconds.
+}
+
+STRING 6883
+// Abilities: A0BO ([Hellscream] Burning Oil), Ubertip (Tooltip - Normal - Extended)
+{
+Drenches the Warmachine in Siege Mod ammo in burning oil, causing them to light the ground on fire and burn enemy units.
+}
+
+STRING 6884
+// Upgrades: R03U (Burning Oil), Ubertip (Tooltip - Extended)
+{
+Upgrades Warmachine in Siege Mod to fire rocks smothered in burning oil, which causes the ground to burn.
+}
+
+STRING 6885
+// Abilities: A0B0 ([Hellscream] Skull Runes), Ubertip (Tooltip - Normal - Extended)
+{
+Increases a target friendly unit's damage by 25% and armor reduces by 2. |nLasts 25 seconds.
+}
+
+STRING 6886
+// Units: o01D ([Hellscream] Ogre Mound), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 6887
+// Abilities: A04Y ([Wrynn] Veteran: Brave's Spyglass), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 6888
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 6889
+// Upgrades: R02P (Brute Strength), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 6890
+// Upgrades: R02Q (Brute Strength), Hotkey (Hotkey)
+{
+F
+}
+
+STRING 6891
+// Upgrades: R03F (Pillage), Hotkey (Hotkey)
+{
+G
 }
 
