@@ -21831,3 +21831,203 @@ STRING 6891
 G
 }
 
+STRING 6897
+// Abilities: A0BZ ([Items] Burning Blade +10% speed), Name (Name)
+{
+[Items] Burning Blade +10% speed
+}
+
+STRING 6898
+// Abilities: A0C0 ([Items] Burning Blade - Mirror Image), Name (Name)
+{
+[Items] Burning Blade - Mirror Image
+}
+
+STRING 6901
+// Items: I01H (|cFFA089FFBurning Blade|R), Name (Name)
+{
+|cFFA089FFBurning Blade|R
+}
+
+STRING 6902
+// Items: I01H (|cFFA089FFBurning Blade|R), Tip (Tooltip - Basic)
+{
+Select |cFFA089FFBurning Blade|R
+}
+
+STRING 6903
+// Items: I01H (|cFFA089FFBurning Blade|R), Ubertip (Tooltip - Extended)
+{
+|cFF24BBFF"Whispers say this is Samuro's own blade."|r
+
+Grants 10% attack speed and creates 2 hero illusions that last for 45 seconds.
+}
+
+STRING 6904
+// Items: I01H (|cFFA089FFBurning Blade|R), Description (Description)
+{
+Grants 10% attack speed and creates 2 hero illusions that last for 45 seconds.
+}
+
+STRING 6905
+// Units: h02Y ([Uther] Spearman), Name (Name)
+{
+[Uther] Spearman
+}
+
+STRING 6906
+// Units: h02Y ([Uther] Spearman), Tip (Tooltip - Basic)
+{
+Protector
+}
+
+STRING 6908
+// Units: h02Y ([Uther] Spearman), Casterupgradename (Caster Upgrade Names)
+{
+No Libram,Libram of Light,Libram of Ancient Kings,Libram of the Lightbringer
+}
+
+STRING 6910
+// Abilities: A0C1 ([Uther] Piercing Strike), Name (Name)
+{
+[Uther] Piercing Strike
+}
+
+STRING 6911
+// Abilities: A0C2 ([Uther] Piercing Strike), Name (Name)
+{
+[Uther] Piercing Strike
+}
+
+STRING 6912
+// Abilities: A0C2 ([Uther] Piercing Strike), Tip (Tooltip - Normal)
+{
+Piercing Strike
+}
+
+STRING 6913
+// Buffs/Effects: B021 ([Uther] Piercing Strike), EditorName (Name (Editor Only))
+{
+[Uther] Piercing Strike
+}
+
+STRING 6914
+// Buffs/Effects: B021 ([Uther] Piercing Strike), Bufftip (Tooltip)
+{
+Piercing Strike
+}
+
+STRING 6915
+// Buffs/Effects: B021 ([Uther] Piercing Strike), Buffubertip (Tooltip - Extended)
+{
+This unit was hit by an Piercing Strike; its armor is temporarily reduced.
+}
+
+STRING 6916
+// Abilities: A0C2 ([Uther] Piercing Strike), Ubertip (Tooltip - Normal - Extended)
+{
+A precise thrust that reduces the target's armor by 2 for 4 seconds.
+}
+
+STRING 6917
+// Upgrades: R03Y (Defend), Name (Name)
+{
+[Uther] Piercing Strike
+}
+
+STRING 6918
+// Upgrades: R03Y (Defend), Tip (Tooltip)
+{
+Research Piercing Strike
+}
+
+STRING 6919
+// Upgrades: R03Y (Defend), Ubertip (Tooltip - Extended)
+{
+Allows Spearmen to use the Piercing Strike ability, which reduces the target's armor by 2 for 4 seconds.
+}
+
+STRING 6920
+// Units: h02Y ([Uther] Spearman), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#melee
+|R
+Second-line support unit. Can learn Piercing Strike ability.
+
+|cffffcc00Attacks land units.|r
+}
+
+STRING 6921
+// Units: h02Z ([Uther] Wall), Name (Name)
+{
+[Uther] Wall
+}
+
+STRING 6922
+// Units: h02Z ([Uther] Wall), Tip (Tooltip - Basic)
+{
+Build Wall
+}
+
+STRING 6923
+// Units: h02Z ([Uther] Wall), Ubertip (Tooltip - Extended)
+{
+|cffffcc00#guard
+|R
+A sturdy defensive wall. Provides cover and blocks enemy advance. Repairs cost nothing.
+}
+
+STRING 6924
+// Units: H032 ([Uther] Vessel of Patience), Name (Name)
+{
+[Uther] Vessel of Patience
+}
+
+STRING 6925
+// Units: H032 ([Uther] Vessel of Patience), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 6926
+// Units: H030 ([Uther] Hour of Judgment), Name (Name)
+{
+[Uther] Hour of Judgment
+}
+
+STRING 6927
+// Units: H030 ([Uther] Hour of Judgment), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 6928
+// Abilities: A0C3 ([Uther] Hour of Judgment), Name (Name)
+{
+[Uther] Hour of Judgment
+}
+
+STRING 6929
+// Abilities: A0C3 ([Uther] Hour of Judgment), Tip (Tooltip - Normal)
+{
+Hour of Judgment
+}
+
+STRING 6931
+// Buffs/Effects: B022 ([Uther] Hour of Judgment), EditorName (Name (Editor Only))
+{
+[Uther] Hour of Judgment
+}
+
+STRING 6932
+// Buffs/Effects: B022 ([Uther] Hour of Judgment), Bufftip (Tooltip)
+{
+Hour of Judgment
+}
+
+STRING 6933
+// Buffs/Effects: B022 ([Uther] Hour of Judgment), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Hour of Judgment; attacks will deal more damage.
+}
+
