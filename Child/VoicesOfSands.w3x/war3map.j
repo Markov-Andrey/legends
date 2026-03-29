@@ -4,9 +4,9 @@ constant boolean LIBRARY_ARTHASUI=true
 //endglobals from ARTHASUI
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from REFORGEDUIMAKER:
 constant boolean LIBRARY_REFORGEDUIMAKER=true
@@ -37,16 +37,16 @@ constant boolean LIBRARY_WHITEMANEUI=true
 //globals from CustomConsoleUI:
 constant boolean LIBRARY_CustomConsoleUI=true
     // workerFace = true can only be used when you save the map in 1.32.6+
-constant boolean CustomConsoleUI___workerFace= true
+constant boolean CustomConsoleUI__workerFace= true
         
-framehandle CustomConsoleUI___idleWorkerButton
-framehandle CustomConsoleUI___idleWorkerButtonOverlay
-framehandle CustomConsoleUI___idleWorkerButtonOverlayParent
-framehandle CustomConsoleUI___customInventoryCover
-framehandle CustomConsoleUI___customInventoryCoverParent
+framehandle CustomConsoleUI__idleWorkerButton
+framehandle CustomConsoleUI__idleWorkerButtonOverlay
+framehandle CustomConsoleUI__idleWorkerButtonOverlayParent
+framehandle CustomConsoleUI__customInventoryCover
+framehandle CustomConsoleUI__customInventoryCoverParent
 string array CustomConsoleUI_data
 integer array CustomConsoleUI_dataCount
-integer CustomConsoleUI___dataPageSize= 11
+integer CustomConsoleUI__dataPageSize= 11
 real array CustomConsoleUI_x
 real array CustomConsoleUI_y
 //endglobals from CustomConsoleUI
@@ -128,12 +128,12 @@ player udg_PlayerKelthuzad= null
 rect udg_WarsongZoneOrc= null
 rect udg_WarsongZoneNightelf= null
 player udg_PlayerHellscream= null
+unit udg_HellscreamArenaChoose1= null
+unit udg_HellscreamArenaChoose2= null
 integer udg_WarsongCountNightelf= 0
 integer udg_WarsongCountOrc= 0
-player udg_PlayerUther= null
 
     // Generated
-camerasetup gg_cam_StartView= null
 trigger gg_trg_IniLimitUnitsF1= null
 trigger gg_trg_IniStartResouces= null
 trigger gg_trg_IniSelectUnit= null
@@ -239,28 +239,17 @@ trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_WhitemaneFastBuild= null
 trigger gg_trg_KelthuzadIni= null
 trigger gg_trg_HellscreamIni= null
-trigger gg_trg_HellscreamEnraged= null
 trigger gg_trg_HellscreamExecute= null
-trigger gg_trg_HellscreamBloodCurse= null
-trigger gg_trg_HellscreamBattleMadness= null
 trigger gg_trg_HellscreamRage= null
 trigger gg_trg_HellscreamBladeBlade= null
 trigger gg_trg_HellscreamFuelFury= null
-trigger gg_trg_HellscreamFistWoodburner= null
-trigger gg_trg_HellscreamFistFuryFire= null
-trigger gg_trg_HellscreamWorgBreeding= null
-trigger gg_trg_HellscreamSuicide= null
-trigger gg_trg_HellscreamMine= null
-trigger gg_trg_HellscreamMineCycle= null
-trigger gg_trg_HellscreamMineDel= null
-trigger gg_trg_HellscreamMineDelete= null
 trigger gg_trg_HellscreamRaiderDead= null
 trigger gg_trg_HellscreamTaming= null
 trigger gg_trg_HellscreamSavageFeast= null
 trigger gg_trg_HellscreamChopMeat= null
-trigger gg_trg_HellscreamPigFarmBuild= null
-trigger gg_trg_HellscreamTraining= null
-trigger gg_trg_HellscreamTrainingDebug= null
+trigger gg_trg_HellscreamArenaChoose= null
+trigger gg_trg_HellscreamArenaCancel= null
+trigger gg_trg_HellscreamArenaFinish= null
 trigger gg_trg_MythicAddRandom= null
 trigger gg_trg_Mythic1Boots= null
 trigger gg_trg_Mythic2Vampiric= null
@@ -368,14 +357,6 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_HellscreamPigFarmRallyPoint= null
-trigger gg_trg_UtherSpearmanPiercingStrike= null
-trigger gg_trg_UtherSpearmanPiercingStrikeAuto= null
-trigger gg_trg_UtherHourJudgmentOn= null
-trigger gg_trg_UtherHourJudgmentOff= null
-
-    // Random Groups
-integer array gg_rg_000
 framehandle ThrallIcon= null
 framehandle WhitemaneIcon= null
 framehandle WhitemaneText= null
@@ -398,7 +379,7 @@ endglobals
 
 //library ARTHASUI:
 
-    function ARTHASUI___CreateIcon takes nothing returns nothing
+    function ARTHASUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set ArthasIcon=BlzCreateFrameByType("BACKDROP", "ArthasIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ArthasIcon, 0.05, 0.05)
@@ -434,8 +415,8 @@ endglobals
         endif
     endfunction
 
-    function ARTHASUI___init takes nothing returns nothing
-        call ARTHASUI___CreateIcon()
+    function ARTHASUI__init takes nothing returns nothing
+        call ARTHASUI__CreateIcon()
     endfunction
 
 
@@ -446,24 +427,24 @@ endglobals
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -523,15 +504,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER___init takes nothing returns nothing
-        call REFORGEDUIMAKER___CreateIcons()
+    function REFORGEDUIMAKER__init takes nothing returns nothing
+        call REFORGEDUIMAKER__CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits___InitRaceUnits takes nothing returns nothing
+    function RaceUnits__InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -666,7 +647,7 @@ endglobals
 //library RaceUnits ends
 //library THRALLUI:
 
-    function THRALLUI___CreateIcon takes nothing returns nothing
+    function THRALLUI__CreateIcon takes nothing returns nothing
         set ThrallIcon=BlzCreateFrameByType("BACKDROP", "ThrallDynamicIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(ThrallIcon, 0.05, 0.05)
         call BlzFrameSetVisible(ThrallIcon, false)
@@ -698,15 +679,15 @@ endglobals
         endif
     endfunction
 
-    function THRALLUI___init takes nothing returns nothing
-        call THRALLUI___CreateIcon()
+    function THRALLUI__init takes nothing returns nothing
+        call THRALLUI__CreateIcon()
     endfunction
 
 
 //library THRALLUI ends
 //library WHITEMANEUI:
 
-    function WHITEMANEUI___CreateIcon takes nothing returns nothing
+    function WHITEMANEUI__CreateIcon takes nothing returns nothing
         // Создание иконки
         set WhitemaneIcon=BlzCreateFrameByType("BACKDROP", "WhitemaneIcon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(WhitemaneIcon, 0.05, 0.05)
@@ -761,8 +742,8 @@ endglobals
         endif
     endfunction
 
-    function WHITEMANEUI___init takes nothing returns nothing
-        call WHITEMANEUI___CreateIcon()
+    function WHITEMANEUI__init takes nothing returns nothing
+        call WHITEMANEUI__CreateIcon()
     endfunction
 
 
@@ -781,7 +762,7 @@ endglobals
 
     function AddCustomConsole takes integer index,string texture returns nothing
         set CustomConsoleUI_dataCount[index]=CustomConsoleUI_dataCount[index] + 1
-        set CustomConsoleUI_data[index * CustomConsoleUI___dataPageSize + CustomConsoleUI_dataCount[index]]=texture
+        set CustomConsoleUI_data[index * CustomConsoleUI__dataPageSize + CustomConsoleUI_dataCount[index]]=texture
     endfunction
 
     function UseCustomConsole takes player p,integer index returns nothing
@@ -792,7 +773,7 @@ endglobals
         if index < 1 then
             set index=GetHandleId(GetPlayerRace(p))
         endif
-        set pageValue=index * CustomConsoleUI___dataPageSize
+        set pageValue=index * CustomConsoleUI__dataPageSize
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI5T", 0), CustomConsoleUI_data[pageValue + 5], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI6T", 0), CustomConsoleUI_data[pageValue + 6], 0, false)
         call BlzFrameSetTexture(BlzGetFrameByName("CustomConsoleUI4T", 0), CustomConsoleUI_data[pageValue + 4], 0, false)
@@ -812,10 +793,10 @@ endglobals
         if GetLocalizedString("REFORGED") != "REFORGED" then
             call BlzFrameSetTexture(BlzGetFrameByName("InventoryCoverTexture", 0), CustomConsoleUI_data[pageValue + 8], 0, true)
 
-                call BlzFrameSetTexture(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
+                call BlzFrameSetTexture(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI_data[pageValue + 9], 0, false)
 
         else
-            call BlzFrameSetTexture(CustomConsoleUI___customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
+            call BlzFrameSetTexture(CustomConsoleUI__customInventoryCover, CustomConsoleUI_data[pageValue + 8], 0, true)
         endif
         call BlzFrameSetPoint(BlzGetFrameByName("CustomConsoleUIClock", 0), FRAMEPOINT_TOP, BlzGetFrameByName("ConsoleUI", 0), FRAMEPOINT_TOP, CustomConsoleUI_x[index], CustomConsoleUI_y[index])
     endfunction
@@ -836,11 +817,11 @@ endglobals
             // Requires a native existing only in Reforged
             
 
-                set CustomConsoleUI___idleWorkerButton=BlzFrameGetChild(BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3), 0)
-                set CustomConsoleUI___idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI___idleWorkerButton, 0)
-                set CustomConsoleUI___idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-                call BlzFrameSetAllPoints(CustomConsoleUI___idleWorkerButtonOverlay, CustomConsoleUI___idleWorkerButton)
-                call BlzFrameSetLevel(CustomConsoleUI___idleWorkerButtonOverlayParent, 4)
+                set CustomConsoleUI__idleWorkerButton=BlzFrameGetChild(BlzFrameGetChild(BlzGetFrameByName("ConsoleBottomBar", 0), 3), 0)
+                set CustomConsoleUI__idleWorkerButtonOverlayParent=BlzCreateSimpleFrame("SimpleTextureFrame", CustomConsoleUI__idleWorkerButton, 0)
+                set CustomConsoleUI__idleWorkerButtonOverlay=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+                call BlzFrameSetAllPoints(CustomConsoleUI__idleWorkerButtonOverlay, CustomConsoleUI__idleWorkerButton)
+                call BlzFrameSetLevel(CustomConsoleUI__idleWorkerButtonOverlayParent, 4)
 
 
 
@@ -848,11 +829,11 @@ endglobals
 
 
         else
-            set CustomConsoleUI___customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
-            call BlzFrameSetLevel(CustomConsoleUI___customInventoryCoverParent, 4)
-            set CustomConsoleUI___customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
-            call BlzFrameSetAbsPoint(CustomConsoleUI___customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
+            set CustomConsoleUI__customInventoryCoverParent=BlzCreateSimpleFrame("SimpleTextureFrame", BlzGetFrameByName("ConsoleUI", 0), 0)
+            call BlzFrameSetLevel(CustomConsoleUI__customInventoryCoverParent, 4)
+            set CustomConsoleUI__customInventoryCover=BlzGetFrameByName("SimpleTextureFrameValue", 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_BOTTOMRIGHT, 0.6, 0)
+            call BlzFrameSetAbsPoint(CustomConsoleUI__customInventoryCover, FRAMEPOINT_TOPLEFT, 0.6 - 0.128, 0.2558)
         endif
 
         // Preload
@@ -873,19 +854,19 @@ endglobals
         call BlzGetFrameByName("CustomConsoleUI5B", 0)
         call BlzGetFrameByName("CustomConsoleUI6B", 0)
     endfunction
-    function CustomConsoleUI___Init takes nothing returns nothing
+    function CustomConsoleUI__Init takes nothing returns nothing
         call CreateCustomConsole()
         call UseCustomConsole(GetLocalPlayer() , 0)
     endfunction
-    function CustomConsoleUI___at0s takes nothing returns nothing
-        call CustomConsoleUI___Init()
+    function CustomConsoleUI__at0s takes nothing returns nothing
+        call CustomConsoleUI__Init()
         call DestroyTimer(GetExpiredTimer())
     endfunction
-    function CustomConsoleUI___update takes nothing returns nothing
-        call BlzFrameSetVisible(CustomConsoleUI___customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
+    function CustomConsoleUI__update takes nothing returns nothing
+        call BlzFrameSetVisible(CustomConsoleUI__customInventoryCoverParent, not BlzFrameIsVisible(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)))
     endfunction
 
-    function CustomConsoleUI___init_function takes nothing returns nothing
+    function CustomConsoleUI__init_function takes nothing returns nothing
         local integer index= 0
         set index=GetHandleId(RACE_HUMAN)
         call AddCustomConsole(index , "ui\\console\\human\\humanuitile01")
@@ -1040,27 +1021,27 @@ endglobals
         call AddCustomConsole(index , "ui\\Widgets\\EscMenu\\Human\\blank-background")
         call AddCustomConsole(index , "ui\\console\\orc\\orcuitile-timeindicatorframe")
         call AddCustomConsole(index , "ui\\console\\orc\\orcuitile-inventorycover")
-        call AddCustomConsole(index , "Legends\\Hellscream\\Peon\\BTNLazyPeon")
+        call AddCustomConsole(index , "Legends\\Hellscream\\Peon\\BTNWC1PeonRemastered")
         set CustomConsoleUI_x[index]=0.0004
         set CustomConsoleUI_y[index]=0.0
         
         if GetLocalizedString("REFORGED") == "REFORGED" then
-            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI___update)
+            call TimerStart(CreateTimer(), 1 / 32.0, true, function CustomConsoleUI__update)
         endif
-        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI___at0s)
+        call TimerStart(CreateTimer(), 0, false, function CustomConsoleUI__at0s)
 
-            call TriggerAddAction(FrameLoader___actionTrigger, (function CustomConsoleUI___Init)) // INLINED!!
+            call TriggerAddAction(FrameLoader__actionTrigger, (function CustomConsoleUI__Init)) // INLINED!!
 
     endfunction
 
 //library CustomConsoleUI ends
 //===========================================================================
 // 
-// 
+// :project_name
 // 
 //   Warcraft III map script
 //   Generated by the Warcraft III World Editor
-//   Map Author: 
+//   Map Author: :author
 // 
 //===========================================================================
 
@@ -1199,7 +1180,7 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
-    set udg_Map="alterac"
+    set udg_Map="warsong"
     set udg_ThrallMode="air"
     set udg_ThrallTotems=0
     set udg_MythicEnemy=Player(5)
@@ -1344,368 +1325,16 @@ endfunction
 
 //***************************************************************************
 //*
-//*  Map Item Tables
+//*  Items
 //*
 //***************************************************************************
 
-function ItemTable000000_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
+function CreateAllItems takes nothing returns nothing
+    local integer itemID
 
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
+    call BlzCreateItemWithSkin('I01A', 83.1, 5877.6, 'I01A')
+    call BlzCreateItemWithSkin('I01B', 25.5, - 6387.3, 'I01B')
 endfunction
-
-function ItemTable000001_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000002_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000003_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000004_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000005_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 6), 100)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000006_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem('ratf', 25)
-        call RandomDistAddItem('ckng', 25)
-        call RandomDistAddItem('modt', 25)
-        call RandomDistAddItem('rde4', 25)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000007_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 1), 34)
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 2), 33)
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 3), 33)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000008_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ARTIFACT, 7), 50)
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ARTIFACT, 8), 50)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
-function ItemTable000009_DropItems takes nothing returns nothing
-    local widget trigWidget= null
-    local unit trigUnit= null
-    local integer itemID= 0
-    local boolean canDrop= true
-
-    set trigWidget=bj_lastDyingWidget
-    if ( trigWidget == null ) then
-        set trigUnit=GetTriggerUnit()
-    endif
-
-    if ( trigUnit != null ) then
-        set canDrop=not IsUnitHidden(trigUnit)
-        if ( canDrop and GetChangingUnit() != null ) then
-            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
-        endif
-    endif
-
-    if ( canDrop ) then
-        // Item set 0
-        call RandomDistReset()
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 4), 34)
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 5), 33)
-        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_PERMANENT, 6), 33)
-        set itemID=RandomDistChoose()
-        if ( trigUnit != null ) then
-            call UnitDropItem(trigUnit, itemID)
-        else
-            call WidgetDropItem(trigWidget, itemID)
-        endif
-
-    endif
-
-    set bj_lastDyingWidget=null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
 
 //***************************************************************************
 //*
@@ -1721,7 +1350,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h00S', 208.3, 126.2, 81.254, 'h00S')
 endfunction
 
 //===========================================================================
@@ -1732,7 +1361,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h001', 6320.8, - 3521.4, 272.000, 'h001')
+    set u=BlzCreateUnitWithSkin(p, 'h00S', 419.6, 125.7, 100.629, 'h00S')
 endfunction
 
 //===========================================================================
@@ -1743,368 +1372,18 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'H004', - 505.8, - 1304.2, 261.010, 'H004')
+    set u=BlzCreateUnitWithSkin(p, 'h00S', 233.3, 412.6, 282.128, 'h00S')
 endfunction
 
 //===========================================================================
-function CreateBuildingsForPlayer5 takes nothing returns nothing
-    local player p= Player(5)
+function CreateUnitsForPlayer3 takes nothing returns nothing
+    local player p= Player(3)
     local unit u
     local integer unitID
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h007', 2360.8, - 8063.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6593.8, 8671.4, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6815.6, - 7567.9, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 5649.0, - 9122.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6793.9, 7759.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6173.3, - 8760.1, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6418.5, - 8673.3, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 5391.8, - 9200.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7480.8, 4096.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7038.5, - 5636.9, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 7)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 5611.4, - 6711.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6842.7, - 6214.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 14)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6330.7, - 6406.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6714.7, - 5190.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7710.7, - 6235.2, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7958.4, - 5518.2, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7958.4, - 5326.2, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6815.6, - 7375.9, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 5739.4, - 6903.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6394.7, - 5894.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5517.3, 3941.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6266.7, - 5382.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 13)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7098.7, - 6918.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 12)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 9510.2, 624.4, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5633.1, 7939.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8668.9, 224.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8627.2, 440.7, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5890.6, 7909.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 5818.7, - 5830.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5827.4, 3368.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8810.6, - 3933.2, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8824.8, - 4190.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7656.5, 2756.7, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6595.9, 7748.3, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6522.7, - 5190.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6266.2, 2888.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6349.8, 3750.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7039.6, 3660.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7354.2, 5832.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 2104.8, - 7551.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 1784.8, - 8191.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7126.5, 3329.5, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7469.2, 5313.8, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7661.2, 5121.8, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6323.4, 4885.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 13)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7679.6, 3596.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 12)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6140.7, 3503.7, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 7)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7469.2, 4737.8, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7662.0, 2499.8, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 9)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 5996.1, 4008.5, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8217.7, 1030.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 2872.8, - 7871.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 8187.6, 1215.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8948.2, - 3307.8, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 1848.8, - 7615.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 9)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 4216.8, 7999.4, 90.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 2040.8, - 7807.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 2680.8, - 7679.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 3960.8, 7487.4, 90.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8963.7, - 3101.0, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6202.2, 6024.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7098.2, 6472.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6330.2, 5832.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 7098.2, 6280.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6394.2, 6024.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6906.2, 6408.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 8005.8, - 4727.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6853.8, - 4663.6, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7877.8, - 4919.6, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 6853.8, - 4855.6, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7813.8, - 4727.6, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7045.8, - 4727.6, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 5803.4, - 6711.6, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7019.4, - 7607.6, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 9792.5, - 3462.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 7168.5, - 8774.6, 53.920, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6586.2, 2440.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 10)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6330.2, 2440.4, 270.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', 6842.2, 2440.4, 270.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 9)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 3640.8, 8127.4, 90.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 6)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 3704.8, 7551.4, 90.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 9)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 3896.8, 7743.4, 90.000, 'h007')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 11)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 4664.8, 7423.4, 90.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h007', - 4600.8, 7679.4, 90.000, 'h007')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-endfunction
-
-//===========================================================================
-function CreateUnitsForPlayer5 takes nothing returns nothing
-    local player p= Player(5)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7057.4, - 7425.6, 292.718, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6043.8, - 6792.3, 120.886, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7161.5, - 7441.5, 222.370, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 5967.8, - 6710.8, 29.350, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7247.6, 3657.7, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7378.0, 3695.1, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7011.3, - 6530.2, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7445.6, - 6362.7, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6891.0, - 6513.2, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7533.7, - 6481.3, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6856.3, - 6657.3, 292.718, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6960.4, - 6673.2, 222.370, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6238.7, - 5699.5, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6118.4, - 5682.5, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6083.7, - 5826.6, 292.718, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 6187.8, - 5842.5, 222.370, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7679.1, - 6552.5, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 7)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 7368.2, - 6228.5, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7476.4, 3241.7, 213.976, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7983.3, 2948.7, 340.806, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 5756.6, 3855.3, 213.980, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 6184.9, 3839.5, 340.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7402.6, 3530.5, 292.718, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7298.5, 3514.6, 222.370, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 6500.5, 4482.2, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2744.6, - 2666.2, 298.628, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2510.0, - 2787.0, 274.515, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 6620.7, 4499.3, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 6655.5, 4355.1, 292.718, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 6551.3, 4339.2, 222.370, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7565.7, 4387.2, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7700.0, 4317.9, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7400.2, 4309.0, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 7)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 7760.2, 4168.0, 292.720, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2343.4, - 2562.1, 287.532, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 4139.4, 7355.9, 340.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 3642.0, 7697.4, 340.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 4154.1, 7537.2, 340.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 3768.3, 7809.9, 340.810, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 4296.9, 7465.2, 340.810, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 3532.7, 7772.6, 340.810, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2255.3, - 7488.6, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 1729.4, - 7894.4, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2239.7, - 7737.3, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 1855.7, - 8006.9, 160.810, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 4)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2355.9, - 7613.9, 160.810, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 5)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 1620.1, - 7969.6, 160.810, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2660.5, - 7984.0, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2550.5, - 7873.2, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 4440.3, 7588.1, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h006', - 4485.6, 7441.8, 160.810, 'h006')
-    call SetUnitState(u, UNIT_STATE_MANA, 1)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2310.0, - 2729.9, 298.630, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 2)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2725.6, - 2419.6, 287.530, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.67 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2381.9, - 2861.4, 298.630, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 8)
-    set u=BlzCreateUnitWithSkin(p, 'h006', 2508.8, - 2347.5, 287.530, 'h006')
-    set life=GetUnitState(u, UNIT_STATE_LIFE)
-    call SetUnitState(u, UNIT_STATE_LIFE, 0.34 * life)
-    call SetUnitState(u, UNIT_STATE_MANA, 3)
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 5837.6, - 2975.8, 285.814, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 6804.4, 1490.8, 282.632, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 7789.7, 101.1, 253.676, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', 4743.3, 6267.7, 290.151, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', - 7303.4, - 3735.9, 295.077, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', - 7944.5, - 2418.4, 327.317, 'h01J')
-    set u=BlzCreateUnitWithSkin(p, 'h01J', - 4417.0, - 6941.2, 284.990, 'h01J')
+    set u=BlzCreateUnitWithSkin(p, 'h00S', 395.2, 413.3, 259.651, 'h00S')
 endfunction
 
 //===========================================================================
@@ -2115,92 +1394,98 @@ function CreateNeutralHostile takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 8937.4, 2961.2, 305.778, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 969.7, 7629.8, 305.519, 'nwlg')
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2296.3, 2511.8, 42.836, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2591.4, 2144.9, 143.921, 'nfrl')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 2228.7, 2855.6, 294.263, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'nfrs', 2872.1, - 1892.0, 300.280, 'nfrs')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 2026.5, 2642.6, 182.431, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', 2628.6, - 1940.8, 302.147, 'nfrl')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7964.6, 8541.8, 269.264, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nogl', - 7720.4, 8652.4, 287.880, 'nogl')
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7918.8, 8294.6, 287.271, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 5293.7, - 171.8, 40.327, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', 2903.4, - 1655.9, 312.214, 'nfrl')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nwld', 949.6, 7915.7, 298.870, 'nwld')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 739.5, 7782.9, 302.558, 'nwlg')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 5415.2, - 369.9, 83.310, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nfrs', - 2788.4, 2101.1, 124.802, 'nfrs')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1191.4, - 9011.2, 45.939, 'nmrr')
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 2008.2, - 8774.1, 135.530, 'nmrr')
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 5581.6, - 218.9, 112.050, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nfrl', - 2850.2, 1909.6, 132.599, 'nfrl')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nsqt', 6803.5, - 8277.3, 74.292, 'nsqt')
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7595.5, 8367.0, 290.114, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nsqe', 6771.5, - 8514.3, 93.081, 'nsqe')
-    set u=BlzCreateUnitWithSkin(p, 'nomg', - 7454.5, 8802.4, 301.975, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1314.2, - 8843.8, 63.236, 'nmrm')
-    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1940.9, - 8916.4, 149.415, 'nmrm')
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 7380.1, 8607.2, 291.675, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nmrr', - 1337.6, - 8639.1, 63.661, 'nmrr')
-    set u=BlzCreateUnitWithSkin(p, 'nogm', - 9181.2, 2779.4, 305.500, 'nogm')
-    set u=BlzCreateUnitWithSkin(p, 'nomg', - 9180.9, 3060.8, 299.400, 'nomg')
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 3654.7, 1452.3, 329.207, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nstl', - 3398.4, - 1735.1, 242.476, 'nstl')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngrk', 8867.2, - 3265.3, 145.083, 'ngrk')
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 3746.5, 1120.4, 26.606, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nsts', - 3170.5, - 1720.5, 242.294, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 3615.7, 1242.3, 1.360, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', 5155.5, - 3371.8, 136.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 4071.2, 3534.9, 279.221, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nspr', 5124.4, - 3068.7, 114.511, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 4273.7, 3480.7, 211.580, 'nwlg')
+    set u=BlzCreateUnitWithSkin(p, 'nspr', 4849.7, - 3411.7, 167.440, 'nspr')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nwlt', 4262.7, 3291.5, 159.998, 'nwlt')
+    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5170.7, 3181.1, 316.478, 'nssp')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5210.3, - 899.4, 113.379, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'nsts', - 3421.0, - 1522.6, 207.769, 'nsts')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 5004.4, - 639.3, 159.892, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'ndtw', - 4973.9, 309.1, 356.857, 'ndtw')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nsgt', - 5238.4, - 3578.0, 311.300, 'nsgt')
+    set u=BlzCreateUnitWithSkin(p, 'ndth', - 5076.0, 404.9, 33.056, 'ndth')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5127.3, - 3416.8, 329.309, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', - 4846.1, 478.9, 40.012, 'ndtb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5356.4, - 3727.7, 273.423, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', - 4973.3, 157.2, 325.205, 'ndtb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5052.6, - 3560.3, 329.309, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', - 4837.4, 337.3, 354.058, 'ndtb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nssp', - 5206.8, - 3737.9, 281.222, 'nssp')
+    set u=BlzCreateUnitWithSkin(p, 'ndtw', 4909.9, - 202.9, 183.143, 'ndtw')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 4181.1, 1986.8, 113.379, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'ndth', 5012.0, - 107.1, 146.944, 'ndth')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nbrg', - 3975.2, 2246.9, 159.892, 'nbrg')
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', 4782.1, - 33.1, 139.988, 'ndtb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 5176.6, - 702.9, 146.850, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', 4909.3, - 354.8, 214.795, 'ndtb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nenf', - 4147.4, 2183.2, 146.850, 'nenf')
+    set u=BlzCreateUnitWithSkin(p, 'ndtb', 4773.4, - 174.7, 185.942, 'ndtb')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngst', 8977.8, - 3408.9, 126.611, 'ngst')
-    set u=BlzCreateUnitWithSkin(p, 'ngrk', 9015.9, - 3039.2, 210.367, 'ngrk')
-    set u=BlzCreateUnitWithSkin(p, 'ngrk', 8713.1, - 3403.7, 90.662, 'ngrk')
-    set u=BlzCreateUnitWithSkin(p, 'nmrm', - 1831.2, - 8684.7, 135.407, 'nmrm')
-    set u=BlzCreateUnitWithSkin(p, 'nsqo', 7230.8, - 8315.2, 142.265, 'nsqo')
-    set u=BlzCreateUnitWithSkin(p, 'nsqa', 7051.3, - 8476.4, 115.188, 'nsqa')
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1186.6, 7723.3, 305.519, 'nwlg')
-    set u=BlzCreateUnitWithSkin(p, 'nsqt', 7047.7, - 8136.9, 143.456, 'nsqt')
-    set u=BlzCreateUnitWithSkin(p, 'ngnv', 1340.3, 2953.5, 143.426, 'ngnv')
+    set u=BlzCreateUnitWithSkin(p, 'nsty', - 5213.5, - 2884.8, 15.781, 'nsty')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngnw', 1410.5, 3196.5, 228.206, 'ngnw')
+    set u=BlzCreateUnitWithSkin(p, 'nsty', - 5116.7, - 3079.3, 45.820, 'nsty')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngns', 1192.6, 2850.4, 92.375, 'ngns')
+    set u=BlzCreateUnitWithSkin(p, 'nsat', - 5307.1, - 3070.6, 33.847, 'nsat')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngnb', 1064.5, 3056.3, 1.894, 'ngnb')
+    set u=BlzCreateUnitWithSkin(p, 'nsty', 5021.5, 2948.8, 195.781, 'nsty')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'ngnb', 1199.9, 3235.2, 276.363, 'ngnb')
+    set u=BlzCreateUnitWithSkin(p, 'nsty', 4924.7, 3143.3, 225.820, 'nsty')
     call SetUnitAcquireRange(u, 200.0)
-    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1164.6, 8020.7, 305.519, 'nwlg')
-    set u=BlzCreateUnitWithSkin(p, 'nmmu', - 1599.6, - 8713.6, 72.885, 'nmmu')
+    set u=BlzCreateUnitWithSkin(p, 'nsat', 5115.1, 3134.6, 213.847, 'nsat')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspr', - 5139.7, 2877.9, 294.511, 'nspr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nspr', - 4864.9, 3221.0, 347.440, 'nspr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nstl', 3910.4, 2375.1, 62.476, 'nstl')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsts', 3682.5, 2360.5, 62.294, 'nsts')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nsts', 3933.0, 2162.6, 27.769, 'nsts')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', - 1767.4, - 3133.9, 96.057, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', - 1604.5, - 3209.1, 91.932, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', - 1444.5, - 3103.2, 99.932, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 2151.4, 3005.9, 276.057, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlg', 1988.5, 3081.1, 271.932, 'nwlg')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'nwlt', 1828.5, 2975.2, 279.932, 'nwlt')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtp', 1693.5, - 3483.2, 91.549, 'ndtp')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', 1570.6, - 3446.2, 70.211, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', 1809.2, - 3439.5, 112.097, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtp', - 1501.5, 3419.2, 271.549, 'ndtp')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1378.6, 3382.2, 250.211, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
+    set u=BlzCreateUnitWithSkin(p, 'ndtr', - 1617.2, 3375.5, 292.097, 'ndtr')
+    call SetUnitAcquireRange(u, 200.0)
 endfunction
 
 //===========================================================================
@@ -2211,57 +1496,54 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'ngol', - 2176.0, 832.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 12500)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', 1152.0, 896.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 12500)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', - 4352.0, 8320.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 17500)
-    set u=BlzCreateUnitWithSkin(p, 'n000', 2560.0, - 2560.0, 270.000, 'n000')
-    call SetUnitColor(u, ConvertPlayerColor(18))
-    set u=BlzCreateUnitWithSkin(p, 'n00L', - 7648.0, 8544.0, 270.000, 'n00L')
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 4608.0, - 6912.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 50000)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 4672.0, - 6976.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 50000)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 4416.0, 6784.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 50000)
+    set u=BlzCreateUnitWithSkin(p, 'ngol', 4672.0, 6720.0, 270.000, 'ngol')
+    call SetResourceAmount(u, 50000)
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 2784.0, - 1952.0, 270.000, 'n00O')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00L', 7008.0, - 8352.0, 270.000, 'n00L')
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 2848.0, 2016.0, 270.000, 'n00O')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00O', - 1952.0, - 8672.0, 270.000, 'n00O')
+    set u=BlzCreateUnitWithSkin(p, 'n00Q', 448.0, - 4416.0, 270.000, 'n00Q')
+    set u=BlzCreateUnitWithSkin(p, 'n00T', - 512.0, 4160.0, 270.000, 'n00T')
+    set u=BlzCreateUnitWithSkin(p, 'n00U', 2688.0, - 1728.0, 270.000, 'n00U')
+    set u=BlzCreateUnitWithSkin(p, 'n00U', - 2624.0, 1920.0, 270.000, 'n00U')
+    set u=BlzCreateUnitWithSkin(p, 'n00V', - 3200.0, - 1536.0, 270.000, 'n00V')
+    set u=BlzCreateUnitWithSkin(p, 'n00V', 3712.0, 2176.0, 270.000, 'n00V')
+    set u=BlzCreateUnitWithSkin(p, 'n00L', - 5088.0, 288.0, 270.000, 'n00L')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00O', 992.0, 7776.0, 270.000, 'n00O')
+    set u=BlzCreateUnitWithSkin(p, 'n00L', 5024.0, - 224.0, 270.000, 'n00L')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'ngol', - 8320.0, - 6336.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 25000)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', 8128.0, 4416.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 25000)
-    set u=BlzCreateUnitWithSkin(p, 'n00O', - 9120.0, 2976.0, 270.000, 'n00O')
+    set u=BlzCreateUnitWithSkin(p, 'nfh0', 5248.0, - 256.0, 270.000, 'nfh0')
+    set u=BlzCreateUnitWithSkin(p, 'nfh1', - 5280.0, 224.0, 270.000, 'nfh1')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 5216.0, - 3040.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00O', 1248.0, 3104.0, 270.000, 'n00O')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 5024.0, 3104.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00O', 8800.0, - 3168.0, 270.000, 'n00O')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 5024.0, 3040.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00O', - 5088.0, - 3744.0, 270.000, 'n00O')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 5024.0, - 3232.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00N', 5408.0, - 224.0, 270.000, 'n00N')
+    set u=BlzCreateUnitWithSkin(p, 'n00O', - 3296.0, - 1760.0, 270.000, 'n00O')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00N', 3744.0, 1248.0, 270.000, 'n00N')
+    set u=BlzCreateUnitWithSkin(p, 'n00O', 3808.0, 2400.0, 270.000, 'n00O')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'ntn2', - 2656.0, 2912.0, 270.000, 'ntn2')
-    set u=BlzCreateUnitWithSkin(p, 'nmh0', - 2144.0, - 9120.0, 270.000, 'nmh0')
-    set u=BlzCreateUnitWithSkin(p, 'nmh1', - 1632.0, - 8928.0, 270.000, 'nmh1')
-    set u=BlzCreateUnitWithSkin(p, 'nmh1', - 2464.0, - 9632.0, 270.000, 'nmh1')
-    set u=BlzCreateUnitWithSkin(p, 'n00N', 4128.0, 3360.0, 270.000, 'n00N')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 1632.0, - 3168.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00N', - 1952.0, 2656.0, 270.000, 'n00N')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 2016.0, 3040.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00N', - 4064.0, 2144.0, 270.000, 'n00N')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', 1696.0, - 3488.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'n00N', - 5152.0, - 800.0, 270.000, 'n00N')
+    set u=BlzCreateUnitWithSkin(p, 'n00N', - 1504.0, 3424.0, 270.000, 'n00N')
     call SetUnitColor(u, ConvertPlayerColor(0))
-    set u=BlzCreateUnitWithSkin(p, 'ngol', 2944.0, - 8448.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 17500)
 endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer5()
 endfunction
 
 //===========================================================================
@@ -2269,39 +1551,15 @@ function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
     call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer2()
-    call CreateUnitsForPlayer5()
+    call CreateUnitsForPlayer3()
 endfunction
 
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreateBuildingsForPlayer5() // INLINED!!
+    call CreatePlayerBuildings()
     call CreateNeutralHostile()
     call CreatePlayerUnits()
-endfunction
-
-//***************************************************************************
-//*
-//*  Cameras
-//*
-//***************************************************************************
-
-function CreateCameras takes nothing returns nothing
-
-    set gg_cam_StartView=CreateCameraSetup()
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROTATION, 61.4, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ANGLE_OF_ATTACK, 348.3, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_TARGET_DISTANCE, 1539.5, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROLL, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FARZ, 8857.8, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_NEARZ, 16.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
-    call CameraSetupSetDestPosition(gg_cam_StartView, 6518.3, - 3034.6, 0.0)
-
 endfunction
 
 //***************************************************************************
@@ -2326,7 +1584,6 @@ function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
     if ( Trig_IniLimitUnitsF1_Func001Func001C() ) then
         call CreateNUnitsAtLoc(1, 'H02J', GetEnumPlayer(), GetPlayerStartLocationLoc(GetOwningPlayer(GetEnumUnit())), bj_UNIT_FACING)
         call SuspendHeroXPBJ(false, GetLastCreatedUnit())
-        call SetPlayerTechMaxAllowedSwap('u000', 0, GetEnumPlayer())
         // Arthas
         call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
         call SetPlayerTechMaxAllowedSwap('U005', 1, GetEnumPlayer())
@@ -2352,7 +1609,8 @@ function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
         // Hellscream
         call SetPlayerTechMaxAllowedSwap('O013', 1, GetEnumPlayer())
         call SetPlayerTechMaxAllowedSwap('o016', 1, GetEnumPlayer())
-        call SetPlayerTechMaxAllowedSwap('o01K', 4, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('o01K', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('o01L', 0, GetEnumPlayer())
     else
     endif
 endfunction
@@ -3063,9 +2321,6 @@ function Trig_ChooseUther_Actions takes nothing returns nothing
     // WorkerX5
     call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func010A)
     // ----------------------
-    call CreateNUnitsAtLoc(1, 'H032', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
-    // ----------------------
-    set udg_PlayerUther=GetOwningPlayer(GetSpellAbilityUnit())
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_LIGHT_BLUE, true)
     // Run-ALL-triggers
@@ -4542,10 +3797,6 @@ function Trig_UtherIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_UtherHolyDead)
     call EnableTrigger(gg_trg_UtherChurchDonations)
     call EnableTrigger(gg_trg_UtherLightTower)
-    call EnableTrigger(gg_trg_UtherSpearmanPiercingStrike)
-    call EnableTrigger(gg_trg_UtherSpearmanPiercingStrikeAuto)
-    call EnableTrigger(gg_trg_UtherHourJudgmentOn)
-    call EnableTrigger(gg_trg_UtherHourJudgmentOff)
 endfunction
 
 //===========================================================================
@@ -4591,80 +3842,6 @@ function InitTrig_UtherSealOfWisdom takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherSealOfWisdom, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_UtherSealOfWisdom, Condition(function Trig_UtherSealOfWisdom_Conditions))
     call TriggerAddAction(gg_trg_UtherSealOfWisdom, function Trig_UtherSealOfWisdom_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: UtherHourJudgmentOn
-//===========================================================================
-function Trig_UtherHourJudgmentOn_Func002C takes nothing returns boolean
-    if ( not ( GetOwningPlayer(GetAttackedUnitBJ()) == udg_PlayerUther ) ) then
-        return false
-    endif
-    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetAttackedUnitBJ())) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherHourJudgmentOn_Conditions takes nothing returns boolean
-    if ( not Trig_UtherHourJudgmentOn_Func002C() ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherHourJudgmentOn_Func001Func002C takes nothing returns boolean
-    if ( not ( GetUnitManaPercent(GetEnumUnit()) >= 100.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherHourJudgmentOn_Func001A takes nothing returns nothing
-    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + GetRandomReal(2.00, 5.00) ))
-    if ( Trig_UtherHourJudgmentOn_Func001Func002C() ) then
-        call CreateNUnitsAtLoc(1, 'H030', GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
-        call RemoveUnit(GetEnumUnit())
-        call UnitApplyTimedLifeBJ(45.00, 'BTLF', GetLastCreatedUnit())
-    else
-    endif
-endfunction
-
-function Trig_UtherHourJudgmentOn_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsOfTypeIdAll('H032'), function Trig_UtherHourJudgmentOn_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_UtherHourJudgmentOn takes nothing returns nothing
-    set gg_trg_UtherHourJudgmentOn=CreateTrigger()
-    call DisableTrigger(gg_trg_UtherHourJudgmentOn)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherHourJudgmentOn, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_UtherHourJudgmentOn, Condition(function Trig_UtherHourJudgmentOn_Conditions))
-    call TriggerAddAction(gg_trg_UtherHourJudgmentOn, function Trig_UtherHourJudgmentOn_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: UtherHourJudgmentOff
-//===========================================================================
-function Trig_UtherHourJudgmentOff_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'H030' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherHourJudgmentOff_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc(1, 'H032', GetOwningPlayer(GetDyingUnit()), GetUnitLoc(GetDyingUnit()), bj_UNIT_FACING)
-    call RemoveUnit(GetDyingUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_UtherHourJudgmentOff takes nothing returns nothing
-    set gg_trg_UtherHourJudgmentOff=CreateTrigger()
-    call DisableTrigger(gg_trg_UtherHourJudgmentOff)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherHourJudgmentOff, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_UtherHourJudgmentOff, Condition(function Trig_UtherHourJudgmentOff_Conditions))
-    call TriggerAddAction(gg_trg_UtherHourJudgmentOff, function Trig_UtherHourJudgmentOff_Actions)
 endfunction
 
 //===========================================================================
@@ -5081,56 +4258,6 @@ function InitTrig_UtherLightTower takes nothing returns nothing
     call TriggerRegisterTimerEventPeriodic(gg_trg_UtherLightTower, 1.00)
     call TriggerAddCondition(gg_trg_UtherLightTower, Condition(function Trig_UtherLightTower_Conditions))
     call TriggerAddAction(gg_trg_UtherLightTower, function Trig_UtherLightTower_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: UtherSpearmanPiercingStrike
-//===========================================================================
-function Trig_UtherSpearmanPiercingStrike_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R03Y' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherSpearmanPiercingStrike_Func001A takes nothing returns nothing
-    call UnitAddAbilityBJ('A0C1', GetEnumUnit())
-endfunction
-
-function Trig_UtherSpearmanPiercingStrike_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsOfTypeIdAll('h02Y'), function Trig_UtherSpearmanPiercingStrike_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_UtherSpearmanPiercingStrike takes nothing returns nothing
-    set gg_trg_UtherSpearmanPiercingStrike=CreateTrigger()
-    call DisableTrigger(gg_trg_UtherSpearmanPiercingStrike)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherSpearmanPiercingStrike, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_UtherSpearmanPiercingStrike, Condition(function Trig_UtherSpearmanPiercingStrike_Conditions))
-    call TriggerAddAction(gg_trg_UtherSpearmanPiercingStrike, function Trig_UtherSpearmanPiercingStrike_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: UtherSpearmanPiercingStrikeAuto
-//===========================================================================
-function Trig_UtherSpearmanPiercingStrikeAuto_Conditions takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R03Y', GetOwningPlayer(GetTrainedUnit())) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_UtherSpearmanPiercingStrikeAuto_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0C1', GetTrainedUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_UtherSpearmanPiercingStrikeAuto takes nothing returns nothing
-    set gg_trg_UtherSpearmanPiercingStrikeAuto=CreateTrigger()
-    call DisableTrigger(gg_trg_UtherSpearmanPiercingStrikeAuto)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_UtherSpearmanPiercingStrikeAuto, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerAddCondition(gg_trg_UtherSpearmanPiercingStrikeAuto, Condition(function Trig_UtherSpearmanPiercingStrikeAuto_Conditions))
-    call TriggerAddAction(gg_trg_UtherSpearmanPiercingStrikeAuto, function Trig_UtherSpearmanPiercingStrikeAuto_Actions)
 endfunction
 
 //===========================================================================
@@ -8458,83 +7585,15 @@ function Trig_HellscreamIni_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_HellscreamTaming)
     call EnableTrigger(gg_trg_HellscreamSavageFeast)
     call EnableTrigger(gg_trg_HellscreamChopMeat)
-    call EnableTrigger(gg_trg_HellscreamWorgBreeding)
-    call EnableTrigger(gg_trg_HellscreamTraining)
-    call EnableTrigger(gg_trg_HellscreamTrainingDebug)
-    call EnableTrigger(gg_trg_HellscreamSuicide)
-    call EnableTrigger(gg_trg_HellscreamFistFuryFire)
-    call EnableTrigger(gg_trg_HellscreamFistWoodburner)
-    call EnableTrigger(gg_trg_HellscreamEnraged)
-    call EnableTrigger(gg_trg_HellscreamBloodCurse)
-    call EnableTrigger(gg_trg_HellscreamMine)
-    call EnableTrigger(gg_trg_HellscreamMineCycle)
-    call EnableTrigger(gg_trg_HellscreamMineDel)
-    call EnableTrigger(gg_trg_HellscreamMineDelete)
-    call EnableTrigger(gg_trg_HellscreamBattleMadness)
-    call EnableTrigger(gg_trg_HellscreamPigFarmBuild)
-    call EnableTrigger(gg_trg_HellscreamPigFarmRallyPoint)
+    call EnableTrigger(gg_trg_HellscreamArenaChoose)
+    call EnableTrigger(gg_trg_HellscreamArenaCancel)
+    call EnableTrigger(gg_trg_HellscreamArenaFinish)
 endfunction
 
 //===========================================================================
 function InitTrig_HellscreamIni takes nothing returns nothing
     set gg_trg_HellscreamIni=CreateTrigger()
     call TriggerAddAction(gg_trg_HellscreamIni, function Trig_HellscreamIni_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamEnraged
-//===========================================================================
-function Trig_HellscreamEnraged_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetAttacker()) == 'O013' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamEnraged_Func001Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetAttacker()) >= 25.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamEnraged_Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetAttacker()) >= 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamEnraged_Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetAttacker()) >= 75.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamEnraged_Actions takes nothing returns nothing
-    if ( Trig_HellscreamEnraged_Func001C() ) then
-        call SetUnitAbilityLevelSwapped('A0AQ', GetAttacker(), 1)
-    else
-        if ( Trig_HellscreamEnraged_Func001Func001C() ) then
-            call SetUnitAbilityLevelSwapped('A0AQ', GetAttacker(), 2)
-        else
-            if ( Trig_HellscreamEnraged_Func001Func001Func001C() ) then
-                call SetUnitAbilityLevelSwapped('A0AQ', GetAttacker(), 3)
-            else
-                call SetUnitAbilityLevelSwapped('A0AQ', GetAttacker(), 4)
-            endif
-        endif
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamEnraged takes nothing returns nothing
-    set gg_trg_HellscreamEnraged=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamEnraged)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamEnraged, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_HellscreamEnraged, Condition(function Trig_HellscreamEnraged_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamEnraged, function Trig_HellscreamEnraged_Actions)
 endfunction
 
 //===========================================================================
@@ -8571,52 +7630,6 @@ function InitTrig_HellscreamExecute takes nothing returns nothing
     call TriggerAddAction(gg_trg_HellscreamExecute, function Trig_HellscreamExecute_Actions)
 endfunction
 //===========================================================================
-// Trigger: HellscreamBloodCurse
-//===========================================================================
-function Trig_HellscreamBloodCurse_Conditions takes nothing returns boolean
-    if ( not ( GetLearnedSkillBJ() == 'A0BS' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamBloodCurse_Actions takes nothing returns nothing
-    call SetPlayerTechResearchedSwap('R03W', GetUnitAbilityLevelSwapped('A0BS', GetLearningUnit()), GetOwningPlayer(GetLearningUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamBloodCurse takes nothing returns nothing
-    set gg_trg_HellscreamBloodCurse=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamBloodCurse)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamBloodCurse, EVENT_PLAYER_HERO_SKILL)
-    call TriggerAddCondition(gg_trg_HellscreamBloodCurse, Condition(function Trig_HellscreamBloodCurse_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamBloodCurse, function Trig_HellscreamBloodCurse_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamBattleMadness
-//===========================================================================
-function Trig_HellscreamBattleMadness_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0BR' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamBattleMadness_Actions takes nothing returns nothing
-    call SetUnitLifePercentBJ(GetSpellAbilityUnit(), ( GetUnitLifePercent(GetSpellAbilityUnit()) - 10.00 ))
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamBattleMadness takes nothing returns nothing
-    set gg_trg_HellscreamBattleMadness=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamBattleMadness)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamBattleMadness, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamBattleMadness, Condition(function Trig_HellscreamBattleMadness_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamBattleMadness, function Trig_HellscreamBattleMadness_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: HellscreamRage
 //===========================================================================
 function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
@@ -8638,6 +7651,9 @@ function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01I' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetAttacker()) == 'n00P' ) ) then
+        return true
+    endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'n00S' ) ) then
         return true
     endif
@@ -8648,27 +7664,6 @@ function Trig_HellscreamRage_Func002Func002C takes nothing returns boolean
         return true
     endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01E' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02T' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02U' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02V' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'n00Y' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02W' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02X' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02T' ) ) then
         return true
     endif
     return false
@@ -8691,15 +7686,22 @@ function Trig_HellscreamRage_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_HellscreamRage_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R03E', GetOwningPlayer(GetAttacker())) < 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_HellscreamRage_Func001Func001C takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R03E', GetOwningPlayer(GetAttacker())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple('R03E', GetOwningPlayer(GetAttacker())) < 2 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_HellscreamRage_Func001C takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R03E', GetOwningPlayer(GetAttacker())) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple('R03E', GetOwningPlayer(GetAttacker())) < 1 ) ) then
         return false
     endif
     return true
@@ -8707,12 +7709,16 @@ endfunction
 
 function Trig_HellscreamRage_Actions takes nothing returns nothing
     if ( Trig_HellscreamRage_Func001C() ) then
-        call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(4.00, 7.00) ))
+        call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(1.00, 3.00) ))
     else
         if ( Trig_HellscreamRage_Func001Func001C() ) then
-            call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(5.00, 8.00) ))
-        else
             call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(3.00, 6.00) ))
+        else
+            if ( Trig_HellscreamRage_Func001Func001Func001C() ) then
+                call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(4.00, 7.00) ))
+            else
+                call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(5.00, 8.00) ))
+            endif
         endif
     endif
 endfunction
@@ -8729,7 +7735,7 @@ endfunction
 //===========================================================================
 // Trigger: HellscreamBladeBlade
 //===========================================================================
-function Trig_HellscreamBladeBlade_Func002Func003C takes nothing returns boolean
+function Trig_HellscreamBladeBlade_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetAttacker()) == 'O013' ) ) then
         return true
     endif
@@ -8737,6 +7743,9 @@ function Trig_HellscreamBladeBlade_Func002Func003C takes nothing returns boolean
         return true
     endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'o01H' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetAttacker()) == 'n00P' ) ) then
         return true
     endif
     if ( ( GetUnitTypeId(GetAttacker()) == 'n00S' ) ) then
@@ -8749,13 +7758,10 @@ function Trig_HellscreamBladeBlade_Func002Func003C takes nothing returns boolean
 endfunction
 
 function Trig_HellscreamBladeBlade_Func002C takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R03P', GetOwningPlayer(GetAttacker())) == 1 ) ) then
-        return false
-    endif
     if ( not ( IsPlayerEnemy(GetOwningPlayer(GetAttackedUnitBJ()), GetOwningPlayer(GetAttacker())) == true ) ) then
         return false
     endif
-    if ( not Trig_HellscreamBladeBlade_Func002Func003C() ) then
+    if ( not Trig_HellscreamBladeBlade_Func002Func002C() ) then
         return false
     endif
     return true
@@ -8768,8 +7774,18 @@ function Trig_HellscreamBladeBlade_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_HellscreamBladeBlade_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R03P', GetOwningPlayer(GetAttacker())) < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_HellscreamBladeBlade_Actions takes nothing returns nothing
-    call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(1.00, 3.00) ))
+    if ( Trig_HellscreamBladeBlade_Func001C() ) then
+        call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttacker()) + GetRandomReal(1.00, 3.00) ))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -8784,69 +7800,48 @@ endfunction
 //===========================================================================
 // Trigger: HellscreamFuelFury
 //===========================================================================
-function Trig_HellscreamFuelFury_Func002Func003C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetAttacker()) == 'O013' ) ) then
+function Trig_HellscreamFuelFury_Func002Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'O013' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o011' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o011' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01H' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01H' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01F' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01F' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01G' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01G' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01I' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01I' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'n00S' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'n00P' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'n00R' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'n00S' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01M' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'n00R' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'o01E' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01M' ) ) then
         return true
     endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02T' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02U' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02V' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'n00Y' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02W' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02X' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetAttacker()) == 'h02T' ) ) then
+    if ( ( GetUnitTypeId(GetAttackedUnitBJ()) == 'o01E' ) ) then
         return true
     endif
     return false
 endfunction
 
 function Trig_HellscreamFuelFury_Func002C takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R03N', GetOwningPlayer(GetAttackedUnitBJ())) == 1 ) ) then
-        return false
-    endif
     if ( not ( IsPlayerEnemy(GetOwningPlayer(GetAttackedUnitBJ()), GetOwningPlayer(GetAttacker())) == true ) ) then
         return false
     endif
-    if ( not Trig_HellscreamFuelFury_Func002Func003C() ) then
+    if ( not Trig_HellscreamFuelFury_Func002Func002C() ) then
         return false
     endif
     return true
@@ -8859,8 +7854,18 @@ function Trig_HellscreamFuelFury_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_HellscreamFuelFury_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R03N', GetOwningPlayer(GetAttackedUnitBJ())) < 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_HellscreamFuelFury_Actions takes nothing returns nothing
-    call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttackedUnitBJ()) + 1.00 ))
+    if ( Trig_HellscreamFuelFury_Func001C() ) then
+        call SetUnitManaBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetAttackedUnitBJ()) + 1.00 ))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -8870,233 +7875,6 @@ function InitTrig_HellscreamFuelFury takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFuelFury, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_HellscreamFuelFury, Condition(function Trig_HellscreamFuelFury_Conditions))
     call TriggerAddAction(gg_trg_HellscreamFuelFury, function Trig_HellscreamFuelFury_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamFistWoodburner
-//===========================================================================
-function Trig_HellscreamFistWoodburner_Func001Func001C takes nothing returns boolean
-    if ( not ( GetPlayerState(GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_LUMBER) >= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamFistWoodburner_Func001A takes nothing returns nothing
-    if ( Trig_HellscreamFistWoodburner_Func001Func001C() ) then
-        call AdjustPlayerStateBJ(- 1, GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_LUMBER)
-    else
-        call IssueImmediateOrderBJ(GetEnumUnit(), "unrobogoblin")
-    endif
-endfunction
-
-function Trig_HellscreamFistWoodburner_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsOfTypeIdAll('h02V'), function Trig_HellscreamFistWoodburner_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamFistWoodburner takes nothing returns nothing
-    set gg_trg_HellscreamFistWoodburner=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamFistWoodburner)
-    call TriggerRegisterTimerEventPeriodic(gg_trg_HellscreamFistWoodburner, 1.00)
-    call TriggerAddAction(gg_trg_HellscreamFistWoodburner, function Trig_HellscreamFistWoodburner_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamFistFuryFire
-//===========================================================================
-function Trig_HellscreamFistFuryFire_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0BL' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamFistFuryFire_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc(1, 'u004', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
-    call UnitAddAbilityBJ('A0BM', GetLastCreatedUnit())
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "thunderbolt", GetSpellAbilityUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamFistFuryFire takes nothing returns nothing
-    set gg_trg_HellscreamFistFuryFire=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamFistFuryFire)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamFistFuryFire, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamFistFuryFire, Condition(function Trig_HellscreamFistFuryFire_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamFistFuryFire, function Trig_HellscreamFistFuryFire_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamWorgBreeding
-//===========================================================================
-function Trig_HellscreamWorgBreeding_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0BD' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamWorgBreeding_Actions takes nothing returns nothing
-    call CreateNUnitsAtLoc(1, 'n00W', Player(PLAYER_NEUTRAL_PASSIVE), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
-    call UnitApplyTimedLifeBJ(120.00, 'BTLF', GetLastCreatedUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamWorgBreeding takes nothing returns nothing
-    set gg_trg_HellscreamWorgBreeding=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamWorgBreeding)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamWorgBreeding, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamWorgBreeding, Condition(function Trig_HellscreamWorgBreeding_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamWorgBreeding, function Trig_HellscreamWorgBreeding_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamSuicide
-//===========================================================================
-function Trig_HellscreamSuicide_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0B9' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamSuicide_Func001Func001C takes nothing returns boolean
-    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetEnumUnit()), GetOwningPlayer(GetSpellAbilityUnit())) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamSuicide_Func001A takes nothing returns nothing
-    if ( Trig_HellscreamSuicide_Func001Func001C() ) then
-        call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - ( GetUnitStateSwap(UNIT_STATE_MANA, GetSpellAbilityUnit()) * 2.00 ) ))
-    else
-    endif
-endfunction
-
-function Trig_HellscreamSuicide_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsInRangeOfLocAll(250.00, GetUnitLoc(GetSpellAbilityUnit())), function Trig_HellscreamSuicide_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamSuicide takes nothing returns nothing
-    set gg_trg_HellscreamSuicide=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamSuicide)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamSuicide, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamSuicide, Condition(function Trig_HellscreamSuicide_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamSuicide, function Trig_HellscreamSuicide_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamMine
-//===========================================================================
-function Trig_HellscreamMine_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R03X' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamMine_Func002A takes nothing returns nothing
-    call UnitAddAbilityBJ('A0BW', GetEnumUnit())
-    call UnitAddItemByIdSwapped('I01G', GetEnumUnit())
-endfunction
-
-function Trig_HellscreamMine_Actions takes nothing returns nothing
-    call ForGroupBJ(GetUnitsOfTypeIdAll('h02T'), function Trig_HellscreamMine_Func002A)
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamMine takes nothing returns nothing
-    set gg_trg_HellscreamMine=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamMine)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamMine, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_HellscreamMine, Condition(function Trig_HellscreamMine_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamMine, function Trig_HellscreamMine_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamMineCycle
-//===========================================================================
-function Trig_HellscreamMineCycle_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTrainedUnit()) == 'h02T' ) ) then
-        return false
-    endif
-    if ( not ( GetPlayerTechCountSimple('R03X', GetOwningPlayer(GetTrainedUnit())) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamMineCycle_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0BW', GetTrainedUnit())
-    call UnitAddItemByIdSwapped('I01G', GetTrainedUnit())
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamMineCycle takes nothing returns nothing
-    set gg_trg_HellscreamMineCycle=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamMineCycle)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamMineCycle, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerAddCondition(gg_trg_HellscreamMineCycle, Condition(function Trig_HellscreamMineCycle_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamMineCycle, function Trig_HellscreamMineCycle_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamMineDel
-//===========================================================================
-function Trig_HellscreamMineDel_Conditions takes nothing returns boolean
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I01G' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamMineDel_Func001C takes nothing returns boolean
-    if ( not ( GetItemCharges(GetManipulatedItem()) < 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamMineDel_Actions takes nothing returns nothing
-    if ( Trig_HellscreamMineDel_Func001C() ) then
-        call UnitRemoveAbilityBJ('A0BW', GetTriggerUnit())
-    else
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamMineDel takes nothing returns nothing
-    set gg_trg_HellscreamMineDel=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamMineDel)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamMineDel, EVENT_PLAYER_UNIT_USE_ITEM)
-    call TriggerAddCondition(gg_trg_HellscreamMineDel, Condition(function Trig_HellscreamMineDel_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamMineDel, function Trig_HellscreamMineDel_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamMineDelete
-//===========================================================================
-function Trig_HellscreamMineDelete_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h02T' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_HellscreamMineDelete_Actions takes nothing returns nothing
-    call RemoveItem(UnitItemInSlotBJ(GetDyingUnit(), 1))
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamMineDelete takes nothing returns nothing
-    set gg_trg_HellscreamMineDelete=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamMineDelete)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamMineDelete, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_HellscreamMineDelete, Condition(function Trig_HellscreamMineDelete_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamMineDelete, function Trig_HellscreamMineDelete_Actions)
 endfunction
 
 //===========================================================================
@@ -9253,124 +8031,141 @@ function InitTrig_HellscreamChopMeat takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: HellscreamPigFarmRallyPoint
+// Trigger: HellscreamArenaChoose
 //===========================================================================
-function Trig_HellscreamPigFarmRallyPoint_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetSoldUnit()) == 'o01E' ) ) then
+function Trig_HellscreamArenaChoose_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0AF' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamPigFarmRallyPoint_Actions takes nothing returns nothing
-    call IssueTargetOrderBJ(GetSoldUnit(), "move", GetUnitRallyUnit(GetSellingUnit()))
-    call IssuePointOrderLocBJ(GetSoldUnit(), "move", GetUnitRallyPoint(GetSellingUnit()))
-    call IssueTargetDestructableOrder(GetSoldUnit(), "smart", GetUnitRallyDestructable(GetSellingUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamPigFarmRallyPoint takes nothing returns nothing
-    set gg_trg_HellscreamPigFarmRallyPoint=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamPigFarmRallyPoint)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamPigFarmRallyPoint, EVENT_PLAYER_UNIT_SELL)
-    call TriggerAddCondition(gg_trg_HellscreamPigFarmRallyPoint, Condition(function Trig_HellscreamPigFarmRallyPoint_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamPigFarmRallyPoint, function Trig_HellscreamPigFarmRallyPoint_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamPigFarmBuild
-//===========================================================================
-function Trig_HellscreamPigFarmBuild_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'o017' ) ) then
+function Trig_HellscreamArenaChoose_Func001C takes nothing returns boolean
+    if ( not ( IsUnitAliveBJ(udg_HellscreamArenaChoose1) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamPigFarmBuild_Actions takes nothing returns nothing
-    set bj_forLoopAIndex=0
-    set bj_forLoopAIndexEnd=1
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call CreateNUnitsAtLoc(1, 'o01E', GetOwningPlayer(GetConstructedStructure()), GetUnitLoc(GetConstructedStructure()), bj_UNIT_FACING)
-        call IssueTargetOrderBJ(GetLastCreatedUnit(), "move", GetUnitRallyUnit(GetConstructedStructure()))
-        call IssuePointOrderLocBJ(GetLastCreatedUnit(), "move", GetUnitRallyPoint(GetConstructedStructure()))
-        call IssueTargetDestructableOrder(GetLastCreatedUnit(), "smart", GetUnitRallyDestructable(GetConstructedStructure()))
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
-endfunction
-
-//===========================================================================
-function InitTrig_HellscreamPigFarmBuild takes nothing returns nothing
-    set gg_trg_HellscreamPigFarmBuild=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamPigFarmBuild)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamPigFarmBuild, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddCondition(gg_trg_HellscreamPigFarmBuild, Condition(function Trig_HellscreamPigFarmBuild_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamPigFarmBuild, function Trig_HellscreamPigFarmBuild_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: HellscreamTraining
-//===========================================================================
-function Trig_HellscreamTraining_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A0AF' or GetSpellAbilityId() == 'A0B7'
-endfunction
-
-function Trig_HellscreamTraining_Actions takes nothing returns nothing
-    local player p= GetOwningPlayer(GetSpellAbilityUnit())
-    local unit u= GetTriggerUnit()
-    if GetSpellAbilityId() == 'A0AF' then
-        call SetPlayerTechResearchedSwap('R03H', GetPlayerTechCountSimple('R03H', p) + 1, p)
+function Trig_HellscreamArenaChoose_Actions takes nothing returns nothing
+    if ( Trig_HellscreamArenaChoose_Func001C() ) then
+        set udg_HellscreamArenaChoose2=GetSpellTargetUnit()
+        call ShowUnitHide(udg_HellscreamArenaChoose2)
+        call SetPlayerTechMaxAllowedSwap('o01L', 1, GetOwningPlayer(GetSpellAbilityUnit()))
+        call IssueTrainOrderByIdBJ(GetSpellAbilityUnit(), 'o01L')
     else
-        call SetPlayerTechResearchedSwap('R03I', GetPlayerTechCountSimple('R03I', p) + 1, p)
+        set udg_HellscreamArenaChoose1=GetSpellTargetUnit()
+        call ShowUnitHide(udg_HellscreamArenaChoose1)
     endif
-    call SetPlayerTechResearchedSwap('R03S', GetPlayerTechCountSimple('R03S', p) + 1, p)
-    call AddSpecialEffectLocBJ(GetUnitLoc(u), "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl")
-    call UnitRemoveAbilityBJ('A0AF', u)
-    call UnitRemoveAbilityBJ('A0B7', u)
-    set u=null
 endfunction
 
-function InitTrig_HellscreamTraining takes nothing returns nothing
-    set gg_trg_HellscreamTraining=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamTraining)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamTraining, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_HellscreamTraining, Condition(function Trig_HellscreamTraining_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamTraining, function Trig_HellscreamTraining_Actions)
+//===========================================================================
+function InitTrig_HellscreamArenaChoose takes nothing returns nothing
+    set gg_trg_HellscreamArenaChoose=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamArenaChoose)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaChoose, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_HellscreamArenaChoose, Condition(function Trig_HellscreamArenaChoose_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamArenaChoose, function Trig_HellscreamArenaChoose_Actions)
 endfunction
+
 //===========================================================================
-// Trigger: HellscreamTrainingDebug
+// Trigger: HellscreamArenaCancel
 //===========================================================================
-function Trig_HellscreamTrainingDebug_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'o01K' ) ) then
+function Trig_HellscreamArenaCancel_Conditions takes nothing returns boolean
+    return GetTrainedUnitType() == 'o01L'
+endfunction
+
+function Trig_HellscreamArenaCancel_Actions takes nothing returns nothing
+    call ShowUnitShow(udg_HellscreamArenaChoose1)
+    call ShowUnitShow(udg_HellscreamArenaChoose2)
+    set udg_HellscreamArenaChoose1=null
+    set udg_HellscreamArenaChoose2=null
+    call SetPlayerTechMaxAllowedSwap('o01L', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+function InitTrig_HellscreamArenaCancel takes nothing returns nothing
+    set gg_trg_HellscreamArenaCancel=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaCancel, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
+    call TriggerAddCondition(gg_trg_HellscreamArenaCancel, Condition(function Trig_HellscreamArenaCancel_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamArenaCancel, function Trig_HellscreamArenaCancel_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: HellscreamArenaFinish
+//===========================================================================
+function Trig_HellscreamArenaFinish_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTrainedUnit()) == 'o01L' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamTrainingDebug_Func002C takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R03S', GetOwningPlayer(GetConstructedStructure())) >= 4 ) ) then
+function Trig_HellscreamArenaFinish_Func001C takes nothing returns boolean
+    if ( not ( GetRandomReal(0, 100.00) >= 50.00 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_HellscreamTrainingDebug_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0B8', GetConstructedStructure())
-    if ( Trig_HellscreamTrainingDebug_Func002C() ) then
-        call UnitRemoveAbilityBJ('A0AF', GetConstructedStructure())
-        call UnitRemoveAbilityBJ('A0B7', GetConstructedStructure())
+function Trig_HellscreamArenaFinish_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamArenaFinish_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamArenaFinish_Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1) == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_HellscreamArenaFinish_Actions takes nothing returns nothing
+    if ( Trig_HellscreamArenaFinish_Func001C() ) then
+        call ShowUnitShow(udg_HellscreamArenaChoose1)
+        call RemoveUnit(udg_HellscreamArenaChoose2)
+        call SetUnitPositionLoc(udg_HellscreamArenaChoose1, GetUnitLoc(GetTrainedUnit()))
     else
+        call ShowUnitShow(udg_HellscreamArenaChoose2)
+        call RemoveUnit(udg_HellscreamArenaChoose1)
+        call SetUnitPositionLoc(udg_HellscreamArenaChoose2, GetUnitLoc(GetTrainedUnit()))
+        set udg_HellscreamArenaChoose1=udg_HellscreamArenaChoose2
     endif
+    if ( Trig_HellscreamArenaFinish_Func002C() ) then
+        call UnitAddAbilityBJ('A0B9', udg_HellscreamArenaChoose1)
+    else
+        if ( Trig_HellscreamArenaFinish_Func002Func001C() ) then
+            call SetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1, 2)
+            call UnitAddAbilityBJ('A0B8', udg_HellscreamArenaChoose1)
+        else
+            if ( Trig_HellscreamArenaFinish_Func002Func001Func001C() ) then
+                call SetUnitAbilityLevelSwapped('A0B9', udg_HellscreamArenaChoose1, 3)
+                call UnitAddAbilityBJ('A0B7', udg_HellscreamArenaChoose1)
+            else
+            endif
+        endif
+    endif
+    call RemoveUnit(GetTrainedUnit())
+    set udg_HellscreamArenaChoose1=null
+    set udg_HellscreamArenaChoose2=null
+    call SetPlayerTechMaxAllowedSwap('o01L', 0, GetOwningPlayer(GetTrainedUnit()))
 endfunction
 
 //===========================================================================
-function InitTrig_HellscreamTrainingDebug takes nothing returns nothing
-    set gg_trg_HellscreamTrainingDebug=CreateTrigger()
-    call DisableTrigger(gg_trg_HellscreamTrainingDebug)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamTrainingDebug, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddCondition(gg_trg_HellscreamTrainingDebug, Condition(function Trig_HellscreamTrainingDebug_Conditions))
-    call TriggerAddAction(gg_trg_HellscreamTrainingDebug, function Trig_HellscreamTrainingDebug_Actions)
+function InitTrig_HellscreamArenaFinish takes nothing returns nothing
+    set gg_trg_HellscreamArenaFinish=CreateTrigger()
+    call DisableTrigger(gg_trg_HellscreamArenaFinish)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_HellscreamArenaFinish, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_HellscreamArenaFinish, Condition(function Trig_HellscreamArenaFinish_Conditions))
+    call TriggerAddAction(gg_trg_HellscreamArenaFinish, function Trig_HellscreamArenaFinish_Actions)
 endfunction
 
 //===========================================================================
@@ -10581,8 +9376,6 @@ endfunction
 
 //===========================================================================
 // Trigger: WarsongInitialization
-//
-// warsong
 //===========================================================================
 function Trig_WarsongInitialization_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_WarsongFlagZone)
@@ -10602,8 +9395,6 @@ endfunction
 
 //===========================================================================
 // Trigger: WarsongAddAi
-//
-// warsong
 //===========================================================================
 function Trig_WarsongAddAi_Conditions takes nothing returns boolean
     if ( not ( udg_Map == "warsong" ) ) then
@@ -10652,8 +9443,6 @@ endfunction
 
 //===========================================================================
 // Trigger: WarsongFlagZone
-//
-// warsong
 //===========================================================================
 function Trig_WarsongFlagZone_Actions takes nothing returns nothing
     set udg_WarsongZoneOrc=Rect(- 225.00, - 6241.00, 177.00, - 6521.00)
@@ -10671,8 +9460,6 @@ endfunction
 
 //===========================================================================
 // Trigger: WarsongFlagPlus
-//
-// warsong
 //===========================================================================
 function Trig_WarsongFlagPlus_Func007C takes nothing returns boolean
     if ( ( GetItemTypeId(GetManipulatedItem()) == 'I01B' ) ) then
@@ -10813,8 +9600,6 @@ endfunction
 
 //===========================================================================
 // Trigger: WarsongFlagReturn
-//
-// warsong
 //===========================================================================
 function Trig_WarsongFlagReturn_Func003C takes nothing returns boolean
     if ( ( GetItemTypeId(GetManipulatedItem()) == 'I01A' ) ) then
@@ -14451,14 +13236,12 @@ function AddLootForUnitType takes integer unitType,integer level returns nothing
     endloop
 
     call DestroyGroup(g)
-    set u=null
-    set g=null
 endfunction
 
 function Trig_ChestLoot_Actions takes nothing returns nothing
     call AddLootForUnitType('n00N' , 6)
-    call AddLootForUnitType('n00O' , 7)
-    call AddLootForUnitType('n00L' , 8)
+    call AddLootForUnitType('n00L' , 7)
+    call AddLootForUnitType('n00O' , 8)
 endfunction
 
 function InitTrig_ChestLoot takes nothing returns nothing
@@ -14515,8 +13298,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasSacrifice()
     call InitTrig_UtherIni()
     call InitTrig_UtherSealOfWisdom()
-    call InitTrig_UtherHourJudgmentOn()
-    call InitTrig_UtherHourJudgmentOff()
     call InitTrig_UtherDivineShield()
     call InitTrig_UtherChampions()
     call InitTrig_UtherChampionsDead()
@@ -14524,8 +13305,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_UtherHolyDead()
     call InitTrig_UtherChurchDonations()
     call InitTrig_UtherLightTower()
-    call InitTrig_UtherSpearmanPiercingStrike()
-    call InitTrig_UtherSpearmanPiercingStrikeAuto()
     call InitTrig_WrynnIni()
     call InitTrig_WrynnTaunt()
     call InitTrig_WrynnExp()
@@ -14578,29 +13357,17 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneFastBuild()
     call InitTrig_KelthuzadIni()
     call InitTrig_HellscreamIni()
-    call InitTrig_HellscreamEnraged()
     call InitTrig_HellscreamExecute()
-    call InitTrig_HellscreamBloodCurse()
-    call InitTrig_HellscreamBattleMadness()
     call InitTrig_HellscreamRage()
     call InitTrig_HellscreamBladeBlade()
     call InitTrig_HellscreamFuelFury()
-    call InitTrig_HellscreamFistWoodburner()
-    call InitTrig_HellscreamFistFuryFire()
-    call InitTrig_HellscreamWorgBreeding()
-    call InitTrig_HellscreamSuicide()
-    call InitTrig_HellscreamMine()
-    call InitTrig_HellscreamMineCycle()
-    call InitTrig_HellscreamMineDel()
-    call InitTrig_HellscreamMineDelete()
     call InitTrig_HellscreamRaiderDead()
     call InitTrig_HellscreamTaming()
     call InitTrig_HellscreamSavageFeast()
     call InitTrig_HellscreamChopMeat()
-    call InitTrig_HellscreamPigFarmRallyPoint()
-    call InitTrig_HellscreamPigFarmBuild()
-    call InitTrig_HellscreamTraining()
-    call InitTrig_HellscreamTrainingDebug()
+    call InitTrig_HellscreamArenaChoose()
+    call InitTrig_HellscreamArenaCancel()
+    call InitTrig_HellscreamArenaFinish()
     call InitTrig_MythicAddRandom()
     call InitTrig_Mythic1Boots()
     call InitTrig_Mythic2Vampiric()
@@ -14749,101 +13516,65 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(2), 2)
     call ForcePlayerStartLocation(Player(2), 2)
     call SetPlayerColor(Player(2), ConvertPlayerColor(2))
-    call SetPlayerRacePreference(Player(2), RACE_PREF_HUMAN)
-    call SetPlayerRaceSelectable(Player(2), false)
-    call SetPlayerController(Player(2), MAP_CONTROL_COMPUTER)
+    call SetPlayerRacePreference(Player(2), RACE_PREF_RANDOM)
+    call SetPlayerRaceSelectable(Player(2), true)
+    call SetPlayerController(Player(2), MAP_CONTROL_USER)
 
-    // Player 4
-    call SetPlayerStartLocation(Player(4), 3)
-    call ForcePlayerStartLocation(Player(4), 3)
-    call SetPlayerColor(Player(4), ConvertPlayerColor(4))
-    call SetPlayerRacePreference(Player(4), RACE_PREF_HUMAN)
-    call SetPlayerRaceSelectable(Player(4), false)
-    call SetPlayerController(Player(4), MAP_CONTROL_COMPUTER)
-
-    // Player 5
-    call SetPlayerStartLocation(Player(5), 4)
-    call ForcePlayerStartLocation(Player(5), 4)
-    call SetPlayerColor(Player(5), ConvertPlayerColor(5))
-    call SetPlayerRacePreference(Player(5), RACE_PREF_HUMAN)
-    call SetPlayerRaceSelectable(Player(5), false)
-    call SetPlayerController(Player(5), MAP_CONTROL_COMPUTER)
+    // Player 3
+    call SetPlayerStartLocation(Player(3), 3)
+    call ForcePlayerStartLocation(Player(3), 3)
+    call SetPlayerColor(Player(3), ConvertPlayerColor(3))
+    call SetPlayerRacePreference(Player(3), RACE_PREF_RANDOM)
+    call SetPlayerRaceSelectable(Player(3), true)
+    call SetPlayerController(Player(3), MAP_CONTROL_USER)
 
 endfunction
 
 function InitCustomTeams takes nothing returns nothing
-    // Force: TRIGSTR_6732
+    // Force: TRIGSTR_6204
     call SetPlayerTeam(Player(0), 0)
     call SetPlayerState(Player(0), PLAYER_STATE_ALLIED_VICTORY, 1)
     call SetPlayerTeam(Player(1), 0)
     call SetPlayerState(Player(1), PLAYER_STATE_ALLIED_VICTORY, 1)
-    call SetPlayerTeam(Player(2), 0)
-    call SetPlayerState(Player(2), PLAYER_STATE_ALLIED_VICTORY, 1)
 
     //   Allied
     call SetPlayerAllianceStateAllyBJ(Player(0), Player(1), true)
-    call SetPlayerAllianceStateAllyBJ(Player(0), Player(2), true)
     call SetPlayerAllianceStateAllyBJ(Player(1), Player(0), true)
-    call SetPlayerAllianceStateAllyBJ(Player(1), Player(2), true)
-    call SetPlayerAllianceStateAllyBJ(Player(2), Player(0), true)
-    call SetPlayerAllianceStateAllyBJ(Player(2), Player(1), true)
 
     //   Shared Vision
     call SetPlayerAllianceStateVisionBJ(Player(0), Player(1), true)
-    call SetPlayerAllianceStateVisionBJ(Player(0), Player(2), true)
     call SetPlayerAllianceStateVisionBJ(Player(1), Player(0), true)
-    call SetPlayerAllianceStateVisionBJ(Player(1), Player(2), true)
-    call SetPlayerAllianceStateVisionBJ(Player(2), Player(0), true)
-    call SetPlayerAllianceStateVisionBJ(Player(2), Player(1), true)
 
-    // Force: TRIGSTR_6733
-    call SetPlayerTeam(Player(4), 1)
-    call SetPlayerState(Player(4), PLAYER_STATE_ALLIED_VICTORY, 1)
-    call SetPlayerTeam(Player(5), 1)
-    call SetPlayerState(Player(5), PLAYER_STATE_ALLIED_VICTORY, 1)
+    // Force: TRIGSTR_6205
+    call SetPlayerTeam(Player(2), 1)
+    call SetPlayerState(Player(2), PLAYER_STATE_ALLIED_VICTORY, 1)
+    call SetPlayerTeam(Player(3), 1)
+    call SetPlayerState(Player(3), PLAYER_STATE_ALLIED_VICTORY, 1)
 
     //   Allied
-    call SetPlayerAllianceStateAllyBJ(Player(4), Player(5), true)
-    call SetPlayerAllianceStateAllyBJ(Player(5), Player(4), true)
+    call SetPlayerAllianceStateAllyBJ(Player(2), Player(3), true)
+    call SetPlayerAllianceStateAllyBJ(Player(3), Player(2), true)
 
     //   Shared Vision
-    call SetPlayerAllianceStateVisionBJ(Player(4), Player(5), true)
-    call SetPlayerAllianceStateVisionBJ(Player(5), Player(4), true)
+    call SetPlayerAllianceStateVisionBJ(Player(2), Player(3), true)
+    call SetPlayerAllianceStateVisionBJ(Player(3), Player(2), true)
 
 endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
-    call SetStartLocPrioCount(0, 1)
+    call SetStartLocPrioCount(0, 2)
     call SetStartLocPrio(0, 0, 1, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(0, 1, 2, MAP_LOC_PRIO_LOW)
 
     call SetStartLocPrioCount(1, 1)
     call SetStartLocPrio(1, 0, 0, MAP_LOC_PRIO_HIGH)
 
-    call SetStartLocPrioCount(2, 4)
-    call SetStartLocPrio(2, 0, 0, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(2, 1, 3, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(2, 2, 4, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(2, 1)
+    call SetStartLocPrio(2, 0, 3, MAP_LOC_PRIO_HIGH)
 
-    call SetEnemyStartLocPrioCount(2, 1)
-    call SetEnemyStartLocPrio(2, 0, 4, MAP_LOC_PRIO_HIGH)
-
-    call SetStartLocPrioCount(3, 5)
-    call SetStartLocPrio(3, 0, 0, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(3, 1, 1, MAP_LOC_PRIO_LOW)
-    call SetStartLocPrio(3, 2, 2, MAP_LOC_PRIO_LOW)
-    call SetStartLocPrio(3, 3, 4, MAP_LOC_PRIO_LOW)
-
-    call SetEnemyStartLocPrioCount(3, 3)
-    call SetEnemyStartLocPrio(3, 0, 0, MAP_LOC_PRIO_HIGH)
-    call SetEnemyStartLocPrio(3, 1, 2, MAP_LOC_PRIO_HIGH)
-    call SetEnemyStartLocPrio(3, 2, 4, MAP_LOC_PRIO_LOW)
-
-    call SetStartLocPrioCount(4, 1)
-    call SetStartLocPrio(4, 0, 3, MAP_LOC_PRIO_LOW)
-
-    call SetEnemyStartLocPrioCount(4, 1)
-    call SetEnemyStartLocPrio(4, 0, 3, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(3, 1)
+    call SetStartLocPrio(3, 0, 2, MAP_LOC_PRIO_HIGH)
 endfunction
 
 //***************************************************************************
@@ -14854,23 +13585,23 @@ endfunction
 
 //===========================================================================
 function main takes nothing returns nothing
-    call SetCameraBounds(- 10240.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 10240.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 10240.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 10240.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 10240.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 10240.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 9728.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
-    call SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
+    call SetCameraBounds(- 6144.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 8192.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 6144.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 8192.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 6144.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 8192.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 6144.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 8192.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
+    call SetDayNightModels("Environment\\DNC\\DNCAshenvale\\DNCAshenvaleTerrain\\DNCAshenvaleTerrain.mdl", "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleUnit\\DNCAshenvaleUnit.mdl")
     call NewSoundEnvironment("Default")
-    call SetAmbientDaySound("LordaeronWinterDay")
-    call SetAmbientNightSound("LordaeronWinterNight")
+    call SetAmbientDaySound("AshenvaleDay")
+    call SetAmbientNightSound("AshenvaleNight")
     call SetMapMusic("Music", true, 0)
-    call CreateCameras()
+    call CreateAllItems()
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("ARTHASUI___init")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER___init")
-call ExecuteFunc("RaceUnits___InitRaceUnits")
-call ExecuteFunc("THRALLUI___init")
-call ExecuteFunc("WHITEMANEUI___init")
-call ExecuteFunc("CustomConsoleUI___init_function")
+call ExecuteFunc("ARTHASUI__init")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("REFORGEDUIMAKER__init")
+call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("THRALLUI__init")
+call ExecuteFunc("WHITEMANEUI__init")
+call ExecuteFunc("CustomConsoleUI__init_function")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -14885,17 +13616,16 @@ endfunction
 //***************************************************************************
 
 function config takes nothing returns nothing
-    call SetMapName("TRIGSTR_001")
-    call SetMapDescription("TRIGSTR_003")
-    call SetPlayers(5)
-    call SetTeams(5)
+    call SetMapName("TRIGSTR_6351")
+    call SetMapDescription("TRIGSTR_6353")
+    call SetPlayers(4)
+    call SetTeams(4)
     call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
-    call DefineStartLocation(0, 704.0, 448.0)
-    call DefineStartLocation(1, - 1728.0, 384.0)
-    call DefineStartLocation(2, - 512.0, - 1216.0)
-    call DefineStartLocation(3, - 5824.0, - 8704.0)
-    call DefineStartLocation(4, - 7680.0, - 6208.0)
+    call DefineStartLocation(0, - 4096.0, - 6336.0)
+    call DefineStartLocation(1, 4288.0, - 6272.0)
+    call DefineStartLocation(2, - 4032.0, 6080.0)
+    call DefineStartLocation(3, 3968.0, 6400.0)
 
     // Player setup
     call InitCustomPlayerSlots()
