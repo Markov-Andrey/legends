@@ -133,7 +133,6 @@ integer udg_WarsongCountOrc= 0
 player udg_PlayerUther= null
 
     // Generated
-camerasetup gg_cam_StartView= null
 trigger gg_trg_IniLimitUnitsF1= null
 trigger gg_trg_IniStartResouces= null
 trigger gg_trg_IniSelectUnit= null
@@ -373,6 +372,7 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_KelthuzadCultistBuild= null
 
     // Random Groups
 integer array gg_rg_000
@@ -463,7 +463,7 @@ endglobals
 //library FrameLoader ends
 //library REFORGEDUIMAKER:
 
-    function REFORGEDUIMAKER__CreateIcons takes nothing returns nothing
+    function REFORGEDUIMAKER___CreateIcons takes nothing returns nothing
         set Icon01=BlzCreateFrameByType("BACKDROP", "Icon01", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetSize(Icon01, 0.03, 0.03)
         call BlzFrameSetVisible(Icon01, false)
@@ -523,15 +523,15 @@ endglobals
         set currentIconIndex=currentIconIndex + 1
     endfunction
 
-    function REFORGEDUIMAKER__init takes nothing returns nothing
-        call REFORGEDUIMAKER__CreateIcons()
+    function REFORGEDUIMAKER___init takes nothing returns nothing
+        call REFORGEDUIMAKER___CreateIcons()
     endfunction
 
 
 //library REFORGEDUIMAKER ends
 //library RaceUnits:
 
-    function RaceUnits__InitRaceUnits takes nothing returns nothing
+    function RaceUnits___InitRaceUnits takes nothing returns nothing
         set Units_Human[1]='hpea' // Peasant
         set Units_Human[2]='hfoo' // Footman
         set Units_Human[3]='hrif' // Rifleman
@@ -1714,6 +1714,17 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+    local player p= Player(0)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'o01O', 832.0, 1344.0, 270.000, 'o01O')
+endfunction
+
+//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -2261,6 +2272,7 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
+    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -2275,33 +2287,9 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreateBuildingsForPlayer5() // INLINED!!
+    call CreatePlayerBuildings()
     call CreateNeutralHostile()
     call CreatePlayerUnits()
-endfunction
-
-//***************************************************************************
-//*
-//*  Cameras
-//*
-//***************************************************************************
-
-function CreateCameras takes nothing returns nothing
-
-    set gg_cam_StartView=CreateCameraSetup()
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROTATION, 61.4, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ANGLE_OF_ATTACK, 348.3, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_TARGET_DISTANCE, 1539.5, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_ROLL, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_FARZ, 8857.8, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_NEARZ, 16.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
-    call CameraSetupSetField(gg_cam_StartView, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
-    call CameraSetupSetDestPosition(gg_cam_StartView, 6518.3, - 3034.6, 0.0)
-
 endfunction
 
 //***************************************************************************
@@ -8447,6 +8435,56 @@ function InitTrig_KelthuzadIni takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KelthuzadCultistBuild
+//===========================================================================
+function Trig_KelthuzadCultistBuild_Actions takes nothing returns boolean
+      local unit building= GetConstructingStructure()
+      local group g= CreateGroup()
+      local unit u
+      local unit closest= null
+      local real bx= GetUnitX(building)
+      local real by= GetUnitY(building)
+      local real minDist= 99999.0
+      local real dx
+      local real dy
+      local effect e
+
+      call GroupEnumUnitsOfPlayer(g, GetTriggerPlayer(), null)
+      loop
+          set u=FirstOfGroup(g)
+          exitwhen u == null
+          call GroupRemoveUnit(g, u)
+          if GetUnitTypeId(u) == 'u00I' then
+              set dx=GetUnitX(u) - bx
+              set dy=GetUnitY(u) - by
+              if SquareRoot(dx * dx + dy * dy) < minDist then
+                  set minDist=SquareRoot(dx * dx + dy * dy)
+                  set closest=u
+              endif
+          endif
+      endloop
+
+      if closest != null then
+          set e=AddSpecialEffect("Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl", GetUnitX(closest), GetUnitY(closest))
+          call DestroyEffect(e)
+          call KillUnit(closest)
+          set e=null
+      endif
+
+      call DestroyGroup(g)
+      set building=null
+      set closest=null
+      set u=null
+      return false
+  endfunction
+
+  //===========================================================================
+  function InitTrig_KelthuzadCultistBuild takes nothing returns nothing
+      set gg_trg_KelthuzadCultistBuild=CreateTrigger()
+      call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistBuild, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+      call TriggerAddCondition(gg_trg_KelthuzadCultistBuild, Condition(function Trig_KelthuzadCultistBuild_Actions))
+  endfunction
+//===========================================================================
 // Trigger: HellscreamIni
 //===========================================================================
 function Trig_HellscreamIni_Actions takes nothing returns nothing
@@ -14577,6 +14615,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_WhitemaneFastBuild()
     call InitTrig_KelthuzadIni()
+    call InitTrig_KelthuzadCultistBuild()
     call InitTrig_HellscreamIni()
     call InitTrig_HellscreamEnraged()
     call InitTrig_HellscreamExecute()
@@ -14858,14 +14897,13 @@ function main takes nothing returns nothing
     call SetAmbientDaySound("LordaeronWinterDay")
     call SetAmbientNightSound("LordaeronWinterNight")
     call SetMapMusic("Music", true, 0)
-    call CreateCameras()
     call CreateAllUnits()
     call InitBlizzard()
 
 call ExecuteFunc("ARTHASUI___init")
 call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("REFORGEDUIMAKER__init")
-call ExecuteFunc("RaceUnits__InitRaceUnits")
+call ExecuteFunc("REFORGEDUIMAKER___init")
+call ExecuteFunc("RaceUnits___InitRaceUnits")
 call ExecuteFunc("THRALLUI___init")
 call ExecuteFunc("WHITEMANEUI___init")
 call ExecuteFunc("CustomConsoleUI___init_function")

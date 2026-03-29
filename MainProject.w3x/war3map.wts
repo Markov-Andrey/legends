@@ -18852,26 +18852,20 @@ STRING 6167
 [Silithus] Tree Wall
 }
 
-STRING 6168
-// Units: U00H ([Kelthuzad] Kel'Thuzad), Name (Name)
-{
-[Kelthuzad] Kel'Thuzad
-}
-
 STRING 6169
-// Units: U00H ([Kelthuzad] Kel'Thuzad), Tip (Tooltip - Basic)
+// Units: U00H ([Kelthuzad] Arch-Lich), Tip (Tooltip - Basic)
 {
 Summon Kel'Thuzad
 }
 
 STRING 6170
-// Units: U00H ([Kelthuzad] Kel'Thuzad), Awakentip (Tooltip - Awaken)
+// Units: U00H ([Kelthuzad] Arch-Lich), Awakentip (Tooltip - Awaken)
 {
 Revive Kel'Thuzad
 }
 
 STRING 6171
-// Units: U00H ([Kelthuzad] Kel'Thuzad), Revivetip (Tooltip - Revive)
+// Units: U00H ([Kelthuzad] Arch-Lich), Revivetip (Tooltip - Revive)
 {
 Revive Kel'Thuzad
 }
@@ -18967,15 +18961,9 @@ Summon Crypt of the Cult
 }
 
 STRING 6190
-// Units: u00M ([Kelthuzad] Bandit Warrior), Name (Name)
+// Units: h031 ([Kelthuzad] Bandit Warrior), Name (Name)
 {
 [Kelthuzad] Bandit Warrior
-}
-
-STRING 6191
-// Units: u00M ([Kelthuzad] Bandit Warrior), Tip (Tooltip - Basic)
-{
-Summon Bandit Warrior
 }
 
 STRING 6192
@@ -22029,5 +22017,95 @@ Syndicate Army
 STRING 6936
 {
 Syndicate Caravan
+}
+
+STRING 6937
+// Units: U00H ([Kelthuzad] Arch-Lich), Name (Name)
+{
+[Kelthuzad] Arch-Lich
+}
+
+STRING 6938
+// Units: e00O ([Kelthuzad] Bandit Archer), Name (Name)
+{
+[Kelthuzad] Bandit Archer
+}
+
+STRING 6939
+// Units: e00O ([Kelthuzad] Bandit Archer), Tip (Tooltip - Basic)
+{
+Train Bandit Archer
+}
+
+STRING 6940
+// Units: h031 ([Kelthuzad] Bandit Warrior), Tip (Tooltip - Basic)
+{
+Train Bandit Warrior
+}
+
+STRING 6941
+// Units: n00X ([Kelthuzad] Bandit Mage), Name (Name)
+{
+[Kelthuzad] Bandit Mage
+}
+
+STRING 6942
+// Units: n00X ([Kelthuzad] Bandit Mage), Tip (Tooltip - Basic)
+{
+Hire Bandit Mage
+}
+
+STRING 6943
+// Units: e00P ([Kelthuzad] Skeleton Archer), Name (Name)
+{
+[Kelthuzad] Skeleton Archer
+}
+
+STRING 6944
+// Units: e00P ([Kelthuzad] Skeleton Archer), Tip (Tooltip - Basic)
+{
+Train Skeleton Archer
+}
+
+STRING 6945
+// Units: n010 ([Kelthuzad] Skeleton Mage), Name (Name)
+{
+[Kelthuzad] Skeleton Mage
+}
+
+STRING 6946
+// Units: n010 ([Kelthuzad] Skeleton Mage), Tip (Tooltip - Basic)
+{
+Hire Bandit Mage
+}
+
+STRING 6947
+// Units: u007 ([Kelthuzad] Temple of the Damned), Name (Name)
+{
+[Kelthuzad] Temple of the Damned
+}
+
+STRING 6948
+// Units: u008 ([Kelthuzad] Ziggurat), Name (Name)
+{
+[Kelthuzad] Ziggurat
+}
+
+STRING 6949
+// Units: u00D ([Kelthuzad] Spirit Tower), Name (Name)
+{
+[Kelthuzad] Spirit Tower
+}
+
+STRING 6950
+// Units: u00M ([Kelthuzad] Nerubian Tower), Name (Name)
+{
+[Kelthuzad] Nerubian Tower
+}
+
+STRING 6951
+// Units: u00Q ([Kelthuzad] High Necromancer), Name (Name)
+{
+[Kelthuzad] High Necromancer
 }
 
