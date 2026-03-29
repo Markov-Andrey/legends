@@ -1,0 +1,402 @@
+{
+    "map": {
+        "name": "Alterac's Justice",
+        "author": "AMarkov",
+        "description": "Some description for Alterac",
+        "recommendedPlayers": "PvE 2vE",
+        "playableArea": {
+            "width": 160,
+            "height": 156
+        },
+        "mainTileType": "W",
+        "flags": {
+            "hideMinimapInPreview": true,
+            "modifyAllyPriorities": false,
+            "isMeleeMap": false,
+            "nonDefaultTilesetMapSizeLargeNeverBeenReducedToMedium": true,
+            "maskedPartiallyVisible": true,
+            "fixedPlayerSetting": true,
+            "useCustomForces": true,
+            "useCustomTechtree": false,
+            "useCustomAbilities": false,
+            "useCustomUpgrades": false,
+            "mapPropertiesMenuOpenedAtLeastOnce": true,
+            "waterWavesOnCliffShores": true,
+            "waterWavesOnRollingShores": true,
+            "useTerrainFog": false,
+            "tftRequired": true,
+            "useItemClassificationSystem": true,
+            "enableWaterTinting": false,
+            "useAccurateProbabilityForCalculations": false,
+            "useCustomAbilitySkins": false,
+            "disableDenyIcon": false,
+            "forceDefaultCameraZoom": false,
+            "forceMaxCameraZoom": false,
+            "forceMinCameraZoom": false
+        }
+    },
+    "loadingScreen": {
+        "background": -1,
+        "path": "LoadingScreen.mdx",
+        "text": "",
+        "title": "",
+        "subtitle": ""
+    },
+    "prologue": {
+        "path": "",
+        "text": "",
+        "title": "",
+        "subtitle": ""
+    },
+    "fog": {
+        "type": 0,
+        "startHeight": 3000,
+        "endHeight": 5000,
+        "density": 0.5,
+        "color": [
+            0,
+            0,
+            0,
+            255
+        ]
+    },
+    "camera": {
+        "bounds": [
+            -9728,
+            -9472,
+            9728,
+            9984,
+            -9728,
+            9984,
+            9728,
+            -9472
+        ],
+        "complements": [
+            0,
+            0,
+            4,
+            0
+        ]
+    },
+    "players": [
+        {
+            "name": "P1",
+            "startingPos": {
+                "x": 704,
+                "y": 448,
+                "fixed": false
+            },
+            "playerNum": 0,
+            "type": 1,
+            "race": 0,
+            "allyLowPriorities": 0,
+            "allyHighPriorities": 2,
+            "enemyLowPriorities": 0,
+            "enermyHighPriorities": 0
+        },
+        {
+            "name": "P2",
+            "startingPos": {
+                "x": -1728,
+                "y": 384,
+                "fixed": false
+            },
+            "playerNum": 1,
+            "type": 1,
+            "race": 0,
+            "allyLowPriorities": 0,
+            "allyHighPriorities": 1,
+            "enemyLowPriorities": 0,
+            "enermyHighPriorities": 0
+        },
+        {
+            "name": "Stonebeard",
+            "startingPos": {
+                "x": -512,
+                "y": -1216,
+                "fixed": true
+            },
+            "playerNum": 2,
+            "type": 2,
+            "race": 1,
+            "allyLowPriorities": 68,
+            "allyHighPriorities": 49,
+            "enemyLowPriorities": 0,
+            "enermyHighPriorities": -34738976
+        },
+        {
+            "name": "Syndicate Army",
+            "startingPos": {
+                "x": -5824,
+                "y": -8704,
+                "fixed": true
+            },
+            "playerNum": 4,
+            "type": 2,
+            "race": 1,
+            "allyLowPriorities": -791451226,
+            "allyHighPriorities": -1346348547,
+            "enemyLowPriorities": 1954053672,
+            "enermyHighPriorities": 392222317
+        },
+        {
+            "name": "Syndicate Caravan",
+            "startingPos": {
+                "x": -7680,
+                "y": -6208,
+                "fixed": true
+            },
+            "playerNum": 5,
+            "type": 2,
+            "race": 1,
+            "allyLowPriorities": 16,
+            "allyHighPriorities": 16,
+            "enemyLowPriorities": 0,
+            "enermyHighPriorities": 16
+        }
+    ],
+    "forces": [
+        {
+            "flags": {
+                "allied": true,
+                "alliedVictory": true,
+                "shareVision": true,
+                "shareUnitControl": false,
+                "shareAdvUnitControl": false
+            },
+            "players": -49,
+            "name": "Players"
+        },
+        {
+            "flags": {
+                "allied": true,
+                "alliedVictory": true,
+                "shareVision": true,
+                "shareUnitControl": false,
+                "shareAdvUnitControl": false
+            },
+            "players": 48,
+            "name": "Syndicate"
+        }
+    ],
+    "saves": 5403,
+    "editorVersion": 6117,
+    "scriptLanguage": 0,
+    "supportedModes": 1,
+    "forcedDefaultCamDistance": 0,
+    "forcedMaxCamDistance": 0,
+    "forcedMinCamDistance": 0,
+    "gameVersion": {
+        "major": 2,
+        "minor": 0,
+        "patch": 4,
+        "build": 23556
+    },
+    "globalWeather": 0,
+    "customSoundEnvironment": "",
+    "customLightEnv": 0,
+    "water": [
+        255,
+        255,
+        255,
+        255
+    ],
+    "gameDataVersion": 1,
+    "gameDataSet": 2,
+    "upgrades": [],
+    "techBlacklist": [],
+    "randomUnitTables": [
+        {
+            "id": 0,
+            "name": "Untitled Group",
+            "positions": [
+                0
+            ],
+            "chances": []
+        }
+    ],
+    "randomItemTables": [
+        {
+            "id": 0,
+            "name": "Level 1",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 100,
+                            "objectId": "YiI1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Level 2",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 100,
+                            "objectId": "YiI2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Level 3",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 100,
+                            "objectId": "YiI3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Level 4",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 100,
+                            "objectId": "YiI4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Level 5",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 100,
+                            "objectId": "YiI5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Level 6",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 100,
+                            "objectId": "YiI6"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Level 7",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 25,
+                            "objectId": "ratf"
+                        },
+                        {
+                            "chance": 25,
+                            "objectId": "ckng"
+                        },
+                        {
+                            "chance": 25,
+                            "objectId": "modt"
+                        },
+                        {
+                            "chance": 25,
+                            "objectId": "rde4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Level Low",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 34,
+                            "objectId": "YiI1"
+                        },
+                        {
+                            "chance": 33,
+                            "objectId": "YiI2"
+                        },
+                        {
+                            "chance": 33,
+                            "objectId": "YiI3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Lelel Max",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 50,
+                            "objectId": "YlI7"
+                        },
+                        {
+                            "chance": 50,
+                            "objectId": "YlI8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Level Medium",
+            "rows": [
+                {
+                    "type": 2,
+                    "objects": [
+                        {
+                            "chance": 34,
+                            "objectId": "YiI4"
+                        },
+                        {
+                            "chance": 33,
+                            "objectId": "YiI5"
+                        },
+                        {
+                            "chance": 33,
+                            "objectId": "YiI6"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

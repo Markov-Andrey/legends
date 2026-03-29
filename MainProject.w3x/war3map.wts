@@ -19036,16 +19036,6 @@ STRING 6201
 P2
 }
 
-STRING 6202
-{
-P3
-}
-
-STRING 6203
-{
-P4
-}
-
 STRING 6206
 // Items: I01A ([Warsong] Night Elf Flag), Name (Name)
 {
@@ -20923,11 +20913,6 @@ STRING 6730
 Research Fury Fire
 }
 
-STRING 6731
-{
-P5
-}
-
 STRING 6732
 {
 Players
@@ -22029,5 +22014,20 @@ STRING 6933
 // Buffs/Effects: B022 ([Uther] Hour of Judgment), Buffubertip (Tooltip - Extended)
 {
 This unit is under the effects of Hour of Judgment; attacks will deal more damage.
+}
+
+STRING 6934
+{
+Stonebeard
+}
+
+STRING 6935
+{
+Syndicate Army
+}
+
+STRING 6936
+{
+Syndicate Caravan
 }
 
