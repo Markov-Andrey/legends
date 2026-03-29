@@ -2,6 +2,7 @@
 DisplayBuildingStatus=1
 DrainTransfersLife=1
 DrainTransfersMana=1
-MaxHeroLevel=14
+HeroFactorXP=100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+MaxHeroLevel=18
 MinUnitSpeed=1.0
 
