@@ -22085,27 +22085,27 @@ STRING 6947
 [Kelthuzad] Temple of the Damned
 }
 
-STRING 6948
-// Units: u008 ([Kelthuzad] Ziggurat), Name (Name)
-{
-[Kelthuzad] Ziggurat
-}
-
-STRING 6949
-// Units: u00D ([Kelthuzad] Spirit Tower), Name (Name)
-{
-[Kelthuzad] Spirit Tower
-}
-
-STRING 6950
-// Units: u00M ([Kelthuzad] Nerubian Tower), Name (Name)
-{
-[Kelthuzad] Nerubian Tower
-}
-
 STRING 6951
 // Units: u00Q ([Kelthuzad] High Necromancer), Name (Name)
 {
 [Kelthuzad] High Necromancer
+}
+
+STRING 6952
+// Units: u00R ([Kelthuzad] Naxxramas), Name (Name)
+{
+[Kelthuzad] Naxxramas
+}
+
+STRING 6953
+// Abilities: A0C4 ([Kelthuzad] Essence of Blight), Name (Name)
+{
+[Kelthuzad] Essence of Blight
+}
+
+STRING 6954
+// Abilities: A0C5 ([Kelthuzad] Spirit Touch), Name (Name)
+{
+[Kelthuzad] Spirit Touch
 }
 
