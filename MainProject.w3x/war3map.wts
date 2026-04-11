@@ -18870,18 +18870,6 @@ STRING 6171
 Revive Kel'Thuzad
 }
 
-STRING 6172
-// Units: u00I ([Kelthuzad] Сultist), Name (Name)
-{
-[Kelthuzad] Сultist
-}
-
-STRING 6173
-// Units: u00I ([Kelthuzad] Сultist), Tip (Tooltip - Basic)
-{
-Train Сultist
-}
-
 STRING 6174
 // Units: u00J ([Kelthuzad] Necropolis), Name (Name)
 {
@@ -18985,15 +18973,9 @@ Summon Skeleton
 }
 
 STRING 6195
-// Units: u00P ([Kelthuzad] High Necromancer), Name (Name)
+// Units: u00Q ([Kelthuzad] High Necromancer), Name (Name)
 {
 [Kelthuzad] High Necromancer
-}
-
-STRING 6196
-// Units: u00P ([Kelthuzad] High Necromancer), Tip (Tooltip - Basic)
-{
-Train High Necromancer
 }
 
 STRING 6197
@@ -22085,12 +22067,6 @@ STRING 6947
 [Kelthuzad] Temple of the Damned
 }
 
-STRING 6951
-// Units: u00Q ([Kelthuzad] High Necromancer), Name (Name)
-{
-[Kelthuzad] High Necromancer
-}
-
 STRING 6952
 // Units: u00R ([Kelthuzad] Naxxramas), Name (Name)
 {
@@ -22107,5 +22083,173 @@ STRING 6954
 // Abilities: A0C5 ([Kelthuzad] Spirit Touch), Name (Name)
 {
 [Kelthuzad] Spirit Touch
+}
+
+STRING 6955
+// Units: u008 ([Kelthuzad] Bone Ziggurat), Name (Name)
+{
+[Kelthuzad] Bone Ziggurat
+}
+
+STRING 6956
+// Units: u008 ([Kelthuzad] Bone Ziggurat), Tip (Tooltip - Basic)
+{
+Summon Bone Ziggurat
+}
+
+STRING 6957
+// Abilities: A0C6 ([Kelthuzad] Create Corpse), Name (Name)
+{
+[Kelthuzad] Create Corpse
+}
+
+STRING 6958
+// Abilities: A0C6 ([Kelthuzad] Create Corpse), EditorSuffix (Editor Suffix)
+{
+(Bone Ziggurat)
+}
+
+STRING 6959
+// Abilities: A0C7 ([Kelthuzad] Create Corpse), Name (Name)
+{
+[Kelthuzad] Create Corpse
+}
+
+STRING 6960
+// Abilities: A0C7 ([Kelthuzad] Create Corpse), Tip (Tooltip - Normal)
+{
+Create Corpse
+}
+
+STRING 6961
+// Abilities: A0C7 ([Kelthuzad] Create Corpse), Ubertip (Tooltip - Normal - Extended)
+{
+Creates 1 corpse per 15 sec, up to 5 corpses simultaneously
+}
+
+STRING 6962
+// Units: u00D ([Kelthuzad] Bone Spirit Tower), Name (Name)
+{
+[Kelthuzad] Bone Spirit Tower
+}
+
+STRING 6963
+// Units: u00M ([Kelthuzad] Bone Nerubian Tower), Name (Name)
+{
+[Kelthuzad] Bone Nerubian Tower
+}
+
+STRING 6965
+// Abilities: A0C8 ([Kelthuzad] Blighted Gold Mine Ability), Name (Name)
+{
+[Kelthuzad] Blighted Gold Mine Ability
+}
+
+STRING 6966
+// Abilities: S00G ([Kelthuzad] Switch), EditorSuffix (Editor Suffix)
+{
+(Haunted Gold Mine)
+}
+
+STRING 6967
+// Abilities: S00G ([Kelthuzad] Switch), Name (Name)
+{
+[Kelthuzad] Switch
+}
+
+STRING 6969
+// Units: u00S ([Kelthuzad] Naxxramas Gold Assimilator), Name (Name)
+{
+[Kelthuzad] Naxxramas Gold Assimilator
+}
+
+STRING 6970
+// Units: u00S ([Kelthuzad] Naxxramas Gold Assimilator), Tip (Tooltip - Basic)
+{
+Build Naxxramas Gold Assimilator
+}
+
+STRING 6971
+// Abilities: A0C9 ([Kelthuzad] Cursed Gold Absorption), Name (Name)
+{
+[Kelthuzad] Cursed Gold Absorption
+}
+
+STRING 6972
+// Abilities: A0C9 ([Kelthuzad] Cursed Gold Absorption), Tip (Tooltip - Normal)
+{
+Cursed Gold Absorption
+}
+
+STRING 6974
+// Abilities: A0CA ([Kelthuzad] Corpse Consumption), Tip (Tooltip - Normal)
+{
+Corpse Consumption
+}
+
+STRING 6975
+// Abilities: A0CA ([Kelthuzad] Corpse Consumption), Ubertip (Tooltip - Normal - Extended)
+{
+Sacrifice a corpse to the Book of the Dead, consuming its spiritual remains to restore one charge. The book hungers for the dead
+}
+
+STRING 6976
+// Abilities: A0CA ([Kelthuzad] Corpse Consumption), Name (Name)
+{
+[Kelthuzad] Corpse Consumption
+}
+
+STRING 6977
+// Units: U00T ([Kelthuzad] Book Of Death), Name (Name)
+{
+[Kelthuzad] Book Of Death
+}
+
+STRING 6978
+// Units: U00T ([Kelthuzad] Book Of Death), Tip (Tooltip - Basic)
+{
+Book Of Death
+}
+
+STRING 6979
+// Units: u00I ([Kelthuzad] Cultist), Name (Name)
+{
+[Kelthuzad] Cultist
+}
+
+STRING 6980
+// Units: u00I ([Kelthuzad] Cultist), Tip (Tooltip - Basic)
+{
+Train Cultist
+}
+
+STRING 6981
+// Units: u00U ([Kelthuzad] Shade), Name (Name)
+{
+[Kelthuzad] Shade
+}
+
+STRING 6982
+// Abilities: A0C9 ([Kelthuzad] Cursed Gold Absorption), Ubertip (Tooltip - Normal - Extended)
+{
+Automatically siphons gold from the target mine every 10 seconds. You receive 50 gold, but the curse devours an extra 5 gold from the mine's permanent reserve, slowly degrading it to nothing
+}
+
+STRING 6983
+// Abilities: A0CB ([Kelthuzad] Sacrifice), Name (Name)
+{
+[Kelthuzad] Sacrifice
+}
+
+STRING 6984
+// Abilities: A0CB ([Kelthuzad] Sacrifice), Tip (Tooltip - Normal)
+{
+Sacrifice
+}
+
+STRING 6985
+// Abilities: A0CB ([Kelthuzad] Sacrifice), Ubertip (Tooltip - Normal - Extended)
+{
+Target a Sacrificial Pit to sacrifice the Acolyte and turn it into a Shade. Shades are invisible spirits that can see invisible units. |nShades cannot attack.
 }
 

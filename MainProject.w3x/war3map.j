@@ -373,6 +373,10 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
+trigger gg_trg_KelthuzadMineAutogold= null
+trigger gg_trg_KelthuzadMineAddAbility= null
+trigger gg_trg_KelthuzadCultistCorpse= null
+trigger gg_trg_KelthuzadCultistSacrifice= null
 
     // Random Groups
 integer array gg_rg_000
@@ -1027,7 +1031,7 @@ endglobals
         call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile06")
         call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile-timeindicatorframe")
         call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile-inventorycover")
-        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNAcolyte")
+        call AddCustomConsole(index , "Legends\\Kelthuzad\\Acolyte\\BTN_Kelthuzad_Acolyte_Heretic")
         set CustomConsoleUI_x[index]=0.000
         set CustomConsoleUI_y[index]=0.0
 
@@ -2969,6 +2973,11 @@ function Trig_ChooseKelthuzad_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00I', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
+function Trig_ChooseKelthuzad_Func025A takes nothing returns nothing
+    call SetResourceAmount(GetEnumUnit(), 12500)
+    call UnitAddAbilityBJ('A0C9', GetEnumUnit())
+endfunction
+
 function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
@@ -2982,6 +2991,7 @@ function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
     // Acolyte
     call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseKelthuzad_Func012A)
     // ----------------------
+    call CreateNUnitsAtLoc(1, 'U00T', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
     call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers
     set udg_PlayerKelthuzad=GetOwningPlayer(GetSpellAbilityUnit())
@@ -2990,6 +3000,9 @@ function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
     // SoulsScore
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_GREEN, true)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
+    call TriggerSleepAction(0.10)
+    // Haunted Gold Mine
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00S'), function Trig_ChooseKelthuzad_Func025A)
 endfunction
 
 //===========================================================================
@@ -8423,6 +8436,85 @@ function InitTrig_KelthuzadIni takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KelthuzadMineAddAbility
+//===========================================================================
+function Trig_KelthuzadMineAddAbility_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'u00S' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadMineAddAbility_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A0C9', GetConstructedStructure())
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadMineAddAbility takes nothing returns nothing
+    set gg_trg_KelthuzadMineAddAbility=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadMineAddAbility, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(gg_trg_KelthuzadMineAddAbility, Condition(function Trig_KelthuzadMineAddAbility_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadMineAddAbility, function Trig_KelthuzadMineAddAbility_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadMineAutogold
+//===========================================================================
+function Trig_KelthuzadMineAutogold_Func001Func001C takes nothing returns boolean
+    if ( not ( GetResourceAmount(GetEnumUnit()) > 0 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A0C9', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadMineAutogold_Func001A takes nothing returns nothing
+    if ( Trig_KelthuzadMineAutogold_Func001Func001C() ) then
+        call AdjustPlayerStateBJ(R2I(( 50.00 * ( ( 100.00 - I2R(GetPlayerState(GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_GOLD_UPKEEP_RATE)) ) / 100.00 ) )), GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_GOLD)
+        call AddResourceAmountBJ(- 55, GetEnumUnit())
+        call AddSpecialEffectTargetUnitBJ("origin", GetEnumUnit(), "Legends/Kelthuzad/HauntedMine/Soul Discharge.mdx")
+    else
+    endif
+endfunction
+
+function Trig_KelthuzadMineAutogold_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00S'), function Trig_KelthuzadMineAutogold_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadMineAutogold takes nothing returns nothing
+    set gg_trg_KelthuzadMineAutogold=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_KelthuzadMineAutogold, 10.00)
+    call TriggerAddAction(gg_trg_KelthuzadMineAutogold, function Trig_KelthuzadMineAutogold_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadCultistSacrifice
+//===========================================================================
+function Trig_KelthuzadCultistSacrifice_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0CB' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCultistSacrifice_Actions takes nothing returns nothing
+    call KillUnit(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'u00U', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl")
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadCultistSacrifice takes nothing returns nothing
+    set gg_trg_KelthuzadCultistSacrifice=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistSacrifice, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_KelthuzadCultistSacrifice, Condition(function Trig_KelthuzadCultistSacrifice_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadCultistSacrifice, function Trig_KelthuzadCultistSacrifice_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: KelthuzadCultistBuild
 //===========================================================================
 function Trig_KelthuzadCultistBuild_Actions takes nothing returns boolean
@@ -8472,6 +8564,32 @@ function Trig_KelthuzadCultistBuild_Actions takes nothing returns boolean
       call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistBuild, EVENT_PLAYER_UNIT_CONSTRUCT_START)
       call TriggerAddCondition(gg_trg_KelthuzadCultistBuild, Condition(function Trig_KelthuzadCultistBuild_Actions))
   endfunction
+//===========================================================================
+// Trigger: KelthuzadCultistCorpse
+//===========================================================================
+function Trig_KelthuzadCultistCorpse_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0CA' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCultistCorpse_Func001A takes nothing returns nothing
+    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + GetRandomReal(2.00, 5.00) ))
+endfunction
+
+function Trig_KelthuzadCultistCorpse_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('U00T'), function Trig_KelthuzadCultistCorpse_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadCultistCorpse takes nothing returns nothing
+    set gg_trg_KelthuzadCultistCorpse=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistCorpse, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_KelthuzadCultistCorpse, Condition(function Trig_KelthuzadCultistCorpse_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadCultistCorpse, function Trig_KelthuzadCultistCorpse_Actions)
+endfunction
+
 //===========================================================================
 // Trigger: HellscreamIni
 //===========================================================================
@@ -14603,7 +14721,11 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_WhitemaneFastBuild()
     call InitTrig_KelthuzadIni()
+    call InitTrig_KelthuzadMineAddAbility()
+    call InitTrig_KelthuzadMineAutogold()
+    call InitTrig_KelthuzadCultistSacrifice()
     call InitTrig_KelthuzadCultistBuild()
+    call InitTrig_KelthuzadCultistCorpse()
     call InitTrig_HellscreamIni()
     call InitTrig_HellscreamEnraged()
     call InitTrig_HellscreamExecute()
