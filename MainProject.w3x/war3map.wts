@@ -22253,3 +22253,9 @@ STRING 6985
 Target a Sacrificial Pit to sacrifice the Acolyte and turn it into a Shade. Shades are invisible spirits that can see invisible units. |nShades cannot attack.
 }
 
+STRING 6986
+// Units: n011 ([Kelthuzad] Zombie), Name (Name)
+{
+[Kelthuzad] Zombie
+}
+
