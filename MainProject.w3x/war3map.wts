@@ -22259,3 +22259,51 @@ STRING 6986
 [Kelthuzad] Zombie
 }
 
+STRING 6987
+// Abilities: A0CC ([Arthas] Skeleton Key), Name (Name)
+{
+[Arthas] Skeleton Key
+}
+
+STRING 6988
+// Abilities: A0CC ([Arthas] Skeleton Key), Tip (Tooltip - Normal)
+{
+Skeleton Key
+}
+
+STRING 6989
+// Abilities: A0CC ([Arthas] Skeleton Key), Ubertip (Tooltip - Normal - Extended)
+{
+Unlocks all building requirements.
+}
+
+STRING 6990
+// Units: u00P ([Arthas] Haunted Gold Mine), Name (Name)
+{
+[Arthas] Haunted Gold Mine
+}
+
+STRING 6991
+// Abilities: S00H ([Arthas] Switch), EditorSuffix (Editor Suffix)
+{
+(Haunted Gold Mine)
+}
+
+STRING 6992
+// Abilities: S00H ([Arthas] Switch), Name (Name)
+{
+[Arthas] Switch
+}
+
+STRING 6993
+// Units: u00V ([Arthas] Temple of the Damned), Name (Name)
+{
+[Arthas] Temple of the Damned
+}
+
+STRING 6994
+// Units: u00W ([Arthas] Necromancer), Name (Name)
+{
+[Arthas] Necromancer
+}
+
