@@ -22307,3 +22307,33 @@ STRING 6994
 [Arthas] Necromancer
 }
 
+STRING 6995
+// Units: u00X ([Kelthuzad] Plague Spreader), Name (Name)
+{
+[Kelthuzad] Plague Spreader
+}
+
+STRING 6996
+// Units: u00X ([Kelthuzad] Plague Spreader), Tip (Tooltip - Basic)
+{
+Create Plague Spreader
+}
+
+STRING 6997
+// Abilities: A0CE ([Kelthuzad] Blight Placement), Name (Name)
+{
+[Kelthuzad] Blight Placement
+}
+
+STRING 6998
+// Abilities: A0CE ([Kelthuzad] Blight Placement), Tip (Tooltip - Normal)
+{
+Blight Placement
+}
+
+STRING 7001
+// Abilities: A0CE ([Kelthuzad] Blight Placement), Ubertip (Tooltip - Normal - Extended)
+{
+Creates an area of Blight at target location. The corruption spreads over several seconds, sequentially unearthing 5 corpses within the affected zone. Duration: 6 seconds.
+}
+
