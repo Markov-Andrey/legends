@@ -1727,24 +1727,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h001', 6110.4, - 3315.8, 272.000, 'h001')
-    set u=BlzCreateUnitWithSkin(p, 'ugho', - 1428.9, - 399.6, - 37.067, 'ugho')
-    set u=BlzCreateUnitWithSkin(p, 'uabo', - 693.7, - 395.6, - 80.550, 'uabo')
-    set u=BlzCreateUnitWithSkin(p, 'umtw', - 484.1, - 412.7, - 86.584, 'umtw')
-    set u=BlzCreateUnitWithSkin(p, 'ucry', - 1260.1, - 402.2, - 69.447, 'ucry')
-    set u=BlzCreateUnitWithSkin(p, 'ugar', - 304.0, - 410.0, - 89.240, 'ugar')
-    set u=BlzCreateUnitWithSkin(p, 'uban', - 81.4, - 476.4, 255.972, 'uban')
-    set u=BlzCreateUnitWithSkin(p, 'unec', 102.9, - 445.2, 243.886, 'unec')
-    set u=BlzCreateUnitWithSkin(p, 'uobs', 258.0, - 444.5, - 86.586, 'uobs')
-    set u=BlzCreateUnitWithSkin(p, 'ufro', 608.7, - 404.4, - 89.082, 'ufro')
-    set u=BlzCreateUnitWithSkin(p, 'ushd', - 1097.9, - 438.5, - 77.649, 'ushd')
-    set u=BlzCreateUnitWithSkin(p, 'uaco', - 1536.7, - 407.7, - 77.377, 'uaco')
-    set u=BlzCreateUnitWithSkin(p, 'e00O', - 1287.2, - 187.9, 300.452, 'e00O')
-    set u=BlzCreateUnitWithSkin(p, 'h031', - 1446.1, - 193.1, 25.192, 'h031')
-    set u=BlzCreateUnitWithSkin(p, 'n00X', - 1221.4, - 200.5, 233.500, 'n00X')
-    set u=BlzCreateUnitWithSkin(p, 'u00I', - 1560.1, - 199.6, 204.473, 'u00I')
-    set u=BlzCreateUnitWithSkin(p, 'u00W', - 982.7, - 218.5, - 86.448, 'u00W')
-    set u=BlzCreateUnitWithSkin(p, 'u00U', - 1097.4, - 255.4, - 88.654, 'u00U')
-    set u=BlzCreateUnitWithSkin(p, 'u00X', 68.3, - 182.2, 350.705, 'u00X')
 endfunction
 
 //===========================================================================

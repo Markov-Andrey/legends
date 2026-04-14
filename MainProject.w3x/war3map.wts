@@ -20204,12 +20204,6 @@ STRING 6548
 - Economy relies on combat|R
 }
 
-STRING 6567
-// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
-{
-|cFFA068FFKel'Thuzad|R
-}
-
 STRING 6568
 // Abilities: A0AB ([UI] Legends: Kel'Thuzad), Hotkey (Hotkey - Normal)
 {
@@ -22335,5 +22329,98 @@ STRING 7001
 // Abilities: A0CE ([Kelthuzad] Blight Placement), Ubertip (Tooltip - Normal - Extended)
 {
 Creates an area of Blight at target location. The corruption spreads over several seconds, sequentially unearthing 5 corpses within the affected zone. Duration: 6 seconds.
+}
+
+STRING 7002
+// Abilities: A0CD ([UI] Race: Kel'Thuzad), Name (Name)
+{
+[UI] Race: Kel'Thuzad
+}
+
+STRING 7003
+// Abilities: A0CD ([UI] Race: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 7004
+// Abilities: A0CD ([UI] Race: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Undead
+|cFF48BFFFSubrace:|R Cult of the Damned
+}
+
+STRING 7005
+// Abilities: A0CF ([UI] History: Kel'Thuzad), Name (Name)
+{
+[UI] History: Kel'Thuzad
+}
+
+STRING 7006
+// Abilities: A0CF ([UI] History: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 7007
+// Abilities: A0CF ([UI] History: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+Kel'Thuzad
+
+Once a powerful archmage of the Kirin Tor, obsessed with forbidden necromancy.
+
+Exiled for his dark studies, he sought out the Lich King Ner'zhul and pledged his soul to the Scourge.
+
+As the founder of the Cult of the Damned, he spread plague across Lordaeron, paving the way for Arthas's fall.
+
+After his death and resurrection as a lich, Kel'Thuzad became the supreme general of the Scourge — the right hand of Arthas himself. Cold, cunning, and utterly loyal, he commands the armies of the dead with terrifying intelligence.
+}
+
+STRING 7008
+// Abilities: A0CG ([UI] Mechanics: Kel'Thuzad), Name (Name)
+{
+[UI] Mechanics: Kel'Thuzad
+}
+
+STRING 7009
+// Abilities: A0CG ([UI] Mechanics: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 7010
+// Abilities: A0CG ([UI] Mechanics: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Corpse Harvest|R - Collect corpses to replenish the Book of the Dead.
+|cFF00C850- Book of the Dead|R - Summon rare powerful undead.
+|cFF00C850- Scholomance|R - Develop powerful Scourge Blight to dominate the enemy.
+}
+
+STRING 7011
+// Abilities: A0CH ([UI] Features: Kel'Thuzad), Name (Name)
+{
+[UI] Features: Kel'Thuzad
+}
+
+STRING 7012
+// Abilities: A0CH ([UI] Features: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 7013
+// Abilities: A0CH ([UI] Features: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Mass army & strong elite
+- Corpse interaction
+- Curses|R
+|cFFFF5A4B- Low unit health
+- Weak damage|R
+}
+
+STRING 7014
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00C850Kel'Thuzad|R
 }
 
