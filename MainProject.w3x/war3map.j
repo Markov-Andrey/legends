@@ -133,7 +133,7 @@ integer udg_WarsongCountOrc= 0
 player udg_PlayerUther= null
 
     // Generated
-trigger gg_trg_IniLimitUnitsF1= null
+trigger gg_trg_IniLimitUnits= null
 trigger gg_trg_IniStartResouces= null
 trigger gg_trg_IniSelectUnit= null
 trigger gg_trg_BtnF1= null
@@ -2292,21 +2292,19 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-// Trigger: IniLimitUnitsF1
+// Trigger: IniLimitUnits
 //
 // Construction Limit for Unique Units
 //===========================================================================
-function Trig_IniLimitUnitsF1_Func001Func001C takes nothing returns boolean
+function Trig_IniLimitUnits_Func001Func001C takes nothing returns boolean
     if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
-    if ( Trig_IniLimitUnitsF1_Func001Func001C() ) then
-        call CreateNUnitsAtLoc(1, 'H02J', GetEnumPlayer(), GetPlayerStartLocationLoc(GetOwningPlayer(GetEnumUnit())), bj_UNIT_FACING)
-        call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+function Trig_IniLimitUnits_Func001A takes nothing returns nothing
+    if ( Trig_IniLimitUnits_Func001Func001C() ) then
         call SetPlayerTechMaxAllowedSwap('u000', 0, GetEnumPlayer())
         // Arthas
         call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
@@ -2338,14 +2336,14 @@ function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_IniLimitUnitsF1_Actions takes nothing returns nothing
-    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniLimitUnitsF1_Func001A)
+function Trig_IniLimitUnits_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniLimitUnits_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_IniLimitUnitsF1 takes nothing returns nothing
-    set gg_trg_IniLimitUnitsF1=CreateTrigger()
-    call TriggerAddAction(gg_trg_IniLimitUnitsF1, function Trig_IniLimitUnitsF1_Actions)
+function InitTrig_IniLimitUnits takes nothing returns nothing
+    set gg_trg_IniLimitUnits=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniLimitUnits, function Trig_IniLimitUnits_Actions)
 endfunction
 
 //===========================================================================
@@ -2394,17 +2392,17 @@ endfunction
 // Trigger: BtnF1
 //===========================================================================
 function Trig_BtnF1_Conditions takes nothing returns boolean
-    return GetUnitTypeId(GetOrderedUnit()) == 'H02J'
+    return GetUnitTypeId(GetOrderedUnit()) == 'H02J' or GetUnitTypeId(GetOrderedUnit()) == 'H033' or GetUnitTypeId(GetOrderedUnit()) == 'H034'
 endfunction
 
 function Trig_BtnF1_UnitFilter_All takes nothing returns boolean
     local unit u= GetFilterUnit()
-    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1
+    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitTypeId(u) != 'H033' and GetUnitTypeId(u) != 'H034' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1
 endfunction
 
 function Trig_BtnF1_UnitFilter_NoWalk takes nothing returns boolean
     local unit u= GetFilterUnit()
-    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1 and GetUnitAbilityLevel(u, 'A09D') != 1
+    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitTypeId(u) != 'H033' and GetUnitTypeId(u) != 'H034' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1 and GetUnitAbilityLevel(u, 'A09D') != 1
 endfunction
 
 function Trig_BtnF1_Actions takes nothing returns nothing
@@ -2466,7 +2464,6 @@ function InitTrig_BtnF1 takes nothing returns nothing
     call TriggerAddCondition(gg_trg_BtnF1, Condition(function Trig_BtnF1_Conditions))
     call TriggerAddAction(gg_trg_BtnF1, function Trig_BtnF1_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: OrderHoldPatrol
 //===========================================================================
@@ -2566,11 +2563,24 @@ function Trig_OrderHarvest_Func001Func002C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_OrderHarvest_Func001Func004C takes nothing returns boolean
+    if ( ( GetUnitAbilityLevelSwapped('Ahrl', GetOrderedUnit()) == 1 ) ) then
+        return true
+    endif
+    if ( ( GetUnitAbilityLevelSwapped('A0AC', GetOrderedUnit()) == 1 ) ) then
+        return true
+    endif
+    if ( ( GetUnitAbilityLevelSwapped('A0AX', GetOrderedUnit()) == 1 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
 function Trig_OrderHarvest_Func001C takes nothing returns boolean
     if ( not ( IsDestructableAliveBJ(GetOrderTargetDestructable()) == true ) ) then
         return false
     endif
-    if ( not ( GetUnitAbilityLevelSwapped('Ahrl', GetOrderedUnit()) == 1 ) ) then
+    if ( not Trig_OrderHarvest_Func001Func004C() ) then
         return false
     endif
     return true
@@ -2879,7 +2889,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseArthas
 //===========================================================================
-function Trig_ChooseArthas_Func001C takes nothing returns boolean
+function Trig_ChooseArthas_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -2890,41 +2900,45 @@ function Trig_ChooseArthas_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseArthas_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseArthas_Func001C() ) then
+    if ( not Trig_ChooseArthas_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseArthas_Func008A takes nothing returns nothing
+function Trig_ChooseArthas_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u009', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func010A takes nothing returns nothing
+function Trig_ChooseArthas_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u010', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func012A takes nothing returns nothing
+function Trig_ChooseArthas_Func016A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00A', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func027A takes nothing returns nothing
+function Trig_ChooseArthas_Func031A takes nothing returns nothing
     call SetResourceAmount(GetEnumUnit(), 12500)
     call UnitAddAbilityBJ('A0C9', GetEnumUnit())
 endfunction
 
 function Trig_ChooseArthas_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H033', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 8)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func012A)
     // Ghoul
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func014A)
     // Acolyte
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func012A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func016A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers
@@ -2939,7 +2953,7 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
     call TriggerSleepAction(0.10)
     // Haunted Gold Mine
-    call ForGroupBJ(GetUnitsOfTypeIdAll('u00P'), function Trig_ChooseArthas_Func027A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00P'), function Trig_ChooseArthas_Func031A)
 endfunction
 
 //===========================================================================
@@ -2953,7 +2967,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseKelthuzad
 //===========================================================================
-function Trig_ChooseKelthuzad_Func001C takes nothing returns boolean
+function Trig_ChooseKelthuzad_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -2964,41 +2978,45 @@ function Trig_ChooseKelthuzad_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseKelthuzad_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseKelthuzad_Func001C() ) then
+    if ( not Trig_ChooseKelthuzad_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseKelthuzad_Func008A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00J', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseKelthuzad_Func010A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h02R', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseKelthuzad_Func012A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func016A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00I', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseKelthuzad_Func025A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func029A takes nothing returns nothing
     call SetResourceAmount(GetEnumUnit(), 12500)
     call UnitAddAbilityBJ('A0C9', GetEnumUnit())
 endfunction
 
 function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H034', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 11)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseKelthuzad_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseKelthuzad_Func012A)
     // Ghoul
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseKelthuzad_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseKelthuzad_Func014A)
     // Acolyte
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseKelthuzad_Func012A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseKelthuzad_Func016A)
     // ----------------------
     call CreateNUnitsAtLoc(1, 'U00T', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
     call RemoveUnit(GetSpellAbilityUnit())
@@ -3011,7 +3029,7 @@ function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
     call TriggerSleepAction(0.10)
     // Haunted Gold Mine
-    call ForGroupBJ(GetUnitsOfTypeIdAll('u00S'), function Trig_ChooseKelthuzad_Func025A)
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00S'), function Trig_ChooseKelthuzad_Func029A)
 endfunction
 
 //===========================================================================
@@ -3025,7 +3043,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseUther
 //===========================================================================
-function Trig_ChooseUther_Func001C takes nothing returns boolean
+function Trig_ChooseUther_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3036,30 +3054,34 @@ function Trig_ChooseUther_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseUther_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseUther_Func001C() ) then
+    if ( not Trig_ChooseUther_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseUther_Func008A takes nothing returns nothing
+function Trig_ChooseUther_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00A', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseUther_Func010A takes nothing returns nothing
+function Trig_ChooseUther_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00O', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseUther_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H02J', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 5)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func012A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func014A)
     // ----------------------
     call CreateNUnitsAtLoc(1, 'H032', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
     // ----------------------
@@ -3083,7 +3105,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseWrynn
 //===========================================================================
-function Trig_ChooseWrynn_Func001C takes nothing returns boolean
+function Trig_ChooseWrynn_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3094,30 +3116,34 @@ function Trig_ChooseWrynn_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseWrynn_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseWrynn_Func001C() ) then
+    if ( not Trig_ChooseWrynn_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseWrynn_Func008A takes nothing returns nothing
+function Trig_ChooseWrynn_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00F', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseWrynn_Func010A takes nothing returns nothing
+function Trig_ChooseWrynn_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h017', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseWrynn_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H02J', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 7)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func012A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func014A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_NAVY, true)
@@ -3138,7 +3164,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseWhitemane
 //===========================================================================
-function Trig_ChooseWhitemane_Func001C takes nothing returns boolean
+function Trig_ChooseWhitemane_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3149,30 +3175,34 @@ function Trig_ChooseWhitemane_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseWhitemane_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseWhitemane_Func001C() ) then
+    if ( not Trig_ChooseWhitemane_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseWhitemane_Func008A takes nothing returns nothing
+function Trig_ChooseWhitemane_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h01S', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseWhitemane_Func010A takes nothing returns nothing
+function Trig_ChooseWhitemane_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h01X', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseWhitemane_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H02J', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 10)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWhitemane_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWhitemane_Func012A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWhitemane_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWhitemane_Func014A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_MAROON, true)
@@ -3196,7 +3226,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseTyrande
 //===========================================================================
-function Trig_ChooseTyrande_Func001C takes nothing returns boolean
+function Trig_ChooseTyrande_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3207,31 +3237,35 @@ function Trig_ChooseTyrande_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseTyrande_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseTyrande_Func001C() ) then
+    if ( not Trig_ChooseTyrande_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseTyrande_Func007003001003 takes nothing returns boolean
+function Trig_ChooseTyrande_Func011003001003 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
 endfunction
 
-function Trig_ChooseTyrande_Func017Func001003001003 takes nothing returns boolean
+function Trig_ChooseTyrande_Func021Func001003001003 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
 endfunction
 
-function Trig_ChooseTyrande_Func017A takes nothing returns nothing
-    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func017Func001003001003))))
+function Trig_ChooseTyrande_Func021A takes nothing returns nothing
+    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func021Func001003001003))))
 endfunction
 
 function Trig_ChooseTyrande_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H02J', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 6)
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'e000', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func007003001003))))
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func011003001003))))
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=5
     loop
@@ -3247,7 +3281,7 @@ function Trig_ChooseTyrande_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_TyrandeIni)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
     call TriggerSleepAction(1.00)
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func017A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func021A)
 endfunction
 
 //===========================================================================
@@ -3261,7 +3295,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseThrall
 //===========================================================================
-function Trig_ChooseThrall_Func002C takes nothing returns boolean
+function Trig_ChooseThrall_Func006C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3272,13 +3306,17 @@ function Trig_ChooseThrall_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseThrall_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseThrall_Func002C() ) then
+    if ( not Trig_ChooseThrall_Func006C() ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_ChooseThrall_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H02J', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     set udg_PlayerThrall=GetOwningPlayer(GetSpellAbilityUnit())
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
@@ -3313,7 +3351,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseHellscream
 //===========================================================================
-function Trig_ChooseHellscream_Func002C takes nothing returns boolean
+function Trig_ChooseHellscream_Func006C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3324,13 +3362,17 @@ function Trig_ChooseHellscream_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseHellscream_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseHellscream_Func002C() ) then
+    if ( not Trig_ChooseHellscream_Func006C() ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_ChooseHellscream_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H02J', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     set udg_PlayerHellscream=GetOwningPlayer(GetSpellAbilityUnit())
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
@@ -14682,7 +14724,7 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_IniLimitUnitsF1()
+    call InitTrig_IniLimitUnits()
     call InitTrig_IniStartResouces()
     call InitTrig_IniSelectUnit()
     call InitTrig_BtnF1()
@@ -14930,7 +14972,7 @@ endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_IniLimitUnitsF1)
+    call ConditionalTriggerExecute(gg_trg_IniLimitUnits)
     call ConditionalTriggerExecute(gg_trg_IniStartResouces)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_WarsongInitialization)

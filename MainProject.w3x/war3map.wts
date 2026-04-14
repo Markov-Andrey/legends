@@ -22424,3 +22424,45 @@ STRING 7014
 |cFF00C850Kel'Thuzad|R
 }
 
+STRING 7015
+// Units: H02J ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(All)
+}
+
+STRING 7016
+// Units: H033 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7017
+// Units: H033 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7018
+// Units: H033 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Arthas)
+}
+
+STRING 7019
+// Units: H034 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7020
+// Units: H034 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7021
+// Units: H034 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Kel'Thuzad)
+}
+
