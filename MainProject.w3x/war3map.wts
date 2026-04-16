@@ -22466,3 +22466,33 @@ STRING 7021
 (Kel'Thuzad)
 }
 
+STRING 7022
+// Units: U013 ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7023
+// Units: U013 ([Kelthuzad] Scourge Plague), Tip (Tooltip - Basic)
+{
+Scourge Plague
+}
+
+STRING 7024
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7025
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 1|r]
+}
+
+STRING 7026
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
