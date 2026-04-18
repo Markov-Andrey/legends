@@ -22479,7 +22479,7 @@ Scourge Plague
 }
 
 STRING 7024
-// Abilities: A0CI ([Kelthuzad] Scourge Plague), Name (Name)
+// Units: u019 ([Kelthuzad] Scourge Plague), Name (Name)
 {
 [Kelthuzad] Scourge Plague
 }
@@ -22494,5 +22494,229 @@ STRING 7026
 // Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
 {
 Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7027
+// Units: H035 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7028
+// Units: H035 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7029
+// Units: H035 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Hellscream)
+}
+
+STRING 7030
+// Abilities: A0CJ ([Kelthuzad] Burial Fund), Name (Name)
+{
+[Kelthuzad] Burial Fund
+}
+
+STRING 7031
+// Upgrades: R03Z (Freezing Breath), Tip (Tooltip)
+{
+Research Burial Fund
+}
+
+STRING 7032
+// Upgrades: R03Z (Freezing Breath), Ubertip (Tooltip - Extended)
+{
+Cult Bandits gain the ability upon death to refund half of their cost
+}
+
+STRING 7033
+// Abilities: A0CJ ([Kelthuzad] Burial Fund), Tip (Tooltip - Normal)
+{
+Burial Fund
+}
+
+STRING 7035
+// Upgrades: R03Z (Freezing Breath), Name (Name)
+{
+[Kelthuzad] Burial Fund
+}
+
+STRING 7036
+// Abilities: A0CJ ([Kelthuzad] Burial Fund), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Lived less than 2 hours — can I get a refund?"|r
+
+Upon death, refunds half of its cost.
+}
+
+STRING 7037
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7038
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7039
+// Units: U013 ([Kelthuzad] Scourge Plague), Propernames (Proper Names)
+{
+Scourge Plague
+}
+
+STRING 7040
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), EditorSuffix (Editor Suffix)
+{
+(Bandits)
+}
+
+STRING 7041
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2 damage per second. |nLasts 75 seconds.
+}
+
+STRING 7042
+// Upgrades: R040 (Ghoul Frenzy), Name (Name)
+{
+[Kelthuzad] Hidden Strain
+}
+
+STRING 7043
+// Upgrades: R040 (Ghoul Frenzy), Tip (Tooltip)
+{
+Research Hidden Strain
+}
+
+STRING 7044
+// Upgrades: R040 (Ghoul Frenzy), Ubertip (Tooltip - Extended)
+{
+Bandits carry the Plague on themselves.
+}
+
+STRING 7045
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague
+}
+
+STRING 7046
+// Abilities: A0CL ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7047
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), EditorName (Name (Editor Only))
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7048
+// Abilities: A0CL ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague
+}
+
+STRING 7049
+// Buffs/Effects: B024 ([Kelthuzad] Scourge Plague Cloud), EditorName (Name (Editor Only))
+{
+[Kelthuzad] Scourge Plague Cloud
+}
+
+STRING 7050
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), Buffubertip (Tooltip - Extended)
+{
+This unit is Scourge Plague; it will take damage over time.
+}
+
+STRING 7051
+// Abilities: A0CM ([Kelthuzad] Boots Of Speed), Name (Name)
+{
+[Kelthuzad] Boots Of Speed
+}
+
+STRING 7052
+// Upgrades: R041 (Disease Cloud), Tip (Tooltip)
+{
+Research Boots Of Speed
+}
+
+STRING 7053
+// Upgrades: R041 (Disease Cloud), Ubertip (Tooltip - Extended)
+{
+Adds additional speed to Bandits
+}
+
+STRING 7054
+// Abilities: A0CM ([Kelthuzad] Boots Of Speed), Tip (Tooltip - Normal)
+{
+Boots Of Speed
+}
+
+STRING 7055
+// Abilities: A0CM ([Kelthuzad] Boots Of Speed), Ubertip (Tooltip - Normal - Extended)
+{
+Adds additional speed
+}
+
+STRING 7056
+// Upgrades: R041 (Disease Cloud), Name (Name)
+{
+[Kelthuzad] Boots Of Speed
+}
+
+STRING 7057
+// Upgrades: R041 (Disease Cloud), effect1 (Effect 1)
+{
+rmvx
+}
+
+STRING 7058
+// Abilities: A0CN ([Kelthuzad] Experiment Victim), Name (Name)
+{
+[Kelthuzad] Experiment Victim
+}
+
+STRING 7059
+// Abilities: A0CN ([Kelthuzad] Experiment Victim), Tip (Tooltip - Normal)
+{
+Experiment Victim
+}
+
+STRING 7063
+// Abilities: A0CN ([Kelthuzad] Experiment Victim), Ubertip (Tooltip - Normal - Extended)
+{
+Unit was a victim of inhuman plague experiments. It constantly loses health. Instantly gain +3 Scourge Plague research.
+}
+
+STRING 7064
+// Units: u01B ([Kelthuzad] Black Citadel), Name (Name)
+{
+[Kelthuzad] Black Citadel
+}
+
+STRING 7065
+// Units: u01G ([Kelthuzad] Halls of the Dead), Name (Name)
+{
+[Kelthuzad] Halls of the Dead
+}
+
+STRING 7066
+// Units: U00T ([Kelthuzad] Book Of Death), Propernames (Proper Names)
+{
+Book Of Death
+}
+
+STRING 7067
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), Bufftip (Tooltip)
+{
+Scourge Plague
 }
 
