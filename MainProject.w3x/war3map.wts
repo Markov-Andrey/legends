@@ -22576,12 +22576,6 @@ STRING 7040
 (Bandits)
 }
 
-STRING 7041
-// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
-{
-Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2 damage per second. |nLasts 75 seconds.
-}
-
 STRING 7042
 // Upgrades: R040 (Ghoul Frenzy), Name (Name)
 {
@@ -22601,7 +22595,7 @@ Bandits carry the Plague on themselves.
 }
 
 STRING 7045
-// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+// Abilities: A0CL ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
 {
 Scourge Plague
 }
@@ -22613,13 +22607,13 @@ STRING 7046
 }
 
 STRING 7047
-// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), EditorName (Name (Editor Only))
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), Name (Name)
 {
 [Kelthuzad] Scourge Plague
 }
 
 STRING 7048
-// Abilities: A0CL ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
 {
 Scourge Plague
 }
@@ -22808,5 +22802,359 @@ STRING 7082
 // Units: H03A ([UI] F1), EditorSuffix (Name - Editor Suffix)
 {
 (Tyrande)
+}
+
+STRING 7084
+// Units: u020 ([Kelthuzad] Plague Wagon), Name (Name)
+{
+[Kelthuzad] Plague Wagon
+}
+
+STRING 7085
+// Units: u020 ([Kelthuzad] Plague Wagon), Tip (Tooltip - Basic)
+{
+Train Plague Wagon
+}
+
+STRING 7086
+// Abilities: A0CO ([Kelthuzad] Cargo from Andorhal), Name (Name)
+{
+[Kelthuzad] Cargo from Andorhal
+}
+
+STRING 7087
+// Abilities: A0CO ([Kelthuzad] Cargo from Andorhal), Tip (Tooltip - Normal)
+{
+Cargo from Andorhal
+}
+
+STRING 7088
+// Abilities: A0CP ([Kelthuzad] Cargo Andorhal), Name (Name)
+{
+[Kelthuzad] Cargo Andorhal
+}
+
+STRING 7089
+// Abilities: A0CP ([Kelthuzad] Cargo Andorhal), EditorSuffix (Editor Suffix)
+{
+ (Zombie)
+}
+
+STRING 7090
+// Abilities: A0CP ([Kelthuzad] Cargo Andorhal), Tip (Tooltip - Normal)
+{
+Cargo Andorhal
+}
+
+STRING 7094
+// Abilities: A0CO ([Kelthuzad] Cargo from Andorhal), Ubertip (Tooltip - Normal - Extended)
+{
+Sacrifice the unit to capture a target enemy building. The building cannot produce anything or attack. If the target building produces food, you gain a Zombie every 15 seconds. The Zombie lasts 60 seconds.
+}
+
+STRING 7095
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), EditorSuffix (Editor Suffix)
+{
+(Plague Wagon)
+}
+
+STRING 7097
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), EditorName (Name (Editor Only))
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7100
+// Upgrades: R042 (Ghoul Frenzy), Name (Name)
+{
+[Kelthuzad] Plague Convoy
+}
+
+STRING 7101
+// Upgrades: R042 (Ghoul Frenzy), Tip (Tooltip)
+{
+Research Plague Convoy
+}
+
+STRING 7102
+// Upgrades: R042 (Ghoul Frenzy), Ubertip (Tooltip - Extended)
+{
+Plague Wagon carries the Scourge Plague on itself.
+}
+
+STRING 7103
+// Units: u021 ([Kelthuzad] Slaughterhouse), Name (Name)
+{
+[Kelthuzad] Slaughterhouse
+}
+
+STRING 7104
+// Units: u022 ([Kelthuzad] Scholomance), Name (Name)
+{
+[Kelthuzad] Scholomance
+}
+
+STRING 7105
+// Units: u022 ([Kelthuzad] Scholomance), Tip (Tooltip - Basic)
+{
+Summon Scholomance
+}
+
+STRING 7107
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 2|r]
+}
+
+STRING 7108
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 3|r]
+}
+
+STRING 7109
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 4|r]
+}
+
+STRING 7110
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 5|r]
+}
+
+STRING 7111
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 6|r]
+}
+
+STRING 7112
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 7|r]
+}
+
+STRING 7113
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 8|r]
+}
+
+STRING 7114
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 9|r]
+}
+
+STRING 7115
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 10|r]
+}
+
+STRING 7116
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7117
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7118
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7119
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7120
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7121
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7122
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7123
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7124
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7125
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 1|r]
+}
+
+STRING 7126
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.0 damage per second. |nLasts 75.0 seconds.
+}
+
+STRING 7127
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 2|r]
+}
+
+STRING 7128
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 3|r]
+}
+
+STRING 7129
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 4|r]
+}
+
+STRING 7130
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 5|r]
+}
+
+STRING 7131
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 6|r]
+}
+
+STRING 7132
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 7|r]
+}
+
+STRING 7133
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 8|r]
+}
+
+STRING 7134
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 9|r]
+}
+
+STRING 7135
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 10|r]
+}
+
+STRING 7136
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.2 damage per second. |nLasts 76.0 seconds.
+}
+
+STRING 7137
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.5 damage per second. |nLasts 77.5 seconds.
+}
+
+STRING 7138
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.9 damage per second. |nLasts 79.5 seconds.
+}
+
+STRING 7139
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 3.4 damage per second. |nLasts 82.0 seconds.
+}
+
+STRING 7140
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 4.0 damage per second. |nLasts 85.0 seconds.
+}
+
+STRING 7141
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 4.7 damage per second. |nLasts 88.5 seconds.
+}
+
+STRING 7142
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 5.5 damage per second. |nLasts 92.5 seconds.
+}
+
+STRING 7143
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 6.4 damage per second. |nLasts 97.0 seconds.
+}
+
+STRING 7144
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 7.4 damage per second. |nLasts 102.0 seconds.
+}
+
+STRING 7145
+// Upgrades: R043 (Cannibalize), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 7146
+// Upgrades: R043 (Cannibalize), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7147
+// Upgrades: R043 (Cannibalize), effect2 (Effect 2)
+{
+rlev
+}
+
+STRING 7148
+// Upgrades: R043 (Cannibalize), effect3 (Effect 3)
+{
+rlev
+}
+
+STRING 7149
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague in a 550 radius. Scourge Plague deals 2 damage per second. |nLasts 75 seconds.
 }
 
