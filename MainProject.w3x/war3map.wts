@@ -22720,3 +22720,93 @@ STRING 7067
 Scourge Plague
 }
 
+STRING 7068
+// Units: H036 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7069
+// Units: H036 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7070
+// Units: H036 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Whitemane)
+}
+
+STRING 7071
+// Units: H037 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7072
+// Units: H037 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7073
+// Units: H037 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Uther)
+}
+
+STRING 7074
+// Units: H038 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7075
+// Units: H038 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7076
+// Units: H038 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Wrynn)
+}
+
+STRING 7077
+// Units: H039 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7078
+// Units: H039 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7079
+// Units: H039 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Thrall)
+}
+
+STRING 7080
+// Units: H03A ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7081
+// Units: H03A ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7082
+// Units: H03A ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Tyrande)
+}
+
