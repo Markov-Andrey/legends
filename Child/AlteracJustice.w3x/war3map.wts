@@ -18870,18 +18870,6 @@ STRING 6171
 Revive Kel'Thuzad
 }
 
-STRING 6172
-// Units: u00I ([Kelthuzad] Сultist), Name (Name)
-{
-[Kelthuzad] Сultist
-}
-
-STRING 6173
-// Units: u00I ([Kelthuzad] Сultist), Tip (Tooltip - Basic)
-{
-Train Сultist
-}
-
 STRING 6174
 // Units: u00J ([Kelthuzad] Necropolis), Name (Name)
 {
@@ -18985,15 +18973,9 @@ Summon Skeleton
 }
 
 STRING 6195
-// Units: u00P ([Kelthuzad] High Necromancer), Name (Name)
+// Units: u00Q ([Kelthuzad] High Necromancer), Name (Name)
 {
 [Kelthuzad] High Necromancer
-}
-
-STRING 6196
-// Units: u00P ([Kelthuzad] High Necromancer), Tip (Tooltip - Basic)
-{
-Train High Necromancer
 }
 
 STRING 6197
@@ -20220,12 +20202,6 @@ STRING 6548
 |cFFFF5A4B- No healing capabilities
 - Poor ranged support 
 - Economy relies on combat|R
-}
-
-STRING 6567
-// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
-{
-|cFFA068FFKel'Thuzad|R
 }
 
 STRING 6568
@@ -22085,27 +22061,1100 @@ STRING 6947
 [Kelthuzad] Temple of the Damned
 }
 
-STRING 6948
-// Units: u008 ([Kelthuzad] Ziggurat), Name (Name)
+STRING 6952
+// Units: u00R ([Kelthuzad] Naxxramas), Name (Name)
 {
-[Kelthuzad] Ziggurat
+[Kelthuzad] Naxxramas
 }
 
-STRING 6949
-// Units: u00D ([Kelthuzad] Spirit Tower), Name (Name)
+STRING 6953
+// Abilities: A0C4 ([Kelthuzad] Essence of Blight), Name (Name)
 {
-[Kelthuzad] Spirit Tower
+[Kelthuzad] Essence of Blight
 }
 
-STRING 6950
-// Units: u00M ([Kelthuzad] Nerubian Tower), Name (Name)
+STRING 6954
+// Abilities: A0C5 ([Kelthuzad] Spirit Touch), Name (Name)
 {
-[Kelthuzad] Nerubian Tower
+[Kelthuzad] Spirit Touch
 }
 
-STRING 6951
-// Units: u00Q ([Kelthuzad] High Necromancer), Name (Name)
+STRING 6955
+// Units: u008 ([Kelthuzad] Bone Ziggurat), Name (Name)
 {
-[Kelthuzad] High Necromancer
+[Kelthuzad] Bone Ziggurat
+}
+
+STRING 6956
+// Units: u008 ([Kelthuzad] Bone Ziggurat), Tip (Tooltip - Basic)
+{
+Summon Bone Ziggurat
+}
+
+STRING 6957
+// Abilities: A0C6 ([Kelthuzad] Create Corpse), Name (Name)
+{
+[Kelthuzad] Create Corpse
+}
+
+STRING 6958
+// Abilities: A0C6 ([Kelthuzad] Create Corpse), EditorSuffix (Editor Suffix)
+{
+(Bone Ziggurat)
+}
+
+STRING 6959
+// Abilities: A0C7 ([Kelthuzad] Create Corpse), Name (Name)
+{
+[Kelthuzad] Create Corpse
+}
+
+STRING 6960
+// Abilities: A0C7 ([Kelthuzad] Create Corpse), Tip (Tooltip - Normal)
+{
+Create Corpse
+}
+
+STRING 6961
+// Abilities: A0C7 ([Kelthuzad] Create Corpse), Ubertip (Tooltip - Normal - Extended)
+{
+Creates 1 corpse per 15 sec, up to 5 corpses simultaneously
+}
+
+STRING 6962
+// Units: u00D ([Kelthuzad] Bone Spirit Tower), Name (Name)
+{
+[Kelthuzad] Bone Spirit Tower
+}
+
+STRING 6963
+// Units: u00M ([Kelthuzad] Bone Nerubian Tower), Name (Name)
+{
+[Kelthuzad] Bone Nerubian Tower
+}
+
+STRING 6965
+// Abilities: A0C8 ([Kelthuzad] Blighted Gold Mine Ability), Name (Name)
+{
+[Kelthuzad] Blighted Gold Mine Ability
+}
+
+STRING 6966
+// Abilities: S00G ([Kelthuzad] Switch), EditorSuffix (Editor Suffix)
+{
+(Haunted Gold Mine)
+}
+
+STRING 6967
+// Abilities: S00G ([Kelthuzad] Switch), Name (Name)
+{
+[Kelthuzad] Switch
+}
+
+STRING 6969
+// Units: u00S ([Kelthuzad] Naxxramas Gold Assimilator), Name (Name)
+{
+[Kelthuzad] Naxxramas Gold Assimilator
+}
+
+STRING 6970
+// Units: u00S ([Kelthuzad] Naxxramas Gold Assimilator), Tip (Tooltip - Basic)
+{
+Build Naxxramas Gold Assimilator
+}
+
+STRING 6971
+// Abilities: A0C9 ([Kelthuzad] Cursed Gold Absorption), Name (Name)
+{
+[Kelthuzad] Cursed Gold Absorption
+}
+
+STRING 6972
+// Abilities: A0C9 ([Kelthuzad] Cursed Gold Absorption), Tip (Tooltip - Normal)
+{
+Cursed Gold Absorption
+}
+
+STRING 6974
+// Abilities: A0CA ([Kelthuzad] Corpse Consumption), Tip (Tooltip - Normal)
+{
+Corpse Consumption
+}
+
+STRING 6975
+// Abilities: A0CA ([Kelthuzad] Corpse Consumption), Ubertip (Tooltip - Normal - Extended)
+{
+Sacrifice a corpse to the Book of the Dead, consuming its spiritual remains to restore one charge. The book hungers for the dead
+}
+
+STRING 6976
+// Abilities: A0CA ([Kelthuzad] Corpse Consumption), Name (Name)
+{
+[Kelthuzad] Corpse Consumption
+}
+
+STRING 6977
+// Units: U00T ([Kelthuzad] Book Of Death), Name (Name)
+{
+[Kelthuzad] Book Of Death
+}
+
+STRING 6978
+// Units: U00T ([Kelthuzad] Book Of Death), Tip (Tooltip - Basic)
+{
+Book Of Death
+}
+
+STRING 6979
+// Units: u00I ([Kelthuzad] Cultist), Name (Name)
+{
+[Kelthuzad] Cultist
+}
+
+STRING 6980
+// Units: u00I ([Kelthuzad] Cultist), Tip (Tooltip - Basic)
+{
+Train Cultist
+}
+
+STRING 6981
+// Units: u00U ([Kelthuzad] Shade), Name (Name)
+{
+[Kelthuzad] Shade
+}
+
+STRING 6982
+// Abilities: A0C9 ([Kelthuzad] Cursed Gold Absorption), Ubertip (Tooltip - Normal - Extended)
+{
+Automatically siphons gold from the target mine every 10 seconds. You receive 50 gold, but the curse devours an extra 5 gold from the mine's permanent reserve, slowly degrading it to nothing
+}
+
+STRING 6983
+// Abilities: A0CB ([Kelthuzad] Sacrifice), Name (Name)
+{
+[Kelthuzad] Sacrifice
+}
+
+STRING 6984
+// Abilities: A0CB ([Kelthuzad] Sacrifice), Tip (Tooltip - Normal)
+{
+Sacrifice
+}
+
+STRING 6985
+// Abilities: A0CB ([Kelthuzad] Sacrifice), Ubertip (Tooltip - Normal - Extended)
+{
+Target a Sacrificial Pit to sacrifice the Acolyte and turn it into a Shade. Shades are invisible spirits that can see invisible units. |nShades cannot attack.
+}
+
+STRING 6986
+// Units: n011 ([Kelthuzad] Zombie), Name (Name)
+{
+[Kelthuzad] Zombie
+}
+
+STRING 6987
+// Abilities: A0CC ([Arthas] Skeleton Key), Name (Name)
+{
+[Arthas] Skeleton Key
+}
+
+STRING 6988
+// Abilities: A0CC ([Arthas] Skeleton Key), Tip (Tooltip - Normal)
+{
+Skeleton Key
+}
+
+STRING 6989
+// Abilities: A0CC ([Arthas] Skeleton Key), Ubertip (Tooltip - Normal - Extended)
+{
+Unlocks all building requirements.
+}
+
+STRING 6990
+// Units: u00P ([Arthas] Haunted Gold Mine), Name (Name)
+{
+[Arthas] Haunted Gold Mine
+}
+
+STRING 6991
+// Abilities: S00H ([Arthas] Switch), EditorSuffix (Editor Suffix)
+{
+(Haunted Gold Mine)
+}
+
+STRING 6992
+// Abilities: S00H ([Arthas] Switch), Name (Name)
+{
+[Arthas] Switch
+}
+
+STRING 6993
+// Units: u00V ([Arthas] Temple of the Damned), Name (Name)
+{
+[Arthas] Temple of the Damned
+}
+
+STRING 6994
+// Units: u00W ([Arthas] Necromancer), Name (Name)
+{
+[Arthas] Necromancer
+}
+
+STRING 6995
+// Units: u00X ([Kelthuzad] Plague Spreader), Name (Name)
+{
+[Kelthuzad] Plague Spreader
+}
+
+STRING 6996
+// Units: u00X ([Kelthuzad] Plague Spreader), Tip (Tooltip - Basic)
+{
+Create Plague Spreader
+}
+
+STRING 6997
+// Abilities: A0CE ([Kelthuzad] Blight Placement), Name (Name)
+{
+[Kelthuzad] Blight Placement
+}
+
+STRING 6998
+// Abilities: A0CE ([Kelthuzad] Blight Placement), Tip (Tooltip - Normal)
+{
+Blight Placement
+}
+
+STRING 7001
+// Abilities: A0CE ([Kelthuzad] Blight Placement), Ubertip (Tooltip - Normal - Extended)
+{
+Creates an area of Blight at target location. The corruption spreads over several seconds, sequentially unearthing 5 corpses within the affected zone. Duration: 6 seconds.
+}
+
+STRING 7002
+// Abilities: A0CD ([UI] Race: Kel'Thuzad), Name (Name)
+{
+[UI] Race: Kel'Thuzad
+}
+
+STRING 7003
+// Abilities: A0CD ([UI] Race: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFRace|R
+}
+
+STRING 7004
+// Abilities: A0CD ([UI] Race: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF48BFFFRace:|R Undead
+|cFF48BFFFSubrace:|R Cult of the Damned
+}
+
+STRING 7005
+// Abilities: A0CF ([UI] History: Kel'Thuzad), Name (Name)
+{
+[UI] History: Kel'Thuzad
+}
+
+STRING 7006
+// Abilities: A0CF ([UI] History: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFHistory|R
+}
+
+STRING 7007
+// Abilities: A0CF ([UI] History: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+Kel'Thuzad
+
+Once a powerful archmage of the Kirin Tor, obsessed with forbidden necromancy.
+
+Exiled for his dark studies, he sought out the Lich King Ner'zhul and pledged his soul to the Scourge.
+
+As the founder of the Cult of the Damned, he spread plague across Lordaeron, paving the way for Arthas's fall.
+
+After his death and resurrection as a lich, Kel'Thuzad became the supreme general of the Scourge — the right hand of Arthas himself. Cold, cunning, and utterly loyal, he commands the armies of the dead with terrifying intelligence.
+}
+
+STRING 7008
+// Abilities: A0CG ([UI] Mechanics: Kel'Thuzad), Name (Name)
+{
+[UI] Mechanics: Kel'Thuzad
+}
+
+STRING 7009
+// Abilities: A0CG ([UI] Mechanics: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFMechanics|R
+}
+
+STRING 7010
+// Abilities: A0CG ([UI] Mechanics: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Corpse Harvest|R - Collect corpses to replenish the Book of the Dead.
+|cFF00C850- Book of the Dead|R - Summon rare powerful undead.
+|cFF00C850- Scholomance|R - Develop powerful Scourge Blight to dominate the enemy.
+}
+
+STRING 7011
+// Abilities: A0CH ([UI] Features: Kel'Thuzad), Name (Name)
+{
+[UI] Features: Kel'Thuzad
+}
+
+STRING 7012
+// Abilities: A0CH ([UI] Features: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00B0FFFeatures
+}
+
+STRING 7013
+// Abilities: A0CH ([UI] Features: Kel'Thuzad), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF00C850- Mass army & strong elite
+- Corpse interaction
+- Curses|R
+|cFFFF5A4B- Low unit health
+- Weak damage|R
+}
+
+STRING 7014
+// Abilities: A0AB ([UI] Legends: Kel'Thuzad), Tip (Tooltip - Normal)
+{
+|cFF00C850Kel'Thuzad|R
+}
+
+STRING 7015
+// Units: H02J ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(All)
+}
+
+STRING 7016
+// Units: H033 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7017
+// Units: H033 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7018
+// Units: H033 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Arthas)
+}
+
+STRING 7019
+// Units: H034 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7020
+// Units: H034 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7021
+// Units: H034 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Kel'Thuzad)
+}
+
+STRING 7022
+// Units: U013 ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7023
+// Units: U013 ([Kelthuzad] Scourge Plague), Tip (Tooltip - Basic)
+{
+Scourge Plague
+}
+
+STRING 7024
+// Units: u019 ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7025
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 1|r]
+}
+
+STRING 7026
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7027
+// Units: H035 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7028
+// Units: H035 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7029
+// Units: H035 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Hellscream)
+}
+
+STRING 7030
+// Abilities: A0CJ ([Kelthuzad] Burial Fund), Name (Name)
+{
+[Kelthuzad] Burial Fund
+}
+
+STRING 7031
+// Upgrades: R03Z (Freezing Breath), Tip (Tooltip)
+{
+Research Burial Fund
+}
+
+STRING 7032
+// Upgrades: R03Z (Freezing Breath), Ubertip (Tooltip - Extended)
+{
+Cult Bandits gain the ability upon death to refund half of their cost
+}
+
+STRING 7033
+// Abilities: A0CJ ([Kelthuzad] Burial Fund), Tip (Tooltip - Normal)
+{
+Burial Fund
+}
+
+STRING 7035
+// Upgrades: R03Z (Freezing Breath), Name (Name)
+{
+[Kelthuzad] Burial Fund
+}
+
+STRING 7036
+// Abilities: A0CJ ([Kelthuzad] Burial Fund), Ubertip (Tooltip - Normal - Extended)
+{
+|cFF24BBFF"Lived less than 2 hours — can I get a refund?"|r
+
+Upon death, refunds half of its cost.
+}
+
+STRING 7037
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7038
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7039
+// Units: U013 ([Kelthuzad] Scourge Plague), Propernames (Proper Names)
+{
+Scourge Plague
+}
+
+STRING 7040
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), EditorSuffix (Editor Suffix)
+{
+(Bandits)
+}
+
+STRING 7042
+// Upgrades: R040 (Ghoul Frenzy), Name (Name)
+{
+[Kelthuzad] Hidden Strain
+}
+
+STRING 7043
+// Upgrades: R040 (Ghoul Frenzy), Tip (Tooltip)
+{
+Research Hidden Strain
+}
+
+STRING 7044
+// Upgrades: R040 (Ghoul Frenzy), Ubertip (Tooltip - Extended)
+{
+Bandits carry the Plague on themselves.
+}
+
+STRING 7045
+// Abilities: A0CL ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague
+}
+
+STRING 7046
+// Abilities: A0CL ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7047
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7048
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague
+}
+
+STRING 7049
+// Buffs/Effects: B024 ([Kelthuzad] Scourge Plague Cloud), EditorName (Name (Editor Only))
+{
+[Kelthuzad] Scourge Plague Cloud
+}
+
+STRING 7050
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), Buffubertip (Tooltip - Extended)
+{
+This unit is Scourge Plague; it will take damage over time.
+}
+
+STRING 7051
+// Abilities: A0CM ([Kelthuzad] Boots Of Speed), Name (Name)
+{
+[Kelthuzad] Boots Of Speed
+}
+
+STRING 7052
+// Upgrades: R041 (Disease Cloud), Tip (Tooltip)
+{
+Research Boots Of Speed
+}
+
+STRING 7053
+// Upgrades: R041 (Disease Cloud), Ubertip (Tooltip - Extended)
+{
+Adds additional speed to Bandits
+}
+
+STRING 7054
+// Abilities: A0CM ([Kelthuzad] Boots Of Speed), Tip (Tooltip - Normal)
+{
+Boots Of Speed
+}
+
+STRING 7055
+// Abilities: A0CM ([Kelthuzad] Boots Of Speed), Ubertip (Tooltip - Normal - Extended)
+{
+Adds additional speed
+}
+
+STRING 7056
+// Upgrades: R041 (Disease Cloud), Name (Name)
+{
+[Kelthuzad] Boots Of Speed
+}
+
+STRING 7057
+// Upgrades: R041 (Disease Cloud), effect1 (Effect 1)
+{
+rmvx
+}
+
+STRING 7058
+// Abilities: A0CN ([Kelthuzad] Experiment Victim), Name (Name)
+{
+[Kelthuzad] Experiment Victim
+}
+
+STRING 7059
+// Abilities: A0CN ([Kelthuzad] Experiment Victim), Tip (Tooltip - Normal)
+{
+Experiment Victim
+}
+
+STRING 7063
+// Abilities: A0CN ([Kelthuzad] Experiment Victim), Ubertip (Tooltip - Normal - Extended)
+{
+Unit was a victim of inhuman plague experiments. It constantly loses health. Instantly gain +3 Scourge Plague research.
+}
+
+STRING 7064
+// Units: u01B ([Kelthuzad] Black Citadel), Name (Name)
+{
+[Kelthuzad] Black Citadel
+}
+
+STRING 7065
+// Units: u01G ([Kelthuzad] Halls of the Dead), Name (Name)
+{
+[Kelthuzad] Halls of the Dead
+}
+
+STRING 7066
+// Units: U00T ([Kelthuzad] Book Of Death), Propernames (Proper Names)
+{
+Book Of Death
+}
+
+STRING 7067
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), Bufftip (Tooltip)
+{
+Scourge Plague
+}
+
+STRING 7068
+// Units: H036 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7069
+// Units: H036 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7070
+// Units: H036 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Whitemane)
+}
+
+STRING 7071
+// Units: H037 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7072
+// Units: H037 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7073
+// Units: H037 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Uther)
+}
+
+STRING 7074
+// Units: H038 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7075
+// Units: H038 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7076
+// Units: H038 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Wrynn)
+}
+
+STRING 7077
+// Units: H039 ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7078
+// Units: H039 ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7079
+// Units: H039 ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Thrall)
+}
+
+STRING 7080
+// Units: H03A ([UI] F1), Name (Name)
+{
+[UI] F1
+}
+
+STRING 7081
+// Units: H03A ([UI] F1), Propernames (Proper Names)
+{
+All units orders
+}
+
+STRING 7082
+// Units: H03A ([UI] F1), EditorSuffix (Name - Editor Suffix)
+{
+(Tyrande)
+}
+
+STRING 7084
+// Units: u020 ([Kelthuzad] Plague Wagon), Name (Name)
+{
+[Kelthuzad] Plague Wagon
+}
+
+STRING 7085
+// Units: u020 ([Kelthuzad] Plague Wagon), Tip (Tooltip - Basic)
+{
+Train Plague Wagon
+}
+
+STRING 7086
+// Abilities: A0CO ([Kelthuzad] Cargo from Andorhal), Name (Name)
+{
+[Kelthuzad] Cargo from Andorhal
+}
+
+STRING 7087
+// Abilities: A0CO ([Kelthuzad] Cargo from Andorhal), Tip (Tooltip - Normal)
+{
+Cargo from Andorhal
+}
+
+STRING 7088
+// Abilities: A0CP ([Kelthuzad] Cargo Andorhal), Name (Name)
+{
+[Kelthuzad] Cargo Andorhal
+}
+
+STRING 7089
+// Abilities: A0CP ([Kelthuzad] Cargo Andorhal), EditorSuffix (Editor Suffix)
+{
+ (Zombie)
+}
+
+STRING 7090
+// Abilities: A0CP ([Kelthuzad] Cargo Andorhal), Tip (Tooltip - Normal)
+{
+Cargo Andorhal
+}
+
+STRING 7094
+// Abilities: A0CO ([Kelthuzad] Cargo from Andorhal), Ubertip (Tooltip - Normal - Extended)
+{
+Sacrifice the unit to capture a target enemy building. The building cannot produce anything or attack. If the target building produces food, you gain a Zombie every 15 seconds. The Zombie lasts 60 seconds.
+}
+
+STRING 7095
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), EditorSuffix (Editor Suffix)
+{
+(Plague Wagon)
+}
+
+STRING 7097
+// Buffs/Effects: B023 ([Kelthuzad] Scourge Plague), EditorName (Name (Editor Only))
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7100
+// Upgrades: R042 (Ghoul Frenzy), Name (Name)
+{
+[Kelthuzad] Plague Convoy
+}
+
+STRING 7101
+// Upgrades: R042 (Ghoul Frenzy), Tip (Tooltip)
+{
+Research Plague Convoy
+}
+
+STRING 7102
+// Upgrades: R042 (Ghoul Frenzy), Ubertip (Tooltip - Extended)
+{
+Plague Wagon carries the Scourge Plague on itself.
+}
+
+STRING 7103
+// Units: u021 ([Kelthuzad] Slaughterhouse), Name (Name)
+{
+[Kelthuzad] Slaughterhouse
+}
+
+STRING 7104
+// Units: u022 ([Kelthuzad] Scholomance), Name (Name)
+{
+[Kelthuzad] Scholomance
+}
+
+STRING 7105
+// Units: u022 ([Kelthuzad] Scholomance), Tip (Tooltip - Basic)
+{
+Summon Scholomance
+}
+
+STRING 7107
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 2|r]
+}
+
+STRING 7108
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 3|r]
+}
+
+STRING 7109
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 4|r]
+}
+
+STRING 7110
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 5|r]
+}
+
+STRING 7111
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 6|r]
+}
+
+STRING 7112
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 7|r]
+}
+
+STRING 7113
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 8|r]
+}
+
+STRING 7114
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 9|r]
+}
+
+STRING 7115
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 10|r]
+}
+
+STRING 7116
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7117
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7118
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7119
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7120
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7121
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7122
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7123
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7124
+// Abilities: A0CI ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Afflicts enemies with a deadly plague, dealing 2 damage per second for 10 seconds. Range: 75.
+}
+
+STRING 7125
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 1|r]
+}
+
+STRING 7126
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.0 damage per second. |nLasts 75.0 seconds.
+}
+
+STRING 7127
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 2|r]
+}
+
+STRING 7128
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 3|r]
+}
+
+STRING 7129
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 4|r]
+}
+
+STRING 7130
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 5|r]
+}
+
+STRING 7131
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 6|r]
+}
+
+STRING 7132
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 7|r]
+}
+
+STRING 7133
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 8|r]
+}
+
+STRING 7134
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 9|r]
+}
+
+STRING 7135
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Tip (Tooltip - Normal)
+{
+Scourge Plague - [|cffffcc00Level 10|r]
+}
+
+STRING 7136
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.2 damage per second. |nLasts 76.0 seconds.
+}
+
+STRING 7137
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.5 damage per second. |nLasts 77.5 seconds.
+}
+
+STRING 7138
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 2.9 damage per second. |nLasts 79.5 seconds.
+}
+
+STRING 7139
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 3.4 damage per second. |nLasts 82.0 seconds.
+}
+
+STRING 7140
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 4.0 damage per second. |nLasts 85.0 seconds.
+}
+
+STRING 7141
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 4.7 damage per second. |nLasts 88.5 seconds.
+}
+
+STRING 7142
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 5.5 damage per second. |nLasts 92.5 seconds.
+}
+
+STRING 7143
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 6.4 damage per second. |nLasts 97.0 seconds.
+}
+
+STRING 7144
+// Abilities: A0CK ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague. Scourge Plague deals 7.4 damage per second. |nLasts 102.0 seconds.
+}
+
+STRING 7145
+// Upgrades: R043 (Cannibalize), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 7146
+// Upgrades: R043 (Cannibalize), Name (Name)
+{
+[Kelthuzad] Scourge Plague
+}
+
+STRING 7147
+// Upgrades: R043 (Cannibalize), effect2 (Effect 2)
+{
+rlev
+}
+
+STRING 7148
+// Upgrades: R043 (Cannibalize), effect3 (Effect 3)
+{
+rlev
+}
+
+STRING 7149
+// Abilities: A0CQ ([Kelthuzad] Scourge Plague), Ubertip (Tooltip - Normal - Extended)
+{
+Infects nearby enemy living units with Scourge Plague in a 550 radius. Scourge Plague deals 2 damage per second. |nLasts 75 seconds.
 }
 

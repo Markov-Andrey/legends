@@ -133,7 +133,7 @@ integer udg_WarsongCountOrc= 0
 player udg_PlayerUther= null
 
     // Generated
-trigger gg_trg_IniLimitUnitsF1= null
+trigger gg_trg_IniLimitUnits= null
 trigger gg_trg_IniStartResouces= null
 trigger gg_trg_IniSelectUnit= null
 trigger gg_trg_BtnF1= null
@@ -241,6 +241,14 @@ trigger gg_trg_WhitemaneZealotSacriGift= null
 trigger gg_trg_WhitemaneGraveyardBurn= null
 trigger gg_trg_WhitemaneFastBuild= null
 trigger gg_trg_KelthuzadIni= null
+trigger gg_trg_KelthuzadMineAddAbility= null
+trigger gg_trg_KelthuzadMineAutogold= null
+trigger gg_trg_KelthuzadExperimentVictim= null
+trigger gg_trg_KelthuzadSpreaderBlight= null
+trigger gg_trg_KelthuzadCultistSacrifice= null
+trigger gg_trg_KelthuzadCultistBuild= null
+trigger gg_trg_KelthuzadCultistCorpse= null
+trigger gg_trg_KelthuzadBurialFund= null
 trigger gg_trg_HellscreamIni= null
 trigger gg_trg_HellscreamEnraged= null
 trigger gg_trg_HellscreamExecute= null
@@ -372,7 +380,12 @@ trigger gg_trg_ChestAllHide= null
 trigger gg_trg_ChestNeutralDead= null
 trigger gg_trg_ChestSelectLoot= null
 trigger gg_trg_ChestLoot= null
-trigger gg_trg_KelthuzadCultistBuild= null
+trigger gg_trg_KelthuzadPlagueCauldron= null
+trigger gg_trg_KelthuzadCargoAndorhal= null
+trigger gg_trg_KelthuzadUnitsSold= null
+trigger gg_trg_KelthuzadCargoAndorhalZombie= null
+trigger gg_trg_KelthuzadScourgePlagueLevel= null
+trigger gg_trg_KelthuzadTEST= null
 
     // Random Groups
 integer array gg_rg_000
@@ -988,7 +1001,7 @@ endglobals
         call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile06")
         call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile-timeindicatorframe")
         call AddCustomConsole(index , "UI\\Console\\Arthas\\undeaduitile-inventorycover")
-        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNAcolyte")
+        call AddCustomConsole(index , "Legends\\Arthas\\Acolyte\\BTN_Arthas_Acolyte_Deceiver")
         set CustomConsoleUI_x[index]=0.000
         set CustomConsoleUI_y[index]=0.0
 
@@ -1027,7 +1040,7 @@ endglobals
         call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile06")
         call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile-timeindicatorframe")
         call AddCustomConsole(index , "UI\\Console\\Kelthuzad\\undeaduitile-inventorycover")
-        call AddCustomConsole(index , "ReplaceableTextures\\CommandButtons\\BTNAcolyte")
+        call AddCustomConsole(index , "Legends\\Kelthuzad\\Acolyte\\BTN_Kelthuzad_Acolyte_Heretic")
         set CustomConsoleUI_x[index]=0.000
         set CustomConsoleUI_y[index]=0.0
 
@@ -1714,17 +1727,6 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-function CreateBuildingsForPlayer0 takes nothing returns nothing
-    local player p= Player(0)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'o01O', 832.0, 1344.0, 270.000, 'o01O')
-endfunction
-
-//===========================================================================
 function CreateUnitsForPlayer0 takes nothing returns nothing
     local player p= Player(0)
     local unit u
@@ -2272,7 +2274,6 @@ endfunction
 
 //===========================================================================
 function CreatePlayerBuildings takes nothing returns nothing
-    call CreateBuildingsForPlayer0()
     call CreateBuildingsForPlayer5()
 endfunction
 
@@ -2287,7 +2288,7 @@ endfunction
 //===========================================================================
 function CreateAllUnits takes nothing returns nothing
     call CreateNeutralPassiveBuildings()
-    call CreatePlayerBuildings()
+    call CreateBuildingsForPlayer5() // INLINED!!
     call CreateNeutralHostile()
     call CreatePlayerUnits()
 endfunction
@@ -2299,21 +2300,19 @@ endfunction
 //***************************************************************************
 
 //===========================================================================
-// Trigger: IniLimitUnitsF1
+// Trigger: IniLimitUnits
 //
 // Construction Limit for Unique Units
 //===========================================================================
-function Trig_IniLimitUnitsF1_Func001Func001C takes nothing returns boolean
+function Trig_IniLimitUnits_Func001Func001C takes nothing returns boolean
     if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
-    if ( Trig_IniLimitUnitsF1_Func001Func001C() ) then
-        call CreateNUnitsAtLoc(1, 'H02J', GetEnumPlayer(), GetPlayerStartLocationLoc(GetOwningPlayer(GetEnumUnit())), bj_UNIT_FACING)
-        call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+function Trig_IniLimitUnits_Func001A takes nothing returns nothing
+    if ( Trig_IniLimitUnits_Func001Func001C() ) then
         call SetPlayerTechMaxAllowedSwap('u000', 0, GetEnumPlayer())
         // Arthas
         call SetPlayerTechMaxAllowedSwap('U006', 1, GetEnumPlayer())
@@ -2336,7 +2335,9 @@ function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
         call SetPlayerTechMaxAllowedSwap('H02B', 1, GetEnumPlayer())
         // Kelthuzad
         call SetPlayerTechMaxAllowedSwap('U00H', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('u022', 1, GetEnumPlayer())
         call SetPlayerTechMaxAllowedSwap('u00K', 1, GetEnumPlayer())
+        call SetPlayerTechMaxAllowedSwap('u020', 3, GetEnumPlayer())
         // Hellscream
         call SetPlayerTechMaxAllowedSwap('O013', 1, GetEnumPlayer())
         call SetPlayerTechMaxAllowedSwap('o016', 1, GetEnumPlayer())
@@ -2345,14 +2346,14 @@ function Trig_IniLimitUnitsF1_Func001A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_IniLimitUnitsF1_Actions takes nothing returns nothing
-    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniLimitUnitsF1_Func001A)
+function Trig_IniLimitUnits_Actions takes nothing returns nothing
+    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function Trig_IniLimitUnits_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_IniLimitUnitsF1 takes nothing returns nothing
-    set gg_trg_IniLimitUnitsF1=CreateTrigger()
-    call TriggerAddAction(gg_trg_IniLimitUnitsF1, function Trig_IniLimitUnitsF1_Actions)
+function InitTrig_IniLimitUnits takes nothing returns nothing
+    set gg_trg_IniLimitUnits=CreateTrigger()
+    call TriggerAddAction(gg_trg_IniLimitUnits, function Trig_IniLimitUnits_Actions)
 endfunction
 
 //===========================================================================
@@ -2400,18 +2401,55 @@ endfunction
 //===========================================================================
 // Trigger: BtnF1
 //===========================================================================
+function IsForbiddenUnitType takes integer unitId returns boolean
+    local integer i= 0
+    local integer array ids
+    
+    set ids[0]='H02J'
+    set ids[1]='H033'
+    set ids[2]='H034'
+    set ids[3]='H035'
+    set ids[4]='H036'
+    set ids[5]='H037'
+    set ids[6]='H038'
+    set ids[7]='H039'
+    set ids[8]='H03A'
+    
+    loop
+        exitwhen i > 8
+        if unitId == ids[i] then
+            return true
+        endif
+        set i=i + 1
+    endloop
+    return false
+endfunction
+
 function Trig_BtnF1_Conditions takes nothing returns boolean
-    return GetUnitTypeId(GetOrderedUnit()) == 'H02J'
+    return IsForbiddenUnitType(GetUnitTypeId(GetOrderedUnit()))
 endfunction
 
-function Trig_BtnF1_UnitFilter_All takes nothing returns boolean
+function Trig_BtnF1_UnitFilter takes nothing returns boolean
     local unit u= GetFilterUnit()
-    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1
-endfunction
-
-function Trig_BtnF1_UnitFilter_NoWalk takes nothing returns boolean
-    local unit u= GetFilterUnit()
-    return not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) and GetUnitTypeId(u) != 'H02J' and GetUnitAbilityLevel(u, 'Aloc') != 1 and GetUnitAbilityLevel(u, 'A09E') != 1 and GetUnitAbilityLevel(u, 'A09D') != 1
+    local boolean allowWalk= ( GetUnitAbilityLevel(GetOrderedUnit(), 'A09F') == 1 )
+    
+    if IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_PEON) then
+        return false
+    endif
+    
+    if IsForbiddenUnitType(GetUnitTypeId(u)) then
+        return false
+    endif
+    
+    if GetUnitAbilityLevel(u, 'Aloc') == 1 or GetUnitAbilityLevel(u, 'A09E') == 1 then
+        return false
+    endif
+    
+    if not allowWalk and GetUnitAbilityLevel(u, 'A09D') == 1 then
+        return false
+    endif
+    
+    return true
 endfunction
 
 function Trig_BtnF1_Actions takes nothing returns nothing
@@ -2420,30 +2458,27 @@ function Trig_BtnF1_Actions takes nothing returns nothing
     local integer orderId= GetIssuedOrderId()
     local unit targetUnit= GetOrderTargetUnit()
     local location targetLoc= GetOrderPointLoc()
-    local group g= null
+    local group g= CreateGroup()
     local unit u
     local integer unitCount= 0
-
+    local boolexpr filter= Condition(function Trig_BtnF1_UnitFilter)
+    
     if orderId == 0 then
-        if targetLoc != null then
-            call RemoveLocation(targetLoc)
-        endif
+        call DestroyGroup(g)
+        call RemoveLocation(targetLoc)
+        call DestroyBoolExpr(filter)
         return
     endif
-
-    if GetUnitAbilityLevel(orderedUnit, 'A09F') != 1 then
-        set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter_All))
-    else
-        set g=GetUnitsOfPlayerMatching(p, Condition(function Trig_BtnF1_UnitFilter_NoWalk))
-    endif
-
-    if g != null then
-        loop
-            set u=FirstOfGroup(g)
-            exitwhen u == null
-
+    
+    call GroupEnumUnitsOfPlayer(g, p, filter)
+    
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        
+        if u != orderedUnit then
             set unitCount=unitCount + 1
-
+            
             if targetUnit != null then
                 call IssueTargetOrderById(u, orderId, targetUnit)
             elseif targetLoc != null then
@@ -2451,17 +2486,15 @@ function Trig_BtnF1_Actions takes nothing returns nothing
             else
                 call IssueImmediateOrderById(u, orderId)
             endif
-
-            call GroupRemoveUnit(g, u)
-        endloop
-
-        call DestroyGroup(g)
-    endif
-
-    if targetLoc != null then
-        call RemoveLocation(targetLoc)
-    endif
-
+        endif
+        
+        call GroupRemoveUnit(g, u)
+    endloop
+    
+    call DestroyGroup(g)
+    call RemoveLocation(targetLoc)
+    call DestroyBoolExpr(filter)
+    
     call SetUnitState(orderedUnit, UNIT_STATE_MANA, I2R(unitCount))
 endfunction
 
@@ -2473,7 +2506,6 @@ function InitTrig_BtnF1 takes nothing returns nothing
     call TriggerAddCondition(gg_trg_BtnF1, Condition(function Trig_BtnF1_Conditions))
     call TriggerAddAction(gg_trg_BtnF1, function Trig_BtnF1_Actions)
 endfunction
-
 //===========================================================================
 // Trigger: OrderHoldPatrol
 //===========================================================================
@@ -2573,11 +2605,24 @@ function Trig_OrderHarvest_Func001Func002C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_OrderHarvest_Func001Func004C takes nothing returns boolean
+    if ( ( GetUnitAbilityLevelSwapped('Ahrl', GetOrderedUnit()) == 1 ) ) then
+        return true
+    endif
+    if ( ( GetUnitAbilityLevelSwapped('A0AC', GetOrderedUnit()) == 1 ) ) then
+        return true
+    endif
+    if ( ( GetUnitAbilityLevelSwapped('A0AX', GetOrderedUnit()) == 1 ) ) then
+        return true
+    endif
+    return false
+endfunction
+
 function Trig_OrderHarvest_Func001C takes nothing returns boolean
     if ( not ( IsDestructableAliveBJ(GetOrderTargetDestructable()) == true ) ) then
         return false
     endif
-    if ( not ( GetUnitAbilityLevelSwapped('Ahrl', GetOrderedUnit()) == 1 ) ) then
+    if ( not Trig_OrderHarvest_Func001Func004C() ) then
         return false
     endif
     return true
@@ -2886,7 +2931,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseArthas
 //===========================================================================
-function Trig_ChooseArthas_Func001C takes nothing returns boolean
+function Trig_ChooseArthas_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -2897,36 +2942,45 @@ function Trig_ChooseArthas_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseArthas_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseArthas_Func001C() ) then
+    if ( not Trig_ChooseArthas_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseArthas_Func008A takes nothing returns nothing
+function Trig_ChooseArthas_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u009', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func010A takes nothing returns nothing
+function Trig_ChooseArthas_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u010', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseArthas_Func012A takes nothing returns nothing
+function Trig_ChooseArthas_Func016A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00A', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
+function Trig_ChooseArthas_Func031A takes nothing returns nothing
+    call SetResourceAmount(GetEnumUnit(), 12500)
+    call UnitAddAbilityBJ('A0C9', GetEnumUnit())
+endfunction
+
 function Trig_ChooseArthas_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H033', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 8)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseArthas_Func012A)
     // Ghoul
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseArthas_Func014A)
     // Acolyte
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func012A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseArthas_Func016A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers
@@ -2939,6 +2993,9 @@ function Trig_ChooseArthas_Actions takes nothing returns nothing
     call UpdateArthasText(GetOwningPlayer(GetSpellAbilityUnit()) , I2S(udg_ArthasSouls))
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_PURPLE, true)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
+    call TriggerSleepAction(0.10)
+    // Haunted Gold Mine
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00P'), function Trig_ChooseArthas_Func031A)
 endfunction
 
 //===========================================================================
@@ -2952,7 +3009,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseKelthuzad
 //===========================================================================
-function Trig_ChooseKelthuzad_Func001C takes nothing returns boolean
+function Trig_ChooseKelthuzad_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -2963,37 +3020,50 @@ function Trig_ChooseKelthuzad_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseKelthuzad_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseKelthuzad_Func001C() ) then
+    if ( not Trig_ChooseKelthuzad_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseKelthuzad_Func008A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00J', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseKelthuzad_Func010A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h02R', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseKelthuzad_Func012A takes nothing returns nothing
+function Trig_ChooseKelthuzad_Func016A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'u00I', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
+function Trig_ChooseKelthuzad_Func032A takes nothing returns nothing
+    call SetResourceAmount(GetEnumUnit(), 12500)
+    call UnitAddAbilityBJ('A0C9', GetEnumUnit())
+endfunction
+
 function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H034', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 11)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_UNDEAD, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Necropolis
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseKelthuzad_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'unpl'), function Trig_ChooseKelthuzad_Func012A)
     // Ghoul
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseKelthuzad_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'ugho'), function Trig_ChooseKelthuzad_Func014A)
     // Acolyte
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseKelthuzad_Func012A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'uaco'), function Trig_ChooseKelthuzad_Func016A)
     // ----------------------
+    call CreateNUnitsAtLoc(1, 'U00T', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    call CreateNUnitsAtLoc(1, 'U013', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
     call RemoveUnit(GetSpellAbilityUnit())
     // Run-ALL-triggers
     set udg_PlayerKelthuzad=GetOwningPlayer(GetSpellAbilityUnit())
@@ -3002,6 +3072,9 @@ function Trig_ChooseKelthuzad_Actions takes nothing returns nothing
     // SoulsScore
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_GREEN, true)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
+    call TriggerSleepAction(0.10)
+    // Haunted Gold Mine
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00S'), function Trig_ChooseKelthuzad_Func032A)
 endfunction
 
 //===========================================================================
@@ -3015,7 +3088,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseUther
 //===========================================================================
-function Trig_ChooseUther_Func001C takes nothing returns boolean
+function Trig_ChooseUther_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3026,30 +3099,34 @@ function Trig_ChooseUther_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseUther_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseUther_Func001C() ) then
+    if ( not Trig_ChooseUther_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseUther_Func008A takes nothing returns nothing
+function Trig_ChooseUther_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00A', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseUther_Func010A takes nothing returns nothing
+function Trig_ChooseUther_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00O', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseUther_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H037', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 5)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseUther_Func012A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseUther_Func014A)
     // ----------------------
     call CreateNUnitsAtLoc(1, 'H032', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
     // ----------------------
@@ -3073,7 +3150,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseWrynn
 //===========================================================================
-function Trig_ChooseWrynn_Func001C takes nothing returns boolean
+function Trig_ChooseWrynn_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3084,30 +3161,34 @@ function Trig_ChooseWrynn_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseWrynn_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseWrynn_Func001C() ) then
+    if ( not Trig_ChooseWrynn_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseWrynn_Func008A takes nothing returns nothing
+function Trig_ChooseWrynn_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h00F', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseWrynn_Func010A takes nothing returns nothing
+function Trig_ChooseWrynn_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h017', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseWrynn_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H038', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 7)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWrynn_Func012A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWrynn_Func014A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_NAVY, true)
@@ -3128,7 +3209,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseWhitemane
 //===========================================================================
-function Trig_ChooseWhitemane_Func001C takes nothing returns boolean
+function Trig_ChooseWhitemane_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3139,30 +3220,34 @@ function Trig_ChooseWhitemane_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseWhitemane_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseWhitemane_Func001C() ) then
+    if ( not Trig_ChooseWhitemane_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseWhitemane_Func008A takes nothing returns nothing
+function Trig_ChooseWhitemane_Func012A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h01S', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
-function Trig_ChooseWhitemane_Func010A takes nothing returns nothing
+function Trig_ChooseWhitemane_Func014A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), 'h01X', bj_UNIT_STATE_METHOD_MAXIMUM)
 endfunction
 
 function Trig_ChooseWhitemane_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H036', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 10)
     call ShowUnitHide(GetSpellAbilityUnit())
     call MeleeStartingUnitsForPlayer(RACE_HUMAN, GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), true)
     // Town Hall
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWhitemane_Func008A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'htow'), function Trig_ChooseWhitemane_Func012A)
     // WorkerX5
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWhitemane_Func010A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'hpea'), function Trig_ChooseWhitemane_Func014A)
     // ----------------------
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerColorBJ(GetOwningPlayer(GetSpellAbilityUnit()), PLAYER_COLOR_MAROON, true)
@@ -3186,7 +3271,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseTyrande
 //===========================================================================
-function Trig_ChooseTyrande_Func001C takes nothing returns boolean
+function Trig_ChooseTyrande_Func005C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3197,31 +3282,35 @@ function Trig_ChooseTyrande_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseTyrande_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseTyrande_Func001C() ) then
+    if ( not Trig_ChooseTyrande_Func005C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_ChooseTyrande_Func007003001003 takes nothing returns boolean
+function Trig_ChooseTyrande_Func011003001003 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
 endfunction
 
-function Trig_ChooseTyrande_Func017Func001003001003 takes nothing returns boolean
+function Trig_ChooseTyrande_Func021Func001003001003 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'ngol' )
 endfunction
 
-function Trig_ChooseTyrande_Func017A takes nothing returns nothing
-    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func017Func001003001003))))
+function Trig_ChooseTyrande_Func021A takes nothing returns nothing
+    call IssueTargetOrderBJ(GetEnumUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetUnitLoc(GetEnumUnit()), Condition(function Trig_ChooseTyrande_Func021Func001003001003))))
 endfunction
 
 function Trig_ChooseTyrande_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H03A', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
     call UseCustomConsole(GetOwningPlayer(GetSpellAbilityUnit()) , 6)
     call ShowUnitHide(GetSpellAbilityUnit())
     call CreateNUnitsAtLoc(1, 'e000', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
-    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func007003001003))))
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "entangleinstant", GroupPickRandomUnit(GetUnitsInRangeOfLocMatching(1024.00, GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), Condition(function Trig_ChooseTyrande_Func011003001003))))
     set bj_forLoopAIndex=1
     set bj_forLoopAIndexEnd=5
     loop
@@ -3237,7 +3326,7 @@ function Trig_ChooseTyrande_Actions takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_TyrandeIni)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), 0)
     call TriggerSleepAction(1.00)
-    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func017A)
+    call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetSpellAbilityUnit()), 'e000'), function Trig_ChooseTyrande_Func021A)
 endfunction
 
 //===========================================================================
@@ -3251,7 +3340,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseThrall
 //===========================================================================
-function Trig_ChooseThrall_Func002C takes nothing returns boolean
+function Trig_ChooseThrall_Func006C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3262,13 +3351,17 @@ function Trig_ChooseThrall_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseThrall_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseThrall_Func002C() ) then
+    if ( not Trig_ChooseThrall_Func006C() ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_ChooseThrall_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H039', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     set udg_PlayerThrall=GetOwningPlayer(GetSpellAbilityUnit())
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
@@ -3303,7 +3396,7 @@ endfunction
 //===========================================================================
 // Trigger: ChooseHellscream
 //===========================================================================
-function Trig_ChooseHellscream_Func002C takes nothing returns boolean
+function Trig_ChooseHellscream_Func006C takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A01F' ) ) then
         return false
     endif
@@ -3314,13 +3407,17 @@ function Trig_ChooseHellscream_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_ChooseHellscream_Conditions takes nothing returns boolean
-    if ( not Trig_ChooseHellscream_Func002C() ) then
+    if ( not Trig_ChooseHellscream_Func006C() ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_ChooseHellscream_Actions takes nothing returns nothing
+    // F1
+    call CreateNUnitsAtLoc(1, 'H035', GetOwningPlayer(GetSpellAbilityUnit()), GetPlayerStartLocationLoc(GetOwningPlayer(GetSpellAbilityUnit())), bj_UNIT_FACING)
+    call SuspendHeroXPBJ(false, GetLastCreatedUnit())
+    // ---------
     set udg_PlayerHellscream=GetOwningPlayer(GetSpellAbilityUnit())
     call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl")
     call TriggerSleepAction(1.00)
@@ -8426,12 +8523,381 @@ endfunction
 // Trigger: KelthuzadIni
 //===========================================================================
 function Trig_KelthuzadIni_Actions takes nothing returns nothing
+    call EnableTrigger(gg_trg_KelthuzadSpreaderBlight)
 endfunction
 
 //===========================================================================
 function InitTrig_KelthuzadIni takes nothing returns nothing
     set gg_trg_KelthuzadIni=CreateTrigger()
     call TriggerAddAction(gg_trg_KelthuzadIni, function Trig_KelthuzadIni_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadTEST
+//
+// Scourge Plague - Infection Outbreak
+//===========================================================================
+function Trig_KelthuzadTEST_Func001Func001C takes nothing returns boolean
+    if ( not ( UnitHasBuffBJ(GetEnumUnit(), 'B023') == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadTEST_Func001A takes nothing returns nothing
+    if ( Trig_KelthuzadTEST_Func001Func001C() ) then
+        call AddSpecialEffectTargetUnitBJ("origin", GetEnumUnit(), "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
+        call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 250.00 ))
+        call UnitRemoveBuffBJ('B023', GetEnumUnit())
+    else
+    endif
+endfunction
+
+function Trig_KelthuzadTEST_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsInRectAll(GetPlayableMapRect()), function Trig_KelthuzadTEST_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadTEST takes nothing returns nothing
+    set gg_trg_KelthuzadTEST=CreateTrigger()
+    call TriggerRegisterPlayerEventEndCinematic(gg_trg_KelthuzadTEST, Player(0))
+    call TriggerAddAction(gg_trg_KelthuzadTEST, function Trig_KelthuzadTEST_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadScourgePlagueLevel
+//===========================================================================
+function Trig_KelthuzadScourgePlagueLevel_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetLevelingUnit()) == 'U013' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadScourgePlagueLevel_Actions takes nothing returns nothing
+    call SetPlayerTechResearchedSwap('R043', GetHeroLevel(GetLevelingUnit()), GetOwningPlayer(GetLevelingUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadScourgePlagueLevel takes nothing returns nothing
+    set gg_trg_KelthuzadScourgePlagueLevel=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadScourgePlagueLevel, EVENT_PLAYER_HERO_LEVEL)
+    call TriggerAddCondition(gg_trg_KelthuzadScourgePlagueLevel, Condition(function Trig_KelthuzadScourgePlagueLevel_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadScourgePlagueLevel, function Trig_KelthuzadScourgePlagueLevel_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadUnitsSold
+//===========================================================================
+function Trig_KelthuzadUnitsSold_Func004C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'e00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'h031' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'n00X' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'u00I' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_KelthuzadUnitsSold_Conditions takes nothing returns boolean
+    if ( not Trig_KelthuzadUnitsSold_Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadUnitsSold_Actions takes nothing returns nothing
+    call IssueTargetOrderBJ(GetSoldUnit(), "move", GetUnitRallyUnit(GetSellingUnit()))
+    call IssuePointOrderLocBJ(GetSoldUnit(), "smart", GetUnitRallyPoint(GetSellingUnit()))
+    call IssueTargetDestructableOrder(GetSoldUnit(), "smart", GetUnitRallyDestructable(GetSellingUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadUnitsSold takes nothing returns nothing
+    set gg_trg_KelthuzadUnitsSold=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadUnitsSold, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(gg_trg_KelthuzadUnitsSold, Condition(function Trig_KelthuzadUnitsSold_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadUnitsSold, function Trig_KelthuzadUnitsSold_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadPlagueCauldron
+//===========================================================================
+function Trig_KelthuzadPlagueCauldron_Func001A takes nothing returns nothing
+    call SuspendHeroXPBJ(true, GetEnumUnit())
+    call AddHeroXPSwapped(( CountLivingPlayerUnitsOfTypeId('h02R', GetOwningPlayer(GetEnumUnit())) * 7 ), GetEnumUnit(), false)
+    call SuspendHeroXPBJ(false, GetEnumUnit())
+endfunction
+
+function Trig_KelthuzadPlagueCauldron_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('U013'), function Trig_KelthuzadPlagueCauldron_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadPlagueCauldron takes nothing returns nothing
+    set gg_trg_KelthuzadPlagueCauldron=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_KelthuzadPlagueCauldron, 10.00)
+    call TriggerAddAction(gg_trg_KelthuzadPlagueCauldron, function Trig_KelthuzadPlagueCauldron_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadMineAddAbility
+//===========================================================================
+function Trig_KelthuzadMineAddAbility_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'u00S' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadMineAddAbility_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A0C9', GetConstructedStructure())
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadMineAddAbility takes nothing returns nothing
+    set gg_trg_KelthuzadMineAddAbility=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadMineAddAbility, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(gg_trg_KelthuzadMineAddAbility, Condition(function Trig_KelthuzadMineAddAbility_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadMineAddAbility, function Trig_KelthuzadMineAddAbility_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadMineAutogold
+//===========================================================================
+function Trig_KelthuzadMineAutogold_Func001Func001C takes nothing returns boolean
+    if ( not ( GetResourceAmount(GetEnumUnit()) > 0 ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A0C9', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadMineAutogold_Func001A takes nothing returns nothing
+    if ( Trig_KelthuzadMineAutogold_Func001Func001C() ) then
+        call AdjustPlayerStateBJ(R2I(( 50.00 * ( ( 100.00 - I2R(GetPlayerState(GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_GOLD_UPKEEP_RATE)) ) / 100.00 ) )), GetOwningPlayer(GetEnumUnit()), PLAYER_STATE_RESOURCE_GOLD)
+        call AddResourceAmountBJ(- 55, GetEnumUnit())
+        call AddSpecialEffectTargetUnitBJ("origin", GetEnumUnit(), "Legends/Kelthuzad/HauntedMine/Soul Discharge.mdx")
+    else
+    endif
+endfunction
+
+function Trig_KelthuzadMineAutogold_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('u00S'), function Trig_KelthuzadMineAutogold_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadMineAutogold takes nothing returns nothing
+    set gg_trg_KelthuzadMineAutogold=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_KelthuzadMineAutogold, 10.00)
+    call TriggerAddAction(gg_trg_KelthuzadMineAutogold, function Trig_KelthuzadMineAutogold_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadCargoAndorhal
+//===========================================================================
+function Trig_KelthuzadCargoAndorhal_Func001C takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0CO' ) ) then
+        return false
+    endif
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetSpellAbilityUnit()), GetOwningPlayer(GetSpellTargetUnit())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCargoAndorhal_Conditions takes nothing returns boolean
+    if ( not Trig_KelthuzadCargoAndorhal_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCargoAndorhal_Func002C takes nothing returns boolean
+    if ( not ( GetUnitFoodMade(GetSpellTargetUnit()) > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCargoAndorhal_Actions takes nothing returns nothing
+    if ( Trig_KelthuzadCargoAndorhal_Func002C() ) then
+        call UnitAddAbilityBJ('A0CP', GetSpellTargetUnit())
+    else
+    endif
+    call SetUnitOwner(GetSpellTargetUnit(), GetOwningPlayer(GetSpellAbilityUnit()), true)
+    call AddSpecialEffectTargetUnitBJ("origin", GetSpellTargetUnit(), "Legends/Kelthuzad/HauntedMine/Soul Discharge.mdx")
+    call PauseUnitBJ(true, GetSpellTargetUnit())
+    call KillUnit(GetSpellAbilityUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadCargoAndorhal takes nothing returns nothing
+    set gg_trg_KelthuzadCargoAndorhal=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCargoAndorhal, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_KelthuzadCargoAndorhal, Condition(function Trig_KelthuzadCargoAndorhal_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadCargoAndorhal, function Trig_KelthuzadCargoAndorhal_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadCargoAndorhalZombie
+//===========================================================================
+function Trig_KelthuzadCargoAndorhalZombie_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0CP', GetEnumUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCargoAndorhalZombie_Func001A takes nothing returns nothing
+    if ( Trig_KelthuzadCargoAndorhalZombie_Func001Func001C() ) then
+        call CreateNUnitsAtLoc(1, 'n011', GetOwningPlayer(GetEnumUnit()), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
+        call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+    else
+    endif
+endfunction
+
+function Trig_KelthuzadCargoAndorhalZombie_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_PlayerKelthuzad), function Trig_KelthuzadCargoAndorhalZombie_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadCargoAndorhalZombie takes nothing returns nothing
+    set gg_trg_KelthuzadCargoAndorhalZombie=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_KelthuzadCargoAndorhalZombie, 15.00)
+    call TriggerAddAction(gg_trg_KelthuzadCargoAndorhalZombie, function Trig_KelthuzadCargoAndorhalZombie_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadExperimentVictim
+//===========================================================================
+function Trig_KelthuzadExperimentVictim_Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'e00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'h031' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetSoldUnit()) == 'n00X' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_KelthuzadExperimentVictim_Conditions takes nothing returns boolean
+    if ( not Trig_KelthuzadExperimentVictim_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadExperimentVictim_Func001A takes nothing returns nothing
+    call SuspendHeroXPBJ(true, GetEnumUnit())
+    call AddHeroXPSwapped(3, GetEnumUnit(), false)
+    call SuspendHeroXPBJ(false, GetEnumUnit())
+endfunction
+
+function Trig_KelthuzadExperimentVictim_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('U013'), function Trig_KelthuzadExperimentVictim_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadExperimentVictim takes nothing returns nothing
+    set gg_trg_KelthuzadExperimentVictim=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadExperimentVictim, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(gg_trg_KelthuzadExperimentVictim, Condition(function Trig_KelthuzadExperimentVictim_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadExperimentVictim, function Trig_KelthuzadExperimentVictim_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadSpreaderBlight
+//===========================================================================
+function Trig_KelthuzadSpreaderBlight_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A0CE'
+endfunction
+
+function Trig_KelthuzadSpreaderBlight_Actions takes nothing returns nothing
+    local unit caster= GetSpellAbilityUnit()
+    local player p= GetOwningPlayer(caster)
+    local location loc= GetSpellTargetLoc()
+    local location corpseLoc
+    local real radius
+    local integer i= 1
+    local effect sfx
+    
+    call PauseUnit(caster, true)
+    
+    loop
+        exitwhen i > 13
+        
+        if not IsUnitAliveBJ(caster) then
+            set i=14
+        else
+            if ModuloInteger(i, 2) == 0 and i <= 10 then
+                set radius=35.00 * I2R(i)
+                call SetBlightRadiusLocBJ(true, p, loc, radius)
+                call TriggerSleepAction(0.15)
+            endif
+            
+            if i >= 5 and ModuloInteger(i, 2) == 1 then
+                set radius=35.00 * I2R(i)
+                set corpseLoc=Location(GetLocationX(loc) + GetRandomReal(- radius, radius), GetLocationY(loc) + GetRandomReal(- radius, radius))
+                call CreateCorpseLocBJ('h031', p, corpseLoc)
+                set sfx=AddSpecialEffectLocBJ(corpseLoc, "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl")
+                call TriggerSleepAction(1.00)
+                call DestroyEffect(sfx)
+                call RemoveLocation(corpseLoc)
+                set corpseLoc=null
+                set sfx=null
+            endif
+            
+            set i=i + 1
+        endif
+    endloop
+    
+    call PauseUnit(caster, false)
+    call RemoveLocation(loc)
+    set caster=null
+    set p=null
+    set loc=null
+endfunction
+
+function InitTrig_KelthuzadSpreaderBlight takes nothing returns nothing
+    set gg_trg_KelthuzadSpreaderBlight=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadSpreaderBlight, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_KelthuzadSpreaderBlight, Condition(function Trig_KelthuzadSpreaderBlight_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadSpreaderBlight, function Trig_KelthuzadSpreaderBlight_Actions)
+endfunction
+//===========================================================================
+// Trigger: KelthuzadCultistSacrifice
+//===========================================================================
+function Trig_KelthuzadCultistSacrifice_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0CB' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCultistSacrifice_Actions takes nothing returns nothing
+    call KillUnit(GetSpellAbilityUnit())
+    call CreateNUnitsAtLoc(1, 'u00U', GetOwningPlayer(GetSpellAbilityUnit()), GetUnitLoc(GetSpellAbilityUnit()), GetUnitFacing(GetSpellAbilityUnit()))
+    call AddSpecialEffectLocBJ(GetUnitLoc(GetSpellAbilityUnit()), "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl")
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadCultistSacrifice takes nothing returns nothing
+    set gg_trg_KelthuzadCultistSacrifice=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistSacrifice, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_KelthuzadCultistSacrifice, Condition(function Trig_KelthuzadCultistSacrifice_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadCultistSacrifice, function Trig_KelthuzadCultistSacrifice_Actions)
 endfunction
 
 //===========================================================================
@@ -8484,6 +8950,110 @@ function Trig_KelthuzadCultistBuild_Actions takes nothing returns boolean
       call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistBuild, EVENT_PLAYER_UNIT_CONSTRUCT_START)
       call TriggerAddCondition(gg_trg_KelthuzadCultistBuild, Condition(function Trig_KelthuzadCultistBuild_Actions))
   endfunction
+//===========================================================================
+// Trigger: KelthuzadCultistCorpse
+//===========================================================================
+function Trig_KelthuzadCultistCorpse_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0CA' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadCultistCorpse_Func001A takes nothing returns nothing
+    call SetUnitManaBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_MANA, GetEnumUnit()) + GetRandomReal(2.00, 5.00) ))
+endfunction
+
+function Trig_KelthuzadCultistCorpse_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsOfTypeIdAll('U00T'), function Trig_KelthuzadCultistCorpse_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadCultistCorpse takes nothing returns nothing
+    set gg_trg_KelthuzadCultistCorpse=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadCultistCorpse, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_KelthuzadCultistCorpse, Condition(function Trig_KelthuzadCultistCorpse_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadCultistCorpse, function Trig_KelthuzadCultistCorpse_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: KelthuzadBurialFund
+//===========================================================================
+function Trig_KelthuzadBurialFund_Func001Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'h031' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'e00O' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetDyingUnit()) == 'n00X' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_KelthuzadBurialFund_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R03Z', GetOwningPlayer(GetDyingUnit())) == 1 ) ) then
+        return false
+    endif
+    if ( not Trig_KelthuzadBurialFund_Func001Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadBurialFund_Conditions takes nothing returns boolean
+    if ( not Trig_KelthuzadBurialFund_Func001C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadBurialFund_Func002Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'n00X' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadBurialFund_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'e00O' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadBurialFund_Func002C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h031' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KelthuzadBurialFund_Actions takes nothing returns nothing
+    if ( Trig_KelthuzadBurialFund_Func002C() ) then
+        call AdjustPlayerStateBJ(55, GetOwningPlayer(GetDyingUnit()), PLAYER_STATE_RESOURCE_GOLD)
+    else
+        if ( Trig_KelthuzadBurialFund_Func002Func001C() ) then
+            call AdjustPlayerStateBJ(55, GetOwningPlayer(GetDyingUnit()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(10, GetOwningPlayer(GetDyingUnit()), PLAYER_STATE_RESOURCE_LUMBER)
+        else
+            if ( Trig_KelthuzadBurialFund_Func002Func001Func001C() ) then
+                call AdjustPlayerStateBJ(75, GetOwningPlayer(GetDyingUnit()), PLAYER_STATE_RESOURCE_GOLD)
+            else
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_KelthuzadBurialFund takes nothing returns nothing
+    set gg_trg_KelthuzadBurialFund=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_KelthuzadBurialFund, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_KelthuzadBurialFund, Condition(function Trig_KelthuzadBurialFund_Conditions))
+    call TriggerAddAction(gg_trg_KelthuzadBurialFund, function Trig_KelthuzadBurialFund_Actions)
+endfunction
+
 //===========================================================================
 // Trigger: HellscreamIni
 //===========================================================================
@@ -14507,7 +15077,7 @@ endfunction
 
 //===========================================================================
 function InitCustomTriggers takes nothing returns nothing
-    call InitTrig_IniLimitUnitsF1()
+    call InitTrig_IniLimitUnits()
     call InitTrig_IniStartResouces()
     call InitTrig_IniSelectUnit()
     call InitTrig_BtnF1()
@@ -14615,7 +15185,20 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WhitemaneGraveyardBurn()
     call InitTrig_WhitemaneFastBuild()
     call InitTrig_KelthuzadIni()
+    call InitTrig_KelthuzadTEST()
+    call InitTrig_KelthuzadScourgePlagueLevel()
+    call InitTrig_KelthuzadUnitsSold()
+    call InitTrig_KelthuzadPlagueCauldron()
+    call InitTrig_KelthuzadMineAddAbility()
+    call InitTrig_KelthuzadMineAutogold()
+    call InitTrig_KelthuzadCargoAndorhal()
+    call InitTrig_KelthuzadCargoAndorhalZombie()
+    call InitTrig_KelthuzadExperimentVictim()
+    call InitTrig_KelthuzadSpreaderBlight()
+    call InitTrig_KelthuzadCultistSacrifice()
     call InitTrig_KelthuzadCultistBuild()
+    call InitTrig_KelthuzadCultistCorpse()
+    call InitTrig_KelthuzadBurialFund()
     call InitTrig_HellscreamIni()
     call InitTrig_HellscreamEnraged()
     call InitTrig_HellscreamExecute()
@@ -14750,7 +15333,7 @@ endfunction
 
 //===========================================================================
 function RunInitializationTriggers takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_IniLimitUnitsF1)
+    call ConditionalTriggerExecute(gg_trg_IniLimitUnits)
     call ConditionalTriggerExecute(gg_trg_IniStartResouces)
     call ConditionalTriggerExecute(gg_trg_SetAIRace)
     call ConditionalTriggerExecute(gg_trg_WarsongInitialization)
